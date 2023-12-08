@@ -8,20 +8,34 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.fade-strip-horizontal {
+  @apply from-fade-start-color to-fade-end-color w-screen h-[250px] max-w-full absolute z-10;
+}
+
+.fade-strip-vertical {
+  @apply from-fade-start-color to-fade-end-color h-screen w-[250px] max-h-full absolute z-10;
+}
+.fade-strip-top {
+  @apply bg-gradient-to-b fade-strip-horizontal top-0;
+}
+.fade-strip-bottom {
+  @apply bg-gradient-to-t fade-strip-horizontal bottom-0;
+}
+.fade-strip-left {
+  @apply bg-gradient-to-r fade-strip-vertical left-0;
+}
+.fade-strip-right {
+  @apply bg-gradient-to-l fade-strip-vertical right-0;
+}
+
+.form_input {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-1.5 focus:outline-sky-500 focus:outline-1 focus:outline focus:border-sky-500;
 }
