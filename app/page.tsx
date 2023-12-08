@@ -3,7 +3,7 @@ import HeroSection from "@/app/components/HeroSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between">
+    <main className="flex flex-col items-center">
       <HeroSection />
       <Dropdown />
     </main>

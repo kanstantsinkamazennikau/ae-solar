@@ -41,7 +41,7 @@ function NavDropdown({ url, text }: NavLinkProps) {
 
 export default function Navigation() {
   return (
-    <nav className="flex h-[120px] items-center justify-between relative z-20 font-normal">
+    <nav className="flex h-[120px] items-center justify-between relative z-40 font-normal">
       <Logo />
       <ul className="flex gap-8">
         {NAV_LINKS_ARRAY.map((navLink) =>

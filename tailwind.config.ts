@@ -23,7 +23,8 @@ const config: Config = {
       },
       fontSize: {
         base: ["16px", "16px"],
-        lg: ["18px", "normal"],
+        lg: ["18px", "18px"],
+        xl: ["20px", "20px"],
         "2xl": ["24px", "24px"],
       },
     },
