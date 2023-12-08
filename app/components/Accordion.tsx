@@ -26,7 +26,6 @@ function AccordionItem({
   onClick,
 }: AccordionItemProps) {
   const contentHeight = useRef<HTMLDivElement>(null);
-  console.log(contentHeight.current?.scrollHeight);
 
   return (
     <div className="border-b border-solid border-white overflow-hidden last:border-none">
