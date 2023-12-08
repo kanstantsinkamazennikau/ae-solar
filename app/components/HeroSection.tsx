@@ -6,7 +6,7 @@ import {
 
 export default function HeroSection() {
   return (
-    <div className="flex justify-between relative -top-[120px]">
+    <div className="w-screen flex justify-between relative -top-[120px]">
       <div className="fade-strip-top" />
       <div className="fade-strip-bottom" />
       <div className="fade-strip-left" />
@@ -15,16 +15,16 @@ export default function HeroSection() {
         src="/images/saveTheWorldLeft.png"
         alt="solar panel"
         priority
-        width={813}
-        height={800}
+        width={833}
+        height={1080}
         className="object-contain max-w-[50vw] z-20"
       />
       <Image
         src="/images/saveTheWorldRight.png"
         alt="solar panel"
         priority
-        width={801}
-        height={800}
+        width={833}
+        height={1080}
         className="object-contain max-w-[50vw] z-20"
       />
       <div className="absolute top-1/4 left-2/4 -translate-x-2/4 text-center z-10">

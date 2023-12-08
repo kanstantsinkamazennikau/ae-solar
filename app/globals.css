@@ -11,9 +11,8 @@
 body {
   background-color: #000;
   color: white;
-  display: flex;
-  justify-content: center;
   overflow-x: hidden;
+  margin: 0 20px;
 }
 
 .fade-strip-horizontal {
@@ -21,7 +20,7 @@ body {
 }
 
 .fade-strip-vertical {
-  @apply from-fade-start-color to-fade-end-color h-screen w-[250px] max-h-full absolute z-30;
+  @apply from-fade-start-color to-fade-end-color h-full w-[250px] max-h-full absolute z-30;
 }
 .fade-strip-top {
   @apply bg-gradient-to-b fade-strip-horizontal top-0;
