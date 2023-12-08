@@ -6,7 +6,7 @@ import {
 
 export default function HeroSection() {
   return (
-    <div className="!w-screen flex justify-between relative -top-[120px]">
+    <div className="flex justify-between relative -top-[120px]">
       <div className="fade-strip-top" />
       <div className="fade-strip-bottom" />
       <div className="fade-strip-left" />

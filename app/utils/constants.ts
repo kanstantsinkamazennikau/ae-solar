@@ -64,3 +64,26 @@ export const FOOTER_LINKS_ARRAY = [
 export const FOOTER_COPYRIGHT =
   "Copyright © 2023 AESolar. All rights reserved.";
 export const POLICY_LINKS = ["Privacy Policy", "Terms of Use", "Legal"];
+
+export const MAIN_PAGE_ACCORDION_DATA = [
+  {
+    question: "How do solar panels work?",
+    answer: "How do solar panels work?",
+  },
+  {
+    question: "What factors affect the efficiency of a solar system?",
+    answer:
+      "The efficiency of a solar system is influenced by sunlight exposure, shading, panel orientation, and temperature. Choosing high-quality panels and proper installation also impact overall performance.",
+  },
+  {
+    question:
+      "How long does it take to see a return on investment (ROI) for a solar system?",
+    answer:
+      "How long does it take to see a return on investment (ROI) for a solar system?",
+  },
+  {
+    question: "What maintenance is required for solar panels?",
+    answer: "What maintenance is required for solar panels?",
+  },
+];
+export const FAQ = "FAQ";
