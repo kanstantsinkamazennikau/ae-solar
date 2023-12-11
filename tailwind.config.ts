@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         "base-red": "#F60109",
+        "black-900": "#161616",
         "dark-gray-900": "#9A9A9A",
         "dark-gray-800": "#747474",
         "dark-gray-700": "#313131",

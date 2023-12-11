@@ -1,4 +1,4 @@
-import Logo from "@/app/components/Logo";
+import Logo from "@/app/components/common/Logo";
 import {
   FOOTER_COPYRIGHT,
   FOOTER_LINKS_ARRAY,

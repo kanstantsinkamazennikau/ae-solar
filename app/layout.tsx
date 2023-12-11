@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/app/components/Navigation";
-import Footer from "@/app/components/Footer";
+import Navigation from "@/app/components/common/Navigation";
+import Footer from "@/app/components/common/Footer";
 import localFont from "next/font/local";
 
 // const criteriacf = localFont({
