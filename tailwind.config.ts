@@ -21,6 +21,8 @@ const config: Config = {
         "dark-gray-700": "#313131",
         "fade-start-color": "#000",
         "fade-end-color": "rgba(0, 0, 0, 0.00)",
+        "sub-navigation-black": "rgba(0, 0, 0, 0.10)",
+        "sub-navigation-border": "rgba(208, 216, 233, 0.10)",
       },
       fontSize: {
         base: ["16px", "16px"],

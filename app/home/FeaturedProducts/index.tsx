@@ -19,7 +19,7 @@ export default function FeaturedProducts() {
     >
       <div className="text-center pb-[174px]">
         {FEATURED_PRODUCTS_THE_NEXT_LEVEL_OF_PANELS_PHRASE_ARRAY.map(
-          (phrase, index) => {
+          (phrase) => {
             return (
               <div
                 key={phrase}

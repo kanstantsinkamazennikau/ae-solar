@@ -1,4 +1,4 @@
-import Accordion from "@/app/components/common/Accordion";
+import Accordion from "@/app/components/common/Accordion/";
 import { FAQ, MAIN_PAGE_ACCORDION_DATA } from "@/app/utils/constants";
 
 export function MainPageFAQ() {

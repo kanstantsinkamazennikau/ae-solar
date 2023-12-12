@@ -1,10 +1,6 @@
+import { ButtonWithArrowProps } from "@/app/components/common/LinkWithArrow/types";
 import Image from "next/image";
 import Link from "next/link";
-
-interface ButtonWithArrowProps {
-  label: string;
-  href: string;
-}
 
 export default function LinkWithArrow({ label, href }: ButtonWithArrowProps) {
   return (

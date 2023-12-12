@@ -1,43 +1,11 @@
+import { FooterCategory } from "@/app/components/common/Footer/FooterCategory";
+import PolicyLink from "@/app/components/common/Footer/PolicyLink";
 import Logo from "@/app/components/common/Logo";
 import {
   FOOTER_COPYRIGHT,
   FOOTER_LINKS_ARRAY,
   POLICY_LINKS,
 } from "@/app/utils/constants";
-import Link from "next/link";
-
-interface FooterCategoryProps {
-  category: string;
-  links: string[];
-}
-
-interface PolicyLinkProps {
-  link: string;
-}
-
-function FooterCategory({ category, links }: FooterCategoryProps) {
-  return (
-    <div className="flex flex-col w-[200px]">
-      <div className="text-dark-gray-900 text-2xl mb-6">{category}</div>
-      {links.map((link) => (
-        <Link href={link.toLowerCase()} className="text-base mb-4" key={link}>
-          {link}
-        </Link>
-      ))}
-    </div>
-  );
-}
-
-function PolicyLink({ link }: PolicyLinkProps) {
-  return (
-    <>
-      <Link className="px-3" href={link.toLowerCase()}>
-        {link}
-      </Link>
-      <div className="w-[1px] h-5 bg-dark-gray-700 inline-block"></div>
-    </>
-  );
-}
 
 export default function Footer() {
   return (

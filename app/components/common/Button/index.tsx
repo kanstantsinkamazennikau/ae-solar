@@ -1,11 +1,6 @@
 "use client";
 
-interface ButtonProps {
-  label: string;
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  disabled?: boolean;
-  small?: boolean;
-}
+import { ButtonProps } from "@/app/components/common/Button/types";
 
 export default function Button({
   label,

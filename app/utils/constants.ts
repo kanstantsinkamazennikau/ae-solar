@@ -108,6 +108,29 @@ export const TECH_INFO_PANELS_DETAILS = [
   },
 ];
 
+export const REVIEWS_RAVE_REVIEWS = "Rave Reviews";
+export const REVIEWS_SEE_WHY_WE_SHINE = "See Why We Shine";
+export const REVIEWS_QUOTES_WITH_AUTHORS = [
+  {
+    quote:
+      "Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
+    author: "Emily Johnson",
+    organisation: "Quantum Dynamics",
+  },
+  {
+    quote:
+      "Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
+    author: "Emily Johnson2",
+    organisation: "Quantum Dynamics",
+  },
+  {
+    quote:
+      "Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
+    author: "Emily Johnson3",
+    organisation: "Quantum Dynamics",
+  },
+];
+
 export const MAIN_PAGE_ACCORDION_DATA = [
   {
     question: "How do solar panels work?",

@@ -1,25 +1,10 @@
 "use client";
 
+import { AccordionItemProps } from "@/app/components/common/Accordion/types";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
-interface AccordionItemProps {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onClick: () => void;
-}
-
-interface AccordionData {
-  question: string;
-  answer: string;
-}
-
-interface AccordionProps {
-  data: AccordionData[];
-}
-
-function AccordionItem({
+export default function AccordionItem({
   question,
   answer,
   isOpen,
@@ -57,27 +42,3 @@ function AccordionItem({
     </div>
   );
 }
-
-const Accordion = ({ data }: AccordionProps) => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const handleItemClick = (index: number) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
-
-  return (
-    <div className="max-w-[985px] w-full">
-      {data.map((item, index) => (
-        <AccordionItem
-          key={item.question}
-          question={item.question}
-          answer={item.answer}
-          isOpen={activeIndex === index}
-          onClick={() => handleItemClick(index)}
-        />
-      ))}
-    </div>
-  );
-};
-
-export default Accordion;
