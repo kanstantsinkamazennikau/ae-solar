@@ -1,4 +1,4 @@
-import { QuoteProps } from "@/app/dto/mainPage/types";
+import { QuoteProps } from "@/app/home/Reviews/types";
 import { createContext } from "react";
 
 export interface QuotesContext {
