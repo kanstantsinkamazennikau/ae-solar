@@ -34,12 +34,12 @@ export function useTranslation(lng: LocaleTypes, ns: string) {
   const translator = useTransAlias(ns);
   const { i18n } = translator;
 
-  if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
-    i18n.changeLanguage(lng);
-  } else {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useCustomTranslationImplem(i18n, lng);
-  }
+  // if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
+  //   i18n.changeLanguage(lng);
+  // } else {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useCustomTranslationImplem(i18n, lng);
+  // }
   return translator;
 }
 
