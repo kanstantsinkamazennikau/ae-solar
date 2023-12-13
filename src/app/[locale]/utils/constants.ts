@@ -12,42 +12,42 @@ export const HEADER_NAV_LINKS_ARRAY = [
     url: "/solutions",
     text: "Solutions",
   },
-  {
-    url: "/about_us",
-    text: "About us",
-    subMenu: [
-      {
-        url: "/solutions4",
-        text: "Solutions4",
-      },
-      {
-        url: "/solutions5",
-        text: "Solutions5",
-      },
-      {
-        url: "/solutions6",
-        text: "Solutions6",
-      },
-    ],
-  },
-  {
-    url: "/documents",
-    text: "Documents",
-    subMenu: [
-      {
-        url: "/solutions1",
-        text: "Solutions1",
-      },
-      {
-        url: "/solutions2",
-        text: "Solutions2",
-      },
-      {
-        url: "/solutions3",
-        text: "Solutions3",
-      },
-    ],
-  },
+  // {
+  //   url: "/about_us",
+  //   text: "About us",
+  //   subMenu: [
+  //     {
+  //       url: "/solutions4",
+  //       text: "Solutions4",
+  //     },
+  //     {
+  //       url: "/solutions5",
+  //       text: "Solutions5",
+  //     },
+  //     {
+  //       url: "/solutions6",
+  //       text: "Solutions6",
+  //     },
+  //   ],
+  // },
+  // {
+  //   url: "/documents",
+  //   text: "Documents",
+  //   subMenu: [
+  //     {
+  //       url: "/solutions1",
+  //       text: "Solutions1",
+  //     },
+  //     {
+  //       url: "/solutions2",
+  //       text: "Solutions2",
+  //     },
+  //     {
+  //       url: "/solutions3",
+  //       text: "Solutions3",
+  //     },
+  //   ],
+  // },
   {
     url: "/partners",
     text: "Partners",
