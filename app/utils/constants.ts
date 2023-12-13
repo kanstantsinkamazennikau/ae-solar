@@ -131,6 +131,10 @@ export const REVIEWS_QUOTES_WITH_AUTHORS = [
   },
 ];
 
+export const GET_IN_TOUCH_CLIENT_TYPE = ["Investor", "Partner", "Installer"];
+export const GET_IN_TOUCH_ELEVATE_GROWTH = "Elevate growth together";
+export const GET_IN_TOUCH_JOIN_US = "Join as a partner in our solar vision";
+
 export const MAIN_PAGE_ACCORDION_DATA = [
   {
     question: "How do solar panels work?",

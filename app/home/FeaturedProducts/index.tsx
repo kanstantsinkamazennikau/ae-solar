@@ -15,7 +15,9 @@ export default function FeaturedProducts() {
       bg-center 
       justify-center 
       flex 
-      items-end"
+      items-end
+      bg-fixed
+      "
     >
       <div className="text-center pb-[174px]">
         {FEATURED_PRODUCTS_THE_NEXT_LEVEL_OF_PANELS_PHRASE_ARRAY.map(

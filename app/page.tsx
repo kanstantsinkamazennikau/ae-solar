@@ -1,5 +1,6 @@
 import AwardsAndStats from "@/app/home/AwardsAndStats";
 import FeaturedProducts from "@/app/home/FeaturedProducts";
+import GetInTouch from "@/app/home/GetInTouch/GetInTouch";
 import HeroSection from "@/app/home/HeroSection";
 import { MainPageFAQ } from "@/app/home/MainPageFAQ";
 import Reviews from "@/app/home/Reviews";
@@ -13,6 +14,7 @@ export default function Home() {
       <FeaturedProducts />
       <TechInfo />
       <Reviews />
+      <GetInTouch />
       <MainPageFAQ />
     </main>
   );
