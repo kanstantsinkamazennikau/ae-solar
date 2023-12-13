@@ -8,7 +8,7 @@ export default function FeaturedProducts() {
     <div
       className="bg-[url('/images/featuredProducts.png')] 
       object-fill 
-      w-screen 
+      w-full
       h-screen 
       bg-no-repeat 
       bg-contain 
@@ -17,6 +17,7 @@ export default function FeaturedProducts() {
       flex 
       items-end
       bg-fixed
+      px-5
       "
     >
       <div className="text-center pb-[174px]">

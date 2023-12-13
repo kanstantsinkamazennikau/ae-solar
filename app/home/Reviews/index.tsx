@@ -1,5 +1,6 @@
 "use client";
 
+import BasicWidthContainer from "@/app/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/components/common/TwoTierHeading";
 import { QuotesContext } from "@/app/context/quotesContext";
 import { Quote } from "@/app/home/Reviews/Quote";
@@ -51,7 +52,7 @@ export default function Reviews() {
   };
 
   return (
-    <>
+    <BasicWidthContainer>
       <TwoTierHeading
         tierOneHeading={REVIEWS_RAVE_REVIEWS}
         tierTwoHeading={REVIEWS_SEE_WHY_WE_SHINE}
@@ -93,6 +94,6 @@ export default function Reviews() {
           </QuotesContext.Provider>
         </div>
       </div>
-    </>
+    </BasicWidthContainer>
   );
 }

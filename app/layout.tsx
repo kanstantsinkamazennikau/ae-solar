@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="max-w-[1320px] my-0 mx-auto">
+        <div className="flex flex-col justify-center items-center">
           <Navigation />
           {children}
           <Footer />

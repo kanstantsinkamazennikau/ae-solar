@@ -12,11 +12,10 @@ body {
   background-color: #000;
   color: white;
   overflow-x: hidden;
-  margin: 0 20px;
 }
 
 .fade-strip-horizontal {
-  @apply from-fade-start-color to-fade-end-color w-screen h-[250px] max-w-full absolute z-30;
+  @apply from-fade-start-color to-fade-end-color w-full h-[250px] max-w-full absolute z-30;
 }
 
 .fade-strip-vertical {

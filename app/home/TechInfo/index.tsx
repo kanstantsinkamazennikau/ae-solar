@@ -1,3 +1,4 @@
+import BasicWidthContainer from "@/app/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/components/common/TwoTierHeading";
 import {
   TECH_INFO_THE_HIDDEN_LAYERS,
@@ -8,7 +9,7 @@ import Image from "next/image";
 
 export default function TechDescription() {
   return (
-    <>
+    <BasicWidthContainer>
       <TwoTierHeading
         tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}
         tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
@@ -57,6 +58,6 @@ export default function TechDescription() {
           ))}
         </div>
       </div>
-    </>
+    </BasicWidthContainer>
   );
 }

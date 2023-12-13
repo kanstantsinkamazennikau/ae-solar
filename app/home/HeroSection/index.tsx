@@ -6,19 +6,19 @@ import {
 
 export default function HeroSection() {
   return (
-    <div className="w-screen flex justify-center items-center relative -top-[120px] h-screen">
+    <div className="w-full flex justify-center items-center relative -top-[120px] h-screen">
       <div className="fade-strip-top" />
       <div className="fade-strip-bottom" />
       <div className="fade-strip-left" />
       <div className="fade-strip-right" />
-      <div className="flex justify-between w-screen h-screen">
+      <div className="flex justify-between w-full h-screen">
         <Image
           src="/images/saveTheWorldLeft.png"
           alt="solar panel"
           priority
           width={833}
           height={1080}
-          className="object-fill max-w-[50vw]"
+          className="object-fill max-w-[50%]"
         />
         <Image
           src="/images/saveTheWorldRight.png"
@@ -26,7 +26,7 @@ export default function HeroSection() {
           priority
           width={833}
           height={1080}
-          className="object-fill max-w-[50vw]"
+          className="object-fill max-w-[50%]"
         />
       </div>
 

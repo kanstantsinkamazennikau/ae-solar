@@ -1,5 +1,6 @@
 "use client";
 
+import BasicWidthContainer from "@/app/components/common/BasicWidthContainer";
 import Button from "@/app/components/common/Button";
 import Logo from "@/app/components/common/Logo";
 import NavLink from "@/app/components/common/Navigation/NavLink";
@@ -22,63 +23,61 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="flex h-[120px] items-center justify-between relative z-40 font-normal ">
-      <Logo />
+    <BasicWidthContainer>
+      <nav className="flex h-[120px] items-center justify-between relative z-40 font-normal">
+        <Logo />
 
-      {/* DESKTOP NAV */}
-      <ul className="gap-8 md:flex hidden">
-        {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
-          <NavLink key={navLink.url} {...navLink} />
-        ))}
-      </ul>
-      <div className="gap-8 md:flex hidden">
-        <Button
-          label={HEADER_CONTACT_US}
-          onClick={() => console.log("contact us")}
-          small
-        />
-      </div>
-
-      {/* MOBILE NAV */}
-      <>
-        <div
-          className="text-3xl md:hidden block cursor-pointer z-50 relative"
-          onClick={() => setIsHamburgerMenuOpen(!isHamburgerMenuOpen)}
-        >
-          <div className="space-y-2">
-            <div className="w-8 h-0.5 bg-yellow-600"></div>
-            <div className="w-8 h-0.5 bg-yellow-600"></div>
-            <div className="w-8 h-0.5 bg-yellow-600"></div>
-          </div>
+        {/* DESKTOP NAV */}
+        <ul className="gap-8 md:flex hidden">
+          {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
+            <NavLink key={navLink.url} {...navLink} />
+          ))}
+        </ul>
+        <div className="gap-8 md:flex hidden">
+          <Button onClick={() => console.log("contact us")} small>
+            {HEADER_CONTACT_US}
+          </Button>
         </div>
-        <div
-          className={`
+
+        {/* MOBILE NAV */}
+        <>
+          <div
+            className="text-3xl md:hidden block cursor-pointer z-50 relative"
+            onClick={() => setIsHamburgerMenuOpen(!isHamburgerMenuOpen)}
+          >
+            <div className="space-y-2">
+              <div className="w-8 h-0.5 bg-yellow-600"></div>
+              <div className="w-8 h-0.5 bg-yellow-600"></div>
+              <div className="w-8 h-0.5 bg-yellow-600"></div>
+            </div>
+          </div>
+          <div
+            className={`
         md:hidden bg-red-700 fixed w-full top-0 overflow-y-auto bottom-0 py-24 px-4
         duration-500 ${isHamburgerMenuOpen ? "left-0" : "left-[-100%]"}
         `}
-        >
-          <ul>
-            {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
-              <NavLink
-                key={navLink.url}
-                subMenuHeading={subMenuHeading}
-                onSubMenuHeadingClick={onSubMenuHeadingClick}
-                onLinkClick={onLinkClick}
-                {...navLink}
-              />
-            ))}
-          </ul>
+          >
+            <ul>
+              {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
+                <NavLink
+                  key={navLink.url}
+                  subMenuHeading={subMenuHeading}
+                  onSubMenuHeadingClick={onSubMenuHeadingClick}
+                  onLinkClick={onLinkClick}
+                  {...navLink}
+                />
+              ))}
+            </ul>
 
-          <div className="gap-8 md:flex hidden">
-            <Button
-              label={HEADER_CONTACT_US}
-              onClick={() => console.log("contact us")}
-              small
-            />
+            <div className="gap-8 md:flex hidden">
+              <Button onClick={() => console.log("contact us")} small>
+                {HEADER_CONTACT_US}
+              </Button>
+            </div>
           </div>
-        </div>
-      </>
-    </nav>
+        </>
+      </nav>
+    </BasicWidthContainer>
   );
 }
 

@@ -133,7 +133,9 @@ export const REVIEWS_QUOTES_WITH_AUTHORS = [
 
 export const GET_IN_TOUCH_CLIENT_TYPE = ["Investor", "Partner", "Installer"];
 export const GET_IN_TOUCH_ELEVATE_GROWTH = "Elevate growth together";
-export const GET_IN_TOUCH_JOIN_US = "Join as a partner in our solar vision";
+export const GET_IN_TOUCH_JOIN_US = (clientType: string) =>
+  `Join as a ${clientType.toLowerCase()} in our solar vision`;
+export const GET_IN_TOUCH_BECOME_A = "Become a ";
 
 export const MAIN_PAGE_ACCORDION_DATA = [
   {
