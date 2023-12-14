@@ -7,7 +7,8 @@ export default function Button({
   children,
   onClick,
   disabled,
-  small,
+  size = "regular",
+  color,
   showArrow,
 }: ButtonProps) {
   return (
@@ -21,10 +22,13 @@ export default function Button({
         rounded-full
         hover:opacity-80
         transition
-        bg-base-red
-        text-lg
-        ${small ? "px-6" : "px-8"}
-        ${small ? "py-3" : "py-6"}
+        ${color === "secondary" ? "bg-white" : "bg-base-red"}
+        ${color === "secondary" && "text-black"}
+        ${size === "regular" && "text-lg"}
+        ${size === "regular" && "px-8 py-6"}
+        ${size === "small" && "px-6 py-3"}
+        ${size === "extrasmall" && "text-sm leading-none"}
+        ${size === "extrasmall" && "py-3 px-4"}
         flex
         justify-center
         items-center

@@ -54,6 +54,16 @@ export const HEADER_NAV_LINKS_ARRAY = [
   },
 ];
 export const HEADER_CONTACT_US = "Contact Us";
+export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
+  "Aurora.svg",
+  "Comet.svg",
+  "Meteor.svg",
+  "Terra.svg",
+  "Neptun.svg",
+  "Smart.svg",
+];
+export const HEADER_CHOOSE_YOUR_MODEL = "Choose your model";
+export const HEADER_CALCULATE = "Calculate";
 
 //MAIN PAGE
 export const HERO_SECTION_SLOGAN =

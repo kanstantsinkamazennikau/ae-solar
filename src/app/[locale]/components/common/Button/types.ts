@@ -2,6 +2,7 @@ export interface ButtonProps {
   children: React.ReactNode;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
-  small?: boolean;
+  size?: "regular" | "small" | "extrasmall";
   showArrow?: boolean;
+  color?: "secondary";
 }
