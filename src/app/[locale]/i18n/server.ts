@@ -18,10 +18,19 @@ const initI18next = async (lang: LocaleTypes, ns: string) => {
   return i18nInstance;
 };
 
-export async function createTranslation(lang: LocaleTypes, ns: string) {
+export async function useServerTranslation(
+  lang: LocaleTypes,
+  ns: string,
+  options: any = {}
+) {
   const i18nextInstance = await initI18next(lang, ns);
 
   return {
-    t: i18nextInstance.getFixedT(lang, Array.isArray(ns) ? ns[0] : ns),
+    t: i18nextInstance.getFixedT(
+      lang,
+      Array.isArray(ns) ? ns[0] : ns,
+      options.keyPrefix
+    ),
+    i18n: i18nextInstance,
   };
 }

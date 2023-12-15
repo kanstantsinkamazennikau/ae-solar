@@ -1,18 +1,10 @@
-import Image from "next/image";
-import {
-  HERO_SECTION_SCROLL_TO_THE_FUTURE,
-  HERO_SECTION_SLOGAN,
-} from "@/app/[locale]/utils/constants";
-import { createTranslation } from "@/app/[locale]/i18n/server";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { headers } from "next/headers";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import getLocale from "@/app/[locale]/utils/getLocale";
+import Image from "next/image";
 
 export default async function HeroSection() {
   const locale = getLocale();
-  const { t } = await createTranslation(locale, "home");
-
-  // read the custom x-url header
+  const { t } = await useServerTranslation(locale, "home");
 
   return (
     <div className="w-full flex justify-center items-center relative -top-[120px] h-screen">

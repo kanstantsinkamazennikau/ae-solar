@@ -59,9 +59,9 @@ export default function Navigation() {
               </div>
               <div
                 className={`
-        md:hidden h-screen bg-red-700 fixed w-full top-0 overflow-y-auto bottom-0 py-24 px-4
-        duration-500 ${isHamburgerMenuOpen ? "left-0" : "left-[-100%]"}
-        `}
+                md:hidden h-screen bg-red-700 fixed w-full top-0 overflow-y-auto bottom-0 py-24 px-4
+                duration-500 ${isHamburgerMenuOpen ? "left-0" : "left-[-100%]"}
+                `}
               >
                 <ul>
                   {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
@@ -91,7 +91,19 @@ export default function Navigation() {
       </div>
 
       {/* SUBNAVIGATION */}
-      <div className="bg-sub-navigation-black backdrop-blur-[10px] border-b border-solid border-sub-navigation-border py-2 md:flex hidden justify-center">
+      <div
+        className="bg-sub-navigation-black 
+        backdrop-blur-[10px] 
+        border-b border-solid 
+        border-sub-navigation-border 
+        py-2 
+        md:flex 
+        hidden 
+        justify-center
+        relative
+        -z-[1]
+        "
+      >
         <BasicWidthContainer>
           <Models />
         </BasicWidthContainer>

@@ -2,7 +2,7 @@
 
 import SubMenuItems from "@/app/[locale]/components/common/Navigation/SubMenuItems";
 import { NavLinkProps } from "@/app/[locale]/components/common/Navigation/types";
-import { useTranslation } from "@/app/[locale]/i18n/client";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import highlightNavigationLink from "@/app/[locale]/utils/highlightNavigationLink";
 import Image from "next/image";
@@ -19,7 +19,7 @@ export default function NavLink({
 }: NavLinkProps) {
   const path = usePathname();
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useTranslation(locale, "navigation");
+  const { t } = useClientTranslation(locale, "navigation");
 
   return (
     <li className="group">
@@ -60,7 +60,7 @@ export default function NavLink({
               } ml-1 md:hidden block`}
             />
           </div>
-          <div className="absolute top-30 hidden group-hover:md:block hover:md:block">
+          <div className="absolute top-30 hidden group-hover:md:block hover:md:block z-10">
             <div className="py-3">
               <div
                 className="w-4 h-4 left-3 absolute 

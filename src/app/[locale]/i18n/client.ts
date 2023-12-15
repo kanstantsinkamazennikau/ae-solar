@@ -11,7 +11,6 @@ import { useTranslation as useTranslationOrg } from "react-i18next";
 
 const runsOnServerSide = typeof window === "undefined";
 
-//
 i18next
   .use(initReactI18next)
   .use(LanguageDetector)
@@ -23,15 +22,19 @@ i18next
   )
   .init({
     ...getOptions(),
-    lng: undefined, // let detect the language on client side
+    lng: undefined,
     detection: {
       order: ["path", "htmlTag", "cookie", "navigator"],
     },
     preload: runsOnServerSide ? locales : [],
   });
 
-export function useTranslation(lng: LocaleTypes, ns: string) {
-  const ret = useTranslationOrg(ns);
+export function useClientTranslation(
+  lng: LocaleTypes,
+  ns: string,
+  options: any = {}
+) {
+  const ret = useTranslationOrg(ns, options);
   const { i18n } = ret;
   if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
     i18n.changeLanguage(lng);
