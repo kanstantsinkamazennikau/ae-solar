@@ -5,23 +5,21 @@ import "./globals.css";
 import Footer from "@/app/[locale]/components/common/Footer";
 import localFont from "next/font/local";
 import Navigation from "@/app/[locale]/components/common/Navigation";
+import { LocaleTypes, locales } from "@/app/[locale]/i18n/settings";
+import { notFound } from "next/navigation";
 
-// const criteriacf = localFont({
-//   src: [
-//     {
-//       path: "./fonts/criteriacf-demibold.otf",
-//       weight: "800",
-//       style: "normal",
-//     },
-//     {
-//       path: "./fonts/criteriacf-medium.otf",
-//       weight: "600",
-//       style: "normal",
-//     },
-//   ],
-// });
+const walsheim = localFont({
+  src: [
+    {
+      path: "./fonts/GTWalsheimPro-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+  ],
+  variable: "--font-walsheim",
+});
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,12 +28,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: LocaleTypes };
 }) {
+  if (!locales.includes(locale as any)) notFound();
+
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang={locale}>
+      <body className={`${inter.variable} ${walsheim.variable} font-sans`}>
         <div className="flex flex-col justify-center items-center">
           <Navigation />
           {children}

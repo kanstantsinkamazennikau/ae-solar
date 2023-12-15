@@ -117,6 +117,40 @@ export const TECH_INFO_PANELS_DETAILS = [
       "Frame offers support; backsheet shields from elements, ensuring solar panel durability.",
   },
 ];
+export const TECH_INFO_WHY_WE_ARE = "Why We are";
+export const TECH_INFO_BEST_AT_THIS = "Best at This";
+export const TECH_INFO_BENS = [
+  {
+    title: `Automation Systems`,
+    description:
+      "Stringent quality control measures are implemented at every stage of production to ensure that each solar module meets the highest standards of efficiency, durability, and performance.",
+    image: "automation.svg",
+  },
+  {
+    title: "German Manufacturer",
+    description:
+      "AESOLAR is a prominent German solar module manufacturer known for its precise and reliable engineering.",
+    image: "manufacturer.png",
+  },
+  {
+    title: "Advanced Technologies",
+    description:
+      "AESOLAR combines advanced technologies, superior quality, and sustainability to contribute to a more sustainable future by manufacturing solar modules.",
+    image: "technologies.svg",
+  },
+  {
+    title: "Energy Efficiency",
+    description:
+      "AESOLAR strives to set new industry benchmarks by focusing on energy efficiency, which not only reduces manufacturing costs but also minimizes the environmental impact.",
+    image: "efficiency.svg",
+  },
+  {
+    title: "Recyclable Materials",
+    description:
+      "The company is certified for sustainable production and adheres to German quality, labor, and environmental standards.",
+    image: "materials.svg",
+  },
+];
 
 export const REVIEWS_RAVE_REVIEWS = "Rave Reviews";
 export const REVIEWS_SEE_WHY_WE_SHINE = "See Why We Shine";

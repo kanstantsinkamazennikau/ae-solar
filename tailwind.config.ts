@@ -22,6 +22,7 @@ const config: Config = {
       colors: {
         "base-red": "#F60109",
         "black-900": "#161616",
+        "dark-gray-950": "#141414",
         "dark-gray-900": "#9A9A9A",
         "dark-gray-800": "#747474",
         "dark-gray-700": "#313131",
@@ -39,6 +40,10 @@ const config: Config = {
         lg: ["18px", "18px"],
         xl: ["20px", "20px"],
         "2xl": ["24px", "24px"],
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+        walsheim: ["var(--font-walsheim)"],
       },
     },
   },
