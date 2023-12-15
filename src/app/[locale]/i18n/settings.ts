@@ -1,14 +1,14 @@
 import type { InitOptions } from "i18next";
 
-export const fallbackLng = "en";
-export const locales = [fallbackLng, "de"] as const;
+export const defaultLocale = "en";
+export const locales = [defaultLocale, "de"];
 export type LocaleTypes = (typeof locales)[number];
 export const defaultNS = "common";
 
-export function getOptions(lang = fallbackLng, ns = defaultNS): InitOptions {
+export function getOptions(lang = defaultLocale, ns = defaultNS): InitOptions {
   return {
     supportedLngs: locales,
-    fallbackLng,
+    fallbackLng: defaultLocale,
     lng: lang,
     fallbackNS: defaultNS,
     defaultNS,

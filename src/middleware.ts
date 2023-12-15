@@ -1,54 +1,60 @@
-// /middleware.ts
-import { fallbackLng, locales } from "@/app/[locale]/i18n/settings";
+import { defaultLocale, locales } from "@/app/[locale]/i18n/settings";
 import { NextRequest, NextResponse } from "next/server";
+import { I18nConfig, i18n } from "../i18n-config";
+import Negotiator from "negotiator";
+import { match } from "@formatjs/intl-localematcher";
 
-export default function middleware(request: NextRequest) {
-  // Store current request url in a custom header, which you can read later
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set("x-url", request.url);
-
-  // Check if there is any supported locale in the pathname
-  const pathname = request.nextUrl.pathname;
-
-  // Check if the default locale is in the pathname
-  if (
-    pathname.startsWith(`/${fallbackLng}/`) ||
-    pathname === `/${fallbackLng}`
-  ) {
-    // e.g. incoming request is /en/about
-    // The new URL is now /about
-    return NextResponse.redirect(
-      new URL(
-        pathname.replace(
-          `/${fallbackLng}`,
-          pathname === `/${fallbackLng}` ? "/" : ""
-        ),
-        request.url
-      )
-    );
-  }
-
-  const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
+  const negotiatorHeaders: Record<string, string> = {};
+  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
+  const languages = new Negotiator({ headers: negotiatorHeaders }).languages(
+    locales
   );
 
-  if (pathnameIsMissingLocale) {
-    // We are on the default locale
-    // Rewrite so Next.js understands
+  return match(languages, locales, defaultLocale);
+}
 
-    // e.g. incoming request is /about
-    // Tell Next.js it should pretend it's /en/about
-    return NextResponse.rewrite(
-      new URL(`/${fallbackLng}${pathname}`, request.url)
-    );
+export default function middleware(request: NextRequest) {
+  let response;
+  let nextLocale;
+
+  const pathname = request.nextUrl.pathname;
+
+  const pathLocale = locales.find(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value || "en";
+  if (pathLocale) {
+    const isDefaultLocale = pathLocale === defaultLocale;
+    if (isDefaultLocale) {
+      let pathWithoutLocale = pathname.slice(`/${pathLocale}`.length) || "/";
+      if (request.nextUrl.search) pathWithoutLocale += request.nextUrl.search;
+
+      response = NextResponse.redirect(new URL(pathWithoutLocale, request.url));
+    }
+
+    nextLocale = pathLocale;
+  } else {
+    const isFirstVisit = !request.cookies.has("NEXT_LOCALE");
+
+    const locale = isFirstVisit ? getLocale(request, i18n) : cookieLocale;
+
+    let newPath = `${locale}${pathname}`;
+    if (request.nextUrl.search) newPath += request.nextUrl.search;
+
+    response =
+      locale === defaultLocale
+        ? NextResponse.rewrite(new URL(newPath, request.url))
+        : NextResponse.redirect(new URL(newPath, request.url));
+    nextLocale = locale;
   }
 
-  return NextResponse.next({
-    request: {
-      // Apply new request headers
-      headers: requestHeaders,
-    },
-  });
+  if (!response) response = NextResponse.next();
+
+  if (nextLocale) response.cookies.set("NEXT_LOCALE", nextLocale);
+  response.headers.append("x-url", request.url);
+  return response;
 }
 
 export const config = {
