@@ -22,7 +22,10 @@ export default function Button({
         rounded-full
         hover:opacity-80
         transition
-        ${color === "secondary" ? "bg-white" : "bg-base-red"}
+        bg-base-red
+        ${color === "outline" && "bg-transparent"}
+        ${color === "outline" && "border-[3px] border-solid border-base-red"}
+        ${color === "secondary" && "bg-white"}
         ${color === "secondary" && "text-black"}
         ${size === "regular" && "text-lg"}
         ${size === "regular" && "px-8 py-6"}

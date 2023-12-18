@@ -42,7 +42,7 @@ export default function Models() {
         size="extrasmall"
         color="secondary"
       >
-        {HEADER_CALCULATE}
+        <span className="leading-[10px] font-semibold">{HEADER_CALCULATE}</span>
       </Button>
     </div>
   );

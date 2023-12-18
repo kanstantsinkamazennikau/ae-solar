@@ -14,6 +14,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-297":
           "linear-gradient(297deg, #000 0%, rgba(0, 0, 0, 0.00) 100%)",
+        "gradient-awards":
+          "linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 23.44%, rgba(0, 0, 0, 0.00) 81.1%, #000 100%)",
+      },
+      boxShadow: {
+        bens: "0px 140px 200px -80px rgba(246, 1, 9, 0.30), 0px 40px 80px -50px rgba(246, 1, 9, 0.70)",
       },
       backgroundColor: {
         "get-in-touch": "rgba(49, 49, 49, 0.10)",

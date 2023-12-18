@@ -11,17 +11,13 @@ export default function Accordion({ data }: AccordionProps) {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  return (
-    <div className="max-w-[985px] w-full">
-      {data.map((item, index) => (
-        <AccordionItem
-          key={item.question}
-          question={item.question}
-          answer={item.answer}
-          isOpen={activeIndex === index}
-          onClick={() => handleItemClick(index)}
-        />
-      ))}
-    </div>
-  );
+  return data.map((item, index) => (
+    <AccordionItem
+      key={item.question}
+      question={item.question}
+      answer={item.answer}
+      isOpen={activeIndex === index}
+      onClick={() => handleItemClick(index)}
+    />
+  ));
 }

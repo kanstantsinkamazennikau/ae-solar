@@ -18,13 +18,14 @@ export default function GetInTouch() {
       className="
       flex
       justify-center
-      items-end
+      items-center
       bg-gradient-297
       bg-[#111]
       w-full
       h-screen
       relative
       px-5
+      mb-[280px]
       "
     >
       <Image
@@ -35,7 +36,7 @@ export default function GetInTouch() {
         height={1080}
         className="h-full w-full mix-blend-color-dodge absolute"
       />
-      <div className="flex flex-col justify-center items-start gap-[100px] max-w-[1320px] pb-[130px] w-full">
+      <div className="flex flex-col justify-center items-center gap-[100px] max-w-[1320px] pb-[130px] w-full">
         {/* CLIENT TYPE */}
         <div className="flex p-1 justify-center items-center gap-5 get-in-touch-border [&>*:last-child>div:last-child]:hidden">
           {GET_IN_TOUCH_CLIENT_TYPE.map((type) => (
@@ -57,7 +58,7 @@ export default function GetInTouch() {
 
         {/* TITLE */}
 
-        <div className="flex flex-col gap-[60px] self-stretch">
+        <div className="flex flex-col gap-[60px] items-center text-center self-stretch">
           <div className="text-[64px] leading-none text-base-red -tracking-[1.92px] font-medium">
             {GET_IN_TOUCH_ELEVATE_GROWTH}
           </div>

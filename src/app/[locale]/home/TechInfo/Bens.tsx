@@ -1,7 +1,9 @@
+import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import {
   TECH_INFO_BENS,
   TECH_INFO_BEST_AT_THIS,
+  TECH_INFO_READ_MORE,
   TECH_INFO_WHY_WE_ARE,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
@@ -14,7 +16,7 @@ export default function Bens() {
         tierTwoHeading={TECH_INFO_BEST_AT_THIS}
         align="left"
       />
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-5 mb-[200px]">
         {TECH_INFO_BENS.map(({ title, description, image }, index) => {
           const isFullHeightRow = index === 1;
           return (
@@ -29,6 +31,13 @@ export default function Bens() {
               overflow-hidden
               bg-dark-gray-950
               rounded-[10px]
+              hover:shadow-bens
+              hover:outline-[3px]
+              hover:outline-base-red
+              outline-transparent
+              hover:outline
+              transition-all
+              duration-200
               ${
                 isFullHeightRow
                   ? "row-start-1 row-end-3 col-start-2 col-end-3"
@@ -64,6 +73,11 @@ export default function Bens() {
                 <div className="text-base leading-[150%] font-medium font-walsheim text-dark-gray-900">
                   {description}
                 </div>
+                {isFullHeightRow && (
+                  <div className="flex items-start">
+                    <LinkWithArrow label={TECH_INFO_READ_MORE} href="" />
+                  </div>
+                )}
               </div>
             </div>
           );

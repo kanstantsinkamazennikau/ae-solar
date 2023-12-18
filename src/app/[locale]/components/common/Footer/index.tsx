@@ -11,8 +11,8 @@ import {
 export default function Footer() {
   return (
     <BasicWidthContainer>
-      <footer className="text-sm">
-        <nav className="flex justify-between">
+      <footer className="text-sm pt-20 pb-5">
+        <nav className="flex justify-between items-start">
           <Logo />
           <div className="flex flex-wrap">
             {FOOTER_LINKS_ARRAY.map(({ category, links }) => (

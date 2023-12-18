@@ -57,7 +57,7 @@ export default function Reviews() {
         tierOneHeading={REVIEWS_RAVE_REVIEWS}
         tierTwoHeading={REVIEWS_SEE_WHY_WE_SHINE}
       />
-      <div className="flex py-20 pl-60 flex-col gap-10 self-stretch relative">
+      <div className="flex py-20 pl-60 flex-col gap-10 self-stretch relative mb-[280px]">
         <Image
           src="/images/quote.svg"
           alt="quote"

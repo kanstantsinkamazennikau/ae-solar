@@ -99,24 +99,22 @@ export const TECH_INFO_THE_HIDDEN_LAYERS = "The Hidden Layers";
 export const TECH_INFO_A_CLOSE_LOOK_AT = "A Close Look at";
 export const TECH_INFO_PANELS_DETAILS = [
   {
-    image: "cells.png",
     title: "Photovoltaic Cells",
     description:
       "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
   },
   {
-    image: "panel.png",
     title: "Solar Panel Encapsulation",
     description:
       "Solar panels endure diverse conditions, shielded by encapsulation for longevity and efficiency.",
   },
   {
-    image: "frame.png",
     title: "Frame and Backsheet",
     description:
       "Frame offers support; backsheet shields from elements, ensuring solar panel durability.",
   },
 ];
+export const TECH_INFO_PANELS = ["structure.png", "frame.png", "panel.png"];
 export const TECH_INFO_WHY_WE_ARE = "Why We are";
 export const TECH_INFO_BEST_AT_THIS = "Best at This";
 export const TECH_INFO_BENS = [
@@ -151,6 +149,9 @@ export const TECH_INFO_BENS = [
     image: "materials.svg",
   },
 ];
+export const TECH_INFO_READ_MORE = "Read more";
+export const TECH_INFO_INNOVATIVE = "Innovative. Stylish. Essential:";
+export const TECH_INFO_EXPLORE = "Explore Our Product Range";
 
 export const REVIEWS_RAVE_REVIEWS = "Rave Reviews";
 export const REVIEWS_SEE_WHY_WE_SHINE = "See Why We Shine";
@@ -181,7 +182,7 @@ export const GET_IN_TOUCH_JOIN_US = (clientType: string) =>
   `Join as a ${clientType.toLowerCase()} in our solar vision`;
 export const GET_IN_TOUCH_BECOME_A = "Become a ";
 
-export const MAIN_PAGE_ACCORDION_DATA = [
+export const FAQ_ACCORDION_DATA = [
   {
     question: "How do solar panels work?",
     answer: "How do solar panels work?",
@@ -202,7 +203,9 @@ export const MAIN_PAGE_ACCORDION_DATA = [
     answer: "What maintenance is required for solar panels?",
   },
 ];
-export const FAQ = "FAQ";
+export const FAQ_QUESTION = "Have a Question?";
+export const FAQ_SOLUTIONS = "We have solutions";
+export const FAQ_MORE_QUESTIONS = "More questions";
 
 //FOOTER
 export const FOOTER_LINKS_ARRAY = [
