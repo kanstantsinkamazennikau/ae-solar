@@ -19,7 +19,56 @@ const walsheim = localFont({
   variable: "--font-walsheim",
 });
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const criteria = localFont({
+  src: [
+    {
+      path: "./fonts/Criteria CF Thin.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Criteria CF Extralight.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Criteria CF Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Criteria CF Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Criteria CF Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Criteria CF Demibold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Criteria CF Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Criteria CF Extrabold.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Criteria CF Super.otf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-criteria",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,8 +86,8 @@ export default function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${inter.variable} ${walsheim.variable} font-sans`}>
-        <div className="flex flex-col justify-center items-center">
+      <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
+        <div className="flex flex-col justify-center items-center font-">
           <Navigation />
           {children}
           <Footer />

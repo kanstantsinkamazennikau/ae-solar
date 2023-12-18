@@ -47,7 +47,7 @@ const config: Config = {
         "2xl": ["24px", "24px"],
       },
       fontFamily: {
-        sans: ["var(--font-inter)"],
+        sans: ["var(--font-criteria)"],
         walsheim: ["var(--font-walsheim)"],
       },
     },

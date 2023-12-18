@@ -21,25 +21,7 @@ export default async function HeroSection() {
         height={1080}
         className="object-fill h-full"
       />
-      {/* <div className="flex justify-between w-full h-screen">
-        <Image
-          src="/images/saveTheWorldLeft.png"
-          alt="solar panel"
-          priority
-          width={833}
-          height={1080}
-          className="object-fill max-w-[50%]"
-        />
-        <Image
-          src="/images/saveTheWorldRight.png"
-          alt="solar panel"
-          priority
-          width={833}
-          height={1080}
-          className="object-fill max-w-[50%]"
-        />
-      </div> */}
-      <div className="absolute inline-flex flex-col gap-[30px] font-medium max-w-[550px] items-center top-1/4">
+      <div className="absolute inline-flex flex-col gap-[30px] font-medium max-w-[600px] items-center top-1/4">
         <p className="text-[40px] text-center text-base-red -tracking-[1.2px] leading-none">
           {t("heroSectionWeAre")}
         </p>

@@ -1,12 +1,10 @@
-import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import Ben from "@/app/[locale]/home/TechInfo/Ben";
 import {
   TECH_INFO_BENS,
   TECH_INFO_BEST_AT_THIS,
-  TECH_INFO_READ_MORE,
   TECH_INFO_WHY_WE_ARE,
 } from "@/app/[locale]/utils/constants";
-import Image from "next/image";
 
 export default function Bens() {
   return (
@@ -20,66 +18,10 @@ export default function Bens() {
         {TECH_INFO_BENS.map(({ title, description, image }, index) => {
           const isFullHeightRow = index === 1;
           return (
-            <div
+            <Ben
               key={title}
-              className={`
-              flex
-              p-8
-              items-start
-              self-stretch
-              relative
-              overflow-hidden
-              bg-dark-gray-950
-              rounded-[10px]
-              hover:shadow-bens
-              hover:outline-[3px]
-              hover:outline-base-red
-              outline-transparent
-              hover:outline
-              transition-all
-              duration-200
-              ${
-                isFullHeightRow
-                  ? "row-start-1 row-end-3 col-start-2 col-end-3"
-                  : "h-[340px]"
-              }`}
-            >
-              <Image
-                src={`/images/techInfo/${image}`}
-                alt={image}
-                width={408}
-                height={408}
-                priority
-                className={`absolute
-                ${
-                  isFullHeightRow
-                    ? "top-0 right-0 w-full h-full"
-                    : "-top-[50px] -right-[60px] stroke-white stroke-[4px] object-none"
-                }`}
-              />
-              <div className="flex gap-6 flex-col self-end z-10">
-                {isFullHeightRow && (
-                  <Image
-                    src="/images/german.svg"
-                    alt="german"
-                    width={76}
-                    height={76}
-                    priority
-                  />
-                )}
-                <div className="text-[32px] leading-[120%] font-medium">
-                  {title}
-                </div>
-                <div className="text-base leading-[150%] font-medium font-walsheim text-dark-gray-900">
-                  {description}
-                </div>
-                {isFullHeightRow && (
-                  <div className="flex items-start">
-                    <LinkWithArrow label={TECH_INFO_READ_MORE} href="" />
-                  </div>
-                )}
-              </div>
-            </div>
+              {...{ title, description, image, isFullHeightRow }}
+            />
           );
         })}
       </div>
