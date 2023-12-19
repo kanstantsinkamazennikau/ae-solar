@@ -6,6 +6,8 @@ export default function BasicWidthContainer({
   styles?: string;
 }) {
   return (
-    <div className={`max-w-[1360px] w-full px-5 ${styles}`}>{children}</div>
+    <div className={`max-w-[1360px] w-full px-5 ${styles ?? ""}`}>
+      {children}
+    </div>
   );
 }

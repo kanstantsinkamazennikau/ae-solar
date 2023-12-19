@@ -7,6 +7,8 @@ import localFont from "next/font/local";
 import Navigation from "@/app/[locale]/components/common/Navigation";
 import { LocaleTypes, locales } from "@/app/[locale]/i18n/settings";
 import { notFound } from "next/navigation";
+import ModelProvider from "@/app/[locale]/context/modelContext";
+import StickyNavigationProvider from "@/app/[locale]/context/stickyNavigationContext";
 
 const walsheim = localFont({
   src: [
@@ -87,10 +89,14 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
-        <div className="flex flex-col justify-center items-center font-">
-          <Navigation />
-          {children}
-          <Footer />
+        <div className="flex flex-col justify-center items-center">
+          <ModelProvider>
+            <StickyNavigationProvider>
+              <Navigation />
+              {children}
+              <Footer />
+            </StickyNavigationProvider>
+          </ModelProvider>
         </div>
       </body>
     </html>

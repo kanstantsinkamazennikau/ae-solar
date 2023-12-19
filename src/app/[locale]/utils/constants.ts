@@ -94,10 +94,84 @@ export const AWARDS_AND_STATS_AWARDS_IMAGES = [
 ];
 export const AWARDS_AND_STATS_SEE_ALL_AWARDS = "See all awards";
 
-export const FEATURED_PRODUCTS_THE_NEXT_LEVEL_OF_PANELS_PHRASE_ARRAY = [
-  "The Next Level ",
-  "of High-Quality Solar Panels",
-];
+export const PRODUCT_INTRO_THE_NEXT_LEVEL_OF = "The Next Level of";
+export const PRODUCT_INTRO_HIGH_QUALITY_SP = "High-Quality Solar Panels";
+export const PRODUCT_INTRO_PANELS_MAPPING = {
+  power: "Max. Power (up to)",
+  efficiency: "Max. Effienciency (up to)",
+  voltage: "Max. System Voltage",
+};
+export const PRODUCT_INTRO_PANELS = {
+  Comet: {
+    stats: {
+      power: "440W",
+      efficiency: "22.57%",
+      voltage: "1000",
+    },
+    info: {
+      icon: "Comet.svg",
+      text: "Experience minimum power loss and shine brightly even in low light conditions",
+    },
+  },
+  Aurora: {
+    stats: {
+      power: "441W",
+      efficiency: "22.57%",
+      voltage: "1000",
+    },
+    info: {
+      icon: "Aurora.svg",
+      text: "Experience minimum power loss and shine brightly even in low light conditions123123",
+    },
+  },
+  Meteor: {
+    stats: {
+      power: "44W",
+      efficiency: "22.57%",
+      voltage: "1000",
+    },
+    info: {
+      icon: "Meteor.svg",
+      text: "Experience minimum power loss and shine brightly even in low light conditions Meteor",
+    },
+  },
+  Terra: {
+    stats: {
+      power: "20W",
+      efficiency: "22.57%",
+      voltage: "1000",
+    },
+    info: {
+      icon: "Terra.svg",
+      text: "Experience123 minimum power loss and shine brightly even in low light conditions",
+    },
+  },
+  Neptun: {
+    stats: {
+      power: "Neptun",
+      efficiency: "22.57%",
+      voltage: "1000",
+    },
+    info: {
+      icon: "Neptun.svg",
+      text: "Experience minimum power loss and shine brightly even in low light conditions",
+    },
+  },
+  Smart: {
+    stats: {
+      power: "Smart",
+      efficiency: "22.57%",
+      voltage: "1000",
+    },
+    info: {
+      icon: "Smart.svg",
+      text: "Experience minimum power loss and shine brightly even in low light Smart",
+    },
+  },
+};
+export const PRODUCT_INTRO_LEARN_MORE = "Learn more";
+export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "Calculate your model";
+
 export const FEATURED_PRODUCTS_HIGH_QUALITY = "High-Quality";
 
 export const TECH_INFO_THE_HIDDEN_LAYERS = "The Hidden Layers";

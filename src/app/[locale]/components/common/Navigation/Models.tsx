@@ -1,4 +1,7 @@
+"use client";
+
 import Button from "@/app/[locale]/components/common/Button";
+import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import {
   HEADER_CALCULATE,
   HEADER_CHOOSE_YOUR_MODEL,
@@ -7,9 +10,11 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useContext } from "react";
 
 export default function Models() {
   const locale = useParams()?.locale;
+  const { setModel } = useContext(ModelContext);
 
   return (
     <div className="flex justify-center gap-11 items-center">
@@ -20,21 +25,25 @@ export default function Models() {
         const modelName = model.split(".")[0];
 
         return (
-          <Link
+          // <Link
+          //   key={model}
+          //   href={`/${locale}/products/${modelName.toLowerCase()}`}
+          // >
+          <div
+            className="flex items-center gap-2 cursor-pointer"
             key={model}
-            href={`/${locale}/products/${modelName.toLowerCase()}`}
+            onClick={() => setModel(modelName as Model)}
           >
-            <div className="flex items-center gap-2">
-              <Image
-                className="-rotate-90"
-                alt="arrow"
-                src={`/images/models/${model}`}
-                width={16}
-                height={16}
-              />
-              <span>{modelName}</span>
-            </div>
-          </Link>
+            <Image
+              className="-rotate-90"
+              alt="arrow"
+              src={`/images/models/${model}`}
+              width={16}
+              height={16}
+            />
+            <span>{modelName}</span>
+          </div>
+          // </Link>
         );
       })}
       <Button

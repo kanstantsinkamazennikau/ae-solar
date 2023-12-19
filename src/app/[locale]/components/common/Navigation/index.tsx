@@ -4,17 +4,24 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Logo from "@/app/[locale]/components/common/Logo";
-import Models from "@/app/[locale]/components/common/Navigation/Models";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
+import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
+import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   HEADER_CONTACT_US,
   HEADER_NAV_LINKS_ARRAY,
 } from "@/app/[locale]/utils/constants";
-import { useState } from "react";
+import { useParams, usePathname } from "next/navigation";
+import { useContext, useState } from "react";
 
 export default function Navigation() {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
   const [subMenuHeading, setSubMenuHeading] = useState("");
+  const { sticky } = useContext(StickyNavigationContext);
+  const path = usePathname();
+  const locale = useParams()?.locale as LocaleTypes;
+  console.log(path, locale);
 
   const onSubMenuHeadingClick = (subMenuHeader: string) => {
     setSubMenuHeading(subMenuHeader);
@@ -91,23 +98,11 @@ export default function Navigation() {
       </div>
 
       {/* SUBNAVIGATION */}
-      <div
-        className="bg-sub-navigation-black 
-        backdrop-blur-[10px] 
-        border-b border-solid 
-        border-sub-navigation-border 
-        py-2 
-        md:flex 
-        hidden 
-        justify-center
-        relative
-        -z-[1]
-        "
-      >
-        <BasicWidthContainer>
-          <Models />
-        </BasicWidthContainer>
-      </div>
+      {!["/", `/${locale}`].includes(path) ? (
+        <SubNavigation />
+      ) : sticky ? (
+        <SubNavigation />
+      ) : null}
     </div>
   );
 }
