@@ -71,9 +71,14 @@ export const HERO_SECTION_SLOGAN =
 export const HERO_SECTION_SCROLL_TO_THE_FUTURE = "Scroll to the future";
 
 export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
-  { stat: "2003", details: "experience since" },
-  { stat: "3200+", details: "successful PV installations" },
-  { stat: "100+", details: "countries" },
+  { stat: "2003", details: "experience since", initialValue: "1990" },
+  {
+    stat: "3200",
+    details: "successful PV installations",
+    initialValue: "3100",
+    sign: "+",
+  },
+  { stat: "100", details: "countries", initialValue: "50", sign: "+" },
 ];
 export const AWARDS_AND_STATS_GERMAN_ENGINEERING = "German Engineering";
 export const AWARDS_AND_STATS_PRODUCTION_PLANTS =

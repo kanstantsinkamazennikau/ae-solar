@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Production() {
   return (
-    <div className="flex gap-[120px] max-w-[1100px]">
+    <div className="flex gap-[120px] max-w-[1100px] self-center">
       <div className="flex justify-end items-center gap-4 flex-grow flex-shrink basis-0">
         <div className="text-[40px] font-bold leading-none text-right">
           {AWARDS_AND_STATS_GERMAN_ENGINEERING}
