@@ -1,7 +1,8 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Models from "@/app/[locale]/components/common/Navigation/Models";
+import { SubNavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 
-export default function SubNavigation() {
+export default function SubNavigation({ isLink }: SubNavigationProps) {
   return (
     <div
       className="bg-sub-navigation-black 
@@ -17,7 +18,7 @@ export default function SubNavigation() {
         "
     >
       <BasicWidthContainer>
-        <Models />
+        <Models {...{ isLink }} />
       </BasicWidthContainer>
     </div>
   );

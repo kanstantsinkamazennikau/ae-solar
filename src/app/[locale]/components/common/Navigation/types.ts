@@ -16,3 +16,11 @@ export interface SubMenuItemsProps {
   subMenuArray: NavLink[];
   onLinkClick?: () => void;
 }
+
+export interface SubNavigationProps {
+  isLink?: boolean;
+}
+
+export interface ModelsProps {
+  isLink?: boolean;
+}

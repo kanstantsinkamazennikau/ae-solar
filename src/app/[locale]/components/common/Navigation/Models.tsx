@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/app/[locale]/components/common/Button";
+import { ModelsProps } from "@/app/[locale]/components/common/Navigation/types";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import {
   HEADER_CALCULATE,
@@ -12,38 +13,45 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useContext } from "react";
 
-export default function Models() {
+export default function Models({ isLink }: ModelsProps) {
   const locale = useParams()?.locale;
-  const { setModel } = useContext(ModelContext);
+  const { setModel, model } = useContext(ModelContext);
 
   return (
     <div className="flex justify-center gap-11 items-center">
       <div className="font-normal text-sm leading-normal text-dark-gray-600 -tracking-[0.14px]">
         {HEADER_CHOOSE_YOUR_MODEL}
       </div>
-      {HEADER_SUBNAVIGATION_PANELS_MODELS.map((model) => {
-        const modelName = model.split(".")[0];
+      {HEADER_SUBNAVIGATION_PANELS_MODELS.map((panel) => {
+        const modelName = panel.split(".")[0];
 
-        return (
-          // <Link
-          //   key={model}
-          //   href={`/${locale}/products/${modelName.toLowerCase()}`}
-          // >
+        const component = (
           <div
-            className="flex items-center gap-2 cursor-pointer"
-            key={model}
+            className={`flex items-center gap-2 cursor-pointer ${
+              model === modelName && !isLink
+                ? "px-3 py-[10px] border border-solid rounded-[100px] border-sub-navigation-selected-border bg-sub-navigation-selected"
+                : ""
+            }`}
+            key={panel}
             onClick={() => setModel(modelName as Model)}
           >
             <Image
               className="-rotate-90"
               alt="arrow"
-              src={`/images/models/${model}`}
+              src={`/images/models/${panel}`}
               width={16}
               height={16}
             />
             <span>{modelName}</span>
           </div>
-          // </Link>
+        );
+
+        return isLink ? (
+          <Link href={`/${locale}/products/${modelName.toLowerCase()}`}>
+            {component}
+          </Link>
+        ) : (
+          component
         );
       })}
       <Button

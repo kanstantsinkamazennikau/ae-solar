@@ -37,6 +37,8 @@ const config: Config = {
         "navigation-black": "rgba(0, 0, 0, 0.70)",
         "sub-navigation-black": "rgba(0, 0, 0, 0.10)",
         "sub-navigation-border": "rgba(208, 216, 233, 0.10)",
+        "sub-navigation-selected": "rgba(69, 69, 69, 0.40)",
+        "sub-navigation-selected-border": "rgba(146, 146, 146, 0.40)",
         "get-in-touch-border": "rgba(255, 255, 255, 0.05)",
         "get-in-touch-client-border": "rgba(146, 146, 146, 0.40)",
       },

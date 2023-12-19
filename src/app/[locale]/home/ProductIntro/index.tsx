@@ -7,22 +7,15 @@ import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNaviga
 import { ModelContext } from "@/app/[locale]/context/modelContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
 import {
-  PRODUCT_INTRO_HIGH_QUALITY_SP,
-  PRODUCT_INTRO_PANELS,
-  PRODUCT_INTRO_THE_NEXT_LEVEL_OF,
-  PRODUCT_INTRO_PANELS_MAPPING,
-  PRODUCT_INTRO_LEARN_MORE,
   PRODUCT_INTRO_CALCULATE_YOUR_MODEL,
+  PRODUCT_INTRO_HIGH_QUALITY_SP,
+  PRODUCT_INTRO_LEARN_MORE,
+  PRODUCT_INTRO_PANELS,
+  PRODUCT_INTRO_PANELS_MAPPING,
+  PRODUCT_INTRO_THE_NEXT_LEVEL_OF,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import {
-  useCallback,
-  useContext,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useContext, useEffect, useRef } from "react";
 
 export default function ProductIntro() {
   const { model } = useContext(ModelContext);
@@ -42,6 +35,10 @@ export default function ProductIntro() {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  useEffect(() => {
+    handleScroll();
   }, [handleScroll]);
 
   return (

@@ -7,21 +7,16 @@ import Logo from "@/app/[locale]/components/common/Logo";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   HEADER_CONTACT_US,
   HEADER_NAV_LINKS_ARRAY,
 } from "@/app/[locale]/utils/constants";
-import { useParams, usePathname } from "next/navigation";
 import { useContext, useState } from "react";
 
 export default function Navigation() {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
   const [subMenuHeading, setSubMenuHeading] = useState("");
   const { sticky } = useContext(StickyNavigationContext);
-  const path = usePathname();
-  const locale = useParams()?.locale as LocaleTypes;
-  console.log(path, locale);
 
   const onSubMenuHeadingClick = (subMenuHeader: string) => {
     setSubMenuHeading(subMenuHeader);
@@ -98,11 +93,7 @@ export default function Navigation() {
       </div>
 
       {/* SUBNAVIGATION */}
-      {!["/", `/${locale}`].includes(path) ? (
-        <SubNavigation />
-      ) : sticky ? (
-        <SubNavigation />
-      ) : null}
+      {sticky ? <SubNavigation isLink /> : null}
     </div>
   );
 }
