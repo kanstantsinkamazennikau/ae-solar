@@ -54,13 +54,17 @@ export default function Models({ isLink }: ModelsProps) {
           component
         );
       })}
-      <Button
-        onClick={() => console.log("contact us")}
-        size="extrasmall"
-        color="secondary"
-      >
-        <span className="leading-[10px] font-semibold">{HEADER_CALCULATE}</span>
-      </Button>
+      {isLink && (
+        <Button
+          onClick={() => console.log("contact us")}
+          size="extrasmall"
+          color="secondary"
+        >
+          <span className="leading-[10px] font-semibold">
+            {HEADER_CALCULATE}
+          </span>
+        </Button>
+      )}
     </div>
   );
 }
