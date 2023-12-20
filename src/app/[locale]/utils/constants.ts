@@ -60,7 +60,7 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Meteor.svg",
   "Terra.svg",
   "Neptun.svg",
-  "Smart.svg",
+  "HSF.svg",
 ];
 export const HEADER_CHOOSE_YOUR_MODEL = "Choose your model";
 export const HEADER_CALCULATE = "Calculate";
@@ -157,14 +157,14 @@ export const PRODUCT_INTRO_PANELS = {
       text: "Experience minimum power loss and shine brightly even in low light conditions",
     },
   },
-  Smart: {
+  HSF: {
     stats: {
-      power: "Smart",
+      power: "HSF",
       efficiency: "22.57%",
       voltage: "1000",
     },
     info: {
-      icon: "Smart.svg",
+      icon: "HSF.svg",
       text: "Experience minimum power loss and shine brightly even in low light Smart",
     },
   },
@@ -314,3 +314,36 @@ export const FOOTER_LINKS_ARRAY = [
 export const FOOTER_COPYRIGHT =
   "Copyright © 2023 AESolar. All rights reserved.";
 export const POLICY_LINKS = ["Privacy Policy", "Terms of Use", "Legal"];
+
+export const CONSTRUCTOR_OPTION_LINES = [
+  {
+    panelName: "Aurora",
+    lineHeight: 69,
+    position: "11%",
+  },
+  {
+    panelName: "Comet",
+    lineHeight: 69,
+    position: "23%",
+  },
+  {
+    panelName: "Terra",
+    lineHeight: 131,
+    position: "38%",
+  },
+  {
+    panelName: "Eclipse",
+    lineHeight: 131,
+    position: "49.5%",
+  },
+  {
+    panelName: "Meteor",
+    lineHeight: 207,
+    position: "62.5%",
+  },
+  {
+    panelName: "HSF",
+    lineHeight: 207,
+    position: "74%",
+  },
+];

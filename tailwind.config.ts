@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -41,6 +42,8 @@ const config: Config = {
         "sub-navigation-selected-border": "rgba(146, 146, 146, 0.40)",
         "get-in-touch-border": "rgba(255, 255, 255, 0.05)",
         "get-in-touch-client-border": "rgba(146, 146, 146, 0.40)",
+        "option-border": "#131313",
+        "option-text": "#828282",
       },
       fontSize: {
         base: ["16px", "16px"],
@@ -54,6 +57,17 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".optionLine": {
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='69' viewBox='0 0 2 69' fill='none'%3E%3Cpath d='M1 0V69' stroke='url(%23paint0_linear_1309_1935)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1309_1935' x1='1.5' y1='0' x2='1.5' y2='69' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F60109'/%3E%3Cstop offset='1' stop-color='%23F60109' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E")`,
+          backgroundRepeat: "no-repeat no-repeat",
+          backgroundPosition: "center center",
+          backgroundSize: "cover",
+        },
+      });
+    }),
+  ],
 };
 export default config;

@@ -28,6 +28,7 @@ export default function ProductIntro() {
   const handleScroll = useCallback(() => {
     const { scrollTop } = document.documentElement;
     if (!ref.current) return;
+    console.log(scrollTop, ref.current.offsetTop);
 
     scrollTop > ref.current.offsetTop - 95 ? setSticky(true) : setSticky(false);
   }, [setSticky]);
@@ -43,7 +44,7 @@ export default function ProductIntro() {
 
   return (
     <div className="flex flex-col items-center mb-[280px] w-full">
-      <div className="w-full h-[980px] bg-[url('/images/productIntro/back.svg')] bg-center bg-cover justify-end flex mb-11 flex-col">
+      <div className="w-full h-[980px] bg-[url('/images/productIntro/back.svg')] bg-center bg-cover flex mb-11 flex-col justify-between relative">
         <div className="font-bold leading-[1.2] text-[64px] text-center">
           <div>{PRODUCT_INTRO_THE_NEXT_LEVEL_OF}</div>
           <div className="text-base-red">{PRODUCT_INTRO_HIGH_QUALITY_SP}</div>
@@ -57,6 +58,7 @@ export default function ProductIntro() {
                 src={`/images/models/${model}.svg`}
                 width={48}
                 height={48}
+                className=""
               />
               <span className="font-bold leading-[1.5] text-[64px] -tracking-[0.64]">
                 {model}
@@ -68,13 +70,14 @@ export default function ProductIntro() {
             <LinkWithArrow label={PRODUCT_INTRO_LEARN_MORE} href="" />
           </div>
           {/* IMG */}
-          <div className="flex-grow-2 flex-shrink-1">
+          <div className="flex-grow-2 flex-shrink-1 h-[730px] flex">
             <Image
               alt={model}
               src={`/images/productIntro/${model}.png`}
               width={563}
-              height={841}
-              className="object-contain object-bottom h-full"
+              height={730}
+              quality={100}
+              className="object-cover object-bottom h-full"
             />
           </div>
           {/* STATS */}
@@ -90,14 +93,15 @@ export default function ProductIntro() {
               </div>
             ))}
           </div>
+
+          {!sticky && (
+            <div className="absolute w-full z-30 bottom-0 left-0">
+              <SubNavigation />
+            </div>
+          )}
         </BasicWidthContainer>
-        <div ref={ref}></div>
-        {!sticky && (
-          <div className="absolute w-full z-30">
-            <SubNavigation />
-          </div>
-        )}
       </div>
+      <div ref={ref}></div>
       <Button onClick={() => console.log("")}>
         {PRODUCT_INTRO_CALCULATE_YOUR_MODEL}
       </Button>

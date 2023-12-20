@@ -11,7 +11,7 @@ export default function SubNavigation({ isLink }: SubNavigationProps) {
         border-sub-navigation-border 
         py-2 
         md:flex 
-        hidden 
+        hidden
         justify-center
         relative
         -z-[1]

@@ -10,12 +10,17 @@ import {
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useContext } from "react";
 
 export default function Models({ isLink }: ModelsProps) {
   const locale = useParams()?.locale;
+  const router = useRouter();
   const { setModel, model } = useContext(ModelContext);
+
+  const handleClick = () => {
+    router.push(`/${locale}/calculate`);
+  };
 
   return (
     <div className="flex justify-center gap-11 items-center">
@@ -42,7 +47,7 @@ export default function Models({ isLink }: ModelsProps) {
               width={16}
               height={16}
             />
-            <span>{modelName}</span>
+            <span className="text-base font-normal">{modelName}</span>
           </div>
         );
 
@@ -55,11 +60,7 @@ export default function Models({ isLink }: ModelsProps) {
         );
       })}
       {isLink && (
-        <Button
-          onClick={() => console.log("contact us")}
-          size="extrasmall"
-          color="secondary"
-        >
+        <Button onClick={handleClick} size="extrasmall" color="secondary">
           <span className="leading-[10px] font-semibold">
             {HEADER_CALCULATE}
           </span>

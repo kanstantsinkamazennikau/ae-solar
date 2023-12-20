@@ -27,7 +27,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="w-full sticky top-0 z-40">
+    <div className="w-full sticky top-0 z-40 h-[146px]">
       {/* MAIN NAVIGATION */}
       <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-6">
         <BasicWidthContainer>
