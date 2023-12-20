@@ -19,7 +19,7 @@ export default function Models({ isLink }: ModelsProps) {
   const { setModel, model } = useContext(ModelContext);
 
   const handleClick = () => {
-    router.push(`/${locale}/calculate`);
+    router.push(`/${locale}/constructor`);
   };
 
   return (
@@ -41,7 +41,6 @@ export default function Models({ isLink }: ModelsProps) {
             onClick={() => setModel(modelName as Model)}
           >
             <Image
-              className="-rotate-90"
               alt="arrow"
               src={`/images/models/${panel}`}
               width={16}
