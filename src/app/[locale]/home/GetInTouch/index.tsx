@@ -36,7 +36,7 @@ export default function GetInTouch() {
         height={1080}
         className="h-full w-full mix-blend-color-dodge absolute"
       />
-      <div className="flex flex-col justify-center items-center gap-[100px] max-w-[1320px] pb-[130px] w-full">
+      <div className="flex flex-col justify-center items-center gap-[100px] max-w-[1320px] w-full">
         {/* CLIENT TYPE */}
         <div className="flex p-1 justify-center items-center gap-5 get-in-touch-border [&>*:last-child>div:last-child]:hidden">
           {GET_IN_TOUCH_CLIENT_TYPE.map((type) => (
