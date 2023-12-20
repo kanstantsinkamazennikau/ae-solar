@@ -1,6 +1,7 @@
 "use client";
 
 import Accordion from "@/app/[locale]/components/common/Accordion/";
+import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
@@ -21,7 +22,13 @@ export function MainPageFAQ() {
       />
       <div className="flex flex-col mb-[120px] items-end">
         <div className="max-w-[873px] w-full">
-          <Accordion data={FAQ_ACCORDION_DATA} />
+          <Accordion>
+            {FAQ_ACCORDION_DATA.map((item) => (
+              <AccordionItem key={item.question} question={item.question}>
+                <p className="text-2xl leading-9 pb-6">{item.answer}</p>
+              </AccordionItem>
+            ))}
+          </Accordion>
           <div className="mt-[60px]">
             <Button
               onClick={() => console.log(FAQ_MORE_QUESTIONS)}

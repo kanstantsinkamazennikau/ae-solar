@@ -1,23 +1,35 @@
 "use client";
 
-import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import { AccordionProps } from "@/app/[locale]/components/common/Accordion/types";
-import { useState } from "react";
+import {
+  Children,
+  JSXElementConstructor,
+  ReactElement,
+  cloneElement,
+  useState,
+} from "react";
 
-export default function Accordion({ data }: AccordionProps) {
+export default function Accordion({ children }: AccordionProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const handleItemClick = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  return data.map((item, index) => (
-    <AccordionItem
-      key={item.question}
-      question={item.question}
-      answer={item.answer}
-      isOpen={activeIndex === index}
-      onClick={() => handleItemClick(index)}
-    />
-  ));
+  const renderChildren = () => {
+    return Children.map(
+      children,
+      (
+        child: ReactElement<any, string | JSXElementConstructor<any>>,
+        index
+      ) => {
+        return cloneElement(child!, {
+          isOpen: activeIndex === index,
+          onClick: () => handleItemClick(index),
+        });
+      }
+    );
+  };
+
+  return renderChildren();
 }

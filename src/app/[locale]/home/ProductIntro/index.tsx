@@ -43,37 +43,13 @@ export default function ProductIntro() {
 
   return (
     <div className="flex flex-col items-center mb-[280px] w-full">
-      <div className="font-bold leading-[1.2] text-[64px] text-center">
-        <div>{PRODUCT_INTRO_THE_NEXT_LEVEL_OF}</div>
-        <div className="text-base-red">{PRODUCT_INTRO_HIGH_QUALITY_SP}</div>
-      </div>
-      <div className="w-full h-[640px] bg-[url('/images/productIntro/mask.svg')] bg-center bg-cover justify-end flex mb-11 flex-col">
+      <div className="w-full h-[980px] bg-[url('/images/productIntro/back.svg')] bg-center bg-cover justify-end flex mb-11 flex-col">
+        <div className="font-bold leading-[1.2] text-[64px] text-center">
+          <div>{PRODUCT_INTRO_THE_NEXT_LEVEL_OF}</div>
+          <div className="text-base-red">{PRODUCT_INTRO_HIGH_QUALITY_SP}</div>
+        </div>
         <BasicWidthContainer styles="flex gap-11 self-center">
-          {/* STATS */}
-          <div className="flex-1 gap-11 flex-col flex justify-center">
-            {modelStatsKeys.map((key) => (
-              <div key={key}>
-                <div className="text-5xl leading-[1.3] font-semibold">
-                  {modelStats[key as keyof typeof modelStats]}
-                </div>
-                <div className="text-lg leading-[1.7] font-bold font-walsheim text-dark-gray-900">
-                  {PRODUCT_INTRO_PANELS_MAPPING[key as keyof typeof modelStats]}
-                </div>
-              </div>
-            ))}
-          </div>
-          {/* IMG */}
-          <div className="flex-grow-2 flex-shrink-1">
-            <Image
-              alt={model}
-              src={`/images/productIntro/${model}.png`}
-              width={638}
-              height={683}
-              className="object-contain object-bottom h-full"
-            />
-          </div>
           {/* INFO */}
-
           <div className="flex-1 flex flex-col gap-8 items-start justify-center">
             <div className="flex gap-3">
               <Image
@@ -90,6 +66,29 @@ export default function ProductIntro() {
               {modelInfo.text}
             </div>
             <LinkWithArrow label={PRODUCT_INTRO_LEARN_MORE} href="" />
+          </div>
+          {/* IMG */}
+          <div className="flex-grow-2 flex-shrink-1">
+            <Image
+              alt={model}
+              src={`/images/productIntro/${model}.png`}
+              width={563}
+              height={841}
+              className="object-contain object-bottom h-full"
+            />
+          </div>
+          {/* STATS */}
+          <div className="flex-1 gap-11 flex-col flex justify-center">
+            {modelStatsKeys.map((key) => (
+              <div key={key}>
+                <div className="text-5xl leading-[1.3] font-semibold">
+                  {modelStats[key as keyof typeof modelStats]}
+                </div>
+                <div className="text-lg leading-[1.7] font-bold font-walsheim text-dark-gray-900">
+                  {PRODUCT_INTRO_PANELS_MAPPING[key as keyof typeof modelStats]}
+                </div>
+              </div>
+            ))}
           </div>
         </BasicWidthContainer>
         <div ref={ref}></div>

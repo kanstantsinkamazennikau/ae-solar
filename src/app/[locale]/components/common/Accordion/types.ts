@@ -1,8 +1,10 @@
+import { JSXElementConstructor, ReactElement } from "react";
+
 export interface AccordionItemProps {
   question: string;
-  answer: string;
-  isOpen: boolean;
-  onClick: () => void;
+  isOpen?: boolean;
+  onClick?: () => void;
+  children: React.ReactNode;
 }
 
 export interface AccordionData {
@@ -11,5 +13,7 @@ export interface AccordionData {
 }
 
 export interface AccordionProps {
-  data: AccordionData[];
+  children:
+    | ReactElement<any, string | JSXElementConstructor<any>>
+    | readonly ReactElement<any, string | JSXElementConstructor<any>>[];
 }

@@ -6,9 +6,9 @@ import { useRef } from "react";
 
 export default function AccordionItem({
   question,
-  answer,
   isOpen,
   onClick,
+  children,
 }: AccordionItemProps) {
   const contentHeight = useRef<HTMLDivElement>(null);
 
@@ -37,7 +37,7 @@ export default function AccordionItem({
             : { height: "0px" }
         }
       >
-        <p className="text-2xl leading-9  pb-6">{answer}</p>
+        {children}
       </div>
     </div>
   );
