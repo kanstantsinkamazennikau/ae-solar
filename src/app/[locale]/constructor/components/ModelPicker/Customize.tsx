@@ -195,9 +195,9 @@ export default function Customize() {
             const values = param.values as RangeInterface;
             const { measure1, measure2, upperLimit, lowerLimit } = values;
 
-            // const errorText = Object.values(
-            //   error[rangeSubCategory]
-            // )[0] as string;
+            const errorText = Object.values(
+              error[rangeSubCategory]
+            )[0] as string;
 
             return (
               <div key={param.text}>
@@ -272,7 +272,7 @@ export default function Customize() {
                   </div>
                 </div>
                 <p className="text-xs text-base-red mt-2 text-center">
-                  {/* {errorText} */}
+                  {errorText}
                 </p>
               </div>
             );

@@ -59,11 +59,12 @@ export default function Models({ isLink }: ModelsProps) {
         );
       })}
       {isLink && (
-        <Button onClick={handleClick} size="extrasmall" color="secondary">
-          <span className="leading-[10px] font-semibold">
-            {HEADER_CALCULATE}
-          </span>
-        </Button>
+        // <Button onClick={handleClick} size="extrasmall" color="secondary">
+        //   <span className="leading-[10px] font-semibold">
+        //     {HEADER_CALCULATE}
+        //   </span>
+        // </Button>
+        <Link href={`/${locale}/constructor`}>test</Link>
       )}
     </div>
   );
