@@ -1,13 +1,9 @@
 "use client";
 
 import SectionHeader from "@/app/[locale]/constructor/components/ChooseModel/SectionHeader";
-import {
-  ConstructorContext,
-  ConstructorModel,
-} from "@/app/[locale]/context/constructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
   CONSTRUCTOR_MODEL,
-  CONSTRUCTOR_MODELS_SPEC,
   CONSTRUCTOR_WHICH_IS_BEST,
 } from "@/app/[locale]/utils/constants";
 import { useContext } from "react";
