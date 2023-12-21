@@ -17,12 +17,12 @@ const models = Object.keys(CONSTRUCTOR_MODELS_SPEC) as Array<
 >;
 
 export default function Model() {
-  // const { constructorModel, setConstructorModel } =
-  //   useContext(ConstructorContext);
+  const { constructorModel, setConstructorModel } =
+    useContext(ConstructorContext);
 
   return (
     <div className="flex flex-col">
-      {/* <SectionHeader
+      <SectionHeader
         title={CONSTRUCTOR_MODEL}
         clarification={CONSTRUCTOR_WHICH_IS_BEST}
       />
@@ -48,8 +48,7 @@ export default function Model() {
             </p>
           </div>
         ))}
-      </div> */}
-      re
+      </div>
     </div>
   );
 }

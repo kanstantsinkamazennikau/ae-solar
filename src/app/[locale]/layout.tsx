@@ -92,13 +92,13 @@ export default function RootLayout({
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
         <div className="flex flex-col justify-center items-center">
           <ModelProvider>
-            {/* <ConstructorProvider> */}
-            <StickyNavigationProvider>
-              <Navigation />
-              {children}
-              <Footer />
-            </StickyNavigationProvider>
-            {/* </ConstructorProvider> */}
+            <ConstructorProvider>
+              <StickyNavigationProvider>
+                <Navigation />
+                {children}
+                <Footer />
+              </StickyNavigationProvider>
+            </ConstructorProvider>
           </ModelProvider>
         </div>
       </body>

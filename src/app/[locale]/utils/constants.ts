@@ -389,7 +389,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       moduleDimension: {
         type: "range/dimension",
         text: "Module Dimension.",
-        clarification: "L (mm) × W (mm)",
+        clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
           lowerLimit: "4000",
