@@ -724,9 +724,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
     ],
   },
 };
-export const test = Object.keys(CONSTRUCTOR_MODELS_SPEC) as Array<
-  keyof typeof CONSTRUCTOR_MODELS_SPEC
->;
+
 export const CONSTRUCTOR_APPLICATIONS_STANDARDS = [
   {
     type: "Shade Resistant",

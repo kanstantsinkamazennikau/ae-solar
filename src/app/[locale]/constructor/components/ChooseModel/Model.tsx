@@ -7,19 +7,18 @@ import {
 } from "@/app/[locale]/context/constructorContext";
 import {
   CONSTRUCTOR_MODEL,
+  CONSTRUCTOR_MODELS_SPEC,
   CONSTRUCTOR_WHICH_IS_BEST,
-  test,
 } from "@/app/[locale]/utils/constants";
 import { useContext } from "react";
 
-// const models = Object.keys(CONSTRUCTOR_MODELS_SPEC) as Array<
-//   keyof typeof CONSTRUCTOR_MODELS_SPEC
-// >;
+const models = Object.keys(CONSTRUCTOR_MODELS_SPEC) as Array<
+  keyof typeof CONSTRUCTOR_MODELS_SPEC
+>;
 
 export default function Model() {
   const { constructorModel, setConstructorModel } =
     useContext(ConstructorContext);
-  console.log(test);
 
   return (
     <div className="flex flex-col">
@@ -27,7 +26,7 @@ export default function Model() {
         title={CONSTRUCTOR_MODEL}
         clarification={CONSTRUCTOR_WHICH_IS_BEST}
       />
-      {/* <div className="flex gap-1 flex-col">
+      <div className="flex gap-1 flex-col">
         {models.map((model) => (
           <div
             key={model}
@@ -49,7 +48,7 @@ export default function Model() {
             </p>
           </div>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }
