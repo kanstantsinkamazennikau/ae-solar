@@ -1,6 +1,5 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import ChooseModel from "@/app/[locale]/constructor/components/ChooseModel";
-import Model from "@/app/[locale]/constructor/components/ChooseModel/Model";
 import { CONSTRUCTOR_OPTION_LINES } from "@/app/[locale]/utils/constants";
 
 export default function Option() {
@@ -43,11 +42,7 @@ export default function Option() {
             </div>
           </div>
         </div>
-        {/* <ChooseModel /> */}
-        <div className="flex flex-col gap-[60px]">
-          <Model />
-          {/*<Customize /> */}
-        </div>
+        <ChooseModel />
       </div>
     </BasicWidthContainer>
   );
