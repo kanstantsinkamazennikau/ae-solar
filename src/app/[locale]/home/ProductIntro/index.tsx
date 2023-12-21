@@ -28,8 +28,6 @@ export default function ProductIntro() {
   const handleScroll = useCallback(() => {
     const { scrollTop } = document.documentElement;
     if (!ref.current) return;
-    console.log(scrollTop, ref.current.offsetTop);
-
     scrollTop > ref.current.offsetTop - 95 ? setSticky(true) : setSticky(false);
   }, [setSticky]);
 

@@ -41,3 +41,15 @@ body {
 .get-in-touch-client-border {
   @apply border border-solid border-get-in-touch-client-border bg-get-in-touch-client rounded-full;
 }
+
+.constructor-model-picker-border {
+  @apply border-2 rounded-xl border-solid border-[#252525];
+}
+
+.constructor-model-picker-selected-outline {
+  @apply outline-2 rounded-xl outline outline-base-red;
+}
+
+.constructor-model-picker-selected-border {
+  @apply border-2 rounded-xl border-solid border-base-red;
+}

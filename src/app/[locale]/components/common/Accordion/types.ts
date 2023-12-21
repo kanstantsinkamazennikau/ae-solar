@@ -5,6 +5,7 @@ export interface AccordionItemProps {
   isOpen?: boolean;
   onClick?: () => void;
   children: React.ReactNode;
+  multiple?: boolean;
 }
 
 export interface AccordionData {
@@ -16,4 +17,5 @@ export interface AccordionProps {
   children:
     | ReactElement<any, string | JSXElementConstructor<any>>
     | readonly ReactElement<any, string | JSXElementConstructor<any>>[];
+  multiple?: boolean;
 }

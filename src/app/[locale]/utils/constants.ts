@@ -1,3 +1,5 @@
+import { PanelParams } from "@/app/[locale]/constructor/components/ModelPicker/types";
+
 // NAVIGATION
 export const HEADER_NAV_LINKS_ARRAY = [
   {
@@ -347,3 +349,408 @@ export const CONSTRUCTOR_OPTION_LINES = [
     position: "74%",
   },
 ];
+
+export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
+  Aurora: {
+    panelTechnology: "PERc Technology",
+    params: {
+      solarCellTechnology: {
+        type: "slider",
+        text: "Solar Cell Technology",
+        values: ["PERc"],
+      },
+      moduleSpecification: {
+        type: "slider",
+        text: "Module Specifation",
+        values: ["Mono-Facial", "Bi-Facial"],
+      },
+      moduleColor: {
+        type: "color",
+        text: "Module Color",
+        values: [
+          { color: "Transparent", icon: "transparent.svg" },
+          { color: "Black", icon: "black.svg" },
+          { color: "White", icon: "white.svg" },
+        ],
+      },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet"],
+      },
+      frameColor: {
+        type: "color",
+        text: "Frame Color",
+        values: [
+          { color: "Black", icon: "black.svg" },
+          { color: "Silver", icon: "white.svg" },
+        ],
+      },
+      moduleDimension: {
+        type: "range/dimension",
+        text: "Module Dimension.",
+        clarification: "L (mm) × W (mm)",
+        values: {
+          measure1: "L(mm)",
+          lowerLimit: "4000",
+          measure2: "W(mm)",
+          upperLimit: "5000",
+        },
+      },
+      powerRange: {
+        type: "range/power",
+        text: "Power Range (W)",
+        values: {
+          measure1: "from",
+          measure2: "to",
+          lowerLimit: "100",
+        },
+      },
+    },
+    applications: [
+      "Shade Resistant",
+      "Carport",
+      "PV-Thermal",
+      "Agri-Voltaics",
+      "Shade Resistant",
+    ],
+  },
+  Comet: {
+    panelTechnology: "HJT Technology",
+    params: {
+      solarCellTechnology: {
+        type: "slider",
+        text: "Solar Cell Technology",
+        values: ["HJT"],
+      },
+      moduleSpecification: {
+        type: "slider",
+        text: "Module Specifation",
+        values: ["Bi-Facial"],
+      },
+      moduleColor: {
+        type: "color",
+        text: "Module Color",
+        values: [
+          { color: "Transparent", icon: "transparent.svg" },
+          { color: "Black", icon: "black.svg" },
+          { color: "White", icon: "white.svg" },
+        ],
+      },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet"],
+      },
+      frameColor: {
+        type: "color",
+        text: "Frame Color",
+        values: [
+          { color: "Black", icon: "black.svg" },
+          { color: "Silver", icon: "white.svg" },
+        ],
+      },
+      moduleDimension: {
+        type: "range/dimension",
+        text: "Module Dimension.",
+        clarification: "L (mm) × W (mm)",
+        values: {
+          measure1: "L(mm)",
+          lowerLimit: "4000",
+          measure2: "W(mm)",
+          upperLimit: "5000",
+        },
+      },
+      powerRange: {
+        type: "range/power",
+        text: "Power Range (W)",
+        values: {
+          measure1: "from",
+          measure2: "to",
+          lowerLimit: "100",
+        },
+      },
+    },
+    applications: [
+      "Shade Resistant",
+      "Carport",
+      "PV-Thermal",
+      "Agri-Voltaics",
+      "Shade Resistant",
+    ],
+  },
+  Meteor: {
+    panelTechnology: "TOPCon Technology",
+    params: {
+      solarCellTechnology: {
+        type: "slider",
+        text: "Solar Cell Technology",
+        values: ["TOPCon"],
+      },
+      moduleSpecification: {
+        type: "slider",
+        text: "Module Specifation",
+        values: ["Mono-Facial", "Bi-Facial"],
+      },
+      moduleColor: {
+        type: "color",
+        text: "Module Color",
+        values: [
+          { color: "Transparent", icon: "transparent.svg" },
+          { color: "Black", icon: "black.svg" },
+          { color: "White", icon: "white.svg" },
+        ],
+      },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet"],
+      },
+      frameColor: {
+        type: "color",
+        text: "Frame Color",
+        values: [
+          { color: "Black", icon: "black.svg" },
+          { color: "Silver", icon: "white.svg" },
+        ],
+      },
+      moduleDimension: {
+        type: "range/dimension",
+        text: "Module Dimension.",
+        clarification: "L (mm) × W (mm)",
+        values: {
+          measure1: "L(mm)",
+          lowerLimit: "4000",
+          measure2: "W(mm)",
+          upperLimit: "5000",
+        },
+      },
+      powerRange: {
+        type: "range/power",
+        text: "Power Range (W)",
+        values: {
+          measure1: "from",
+          measure2: "to",
+          lowerLimit: "100",
+        },
+      },
+    },
+    applications: [
+      "Shade Resistant",
+      "Carport",
+      "PV-Thermal",
+      "Agri-Voltaics",
+      "Shade Resistant",
+    ],
+  },
+  Terra: {
+    panelTechnology: "Wind/Snow Resistant Technology",
+    params: {
+      solarCellTechnology: {
+        type: "slider",
+        text: "Solar Cell Technology",
+        values: ["PERc", "TOPCon"],
+      },
+      moduleSpecification: {
+        type: "slider",
+        text: "Module Specifation",
+        values: ["Mono-Facial", "Bi-Facial"],
+      },
+      moduleColor: {
+        type: "color",
+        text: "Module Color",
+        values: [
+          { color: "Transparent", icon: "transparent.svg" },
+          { color: "Black", icon: "black.svg" },
+          { color: "White", icon: "white.svg" },
+        ],
+      },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet"],
+      },
+      frameColor: {
+        type: "color",
+        text: "Frame Color",
+        values: [
+          { color: "Black", icon: "black.svg" },
+          { color: "Silver", icon: "white.svg" },
+        ],
+      },
+      moduleDimension: {
+        type: "range/dimension",
+        text: "Module Dimension.",
+        clarification: "L (mm) × W (mm)",
+        values: {
+          measure1: "L(mm)",
+          lowerLimit: "4000",
+          measure2: "W(mm)",
+          upperLimit: "5000",
+        },
+      },
+      powerRange: {
+        type: "range/power",
+        text: "Power Range (W)",
+        values: {
+          measure1: "from",
+          measure2: "to",
+          lowerLimit: "100",
+        },
+      },
+    },
+    applications: ["Agri-Voltaics"],
+  },
+  Neptun: {
+    panelTechnology: "PV-Thermal Technology",
+    params: {
+      solarCellTechnology: {
+        type: "slider",
+        text: "Solar Cell Technology",
+        values: ["PERc", "TOPCon", "HJT"],
+      },
+      moduleSpecification: {
+        type: "slider",
+        text: "Module Specifation",
+        values: ["Mono-Facial", "Bi-Facial"],
+      },
+      moduleColor: {
+        type: "color",
+        text: "Module Color",
+        values: [
+          { color: "Transparent", icon: "transparent.svg" },
+          { color: "Black", icon: "black.svg" },
+          { color: "White", icon: "white.svg" },
+        ],
+      },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet"],
+      },
+      frameColor: {
+        type: "color",
+        text: "Frame Color",
+        values: [
+          { color: "Black", icon: "black.svg" },
+          { color: "Silver", icon: "white.svg" },
+        ],
+      },
+      moduleDimension: {
+        type: "range/dimension",
+        text: "Module Dimension.",
+        clarification: "L (mm) × W (mm)",
+        values: {
+          measure1: "L(mm)",
+          lowerLimit: "4000",
+          measure2: "W(mm)",
+          upperLimit: "5000",
+        },
+      },
+      powerRange: {
+        type: "range/power",
+        text: "Power Range (W)",
+        values: {
+          measure1: "from",
+          measure2: "to",
+          lowerLimit: "100",
+        },
+      },
+    },
+    applications: ["PV-Thermal"],
+  },
+  HSF: {
+    panelTechnology: "Shede Resident Technology",
+    params: {
+      solarCellTechnology: {
+        type: "slider",
+        text: "Solar Cell Technology",
+        values: ["PERc"],
+      },
+      moduleSpecification: {
+        type: "slider",
+        text: "Module Specifation",
+        values: ["Mono-Facial"],
+      },
+      moduleColor: {
+        type: "color",
+        text: "Module Color",
+        values: [
+          { color: "Transparent", icon: "transparent.svg" },
+          { color: "Black", icon: "black.svg" },
+          { color: "White", icon: "white.svg" },
+        ],
+      },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet"],
+      },
+      frameColor: {
+        type: "color",
+        text: "Frame Color",
+        values: [
+          { color: "Black", icon: "black.svg" },
+          { color: "Silver", icon: "white.svg" },
+        ],
+      },
+      moduleDimension: {
+        type: "range/dimension",
+        text: "Module Dimension.",
+        clarification: "L (mm) × W (mm)",
+        values: {
+          measure1: "L(mm)",
+          lowerLimit: "4000",
+          measure2: "W(mm)",
+          upperLimit: "5000",
+        },
+      },
+      powerRange: {
+        type: "range/power",
+        text: "Power Range (W)",
+        values: {
+          measure1: "from",
+          measure2: "to",
+          lowerLimit: "100",
+        },
+      },
+    },
+    applications: [
+      "Shade Resistant",
+      "Carport",
+      "PV-Thermal",
+      "Agri-Voltaics",
+      "Shade Resistant",
+    ],
+  },
+};
+export const CONSTRUCTOR_APPLICATIONS_STANDARDS = [
+  {
+    type: "Shade Resistant",
+    clarification: "Shade ResistantShade ResistantShade Resistant",
+  },
+  {
+    type: "Carport",
+    clarification:
+      "CarportCarportCarportCarportCarport CarportCarportCarportCarport",
+  },
+  {
+    type: "PV-Thermal",
+    clarification: "PV-Thermal",
+  },
+  {
+    type: "Agri-Voltaics",
+    clarification: "Agri-VoltaicsAgri-VoltaicsAgri-Voltaics",
+  },
+  {
+    type: "Shade Resistant",
+    clarification: "Shade ResistantShade Resistant Shade Resistant",
+  },
+];
+
+export const CONSTRUCTOR_MODEL = "Model.";
+export const CONSTRUCTOR_WHICH_IS_BEST = "Which is best for you?";
+export const CONSTRUCTOR_CUSTOMIZE = "Customize.";
+export const CONSTRUCTOR_YOUR_MODEL = "Your model";
+export const CONSTRUCTOR_APPLICATIONS = "Applications.";
+export const CONSTRUCTOR_STANDARD = "Standard";

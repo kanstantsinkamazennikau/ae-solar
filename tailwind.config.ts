@@ -32,6 +32,7 @@ const config: Config = {
         "dark-gray-900": "#9A9A9A",
         "dark-gray-800": "#747474",
         "dark-gray-700": "#313131",
+        "dark-gray-650": "#4F4F4F",
         "dark-gray-600": "#6E6E6E",
         "fade-start-color": "#000",
         "fade-end-color": "rgba(0, 0, 0, 0.00)",

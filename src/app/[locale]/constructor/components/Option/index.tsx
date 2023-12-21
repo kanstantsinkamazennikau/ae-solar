@@ -1,4 +1,5 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import ModelPicker from "@/app/[locale]/constructor/components/ModelPicker";
 import { CONSTRUCTOR_OPTION_LINES } from "@/app/[locale]/utils/constants";
 
 export default function Option() {
@@ -41,7 +42,7 @@ export default function Option() {
             </div>
           </div>
         </div>
-        <div>SOLAR PANELS</div>
+        <ModelPicker />
       </div>
     </BasicWidthContainer>
   );

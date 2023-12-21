@@ -22,7 +22,7 @@ export function MainPageFAQ() {
       />
       <div className="flex flex-col mb-[120px] items-end">
         <div className="max-w-[873px] w-full">
-          <Accordion>
+          <Accordion multiple>
             {FAQ_ACCORDION_DATA.map((item) => (
               <AccordionItem key={item.question} question={item.question}>
                 <p className="text-2xl leading-9 pb-6">{item.answer}</p>

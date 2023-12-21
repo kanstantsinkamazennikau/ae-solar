@@ -9,7 +9,7 @@ import {
   useState,
 } from "react";
 
-export default function Accordion({ children }: AccordionProps) {
+export default function Accordion({ children, multiple }: AccordionProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const handleItemClick = (index: number) => {
@@ -23,10 +23,15 @@ export default function Accordion({ children }: AccordionProps) {
         child: ReactElement<any, string | JSXElementConstructor<any>>,
         index
       ) => {
-        return cloneElement(child!, {
-          isOpen: activeIndex === index,
-          onClick: () => handleItemClick(index),
-        });
+        return cloneElement(
+          child!,
+          !multiple
+            ? {
+                isOpen: activeIndex === index,
+                onClick: () => handleItemClick(index),
+              }
+            : { multiple }
+        );
       }
     );
   };
