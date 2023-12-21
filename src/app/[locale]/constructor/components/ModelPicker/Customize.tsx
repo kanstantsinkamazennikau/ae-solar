@@ -171,7 +171,7 @@ export default function Customize() {
                       >
                         <Image
                           src={`/images/option/${icon}`}
-                          alt="union"
+                          alt={icon}
                           priority
                           width={16}
                           height={16}
