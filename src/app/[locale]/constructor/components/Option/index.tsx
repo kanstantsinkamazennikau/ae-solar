@@ -42,7 +42,7 @@ export default function Option() {
             </div>
           </div>
         </div>
-        <ModelPicker />
+        {/* <ModelPicker /> */}
       </div>
     </BasicWidthContainer>
   );
