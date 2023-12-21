@@ -5,7 +5,7 @@ export default function ModelPicker() {
   return (
     <div className="flex flex-col gap-[60px]">
       <Model />
-      <Customize />
+      {/* <Customize /> */}
     </div>
   );
 }
