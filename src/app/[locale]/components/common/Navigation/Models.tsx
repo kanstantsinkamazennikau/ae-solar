@@ -11,7 +11,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { Router } from "next/router";
 import { useContext } from "react";
 
 export default function Models({ isLink }: ModelsProps) {
@@ -60,19 +59,11 @@ export default function Models({ isLink }: ModelsProps) {
         );
       })}
       {isLink && (
-        // <Button onClick={handleClick} size="extrasmall" color="secondary">
-        //   <span className="leading-[10px] font-semibold">
-        //     {HEADER_CALCULATE}
-        //   </span>
-        // </Button>
-        <Link
-          href={`/${locale}/constructor`}
-          onClick={() => {
-            const url = `/${locale}/constructor`;
-            Router.events.emit("routeChangeStart", url);
-            window.location.href = url;
-          }}
-        ></Link>
+        <Button onClick={handleClick} size="extrasmall" color="secondary">
+          <span className="leading-[10px] font-semibold">
+            {HEADER_CALCULATE}
+          </span>
+        </Button>
       )}
     </div>
   );
