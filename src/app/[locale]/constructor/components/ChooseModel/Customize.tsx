@@ -1,12 +1,12 @@
 "use client";
 
-import SectionHeader from "@/app/[locale]/constructor/components/ModelPicker/SectionHeader";
+import SectionHeader from "@/app/[locale]/constructor/components/ChooseModel/SectionHeader";
 import {
   ColorInterface,
   ConstructorParams,
   ConstructorSubCategory,
   RangeInterface,
-} from "@/app/[locale]/constructor/components/ModelPicker/types";
+} from "@/app/[locale]/constructor/components/ChooseModel/types";
 import {
   ConstructorContext,
   ConstructorModel,

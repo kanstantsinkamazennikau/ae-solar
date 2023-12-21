@@ -1,4 +1,4 @@
-import { SectionHeaderProps } from "@/app/[locale]/constructor/components/ModelPicker/types";
+import { SectionHeaderProps } from "@/app/[locale]/constructor/components/ChooseModel/types";
 
 export default function SectionHeader({
   title,
