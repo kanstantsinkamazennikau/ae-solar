@@ -31,21 +31,24 @@ export default function Customize() {
     CONSTRUCTOR_MODELS_SPEC[selectedModel].params
   ) as Array<keyof typeof modelParams>;
 
-  const inputFieldValidation = (
+  const onChange = (
     e: ChangeEvent<HTMLInputElement>,
     rangeCategoryValue: string,
     paramsKey: string
   ) => {
     const { value } = e.target;
+    const re = /^[0-9\b]+$/;
 
-    setConstructorModel((prevState: ConstructorModel) => ({
-      ...prevState,
-      [paramsKey]: {
-        //@ts-ignore
-        ...prevState[paramsKey],
-        [rangeCategoryValue]: value,
-      },
-    }));
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setConstructorModel((prevState: ConstructorModel) => ({
+        ...prevState,
+        [paramsKey]: {
+          //@ts-ignore
+          ...prevState[paramsKey],
+          [rangeCategoryValue]: value,
+        },
+      }));
+    }
   };
 
   const onBlur = (
@@ -207,7 +210,8 @@ export default function Customize() {
                 <div className="flex gap-2">
                   <div className="flex items-center flex-col gap-2">
                     <input
-                      className="p-3 constructor-model-picker-border bg-get-in-touch-client text-center max-w-[145px]"
+                      className="p-3 border-2 rounded-xl border-solid border-[#252525] focus:border-base-red focus:outline-none bg-get-in-touch-client text-center max-w-[145px] "
+                      placeholder="Enter value"
                       value={
                         //@ts-ignore
                         constructorModel[paramsKey][
@@ -215,7 +219,7 @@ export default function Customize() {
                         ]
                       }
                       onChange={(e) => {
-                        inputFieldValidation(
+                        onChange(
                           e,
                           rangeSubCategory === "dimension" ? "length" : "from",
                           paramsKey
@@ -237,7 +241,8 @@ export default function Customize() {
                   </div>
                   <div className="flex items-center flex-col gap-2">
                     <input
-                      className="p-3 constructor-model-picker-border bg-get-in-touch-client text-center max-w-[145px]"
+                      className="p-3 border-2 rounded-xl border-solid border-[#252525] focus:border-base-red focus:outline-none bg-get-in-touch-client text-center max-w-[145px]"
+                      placeholder="Enter value"
                       value={
                         //@ts-ignore
                         constructorModel[paramsKey][
@@ -245,7 +250,7 @@ export default function Customize() {
                         ]
                       }
                       onChange={(e) => {
-                        inputFieldValidation(
+                        onChange(
                           e,
                           rangeSubCategory === "dimension" ? "width" : "to",
                           paramsKey
@@ -265,8 +270,10 @@ export default function Customize() {
                       {measure2}
                     </span>
                   </div>
-                  <span>{errorText}</span>
                 </div>
+                <p className="text-xs text-base-red mt-2 text-center">
+                  {errorText}
+                </p>
               </div>
             );
           }
