@@ -51,7 +51,10 @@ export default function Models({ isLink }: ModelsProps) {
         );
 
         return isLink ? (
-          <Link href={`/${locale}/products/${modelName.toLowerCase()}`}>
+          <Link
+            href={`/${locale}/products/${modelName.toLowerCase()}`}
+            key={panel}
+          >
             {component}
           </Link>
         ) : (
