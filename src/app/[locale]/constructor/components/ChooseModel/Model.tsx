@@ -1,12 +1,15 @@
-// "use client";
+"use client";
+
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { useContext } from "react";
 
 // const models = Object.keys(CONSTRUCTOR_MODELS_SPEC) as Array<
 //   keyof typeof CONSTRUCTOR_MODELS_SPEC
 // >;
 
 export default function Model() {
-  // const { constructorModel, setConstructorModel } =
-  //   useContext(ConstructorContext);
+  const { constructorModel, setConstructorModel } =
+    useContext(ConstructorContext);
 
   return (
     <div className="flex flex-col">
