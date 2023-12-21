@@ -12,17 +12,17 @@ import {
 } from "@/app/[locale]/utils/constants";
 import { useContext } from "react";
 
-const models = Object.keys(CONSTRUCTOR_MODELS_SPEC) as Array<
-  keyof typeof CONSTRUCTOR_MODELS_SPEC
->;
+// const models = Object.keys(CONSTRUCTOR_MODELS_SPEC) as Array<
+//   keyof typeof CONSTRUCTOR_MODELS_SPEC
+// >;
 
 export default function Model() {
-  const { constructorModel, setConstructorModel } =
-    useContext(ConstructorContext);
+  // const { constructorModel, setConstructorModel } =
+  //   useContext(ConstructorContext);
 
   return (
     <div className="flex flex-col">
-      <SectionHeader
+      {/* <SectionHeader
         title={CONSTRUCTOR_MODEL}
         clarification={CONSTRUCTOR_WHICH_IS_BEST}
       />
@@ -48,7 +48,8 @@ export default function Model() {
             </p>
           </div>
         ))}
-      </div>
+      </div> */}
+      re
     </div>
   );
 }
