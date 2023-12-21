@@ -23,6 +23,7 @@ export default function NavLink({
 
   return (
     <li className="group">
+      <Link href={`/${locale}/constructor`}>etete</Link>
       {!subMenu && (
         <Link
           href={`/${locale}${url}`}
