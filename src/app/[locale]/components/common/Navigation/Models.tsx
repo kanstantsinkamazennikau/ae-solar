@@ -68,7 +68,7 @@ export default function Models({ isLink }: ModelsProps) {
         <Link
           href={`/${locale}/constructor`}
           onClick={() => {
-            const url = "/path/to/url";
+            const url = `/${locale}/constructor`;
             Router.events.emit("routeChangeStart", url);
             window.location.href = url;
           }}
