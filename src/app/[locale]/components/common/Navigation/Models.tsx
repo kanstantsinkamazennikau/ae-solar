@@ -10,8 +10,7 @@ import {
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { useParams, useRouter } from "next/navigation";
 import { useContext } from "react";
 
 export default function Models({ isLink }: ModelsProps) {
