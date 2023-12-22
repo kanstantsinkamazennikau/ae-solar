@@ -78,7 +78,7 @@ export default function Navigation() {
                 </ul>
 
                 <div className="gap-8 flex md:hidden">
-                  <ChangeLocale />
+                  {/* <ChangeLocale /> */}
                   <Button
                     onClick={() => console.log("contact us")}
                     size="small"
