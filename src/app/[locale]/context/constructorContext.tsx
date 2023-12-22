@@ -1,7 +1,7 @@
 "use client";
 
 import { CONSTRUCTOR_MODELS_SPEC } from "@/app/[locale]/utils/constants";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export type Model = "Aurora" | "Comet" | "Meteor" | "Terra" | "Neptun" | "HSF";
 
@@ -51,6 +51,27 @@ export default function ConstructorProvider({
       to: defaultModel.powerRange.values.upperLimit,
     },
   });
+
+  useEffect(() => {
+    const selectedModelParams =
+      CONSTRUCTOR_MODELS_SPEC[constructorModel.model].params;
+    setConstructorModel({
+      model: constructorModel.model,
+      solarCellTechnology: selectedModelParams.solarCellTechnology.values[0],
+      moduleSpecification: selectedModelParams.moduleSpecification.values[0],
+      moduleColor: selectedModelParams.moduleColor.values[0].color,
+      backCover: selectedModelParams.backCover.values[0],
+      frameColor: selectedModelParams.frameColor.values[0].color,
+      moduleDimension: {
+        length: selectedModelParams.moduleDimension.values.lowerLimit,
+        width: selectedModelParams.moduleDimension.values.upperLimit!,
+      },
+      powerRange: {
+        from: selectedModelParams.powerRange.values.lowerLimit,
+        to: selectedModelParams.powerRange.values.upperLimit,
+      },
+    });
+  }, [constructorModel.model]);
 
   return (
     <ConstructorContext.Provider

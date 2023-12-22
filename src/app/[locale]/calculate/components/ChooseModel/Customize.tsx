@@ -203,7 +203,7 @@ export default function Customize() {
               <div key={param.text}>
                 <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px]">
                   {param.text}
-                </span>{" "}
+                </span>
                 <span className="font-walsheim text-dark-gray-650 text-base -tracking-[0.32px]">
                   {param.clarification}
                 </span>
