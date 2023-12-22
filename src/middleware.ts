@@ -59,5 +59,5 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   // Do not run the middleware on the following paths
-  matcher: ["/((?!.*\\.).*)", "/favicon.ico"],
+  matcher: ["/((?!_next).*)"],
 };
