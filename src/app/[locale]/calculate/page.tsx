@@ -1,4 +1,4 @@
-import Option from "@/app/[locale]/calculate/components/Option";
+import Option from "@/app/[locale]/components/calculate/Option";
 
 export default function Calculate() {
   return (
