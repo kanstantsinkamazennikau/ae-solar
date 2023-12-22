@@ -7,7 +7,7 @@ import {
   useSelectedLayoutSegments,
 } from "next/navigation";
 
-const ChangeLocale = () => {
+export default function ChangeLocale() {
   const router = useRouter();
   const params = useParams();
   const urlSegments = useSelectedLayoutSegments();
@@ -27,6 +27,4 @@ const ChangeLocale = () => {
       <option value="de">German</option>
     </select>
   );
-};
-
-export default ChangeLocale;
+}
