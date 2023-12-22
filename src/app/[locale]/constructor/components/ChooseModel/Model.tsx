@@ -7,9 +7,7 @@ import {
   CONSTRUCTOR_WHICH_IS_BEST,
 } from "@/app/[locale]/utils/constants";
 
-const models = Object.keys(CONSTRUCTOR_MODELS_SPEC) as Array<
-  keyof typeof CONSTRUCTOR_MODELS_SPEC
->;
+const models = ["dasd", "dadad"];
 
 export default function Model() {
   // const { constructorModel, setConstructorModel } =
@@ -38,9 +36,9 @@ export default function Model() {
             // }
           >
             <p className="text-base font-semibold">{model}</p>
-            <p className="font-walsheim text-sm leading-[1.2] font-normal">
+            {/* <p className="font-walsheim text-sm leading-[1.2] font-normal">
               {CONSTRUCTOR_MODELS_SPEC[model].panelTechnology}
-            </p>
+            </p> */}
           </div>
         ))}
       </div>
