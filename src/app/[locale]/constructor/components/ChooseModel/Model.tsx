@@ -1,11 +1,3 @@
-"use client";
-
-import SectionHeader from "@/app/[locale]/constructor/components/ChooseModel/SectionHeader";
-import {
-  CONSTRUCTOR_MODEL,
-  CONSTRUCTOR_WHICH_IS_BEST,
-} from "@/app/[locale]/utils/constants";
-
 const models = ["dasd", "dadad"];
 
 export default function Model() {
@@ -14,10 +6,10 @@ export default function Model() {
 
   return (
     <div className="flex flex-col">
-      <SectionHeader
+      {/* <SectionHeader
         title={CONSTRUCTOR_MODEL}
         clarification={CONSTRUCTOR_WHICH_IS_BEST}
-      />
+      /> */}
       <div className="flex gap-1 flex-col">
         {models.map((model) => (
           <div
