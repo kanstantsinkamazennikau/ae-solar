@@ -201,7 +201,7 @@ export default function Customize() {
 
             return (
               <div key={param.text}>
-                <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px]">
+                <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px] ">
                   {param.text}
                 </span>{" "}
                 <span className="font-walsheim text-dark-gray-650 text-base -tracking-[0.32px]">
