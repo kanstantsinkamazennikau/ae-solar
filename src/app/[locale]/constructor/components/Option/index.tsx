@@ -1,5 +1,5 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import ChooseModel from "@/app/[locale]/components/ChooseModel";
+import ChooseModel from "@/app/[locale]/constructor/components/ChooseModel";
 import { CONSTRUCTOR_OPTION_LINES } from "@/app/[locale]/utils/constants";
 
 export default function Option() {

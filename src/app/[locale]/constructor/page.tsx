@@ -1,4 +1,4 @@
-import Option from "@/app/[locale]/components/Option";
+import Option from "@/app/[locale]/constructor/components/Option";
 
 export default function Constructor() {
   return (
