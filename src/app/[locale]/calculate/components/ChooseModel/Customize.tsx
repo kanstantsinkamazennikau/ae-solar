@@ -1,12 +1,7 @@
 "use client";
 
 import SectionHeader from "@/app/[locale]/calculate/components/ChooseModel/SectionHeader";
-import {
-  ColorInterface,
-  ConstructorParams,
-  ConstructorSubCategory,
-  RangeInterface,
-} from "@/app/[locale]/calculate/components/ChooseModel/types";
+import { ConstructorSubCategory } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import {
   ConstructorContext,
   ConstructorModel,
@@ -18,6 +13,10 @@ import {
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { ChangeEvent, useContext, useState } from "react";
+
+type ObjectKeys<T> = {
+  [K in keyof T]: T[K] extends { [key: string]: any } ? K : never;
+}[keyof T];
 
 export default function Customize() {
   const { constructorModel, setConstructorModel } =
@@ -33,19 +32,16 @@ export default function Customize() {
 
   const onChange = (
     e: ChangeEvent<HTMLInputElement>,
-    rangeCategoryValue: string,
-    paramsKey: string
+    paramsKey: ObjectKeys<ConstructorModel>
   ) => {
-    const { value } = e.target;
+    const { value, name } = e.target;
     const re = /^[0-9\b]+$/;
-
     if (e.target.value === "" || re.test(e.target.value)) {
       setConstructorModel((prevState: ConstructorModel) => ({
         ...prevState,
         [paramsKey]: {
-          //@ts-ignore
           ...prevState[paramsKey],
-          [rangeCategoryValue]: value,
+          [name]: value,
         },
       }));
     }
@@ -54,11 +50,10 @@ export default function Customize() {
   const onBlur = (
     e: ChangeEvent<HTMLInputElement>,
     rangeSubCategory: "dimension" | "power",
-    rangeCategoryValue: string,
     lowerLimit: string,
     upperLimit?: string
   ) => {
-    const { value } = e.target;
+    const { value, name } = e.target;
 
     if (+value < +lowerLimit) {
       setError((prevState) => ({
@@ -66,7 +61,7 @@ export default function Customize() {
         [rangeSubCategory]: {
           ...prevState[rangeSubCategory],
 
-          [rangeCategoryValue]: `Minimum permissible value is ${lowerLimit}`,
+          [name]: `Minimum permissible value is ${lowerLimit}`,
         },
       }));
       return;
@@ -78,7 +73,7 @@ export default function Customize() {
         [rangeSubCategory]: {
           ...prevState[rangeSubCategory],
 
-          [rangeCategoryValue]: `Maximum permissible value is ${upperLimit}`,
+          [name]: `Maximum permissible value is ${upperLimit}`,
         },
       }));
       return;
@@ -87,7 +82,7 @@ export default function Customize() {
     setError((prevState) => {
       const test = Object.fromEntries(
         Object.entries(prevState[rangeSubCategory]).filter(
-          ([key]) => key !== rangeCategoryValue
+          ([key]) => key !== name
         )
       );
       return {
@@ -103,13 +98,12 @@ export default function Customize() {
         title={CONSTRUCTOR_CUSTOMIZE}
         clarification={CONSTRUCTOR_YOUR_MODEL}
       />
-      <div className="flex  flex-col gap-6">
+      <div className="flex flex-col gap-6">
         {modelParamsKeys.map((paramsKey) => {
           const param = modelParams[paramsKey];
-          const paramType = param.type as ConstructorParams;
 
-          if (paramType === "slider") {
-            const values = param.values as string[];
+          if (param.type === "slider") {
+            const values = param.values;
             return (
               <div key={param.text}>
                 <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px]">
@@ -142,8 +136,9 @@ export default function Customize() {
             );
           }
 
-          if (paramType === "color") {
-            const values = param.values as ColorInterface[];
+          if (param.type === "color") {
+            const values = param.values;
+
             return (
               <div key={param.text}>
                 <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px]">
@@ -187,13 +182,14 @@ export default function Customize() {
             );
           }
 
-          if (paramType.includes("range")) {
-            const rangeSubCategory = paramType.split(
+          if (param.type.includes("range")) {
+            const rangeSubCategory = param.type.split(
               "/"
             )[1] as ConstructorSubCategory;
 
-            const values = param.values as RangeInterface;
-            const { measure1, measure2, upperLimit, lowerLimit } = values;
+            const values = param.values;
+            const { measure1, measure2, upperLimit, lowerLimit, name1, name2 } =
+              values;
 
             const errorText = Object.values(
               error[rangeSubCategory]
@@ -212,27 +208,16 @@ export default function Customize() {
                     <input
                       className="p-3 border-2 rounded-xl border-solid border-[#252525] focus:border-base-red focus:outline-none bg-get-in-touch-client text-center max-w-[145px] "
                       placeholder="Enter value"
+                      name={name1}
                       value={
                         //@ts-ignore
-                        constructorModel[paramsKey][
-                          rangeSubCategory === "dimension" ? "length" : "from"
-                        ]
+                        constructorModel[paramsKey][name1]
                       }
                       onChange={(e) => {
-                        onChange(
-                          e,
-                          rangeSubCategory === "dimension" ? "length" : "from",
-                          paramsKey
-                        );
+                        onChange(e, paramsKey as ObjectKeys<ConstructorModel>);
                       }}
                       onBlur={(e) =>
-                        onBlur(
-                          e,
-                          rangeSubCategory,
-                          rangeSubCategory === "dimension" ? "length" : "from",
-                          lowerLimit,
-                          upperLimit
-                        )
+                        onBlur(e, rangeSubCategory, lowerLimit, upperLimit)
                       }
                     />
                     <span className="text-sm font-walsheim leading-[1.2] font-normal">
@@ -243,27 +228,16 @@ export default function Customize() {
                     <input
                       className="p-3 border-2 rounded-xl border-solid border-[#252525] focus:border-base-red focus:outline-none bg-get-in-touch-client text-center max-w-[145px]"
                       placeholder="Enter value"
+                      name={name2}
                       value={
                         //@ts-ignore
-                        constructorModel[paramsKey][
-                          rangeSubCategory === "dimension" ? "width" : "to"
-                        ]
+                        constructorModel[paramsKey][name2]
                       }
                       onChange={(e) => {
-                        onChange(
-                          e,
-                          rangeSubCategory === "dimension" ? "width" : "to",
-                          paramsKey
-                        );
+                        onChange(e, paramsKey as ObjectKeys<ConstructorModel>);
                       }}
                       onBlur={(e) =>
-                        onBlur(
-                          e,
-                          rangeSubCategory,
-                          rangeSubCategory === "dimension" ? "width" : "to",
-                          lowerLimit,
-                          upperLimit
-                        )
+                        onBlur(e, rangeSubCategory, lowerLimit, upperLimit)
                       }
                     />
                     <span className="text-sm font-walsheim leading-[1.2] font-normal">

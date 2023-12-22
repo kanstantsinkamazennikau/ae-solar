@@ -16,7 +16,6 @@ import { useContext, useState } from "react";
 export default function Navigation() {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
   const [subMenuHeading, setSubMenuHeading] = useState("");
-  const { sticky } = useContext(StickyNavigationContext);
 
   const onSubMenuHeadingClick = (subMenuHeader: string) => {
     setSubMenuHeading(subMenuHeader);
@@ -93,7 +92,7 @@ export default function Navigation() {
       </div>
 
       {/* SUBNAVIGATION */}
-      {sticky ? <SubNavigation isLink /> : null}
+      <SubNavigation isLink />
     </div>
   );
 }

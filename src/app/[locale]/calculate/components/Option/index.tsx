@@ -7,7 +7,7 @@ export default function Option() {
     <BasicWidthContainer>
       <div className="flex items-start gap-10 self-stretch mt-10">
         {/* IMG */}
-        <div className="border-4 border-solid border-option-border rounded-[20px] max-w-[985px] h-[640px] w-full relative">
+        <div className="border-4 border-solid border-option-border rounded-[20px] max-w-[985px] h-[640px] w-full sticky top-[150px]">
           <div
             className="bg-[url('/images/featuredProducts.png')] 
               bg-no-repeat 

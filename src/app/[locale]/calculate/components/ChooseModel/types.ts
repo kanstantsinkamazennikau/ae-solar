@@ -15,10 +15,12 @@ export interface ColorInterface {
   icon: string;
 }
 
-export interface RangeInterface {
+export interface RangeInterface<Tname1, Tname2> {
   measure1: string;
   measure2: string;
   lowerLimit: string;
+  name1: Tname1;
+  name2: Tname2;
   upperLimit?: string;
 }
 
@@ -27,46 +29,46 @@ export interface PanelParams {
     panelTechnology: string;
     params: {
       solarCellTechnology: {
-        type: ConstructorParams;
+        type: "slider";
         text: string;
         clarification?: string;
         values: string[];
       };
       moduleSpecification: {
-        type: string;
+        type: "slider";
         text: string;
         clarification?: string;
         values: string[];
       };
       moduleColor: {
-        type: string;
+        type: "color";
         text: string;
         clarification?: string;
         values: ColorInterface[];
       };
       backCover: {
-        type: string;
+        type: "slider";
         text: string;
         clarification?: string;
         values: string[];
       };
       frameColor: {
-        type: string;
+        type: "color";
         text: string;
         clarification?: string;
         values: ColorInterface[];
       };
       moduleDimension: {
-        type: string;
+        type: "range/dimension";
         text: string;
         clarification?: string;
-        values: RangeInterface;
+        values: RangeInterface<"length", "width">;
       };
       powerRange: {
-        type: string;
+        type: "range/power";
         text: string;
         clarification?: string;
-        values: RangeInterface;
+        values: RangeInterface<"from", "to">;
       };
     };
     applications: string[];

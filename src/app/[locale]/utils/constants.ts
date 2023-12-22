@@ -395,6 +395,8 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           lowerLimit: "4000",
           measure2: "W(mm)",
           upperLimit: "5000",
+          name1: "length",
+          name2: "width",
         },
       },
       powerRange: {
@@ -404,6 +406,8 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           measure1: "from",
           measure2: "to",
           lowerLimit: "100",
+          name1: "from",
+          name2: "to",
         },
       },
     },
@@ -453,12 +457,14 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       moduleDimension: {
         type: "range/dimension",
         text: "Module Dimension.",
-        clarification: "L (mm) × W (mm)",
+        clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
           lowerLimit: "4000",
           measure2: "W(mm)",
           upperLimit: "5000",
+          name1: "length",
+          name2: "width",
         },
       },
       powerRange: {
@@ -468,6 +474,8 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           measure1: "from",
           measure2: "to",
           lowerLimit: "100",
+          name1: "from",
+          name2: "to",
         },
       },
     },
@@ -517,12 +525,14 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       moduleDimension: {
         type: "range/dimension",
         text: "Module Dimension.",
-        clarification: "L (mm) × W (mm)",
+        clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
           lowerLimit: "4000",
           measure2: "W(mm)",
           upperLimit: "5000",
+          name1: "length",
+          name2: "width",
         },
       },
       powerRange: {
@@ -532,6 +542,8 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           measure1: "from",
           measure2: "to",
           lowerLimit: "100",
+          name1: "from",
+          name2: "to",
         },
       },
     },
@@ -581,12 +593,14 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       moduleDimension: {
         type: "range/dimension",
         text: "Module Dimension.",
-        clarification: "L (mm) × W (mm)",
+        clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
           lowerLimit: "4000",
           measure2: "W(mm)",
           upperLimit: "5000",
+          name1: "length",
+          name2: "width",
         },
       },
       powerRange: {
@@ -596,6 +610,8 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           measure1: "from",
           measure2: "to",
           lowerLimit: "100",
+          name1: "from",
+          name2: "to",
         },
       },
     },
@@ -639,12 +655,14 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       moduleDimension: {
         type: "range/dimension",
         text: "Module Dimension.",
-        clarification: "L (mm) × W (mm)",
+        clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
           lowerLimit: "4000",
           measure2: "W(mm)",
           upperLimit: "5000",
+          name1: "length",
+          name2: "width",
         },
       },
       powerRange: {
@@ -654,6 +672,8 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           measure1: "from",
           measure2: "to",
           lowerLimit: "100",
+          name1: "from",
+          name2: "to",
         },
       },
     },
@@ -697,12 +717,14 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       moduleDimension: {
         type: "range/dimension",
         text: "Module Dimension.",
-        clarification: "L (mm) × W (mm)",
+        clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
           lowerLimit: "4000",
           measure2: "W(mm)",
           upperLimit: "5000",
+          name1: "length",
+          name2: "width",
         },
       },
       powerRange: {
@@ -712,6 +734,8 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           measure1: "from",
           measure2: "to",
           lowerLimit: "100",
+          name1: "from",
+          name2: "to",
         },
       },
     },
