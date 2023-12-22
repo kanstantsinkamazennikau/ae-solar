@@ -1,12 +1,12 @@
 "use client";
 
-import SectionHeader from "@/app/[locale]/components/ChooseModel/SectionHeader";
+import SectionHeader from "@/app/[locale]/calculate/components/ChooseModel/SectionHeader";
 import {
   ColorInterface,
   ConstructorParams,
   ConstructorSubCategory,
   RangeInterface,
-} from "@/app/[locale]/components/ChooseModel/types";
+} from "@/app/[locale]/calculate/components/ChooseModel/types";
 import {
   ConstructorContext,
   ConstructorModel,

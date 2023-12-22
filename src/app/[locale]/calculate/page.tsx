@@ -1,6 +1,6 @@
-import Option from "@/app/[locale]/components/Option";
+import Option from "@/app/[locale]/calculate/components/Option";
 
-export default function Constructor() {
+export default function Calculate() {
   return (
     <>
       <Option />

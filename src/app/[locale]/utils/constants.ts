@@ -1,4 +1,4 @@
-import { PanelParams } from "@/app/[locale]/components/ChooseModel/types";
+import { PanelParams } from "@/app/[locale]/calculate/components/ChooseModel/types";
 
 // NAVIGATION
 export const HEADER_NAV_LINKS_ARRAY = [
