@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeader from "@/app/[locale]/constructor/components/ChooseModel/SectionHeader";
+import SectionHeader from "@/app/[locale]/components/ChooseModel/SectionHeader";
 import {
   ConstructorContext,
   ConstructorModel,
