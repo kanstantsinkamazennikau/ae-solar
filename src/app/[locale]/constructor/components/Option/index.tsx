@@ -42,7 +42,7 @@ export default function Option() {
             </div>
           </div>
         </div>
-        {/* <ChooseModel /> */}
+        <ChooseModel />
       </div>
     </BasicWidthContainer>
   );
