@@ -19,7 +19,7 @@ export default function Models({ isLink }: ModelsProps) {
   const { setModel, model } = useContext(ModelContext);
 
   const handleClick = () => {
-    router.push(`/${locale}/calculate`);
+    router.push(`/${locale}/constructor`);
   };
 
   return (
