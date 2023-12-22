@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface SectionHeaderProps {
   title: string;
   clarification: string;
@@ -23,6 +25,52 @@ export interface RangeInterface<Tname1, Tname2> {
   name2: Tname2;
   upperLimit?: string;
 }
+
+export type SliderParamsKey =
+  | "solarCellTechnology"
+  | "moduleSpecification"
+  | "backCover";
+export type ColorParamsKey = "moduleColor" | "frameColor";
+export type RangeParamsKey = "moduleDimension" | "powerRange";
+
+export interface SliderProps {
+  text: string;
+  values: string[];
+  paramsKey: SliderParamsKey;
+}
+
+export interface ColorProps {
+  text: string;
+  values: {
+    color: string;
+    icon: string;
+  }[];
+  paramsKey: ColorParamsKey;
+}
+
+export interface CalculateError {
+  power: {
+    from?: string;
+    to?: string;
+  };
+  dimension: {
+    width?: string;
+    length?: string;
+  };
+}
+
+export interface RangeProps {
+  text: string;
+  clarification?: string;
+  values: RangeInterface<"length", "width"> | RangeInterface<"from", "to">;
+  paramsKey: RangeParamsKey;
+  rangeSubCategory: "dimension" | "power";
+  setError: Dispatch<SetStateAction<CalculateError>>;
+}
+
+export type ObjectKeys<T> = {
+  [K in keyof T]: T[K] extends { [key: string]: any } ? K : never;
+}[keyof T];
 
 export interface PanelParams {
   [key: string]: {
