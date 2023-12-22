@@ -20,22 +20,26 @@ export default function Slider({ text, values, paramsKey }: SliderProps) {
         {values.map((value) => (
           <div
             key={value}
-            className={`flex justify-between items-center cursor-pointer gap-1 flex-1 ${
-              constructorModel[paramsKey] === value
-                ? "constructor-model-picker-selected-outline"
-                : ""
-            }`}
-            onClick={() =>
-              setConstructorModel((prevState: ConstructorModel) => ({
-                ...prevState,
-                [paramsKey]: value,
-              }))
-            }
+            className="flex justify-between items-center cursor-pointer gap-1 flex-1"
           >
-            <div className="px-[14px] py-3 w-full flex justify-center text-sm font-semibold leading-[0.9] -tracking-[0.42px]">
-              {value}
+            <div
+              className={`flex justify-between items-center cursor-pointer flex-1 ${
+                constructorModel[paramsKey] === value
+                  ? "constructor-model-picker-selected-outline"
+                  : ""
+              }`}
+              onClick={() =>
+                setConstructorModel((prevState: ConstructorModel) => ({
+                  ...prevState,
+                  [paramsKey]: value,
+                }))
+              }
+            >
+              <div className="px-[14px] py-3 w-full flex justify-center text-sm font-semibold leading-[0.9] -tracking-[0.42px]">
+                {value}
+              </div>
             </div>
-            <div className="w-[1px] h-[10px] bg-[#252525]"></div>
+            <div className="w-[1px] h-[10px] ml-1 mr-1 bg-[#252525]"></div>
           </div>
         ))}
       </div>
