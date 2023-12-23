@@ -73,7 +73,7 @@ export const HERO_SECTION_SLOGAN =
 export const HERO_SECTION_SCROLL_TO_THE_FUTURE = "Scroll to the future";
 
 export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
-  { stat: "2003", details: "experience since", initialValue: "1990" },
+  { stat: "2003", details: "experience since", initialValue: "2023" },
   {
     stat: "3200",
     details: "successful PV installations",
