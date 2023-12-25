@@ -23,15 +23,15 @@ export default function Button({
         hover:opacity-80
         transition
         bg-base-red
-        ${color === "outline" && "bg-transparent"}
-        ${color === "outline" && "border-[3px] border-solid border-base-red"}
-        ${color === "secondary" && "bg-white"}
-        ${color === "secondary" && "text-black"}
-        ${size === "regular" && "text-lg"}
-        ${size === "regular" && "px-8 py-6"}
+        ${
+          color === "outline" &&
+          "border-[3px] border-solid border-base-red bg-transparent"
+        }
+        ${color === "secondary" && "bg-white text-black"}
+        ${size === "regular" && "px-8 py-6 text-lg"}
         ${size === "small" && "px-6 py-3"}
-        ${size === "extrasmall" && "text-sm leading-none"}
-        ${size === "extrasmall" && "py-3 px-4"}
+        ${size === "extrasmall" && "py-3 px-4 text-sm leading-none"}
+        ${size === "normal" && "py-5 px-8 text-sm leading-none"}
         flex
         justify-center
         items-center

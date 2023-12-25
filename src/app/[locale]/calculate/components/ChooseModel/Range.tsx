@@ -69,6 +69,21 @@ export default function Range({
       return;
     }
 
+    if (
+      rangeSubCategory === "power" &&
+      constructorModel.powerRange.from === constructorModel.powerRange.to
+    ) {
+      setError((prevState) => ({
+        ...prevState,
+        [rangeSubCategory]: {
+          ...prevState[rangeSubCategory],
+
+          [name]: `Values should be different`,
+        },
+      }));
+      return;
+    }
+
     setError((prevState) => {
       const test = Object.fromEntries(
         Object.entries(prevState[rangeSubCategory]).filter(
@@ -83,7 +98,7 @@ export default function Range({
   };
 
   return (
-    <div key={text}>
+    <div>
       <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px]">
         {text}
       </span>{" "}

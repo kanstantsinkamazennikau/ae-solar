@@ -1,4 +1,7 @@
-import { PanelParams } from "@/app/[locale]/calculate/components/ChooseModel/types";
+import {
+  ApplicationStandard,
+  PanelParams,
+} from "@/app/[locale]/calculate/components/ChooseModel/types";
 
 // NAVIGATION
 export const HEADER_NAV_LINKS_ARRAY = [
@@ -410,14 +413,13 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           name2: "to",
         },
       },
+      applications: {
+        type: "applications",
+        text: "Applications.",
+        clarification: "Standard",
+        values: ["Shade Resistant", "Carport", "PV-Thermal", "Agri-Voltaics"],
+      },
     },
-    applications: [
-      "Shade Resistant",
-      "Carport",
-      "PV-Thermal",
-      "Agri-Voltaics",
-      "Shade Resistant",
-    ],
   },
   Comet: {
     panelTechnology: "HJT Technology",
@@ -478,14 +480,13 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           name2: "to",
         },
       },
+      applications: {
+        type: "applications",
+        text: "Applications.",
+        clarification: "Standard",
+        values: ["Shade Resistant", "Carport", "PV-Thermal", "Agri-Voltaics"],
+      },
     },
-    applications: [
-      "Shade Resistant",
-      "Carport",
-      "PV-Thermal",
-      "Agri-Voltaics",
-      "Shade Resistant",
-    ],
   },
   Meteor: {
     panelTechnology: "TOPCon Technology",
@@ -546,14 +547,13 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           name2: "to",
         },
       },
+      applications: {
+        type: "applications",
+        text: "Applications.",
+        clarification: "Standard",
+        values: ["Shade Resistant", "Carport", "PV-Thermal", "Agri-Voltaics"],
+      },
     },
-    applications: [
-      "Shade Resistant",
-      "Carport",
-      "PV-Thermal",
-      "Agri-Voltaics",
-      "Shade Resistant",
-    ],
   },
   Terra: {
     panelTechnology: "Wind/Snow Resistant Technology",
@@ -614,8 +614,13 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           name2: "to",
         },
       },
+      applications: {
+        type: "applications",
+        text: "Applications.",
+        clarification: "Standard",
+        values: ["Agri-Voltaics"],
+      },
     },
-    applications: ["Agri-Voltaics"],
   },
   Neptun: {
     panelTechnology: "PV-Thermal Technology",
@@ -676,8 +681,13 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           name2: "to",
         },
       },
+      applications: {
+        type: "applications",
+        text: "Applications.",
+        clarification: "Standard",
+        values: ["PV-Thermal"],
+      },
     },
-    applications: ["PV-Thermal"],
   },
   HSF: {
     panelTechnology: "Shede Resident Technology",
@@ -738,18 +748,17 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           name2: "to",
         },
       },
+      applications: {
+        type: "applications",
+        text: "Applications.",
+        clarification: "Standard",
+        values: ["Shade Resistant", "Carport", "PV-Thermal", "Agri-Voltaics"],
+      },
     },
-    applications: [
-      "Shade Resistant",
-      "Carport",
-      "PV-Thermal",
-      "Agri-Voltaics",
-      "Shade Resistant",
-    ],
   },
 };
 
-export const CONSTRUCTOR_APPLICATIONS_STANDARDS = [
+export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
   {
     type: "Shade Resistant",
     clarification: "Shade ResistantShade ResistantShade Resistant",
@@ -757,7 +766,7 @@ export const CONSTRUCTOR_APPLICATIONS_STANDARDS = [
   {
     type: "Carport",
     clarification:
-      "CarportCarportCarportCarportCarport CarportCarportCarportCarport",
+      "CarportCarport Carport CarportCarport CarportCarport CarportCarport",
   },
   {
     type: "PV-Thermal",
@@ -767,10 +776,6 @@ export const CONSTRUCTOR_APPLICATIONS_STANDARDS = [
     type: "Agri-Voltaics",
     clarification: "Agri-VoltaicsAgri-VoltaicsAgri-Voltaics",
   },
-  {
-    type: "Shade Resistant",
-    clarification: "Shade ResistantShade Resistant Shade Resistant",
-  },
 ];
 
 export const CONSTRUCTOR_MODEL = "Model.";
@@ -779,3 +784,141 @@ export const CONSTRUCTOR_CUSTOMIZE = "Customize.";
 export const CONSTRUCTOR_YOUR_MODEL = "Your model";
 export const CONSTRUCTOR_APPLICATIONS = "Applications.";
 export const CONSTRUCTOR_STANDARD = "Standard";
+export const CONSTRUCTOR_GENERATE_YOUR_MODEL = "Generate your model";
+export const CONSTRUCTOR_YOUR_MODEL_IS = "Your model is";
+export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
+  Aurora: {
+    powerRange: {
+      parameter: "Power range",
+      value: "320W—335W",
+    },
+    efficiencyRange: {
+      parameter: "Efficiency range",
+      value: "19.01%—19.90%",
+    },
+    aximumSystemVoltage: {
+      parameter: "Maximum system voltage",
+      value: "1000 (V)",
+    },
+    performanceGuarantee: {
+      parameter: "Performance Guarantee",
+      value: "30 years",
+    },
+    productWarranty: {
+      parameter: "Product Warranty",
+      value: "12 years",
+    },
+  },
+  Comet: {
+    powerRange: {
+      parameter: "Power range",
+      value: "3201W—335W",
+    },
+    efficiencyRange: {
+      parameter: "Efficiency range",
+      value: "19.031%—19.90%",
+    },
+    aximumSystemVoltage: {
+      parameter: "Maximum system voltage",
+      value: "10002 (V)",
+    },
+    performanceGuarantee: {
+      parameter: "Performance Guarantee",
+      value: "304 years",
+    },
+    productWarranty: {
+      parameter: "Product Warranty",
+      value: "12 years",
+    },
+  },
+  Meteor: {
+    powerRange: {
+      parameter: "Power range",
+      value: "3250W—335W",
+    },
+    efficiencyRange: {
+      parameter: "Efficiency range",
+      value: "197.01%—19.90%",
+    },
+    aximumSystemVoltage: {
+      parameter: "Maximum system voltage",
+      value: "10007 (V)",
+    },
+    performanceGuarantee: {
+      parameter: "Performance Guarantee",
+      value: "307 years",
+    },
+    productWarranty: {
+      parameter: "Product Warranty",
+      value: "12 years",
+    },
+  },
+  Terra: {
+    powerRange: {
+      parameter: "Power range",
+      value: "320W—335W",
+    },
+    efficiencyRange: {
+      parameter: "Efficiency range",
+      value: "195.01%—19.90%",
+    },
+    aximumSystemVoltage: {
+      parameter: "Maximum system voltage",
+      value: "1000 (V)",
+    },
+    performanceGuarantee: {
+      parameter: "Performance Guarantee",
+      value: "30 years",
+    },
+    productWarranty: {
+      parameter: "Product Warranty",
+      value: "12 years",
+    },
+  },
+  Neptun: {
+    powerRange: {
+      parameter: "Power range",
+      value: "32W—335W",
+    },
+    efficiencyRange: {
+      parameter: "Efficiency range",
+      value: "11.01%—19.90%",
+    },
+    aximumSystemVoltage: {
+      parameter: "Maximum system voltage",
+      value: "1001 (V)",
+    },
+    performanceGuarantee: {
+      parameter: "Performance Guarantee",
+      value: "14 years",
+    },
+    productWarranty: {
+      parameter: "Product Warranty",
+      value: "132 years",
+    },
+  },
+  HSF: {
+    powerRange: {
+      parameter: "Power range",
+      value: "350W—370W",
+    },
+    efficiencyRange: {
+      parameter: "Efficiency range",
+      value: "19.11%—20.90%",
+    },
+    aximumSystemVoltage: {
+      parameter: "Maximum system voltage",
+      value: "100 (V)",
+    },
+    performanceGuarantee: {
+      parameter: "Performance Guarantee",
+      value: "300 years",
+    },
+    productWarranty: {
+      parameter: "Product Warranty",
+      value: "121 years",
+    },
+  },
+};
+
+export const CONSTRUCTOR_MODELS_SHORT_DETAILS = "Short Details";

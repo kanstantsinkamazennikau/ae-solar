@@ -1,5 +1,6 @@
 "use client";
 
+import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import { CONSTRUCTOR_MODELS_SPEC } from "@/app/[locale]/utils/constants";
 import { createContext, useEffect, useState } from "react";
 
@@ -20,11 +21,14 @@ export interface ConstructorModel {
     from: string;
     to?: string;
   };
+  applications: Applications[];
 }
 
 export interface ConstructorContext {
   setConstructorModel: (model: any) => void;
   constructorModel: ConstructorModel;
+  setIsGenerateModel: (flag: boolean) => void;
+  isGenerateModel: boolean;
 }
 
 export const ConstructorContext = createContext<ConstructorContext>(null!);
@@ -35,6 +39,7 @@ export default function ConstructorProvider({
   children: React.ReactNode;
 }) {
   const defaultModel = CONSTRUCTOR_MODELS_SPEC.Aurora.params;
+  const [isGenerateModel, setIsGenerateModel] = useState<boolean>(false);
   const [constructorModel, setConstructorModel] = useState<ConstructorModel>({
     model: "Aurora",
     solarCellTechnology: defaultModel.solarCellTechnology.values[0],
@@ -48,8 +53,9 @@ export default function ConstructorProvider({
     },
     powerRange: {
       from: defaultModel.powerRange.values.lowerLimit,
-      to: defaultModel.powerRange.values.upperLimit,
+      to: "",
     },
+    applications: [defaultModel.applications.values[0]],
   });
 
   useEffect(() => {
@@ -68,9 +74,11 @@ export default function ConstructorProvider({
       },
       powerRange: {
         from: selectedModelParams.powerRange.values.lowerLimit,
-        to: selectedModelParams.powerRange.values.upperLimit,
+        to: "",
       },
+      applications: [selectedModelParams.applications.values[0]],
     });
+    setIsGenerateModel(false);
   }, [constructorModel.model]);
 
   return (
@@ -78,6 +86,8 @@ export default function ConstructorProvider({
       value={{
         constructorModel,
         setConstructorModel,
+        setIsGenerateModel,
+        isGenerateModel,
       }}
     >
       {children}

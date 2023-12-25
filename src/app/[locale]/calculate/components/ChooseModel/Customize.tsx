@@ -1,5 +1,6 @@
 "use client";
 
+import ApplicationsCheckboxes from "@/app/[locale]/calculate/components/ChooseModel/ApplicationsCheckboxes";
 import Color from "@/app/[locale]/calculate/components/ChooseModel/Color";
 import Range from "@/app/[locale]/calculate/components/ChooseModel/Range";
 import SectionHeader from "@/app/[locale]/calculate/components/ChooseModel/SectionHeader";
@@ -11,22 +12,24 @@ import {
   RangeParamsKey,
   SliderParamsKey,
 } from "@/app/[locale]/calculate/components/ChooseModel/types";
+import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
   CONSTRUCTOR_CUSTOMIZE,
+  CONSTRUCTOR_GENERATE_YOUR_MODEL,
   CONSTRUCTOR_MODELS_SPEC,
   CONSTRUCTOR_YOUR_MODEL,
 } from "@/app/[locale]/utils/constants";
 import { useContext, useEffect, useState } from "react";
 
 export default function Customize() {
-  const { constructorModel, setConstructorModel } =
-    useContext(ConstructorContext);
-
   const [error, setError] = useState<CalculateError>({
     power: {},
     dimension: {},
   });
+
+  const { constructorModel, setIsGenerateModel } =
+    useContext(ConstructorContext);
 
   useEffect(() => {
     setError({
@@ -73,7 +76,10 @@ export default function Customize() {
             );
           }
 
-          if (param.type.includes("range")) {
+          if (
+            param.type === "range/dimension" ||
+            param.type === "range/power"
+          ) {
             const rangeSubCategory = param.type.split(
               "/"
             )[1] as ConstructorSubCategory;
@@ -98,8 +104,38 @@ export default function Customize() {
               </div>
             );
           }
+
+          if (param.type === "applications") {
+            return (
+              <ApplicationsCheckboxes
+                key={param.text}
+                text={param.text}
+                clarification={param.clarification}
+                values={param.values}
+              />
+            );
+          }
         })}
       </div>
+      <Button
+        onClick={() => {
+          if (!constructorModel.powerRange.to) {
+            setError((prevState) => ({
+              ...prevState,
+              power: {
+                ...prevState.power,
+
+                to: `"to" value is required`,
+              },
+            }));
+            return;
+          }
+          setIsGenerateModel(true);
+        }}
+        size="normal"
+      >
+        {CONSTRUCTOR_GENERATE_YOUR_MODEL}
+      </Button>
     </div>
   );
 }

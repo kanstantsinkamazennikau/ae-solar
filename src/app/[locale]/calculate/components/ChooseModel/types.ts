@@ -1,17 +1,30 @@
 import { Dispatch, SetStateAction } from "react";
 
-export interface SectionHeaderProps {
-  title: string;
-  clarification: string;
-}
-
 export type ConstructorParams =
   | "slider"
   | "color"
   | "range/power"
   | "range/dimension";
 export type ConstructorSubCategory = "power" | "dimension";
+export type SliderParamsKey =
+  | "solarCellTechnology"
+  | "moduleSpecification"
+  | "backCover";
+export type ColorParamsKey = "moduleColor" | "frameColor";
+export type RangeParamsKey = "moduleDimension" | "powerRange";
+export type ObjectKeys<T> = {
+  [K in keyof T]: T[K] extends { [key: string]: any } ? K : never;
+}[keyof T];
+export type Applications =
+  | "Shade Resistant"
+  | "Carport"
+  | "PV-Thermal"
+  | "Agri-Voltaics";
 
+export interface SectionHeaderProps {
+  title: string;
+  clarification?: string;
+}
 export interface ColorInterface {
   color: string;
   icon: string;
@@ -25,13 +38,6 @@ export interface RangeInterface<Tname1, Tname2> {
   name2: Tname2;
   upperLimit?: string;
 }
-
-export type SliderParamsKey =
-  | "solarCellTechnology"
-  | "moduleSpecification"
-  | "backCover";
-export type ColorParamsKey = "moduleColor" | "frameColor";
-export type RangeParamsKey = "moduleDimension" | "powerRange";
 
 export interface SliderProps {
   text: string;
@@ -68,9 +74,11 @@ export interface RangeProps {
   setError: Dispatch<SetStateAction<CalculateError>>;
 }
 
-export type ObjectKeys<T> = {
-  [K in keyof T]: T[K] extends { [key: string]: any } ? K : never;
-}[keyof T];
+export interface ApplicationsCheckboxes {
+  text: string;
+  clarification?: string;
+  values: Applications[];
+}
 
 export interface PanelParams {
   [key: string]: {
@@ -118,7 +126,17 @@ export interface PanelParams {
         clarification?: string;
         values: RangeInterface<"from", "to">;
       };
+      applications: {
+        type: "applications";
+        text: string;
+        clarification?: string;
+        values: Applications[];
+      };
     };
-    applications: string[];
   };
+}
+
+export interface ApplicationStandard {
+  type: Applications;
+  clarification: string;
 }
