@@ -1,5 +1,6 @@
 import {
   ApplicationStandard,
+  ModelsSpecs,
   PanelParams,
 } from "@/app/[locale]/calculate/components/ChooseModel/types";
 
@@ -922,3 +923,327 @@ export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
 };
 
 export const CONSTRUCTOR_MODELS_SHORT_DETAILS = "Short Details";
+export const CONSTRUCTOR_ADD_TO_BAG = "Add to Bag";
+export const CONSTRUCTOR_MODELS_ADVANTAGES = [
+  {
+    icon: "sun.svg",
+    advantageCategory: "Temperature",
+    advantageDescription:
+      "Hot spot temperature lower than 85°C. The IEC61215 test shows that with a zero percentage, a small and a 100 percentage of shaded area, respectively hot spots will not exceed 85°C, which is the maximum operating condition.",
+  },
+  {
+    icon: "shield.svg",
+    advantageCategory: "Safety",
+    advantageDescription:
+      "Instantly reduced temperature, thus elimination material hazard and ensuring more safery of the module, preventing fire risks caused by hot spots.",
+  },
+  {
+    icon: "euro.svg",
+    advantageCategory: "High returns",
+    advantageDescription:
+      "This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+  },
+  {
+    icon: "award.svg",
+    advantageCategory: "Certificates",
+    advantageDescription:
+      "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+  },
+];
+
+export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
+  Aurora: {
+    materialCharacteristics: {
+      cellType: {
+        characteristic: "Cell type",
+        value: "Mono-crystalline 158.75 x 158.75 mm",
+      },
+      noOfCells: {
+        characteristic: "No. of cells",
+        value: "60 (6 x 10)",
+      },
+      dimensions: {
+        characteristic: "Dimensions",
+        value: "1690 × 996 × 35 mm",
+      },
+      weight: {
+        characteristic: "Weight",
+        value: "19.0 kg",
+      },
+      junctionBox: {
+        characteristic: "Junction box",
+        value: "IP 67 rated",
+      },
+      outputCable: {
+        characteristic: "Output cable",
+        value: "1 x 4.0mm2, 900mm length or customised",
+      },
+      connectorType: {
+        characteristic: "Connector type",
+        value: "MC 4 / MC 4 compatible",
+      },
+      hailResistance: {
+        characteristic: "Hail resistance",
+        value: "Max. ⌀ 25 mm, at 23 m/s",
+      },
+      windLoad: {
+        characteristic: "Wind load",
+        value: "2400 Pa / 244 kg/m2",
+      },
+      mechanicalLoad: {
+        characteristic: "Mechanical load",
+        value: "5400 Pa / 550 kg/m2",
+      },
+    },
+    packagingInformation:
+      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+    dimensionsImage: "AuroraDimensions.png",
+    certificates:
+      "certificates certificates certificates certificates certificates",
+  },
+  Comet: {
+    materialCharacteristics: {
+      cellType: {
+        characteristic: "Cell type",
+        value: "Mono-crystalline 158.75 x 158.75 mm",
+      },
+      noOfCells: {
+        characteristic: "No. of cells",
+        value: "60 (6 x 10)",
+      },
+      dimensions: {
+        characteristic: "Dimensions",
+        value: "1690 × 996 × 35 mm",
+      },
+      weight: {
+        characteristic: "Weight",
+        value: "19.0 kg",
+      },
+      junctionBox: {
+        characteristic: "Junction box",
+        value: "IP 67 rated",
+      },
+      outputCable: {
+        characteristic: "Output cable",
+        value: "1 x 4.0mm2, 900mm length or customised",
+      },
+      connectorType: {
+        characteristic: "Connector type",
+        value: "MC 4 / MC 4 compatible",
+      },
+      hailResistance: {
+        characteristic: "Hail resistance",
+        value: "Max. ⌀ 25 mm, at 23 m/s",
+      },
+      windLoad: {
+        characteristic: "Wind load",
+        value: "2400 Pa / 244 kg/m2",
+      },
+      mechanicalLoad: {
+        characteristic: "Mechanical load",
+        value: "5400 Pa / 550 kg/m2",
+      },
+    },
+    packagingInformation:
+      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+    dimensionsImage: "AuroraDimensions.png",
+    certificates:
+      "certificates certificates certificates certificates certificates",
+  },
+  Meteor: {
+    materialCharacteristics: {
+      cellType: {
+        characteristic: "Cell type",
+        value: "Mono-crystalline 158.75 x 158.75 mm",
+      },
+      noOfCells: {
+        characteristic: "No. of cells",
+        value: "60 (6 x 10)",
+      },
+      dimensions: {
+        characteristic: "Dimensions",
+        value: "1690 × 996 × 35 mm",
+      },
+      weight: {
+        characteristic: "Weight",
+        value: "19.0 kg",
+      },
+      junctionBox: {
+        characteristic: "Junction box",
+        value: "IP 67 rated",
+      },
+      outputCable: {
+        characteristic: "Output cable",
+        value: "1 x 4.0mm2, 900mm length or customised",
+      },
+      connectorType: {
+        characteristic: "Connector type",
+        value: "MC 4 / MC 4 compatible",
+      },
+      hailResistance: {
+        characteristic: "Hail resistance",
+        value: "Max. ⌀ 25 mm, at 23 m/s",
+      },
+      windLoad: {
+        characteristic: "Wind load",
+        value: "2400 Pa / 244 kg/m2",
+      },
+      mechanicalLoad: {
+        characteristic: "Mechanical load",
+        value: "5400 Pa / 550 kg/m2",
+      },
+    },
+    packagingInformation:
+      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+    dimensionsImage: "AuroraDimensions.png",
+    certificates:
+      "certificates certificates certificates certificates certificates",
+  },
+  Terra: {
+    materialCharacteristics: {
+      cellType: {
+        characteristic: "Cell type",
+        value: "Mono-crystalline 158.75 x 158.75 mm",
+      },
+      noOfCells: {
+        characteristic: "No. of cells",
+        value: "60 (6 x 10)",
+      },
+      dimensions: {
+        characteristic: "Dimensions",
+        value: "1690 × 996 × 35 mm",
+      },
+      weight: {
+        characteristic: "Weight",
+        value: "19.0 kg",
+      },
+      junctionBox: {
+        characteristic: "Junction box",
+        value: "IP 67 rated",
+      },
+      outputCable: {
+        characteristic: "Output cable",
+        value: "1 x 4.0mm2, 900mm length or customised",
+      },
+      connectorType: {
+        characteristic: "Connector type",
+        value: "MC 4 / MC 4 compatible",
+      },
+      hailResistance: {
+        characteristic: "Hail resistance",
+        value: "Max. ⌀ 25 mm, at 23 m/s",
+      },
+      windLoad: {
+        characteristic: "Wind load",
+        value: "2400 Pa / 244 kg/m2",
+      },
+      mechanicalLoad: {
+        characteristic: "Mechanical load",
+        value: "5400 Pa / 550 kg/m2",
+      },
+    },
+    packagingInformation:
+      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+    dimensionsImage: "AuroraDimensions.png",
+    certificates:
+      "certificates certificates certificates certificates certificates",
+  },
+  Neptun: {
+    materialCharacteristics: {
+      cellType: {
+        characteristic: "Cell type",
+        value: "Mono-crystalline 158.75 x 158.75 mm",
+      },
+      noOfCells: {
+        characteristic: "No. of cells",
+        value: "60 (6 x 10)",
+      },
+      dimensions: {
+        characteristic: "Dimensions",
+        value: "1690 × 996 × 35 mm",
+      },
+      weight: {
+        characteristic: "Weight",
+        value: "19.0 kg",
+      },
+      junctionBox: {
+        characteristic: "Junction box",
+        value: "IP 67 rated",
+      },
+      outputCable: {
+        characteristic: "Output cable",
+        value: "1 x 4.0mm2, 900mm length or customised",
+      },
+      connectorType: {
+        characteristic: "Connector type",
+        value: "MC 4 / MC 4 compatible",
+      },
+      hailResistance: {
+        characteristic: "Hail resistance",
+        value: "Max. ⌀ 25 mm, at 23 m/s",
+      },
+      windLoad: {
+        characteristic: "Wind load",
+        value: "2400 Pa / 244 kg/m2",
+      },
+      mechanicalLoad: {
+        characteristic: "Mechanical load",
+        value: "5400 Pa / 550 kg/m2",
+      },
+    },
+    packagingInformation:
+      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+    dimensionsImage: "AuroraDimensions.png",
+    certificates:
+      "certificates certificates certificates certificates certificates",
+  },
+  HSF: {
+    materialCharacteristics: {
+      cellType: {
+        characteristic: "Cell type",
+        value: "Mono-crystalline 158.75 x 158.75 mm",
+      },
+      noOfCells: {
+        characteristic: "No. of cells",
+        value: "60 (6 x 10)",
+      },
+      dimensions: {
+        characteristic: "Dimensions",
+        value: "1690 × 996 × 35 mm",
+      },
+      weight: {
+        characteristic: "Weight",
+        value: "19.0 kg",
+      },
+      junctionBox: {
+        characteristic: "Junction box",
+        value: "IP 67 rated",
+      },
+      outputCable: {
+        characteristic: "Output cable",
+        value: "1 x 4.0mm2, 900mm length or customised",
+      },
+      connectorType: {
+        characteristic: "Connector type",
+        value: "MC 4 / MC 4 compatible",
+      },
+      hailResistance: {
+        characteristic: "Hail resistance",
+        value: "Max. ⌀ 25 mm, at 23 m/s",
+      },
+      windLoad: {
+        characteristic: "Wind load",
+        value: "2400 Pa / 244 kg/m2",
+      },
+      mechanicalLoad: {
+        characteristic: "Mechanical load",
+        value: "5400 Pa / 550 kg/m2",
+      },
+    },
+    packagingInformation:
+      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+    dimensionsImage: "AuroraDimensions.png",
+    certificates:
+      "certificates certificates certificates certificates certificates",
+  },
+};

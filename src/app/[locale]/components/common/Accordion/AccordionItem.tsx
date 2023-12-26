@@ -5,26 +5,37 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 
 export default function AccordionItem({
-  question,
+  title,
   isOpen,
   onClick,
   children,
   multiple,
+  style = "default",
+  index,
+  activeIndex,
 }: AccordionItemProps) {
   const contentHeight = useRef<HTMLDivElement>(null);
-  const [isOpenItem, setIsOpenItem] = useState(false);
+  const [isOpenItem, setIsOpenItem] = useState(
+    multiple && index === activeIndex
+  );
 
   const onItemWithMultipleFlagClick = () => {
     setIsOpenItem(!isOpenItem);
   };
 
   return (
-    <div className="border-b border-solid border-white overflow-hidden last:border-none">
+    <div className="border-b border-solid border-[#242424] overflow-hidden last:border-none">
       <button
         className="w-full text-left py-6 flex items-center justify-between text-[40px] leading-[48px]"
         onClick={multiple ? onItemWithMultipleFlagClick : onClick}
       >
-        <p>{question}</p>
+        <p
+          className={`${
+            style === "small" && "text-xl leading-[120%] font-semibold"
+          }`}
+        >
+          {title}
+        </p>
         <Image
           className={`arrow ${isOpen || isOpenItem ? "rotate-180" : ""}`}
           alt="arrow"

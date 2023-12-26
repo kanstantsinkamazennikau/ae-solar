@@ -24,7 +24,7 @@ export function MainPageFAQ() {
         <div className="max-w-[873px] w-full">
           <Accordion multiple>
             {FAQ_ACCORDION_DATA.map((item) => (
-              <AccordionItem key={item.question} question={item.question}>
+              <AccordionItem key={item.question} title={item.question}>
                 <p className="text-2xl leading-9 pb-6">{item.answer}</p>
               </AccordionItem>
             ))}

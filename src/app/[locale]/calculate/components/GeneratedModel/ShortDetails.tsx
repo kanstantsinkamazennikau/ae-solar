@@ -41,7 +41,7 @@ export default function ShortDetails() {
           })}
         </div>
       </div>
-      <div className="inline-flex px-10 py-8 flex-col justify-center items-center gap-2 rounded-[20px] border border-transparent backdrop-blur-[50px] absolute bottom-0 z-50">
+      <div className="inline-flex px-10 py-8 flex-col justify-center items-center gap-2 rounded-[20px] border border-transparent backdrop-blur-[50px] absolute bottom-0 z-30">
         <div className="pb-3 border-b-[1px] border-solid border-[#9199B5] w-full">
           <p className="text-xl leading-[120%] font-semibold">
             {CONSTRUCTOR_MODELS_SHORT_DETAILS}

@@ -20,6 +20,7 @@ import {
   CONSTRUCTOR_MODELS_SPEC,
   CONSTRUCTOR_YOUR_MODEL,
 } from "@/app/[locale]/utils/constants";
+import isEmptyObjectCheck from "@/app/[locale]/utils/isEmptyObjectcheck";
 import { useContext, useEffect, useState } from "react";
 
 export default function Customize() {
@@ -130,7 +131,7 @@ export default function Customize() {
             }));
             return;
           }
-          setIsGenerateModel(true);
+          if (isEmptyObjectCheck(error)) setIsGenerateModel(true);
         }}
         size="normal"
       >

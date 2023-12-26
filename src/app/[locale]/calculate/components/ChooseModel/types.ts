@@ -140,3 +140,22 @@ export interface ApplicationStandard {
   type: Applications;
   clarification: string;
 }
+
+export type ModelSpecsKeys =
+  | "materialCharacteristics"
+  | "packagingInformation"
+  | "dimensionsImage"
+  | "certificates";
+export interface ModelsSpecs {
+  [key: string]: {
+    materialCharacteristics: {
+      [key: string]: {
+        characteristic: string;
+        value: string;
+      };
+    };
+    packagingInformation: string;
+    dimensionsImage: string;
+    certificates: string;
+  };
+}

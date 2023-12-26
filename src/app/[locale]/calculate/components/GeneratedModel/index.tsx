@@ -1,13 +1,16 @@
 "use client";
 
 import ShortDetails from "@/app/[locale]/calculate/components/GeneratedModel/ShortDetails";
+import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
+  CONSTRUCTOR_ADD_TO_BAG,
   CONSTRUCTOR_YOUR_MODEL_IS,
   HEADER_SUBNAVIGATION_PANELS_MODELS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useContext } from "react";
+import ModelSpecs from "@/app/[locale]/calculate/components/GeneratedModel/ModelSpecs";
 
 export default function GeneratedModel() {
   const { constructorModel, isGenerateModel } = useContext(ConstructorContext);
@@ -17,43 +20,69 @@ export default function GeneratedModel() {
 
   return (
     isGenerateModel && (
-      <div className="w-full h-[900px] bg-[url('/images/option/Back.png')] bg-center bg-contain flex mb-11 flex-col items-center relative bg-no-repeat">
-        <div className="flex flex-col gap-4 items-center justify-center relative max-w-[800px] w-full">
-          <p className="text-dark-gray-650 text-xl -tracking-[0.4x] font-semibold">
-            {CONSTRUCTOR_YOUR_MODEL_IS}
-          </p>
-          <div className="flex gap-3 mb-8">
+      <div className="w-full flex mb-11 flex-col items-center">
+        <div className="w-full h-[900px] bg-[url('/images/option/Back.png')] bg-center bg-contain flex mb-8 flex-col items-center relative bg-no-repeat">
+          <div className="flex flex-col gap-4 items-center justify-center relative max-w-[800px] w-full">
+            <p className="text-dark-gray-650 text-xl -tracking-[0.4x] font-semibold">
+              {CONSTRUCTOR_YOUR_MODEL_IS}
+            </p>
+            <div className="flex gap-3 mb-8">
+              <Image
+                src={`/images/models/${modelIcon}`}
+                alt={modelIcon}
+                priority
+                width={48}
+                height={48}
+              />
+              <span className="text-[64px] -tracking-[0.64x] font-bold leading-none">
+                {constructorModel.model}
+              </span>
+            </div>
             <Image
-              src={`/images/models/${modelIcon}`}
-              alt={modelIcon}
+              src={`/images/option/glow.png`}
+              alt="glow.png"
               priority
-              width={48}
-              height={48}
+              width={800}
+              height={60}
+              className="absolute -bottom-[60px]"
             />
-            <span className="text-[64px] -tracking-[0.64x] font-bold leading-none">
-              {constructorModel.model}
-            </span>
           </div>
           <Image
-            src={`/images/option/glow.png`}
-            alt="glow.png"
+            src={`/images/option/${constructorModel.model}.png`}
+            alt={constructorModel.model}
             priority
-            width={800}
-            height={60}
-            className="absolute -bottom-[60px]"
+            width={964}
+            height={615}
+            className="absolute bottom-0"
           />
-        </div>
-        <Image
-          src={`/images/option/${constructorModel.model}.png`}
-          alt={constructorModel.model}
-          priority
-          width={964}
-          height={615}
-          className="absolute bottom-0"
-        />
-        <div className="fade-strip-bottom" />
+          <div className="fade-strip-bottom" />
 
-        <ShortDetails />
+          <ShortDetails />
+        </div>
+        <Button onClick={() => console.log("add to bag")} size="thin">
+          <div className="flex justify-center items-center">
+            <Image
+              src={`/images/cart.svg`}
+              alt={"cart"}
+              priority
+              width={24}
+              height={24}
+              className="inline-block"
+            />
+            <span className="text-xl -tracking-[0.2px] font-semibold">
+              {CONSTRUCTOR_ADD_TO_BAG}
+            </span>
+          </div>
+        </Button>
+        <Image
+          src={`/images/glowFull.png`}
+          alt="glow"
+          priority
+          width={1320}
+          height={60}
+          className="mt-8 mb-20"
+        />
+        <ModelSpecs />
       </div>
     )
   );

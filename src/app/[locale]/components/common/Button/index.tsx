@@ -32,6 +32,7 @@ export default function Button({
         ${size === "small" && "px-6 py-3"}
         ${size === "extrasmall" && "py-3 px-4 text-sm leading-none"}
         ${size === "normal" && "py-5 px-8 text-sm leading-none"}
+        ${size === "thin" && "py-[15px] px-8"}
         flex
         justify-center
         items-center

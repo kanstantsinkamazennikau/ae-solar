@@ -10,7 +10,7 @@ import {
 } from "react";
 
 export default function Accordion({ children, multiple }: AccordionProps) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   const handleItemClick = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -30,7 +30,11 @@ export default function Accordion({ children, multiple }: AccordionProps) {
                 isOpen: activeIndex === index,
                 onClick: () => handleItemClick(index),
               }
-            : { multiple }
+            : {
+                multiple,
+                index,
+                activeIndex,
+              }
         );
       }
     );
