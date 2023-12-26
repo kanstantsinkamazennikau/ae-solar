@@ -1,27 +1,19 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import Button from "@/app/[locale]/components/common/Button";
+import ContactInfo from "@/app/[locale]/components/common/Footer/ContactInfo";
 import { FooterCategory } from "@/app/[locale]/components/common/Footer/FooterCategory";
 import PolicyLink from "@/app/[locale]/components/common/Footer/PolicyLink";
-import Input from "@/app/[locale]/components/common/Input";
 import Logo from "@/app/[locale]/components/common/Logo";
 import {
-  FOOTER_CONTACT_INFO,
   FOOTER_COPYRIGHT,
   FOOTER_GERMAN_BRAND,
   FOOTER_LINKS_ARRAY,
-  FOOTER_SUBSCRIBE,
-  FOOTER_SUBSCRIBE_NEWSLETTER,
-  FOOTER_YOUR_EMAIL,
   POLICY_LINKS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 export default function Footer() {
-  const router = useRouter();
-
   return (
     <BasicWidthContainer>
       <footer className="text-sm pt-20 pb-5">
@@ -50,47 +42,7 @@ export default function Footer() {
               />
             ))}
           </div>
-          <div className="flex flex-col gap-6 items-center">
-            <div className="px-6 flex flex-col gap-[10px]">
-              {FOOTER_CONTACT_INFO.map(({ icon, info, linkTo }) => {
-                return (
-                  <div
-                    key={icon}
-                    className="flex items-start text-sm leading-[130%] font-normal font-walsheim gap-1 max-w-[185px]"
-                  >
-                    <Image
-                      src={`images/footer/${icon}`}
-                      alt={icon}
-                      width={16}
-                      height={16}
-                      priority
-                    />
-                    <div
-                      onClick={() => {
-                        if (linkTo) router.push(linkTo);
-                      }}
-                      className={`${linkTo ? "cursor-pointer" : ""}`}
-                    >
-                      {info}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="flex p-6 flex-col gap-4 bg-[#0D0D0D] border border-solid border-[#191919] rounded-xl">
-              <p className="text-base leading-[120%] text-dark-gray-900">
-                {FOOTER_SUBSCRIBE_NEWSLETTER}
-              </p>
-              <Input placeholder={FOOTER_YOUR_EMAIL} />
-              <Button
-                onClick={() => console.log("subscribe")}
-                color="transparent"
-                size="extrasmall"
-              >
-                {FOOTER_SUBSCRIBE}
-              </Button>
-            </div>
-          </div>
+          <ContactInfo />
         </nav>
         <hr className="bg-dark-gray-800 h-[1px] border-none mt-10 mb-3" />
         <div className="flex justify-between text-dark-gray-800 mb-5">

@@ -9,7 +9,7 @@ import {
   HEADER_SUBNAVIGATION_PANELS_MODELS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import ModelSpecs from "@/app/[locale]/calculate/components/GeneratedModel/ModelSpecs";
 
 export default function GeneratedModel() {
@@ -18,9 +18,18 @@ export default function GeneratedModel() {
     model.includes(constructorModel.model)
   )[0];
 
+  useEffect(() => {
+    if (isGenerateModel) {
+      window.scrollTo({
+        top: document.getElementById("model")!.offsetTop - 150,
+        behavior: "smooth",
+      });
+    }
+  }, [isGenerateModel]);
+
   return (
     isGenerateModel && (
-      <div className="w-full flex mb-11 flex-col items-center">
+      <div className="w-full flex mb-11 flex-col items-center" id="model">
         <div className="w-full h-[900px] bg-[url('/images/option/Back.png')] bg-center bg-contain flex mb-8 flex-col items-center relative bg-no-repeat">
           <div className="flex flex-col gap-4 items-center justify-center relative max-w-[800px] w-full">
             <p className="text-dark-gray-650 text-xl -tracking-[0.4x] font-semibold">
