@@ -64,28 +64,33 @@ export default function ApplicationsCheckboxes({
                     id={type}
                     checked={constructorModel.applications.includes(type)}
                     disabled={isDisabledCheckbox}
-                    className="
-                    grid
-                    place-content-center
-                    appearance-none
-                    w-4
-                    h-4
-                    border-2
-                    border-[#E7E7E7]
-                    rounded-[3px]
-                    bg-black
-                    before:shadow-[inset_1em_1em_#F60109]
-                    before:content-['']
-                    before:w-2
-                    before:h-2
-                    before:rounded-[1px]
-                    before:scale-0
-                    before:transition-transform
-                    before:delay-150
-                    before:ease-in-out
-                    checked:before:scale-[1]
-                    disabled:border-dark-gray-650
-                  "
+                    className={`
+                      grid
+                      place-content-center
+                      appearance-none
+                      w-4
+                      h-4
+                      border-2
+                      border-[#E7E7E7]
+                      rounded-[3px]
+                      bg-black
+                      before:shadow-[inset_1em_1em_#F60109]
+                      before:content-['']
+                      before:w-2
+                      before:h-2
+                      before:rounded-[1px]
+                      before:scale-0
+                      before:transition-transform
+                      before:delay-150
+                      before:ease-in-out
+                      checked:before:scale-[1]
+                      disabled:border-dark-gray-650
+                      ${
+                        isDisabledCheckbox
+                          ? "cursor-default text-dark-gray-650"
+                          : "cursor-pointer"
+                      }
+                    `}
                     onChange={handleOnChange}
                   />
                   <label
@@ -108,7 +113,7 @@ export default function ApplicationsCheckboxes({
                     height={19.5}
                     className="cursor-pointer"
                   />
-                  <p className="hidden group-hover/item:block absolute right-7 top-0 max-w-[200px] bg-dark-gray-700 p-2 rounded-md text-xs">
+                  <p className="hidden group-hover/item:block absolute right-7 top-0 max-w-[200px] bg-dark-gray-700 p-2 rounded-md text-xs z-10">
                     {clarification}
                   </p>
                 </div>

@@ -41,7 +41,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap justify-center">
             {FOOTER_LINKS_ARRAY.map(({ category, links }) => (
               <FooterCategory
                 key={category}
