@@ -9,7 +9,9 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
 
   return (
     <div className="flex flex-col w-[200px]">
-      <div className="text-dark-gray-900 text-2xl mb-6">{category}</div>
+      <div className="text-dark-gray-900 text-2xl mb-6 font-medium">
+        {category}
+      </div>
       {links.map((link) => (
         <Link
           href={`/${locale}/${link.toLowerCase()}`}

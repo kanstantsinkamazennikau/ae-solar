@@ -8,7 +8,6 @@ import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
   CONSTRUCTOR_MODELS_ADVANTAGES,
   CONSTRUCTOR_MODELS_SPECS,
-  FAQ_ACCORDION_DATA,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useContext } from "react";
@@ -17,7 +16,6 @@ export default function ModelSpecs() {
   const { constructorModel } = useContext(ConstructorContext);
   const modelSpecs = CONSTRUCTOR_MODELS_SPECS[constructorModel.model];
   const modelSpecsKeys = Object.keys(modelSpecs) as ModelSpecsKeys[];
-  console.log(modelSpecsKeys);
 
   return (
     <BasicWidthContainer>

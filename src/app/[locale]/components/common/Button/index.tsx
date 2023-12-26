@@ -24,6 +24,10 @@ export default function Button({
         transition
         bg-base-red
         ${
+          color === "transparent" &&
+          "border-[3px] border-solid border-[#606060] bg-transparent"
+        }
+        ${
           color === "outline" &&
           "border-[3px] border-solid border-base-red bg-transparent"
         }

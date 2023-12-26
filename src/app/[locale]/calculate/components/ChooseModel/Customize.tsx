@@ -105,7 +105,6 @@ export default function Customize() {
               </div>
             );
           }
-
           if (param.type === "applications") {
             return (
               <ApplicationsCheckboxes

@@ -296,7 +296,7 @@ export const FAQ_MORE_QUESTIONS = "More questions";
 export const FOOTER_LINKS_ARRAY = [
   {
     category: "Products",
-    links: ["Aurora", "Comet", "Meteor", "Terra", "Neptune", "Hot-Spot Fee"],
+    links: ["Aurora", "Comet", "Meteor", "Terra", "Neptun", "Hot-Spot Fee"],
   },
   {
     category: "Company",
@@ -317,8 +317,34 @@ export const FOOTER_LINKS_ARRAY = [
     ],
   },
 ];
+export const FOOTER_GERMAN_BRAND =
+  "German brand in the renewable energy industry, providing high-quality products and services since 2003.";
+export const FOOTER_CONTACT_INFO = [
+  {
+    icon: "location.svg",
+    info: "AE Alternative Energy GMBH Messerschmittring 5486343 Koenigsbrunn Germany",
+  },
+  {
+    icon: "phone.svg",
+    info: "+49 8231 978268 0",
+    linkTo: "tel:+4982319782680",
+  },
+  {
+    icon: "letter.svg",
+    info: "info@ae-solar.com",
+    linkTo: "mailto:info@ae-solar.com",
+  },
+  {
+    icon: "letter.svg",
+    info: "sales@ae-solar.com",
+    linkTo: "mailto:sales@ae-solar.com",
+  },
+];
+export const FOOTER_SUBSCRIBE_NEWSLETTER = "Subscribe to newsletter";
 export const FOOTER_COPYRIGHT =
   "Copyright © 2023 AESolar. All rights reserved.";
+export const FOOTER_YOUR_EMAIL = "your e-mail";
+export const FOOTER_SUBSCRIBE = "Subscribe";
 export const POLICY_LINKS = ["Privacy Policy", "Terms of Use", "Legal"];
 
 export const CONSTRUCTOR_OPTION_LINES = [

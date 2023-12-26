@@ -14,8 +14,43 @@ import ConstructorProvider from "@/app/[locale]/context/constructorContext";
 const walsheim = localFont({
   src: [
     {
-      path: "./fonts/GTWalsheimPro-Medium.ttf",
+      path: "./fonts/GTWalsheim/GTWalsheimPro-UltraLight.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/GTWalsheim/GTWalsheimPro-Thin.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "./fonts/GTWalsheim/GTWalsheimPro-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/GTWalsheim/GTWalsheimPro-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/GTWalsheim/GTWalsheimPro-Medium.ttf",
       weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/GTWalsheim/GTWalsheimPro-Bold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/GTWalsheim/GTWalsheimPro-Black.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/GTWalsheim/GTWalsheimPro-UltraBold.ttf",
+      weight: "800",
       style: "normal",
     },
   ],
@@ -25,47 +60,47 @@ const walsheim = localFont({
 const criteria = localFont({
   src: [
     {
-      path: "./fonts/Criteria CF Thin.otf",
+      path: "./fonts/Criteria CF/Criteria CF Thin.otf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "./fonts/Criteria CF Extralight.otf",
+      path: "./fonts/Criteria CF/Criteria CF Extralight.otf",
       weight: "200",
       style: "normal",
     },
     {
-      path: "./fonts/Criteria CF Light.otf",
+      path: "./fonts/Criteria CF/Criteria CF Light.otf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "./fonts/Criteria CF Regular.otf",
+      path: "./fonts/Criteria CF/Criteria CF Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/Criteria CF Medium.otf",
+      path: "./fonts/Criteria CF/Criteria CF Medium.otf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/Criteria CF Demibold.otf",
+      path: "./fonts/Criteria CF/Criteria CF Demibold.otf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "./fonts/Criteria CF Bold.otf",
+      path: "./fonts/Criteria CF/Criteria CF Bold.otf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "./fonts/Criteria CF Extrabold.otf",
+      path: "./fonts/Criteria CF/Criteria CF Extrabold.otf",
       weight: "800",
       style: "normal",
     },
     {
-      path: "./fonts/Criteria CF Super.otf",
+      path: "./fonts/Criteria CF/Criteria CF Super.otf",
       weight: "900",
       style: "normal",
     },
