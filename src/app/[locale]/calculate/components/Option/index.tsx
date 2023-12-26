@@ -6,7 +6,7 @@ import GeneratedModel from "@/app/[locale]/calculate/components/GeneratedModel";
 export default function Option() {
   return (
     <BasicWidthContainer>
-      <div className="flex items-start gap-10 self-stretch mt-10 mb-[200px]">
+      <div className="flex items-start gap-10 self-stretch mt-10 mb-[80px]">
         {/* IMG */}
         <div className="border-4 border-solid border-option-border rounded-[20px] max-w-[985px] h-[640px] w-full sticky top-[150px]">
           <div
