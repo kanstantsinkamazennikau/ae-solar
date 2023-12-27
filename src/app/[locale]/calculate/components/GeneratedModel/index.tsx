@@ -1,16 +1,18 @@
 "use client";
 
+import ModelSpecs from "@/app/[locale]/calculate/components/GeneratedModel/ModelSpecs";
 import ShortDetails from "@/app/[locale]/calculate/components/GeneratedModel/ShortDetails";
 import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
+  CART_SUCCESSFULLY_ADDED,
   CONSTRUCTOR_ADD_TO_BAG,
   CONSTRUCTOR_YOUR_MODEL_IS,
   HEADER_SUBNAVIGATION_PANELS_MODELS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useContext, useEffect } from "react";
-import ModelSpecs from "@/app/[locale]/calculate/components/GeneratedModel/ModelSpecs";
+import { toast } from "react-toastify";
 
 export default function GeneratedModel() {
   const { constructorModel, isGenerateModel, setModelsInBag } =
@@ -20,7 +22,11 @@ export default function GeneratedModel() {
   )[0];
 
   const addModelToBag = () => {
-    setModelsInBag((prevState) => [...prevState, constructorModel]);
+    setModelsInBag((prevState) => {
+      let previousElementId = prevState[prevState.length - 1]?.id ?? 0;
+      return [...prevState, { id: ++previousElementId, ...constructorModel }];
+    });
+    toast.success(CART_SUCCESSFULLY_ADDED);
   };
 
   useEffect(() => {
@@ -100,6 +106,14 @@ export default function GeneratedModel() {
           className="mt-8 mb-20"
         />
         <ModelSpecs />
+        <Image
+          src={`/images/glowFull.png`}
+          alt="glow"
+          priority
+          width={1320}
+          height={60}
+          className="mt-8 mb-20"
+        />
       </div>
     )
   );

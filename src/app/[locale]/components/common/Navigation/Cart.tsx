@@ -11,7 +11,7 @@ export default function Cart() {
   const { modelsInBag } = useContext(ConstructorContext);
 
   return (
-    modelsInBag && (
+    !!modelsInBag.length && (
       <Link href={`/${locale}/cart`} className="flex">
         <Image
           src="/images/bag.svg"

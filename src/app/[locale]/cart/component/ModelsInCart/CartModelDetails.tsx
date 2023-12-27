@@ -5,7 +5,7 @@ import {
 import { CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 
-export default function Details({ model }: DetailsProps) {
+export default function CartModelDetails({ model }: DetailsProps) {
   const modelDetailsKeys = Object.keys(
     CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING
   ) as Array<keyof Details>;

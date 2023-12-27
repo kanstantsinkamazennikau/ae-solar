@@ -1,4 +1,3 @@
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Image from "next/image";
 
 export default function Divider() {

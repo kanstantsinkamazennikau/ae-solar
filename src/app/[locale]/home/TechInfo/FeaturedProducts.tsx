@@ -32,7 +32,7 @@ export default function FeaturedProducts() {
       </div>
       <Button
         onClick={() => console.log(HEADER_CHOOSE_YOUR_MODEL)}
-        color="outline"
+        style="outline"
       >
         <span className="text-2xl -tracking-[0.24px] font-semibold">
           {HEADER_CHOOSE_YOUR_MODEL}

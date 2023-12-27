@@ -4,5 +4,5 @@ export interface ButtonProps {
   disabled?: boolean;
   size?: "regular" | "small" | "extrasmall" | "normal" | "thin";
   showArrow?: boolean;
-  color?: "secondary" | "outline" | "transparent";
+  style?: "secondary" | "outline" | "transparent" | "textOnly";
 }

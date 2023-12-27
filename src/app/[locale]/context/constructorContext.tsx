@@ -29,14 +29,17 @@ export interface ConstructorModel {
   };
   applications: Applications[];
 }
+interface ConstructorModelWithId extends ConstructorModel {
+  id: number;
+}
 
 export interface ConstructorContext {
   setConstructorModel: (model: any) => void;
   constructorModel: ConstructorModel;
   setIsGenerateModel: (flag: boolean) => void;
   isGenerateModel: boolean;
-  setModelsInBag: Dispatch<SetStateAction<ConstructorModel[]>>;
-  modelsInBag: ConstructorModel[];
+  setModelsInBag: Dispatch<SetStateAction<ConstructorModelWithId[]>>;
+  modelsInBag: ConstructorModelWithId[];
 }
 
 export const ConstructorContext = createContext<ConstructorContext>(null!);
@@ -47,7 +50,7 @@ export default function ConstructorProvider({
   children: React.ReactNode;
 }) {
   const defaultModel = CONSTRUCTOR_MODELS_SPEC.Aurora.params;
-  const [modelsInBag, setModelsInBag] = useState<ConstructorModel[]>([]);
+  const [modelsInBag, setModelsInBag] = useState<ConstructorModelWithId[]>([]);
   const [isGenerateModel, setIsGenerateModel] = useState<boolean>(false);
   const [constructorModel, setConstructorModel] = useState<ConstructorModel>({
     model: "Aurora",
@@ -66,8 +69,6 @@ export default function ConstructorProvider({
     },
     applications: [defaultModel.applications.values[0]],
   });
-
-  console.log(constructorModel);
 
   useEffect(() => {
     const selectedModelParams =
@@ -89,32 +90,6 @@ export default function ConstructorProvider({
       },
       applications: [selectedModelParams.applications.values[0]],
     });
-    //@ts-ignore
-    setModelsInBag((prevState) => [
-      ...prevState,
-      {
-        applications: ["Shade Resistant", "Shade Resistant", "Shade Resistant"],
-        backCover: "Glass",
-        frameColor: "Black",
-        model: "Aurora",
-        moduleColor: "Transparent",
-        moduleDimension: { length: "4000", width: "5000" },
-        moduleSpecification: "Mono-Facial",
-        powerRange: { from: "100", to: "1000" },
-        solarCellTechnology: "PERc",
-      },
-      {
-        applications: ["Shade Resistant"],
-        backCover: "Glass",
-        frameColor: "Black",
-        model: "Neptune",
-        moduleColor: "Transparent",
-        moduleDimension: { length: "4000", width: "5000" },
-        moduleSpecification: "Mono-Facial",
-        powerRange: { from: "100", to: "1000" },
-        solarCellTechnology: "PERc",
-      },
-    ]);
     setIsGenerateModel(false);
   }, [constructorModel.model]);
 

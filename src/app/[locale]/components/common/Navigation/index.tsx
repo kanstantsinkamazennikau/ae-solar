@@ -2,7 +2,6 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Logo from "@/app/[locale]/components/common/Logo";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";

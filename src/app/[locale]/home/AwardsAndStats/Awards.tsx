@@ -1,8 +1,4 @@
-import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
-import {
-  AWARDS_AND_STATS_AWARDS_IMAGES,
-  AWARDS_AND_STATS_SEE_ALL_AWARDS,
-} from "@/app/[locale]/utils/constants";
+import { AWARDS_AND_STATS_AWARDS_IMAGES } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 
 export default function Awards() {

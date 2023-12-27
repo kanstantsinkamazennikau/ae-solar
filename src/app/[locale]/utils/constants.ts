@@ -413,7 +413,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Frame Color",
         values: [
           { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "white.svg" },
+          { color: "Silver", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
@@ -480,7 +480,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Frame Color",
         values: [
           { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "white.svg" },
+          { color: "Silver", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
@@ -547,7 +547,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Frame Color",
         values: [
           { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "white.svg" },
+          { color: "Silver", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
@@ -614,7 +614,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Frame Color",
         values: [
           { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "white.svg" },
+          { color: "Silver", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
@@ -681,7 +681,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Frame Color",
         values: [
           { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "white.svg" },
+          { color: "Silver", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
@@ -748,7 +748,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Frame Color",
         values: [
           { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "white.svg" },
+          { color: "Silver", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
@@ -1289,3 +1289,6 @@ export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
   powerRange: "Power Range",
   applications: "Applications",
 };
+export const CART_ADD_ONE_MORE_PANEL = "Add one more panel";
+export const CART_BAG_IS_EMPTY = "Bag is empty";
+export const CART_SUCCESSFULLY_ADDED = "Successfully added to bag";

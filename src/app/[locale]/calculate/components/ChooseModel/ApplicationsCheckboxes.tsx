@@ -8,7 +8,7 @@ import {
 } from "@/app/[locale]/context/constructorContext";
 import { CONSTRUCTOR_APPLICATIONS_STANDARDS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { ChangeEvent, useContext, useState } from "react";
+import { ChangeEvent, useContext } from "react";
 
 export default function ApplicationsCheckboxes({
   text,
@@ -23,7 +23,6 @@ export default function ApplicationsCheckboxes({
     const applicationType = e.target.name;
 
     const { applications } = constructorModel;
-    console.log(applications);
 
     if (isChecked) {
       setConstructorModel((prevState: ConstructorModel) => ({

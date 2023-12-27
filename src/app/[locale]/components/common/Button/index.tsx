@@ -3,12 +3,44 @@
 import { ButtonProps } from "@/app/[locale]/components/common/Button/types";
 import Image from "next/image";
 
+const buttonStyle = (style: string | undefined) => {
+  switch (style) {
+    case "transparent":
+      return "border-[3px] border-solid border-[#606060] bg-transparent";
+    case "outline":
+      return "border-[3px] border-solid border-base-red bg-transparent";
+    case "secondary":
+      return "bg-white text-black";
+    case "textOnly":
+      return "bg-transparent px-3 py-3";
+    default:
+      return "";
+  }
+};
+
+const buttonSize = (size: string) => {
+  switch (size) {
+    case "regular":
+      return "px-8 py-6 text-lg";
+    case "small":
+      return "px-6 py-3";
+    case "extrasmall":
+      return "py-3 px-4";
+    case "normal":
+      return "py-5 px-8";
+    case "thin":
+      return "py-[15px] px-8";
+    default:
+      return "";
+  }
+};
+
 export default function Button({
   children,
   onClick,
   disabled,
   size = "regular",
-  color,
+  style,
   showArrow,
 }: ButtonProps) {
   return (
@@ -23,20 +55,8 @@ export default function Button({
         hover:opacity-80
         transition
         bg-base-red
-        ${
-          color === "transparent" &&
-          "border-[3px] border-solid border-[#606060] bg-transparent"
-        }
-        ${
-          color === "outline" &&
-          "border-[3px] border-solid border-base-red bg-transparent"
-        }
-        ${color === "secondary" && "bg-white text-black"}
-        ${size === "regular" && "px-8 py-6 text-lg"}
-        ${size === "small" && "px-6 py-3"}
-        ${size === "extrasmall" && "py-3 px-4 text-sm leading-none"}
-        ${size === "normal" && "py-5 px-8 text-sm leading-none"}
-        ${size === "thin" && "py-[15px] px-8"}
+        ${buttonStyle(style)}
+        ${buttonSize(size)}
         flex
         justify-center
         items-center

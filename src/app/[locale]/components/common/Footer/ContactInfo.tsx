@@ -47,10 +47,10 @@ export default function ContactInfo() {
         <Input placeholder={FOOTER_YOUR_EMAIL} />
         <Button
           onClick={() => console.log("subscribe")}
-          color="transparent"
+          style="transparent"
           size="extrasmall"
         >
-          {FOOTER_SUBSCRIBE}
+          <span className="text-sm leading-none">{FOOTER_SUBSCRIBE}</span>
         </Button>
       </div>
     </div>

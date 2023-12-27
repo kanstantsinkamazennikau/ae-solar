@@ -130,11 +130,16 @@ export default function Customize() {
             }));
             return;
           }
-          if (isEmptyObjectCheck(error)) setIsGenerateModel(true);
+          if (isEmptyObjectCheck(error)) {
+            setIsGenerateModel(true);
+          }
         }}
         size="normal"
       >
-        {CONSTRUCTOR_GENERATE_YOUR_MODEL}
+        <span className="text-sm leading-none">
+          {CONSTRUCTOR_GENERATE_YOUR_MODEL}
+        </span>
+        {}
       </Button>
     </div>
   );

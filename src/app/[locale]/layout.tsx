@@ -10,6 +10,8 @@ import { notFound } from "next/navigation";
 import ModelProvider from "@/app/[locale]/context/modelContext";
 import StickyNavigationProvider from "@/app/[locale]/context/stickyNavigationContext";
 import ConstructorProvider from "@/app/[locale]/context/constructorContext";
+import ToastContainerProvider from "@/app/[locale]/context/toastProvider";
+import "react-toastify/dist/ReactToastify.css";
 
 const walsheim = localFont({
   src: [
@@ -126,6 +128,7 @@ export default function RootLayout({
     <html lang={locale}>
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
         <div className="flex flex-col justify-center items-center">
+          <ToastContainerProvider />
           <ModelProvider>
             <ConstructorProvider>
               <StickyNavigationProvider>

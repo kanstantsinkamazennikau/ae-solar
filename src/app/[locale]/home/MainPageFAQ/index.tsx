@@ -32,7 +32,7 @@ export function MainPageFAQ() {
           <div className="mt-[60px]">
             <Button
               onClick={() => console.log(FAQ_MORE_QUESTIONS)}
-              color="outline"
+              style="outline"
               showArrow
             >
               <span className="text-2xl -tracking-[0.24px] font-semibold">
