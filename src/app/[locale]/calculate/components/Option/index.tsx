@@ -1,7 +1,6 @@
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import ChooseModel from "@/app/[locale]/calculate/components/ChooseModel";
+import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { CONSTRUCTOR_OPTION_LINES } from "@/app/[locale]/utils/constants";
-import GeneratedModel from "@/app/[locale]/calculate/components/GeneratedModel";
 
 export default function Option() {
   return (

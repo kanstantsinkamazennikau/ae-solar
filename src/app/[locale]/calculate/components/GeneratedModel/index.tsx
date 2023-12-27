@@ -13,10 +13,15 @@ import { useContext, useEffect } from "react";
 import ModelSpecs from "@/app/[locale]/calculate/components/GeneratedModel/ModelSpecs";
 
 export default function GeneratedModel() {
-  const { constructorModel, isGenerateModel } = useContext(ConstructorContext);
+  const { constructorModel, isGenerateModel, setModelsInBag } =
+    useContext(ConstructorContext);
   const modelIcon = HEADER_SUBNAVIGATION_PANELS_MODELS.filter((model) =>
     model.includes(constructorModel.model)
   )[0];
+
+  const addModelToBag = () => {
+    setModelsInBag((prevState) => [...prevState, constructorModel]);
+  };
 
   useEffect(() => {
     if (isGenerateModel) {
@@ -71,7 +76,7 @@ export default function GeneratedModel() {
 
           <ShortDetails />
         </div>
-        <Button onClick={() => console.log("add to bag")} size="thin">
+        <Button onClick={addModelToBag} size="thin">
           <div className="flex justify-center items-center">
             <Image
               src={`/images/cart.svg`}

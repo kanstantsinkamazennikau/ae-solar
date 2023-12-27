@@ -65,7 +65,7 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Comet.svg",
   "Meteor.svg",
   "Terra.svg",
-  "Neptun.svg",
+  "Neptune.svg",
   "HSF.svg",
 ];
 export const HEADER_CHOOSE_YOUR_MODEL = "Choose your model";
@@ -152,14 +152,14 @@ export const PRODUCT_INTRO_PANELS = {
       text: "Experience123 minimum power loss and shine brightly even in low light conditions",
     },
   },
-  Neptun: {
+  Neptune: {
     stats: {
-      power: "Neptun",
+      power: "Neptune",
       efficiency: "22.57%",
       voltage: "1000",
     },
     info: {
-      icon: "Neptun.svg",
+      icon: "Neptune.svg",
       text: "Experience minimum power loss and shine brightly even in low light conditions",
     },
   },
@@ -296,7 +296,7 @@ export const FAQ_MORE_QUESTIONS = "More questions";
 export const FOOTER_LINKS_ARRAY = [
   {
     category: "Products",
-    links: ["Aurora", "Comet", "Meteor", "Terra", "Neptun", "Hot-Spot Fee"],
+    links: ["Aurora", "Comet", "Meteor", "Terra", "Neptune", "Hot-Spot Fee"],
   },
   {
     category: "Company",
@@ -649,7 +649,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
     },
   },
-  Neptun: {
+  Neptune: {
     panelTechnology: "PV-Thermal Technology",
     params: {
       solarCellTechnology: {
@@ -902,7 +902,7 @@ export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
       value: "12 years",
     },
   },
-  Neptun: {
+  Neptune: {
     powerRange: {
       parameter: "Power range",
       value: "32W—335W",
@@ -1174,7 +1174,7 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     certificates:
       "certificates certificates certificates certificates certificates",
   },
-  Neptun: {
+  Neptune: {
     materialCharacteristics: {
       cellType: {
         characteristic: "Cell type",
@@ -1272,4 +1272,20 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     certificates:
       "certificates certificates certificates certificates certificates",
   },
+};
+
+export const CART_MODELS_ARE_READY = "Your models are ready for the next step";
+export const CART_PLEASE_CHECKOUT =
+  "Please check out your order and we will finalize it.";
+export const CART_CHECK_OUT = "Check Out";
+export const CART_REMOVE = "Remove";
+export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
+  solarCellTechnology: "Solar Cell Technology",
+  moduleSpecification: "Module Specifation",
+  moduleColor: "Module Color",
+  backCover: "Back Cover",
+  frameColor: "Frame Color",
+  moduleDimension: "Module Dimension",
+  powerRange: "Power Range",
+  applications: "Applications",
 };

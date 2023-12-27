@@ -4,6 +4,7 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Logo from "@/app/[locale]/components/common/Logo";
+import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
@@ -27,7 +28,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="w-full sticky top-0 z-40 h-[146px]">
+    <div className="w-full sticky top-0 z-40 h-[70px] md:h-[146px]">
       {/* MAIN NAVIGATION */}
       <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-6">
         <BasicWidthContainer>
@@ -40,8 +41,9 @@ export default function Navigation() {
                 <NavLink key={navLink.url} {...navLink} />
               ))}
             </ul>
-            <div className="gap-8 md:flex hidden">
+            <div className="gap-3 md:flex hidden">
               {/* <ChangeLocale /> */}
+              <Cart />
               <Button onClick={() => console.log("contact us")} size="small">
                 {HEADER_CONTACT_US}
               </Button>
