@@ -60,8 +60,8 @@ export default function NavLink({
               } ml-1 md:hidden block`}
             />
           </div>
-          <div className="absolute top-30 hidden group-hover:md:block hover:md:block z-10">
-            <div className="py-3">
+          <div className="absolute hidden group-hover:md:block hover:md:block z-10">
+            <div className="py-2">
               <div
                 className="w-4 h-4 left-3 absolute 
                     mt-1 bg-white rotate-45"

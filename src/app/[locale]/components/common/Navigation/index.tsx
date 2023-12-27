@@ -27,9 +27,9 @@ export default function Navigation() {
   };
 
   return (
-    <div className="w-full sticky top-0 z-40 h-[70px] md:h-[146px]">
+    <div className="w-full sticky top-0 z-40 h-[64px] md:h-[130px]">
       {/* MAIN NAVIGATION */}
-      <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-6">
+      <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-5 md:py-4">
         <BasicWidthContainer>
           <nav className="flex items-center justify-between relative font-normal w-full">
             <Logo />

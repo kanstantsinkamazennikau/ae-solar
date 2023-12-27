@@ -32,7 +32,7 @@ export default function GeneratedModel() {
   useEffect(() => {
     if (isGenerateModel) {
       window.scrollTo({
-        top: document.getElementById("model")!.offsetTop - 200,
+        top: document.getElementById("model")!.offsetTop - 150,
         behavior: "smooth",
       });
     }
@@ -41,7 +41,7 @@ export default function GeneratedModel() {
   return (
     isGenerateModel && (
       <div
-        className="w-full flex mb-11 flex-col items-center mt-[120px]"
+        className="w-full flex mb-11 flex-col items-center mt-[130px]"
         id="model"
       >
         <div className="w-full h-[900px] bg-[url('/images/option/Back.png')] bg-center bg-contain flex mb-8 flex-col items-center relative bg-no-repeat">
