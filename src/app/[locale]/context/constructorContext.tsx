@@ -1,7 +1,10 @@
 "use client";
 
 import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
-import { CONSTRUCTOR_MODELS_SPEC } from "@/app/[locale]/utils/constants";
+import {
+  CART_LOCALSTORAGE,
+  CONSTRUCTOR_MODELS_SPEC,
+} from "@/app/[locale]/utils/constants";
 import {
   Dispatch,
   SetStateAction,
@@ -40,6 +43,8 @@ export interface ConstructorContext {
   isGenerateModel: boolean;
   setModelsInBag: Dispatch<SetStateAction<ConstructorModelWithId[]>>;
   modelsInBag: ConstructorModelWithId[];
+  setIsBagLoading: (flag: boolean) => void;
+  isBagLoading: boolean;
 }
 
 export const ConstructorContext = createContext<ConstructorContext>(null!);
@@ -52,6 +57,7 @@ export default function ConstructorProvider({
   const defaultModel = CONSTRUCTOR_MODELS_SPEC.Aurora.params;
   const [modelsInBag, setModelsInBag] = useState<ConstructorModelWithId[]>([]);
   const [isGenerateModel, setIsGenerateModel] = useState<boolean>(false);
+  const [isBagLoading, setIsBagLoading] = useState<boolean>(true);
   const [constructorModel, setConstructorModel] = useState<ConstructorModel>({
     model: "Aurora",
     solarCellTechnology: defaultModel.solarCellTechnology.values[0],
@@ -93,6 +99,14 @@ export default function ConstructorProvider({
     setIsGenerateModel(false);
   }, [constructorModel.model]);
 
+  useEffect(() => {
+    const cartItemsFromLocalStorage = localStorage.getItem(CART_LOCALSTORAGE);
+    if (cartItemsFromLocalStorage) {
+      setModelsInBag(JSON.parse(cartItemsFromLocalStorage));
+    }
+    setIsBagLoading(false);
+  }, []);
+
   return (
     <ConstructorContext.Provider
       value={{
@@ -102,6 +116,8 @@ export default function ConstructorProvider({
         isGenerateModel,
         setModelsInBag,
         modelsInBag,
+        setIsBagLoading,
+        isBagLoading,
       }}
     >
       {children}

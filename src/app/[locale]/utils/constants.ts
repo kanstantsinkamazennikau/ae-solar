@@ -1292,3 +1292,4 @@ export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
 export const CART_ADD_ONE_MORE_PANEL = "Add one more panel";
 export const CART_BAG_IS_EMPTY = "Bag is empty";
 export const CART_SUCCESSFULLY_ADDED = "Successfully added to bag";
+export const CART_LOCALSTORAGE = "cart";

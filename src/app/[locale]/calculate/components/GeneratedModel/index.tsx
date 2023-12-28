@@ -5,6 +5,7 @@ import ShortDetails from "@/app/[locale]/calculate/components/GeneratedModel/Sho
 import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
+  CART_LOCALSTORAGE,
   CART_SUCCESSFULLY_ADDED,
   CONSTRUCTOR_ADD_TO_BAG,
   CONSTRUCTOR_YOUR_MODEL_IS,
@@ -24,7 +25,12 @@ export default function GeneratedModel() {
   const addModelToBag = () => {
     setModelsInBag((prevState) => {
       let previousElementId = prevState[prevState.length - 1]?.id ?? 0;
-      return [...prevState, { id: ++previousElementId, ...constructorModel }];
+      const modelsInBag = [
+        ...prevState,
+        { id: ++previousElementId, ...constructorModel },
+      ];
+      localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
+      return modelsInBag;
     });
     toast.success(CART_SUCCESSFULLY_ADDED);
   };
