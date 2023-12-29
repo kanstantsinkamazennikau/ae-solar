@@ -2,7 +2,7 @@
 
 import CheckoutForm from "@/app/[locale]/cart/component/CheckoutForm";
 import AddMorePanels from "@/app/[locale]/cart/component/AddMorePanels";
-import Checkout from "@/app/[locale]/cart/component/Checkout";
+import CheckOut from "@/app/[locale]/cart/component/CheckOut";
 import ModelsInCart from "@/app/[locale]/cart/component/ModelsInCart";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Loader from "@/app/[locale]/components/common/Loader";
@@ -20,7 +20,7 @@ export default function Cart() {
         <CheckoutForm />
       ) : (
         <>
-          <Checkout />
+          <CheckOut />
           <ModelsInCart />
           <AddMorePanels />
         </>

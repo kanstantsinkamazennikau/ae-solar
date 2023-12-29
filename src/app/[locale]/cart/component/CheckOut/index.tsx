@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 import { useContext, useEffect } from "react";
 
-export default function Checkout() {
+export default function CheckOut() {
   const { modelsInBag, setIsGenerateModel, setIsShowCheckoutForm } =
     useContext(ConstructorContext);
 
