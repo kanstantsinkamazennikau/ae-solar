@@ -1,4 +1,22 @@
 @tailwind base;
+
+/* width */
+.codeDropdown::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.codeDropdown::-webkit-scrollbar-track {
+  background: #c7c7c7;
+  border-radius: 3px;
+}
+
+/* Handle */
+.codeDropdown::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
 @tailwind components;
 @tailwind utilities;
 

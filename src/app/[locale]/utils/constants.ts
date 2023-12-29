@@ -3,6 +3,19 @@ import {
   ModelsSpecs,
   PanelParams,
 } from "@/app/[locale]/calculate/components/ChooseModel/types";
+import { FormFileds } from "@/app/[locale]/components/common/BuyerForm/types";
+
+export const FORM_FIELDS_INPUT_TYPES = {
+  input: "input",
+  phone: "phone",
+};
+
+export const FORMS_FIELDS = {
+  name: "name",
+  email: "email",
+  phone: "phone",
+  code: "code",
+};
 
 // NAVIGATION
 export const HEADER_NAV_LINKS_ARRAY = [
@@ -1293,3 +1306,27 @@ export const CART_ADD_ONE_MORE_PANEL = "Add one more panel";
 export const CART_BAG_IS_EMPTY = "Bag is empty";
 export const CART_SUCCESSFULLY_ADDED = "Successfully added to bag";
 export const CART_LOCALSTORAGE = "cart";
+
+export const CHECKOUT_FILL_OUT = `Fill out Your
+Order Information`;
+export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
+  {
+    formTitle: "My name is",
+    placeholder: "first and last",
+    name: "name",
+    type: "input",
+  },
+  {
+    formTitle: "Please, contact me at",
+    placeholder: "your e-mail",
+    name: "email",
+    type: "input",
+  },
+  {
+    formTitle: "My phone number",
+    placeholder: "phone number",
+    name: "phone",
+    type: "phone",
+  },
+];
+export const CHECKOUT_SEND_REQUEST = "Send Request";

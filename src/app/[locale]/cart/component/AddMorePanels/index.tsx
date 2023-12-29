@@ -18,7 +18,7 @@ export default function AddMorePanels() {
     <BasicWidthContainer>
       <div className="w-full flex justify-center items-center gap-2">
         <Image
-          src={`/images/bag/addMorePanels.svg`}
+          src={`/images/cart/addMorePanels.svg`}
           alt={"addMorePanels"}
           priority
           width={118}

@@ -42,7 +42,7 @@ export default function Navigation() {
               ))}
             </ul>
             <div className="gap-3 md:flex hidden">
-              <ChangeLocale />
+              {/* <ChangeLocale /> */}
               <Cart />
               <Button onClick={() => console.log("contact us")} size="small">
                 {HEADER_CONTACT_US}

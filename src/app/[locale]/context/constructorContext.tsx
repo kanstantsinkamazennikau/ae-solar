@@ -45,6 +45,8 @@ export interface ConstructorContext {
   modelsInBag: ConstructorModelWithId[];
   setIsBagLoading: (flag: boolean) => void;
   isBagLoading: boolean;
+  setIsShowCheckoutForm: (flag: boolean) => void;
+  isShowCheckoutForm: boolean;
 }
 
 export const ConstructorContext = createContext<ConstructorContext>(null!);
@@ -58,6 +60,7 @@ export default function ConstructorProvider({
   const [modelsInBag, setModelsInBag] = useState<ConstructorModelWithId[]>([]);
   const [isGenerateModel, setIsGenerateModel] = useState<boolean>(false);
   const [isBagLoading, setIsBagLoading] = useState<boolean>(true);
+  const [isShowCheckoutForm, setIsShowCheckoutForm] = useState<boolean>(false);
   const [constructorModel, setConstructorModel] = useState<ConstructorModel>({
     model: "Aurora",
     solarCellTechnology: defaultModel.solarCellTechnology.values[0],
@@ -118,6 +121,8 @@ export default function ConstructorProvider({
         modelsInBag,
         setIsBagLoading,
         isBagLoading,
+        setIsShowCheckoutForm,
+        isShowCheckoutForm,
       }}
     >
       {children}

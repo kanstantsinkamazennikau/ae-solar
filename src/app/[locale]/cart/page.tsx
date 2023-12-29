@@ -1,23 +1,30 @@
 "use client";
 
+import CheckoutForm from "@/app/[locale]/cart/component/CheckoutForm";
 import AddMorePanels from "@/app/[locale]/cart/component/AddMorePanels";
-import CheckOut from "@/app/[locale]/cart/component/CheckOut";
+import Checkout from "@/app/[locale]/cart/component/Checkout";
 import ModelsInCart from "@/app/[locale]/cart/component/ModelsInCart";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Loader from "@/app/[locale]/components/common/Loader";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 export default function Cart() {
-  const { isBagLoading } = useContext(ConstructorContext);
+  const { isBagLoading, isShowCheckoutForm } = useContext(ConstructorContext);
 
   if (isBagLoading) return <Loader />;
 
   return (
     <BasicWidthContainer>
-      <CheckOut />
-      <ModelsInCart />
-      <AddMorePanels />
+      {isShowCheckoutForm ? (
+        <CheckoutForm />
+      ) : (
+        <>
+          <Checkout />
+          <ModelsInCart />
+          <AddMorePanels />
+        </>
+      )}
     </BasicWidthContainer>
   );
 }

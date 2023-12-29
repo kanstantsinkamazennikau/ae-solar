@@ -22,7 +22,7 @@ export default function ContactInfo() {
               className="flex items-start text-sm leading-[130%] font-normal font-walsheim gap-1 max-w-[185px]"
             >
               <Image
-                src={`images/footer/${icon}`}
+                src={`/images/footer/${icon}`}
                 alt={icon}
                 width={16}
                 height={16}

@@ -5,10 +5,10 @@ import { match } from "@formatjs/intl-localematcher";
 
 export const config = {
   // Do not run the middleware on the following paths
-  matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|.*\\.).*)",
-  ],
+  matcher: ["/((?!.*\\.).*)", "/favicon.ico"],
 };
+
+// ["/((?!.*\\.).*)", "/favicon.ico"];
 
 function getLocale(request: NextRequest): string {
   const negotiatorHeaders: Record<string, string> = {};
