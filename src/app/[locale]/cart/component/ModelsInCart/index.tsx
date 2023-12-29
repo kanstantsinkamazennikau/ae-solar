@@ -38,7 +38,7 @@ export default function ModelsInCart() {
                   </div>
                   <div className="relative">
                     <Image
-                      src={`/images/cart/${modelInBag.model}.png`}
+                      src={`/images/bag/${modelInBag.model}.png`}
                       alt={modelInBag.model}
                       priority
                       quality={100}
@@ -60,7 +60,7 @@ export default function ModelsInCart() {
               </Button>
             </div>
             <Image
-              src={`/images/cart/cartItemsDivider.svg`}
+              src={`/images/bag/cartItemsDivider.svg`}
               alt={"cartItemsDivider"}
               priority
               width={1320}

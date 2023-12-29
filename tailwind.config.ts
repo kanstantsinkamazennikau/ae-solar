@@ -56,6 +56,25 @@ const config: Config = {
         sans: ["var(--font-criteria)"],
         walsheim: ["var(--font-walsheim)"],
       },
+      keyframes: {
+        customPing: {
+          "0%": {
+            transform: "scale(0)",
+            opacity: "0.75",
+          },
+          "80%": {
+            transform: "scale(0.75)",
+            opacity: "0.75",
+          },
+          "100%": {
+            transform: "scale(2)",
+            opacity: "0",
+          },
+        },
+      },
+      animation: {
+        customPing: "customPing 5s cubic-bezier(0, 0, 0.2, 1) infinite",
+      },
     },
   },
   plugins: [

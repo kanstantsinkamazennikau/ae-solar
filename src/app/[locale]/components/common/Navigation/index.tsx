@@ -2,6 +2,7 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
+import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Logo from "@/app/[locale]/components/common/Logo";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
@@ -41,7 +42,7 @@ export default function Navigation() {
               ))}
             </ul>
             <div className="gap-3 md:flex hidden">
-              {/* <ChangeLocale /> */}
+              <ChangeLocale />
               <Cart />
               <Button onClick={() => console.log("contact us")} size="small">
                 {HEADER_CONTACT_US}

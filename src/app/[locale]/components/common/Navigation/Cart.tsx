@@ -25,7 +25,7 @@ export default function Cart() {
             priority
           />
           <div className="absolute flex h-3 w-3 rounded-full items-center justify-center bg-black -bottom-[1px] -right-0.5">
-            <div className="animate-ping absolute h-3 w-3 rounded-full bg-base-red opacity-75"></div>
+            <div className="animate-customPing absolute h-3 w-3 rounded-full bg-base-red opacity-75"></div>
             <div className="relative flex rounded-full h-2 w-2 bg-base-red"></div>
           </div>
         </div>

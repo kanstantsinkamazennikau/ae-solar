@@ -1,10 +1,16 @@
 import { defaultLocale, locales } from "@/app/[locale]/i18n/settings";
 import { NextRequest, NextResponse } from "next/server";
-import { I18nConfig, i18n } from "../i18n-config";
 import Negotiator from "negotiator";
 import { match } from "@formatjs/intl-localematcher";
 
-function getLocale(request: NextRequest, i18nConfig: I18nConfig): string {
+export const config = {
+  // Do not run the middleware on the following paths
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|.*\\.).*)",
+  ],
+};
+
+function getLocale(request: NextRequest): string {
   const negotiatorHeaders: Record<string, string> = {};
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages(
@@ -30,6 +36,7 @@ export default function middleware(request: NextRequest) {
     if (isDefaultLocale) {
       let pathWithoutLocale = pathname.slice(`/${pathLocale}`.length) || "/";
       if (request.nextUrl.search) pathWithoutLocale += request.nextUrl.search;
+      console.log(request.url);
 
       response = NextResponse.redirect(new URL(pathWithoutLocale, request.url));
     }
@@ -38,26 +45,22 @@ export default function middleware(request: NextRequest) {
   } else {
     const isFirstVisit = !request.cookies.has("NEXT_LOCALE");
 
-    const locale = isFirstVisit ? getLocale(request, i18n) : cookieLocale;
+    const locale = isFirstVisit ? getLocale(request) : cookieLocale;
 
     let newPath = `${locale}${pathname}`;
+
     if (request.nextUrl.search) newPath += request.nextUrl.search;
 
     response =
       locale === defaultLocale
-        ? NextResponse.rewrite(new URL(newPath, request.url))
-        : NextResponse.redirect(new URL(newPath, request.url));
+        ? NextResponse.rewrite(new URL(`/${newPath}`, request.url))
+        : NextResponse.redirect(new URL(`/${newPath}`, request.url));
+
     nextLocale = locale;
   }
 
   if (!response) response = NextResponse.next();
 
   if (nextLocale) response.cookies.set("NEXT_LOCALE", nextLocale);
-  response.headers.append("x-url", request.url);
   return response;
 }
-
-export const config = {
-  // Do not run the middleware on the following paths
-  matcher: ["/((?!.*\\.).*)", "/favicon.ico"],
-};
