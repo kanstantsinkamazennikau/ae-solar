@@ -36,8 +36,6 @@ export default function middleware(request: NextRequest) {
     if (isDefaultLocale) {
       let pathWithoutLocale = pathname.slice(`/${pathLocale}`.length) || "/";
       if (request.nextUrl.search) pathWithoutLocale += request.nextUrl.search;
-      console.log(request.url);
-
       response = NextResponse.redirect(new URL(pathWithoutLocale, request.url));
     }
 
