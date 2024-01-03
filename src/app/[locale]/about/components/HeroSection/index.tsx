@@ -36,7 +36,7 @@ export default async function HeroSection() {
         priority
         width={1920}
         height={1080}
-        className="object-fill h-full"
+        className="object-fill h-full w-full"
       />
       <div className="absolute inline-flex flex-col gap-[70px] font-medium max-w-[810px] items-center top-1/4 z-30 mx-5">
         <div

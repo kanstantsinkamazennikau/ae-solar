@@ -14,12 +14,12 @@ export default async function HeroSection() {
       <div className="fade-strip-right" />
 
       <Image
-        src="/images/heroSectionBackground.png"
+        src="/images/heroSectionBackground.svg"
         alt="solar panel"
         priority
         width={1920}
         height={1080}
-        className="object-fill h-full"
+        className="object-fill h-full w-full"
       />
       <div className="absolute inline-flex flex-col gap-[30px] font-medium max-w-[600px] items-center top-1/4">
         <p className="text-[40px] text-center text-base-red -tracking-[1.2px] leading-none">
