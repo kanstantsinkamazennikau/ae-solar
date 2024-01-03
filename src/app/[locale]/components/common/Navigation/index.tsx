@@ -12,12 +12,15 @@ import {
   HEADER_CONTACT_US,
   HEADER_NAV_LINKS_ARRAY,
 } from "@/app/[locale]/utils/constants";
+import { useParams, useRouter } from "next/navigation";
 import { useContext, useState } from "react";
 
 export default function Navigation() {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
   const [subMenuHeading, setSubMenuHeading] = useState("");
   const { sticky } = useContext(StickyNavigationContext);
+  const locale = useParams()?.locale;
+  const router = useRouter();
 
   const onSubMenuHeadingClick = (subMenuHeader: string) => {
     setSubMenuHeading(subMenuHeader);
@@ -25,6 +28,10 @@ export default function Navigation() {
 
   const onLinkClick = () => {
     setIsHamburgerMenuOpen(false);
+  };
+
+  const handleClick = () => {
+    router.push(`/${locale}/consult`);
   };
 
   return (
@@ -44,7 +51,7 @@ export default function Navigation() {
             <div className="gap-3 md:flex hidden">
               {/* <ChangeLocale /> */}
               <Cart />
-              <Button onClick={() => console.log("contact us")} size="small">
+              <Button onClick={handleClick} size="small">
                 {HEADER_CONTACT_US}
               </Button>
             </div>
@@ -81,10 +88,7 @@ export default function Navigation() {
 
                 <div className="gap-8 flex md:hidden">
                   {/* <ChangeLocale /> */}
-                  <Button
-                    onClick={() => console.log("contact us")}
-                    size="small"
-                  >
+                  <Button onClick={handleClick} size="small">
                     {HEADER_CONTACT_US}
                   </Button>
                 </div>

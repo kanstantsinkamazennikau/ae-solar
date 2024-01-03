@@ -1,46 +1,38 @@
 "use client";
 
-import CodesListWithFlags from "@/app/[locale]/components/common/PhoneNumberInput/CodesListWithFlags";
-import SelectedCodeWithFlag from "@/app/[locale]/components/common/PhoneNumberInput/SelectedCodeWithFlag";
-import { PhoneNumberInputProps } from "@/app/[locale]/components/common/PhoneNumberInput/types";
+import Options from "@/app/[locale]/components/common/DropdownInput/Options";
+import SelectedOption from "@/app/[locale]/components/common/DropdownInput/SelectedOption";
+import { DropdownInputProps } from "@/app/[locale]/components/common/DropdownInput/types";
 import { useRef, useState } from "react";
 
-export const COUNTRIES_LIST = [
-  { flagIcon: "germany.png", code: "+49" },
-  { flagIcon: "england.png", code: "+375" },
-  { flagIcon: "germany.png", code: "+491" },
-  { flagIcon: "england.png", code: "+374" },
-  { flagIcon: "germany.png", code: "+492" },
-  { flagIcon: "england.png", code: "+376" },
-];
-
-export default function PhoneNumberInput({
+export default function DropdownInput({
   placeholder,
   register,
   externalStyle,
   error,
   name,
   setValue,
-  ...props
-}: PhoneNumberInputProps) {
-  const [selectedCode, setSelectedCode] = useState("+49");
+  dropDownValues,
+}: DropdownInputProps) {
+  const [selectedOption, setSelectedOption] = useState("");
   const [isSelection, setIsSelection] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const handleSelection = (code: string) => {
-    setSelectedCode(code);
+  const handleSelection = (serviceName: string) => {
     setIsSelection(false);
-    setValue("code", code);
+    setSelectedOption(serviceName);
+    setValue(name, serviceName, { shouldValidate: true });
   };
 
   return (
     <div className={`${externalStyle} flex relative`}>
       <div className="bg-transparent border-b-2 border-solid border-base-red outline-none pr-2 flex">
-        <SelectedCodeWithFlag
-          code={selectedCode}
+        <SelectedOption
+          selectedOption={selectedOption}
           externalStyle={externalStyle}
           setIsSelection={setIsSelection}
           dropdownRef={dropdownRef}
+          placeholder={placeholder}
         />
         {isSelection && (
           <div
@@ -59,17 +51,16 @@ export default function PhoneNumberInput({
               backdrop-blur-[50px]
               translate-y-[52px]
               z-10
+              w-full
+              whitespace-nowrap 
             "
           >
-            <CodesListWithFlags handleSelection={handleSelection} />
+            <Options
+              handleSelection={handleSelection}
+              optionsList={dropDownValues}
+            />
           </div>
         )}
-        <input
-          placeholder={placeholder}
-          {...register}
-          {...props}
-          className="bg-transparent outline-none"
-        />
       </div>
 
       {error && (

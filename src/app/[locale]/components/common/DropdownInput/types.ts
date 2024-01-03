@@ -14,24 +14,27 @@ import {
   UseFormSetValue,
 } from "react-hook-form";
 
-export interface PhoneNumberInputProps
+export interface DropdownInputProps
   extends InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string;
   externalStyle?: string;
   rule?: RegisterOptions;
-  register: UseFormRegisterReturn<string>;
+  register?: UseFormRegisterReturn<string>;
   error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined;
   name: string;
+  dropDownValues: { label: string; value: string }[];
   setValue: UseFormSetValue<FieldValues>;
 }
 
-export interface SelectedCodeWithFlagProps {
-  code: string;
+export interface OptionsProps {
+  handleSelection: (option: string) => void;
+  optionsList: { label: string; value: string }[];
+}
+
+export interface SelectedOptionProps {
+  selectedOption: string;
   setIsSelection: Dispatch<SetStateAction<boolean>>;
   externalStyle?: string;
   dropdownRef: RefObject<HTMLDivElement>;
-}
-
-export interface CodesListWithFlagsProps {
-  handleSelection: (code: string) => void;
+  placeholder?: string;
 }

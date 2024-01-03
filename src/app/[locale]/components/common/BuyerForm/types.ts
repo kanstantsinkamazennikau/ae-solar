@@ -7,6 +7,7 @@ import {
   FieldValues,
   RegisterOptions,
   SubmitHandler,
+  UseFormGetValues,
   UseFormRegister,
   UseFormRegisterReturn,
   UseFormSetValue,
@@ -17,12 +18,22 @@ type FormFieldType = keyof typeof FORM_FIELDS_INPUT_TYPES;
 
 export interface FormFileds {
   formTitle: string;
-  placeholder: string;
+  placeholder?: string;
   name: FormFieldName;
   type: FormFieldType;
 }
 
 export interface BuyerFormProps {
+  formHeader: string;
+  formFields: FormFileds[];
+  defaultValues: {
+    [key: string]: string;
+  };
+  inputsRules: RegisterOptions;
+  isShowCloseIcon?: boolean;
+}
+
+export interface InputsProps {
   formHeader: string;
   formFields: FormFileds[];
   register: UseFormRegister<FieldValues>;
@@ -31,4 +42,6 @@ export interface BuyerFormProps {
   setValue: UseFormSetValue<FieldValues>;
   handleSubmit: () => void;
   onClose: () => void;
+  getValues: UseFormGetValues<FieldValues>;
+  isShowCloseIcon: boolean;
 }

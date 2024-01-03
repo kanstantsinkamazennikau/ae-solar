@@ -7,24 +7,20 @@ import ModelsInCart from "@/app/[locale]/cart/component/ModelsInCart";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Loader from "@/app/[locale]/components/common/Loader";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 export default function Cart() {
   const { isBagLoading, isShowCheckoutForm } = useContext(ConstructorContext);
 
   if (isBagLoading) return <Loader />;
 
-  return (
+  return isShowCheckoutForm ? (
+    <CheckoutForm />
+  ) : (
     <BasicWidthContainer>
-      {isShowCheckoutForm ? (
-        <CheckoutForm />
-      ) : (
-        <>
-          <CheckOut />
-          <ModelsInCart />
-          <AddMorePanels />
-        </>
-      )}
+      <CheckOut />
+      <ModelsInCart />
+      <AddMorePanels />
     </BasicWidthContainer>
   );
 }

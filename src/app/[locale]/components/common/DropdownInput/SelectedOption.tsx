@@ -1,19 +1,17 @@
 "use client";
 
+import { SelectedOptionProps } from "@/app/[locale]/components/common/DropdownInput/types";
 import { COUNTRIES_LIST } from "@/app/[locale]/components/common/PhoneNumberInput";
-import { SelectedCodeWithFlagProps } from "@/app/[locale]/components/common/PhoneNumberInput/types";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { Dispatch, RefObject, SetStateAction, useEffect, useRef } from "react";
 
-export default function SelectedCodeWithFlag({
-  code,
+export default function SelectedOption({
+  selectedOption,
   externalStyle,
   setIsSelection,
   dropdownRef,
-}: SelectedCodeWithFlagProps) {
-  const countryWithCode = COUNTRIES_LIST.find(
-    (country) => country.code === code
-  );
+  placeholder,
+}: SelectedOptionProps) {
   const outsideClickRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,17 +31,13 @@ export default function SelectedCodeWithFlag({
 
   return (
     <div
-      className={`${externalStyle} inline-flex justify-center items-center gap-2 cursor-pointer flex-shrink-0`}
+      className={`${externalStyle} inline-flex justify-center items-center gap-2 cursor-pointer flex-shrink-0 ${
+        selectedOption ? "" : "text-[#9ca3af]"
+      }`}
       onClick={() => setIsSelection((prevState) => !prevState)}
       ref={outsideClickRef}
     >
-      <Image
-        src={`/images/input/${countryWithCode?.flagIcon}`}
-        alt={countryWithCode?.flagIcon || ""}
-        width={24}
-        height={24}
-      />
-      {countryWithCode?.code}
+      {selectedOption || placeholder}
       <Image
         src={`/images/input/triangle.svg`}
         alt="triangle"

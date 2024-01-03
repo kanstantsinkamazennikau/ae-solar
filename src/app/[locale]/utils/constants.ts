@@ -8,6 +8,8 @@ import { FormFileds } from "@/app/[locale]/components/common/BuyerForm/types";
 export const FORM_FIELDS_INPUT_TYPES = {
   input: "input",
   phone: "phone",
+  picker: "picker",
+  dropdown: "dropdown",
 };
 
 export const FORMS_FIELDS = {
@@ -15,6 +17,8 @@ export const FORMS_FIELDS = {
   email: "email",
   phone: "phone",
   code: "code",
+  budget: "budget",
+  service: "service",
 };
 
 // NAVIGATION
@@ -1309,6 +1313,10 @@ export const CART_LOCALSTORAGE = "cart";
 
 export const CHECKOUT_FILL_OUT = `Fill out Your
 Order Information`;
+export const CHECKOUT_THANK_YOU = `Thank You
+We are Contact 
+You Soon`;
+export const CHECKOUT_GO_TO_HOME_PAGE = "Go to Homepage";
 export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
   {
     formTitle: "My name is",
@@ -1330,3 +1338,48 @@ export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
   },
 ];
 export const CHECKOUT_SEND_REQUEST = "Send Request";
+
+export const CONSULT_READY_TO_CONSULT = `Hey! We are Ready
+to Consult You`;
+export const CONSULT_FORM_FIELDS: FormFileds[] = [
+  {
+    formTitle: "My name is",
+    placeholder: "first and last",
+    name: "name",
+    type: "input",
+  },
+  {
+    formTitle: "I’m interested in",
+    placeholder: "services name",
+    name: "service",
+    type: "dropdown",
+  },
+  {
+    formTitle: "My budget",
+    name: "budget",
+    type: "picker",
+  },
+  {
+    formTitle: "Please, contact me at",
+    placeholder: "your e-mail",
+    name: "email",
+    type: "input",
+  },
+  {
+    formTitle: "My phone number",
+    placeholder: "phone number",
+    name: "phone",
+    type: "phone",
+  },
+];
+export const DROPDOWN_INPUT_VALUES = {
+  [FORMS_FIELDS.service]: [
+    { label: "Service A", value: "Service A" },
+    { label: "Service B", value: "Service B" },
+    { label: "Service C", value: "Service C" },
+  ],
+};
+
+export const PICKER_INPUT_VALUES = {
+  [FORMS_FIELDS.budget]: ["$1…5k", "$5…10k", "$10…20k", "$20…50k", "> $50k"],
+};

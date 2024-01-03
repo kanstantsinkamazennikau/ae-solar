@@ -1,13 +1,12 @@
 "use client";
 
 import { COUNTRIES_LIST } from "@/app/[locale]/components/common/PhoneNumberInput";
+import { CodesListWithFlagsProps } from "@/app/[locale]/components/common/PhoneNumberInput/types";
 import Image from "next/image";
 
 export default function CodesListWithFlags({
   handleSelection,
-}: {
-  handleSelection: (code: string) => void;
-}) {
+}: CodesListWithFlagsProps) {
   return (
     <>
       {COUNTRIES_LIST.map(({ flagIcon, code }) => (

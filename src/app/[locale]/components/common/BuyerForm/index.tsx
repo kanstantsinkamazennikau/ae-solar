@@ -1,105 +1,137 @@
 "use client";
 
+import { CheckoutFormFileds } from "@/app/[locale]/cart/component/CheckoutForm/types";
+import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
+import Inputs from "@/app/[locale]/components/common/BuyerForm/Inputs";
 import { BuyerFormProps } from "@/app/[locale]/components/common/BuyerForm/types";
-import Input from "@/app/[locale]/components/common/Input";
-import PhoneNumberInput from "@/app/[locale]/components/common/PhoneNumberInput";
-import { CHECKOUT_SEND_REQUEST } from "@/app/[locale]/utils/constants";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import {
+  CHECKOUT_FILL_OUT,
+  CHECKOUT_FORM_FIELDS,
+  CHECKOUT_GO_TO_HOME_PAGE,
+  CHECKOUT_THANK_YOU,
+  FORMS_FIELDS,
+} from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import { useContext, useState } from "react";
+import {
+  FieldValues,
+  RegisterOptions,
+  SubmitHandler,
+  useForm,
+} from "react-hook-form";
 
 export default function BuyerForm({
-  formHeader,
-  formFields,
-  register,
   inputsRules,
-  errors,
-  setValue,
-  handleSubmit,
-  onClose,
+  defaultValues,
+  formFields,
+  formHeader,
+  isShowCloseIcon = true,
 }: BuyerFormProps) {
+  const locale = useParams()?.locale;
   const router = useRouter();
+  const { setIsShowCheckoutForm } = useContext(ConstructorContext);
+  const [isShowMessageAfterSubmit, setIsShowMessageAfterSubmit] =
+    useState<boolean>(false);
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+    setValue,
+    getValues,
+  } = useForm<FieldValues>({
+    defaultValues,
+  });
+
+  const onClose = () => {
+    setIsShowCheckoutForm(false);
+  };
+
+  const handleClick = () => {
+    router.push(`/${locale}/`);
+  };
+
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    setIsShowMessageAfterSubmit(true);
+    console.log(data);
+  };
+
   return (
-    <form className="p-20 flex flex-col border border-solid border-[#d0d8e91a] rounded-[40px] bg-[#000000b3] backdrop-blur-[50px] relative">
+    <div className="w-full flex justify-center items-center relative md:-top-[131px] min-h-screen md:-mb-[210px] -top-[64px] -mb-[144px]">
       <Image
-        src={`/images/close.svg`}
-        alt="glow"
+        src={`${
+          isShowMessageAfterSubmit
+            ? "/images/cart/submittedFormBack.svg"
+            : "/images/cart/checkout.svg"
+        }`}
+        alt="solar panel"
         priority
-        width={32}
-        height={32}
-        className="absolute top-5 right-5 cursor-pointer"
-        onClick={onClose}
+        width={1920}
+        height={1080}
+        className="object-fill h-full absolute"
       />
-      <div className="[font-size:_clamp(32px,5vw,96px)] font-extrabold leading-[100%] -tracking-[2.88px] text-white mb-5 ">
-        {formHeader.split(/\r?\n|\r|\n/g).map((string, index) => (
-          <div
-            key={string}
-            className={`${index === 0 ? "text-dark-gray-900" : ""}`}
-          >
-            {string}
-          </div>
-        ))}
-      </div>
-      <Image
-        src={`/images/glowFull.png`}
-        alt="glow"
-        priority
-        width={1320}
-        height={60}
-        className="mt-2 mb-8 rotate-180"
-      />
-      <div className="flex flex-col gap-3 mb-10">
-        {formFields.map((inputField) => {
-          if (inputField.type === "input")
-            return (
+      <BasicWidthContainer>
+        <div className="mt-[135px] mb-4">
+          {isShowMessageAfterSubmit ? (
+            <div
+              className="
+              relative
+              flex
+              flex-col
+              justify-center
+              items-center
+              gap-10
+            "
+            >
               <div
-                key={inputField.name}
-                className="flex items-center content-center gap-3 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
+                className="
+                [font-size:_clamp(32px,5vw,96px)]
+                font-extrabold
+                leading-[100%]
+                -tracking-[2.88px]
+              text-white
+                text-center
+              "
               >
-                <span className="font-semibold leading-[120%]">
-                  {inputField.formTitle}
-                </span>
-                <Input
-                  externalStyle="font-light leading-[120%] "
-                  name={inputField.name}
-                  placeholder={inputField.placeholder}
-                  register={register(
-                    inputField.name,
-                    inputsRules[inputField.name as keyof typeof inputsRules]
-                  )}
-                  error={errors?.[inputField.name]}
-                />
+                {CHECKOUT_THANK_YOU.split(/\r?\n|\r|\n/g).map(
+                  (string, index) => (
+                    <div
+                      key={string}
+                      className={`${index === 0 ? "text-dark-gray-900" : ""}`}
+                    >
+                      {string}
+                    </div>
+                  )
+                )}
               </div>
-            );
-          if (inputField.type === "phone")
-            return (
-              <div
-                key={inputField.name}
-                className="flex items-center content-center gap-3 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
+              <Button
+                style="outline"
+                size="thin"
+                showArrow
+                onClick={handleClick}
               >
-                <span className="font-semibold leading-[120%]">
-                  {inputField.formTitle}
-                </span>
-                <PhoneNumberInput
-                  externalStyle="font-light leading-[120%]"
-                  name={inputField.name}
-                  placeholder={inputField.placeholder}
-                  register={register(
-                    inputField.name,
-                    inputsRules[inputField.name as keyof typeof inputsRules]
-                  )}
-                  setValue={setValue}
-                  error={errors?.[inputField.name]}
-                />
-              </div>
-            );
-        })}
-      </div>
-      <div>
-        <Button onClick={handleSubmit} showArrow size="normal">
-          {CHECKOUT_SEND_REQUEST}
-        </Button>
-      </div>
-    </form>
+                {CHECKOUT_GO_TO_HOME_PAGE}
+              </Button>
+            </div>
+          ) : (
+            <Inputs
+              errors={errors}
+              formFields={formFields}
+              formHeader={formHeader}
+              handleSubmit={handleSubmit(onSubmit)}
+              inputsRules={inputsRules as RegisterOptions}
+              register={register}
+              setValue={setValue}
+              onClose={onClose}
+              getValues={getValues}
+              isShowCloseIcon={isShowCloseIcon}
+            />
+          )}
+        </div>
+      </BasicWidthContainer>
+    </div>
   );
 }
