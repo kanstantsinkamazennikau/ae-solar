@@ -36,22 +36,22 @@ export const HEADER_NAV_LINKS_ARRAY = [
     text: "Solutions",
   },
   {
-    url: "/about_us",
+    url: "/about",
     text: "About us",
-    subMenu: [
-      {
-        url: "/solutions4",
-        text: "Solutions4",
-      },
-      {
-        url: "/solutions5",
-        text: "Solutions5",
-      },
-      {
-        url: "/solutions6",
-        text: "Solutions6",
-      },
-    ],
+    // subMenu: [
+    //   {
+    //     url: "/solutions4",
+    //     text: "Solutions4",
+    //   },
+    //   {
+    //     url: "/solutions5",
+    //     text: "Solutions5",
+    //   },
+    //   {
+    //     url: "/solutions6",
+    //     text: "Solutions6",
+    //   },
+    // ],
   },
   {
     url: "/documents",
