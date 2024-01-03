@@ -1,7 +1,7 @@
 "use client";
 
 import { QuotesContext } from "@/app/[locale]/context/quotesContext";
-import { DotProps } from "@/app/[locale]/home/Reviews/types";
+import { DotProps } from "@/app/[locale]/components/Reviews/types";
 import { useContext } from "react";
 
 export default function Dot({ number }: DotProps) {

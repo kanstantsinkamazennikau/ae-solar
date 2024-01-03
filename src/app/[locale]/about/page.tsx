@@ -1,3 +1,9 @@
+import HeroSection from "@/app/[locale]/about/components/HeroSection";
+
 export default function About() {
-  return <div>ABOUT</div>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }

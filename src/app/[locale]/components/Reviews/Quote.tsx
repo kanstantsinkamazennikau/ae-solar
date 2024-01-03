@@ -1,4 +1,4 @@
-import { QuoteProps } from "@/app/[locale]/home/Reviews/types";
+import { QuoteProps } from "@/app/[locale]/components/Reviews/types";
 
 export function Quote({ quote, author, organisation }: QuoteProps) {
   return (

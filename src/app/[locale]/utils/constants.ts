@@ -1383,3 +1383,16 @@ export const DROPDOWN_INPUT_VALUES = {
 export const PICKER_INPUT_VALUES = {
   [FORMS_FIELDS.budget]: ["$1…5k", "$5…10k", "$10…20k", "$20…50k", "> $50k"],
 };
+
+export const ABOUT_SUSTAINABLE = `Sustainable
+Since 2003`;
+export const ABOUT_COMPANY_FOUNDATION =
+  "AE Solar TIER1 Company was founded by Dr. Alexander Maier and his brothers in Königsbrunn, Germany. AE Solar is one of the award-winning leading brands in the renewable energy industry, providing high-quality new renewable energy products and services since 2003.";
+export const ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT = [
+  "was",
+  "AE Solar is one of",
+  "leading brands in the renewable energy industry, providing",
+  "and services since 2003.",
+];
+export const ABOUT_DOWNLOAD_PRESENTATION = "Download AE Solar presentation";
+export const ABOUT_WATCH_VIDEO = "Watch the video of our history";

@@ -1,8 +1,8 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import Bens from "@/app/[locale]/home/TechInfo/Bens";
-import Divider from "@/app/[locale]/home/TechInfo/Divider";
-import FeaturedProducts from "@/app/[locale]/home/TechInfo/FeaturedProducts";
-import Tech from "@/app/[locale]/home/TechInfo/Tech";
+import Bens from "@/app/[locale]/components/TechInfo/Bens";
+import Divider from "@/app/[locale]/components/TechInfo/Divider";
+import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
+import Tech from "@/app/[locale]/components/TechInfo/Tech";
 
 export default function TechDescription() {
   return (

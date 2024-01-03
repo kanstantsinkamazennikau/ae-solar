@@ -1,7 +1,7 @@
 "use client";
 
 import { QuotesContext } from "@/app/[locale]/context/quotesContext";
-import Dot from "@/app/[locale]/home/Reviews/Dot";
+import Dot from "@/app/[locale]/components/Reviews/Dot";
 import Image from "next/image";
 import { useContext } from "react";
 

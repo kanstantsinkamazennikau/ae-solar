@@ -1,5 +1,5 @@
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import Ben from "@/app/[locale]/home/TechInfo/Ben";
+import Ben from "@/app/[locale]/components/TechInfo/Ben";
 import {
   TECH_INFO_BENS,
   TECH_INFO_BEST_AT_THIS,

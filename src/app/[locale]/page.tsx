@@ -1,10 +1,10 @@
-import AwardsAndStats from "@/app/[locale]/home/AwardsAndStats";
-import GetInTouch from "@/app/[locale]/home/GetInTouch";
-import HeroSection from "@/app/[locale]/home/HeroSection";
-import { MainPageFAQ } from "@/app/[locale]/home/MainPageFAQ";
-import ProductIntro from "@/app/[locale]/home/ProductIntro";
-import Reviews from "@/app/[locale]/home/Reviews";
-import TechInfo from "@/app/[locale]/home/TechInfo";
+import AwardsAndStats from "@/app/[locale]/components/AwardsAndStats";
+import GetInTouch from "@/app/[locale]/components/GetInTouch";
+import HeroSection from "@/app/[locale]/components/HeroSection";
+import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
+import ProductIntro from "@/app/[locale]/components/ProductIntro";
+import Reviews from "@/app/[locale]/components/Reviews";
+import TechInfo from "@/app/[locale]/components/TechInfo";
 
 export default function Home() {
   return (

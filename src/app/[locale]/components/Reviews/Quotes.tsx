@@ -1,8 +1,8 @@
 "use client";
 
 import { QuotesContext } from "@/app/[locale]/context/quotesContext";
-import { Quote } from "@/app/[locale]/home/Reviews/Quote";
-import QuotesControl from "@/app/[locale]/home/Reviews/QuotesControl";
+import { Quote } from "@/app/[locale]/components/Reviews/Quote";
+import QuotesControl from "@/app/[locale]/components/Reviews/QuotesControl";
 import { REVIEWS_QUOTES_WITH_AUTHORS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useState } from "react";

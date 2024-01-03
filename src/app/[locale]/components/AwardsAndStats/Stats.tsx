@@ -1,4 +1,4 @@
-import StatWithAnimationCounter from "@/app/[locale]/home/AwardsAndStats/StatWithAnimationCounter";
+import StatWithAnimationCounter from "@/app/[locale]/components/AwardsAndStats/StatWithAnimationCounter";
 import { AWARDS_AND_STATS_STATS_WITH_DETAILS } from "@/app/[locale]/utils/constants";
 
 export default function Stats() {
