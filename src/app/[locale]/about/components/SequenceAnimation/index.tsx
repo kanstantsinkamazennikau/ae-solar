@@ -16,7 +16,7 @@ function getCurrentFrame(index: number) {
 export default function SequenceAnimation({
   scrollHeight = 5000,
   numFrames = 147,
-  width = 600,
+  width = 1000,
   height = 600,
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -71,7 +71,7 @@ export default function SequenceAnimation({
             // start: "top",
             markers: true,
             pin: true,
-            end: "+=200%",
+            end: "+=150%",
             scrub: 0.5,
           },
         })
@@ -118,7 +118,7 @@ export default function SequenceAnimation({
         </button> */}
         <div className="relative top-[130px]" id="canvas">
           <canvas
-            className="object-contain relative top-[130px]"
+            className="object-contain relative top-[130px] w-full h-full"
             ref={canvasRef}
           />
         </div>
