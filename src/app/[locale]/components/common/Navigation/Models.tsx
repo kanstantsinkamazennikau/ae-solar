@@ -62,7 +62,7 @@ export default function Models({ isLink }: ModelsProps) {
         );
       })}
       {isLink && (
-        <Button onClick={handleClick} size="extrasmall" style="secondary">
+        <Button onClick={handleClick} size="extrasmall" style="outline">
           <span className="leading-[10px] font-semibold text-sm">
             {HEADER_CALCULATE}
           </span>

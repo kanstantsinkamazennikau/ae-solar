@@ -1396,3 +1396,38 @@ export const ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT = [
 ];
 export const ABOUT_DOWNLOAD_PRESENTATION = "Download AE Solar presentation";
 export const ABOUT_WATCH_VIDEO = "Watch the video of our history";
+export const ABOUT_MISSION = [
+  {
+    title: "Mission",
+    description:
+      "To Develop solar energy around the world by top expertise in PV.Serving our clients with cost-effective and efficient high-quality European products.Pioneering in innovative solutions for the whole solar industry",
+  },
+  {
+    title: "Vision",
+    description:
+      "A superior eco-friendly, riskless clean approach and safe source of energy across the globe.",
+  },
+];
+export const ABOUT_BUSINESS = "Business";
+export const ABOUT_MAP = "Map";
+export const ABOUT_MAP_DESIGNATIONS = [
+  {
+    icon: "germany.svg",
+    designation: "Headquater",
+    location: "Königsbrunn, Germany",
+  },
+  {
+    icon: "office.svg",
+    designation: "Branch office",
+  },
+  {
+    icon: "base.svg",
+    designation: "Manufacturing base",
+  },
+  {
+    icon: "distributor.svg",
+    designation: "Distributor",
+  },
+];
+export const ABOUT_OUR_HISTORY = "Our History";
+export const ABOUT_IN_NUMBERS = "in Numbers";

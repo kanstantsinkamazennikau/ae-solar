@@ -61,25 +61,18 @@ export default function BuyerForm({
 
   return (
     <div className="w-full flex justify-center items-center relative md:-top-[131px] min-h-screen md:-mb-[210px] -top-[64px] -mb-[144px]">
-      {isShowMessageAfterSubmit ? (
-        <Image
-          src={`${"/images/cart/submittedFormBack.svg"}`}
-          alt="solar panel"
-          priority
-          width={1920}
-          height={1080}
-          className="object-fill h-full absolute"
-        />
-      ) : (
-        <Image
-          src={`${"/images/cart/checkout.svg"}`}
-          alt="solar panel"
-          priority
-          width={1920}
-          height={1080}
-          className="object-fill h-full absolute"
-        />
-      )}
+      <Image
+        src={`${
+          isShowMessageAfterSubmit
+            ? "/images/cart/submittedFormBack.svg"
+            : "/images/cart/checkout.svg"
+        }`}
+        alt="solar panel"
+        priority
+        width={1920}
+        height={1080}
+        className="object-fill h-full absolute"
+      />
       <BasicWidthContainer>
         <div className="mt-[135px] mb-4">
           {isShowMessageAfterSubmit ? (

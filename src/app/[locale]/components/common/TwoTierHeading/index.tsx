@@ -5,18 +5,46 @@ const textAlign = {
   left: "text-left",
 };
 
+const headingStyle = (size: "default" | "small") => {
+  switch (size) {
+    case "default":
+      return "[font-size:_clamp(40px,10vw,128px)] las";
+    case "small":
+      return "[font-size:_clamp(40px,6vw,96px)] [&>*:last-child]:[font-size:_clamp(24px,4vw,64px)] [&>*:last-child]:font-medium";
+    default:
+      return "";
+  }
+};
+
 export default function TwoTierHeading({
   tierOneHeading,
   tierTwoHeading,
   align = "right",
+  size = "default",
+  reverseColor = false,
 }: TwoTierHeadingProps) {
   return (
     <>
       <div
-        className={`font-extrabold text-9xl leading-none w-full mb-20 ${textAlign[align]}`}
+        className={`
+          font-extrabold
+          ${headingStyle(size)}
+          leading-none
+          w-full
+          mb-20
+          ${textAlign[align]}
+        `}
       >
-        <div className="text-dark-gray-900">{tierOneHeading}</div>
-        <div>{tierTwoHeading}</div>
+        <div
+          className={`${reverseColor ? "text-white" : "text-dark-gray-900"}`}
+        >
+          {tierOneHeading}
+        </div>
+        <div
+          className={`${reverseColor ? "text-dark-gray-900" : "text-white"}`}
+        >
+          {tierTwoHeading}
+        </div>
       </div>
     </>
   );

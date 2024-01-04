@@ -15,7 +15,7 @@ export default async function HeroSection() {
     return text.split(matchRegex).map((nonBoldText, index) => (
       <span
         key={nonBoldText}
-        className="font-walsheim leading-[170%] font-semibold text-2xl"
+        className="font-walsheim leading-[170%] font-semibold [font-size:_clamp(16px,2vw,24px)]"
       >
         {nonBoldText}
         {<span className="text-dark-gray-900">{matches[index]}</span>}
@@ -41,7 +41,7 @@ export default async function HeroSection() {
       <div className="absolute inline-flex flex-col gap-[70px] font-medium max-w-[810px] items-center top-1/4 z-30 mx-5">
         <div
           className="
-                [font-size:_clamp(60px,6vw,128px)]
+                [font-size:_clamp(50px,6vw,128px)]
                 font-extrabold
                 leading-[100%]
                 -tracking-[3.84px]
