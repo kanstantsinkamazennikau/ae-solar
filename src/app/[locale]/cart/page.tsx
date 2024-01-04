@@ -17,10 +17,12 @@ export default function Cart() {
   return isShowCheckoutForm ? (
     <CheckoutForm />
   ) : (
-    <BasicWidthContainer>
-      <CheckOut />
-      <ModelsInCart />
-      <AddMorePanels />
-    </BasicWidthContainer>
+    <div className="flex flex-col justify-center items-center">
+      <BasicWidthContainer>
+        <CheckOut />
+        <ModelsInCart />
+        <AddMorePanels />
+      </BasicWidthContainer>
+    </div>
   );
 }

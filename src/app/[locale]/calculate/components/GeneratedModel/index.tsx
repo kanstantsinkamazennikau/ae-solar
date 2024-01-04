@@ -112,14 +112,6 @@ export default function GeneratedModel() {
           className="mt-8 mb-20"
         />
         <ModelSpecs />
-        <Image
-          src={`/images/glowFull.png`}
-          alt="glow"
-          priority
-          width={1320}
-          height={60}
-          className="mt-8 mb-20"
-        />
       </div>
     )
   );
