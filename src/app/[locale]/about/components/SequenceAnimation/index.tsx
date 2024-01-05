@@ -177,7 +177,7 @@ export default function SequenceAnimation({
                           cursor-pointer
                         `}
                         onClick={() => {
-                          // setActiveStepIndex(index);
+                          setActiveStepIndex(index);
                           const { start, end } = timeline!.scrollTrigger;
                           const timelineDistance = end - start;
                           const oneSectorScrollDistance = Math.floor(
