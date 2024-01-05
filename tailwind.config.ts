@@ -86,6 +86,12 @@ const config: Config = {
           backgroundPosition: "center center",
           backgroundSize: "cover",
         },
+        ".sequenceAnimationDivider": {
+          backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="2" height="546" viewBox="0 0 2 546" fill="none"><path d="M1.00006 545.5L1.00006 0.499976" stroke="url(%23paint0_linear_3251_930)"/><defs><linearGradient id="paint0_linear_3251_930" x1="1.00006" y1="545.5" x2="1.00006" y2="0.5" gradientUnits="userSpaceOnUse"><stop stop-color="%23FF0000" stop-opacity="0"/><stop offset="0.5" stop-color="%23FF0000"/><stop offset="1" stop-color="%23FF0000" stop-opacity="0"/></linearGradient></defs></svg>')`,
+          backgroundRepeat: "no-repeat no-repeat",
+          backgroundPosition: "center center",
+          backgroundSize: "cover",
+        },
       });
     }),
   ],
