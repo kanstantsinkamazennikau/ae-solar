@@ -821,6 +821,43 @@ export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
     clarification: "Agri-VoltaicsAgri-VoltaicsAgri-Voltaics",
   },
 ];
+export const SEQUENCE_ANIMATION_TEXT = [
+  {
+    title: "Front cover",
+    description:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+  },
+  {
+    title: "Front encapsulation",
+    description:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+  },
+  {
+    title: "Solar cells",
+    description:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+  },
+  {
+    title: "Rear encapsulation",
+    description:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+  },
+  {
+    title: "Back cover",
+    description:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+  },
+  {
+    title: "Frame",
+    description:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+  },
+  {
+    title: "Connector",
+    description:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+  },
+];
 
 export const CONSTRUCTOR_MODEL = "Model.";
 export const CONSTRUCTOR_WHICH_IS_BEST = "Which is best for you?";

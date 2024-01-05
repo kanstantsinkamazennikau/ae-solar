@@ -1,13 +1,17 @@
-//@ts-nocheck
-
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
-
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SEQUENCE_ANIMATION_TEXT } from "@/app/[locale]/utils/constants";
 
 function getCurrentFrame(index: number) {
   return `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index
@@ -15,62 +19,31 @@ function getCurrentFrame(index: number) {
     .padStart(4, "0")}.jpg`;
 }
 
-const SEQUENCE_ANIMATION_TEXT = [
-  {
-    title: "Front cover",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
-  {
-    title: "Front encapsulation",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
-  {
-    title: "Solar cells",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
-  {
-    title: "Rear encapsulation",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
-  {
-    title: "Back cover",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
-  {
-    title: "Frame",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
-  {
-    title: "Connector",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
-];
+const frameIndex = { frame: 0 };
+const numFrames = 147;
 
-export default function SequenceAnimation({
-  numFrames = 147,
-  width = 1158,
-  height = 770,
-}) {
+export default function SequenceAnimation({ width = 1158, height = 770 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [images, setImages] = useState([]);
-  const [frameIndex] = useState({ frame: 0 });
-  const [timeline, setTimeline] = useState(null);
+  const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [activeStepIndex, setActiveStepIndex] = useState(0);
+  const [scrollFrame, setScrollFrame] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState(1);
+  const framesPerSection = Math.ceil(
+    numFrames / SEQUENCE_ANIMATION_TEXT.length
+  );
+
+  const renderImage = useCallback(() => {
+    const ctx = canvasRef.current!.getContext("2d");
+    setScrollFrame(frameIndex.frame);
+    ctx!.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
+    ctx!.drawImage(images[frameIndex.frame], 0, 0);
+  }, [images]);
 
   function preloadImages() {
     for (let i = 1; i <= numFrames; i++) {
-      //@ts-ignore
       const img = new Image();
       const imgSrc = getCurrentFrame(i);
       img.src = imgSrc;
-      //@ts-ignore
       setImages((prevImages) => [...prevImages, img]);
     }
   }
@@ -81,35 +54,28 @@ export default function SequenceAnimation({
     canvas!.height = height;
   }, [height, width]);
 
-  const renderImage = useCallback(() => {
-    const ctx = canvasRef.current!.getContext("2d");
-    // console.log(frameIndex.frame);
-
-    ctx!.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
-    ctx!.drawImage(images[frameIndex.frame], 0, 0);
-  }, [frameIndex.frame, images]);
-
   useEffect(() => {
-    preloadImages();
     renderCanvas();
+    preloadImages();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!canvasRef.current || images.length === 0) return;
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
     const ctx = gsap.context(() => {
-      const tl = gsap
+      gsap
         .timeline({
           onUpdate: renderImage,
           scrollTrigger: {
+            onUpdate: (self) => {
+              setScrollDirection(self.direction);
+            },
             trigger: "#canvas",
             start: "top-=140px",
-            markers: true,
             pin: true,
-            end: "+=150%",
-            scrub: 0.5,
+            end: "+=600%",
+            scrub: 1,
           },
         })
         .to(
@@ -122,17 +88,29 @@ export default function SequenceAnimation({
           },
           0
         );
-      //@ts-ignore
-      setTimeline(tl);
     });
-    return () => ctx.kill();
-  }, [frameIndex, images.length, numFrames, renderImage]);
+    return () => ctx.revert();
+  }, [images.length, renderImage]);
 
   useEffect(() => {
     if (!canvasRef.current || images.length === 0) return;
-    //@ts-ignore
-    images[0].onload = renderImage();
+    renderImage();
   }, [images, renderImage]);
+
+  useEffect(() => {
+    if (scrollDirection === 1) {
+      if (scrollFrame > framesPerSection + framesPerSection * activeStepIndex) {
+        setActiveStepIndex(activeStepIndex + 1);
+      }
+    } else {
+      if (
+        scrollFrame < framesPerSection + framesPerSection * activeStepIndex &&
+        activeStepIndex !== 0
+      ) {
+        setActiveStepIndex(activeStepIndex - 1);
+      }
+    }
+  }, [activeStepIndex, framesPerSection, scrollDirection, scrollFrame]);
 
   return (
     <div className="flex flex-col justify-center items-center">
@@ -143,6 +121,7 @@ export default function SequenceAnimation({
             <div className="py-20">
               {SEQUENCE_ANIMATION_TEXT.map(({ title, description }, index) => {
                 const isActive = activeStepIndex === index;
+                const opacityValue = Math.abs(activeStepIndex - index) || 1;
                 return (
                   <div
                     key={title}
@@ -150,6 +129,8 @@ export default function SequenceAnimation({
                       ${isActive ? "py-10" : ""}
                       first:pt-0
                       last:pb-0
+                      transition-all
+                      duration-500
                     `}
                   >
                     <div className="flex items-center">
@@ -168,39 +149,37 @@ export default function SequenceAnimation({
                         `}
                       />
                       <div
+                        style={{ opacity: 1 / opacityValue }}
                         className={`
                           ${isActive ? "text-white" : "text-dark-gray-900"}
                           font-walsheim
                           text-[32px]
                           leading-[120%]
                           font-medium
-                          cursor-pointer
                         `}
-                        onClick={() => {
-                          setActiveStepIndex(index);
-                          const { start, end } = timeline!.scrollTrigger;
-                          const timelineDistance = end - start;
-                          const oneSectorScrollDistance = Math.floor(
-                            timelineDistance /
-                              (SEQUENCE_ANIMATION_TEXT.length - 1)
-                          );
+                        // onClick={() => {
+                        //   setActiveStepIndex(index);
+                        //   const { start, end } = timeline!.scrollTrigger;
+                        //   const timelineDistance = end - start;
+                        //   const oneSectorScrollDistance = Math.floor(
+                        //     timelineDistance / SEQUENCE_ANIMATION_TEXT.length
+                        //   );
 
-                          gsap.to(window, {
-                            scrollTo: {
-                              y: (
-                                start +
-                                oneSectorScrollDistance * index
-                              ).toFixed(),
-                              autoKill: false,
-                            },
-                            duration: 0.5,
-                          });
-                        }}
+                        //   gsap.to(window, {
+                        //     scrollTo: {
+                        //       y: (
+                        //         start +
+                        //         oneSectorScrollDistance * index
+                        //       ).toFixed(),
+                        //       autoKill: false,
+                        //     },
+                        //     duration: 0.5,
+                        //   });
+                        // }}
                       >
                         {title}
                       </div>
                     </div>
-
                     <div
                       className={`
                         ${isActive ? "block" : "hidden"}
