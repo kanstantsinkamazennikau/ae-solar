@@ -23,7 +23,7 @@ const buttonSize = (size: string) => {
     case "regular":
       return "px-8 py-6 text-lg";
     case "small":
-      return "px-6 py-3";
+      return "xl:px-6 xl:py-3 lg:px-4 lg:py-3 px-2 py-3";
     case "extrasmall":
       return "py-3 px-4";
     case "normal":

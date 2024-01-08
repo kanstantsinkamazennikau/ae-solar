@@ -26,7 +26,7 @@ export default function NavLink({
       {!subMenu && (
         <Link
           href={`/${locale}${url}`}
-          className={`flex py-2 md:items-center text-base justify-between ${
+          className={`flex py-2 md:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between whitespace-nowrap ${
             highlightNavigationLink(locale, url, path) &&
             "md:border-base-red md:border-b-2 md:border-solid"
           }}`}
@@ -38,7 +38,7 @@ export default function NavLink({
       {subMenu && (
         <>
           <div
-            className="flex py-2 md:items-center text-base justify-between cursor-pointer"
+            className="flex py-2 md:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer "
             onClick={() => onSubMenuHeadingClick && onSubMenuHeadingClick(text)}
           >
             {t(text)}

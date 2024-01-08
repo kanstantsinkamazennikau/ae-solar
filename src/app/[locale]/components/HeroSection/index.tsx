@@ -7,11 +7,11 @@ export default async function HeroSection() {
   const { t } = await useServerTranslation(locale, "home");
 
   return (
-    <div className="w-full flex justify-center items-center relative -top-[146px] h-screen">
-      <div className="!-top-[120px] fade-strip-top " />
+    <div className="w-full flex justify-center items-center relative min-[920px]:-top-[146px] -top-[64px] h-screen">
+      <div className="fade-strip-top" />
       <div className="fade-strip-bottom" />
-      <div className="fade-strip-left" />
-      <div className="fade-strip-right" />
+      <div className="fade-strip-left md:block hidden" />
+      <div className="fade-strip-right md:block hidden" />
 
       <Image
         src="/images/heroSectionBackground.svg"
@@ -19,18 +19,18 @@ export default async function HeroSection() {
         priority
         width={1920}
         height={1080}
-        className="object-fill h-full w-full"
+        className="object-cover h-full w-full"
       />
-      <div className="absolute inline-flex flex-col gap-[30px] font-medium max-w-[600px] items-center top-1/4">
-        <p className="text-[40px] text-center text-base-red -tracking-[1.2px] leading-none">
+      <div className="absolute inline-flex flex-col md:gap-[30px] gap-4 font-medium max-w-[640px] px-5 items-center top-1/4">
+        <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,4vw,40px)]">
           {t("heroSectionWeAre")}
         </p>
-        <p className="text-8xl text-center -tracking-[2.88px] leading-none">
+        <p className="text-8xl text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,102px)]">
           {t("heroSectionHighQualitySP")}
         </p>
       </div>
 
-      <div className="flex items-center flex-col gap-4 absolute bottom-[10%] left-2/4 -translate-x-2/4 text-center z-30 font-semibold text-xl">
+      <div className="flex items-center flex-col gap-4 absolute bottom-[60px] left-2/4 -translate-x-2/4 text-center z-30 font-semibold text-xl">
         <span>{t("heroSectionScroll")}</span>
         <Image
           src="/images/arrowFuture.svg"

@@ -19,8 +19,10 @@ export interface SubMenuItemsProps {
 
 export interface SubNavigationProps {
   isLink?: boolean;
+  isProductionIntroBlock?: boolean;
 }
 
 export interface ModelsProps {
   isLink?: boolean;
+  isProductionIntroBlock?: boolean;
 }

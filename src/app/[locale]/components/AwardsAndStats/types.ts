@@ -3,4 +3,5 @@ interface StatWithAnimationCounterProps {
   details: string;
   initialValue?: string;
   sign?: string;
+  index: number;
 }

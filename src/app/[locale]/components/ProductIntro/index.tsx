@@ -42,63 +42,105 @@ export default function ProductIntro() {
 
   return (
     <div className="flex flex-col items-center mb-[280px] w-full">
-      <div className="w-full h-[980px] bg-[url('/images/productIntro/back.svg')] bg-center bg-cover flex mb-11 flex-col justify-between relative">
-        <div className="font-bold leading-[1.2] text-[64px] text-center">
+      <div className="w-full h-auto bg-[url('/images/productIntro/back.svg')] bg-bottom bg-contain  bg-no-repeat flex md:mb-11 mb-0 flex-col relative">
+        <div className="font-bold leading-[1.2] [font-size:_clamp(36px,4vw,64px)] text-center px-5">
           <div>{PRODUCT_INTRO_THE_NEXT_LEVEL_OF}</div>
-          <div className="text-base-red">{PRODUCT_INTRO_HIGH_QUALITY_SP}</div>
+          <div className="text-base-red mb-6">
+            {PRODUCT_INTRO_HIGH_QUALITY_SP}
+          </div>
+          <Image
+            src={`/images/glowFull.png`}
+            alt="glow"
+            priority
+            width={1320}
+            height={60}
+            className="rotate-180 mx-auto"
+          />
         </div>
-        <BasicWidthContainer styles="flex gap-11 self-center">
+        <BasicWidthContainer styles="flex lg:gap-11 gap-6 justify-center md:flex-row flex-col relative self-center">
           {/* INFO */}
-          <div className="flex-1 flex flex-col gap-8 items-start justify-center">
-            <div className="flex gap-3">
+          <div className="md:absolute md:left-0 md:top-1/2 flex-1 md:-translate-y-1/2 flex flex-col gap-3 md:gap-4 xl:gap-8 md:items-start md:justify-center items-center pl-5">
+            <div className="flex gap-3 items-center">
               <Image
                 alt={model}
                 src={`/images/models/${model}.svg`}
                 width={48}
                 height={48}
-                className=""
+                className="lg:w-[48px] lg:h-[48px] md:w-[36px] md:h-[36px] w-[24px] h-[24px] object-fill"
               />
-              <span className="font-bold leading-[1.5] text-[64px] -tracking-[0.64]">
+              <span className="font-bold leading-none [font-size:_clamp(24px,4vw,64px)] -tracking-[0.64]">
                 {model}
               </span>
             </div>
-            <div className="font-walsheim text-lg leading-[1.5] font-medium">
+            <div className="font-walsheim text-lg leading-[1.5] font-medium [font-size:_clamp(16px,2vw,18px)] max-w-[328px] md:text-left text-center">
               {modelInfo.text}
             </div>
             <LinkWithArrow label={PRODUCT_INTRO_LEARN_MORE} href="" />
           </div>
           {/* IMG */}
-          <div className="flex-grow-2 flex-shrink-1 h-[730px] flex">
+          <div className="md:h-[400px] lg:h-[520px] xl:h-[600px] 2xl:h-[730px] h-auto w-auto flex justify-center flex-1">
             <Image
               alt={model}
               src={`/images/productIntro/${model}.png`}
               width={563}
               height={730}
               quality={100}
-              className="object-cover object-bottom h-full"
+              className="2xl:object-cover object-contain object-bottom md:h-full h-[350px]"
             />
           </div>
           {/* STATS */}
-          <div className="flex-1 gap-11 flex-col flex justify-center">
+          <div
+            className="
+            flex-1
+            gap-3
+            md:gap-4
+            xl:gap-11
+            flex-col
+            flex
+            justify-center
+            absolute
+            md:px-0
+            md:py-0
+            px-5
+            py-6
+            bottom-0
+            left-0
+            md:right-0 md:left-auto md:top-1/2 md:-translate-y-1/2 md:pr-5
+            [&>*:last-child>div:last-child]:hidden
+          "
+          >
             {modelStatsKeys.map((key) => (
               <div key={key}>
-                <div className="text-5xl leading-[1.3] font-semibold">
+                <div className="leading-[1.3] font-semibold [font-size:_clamp(24px,3vw,48px)]">
                   {modelStats[key as keyof typeof modelStats]}
                 </div>
-                <div className="text-lg leading-[1.7] font-bold font-walsheim text-dark-gray-900">
+                <div className="text-lg leading-[1.7] font-bold font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,18px)]">
                   {PRODUCT_INTRO_PANELS_MAPPING[key as keyof typeof modelStats]}
                 </div>
+                <div className="bg-white opacity-20 h-0.5 mt-3 md:hidden block" />
               </div>
             ))}
           </div>
-
-          {!sticky && (
-            <div className="absolute w-full z-30 bottom-0 left-0">
-              <SubNavigation />
-            </div>
-          )}
         </BasicWidthContainer>
+        {!sticky && (
+          <div className="absolute w-full z-30 bottom-0 left-0 md:block">
+            <SubNavigation />
+          </div>
+        )}
       </div>
+      <Image
+        src={`/images/glowFull.png`}
+        alt="glow"
+        priority
+        width={1320}
+        height={60}
+        className="md:hidden rotate-180"
+      />
+      {!sticky && (
+        <div className="w-full z-30 bottom-0 left-0 md:hidden">
+          <SubNavigation isProductionIntroBlock />
+        </div>
+      )}
       <div ref={ref}></div>
       <Button onClick={() => console.log("")}>
         {PRODUCT_INTRO_CALCULATE_YOUR_MODEL}

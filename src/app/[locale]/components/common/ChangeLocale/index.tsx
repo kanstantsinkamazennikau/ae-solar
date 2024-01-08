@@ -21,7 +21,7 @@ export default function ChangeLocale() {
     <select
       onChange={handleLocaleChange}
       value={params.locale}
-      className="bg-base-red"
+      className="bg-base-red w-[72px]"
     >
       <option value="en">English</option>
       <option value="de">German</option>

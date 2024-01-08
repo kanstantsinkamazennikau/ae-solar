@@ -9,8 +9,10 @@ export default function StatWithAnimationCounter({
   details,
   initialValue = "0",
   sign,
+  index,
 }: StatWithAnimationCounterProps) {
   const [count, setCount] = useState(initialValue);
+  const isChangeLayoutStructure = index === 2;
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -37,14 +39,24 @@ export default function StatWithAnimationCounter({
   }, [initialValue, sign, stat]);
 
   return (
-    <div className="flex flex-row items-center bg-black text-center">
-      <div className="min-w-[290px]">
-        <p className="font-semibold leading-none xl:text-[104px] text-5xl test ">
-          {count}
-        </p>
-        <p className="text-[32px] text-dark-gray-800">{details}</p>
+    <>
+      <div
+        className={`flex flex-row items-center justify-center bg-black text-center ${
+          isChangeLayoutStructure
+            ? "flex-grow flex-shrink basis-full md:basis-[20%] md:border-none border-y-[2px] border-[#ffffff33] py-6 mt-6 -mb-4"
+            : "flex-grow flex-shrink basis-1/3 md:basis-[20%]"
+        }`}
+      >
+        <div>
+          <p className="font-semibold leading-none [font-size:_clamp(36px,5vw,104px)] test ">
+            {count}
+          </p>
+          <p className="[font-size:_clamp(14px,2vw,32px)] text-dark-gray-800">
+            {details}
+          </p>
+        </div>
       </div>
-      <div className="w-1 bg-white opacity-20 h-full mx-20" />
-    </div>
+      <div className="w-0.5 bg-white opacity-20 lg:mx-14 xl:mx-20 mx-8" />
+    </>
   );
 }

@@ -35,42 +35,48 @@ export default function Navigation() {
   };
 
   return (
-    <div className="w-full sticky top-0 z-40 h-[64px] md:h-[130px]">
+    <div className="w-full sticky top-0 z-40 h-[64px] min-[920px]:h-[130px]">
       {/* MAIN NAVIGATION */}
       <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-5 md:py-4">
         <BasicWidthContainer>
-          <nav className="flex items-center justify-between relative font-normal w-full">
+          <nav className="flex items-center justify-between relative font-normal w-full gap-2">
             <Logo />
 
             {/* DESKTOP NAV */}
-            <ul className="gap-8 md:flex hidden">
+            <ul className="md:gap-2 lg:gap-5 xl:gap-8 min-[920px]:flex hidden">
               {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
                 <NavLink key={navLink.url} {...navLink} />
               ))}
             </ul>
-            <div className="gap-3 md:flex hidden">
+            <div className="gap-3 min-[920px]:flex hidden">
               {/* <ChangeLocale /> */}
               <Cart />
               <Button onClick={handleClick} size="small">
-                {HEADER_CONTACT_US}
+                <span className="[font-size:_clamp(14px,1.5vw,16px)] whitespace-nowrap">
+                  {HEADER_CONTACT_US}
+                </span>
               </Button>
             </div>
 
             {/* MOBILE NAV */}
             <>
-              <div
-                className="text-3xl md:hidden block cursor-pointer z-50 relative"
-                onClick={() => setIsHamburgerMenuOpen(!isHamburgerMenuOpen)}
-              >
-                <div className="space-y-2">
-                  <div className="w-8 h-0.5 bg-yellow-600"></div>
-                  <div className="w-8 h-0.5 bg-yellow-600"></div>
-                  <div className="w-8 h-0.5 bg-yellow-600"></div>
+              <div className="min-[920px]:hidden flex items-center gap-5">
+                <Cart />
+                <div
+                  className="text-3xl cursor-pointer z-50 relative"
+                  onClick={() => setIsHamburgerMenuOpen(!isHamburgerMenuOpen)}
+                >
+                  <div className="space-y-[5px]">
+                    <div className="w-5 h-0.5 bg-white rounded"></div>
+                    <div className="w-5 h-0.5 bg-white rounded"></div>
+                    <div className="w-5 h-0.5 bg-white rounded"></div>
+                  </div>
                 </div>
               </div>
+
               <div
                 className={`
-                md:hidden h-screen bg-red-700 fixed w-full top-0 overflow-y-auto bottom-0 py-24 px-4
+                min-[920px]:hidden h-screen bg-red-700 fixed w-full top-0 overflow-y-auto bottom-0 py-24 px-4
                 duration-500 ${isHamburgerMenuOpen ? "left-0" : "left-[-100%]"}
                 `}
               >
@@ -86,7 +92,7 @@ export default function Navigation() {
                   ))}
                 </ul>
 
-                <div className="gap-8 flex md:hidden">
+                <div className="gap-8 flex min-[920px]:hidden">
                   {/* <ChangeLocale /> */}
                   <Button onClick={handleClick} size="small">
                     {HEADER_CONTACT_US}

@@ -133,7 +133,7 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Comet.svg",
-      text: "Experience minimum power loss and shine brightly even in low light conditions",
+      text: "Propel into the future of solar energy with our Comet HJT. Superior performance under all conditions.",
     },
   },
   Aurora: {
@@ -171,7 +171,7 @@ export const PRODUCT_INTRO_PANELS = {
   },
   Neptune: {
     stats: {
-      power: "Neptune",
+      power: "1000W",
       efficiency: "22.57%",
       voltage: "1000",
     },
