@@ -55,14 +55,8 @@ export interface ColorProps {
 }
 
 export interface CalculateError {
-  power: {
-    from?: string;
-    to?: string;
-  };
-  dimension: {
-    width?: string;
-    length?: string;
-  };
+  power: string;
+  dimension: string;
 }
 
 export interface RangeProps {

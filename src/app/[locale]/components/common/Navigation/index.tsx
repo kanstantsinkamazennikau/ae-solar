@@ -12,15 +12,20 @@ import {
   HEADER_CONTACT_US,
   HEADER_NAV_LINKS_ARRAY,
 } from "@/app/[locale]/utils/constants";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext, useState } from "react";
 
 export default function Navigation() {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
   const [subMenuHeading, setSubMenuHeading] = useState("");
   const { sticky } = useContext(StickyNavigationContext);
-  const locale = useParams()?.locale;
+  const params = useParams();
   const router = useRouter();
+  const pathname = usePathname();
+
+  const hideSubnavigation = () => {
+    return ["calculate", "consult"].some((path) => pathname.includes(path));
+  };
 
   const onSubMenuHeadingClick = (subMenuHeader: string) => {
     setSubMenuHeading(subMenuHeader);
@@ -31,11 +36,15 @@ export default function Navigation() {
   };
 
   const handleClick = () => {
-    router.push(`/${locale}/consult`);
+    router.push(`/${params?.locale}/consult`);
   };
 
   return (
-    <div className="w-full sticky top-0 z-40 h-[64px] min-[920px]:h-[130px]">
+    <div
+      className={`w-full sticky top-0 z-40 h-[64px] min-[920px]:${
+        !hideSubnavigation() ? "h-[130px]" : "h-[80px]"
+      }`}
+    >
       {/* MAIN NAVIGATION */}
       <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-5 md:py-4">
         <BasicWidthContainer>
@@ -105,7 +114,7 @@ export default function Navigation() {
       </div>
 
       {/* SUBNAVIGATION */}
-      {sticky ? <SubNavigation isLink /> : null}
+      {sticky && !hideSubnavigation() && <SubNavigation isLink />}
     </div>
   );
 }

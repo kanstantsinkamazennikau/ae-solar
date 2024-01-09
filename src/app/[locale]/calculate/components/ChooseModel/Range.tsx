@@ -25,6 +25,7 @@ export default function Range({
     paramsKey: ObjectKeys<ConstructorModel>
   ) => {
     const { value, name } = e.target;
+
     const re = /^[0-9\b]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
       setConstructorModel((prevState: ConstructorModel) => ({
@@ -48,11 +49,7 @@ export default function Range({
     if (+value < +lowerLimit) {
       setError((prevState) => ({
         ...prevState,
-        [rangeSubCategory]: {
-          ...prevState[rangeSubCategory],
-
-          [name]: `Minimum permissible value is ${lowerLimit}`,
-        },
+        [rangeSubCategory]: `Minimum permissible value is ${lowerLimit}`,
       }));
       return;
     }
@@ -60,11 +57,7 @@ export default function Range({
     if (upperLimit && +value > +upperLimit) {
       setError((prevState) => ({
         ...prevState,
-        [rangeSubCategory]: {
-          ...prevState[rangeSubCategory],
-
-          [name]: `Maximum permissible value is ${upperLimit}`,
-        },
+        [rangeSubCategory]: `Maximum permissible value is ${upperLimit}`,
       }));
       return;
     }
@@ -75,24 +68,15 @@ export default function Range({
     ) {
       setError((prevState) => ({
         ...prevState,
-        [rangeSubCategory]: {
-          ...prevState[rangeSubCategory],
-
-          [name]: `Values should be different`,
-        },
+        [rangeSubCategory]: `Values should be different`,
       }));
       return;
     }
 
     setError((prevState) => {
-      const test = Object.fromEntries(
-        Object.entries(prevState[rangeSubCategory]).filter(
-          ([key]) => key !== name
-        )
-      );
       return {
         ...prevState,
-        [rangeSubCategory]: test,
+        [rangeSubCategory]: "",
       };
     });
   };
@@ -101,7 +85,7 @@ export default function Range({
     <div>
       <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px]">
         {text}
-      </span>{" "}
+      </span>
       <span className="font-walsheim text-dark-gray-650 text-base -tracking-[0.32px]">
         {clarification}
       </span>

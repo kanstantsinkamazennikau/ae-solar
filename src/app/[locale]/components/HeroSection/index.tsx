@@ -21,7 +21,7 @@ export default async function HeroSection() {
         height={1080}
         className="object-cover h-full w-full"
       />
-      <div className="absolute inline-flex flex-col md:gap-[30px] gap-4 font-medium max-w-[640px] px-5 items-center top-1/4">
+      <div className="absolute inline-flex flex-col md:gap-[30px] gap-4 font-medium max-w-[670px] px-5 items-center top-1/4">
         <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,4vw,40px)]">
           {t("heroSectionWeAre")}
         </p>

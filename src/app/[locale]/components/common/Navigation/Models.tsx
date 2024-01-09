@@ -51,7 +51,7 @@ export default function Models({
                 }
                 ${
                   isProductionIntroBlock
-                    ? `flex-col border-none [font-size:_clamp(10px,2vw,20px)] px-0 py-0`
+                    ? `flex-col border-none [font-size:_clamp(10px,2vw,20px)] !px-0 !py-0`
                     : "flex-row [font-size:_clamp(14px,1vw,16px)] "
                 }
               `}

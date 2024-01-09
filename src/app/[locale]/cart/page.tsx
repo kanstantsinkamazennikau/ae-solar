@@ -12,6 +12,7 @@ import { useContext, useEffect } from "react";
 export default function Cart() {
   const { isBagLoading, isShowCheckoutForm, setIsShowCheckoutForm } =
     useContext(ConstructorContext);
+
   useEffect(() => {
     return () => setIsShowCheckoutForm(false);
   }, [setIsShowCheckoutForm]);

@@ -48,7 +48,7 @@ export default function ProductIntro() {
   }, [handleScroll]);
 
   return (
-    <div className="flex flex-col items-center mb-[280px] w-full">
+    <div className="flex flex-col items-center xl:mb-[280px] lg:mb-[180px] md:mb-[100px] mb-[80px] w-full">
       <div className="w-full h-auto bg-[url('/images/productIntro/back.svg')] bg-bottom bg-contain  bg-no-repeat flex md:mb-11 mb-0 flex-col relative">
         <div className="font-bold leading-[1.2] [font-size:_clamp(36px,4vw,64px)] text-center px-5">
           <div>{PRODUCT_INTRO_THE_NEXT_LEVEL_OF}</div>
@@ -98,23 +98,23 @@ export default function ProductIntro() {
           {/* STATS */}
           <div
             className="
-            flex-1
-            gap-3
-            md:gap-4
-            xl:gap-11
-            flex-col
-            flex
-            justify-center
-            absolute
-            md:px-0
-            md:py-0
-            px-5
-            py-6
-            bottom-0
-            left-0
-            md:right-0 md:left-auto md:top-1/2 md:-translate-y-1/2 md:pr-5
-            [&>*:last-child>div:last-child]:hidden
-          "
+              flex-1
+              gap-3
+              md:gap-4
+              xl:gap-11
+              flex-col
+              flex
+              justify-center
+              absolute
+              md:px-0
+              md:py-0
+              px-5
+              py-6
+              bottom-0
+              left-0
+              md:right-0 md:left-auto md:top-1/2 md:-translate-y-1/2 md:pr-5
+              [&>*:last-child>div:last-child]:hidden
+            "
           >
             {modelStatsKeys.map((key) => (
               <div key={key}>

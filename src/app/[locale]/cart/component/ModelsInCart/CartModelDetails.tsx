@@ -9,6 +9,7 @@ export default function CartModelDetails({ model }: DetailsProps) {
   const modelDetailsKeys = Object.keys(
     CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING
   ) as Array<keyof Details>;
+
   return (
     <div className="p-5 flex flex-col">
       {modelDetailsKeys.map((modelKey) => {

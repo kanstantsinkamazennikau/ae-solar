@@ -4,7 +4,7 @@ import { AWARDS_AND_STATS_STATS_WITH_DETAILS } from "@/app/[locale]/utils/consta
 export default function Stats() {
   return (
     <div
-      className="flex justify-center [&>*:last-child]:hidden px-5 flex-wrap [&>*:nth-child(4)]:hidden md:[&>*:nth-child(4)]:block"
+      className="flex justify-center [&>*:last-child]:hidden px-5 flex-wrap md:flex-nowrap [&>*:nth-child(4)]:hidden md:[&>*:nth-child(4)]:block w-full"
       id="statAnimationTrigger"
     >
       {AWARDS_AND_STATS_STATS_WITH_DETAILS.map(

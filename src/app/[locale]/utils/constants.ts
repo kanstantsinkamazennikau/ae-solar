@@ -367,32 +367,32 @@ export const POLICY_LINKS = ["Privacy Policy", "Terms of Use", "Legal"];
 export const CONSTRUCTOR_OPTION_LINES = [
   {
     panelName: "Aurora",
-    lineHeight: 69,
+    lineHeight: 200,
     position: "11%",
   },
   {
     panelName: "Comet",
-    lineHeight: 69,
+    lineHeight: 200,
     position: "23%",
   },
   {
     panelName: "Terra",
-    lineHeight: 131,
+    lineHeight: 250,
     position: "38%",
   },
   {
     panelName: "Eclipse",
-    lineHeight: 131,
+    lineHeight: 250,
     position: "49.5%",
   },
   {
     panelName: "Meteor",
-    lineHeight: 207,
+    lineHeight: 300,
     position: "62.5%",
   },
   {
     panelName: "HSF",
-    lineHeight: 207,
+    lineHeight: 300,
     position: "74%",
   },
 ];

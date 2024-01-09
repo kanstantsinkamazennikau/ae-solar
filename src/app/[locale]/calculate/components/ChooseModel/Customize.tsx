@@ -25,8 +25,8 @@ import { useContext, useEffect, useState } from "react";
 
 export default function Customize() {
   const [error, setError] = useState<CalculateError>({
-    power: {},
-    dimension: {},
+    power: "",
+    dimension: "",
   });
 
   const { constructorModel, setIsGenerateModel } =
@@ -34,8 +34,8 @@ export default function Customize() {
 
   useEffect(() => {
     setError({
-      power: {},
-      dimension: {},
+      power: "",
+      dimension: "",
     });
   }, [constructorModel.model]);
 
@@ -85,10 +85,7 @@ export default function Customize() {
               "/"
             )[1] as ConstructorSubCategory;
 
-            const errorText = Object.values(
-              error[rangeSubCategory]
-            )[0] as string;
-
+            const errorText = error[rangeSubCategory];
             return (
               <div key={param.text}>
                 <Range
@@ -122,11 +119,7 @@ export default function Customize() {
           if (!constructorModel.powerRange.to) {
             setError((prevState) => ({
               ...prevState,
-              power: {
-                ...prevState.power,
-
-                to: `"to" value is required`,
-              },
+              power: `"to" value is required`,
             }));
             return;
           }
@@ -139,7 +132,6 @@ export default function Customize() {
         <span className="text-sm leading-none">
           {CONSTRUCTOR_GENERATE_YOUR_MODEL}
         </span>
-        {}
       </Button>
     </div>
   );
