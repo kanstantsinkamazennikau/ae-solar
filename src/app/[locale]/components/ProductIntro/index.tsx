@@ -15,17 +15,11 @@ import {
   PRODUCT_INTRO_PANELS_MAPPING,
   PRODUCT_INTRO_THE_NEXT_LEVEL_OF,
 } from "@/app/[locale]/utils/constants";
+//@ts-ignore
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import {
-  LegacyRef,
-  RefObject,
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-} from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { useCallback, useContext, useEffect, useRef } from "react";
 
 export default function ProductIntro() {
   const { model } = useContext(ModelContext);
