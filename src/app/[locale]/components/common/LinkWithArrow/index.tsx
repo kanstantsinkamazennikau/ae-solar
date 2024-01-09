@@ -10,7 +10,10 @@ export default function LinkWithArrow({ label, href }: ButtonWithArrowProps) {
 
   return (
     <div className="flex justify-center items-center gap-2">
-      <Link className="text-base-red" href={`/${locale}/${href}`}>
+      <Link
+        className="text-base-red [font-size:_clamp(14px,1vw,16px)]"
+        href={`/${locale}/${href}`}
+      >
         {label}
       </Link>
       <Image

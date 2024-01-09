@@ -16,16 +16,22 @@ export default function GetInTouch() {
   return (
     <div
       className="
-      flex
-      justify-center
-      items-center
-      bg-gradient-297
-      bg-[#111]
-      w-full
-      h-screen
-      relative
-      px-5
-      mb-[280px]
+        flex
+        justify-center
+        items-center
+        bg-gradient-297
+        bg-[#111]
+        w-full
+        xl:h-screen
+        lg:h-[600px]
+        md:h-[500px]
+        h-[400px]
+        relative
+        px-5
+        xl:mb-[280px]
+        lg:mb-[180px]
+        md:mb-[100px]
+        mb-[80px]
       "
     >
       <Image
@@ -36,20 +42,25 @@ export default function GetInTouch() {
         height={1080}
         className="h-full w-full mix-blend-color-dodge absolute"
       />
-      <div className="flex flex-col justify-center items-center gap-[100px] max-w-[1320px] w-full">
+      <div className="flex flex-col justify-center items-center xl:gap-[100px] lg:gap-[80px] md:gap-[60px] gap-10 max-w-[1320px] w-full">
         {/* CLIENT TYPE */}
-        <div className="flex p-1 justify-center items-center gap-5 get-in-touch-border [&>*:last-child>div:last-child]:hidden">
+        <div className="flex p-1 justify-center items-center md:gap-5 gap-1 get-in-touch-border [&>*:last-child>div:last-child]:hidden">
           {GET_IN_TOUCH_CLIENT_TYPE.map((type) => (
-            <div key={type} className="flex justify-center items-center gap-5">
+            <div
+              key={type}
+              className="flex justify-center items-center md:gap-5 gap-1"
+            >
               <button
-                className={`flex py-5 px-7 ${
+                className={`flex md:py-5 md:px-7 p-4 ${
                   clientType === type
                     ? "get-in-touch-client-border"
                     : "border-1 border border-transparent"
                 }`}
                 onClick={() => setClientType(type)}
               >
-                <span className="text-2xl leading-[0.9]">{type}</span>
+                <span className="[font-size:_clamp(12px,2vw,24px)] leading-[0.9]">
+                  {type}
+                </span>
               </button>
               <div className="w-1 h-5 bg-base-red"></div>
             </div>
@@ -58,18 +69,20 @@ export default function GetInTouch() {
 
         {/* TITLE */}
 
-        <div className="flex flex-col gap-[60px] items-center text-center self-stretch">
-          <div className="text-[64px] leading-none text-base-red -tracking-[1.92px] font-medium">
+        <div className="flex flex-col xl:gap-[60px] lg:gap-[60px] md:gap-[40px] gap-[20px] items-center text-center self-stretch">
+          <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
             {GET_IN_TOUCH_ELEVATE_GROWTH}
           </div>
-          <div className="text-8xl leading-none -tracking-[-2.88px] font-extrabold max-w-[900px]">
+          <div className="[font-size:_clamp(26px,4vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[900px] leading-[120%]">
             {GET_IN_TOUCH_JOIN_US(clientType)}
           </div>
         </div>
 
         {/* BUTTON */}
         <Button onClick={() => console.log("contact us")} showArrow>
-          {GET_IN_TOUCH_BECOME_A + clientType.toLowerCase()}
+          <span className="[font-size:_clamp(12px,1.5vw,16px)]">
+            {GET_IN_TOUCH_BECOME_A + clientType.toLowerCase()}
+          </span>
         </Button>
       </div>
     </div>

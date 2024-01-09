@@ -8,7 +8,11 @@ export default function Divider() {
       priority
       width={1320}
       height={1}
-      className="mb-[200px]"
+      className="
+        lg:mb-[200px]
+        md:mb-[120px]
+        mb-[80px]
+      "
     />
   );
 }

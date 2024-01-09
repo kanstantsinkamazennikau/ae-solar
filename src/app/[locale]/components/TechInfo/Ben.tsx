@@ -22,7 +22,10 @@ export default function Ben({
       key={title}
       className={`
       flex
-      p-8
+      min-[500px]:px-8
+      min-[500px]:py-8
+      py-6
+      px-6
       items-start
       self-stretch
       relative
@@ -38,7 +41,7 @@ export default function Ben({
       duration-200
       ${
         isFullHeightRow
-          ? "row-start-1 row-end-3 col-start-2 col-end-3"
+          ? "md:row-start-1 md:row-end-3 md:col-start-2 md:col-end-3 md:max-w-full md:max-h-full min-[500px]:min-h-[270px] min-h-[328px]"
           : "lg:h-[340px] md:h-[300px]"
       }`}
       onMouseLeave={onMouseAction}
@@ -57,27 +60,73 @@ export default function Ben({
             : "-top-[50px] -right-[60px] stroke-white stroke-[4px] object-none"
         }`}
       />
+      {isFullHeightRow && (
+        <Image
+          src={`/images/techInfo/manufacturerSmall.png`}
+          alt={image}
+          width={328}
+          height={300}
+          priority
+          className={`absolute top-0 right-0 w-full h-full md:hidden`}
+        />
+      )}
       <div
         className={`
           flex
           lg:gap-6
           gap-3
-          flex-col
+          min-[500px]:flex-col
+          flex-row
+          justify-center
           self-end
           z-10
           relative
           transition-all
           duration-500
-          items-start
-          ${isReadMoreVisible ? "top-0" : "top-[60px]"}`}
+          ${
+            isFullHeightRow
+              ? `items-start flex-col ${
+                  isReadMoreVisible ? "top-0" : "top-[51px]"
+                }`
+              : `min-[500px]:items-start items-center ${
+                  isReadMoreVisible
+                    ? "min-[500px]:top-0"
+                    : "min-[500px]:top-[51px]"
+                }`
+          }
+          `}
       >
-        <div className="leading-[120%] font-medium [font-size:_clamp(14px,2.5vw,32px)]">
+        <div
+          className={`leading-[120%] font-medium [font-size:_clamp(14px,2.5vw,32px)] ${
+            isFullHeightRow
+              ? "[word-spacing:normal]"
+              : "min-[500px]:[word-spacing:normal] [word-spacing:100vh]"
+          }`}
+        >
           {title}
         </div>
-        <div className="text-base leading-[150%] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,16px)]">
+        <div
+          className={`
+            text-base
+            leading-[150%]
+            font-medium
+            font-walsheim
+            text-dark-gray-900
+            [font-size:_clamp(12px,1.5vw,16px)]
+            ${isFullHeightRow ? "block" : "min-[500px]:block hidden"}
+
+          `}
+        >
           {description}
         </div>
-        <div>
+        <div
+          className={`whitespace-nowrap transition-all
+          duration-500 ${
+            isReadMoreVisible
+              ? "translate-x-0"
+              : "translate-x-full -mr-10 min-[500px]:translate-x-0 min-[500px]:-mr-0"
+          }`}
+        >
           <LinkWithArrow label={TECH_INFO_READ_MORE} href="" />
         </div>
       </div>
