@@ -10,7 +10,7 @@ import "@splidejs/react-splide/css";
 export default function Awards() {
   const options = {
     type: "loop",
-    drag: "free",
+    drag: true,
     gap: "10px",
     arrows: false,
     pagination: false,
@@ -28,7 +28,7 @@ export default function Awards() {
     <div className="flex gap-2.5 flex-col self-stretch items-center">
       <div className="flex md:gap-5 relative gap-4">
         <Splide
-          aria-label="My Favorite Images"
+          aria-label="awards"
           options={options}
           extensions={{ AutoScroll }}
         >

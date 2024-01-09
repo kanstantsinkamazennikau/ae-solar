@@ -11,12 +11,21 @@ import {
   PRODUCT_INTRO_HIGH_QUALITY_SP,
   PRODUCT_INTRO_LEARN_MORE,
   PRODUCT_INTRO_PANELS,
+  PRODUCT_INTRO_PANELS_IMAGES,
   PRODUCT_INTRO_PANELS_MAPPING,
   PRODUCT_INTRO_THE_NEXT_LEVEL_OF,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useCallback, useContext, useEffect, useRef } from "react";
+import {
+  LegacyRef,
+  RefObject,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+} from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 export default function ProductIntro() {
   const { model } = useContext(ModelContext);
@@ -27,6 +36,18 @@ export default function ProductIntro() {
   const ref = useRef<HTMLDivElement | null>(null);
   const locale = useParams()?.locale;
   const router = useRouter();
+  const sliderRef = useRef<Splide>(null);
+  const sliderId = PRODUCT_INTRO_PANELS_IMAGES.indexOf(model);
+
+  const options = {
+    type: "loop",
+    perPage: 1,
+    perMove: 1,
+    pagination: false,
+    arrows: false,
+    drag: false,
+    dragAngleThreshold: 0,
+  };
 
   const handleClick = () => {
     router.push(`/${locale}/calculate`);
@@ -46,6 +67,12 @@ export default function ProductIntro() {
   useEffect(() => {
     handleScroll();
   }, [handleScroll]);
+
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.go(sliderId);
+    }
+  }, [sliderId]);
 
   return (
     <div className="flex flex-col items-center xl:mb-[280px] lg:mb-[180px] md:mb-[100px] mb-[80px] w-full">
@@ -85,17 +112,25 @@ export default function ProductIntro() {
             <LinkWithArrow label={PRODUCT_INTRO_LEARN_MORE} href="" />
           </div>
           {/* IMG */}
-          <div className="md:h-[400px] lg:h-[520px] xl:h-[600px] 2xl:h-[730px] h-auto w-auto flex justify-center flex-1">
-            <Image
-              alt={model}
-              src={`/images/productIntro/${model}.png`}
-              width={563}
-              height={730}
-              quality={100}
-              className="2xl:object-cover object-contain object-bottom md:h-full h-[350px]"
-            />
-          </div>
-          {/* STATS */}
+          <Splide
+            aria-label="solar panels"
+            options={options}
+            className="md:h-[400px] lg:h-[520px] xl:h-[600px] 2xl:h-[730px] h-auto w-full flex justify-center flex-1"
+            ref={sliderRef}
+          >
+            {PRODUCT_INTRO_PANELS_IMAGES.map((image) => (
+              <SplideSlide key={image} className="flex justify-center">
+                <Image
+                  alt={model}
+                  src={`/images/productIntro/${image}.png`}
+                  width={563}
+                  height={730}
+                  quality={100}
+                  className="2xl:object-cover object-contain object-bottom md:h-full h-[350px]"
+                />
+              </SplideSlide>
+            ))}
+          </Splide>
           <div
             className="
               flex-1
@@ -129,6 +164,7 @@ export default function ProductIntro() {
             ))}
           </div>
         </BasicWidthContainer>
+
         {!sticky && (
           <div className="absolute w-full z-30 bottom-0 left-0 md:block">
             <SubNavigation />

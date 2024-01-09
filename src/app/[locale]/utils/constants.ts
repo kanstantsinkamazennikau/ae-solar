@@ -124,6 +124,14 @@ export const PRODUCT_INTRO_PANELS_MAPPING = {
   efficiency: "Max. Effienciency (up to)",
   voltage: "Max. System Voltage",
 };
+export const PRODUCT_INTRO_PANELS_IMAGES = [
+  "Aurora",
+  "Comet",
+  "Meteor",
+  "Terra",
+  "Neptune",
+  "HSF",
+];
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
     stats: {

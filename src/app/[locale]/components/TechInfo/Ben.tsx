@@ -39,7 +39,7 @@ export default function Ben({
       ${
         isFullHeightRow
           ? "row-start-1 row-end-3 col-start-2 col-end-3"
-          : "h-[340px]"
+          : "lg:h-[340px] md:h-[300px]"
       }`}
       onMouseLeave={onMouseAction}
       onMouseEnter={onMouseAction}
@@ -60,7 +60,8 @@ export default function Ben({
       <div
         className={`
           flex
-          gap-6
+          lg:gap-6
+          gap-3
           flex-col
           self-end
           z-10
@@ -70,17 +71,10 @@ export default function Ben({
           items-start
           ${isReadMoreVisible ? "top-0" : "top-[60px]"}`}
       >
-        {isFullHeightRow && (
-          <Image
-            src="/images/german.svg"
-            alt="german"
-            width={76}
-            height={76}
-            priority
-          />
-        )}
-        <div className="text-[32px] leading-[120%] font-medium">{title}</div>
-        <div className="text-base leading-[150%] font-medium font-walsheim text-dark-gray-900">
+        <div className="leading-[120%] font-medium [font-size:_clamp(14px,2.5vw,32px)]">
+          {title}
+        </div>
+        <div className="text-base leading-[150%] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,16px)]">
           {description}
         </div>
         <div>
