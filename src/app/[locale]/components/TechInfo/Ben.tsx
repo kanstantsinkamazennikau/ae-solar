@@ -13,10 +13,6 @@ export default function Ben({
 }: BenProps) {
   const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
 
-  const onMouseAction = () => {
-    setIsReadMoreVisible(!isReadMoreVisible);
-  };
-
   return (
     <div
       key={title}
@@ -44,8 +40,8 @@ export default function Ben({
           ? "md:row-start-1 md:row-end-3 md:col-start-2 md:col-end-3 md:max-w-full md:max-h-full min-[500px]:min-h-[270px] min-h-[328px]"
           : "lg:h-[340px] md:h-[300px]"
       }`}
-      onMouseLeave={onMouseAction}
-      onMouseEnter={onMouseAction}
+      onMouseLeave={() => setIsReadMoreVisible(false)}
+      onMouseEnter={() => setIsReadMoreVisible(true)}
     >
       <Image
         src={`/images/techInfo/${image}`}
