@@ -15,6 +15,7 @@ import {
   PRODUCT_INTRO_THE_NEXT_LEVEL_OF,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useParams, useRouter } from "next/navigation";
 import { useCallback, useContext, useEffect, useRef } from "react";
 
 export default function ProductIntro() {
@@ -24,6 +25,12 @@ export default function ProductIntro() {
   const modelStatsKeys = Object.keys(modelStats);
   const modelInfo = PRODUCT_INTRO_PANELS[model].info;
   const ref = useRef<HTMLDivElement | null>(null);
+  const locale = useParams()?.locale;
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/${locale}/calculate`);
+  };
 
   const handleScroll = useCallback(() => {
     const { scrollTop } = document.documentElement;
@@ -142,7 +149,7 @@ export default function ProductIntro() {
         </div>
       )}
       <div ref={ref}></div>
-      <Button onClick={() => console.log("")}>
+      <Button onClick={handleClick}>
         {PRODUCT_INTRO_CALCULATE_YOUR_MODEL}
       </Button>
     </div>
