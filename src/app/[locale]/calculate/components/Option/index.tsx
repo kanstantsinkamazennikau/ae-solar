@@ -36,49 +36,41 @@ export default function Option() {
           >
             <div
               className="
-              h-full
               relative
               flex
               justify-center
               items-center
-              
             "
             >
               <Image
-                src={`/images/featuredProducts.png`}
+                src={`/images/featuredProducts1.png`}
                 alt={"featuredProducts"}
                 priority
                 width={1920}
                 height={1080}
                 className="
-                md:max-w-full
-                max-h-full
-              "
+                  md:max-w-full
+                  max-h-full
+                  md:h-full
+                  h-[calc(40vh-130px)]
+                "
               />
-              <div className="md:pt-28 xl:pt-20 absolute w-full top-0 md:block hidden">
-                {CONSTRUCTOR_OPTION_LINES.map(
-                  ({ panelName, lineHeight, position }) => (
-                    <div
-                      className={`inline-flex flex-col items-start gap-2 shrink-0 absolute`}
-                      style={{ left: position }}
-                      key={panelName}
+              <div className="absolute w-full top-0">
+                {CONSTRUCTOR_OPTION_LINES.map(({ panelName, position }) => (
+                  <div
+                    className={`inline-flex flex-col items-start gap-2 shrink-0 absolute -top-3`}
+                    style={{ left: position }}
+                    key={panelName}
+                  >
+                    <span
+                      className={`font-normal text-option-text [font-size:_clamp(9px,1.5vw,16px)]`}
                     >
-                      <span
-                        className={`font-normal text-option-text [font-size:_clamp(9px,1.5vw,16px)]`}
-                      >
-                        {panelName}
-                      </span>
-                      <div
-                        className={`optionLine w-[1px]`}
-                        style={{
-                          height: `${lineHeight}px`,
-                        }}
-                      ></div>
-                    </div>
-                  )
-                )}
+                      {panelName}
+                    </span>
+                  </div>
+                ))}
               </div>
-              <div className="md:hidden pt-6 absolute w-full top-0 block">
+              {/* <div className="md:hidden pt-6 absolute w-full top-0 block">
                 {CONSTRUCTOR_OPTION_LINES.map(
                   ({ panelName, smallScreenLineHeight, position }) => (
                     <div
@@ -100,7 +92,7 @@ export default function Option() {
                     </div>
                   )
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
