@@ -31,7 +31,10 @@ export default function TwoTierHeading({
           ${headingStyle(size)}
           leading-none
           w-full
-          mb-20
+          xl:mb-20
+          lg:mb-16
+          md:mb-12
+          mb-10
           ${textAlign[align]}
         `}
       >

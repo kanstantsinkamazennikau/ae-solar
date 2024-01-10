@@ -10,7 +10,7 @@ export default function Input({
   return (
     <div className="relative">
       <input
-        className={`bg-transparent border-b-2 border-solid border-base-red outline-none ${externalStyle}`}
+        className={`bg-transparent border-b-2 border-solid border-base-red outline-none ${externalStyle} w-full`}
         placeholder={placeholder}
         {...register}
         {...props}

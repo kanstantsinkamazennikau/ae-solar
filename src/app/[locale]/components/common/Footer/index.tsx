@@ -26,15 +26,18 @@ export default function Footer() {
             height={60}
             className="rotate-180"
           />
-          <nav className="flex justify-between items-start">
-            <div className="flex gap-8 flex-col max-w-[203px]">
+          <nav
+            className="grid min-[650px]:grid-cols-[auto_auto_auto] min-[500px]:grid-cols-[auto_auto] min-[500px]:items-start gap-2 grid-cols-[auto]"
+            // className="flex justify-between items-start gap-2"
+          >
+            <div className="flex gap-8 flex-col max-w-[203px] max-[500px]:max-w-full pb-3">
               <Logo />
               <p className="text-sm font-normal leading-[130%] font-walsheim text-[#747474]">
                 {FOOTER_GERMAN_BRAND}
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center">
+            <div className="flex min-[500px]:justify-center justify-start flex-wrap">
               {FOOTER_LINKS_ARRAY.map(({ category, links }) => (
                 <FooterCategory
                   key={category}
@@ -46,9 +49,9 @@ export default function Footer() {
             <ContactInfo />
           </nav>
           <hr className="bg-dark-gray-800 h-[1px] border-none mt-10 mb-3" />
-          <div className="flex justify-between text-dark-gray-800 mb-5">
-            {FOOTER_COPYRIGHT}
-            <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden">
+          <div className="flex justify-between text-dark-gray-800 mb-5 text-[10px] min-[550px]:flex-row flex-col">
+            <div>{FOOTER_COPYRIGHT}</div>
+            <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row flex-col">
               {POLICY_LINKS.map((link) => (
                 <PolicyLink key={link} link={link} />
               ))}

@@ -4,7 +4,7 @@ import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
   CART_BAG_IS_EMPTY,
-  CART_CHECK_OUT,
+  CART_GET_A_QUOTE,
   CART_MODELS_ARE_READY,
   CART_PLEASE_CHECKOUT,
 } from "@/app/[locale]/utils/constants";
@@ -20,7 +20,7 @@ export default function CheckOut() {
   }, [setIsGenerateModel]);
 
   return (
-    <div className="mt-[60px] text-center flex flex-col items-center">
+    <div className="mt-[100px] text-center flex flex-col items-center">
       {!!modelsInBag.length ? (
         <>
           <div className="[font-size:_clamp(24px,5vw,40px)] font-bold leading-[120%] -tracking-[0.4px] mb-3 max-w-[474px]">
@@ -30,7 +30,7 @@ export default function CheckOut() {
             {CART_PLEASE_CHECKOUT}
           </div>
           <Button onClick={() => setIsShowCheckoutForm(true)} size="small">
-            {CART_CHECK_OUT}
+            {CART_GET_A_QUOTE}
           </Button>
         </>
       ) : (

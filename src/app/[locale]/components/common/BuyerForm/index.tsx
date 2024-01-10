@@ -60,7 +60,7 @@ export default function BuyerForm({
   };
 
   return (
-    <div className="w-full flex justify-center items-center relative md:-top-[131px] min-h-screen md:-mb-[210px] -top-[64px] -mb-[144px]">
+    <div className="w-full flex justify-center items-center relative min-h-screen -top-[64px] -mb-[144px]">
       <Image
         src={`${
           isShowMessageAfterSubmit

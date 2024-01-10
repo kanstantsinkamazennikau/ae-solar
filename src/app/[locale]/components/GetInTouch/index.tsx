@@ -6,12 +6,20 @@ import {
   GET_IN_TOUCH_CLIENT_TYPE,
   GET_IN_TOUCH_ELEVATE_GROWTH,
   GET_IN_TOUCH_JOIN_US,
+  GET_IN_TOUCH_OUR_VISION,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useState } from "react";
 
 export default function GetInTouch() {
-  const [clientType, setClientType] = useState("Investor");
+  const [clientType, setClientType] =
+    useState<keyof typeof matchPartnerTypeWithArticle>("partner");
+
+  const matchPartnerTypeWithArticle = {
+    partner: "a partner",
+    investor: "an investor",
+    installer: "an installer",
+  };
 
   return (
     <div
@@ -56,9 +64,13 @@ export default function GetInTouch() {
                     ? "get-in-touch-client-border"
                     : "border-1 border border-transparent"
                 }`}
-                onClick={() => setClientType(type)}
+                onClick={() =>
+                  setClientType(
+                    type as keyof typeof matchPartnerTypeWithArticle
+                  )
+                }
               >
-                <span className="[font-size:_clamp(12px,2vw,24px)] leading-[0.9]">
+                <span className="[font-size:_clamp(12px,2vw,24px)] leading-[0.9] capitalize">
                   {type}
                 </span>
               </button>
@@ -73,15 +85,27 @@ export default function GetInTouch() {
           <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
             {GET_IN_TOUCH_ELEVATE_GROWTH}
           </div>
-          <div className="[font-size:_clamp(26px,4vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[900px] leading-[120%]">
-            {GET_IN_TOUCH_JOIN_US(clientType)}
+          <div className="[font-size:_clamp(26px,4vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[900px] leading-[120%] overflow-hidden">
+            <span>{GET_IN_TOUCH_JOIN_US}</span>
+            <span
+              className="relative animate-partnerTransition"
+              key={clientType}
+            >
+              {matchPartnerTypeWithArticle[clientType]}
+            </span>
+            <span>{GET_IN_TOUCH_OUR_VISION}</span>
           </div>
         </div>
 
         {/* BUTTON */}
         <Button onClick={() => console.log("contact us")} showArrow>
-          <span className="[font-size:_clamp(12px,1.5vw,16px)]">
-            {GET_IN_TOUCH_BECOME_A + clientType.toLowerCase()}
+          <span className="overflow-hidden">
+            <span className="[font-size:_clamp(12px,1.5vw,16px)]">
+              {GET_IN_TOUCH_BECOME_A}
+            </span>
+            <span className="[font-size:_clamp(12px,1.5vw,16px)]">
+              {matchPartnerTypeWithArticle[clientType]}
+            </span>
           </span>
         </Button>
       </div>

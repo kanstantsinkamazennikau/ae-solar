@@ -26,12 +26,13 @@ export default function AccordionItem({
   return (
     <div className="border-b border-solid border-[#242424] overflow-hidden last:border-none">
       <button
-        className="w-full text-left py-6 flex items-center justify-between text-[40px] leading-[48px]"
+        className="w-full text-left lg:py-6 md:py-4 py-3 flex items-center justify-between [font-size:_clamp(16px,2.5vw,40px)] leading-[120%]"
         onClick={multiple ? onItemWithMultipleFlagClick : onClick}
       >
         <p
           className={`${
-            style === "small" && "text-xl leading-[120%] font-semibold"
+            style === "small" &&
+            "[font-size:_clamp(12px,1.5vw,20px)] leading-[120%] font-semibold"
           }`}
         >
           {title}

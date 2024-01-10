@@ -7,7 +7,7 @@ export default async function HeroSection() {
   const { t } = await useServerTranslation(locale, "home");
 
   return (
-    <div className="w-full flex justify-center items-center relative min-[920px]:-top-[146px] -top-[64px] h-screen">
+    <div className="w-full flex justify-center items-center relative -top-[64px] h-screen">
       <div className="fade-strip-top" />
       <div className="fade-strip-bottom" />
       <div className="fade-strip-left md:block hidden" />

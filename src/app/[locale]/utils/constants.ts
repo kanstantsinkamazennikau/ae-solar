@@ -83,7 +83,7 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Meteor.svg",
   "Terra.svg",
   "Neptune.svg",
-  "HSF.svg",
+  "ShadeStar.svg",
 ];
 export const HEADER_CHOOSE_YOUR_MODEL = "Choose your model";
 export const HEADER_CALCULATE = "Calculate";
@@ -118,6 +118,7 @@ export const AWARDS_AND_STATS_AWARDS_IMAGES = [
 export const AWARDS_AND_STATS_SEE_ALL_AWARDS = "See all awards";
 
 export const PRODUCT_INTRO_THE_NEXT_LEVEL_OF = "The Next Level of";
+export const PRODUCT_INTRO_MODULES = "Modules";
 export const PRODUCT_INTRO_HIGH_QUALITY_SP = "High-Quality Solar Panels";
 export const PRODUCT_INTRO_PANELS_MAPPING = {
   power: "Max. Power (up to)",
@@ -130,7 +131,7 @@ export const PRODUCT_INTRO_PANELS_IMAGES = [
   "Meteor",
   "Terra",
   "Neptune",
-  "HSF",
+  "ShadeStar",
 ];
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
@@ -188,14 +189,14 @@ export const PRODUCT_INTRO_PANELS = {
       text: "Experience minimum power loss and shine brightly even in low light conditions",
     },
   },
-  HSF: {
+  ShadeStar: {
     stats: {
-      power: "HSF",
+      power: "ShadeStar",
       efficiency: "22.57%",
       voltage: "1000",
     },
     info: {
-      icon: "HSF.svg",
+      icon: "ShadeStar.svg",
       text: "Experience minimum power loss and shine brightly even in low light Smart",
     },
   },
@@ -286,11 +287,11 @@ export const REVIEWS_QUOTES_WITH_AUTHORS = [
   },
 ];
 
-export const GET_IN_TOUCH_CLIENT_TYPE = ["Investor", "Partner", "Installer"];
+export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installer"];
 export const GET_IN_TOUCH_ELEVATE_GROWTH = "Elevate growth together";
-export const GET_IN_TOUCH_JOIN_US = (clientType: string) =>
-  `Join as a ${clientType.toLowerCase()} in our solar vision`;
-export const GET_IN_TOUCH_BECOME_A = "Become a ";
+export const GET_IN_TOUCH_JOIN_US = "Join as ";
+export const GET_IN_TOUCH_OUR_VISION = " in our solar vision";
+export const GET_IN_TOUCH_BECOME_A = "Become ";
 
 export const FAQ_ACCORDION_DATA = [
   {
@@ -315,7 +316,7 @@ export const FAQ_ACCORDION_DATA = [
 ];
 export const FAQ_QUESTION = "Have a Question?";
 export const FAQ_SOLUTIONS = "We have solutions";
-export const FAQ_MORE_QUESTIONS = "More questions";
+export const FAQ_MORE_SOLUTIONS = "More solutions";
 
 //FOOTER
 export const FOOTER_LINKS_ARRAY = [
@@ -377,31 +378,37 @@ export const CONSTRUCTOR_OPTION_LINES = [
     panelName: "Aurora",
     lineHeight: 200,
     position: "11%",
+    smallScreenLineHeight: 50,
   },
   {
     panelName: "Comet",
     lineHeight: 200,
     position: "23%",
+    smallScreenLineHeight: 50,
   },
   {
     panelName: "Terra",
     lineHeight: 250,
     position: "38%",
+    smallScreenLineHeight: 80,
   },
   {
     panelName: "Eclipse",
     lineHeight: 250,
     position: "49.5%",
+    smallScreenLineHeight: 80,
   },
   {
     panelName: "Meteor",
     lineHeight: 300,
     position: "62.5%",
+    smallScreenLineHeight: 100,
   },
   {
-    panelName: "HSF",
+    panelName: "ShadeStar",
     lineHeight: 300,
     position: "74%",
+    smallScreenLineHeight: 100,
   },
 ];
 
@@ -741,7 +748,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
     },
   },
-  HSF: {
+  ShadeStar: {
     panelTechnology: "Shede Resident Technology",
     params: {
       solarCellTechnology: {
@@ -986,7 +993,7 @@ export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
       value: "132 years",
     },
   },
-  HSF: {
+  ShadeStar: {
     powerRange: {
       parameter: "Power range",
       value: "350W—370W",
@@ -1285,7 +1292,7 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     certificates:
       "certificates certificates certificates certificates certificates",
   },
-  HSF: {
+  ShadeStar: {
     materialCharacteristics: {
       cellType: {
         characteristic: "Cell type",
@@ -1339,7 +1346,7 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
 export const CART_MODELS_ARE_READY = "Your models are ready for the next step";
 export const CART_PLEASE_CHECKOUT =
   "Please check out your order and we will finalize it.";
-export const CART_CHECK_OUT = "Check Out";
+export const CART_GET_A_QUOTE = "Get a quote";
 export const CART_REMOVE = "Remove";
 export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
   solarCellTechnology: "Solar Cell Technology",

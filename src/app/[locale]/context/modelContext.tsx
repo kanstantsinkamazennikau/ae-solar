@@ -2,7 +2,13 @@
 
 import { createContext, useState } from "react";
 
-export type Model = "Aurora" | "Comet" | "Meteor" | "Terra" | "Neptune" | "HSF";
+export type Model =
+  | "Aurora"
+  | "Comet"
+  | "Meteor"
+  | "Terra"
+  | "Neptune"
+  | "ShadeStar";
 
 export interface ModelContext {
   setModel: (model: Model) => void;

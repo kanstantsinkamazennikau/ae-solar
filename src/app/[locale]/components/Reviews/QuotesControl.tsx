@@ -20,7 +20,7 @@ export default function QuotesControl() {
     <div className="flex justify-start items-center gap-5">
       <button onClick={() => changeSlide(-1)}>
         <Image
-          src="/images/redArrowRight.svg"
+          src="/images/whiteArrowRight.svg"
           alt="quote"
           width={24}
           height={24}
@@ -31,7 +31,7 @@ export default function QuotesControl() {
       {renderDots()}
       <button onClick={() => changeSlide(1)}>
         <Image
-          src="/images/redArrowRight.svg"
+          src="/images/whiteArrowRight.svg"
           alt="quote"
           width={24}
           height={24}

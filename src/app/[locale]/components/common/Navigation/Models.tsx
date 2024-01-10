@@ -7,6 +7,7 @@ import {
   HEADER_CALCULATE,
   HEADER_CHOOSE_YOUR_MODEL,
   HEADER_SUBNAVIGATION_PANELS_MODELS,
+  PRODUCT_INTRO_MODULES,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,9 +32,11 @@ export default function Models({
         isProductionIntroBlock ? "flex-col -mt-5 mb-8" : "flex-row"
       }`}
     >
-      <div className="font-normal [font-size:_clamp(12px,1vw,14px)] leading-normal text-dark-gray-600 -tracking-[0.14px]">
-        {HEADER_CHOOSE_YOUR_MODEL}
-      </div>
+      {isProductionIntroBlock && (
+        <div className="font-normal [font-size:_clamp(12px,1vw,14px)] leading-normal text-dark-gray-600 -tracking-[0.14px]">
+          {PRODUCT_INTRO_MODULES}
+        </div>
+      )}
       <div className="flex justify-center items-center gap-2 xl:gap-11 md:gap-5">
         {HEADER_SUBNAVIGATION_PANELS_MODELS.map((panel) => {
           const modelName = panel.split(".")[0];
@@ -96,7 +99,7 @@ export default function Models({
       {isLink && (
         <Button onClick={handleClick} size="extrasmall" style="outline">
           <span className="leading-[10px] font-semibold text-sm">
-            {HEADER_CALCULATE}
+            {HEADER_CHOOSE_YOUR_MODEL}
           </span>
         </Button>
       )}

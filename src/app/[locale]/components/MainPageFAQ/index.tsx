@@ -7,7 +7,7 @@ import Button from "@/app/[locale]/components/common/Button";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import {
   FAQ_ACCORDION_DATA,
-  FAQ_MORE_QUESTIONS,
+  FAQ_MORE_SOLUTIONS,
   FAQ_QUESTION,
   FAQ_SOLUTIONS,
 } from "@/app/[locale]/utils/constants";
@@ -20,23 +20,25 @@ export function MainPageFAQ() {
         tierTwoHeading={FAQ_SOLUTIONS}
         align="left"
       />
-      <div className="flex flex-col mb-[120px] items-end">
+      <div className="flex flex-col items-end lg:mb-[120px] md:mb-[80px] mb-0">
         <div className="max-w-[873px] w-full">
           <Accordion multiple>
             {FAQ_ACCORDION_DATA.map((item) => (
               <AccordionItem key={item.question} title={item.question}>
-                <p className="text-2xl leading-9 pb-6">{item.answer}</p>
+                <p className="leading-[150%] pb-6 [font-size:_clamp(12px,1.5vw,24px)]">
+                  {item.answer}
+                </p>
               </AccordionItem>
             ))}
           </Accordion>
-          <div className="mt-[60px]">
+          <div className="mt-[60px] flex min-[920px]:justify-start justify-center">
             <Button
-              onClick={() => console.log(FAQ_MORE_QUESTIONS)}
+              onClick={() => console.log(FAQ_MORE_SOLUTIONS)}
               style="outline"
               showArrow
             >
-              <span className="text-2xl -tracking-[0.24px] font-semibold">
-                {FAQ_MORE_QUESTIONS}
+              <span className="[font-size:_clamp(14px,1.5vw,24px)] -tracking-[0.24px] font-semibold">
+                {FAQ_MORE_SOLUTIONS}
               </span>
             </Button>
           </div>
