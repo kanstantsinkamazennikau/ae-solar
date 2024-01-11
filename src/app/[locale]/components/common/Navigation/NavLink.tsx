@@ -28,7 +28,7 @@ export default function NavLink({
           href={`/${locale}${url}`}
           className={`flex py-2 md:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between whitespace-nowrap ${
             highlightNavigationLink(locale, url, path) &&
-            "md:border-base-red md:border-b-2 md:border-solid"
+            "min-[920px]:border-base-red min-[920px]:border-b-2 min-[920px]:border-solid"
           }}`}
           onClick={onLinkClick}
         >
@@ -38,7 +38,7 @@ export default function NavLink({
       {subMenu && (
         <>
           <div
-            className="flex py-2 md:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer "
+            className="flex py-2 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer "
             onClick={() => onSubMenuHeadingClick && onSubMenuHeadingClick(text)}
           >
             {t(text)}
@@ -47,7 +47,7 @@ export default function NavLink({
               alt="navMenuTriangle"
               width={8}
               height={8}
-              className="group-hover:rotate-180 ml-1 hidden md:block"
+              className="group-hover:rotate-180 ml-1 hidden min-[920px]:block"
             />
             {/* MOBILE SUBMENU TRIANGLE ROTATION ON HEADING CLICK */}
             <Image
@@ -57,10 +57,10 @@ export default function NavLink({
               height={8}
               className={`${
                 subMenuHeading === text ? "rotate-180" : ""
-              } ml-1 md:hidden block`}
+              } ml-1 min-[920px]:hidden block`}
             />
           </div>
-          <div className="absolute hidden group-hover:md:block hover:md:block z-10">
+          <div className="absolute hidden group-hover:min-[920px]:block hover:min-[920px]:block z-10">
             <div className="py-2">
               <div
                 className="w-4 h-4 left-3 absolute 
@@ -72,7 +72,9 @@ export default function NavLink({
 
           {/* MOBILE SUBMENU ON HEADING CLICK */}
           <div
-            className={`${subMenuHeading === text ? "md:hidden" : "hidden"}`}
+            className={`${
+              subMenuHeading === text ? "min-[920px]:hidden" : "hidden"
+            }`}
           >
             <SubMenuItems subMenuArray={subMenu} onLinkClick={onLinkClick} />
           </div>

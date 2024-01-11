@@ -71,6 +71,10 @@ const config: Config = {
             opacity: "0",
           },
         },
+        fadeIn: {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
         partnerTransition: {
           from: {
             left: "100%",
@@ -83,6 +87,7 @@ const config: Config = {
       animation: {
         customPing: "customPing 5s cubic-bezier(0, 0, 0.2, 1) infinite",
         partnerTransition: "partnerTransition 0.75s ease-in-out 1 forwards",
+        fadeIn: "fadeIn 0.2s ease-in-out",
       },
     },
   },
