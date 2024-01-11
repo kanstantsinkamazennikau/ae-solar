@@ -2,7 +2,7 @@
 
 import { AccordionItemProps } from "@/app/[locale]/components/common/Accordion/types";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function AccordionItem({
   title,
@@ -18,10 +18,15 @@ export default function AccordionItem({
   const [isOpenItem, setIsOpenItem] = useState(
     multiple && index === activeIndex
   );
+  const [height, setHeight] = useState<number | undefined>(undefined);
 
   const onItemWithMultipleFlagClick = () => {
     setIsOpenItem(!isOpenItem);
   };
+
+  useEffect(() => {
+    setHeight(contentHeight.current?.scrollHeight);
+  }, []);
 
   return (
     <div className="border-b border-solid border-[#242424] overflow-hidden last:border-none">
@@ -49,11 +54,7 @@ export default function AccordionItem({
       <div
         ref={contentHeight}
         className="transition-all duration-500 ease-in-out"
-        style={
-          isOpen || isOpenItem
-            ? { height: contentHeight.current?.scrollHeight }
-            : { height: "0px" }
-        }
+        style={isOpen || isOpenItem ? { height } : { height: 0 }}
       >
         {children}
       </div>
