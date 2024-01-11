@@ -8,8 +8,6 @@ import {
   CART_LOCALSTORAGE,
   CART_SUCCESSFULLY_ADDED,
   CONSTRUCTOR_ADD_TO_BAG,
-  CONSTRUCTOR_YOUR_MODEL_IS,
-  HEADER_SUBNAVIGATION_PANELS_MODELS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useContext, useEffect } from "react";
@@ -18,9 +16,6 @@ import { toast } from "react-toastify";
 export default function GeneratedModel() {
   const { constructorModel, isGenerateModel, setModelsInBag } =
     useContext(ConstructorContext);
-  const modelIcon = HEADER_SUBNAVIGATION_PANELS_MODELS.filter((model) =>
-    model.includes(constructorModel.model)
-  )[0];
 
   const addModelToBag = () => {
     setModelsInBag((prevState) => {
@@ -38,7 +33,7 @@ export default function GeneratedModel() {
   useEffect(() => {
     if (isGenerateModel) {
       window.scrollTo({
-        top: document.getElementById("model")!.offsetTop - 150,
+        top: document.getElementById("model")!.offsetTop + 50,
         behavior: "smooth",
       });
     }
@@ -46,48 +41,65 @@ export default function GeneratedModel() {
 
   return (
     isGenerateModel && (
-      <div
-        className="w-full flex mb-11 flex-col items-center mt-[130px]"
-        id="model"
-      >
-        <div className="w-full h-[900px] bg-[url('/images/option/Back.png')] bg-center bg-contain flex mb-8 flex-col items-center relative bg-no-repeat">
-          <div className="flex flex-col gap-4 items-center justify-center relative max-w-[800px] w-full">
-            <p className="text-dark-gray-650 text-xl -tracking-[0.4x] font-semibold">
-              {CONSTRUCTOR_YOUR_MODEL_IS}
-            </p>
-            <div className="flex gap-3 mb-8">
-              <Image
-                src={`/images/models/${modelIcon}`}
-                alt={modelIcon}
-                priority
-                width={48}
-                height={48}
-              />
-              <span className="text-[64px] -tracking-[0.64x] font-bold leading-none">
-                {constructorModel.model}
-              </span>
-            </div>
+      <div className="w-full flex mb-11 flex-col items-center">
+        <div
+          id="model"
+          className="
+            w-full
+            h-full
+            relative
+            flex
+            flex-col
+            mb-1
+          "
+        >
+          <div
+            className="
+              w-full
+              md:h-[800px]
+              lg:h-[900px]
+              min-[500px]:h-[600px]
+              min-[500px]:mt-0
+              h-[286px]
+              bg-[url('/images/option/Back.png')]
+              md:bg-center
+              min-[500px]:bg-top
+              bg-bottom
+              bg-contain
+              flex
+              mb-8
+              flex-col
+              items-center
+              relative
+              bg-no-repeat
+              justify-end
+            "
+          >
             <Image
-              src={`/images/option/glow.png`}
-              alt="glow.png"
+              src={`/images/option/${constructorModel.model}.png`}
+              alt={constructorModel.model}
               priority
-              width={800}
-              height={60}
-              className="absolute -bottom-[60px]"
+              width={964}
+              height={615}
+              className="
+                min-[500px]:absolute
+                relative
+                bottom-0
+                lg:h-[615px]
+                lg:w-[964px]
+                md:h-[450px]
+                md:w-[700px]
+                min-[500px]:h-[400px]
+                min-[500px]:w-[500px]
+                h-[150px]
+                w-[280px]
+              "
             />
           </div>
-          <Image
-            src={`/images/option/${constructorModel.model}.png`}
-            alt={constructorModel.model}
-            priority
-            width={964}
-            height={615}
-            className="absolute bottom-0"
-          />
-          <div className="fade-strip-bottom" />
-
+          <div className="fade-strip-bottom min-[500px]:top-auto min-[500px]:!h-[250px] !h-16 top-[226px]" />
           <ShortDetails />
         </div>
+
         <Button onClick={addModelToBag} size="thin">
           <div className="flex justify-center items-center">
             <Image
@@ -98,7 +110,7 @@ export default function GeneratedModel() {
               height={24}
               className="inline-block"
             />
-            <span className="text-xl -tracking-[0.2px] font-semibold">
+            <span className="[font-size:_clamp(14px,2vw,20px)] -tracking-[0.2px] font-semibold">
               {CONSTRUCTOR_ADD_TO_BAG}
             </span>
           </div>

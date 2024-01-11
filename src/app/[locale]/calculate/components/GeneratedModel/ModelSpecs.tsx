@@ -19,8 +19,28 @@ export default function ModelSpecs() {
 
   return (
     <BasicWidthContainer>
-      <div className="flex gap-[60px]">
-        <div className="max-w-[400px] p-10 flex flex-col gap-8 border border-solid border-[#191919] bg-[#0D0D0D] rounded-xl h-full">
+      <div className="flex xl:gap-[60px] lg:gap-[45px] md:gap-[30px] md:flex-row flex-col-reverse">
+        <div
+          className="
+            xl:max-w-[400px]
+            lg:max-w-[300px]
+            md:max-w-[275px]
+            lg:p-10
+            md:p-5
+            p-4
+            flex
+            flex-col
+            lg:gap-8
+            md:gap-5
+            gap-4
+            border
+            border-solid
+            border-[#191919]
+            bg-[#0D0D0D]
+            rounded-xl
+            h-full
+          "
+        >
           {CONSTRUCTOR_MODELS_ADVANTAGES.map(
             ({ icon, advantageCategory, advantageDescription }) => (
               <div key={advantageCategory} className="flex flex-col gap-3">
@@ -33,11 +53,11 @@ export default function ModelSpecs() {
                     height={24}
                     className="inline-block"
                   />
-                  <span className="text-xl leading-[120%] font-semibold">
+                  <span className="leading-[120%] font-semibold [font-size:_clamp(14px,1.5vw,20px)]">
                     {advantageCategory}
                   </span>
                 </div>
-                <p className="text-sm font-medium leading-[150%] font-walsheim text-dark-gray-900">
+                <p className="[font-size:_clamp(11px,1.5vw,14px)] font-medium leading-[150%] font-walsheim text-dark-gray-900">
                   {advantageDescription}
                 </p>
               </div>
@@ -71,13 +91,13 @@ export default function ModelSpecs() {
                             key={characteristicKey}
                             className="flex items-start py-1 gap-5 border-b-[1px] border-dashed border-[#ffffff26]"
                           >
-                            <div className="text-[#5A5A5A] text-base leading-[150%] font-normal min-w-[240px]">
+                            <div className="text-[#5A5A5A] [font-size:_clamp(12px,1.5vw,16px)] leading-[150%] font-normal min-w-[40%]">
                               {
                                 modelSpecs[specKey][characteristicKey]
                                   .characteristic
                               }
                             </div>
-                            <div className="text-base leading-[150%] font-normal">
+                            <div className="[font-size:_clamp(12px,1.5vw,16px)] leading-[150%] font-normal">
                               {modelSpecs[specKey][characteristicKey].value}
                             </div>
                           </div>
@@ -95,7 +115,7 @@ export default function ModelSpecs() {
                     style="small"
                   >
                     <div className="pb-8">
-                      <div className="text-[#5A5A5A] text-base leading-[150%] font-normal min-w-[240px]">
+                      <div className="text-[#5A5A5A] [font-size:_clamp(12px,1.5vw,16px)] leading-[150%] font-normal min-w-[240px]">
                         {modelSpecs[specKey]}
                       </div>
                     </div>
@@ -110,7 +130,7 @@ export default function ModelSpecs() {
                     style="small"
                   >
                     <div className="pb-8">
-                      <div className="text-[#5A5A5A] text-base leading-[150%] font-normal min-w-[240px]">
+                      <div className="text-[#5A5A5A] [font-size:_clamp(12px,1.5vw,16px)] leading-[150%] font-normal min-w-[240px]">
                         {modelSpecs[specKey]}
                       </div>
                     </div>
