@@ -1,10 +1,10 @@
 import GeneratedModel from "@/app/[locale]/calculate/components/GeneratedModel";
-import Option from "@/app/[locale]/calculate/components/Option";
+import Options from "@/app/[locale]/calculate/components/Options";
 
 export default function Calculate() {
   return (
     <div className="flex flex-col justify-center items-center">
-      <Option />
+      <Options />
       <GeneratedModel />
     </div>
   );

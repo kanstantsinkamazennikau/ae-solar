@@ -46,7 +46,7 @@ export default function Customize() {
   ) as Array<keyof typeof modelParams>;
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative -mt-[70px] top-[70px] md:-mt-0 md:top-0">
       <SectionHeader
         title={CONSTRUCTOR_CUSTOMIZE}
         clarification={CONSTRUCTOR_YOUR_MODEL}

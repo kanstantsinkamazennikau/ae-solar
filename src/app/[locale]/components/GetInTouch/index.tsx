@@ -9,11 +9,19 @@ import {
   GET_IN_TOUCH_OUR_VISION,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function GetInTouch() {
   const [clientType, setClientType] =
     useState<keyof typeof matchPartnerTypeWithArticle>("partner");
+  const locale = useParams()?.locale;
+  const router = useRouter();
+
+  //TODO fill form with partner type value for "intrested in" dropdown
+  const handleClick = () => {
+    router.push(`/${locale}/consult`);
+  };
 
   const matchPartnerTypeWithArticle = {
     partner: "a partner",
@@ -98,7 +106,7 @@ export default function GetInTouch() {
         </div>
 
         {/* BUTTON */}
-        <Button onClick={() => console.log("contact us")} showArrow>
+        <Button onClick={handleClick} showArrow>
           <span className="overflow-hidden">
             <span className="[font-size:_clamp(12px,1.5vw,16px)]">
               {GET_IN_TOUCH_BECOME_A}

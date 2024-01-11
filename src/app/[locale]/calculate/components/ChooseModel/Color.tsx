@@ -14,7 +14,7 @@ export default function Color({ text, paramsKey, values }: ColorProps) {
 
   return (
     <div key={text}>
-      <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px]">
+      <span className="[font-size:_clamp(12px,2vw,16px)] font-walsheim font-medium mb-3 -tracking-[0.32px]">
         {text}
       </span>
       <div className="flex flex-col gap-1">
@@ -42,7 +42,7 @@ export default function Color({ text, paramsKey, values }: ColorProps) {
                 width={16}
                 height={16}
               />
-              <span className="text-sm font-semibold leading-[0.9] -tracking-[0.42px]">
+              <span className="[font-size:_clamp(11px,2vw,14px)] font-semibold leading-[0.9] -tracking-[0.42px]">
                 {color}
               </span>
             </div>

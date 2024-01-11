@@ -13,7 +13,7 @@ export default function Slider({ text, values, paramsKey }: SliderProps) {
 
   return (
     <div>
-      <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px]">
+      <span className="[font-size:_clamp(12px,2vw,16px)] font-walsheim font-medium mb-3 -tracking-[0.32px]">
         {text}
       </span>
       <div className="constructor-model-picker-border flex justify-center items-center border-option-border gap-1 [&>*:last-child>div:last-child]:hidden">
@@ -35,7 +35,7 @@ export default function Slider({ text, values, paramsKey }: SliderProps) {
                 }))
               }
             >
-              <div className="px-[14px] py-3 w-full flex justify-center text-sm font-semibold leading-[0.9] -tracking-[0.42px]">
+              <div className="px-[14px] py-3 w-full flex justify-center [font-size:_clamp(11px,2vw,14px)] font-semibold leading-[0.9] -tracking-[0.42px]">
                 {value}
               </div>
             </div>

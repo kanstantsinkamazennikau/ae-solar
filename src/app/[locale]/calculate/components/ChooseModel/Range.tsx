@@ -44,7 +44,7 @@ export default function Range({
     lowerLimit: string,
     upperLimit?: string
   ) => {
-    const { value, name } = e.target;
+    const { value } = e.target;
 
     if (+value < +lowerLimit) {
       setError((prevState) => ({
@@ -83,16 +83,30 @@ export default function Range({
 
   return (
     <div>
-      <span className="text-base font-walsheim font-medium mb-3 -tracking-[0.32px]">
-        {text}
+      <span className="[font-size:_clamp(12px,2vw,16px)] font-walsheim font-medium mb-3 -tracking-[0.32px]">
+        {text}{" "}
       </span>
-      <span className="font-walsheim text-dark-gray-650 text-base -tracking-[0.32px]">
+      <span className="font-walsheim text-dark-gray-650 [font-size:_clamp(12px,2vw,16px)] -tracking-[0.32px]">
         {clarification}
       </span>
       <div className="flex gap-2">
-        <div className="flex items-center flex-col gap-2">
+        <div className="flex items-center flex-col gap-2 w-1/2">
           <input
-            className="p-3 border-2 rounded-xl border-solid border-[#252525] focus:border-base-red focus:outline-none bg-get-in-touch-client text-center max-w-[145px] "
+            className="
+              p-3
+              border-2
+              rounded-xl
+              border-solid
+              border-[#252525]
+              focus:border-base-red
+              focus:outline-none
+              bg-get-in-touch-client
+              text-center
+              md:max-w-[145px]
+              max-[768px]:w-full
+              [font-size:_clamp(11px,2vw,14px)]
+              placeholder:[font-size:_clamp(11px,2vw,14px)]
+            "
             placeholder="Enter value"
             name={name1}
             value={
@@ -108,9 +122,23 @@ export default function Range({
             {measure1}
           </span>
         </div>
-        <div className="flex items-center flex-col gap-2">
+        <div className="flex items-center flex-col gap-2 w-1/2">
           <input
-            className="p-3 border-2 rounded-xl border-solid border-[#252525] focus:border-base-red focus:outline-none bg-get-in-touch-client text-center max-w-[145px]"
+            className="
+              p-3
+              border-2
+              rounded-xl
+              border-solid
+              border-[#252525]
+              focus:border-base-red
+              focus:outline-none
+              bg-get-in-touch-client
+              text-center
+              md:max-w-[145px]
+              max-[768px]:w-full
+              [font-size:_clamp(11px,2vw,14px)]
+              placeholder:[font-size:_clamp(11px,2vw,14px)]
+            "
             placeholder="Enter value"
             name={name2}
             value={

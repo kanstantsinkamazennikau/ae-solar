@@ -105,7 +105,7 @@ export default function ConstructorProvider({
       },
       applications: [selectedModelParams.applications.values[0]],
     });
-    setIsGenerateModel(false);
+    setIsGenerateModel(true);
   }, [constructorModel.model]);
 
   useEffect(() => {

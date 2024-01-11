@@ -30,11 +30,24 @@ export default function Model() {
         {models.map((model) => (
           <div
             key={model}
-            className={`flex flex-col gap-2 p-4 items-start border-2 border-solid rounded-xl cursor-pointer ${
-              constructorModel.model === model
-                ? "border-base-red"
-                : "border-option-border "
-            }`}
+            className={`
+              flex
+              flex-col
+              md:gap-2
+              gap-1
+              p-4
+              items-start
+              border-2
+              border-solid
+              rounded-xl
+              cursor-pointer
+              w-full
+              ${
+                constructorModel.model === model
+                  ? "border-base-red"
+                  : "border-option-border "
+              }
+            `}
             onClick={() =>
               setConstructorModel((prevState: ConstructorModel) => ({
                 ...prevState,
@@ -42,8 +55,10 @@ export default function Model() {
               }))
             }
           >
-            <p className="text-base font-semibold">{model}</p>
-            <p className="font-walsheim text-sm leading-[1.2] font-normal">
+            <p className="font-semibold [font-size:_clamp(14px,2vw,16px)]">
+              {model}
+            </p>
+            <p className="font-walsheim leading-[1.2] font-normal [font-size:_clamp(10px,2vw,14px)]">
               {CONSTRUCTOR_MODELS_SPEC[model].panelTechnology}
             </p>
           </div>

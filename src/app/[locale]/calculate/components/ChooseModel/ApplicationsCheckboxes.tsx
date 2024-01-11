@@ -45,25 +45,31 @@ export default function ApplicationsCheckboxes({
     <div className="flex flex-col mb-6">
       <SectionHeader title={text} clarification={clarification} />
       <div className="flex flex-col gap-3">
-        {CONSTRUCTOR_APPLICATIONS_STANDARDS.map(
-          ({ type, clarification }, index) => {
-            const isDisabledCheckbox = !values.includes(type);
+        {CONSTRUCTOR_APPLICATIONS_STANDARDS.map(({ type, clarification }) => {
+          const isDisabledCheckbox = !values.includes(type);
 
-            return (
-              <div
-                key={type}
-                className="flex gap-[6px] justify-between items-center"
+          return (
+            <div
+              key={type}
+              className="flex gap-[6px] justify-between items-center"
+            >
+              <label
+                className={`flex items-center w-full ${
+                  isDisabledCheckbox
+                    ? "cursor-default text-dark-gray-650"
+                    : "cursor-pointer"
+                }`}
+                htmlFor={type}
               >
-                <div className="flex items-center">
-                  <input
-                    key={type}
-                    type="checkbox"
-                    name={type}
-                    value={type}
-                    id={type}
-                    checked={constructorModel.applications.includes(type)}
-                    disabled={isDisabledCheckbox}
-                    className={`
+                <input
+                  key={type}
+                  type="checkbox"
+                  name={type}
+                  value={type}
+                  id={type}
+                  checked={constructorModel.applications.includes(type)}
+                  disabled={isDisabledCheckbox}
+                  className={`
                       grid
                       place-content-center
                       appearance-none
@@ -84,42 +90,36 @@ export default function ApplicationsCheckboxes({
                       before:ease-in-out
                       checked:before:scale-[1]
                       disabled:border-dark-gray-650
-                      ${
-                        isDisabledCheckbox
-                          ? "cursor-default text-dark-gray-650"
-                          : "cursor-pointer"
-                      }
+                      
                     `}
-                    onChange={handleOnChange}
-                  />
-                  <label
-                    className={`ml-[6px] font-semibold ${
-                      isDisabledCheckbox
-                        ? "cursor-default text-dark-gray-650"
-                        : "cursor-pointer"
-                    }`}
-                    htmlFor={type}
-                  >
-                    {type}
-                  </label>
-                </div>
-                <div className="group/item relative">
-                  <Image
-                    src={`/images/info.svg`}
-                    alt={"info"}
-                    priority
-                    width={19.5}
-                    height={19.5}
-                    className="cursor-pointer"
-                  />
-                  <p className="hidden group-hover/item:block absolute right-7 top-0 max-w-[200px] bg-dark-gray-700 p-2 rounded-md text-xs z-10">
-                    {clarification}
-                  </p>
-                </div>
+                  onChange={handleOnChange}
+                />
+                <label
+                  className={`
+                      ml-[6px]
+                      font-semibold
+                      [font-size:_clamp(11px,2vw,14px)]
+                    `}
+                >
+                  {type}
+                </label>
+              </label>
+              <div className="group/item relative">
+                <Image
+                  src={`/images/info.svg`}
+                  alt={"info"}
+                  priority
+                  width={19.5}
+                  height={19.5}
+                  className="cursor-pointer"
+                />
+                <p className="hidden group-hover/item:block absolute right-7 top-0 max-w-[200px] bg-dark-gray-700 p-2 rounded-md text-xs z-10">
+                  {clarification}
+                </p>
               </div>
-            );
-          }
-        )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

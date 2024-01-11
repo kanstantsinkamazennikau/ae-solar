@@ -3,7 +3,7 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import { CONSTRUCTOR_OPTION_LINES } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 
-export default function Option() {
+export default function Options() {
   return (
     <BasicWidthContainer>
       <div className="flex items-start gap-10 self-stretch mb-[80px] md:flex-row flex-col relative">
@@ -14,8 +14,10 @@ export default function Option() {
             sticky
             top-[64px]
             md:top-[110px]
-            h-[calc(49vh-130px)]
+            h-[240px]
+            min-[500px]:h-[40vh]
             md:h-[calc(100vh-130px)]
+            z-10
           "
         >
           <div
@@ -25,7 +27,8 @@ export default function Option() {
             border-option-border
             rounded-[20px]
             max-w-[985px]
-            h-[calc(47vh-130px)]
+            min-[500px]:h-[39vh]
+            h-[240px]
             md:h-[calc(100vh-130px)]
             w-full
             flex
@@ -52,7 +55,8 @@ export default function Option() {
                   md:max-w-full
                   max-h-full
                   md:h-full
-                  h-[calc(40vh-130px)]
+                  h-[200px]
+                  min-[500px]:h-[30vh]
                 "
               />
               <div className="absolute w-full top-0">
@@ -70,33 +74,9 @@ export default function Option() {
                   </div>
                 ))}
               </div>
-              {/* <div className="md:hidden pt-6 absolute w-full top-0 block">
-                {CONSTRUCTOR_OPTION_LINES.map(
-                  ({ panelName, smallScreenLineHeight, position }) => (
-                    <div
-                      className={`inline-flex flex-col items-start gap-2 shrink-0 absolute`}
-                      style={{ left: position }}
-                      key={panelName}
-                    >
-                      <span
-                        className={`font-normal text-option-text [font-size:_clamp(9px,1.5vw,16px)]`}
-                      >
-                        {panelName}
-                      </span>
-                      <div
-                        className={`optionLine w-[1px]`}
-                        style={{
-                          height: `${smallScreenLineHeight}px`,
-                        }}
-                      ></div>
-                    </div>
-                  )
-                )}
-              </div> */}
             </div>
           </div>
         </div>
-
         <ChooseModel />
       </div>
     </BasicWidthContainer>
