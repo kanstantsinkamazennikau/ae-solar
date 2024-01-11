@@ -32,26 +32,12 @@ export const HEADER_NAV_LINKS_ARRAY = [
     text: "Products",
   },
   {
-    url: "/solutions",
-    text: "Solutions",
-  },
-  {
     url: "/about",
     text: "About us",
-    // subMenu: [
-    //   {
-    //     url: "/solutions4",
-    //     text: "Solutions4",
-    //   },
-    //   {
-    //     url: "/solutions5",
-    //     text: "Solutions5",
-    //   },
-    //   {
-    //     url: "/solutions6",
-    //     text: "Solutions6",
-    //   },
-    // ],
+  },
+  {
+    url: "/news",
+    text: "News",
   },
   {
     url: "/documents",
@@ -72,8 +58,8 @@ export const HEADER_NAV_LINKS_ARRAY = [
     ],
   },
   {
-    url: "/partners",
-    text: "Partners",
+    url: "/join_us",
+    text: "Join us",
   },
 ];
 export const HEADER_CONTACT_US = "Contact Us";
@@ -348,7 +334,7 @@ export const FOOTER_GERMAN_BRAND =
 export const FOOTER_CONTACT_INFO = [
   {
     icon: "location.svg",
-    info: "AE Alternative Energy GMBH Messerschmittring 5486343 Koenigsbrunn Germany",
+    info: "AE Alternative Energy GMBH Messerschmittring 5486343 Königsbrunn Germany",
   },
   {
     icon: "phone.svg",

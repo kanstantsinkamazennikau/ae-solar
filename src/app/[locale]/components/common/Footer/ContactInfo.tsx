@@ -15,21 +15,21 @@ export default function ContactInfo() {
   return (
     <div
       className="
-      flex
-      min-[650px]:flex-col
-      gap-6
-      items-center
-      justify-between
-      flex-row
-      col-start-1
-      col-end-3
-      min-[650px]:col-end-auto 
-      min-[650px]:col-start-auto
-      max-[500px]:col-start-auto
-      max-[500px]:col-end-auto
-      max-[500px]:flex-col
-      max-[500px]:items-start
-    "
+        flex
+        min-[650px]:flex-col
+        gap-6
+        items-center
+        justify-between
+        flex-row
+        col-start-1
+        col-end-3
+        min-[650px]:col-end-auto 
+        min-[650px]:col-start-auto
+        max-[500px]:col-start-auto
+        max-[500px]:col-end-auto
+        max-[500px]:flex-col
+        max-[500px]:items-start
+      "
     >
       <div className="min-[650px]:px-6 px-0 flex flex-col gap-[10px]">
         {FOOTER_CONTACT_INFO.map(({ icon, info, linkTo }) => {

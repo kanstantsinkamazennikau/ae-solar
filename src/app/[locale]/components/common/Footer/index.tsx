@@ -26,10 +26,7 @@ export default function Footer() {
             height={60}
             className="rotate-180"
           />
-          <nav
-            className="grid min-[650px]:grid-cols-[auto_auto_auto] min-[500px]:grid-cols-[auto_auto] min-[500px]:items-start gap-2 grid-cols-[auto]"
-            // className="flex justify-between items-start gap-2"
-          >
+          <nav className="grid min-[650px]:grid-cols-[auto_auto_auto] min-[500px]:grid-cols-[auto_auto] min-[500px]:items-start gap-2 grid-cols-[auto]">
             <div className="flex gap-8 flex-col max-w-[203px] max-[500px]:max-w-full pb-3">
               <Logo />
               <p className="text-sm font-normal leading-[130%] font-walsheim text-[#747474]">

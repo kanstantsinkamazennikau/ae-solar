@@ -87,7 +87,25 @@ export default function ProductIntro() {
         </div>
         <BasicWidthContainer styles="flex lg:gap-11 gap-6 justify-center md:flex-row flex-col relative self-center">
           {/* INFO */}
-          <div className="md:absolute md:left-0 md:top-1/2 flex-1 md:-translate-y-1/2 flex flex-col gap-3 md:gap-4 xl:gap-8 md:items-start md:justify-center items-center pl-5">
+          <div
+            className="
+              md:absolute
+              md:left-0
+              md:top-1/2
+              flex-1
+              md:-translate-y-1/2
+              flex
+              flex-col
+              gap-3
+              md:gap-4
+              xl:gap-8
+              md:items-start
+              md:justify-center
+              items-center
+              pl-5
+              z-10
+            "
+          >
             <div className="flex gap-3 items-center">
               <Image
                 alt={model}
@@ -132,7 +150,6 @@ export default function ProductIntro() {
               md:gap-4
               xl:gap-11
               flex-col
-              flex
               justify-center
               absolute
               md:px-0
@@ -141,8 +158,13 @@ export default function ProductIntro() {
               py-6
               bottom-0
               left-0
-              md:right-0 md:left-auto md:top-1/2 md:-translate-y-1/2 md:pr-5
+              md:right-0
+              md:left-auto
+              md:top-1/2
+              md:-translate-y-1/2
+              md:pr-5
               [&>*:last-child>div:last-child]:hidden
+              hidden
             "
           >
             {modelStatsKeys.map((key) => (

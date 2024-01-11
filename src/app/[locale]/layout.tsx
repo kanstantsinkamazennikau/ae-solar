@@ -126,7 +126,6 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
-        {/* <div className="flex flex-col justify-center items-center"> */}
         <ToastContainerProvider />
         <ModelProvider>
           <ConstructorProvider>
@@ -137,7 +136,6 @@ export default function RootLayout({
             </StickyNavigationProvider>
           </ConstructorProvider>
         </ModelProvider>
-        {/* </div> */}
       </body>
     </html>
   );
