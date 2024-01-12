@@ -6,12 +6,8 @@ import { PhoneNumberInputProps } from "@/app/[locale]/components/common/PhoneNum
 import { useRef, useState } from "react";
 
 export const COUNTRIES_LIST = [
-  { flagIcon: "germany.png", code: "+49" },
-  { flagIcon: "england.png", code: "+375" },
-  { flagIcon: "germany.png", code: "+491" },
-  { flagIcon: "england.png", code: "+374" },
-  { flagIcon: "germany.png", code: "+492" },
-  { flagIcon: "england.png", code: "+376" },
+  { flagIcon: "Deutsche.svg", code: "+49", abbr: "DE", language: "Deutsche" },
+  { flagIcon: "English.svg", code: "+375", abbr: "EN", country: "English" },
 ];
 
 export default function PhoneNumberInput({

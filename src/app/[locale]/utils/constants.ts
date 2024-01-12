@@ -74,6 +74,7 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
 ];
 export const HEADER_CHOOSE_YOUR_MODEL = "Choose your model";
 export const HEADER_CALCULATE = "Calculate";
+export const HEADER_CHOOSE_LANGUAGE = "Choose language";
 
 //MAIN PAGE
 export const HERO_SECTION_SLOGAN =

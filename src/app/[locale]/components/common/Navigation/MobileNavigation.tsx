@@ -1,5 +1,6 @@
 "use client";
 
+import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import {
@@ -9,6 +10,7 @@ import {
   HEADER_NAV_LINKS_ARRAY,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -89,7 +91,7 @@ export default function MobileNavigation() {
           priority
           width={1320}
           height={30}
-          className="mb-5"
+          className="mb-5 h-[30px]"
         />
         <ul>
           {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
@@ -103,33 +105,28 @@ export default function MobileNavigation() {
           ))}
         </ul>
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
-        <div className="flex py-2 min-[920px]:items-center [font-size:_clamp(12px,1.5vw,16px)] leading-none justify-between cursor-pointer">
-          {HEADER_LANGUAGE}
-          <Image
-            src="/images/navMenuTriangle.svg"
-            alt="navMenuTriangle"
-            width={8}
-            height={8}
-            className={`
-              -rotate-90
-              w-3
-              h-3
-            `}
-          />
-        </div>
+        {/* <div className="flex py-2 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer">
+          {HEADER_LANGUAGE} */}
+        {/* <div> */}
+        <ChangeLocale mobileNavigation />
+        {/* </div> */}
+        {/* </div> */}
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
-        <div
-          className="flex pt-2 pb-5 min-[920px]:items-center [font-size:_clamp(12px,1.5vw,16px)] leading-none justify-between cursor-pointer"
-          onClick={handleClick}
+        <Link
+          href={`/${params?.locale}/consult`}
+          className={
+            "flex pt-2 pb-5 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer"
+          }
+          onClick={onLinkClick}
         >
           {HEADER_CONTACT_US}
-        </div>
+        </Link>
         {FOOTER_CONTACT_INFO.map(({ icon, info, linkTo }) => {
           if (icon === "location.svg") return;
           return (
             <div
               key={info}
-              className="flex items-start leading-[130%] font-normal font-walsheim gap-1 max-w-[185px] [font-size:_clamp(12px,1vw,14px)]"
+              className="flex items-start leading-[130%] font-normal font-walsheim gap-1 max-w-[185px] [font-size:_clamp(12px,1.5vw,16px)]"
             >
               <Image
                 src={`/images/footer/${icon}`}
@@ -143,7 +140,9 @@ export default function MobileNavigation() {
                 onClick={() => {
                   if (linkTo) router.push(linkTo);
                 }}
-                className={`${linkTo ? "cursor-pointer" : ""}`}
+                className={`${
+                  linkTo ? "cursor-pointer" : ""
+                } text-dark-gray-900`}
               >
                 {info}
               </div>

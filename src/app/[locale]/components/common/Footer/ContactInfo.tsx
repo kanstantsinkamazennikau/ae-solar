@@ -36,7 +36,16 @@ export default function ContactInfo() {
           return (
             <div
               key={info}
-              className="flex items-start leading-[130%] font-normal font-walsheim gap-1 max-w-[185px] [font-size:_clamp(10px,1vw,14px)]"
+              className="
+                flex
+                items-start
+                leading-[130%]
+                font-normal
+                font-walshei
+                 gap-1
+                max-w-[185px]
+                [font-size:_clamp(10px,1vw,14px)]
+              "
             >
               <Image
                 src={`/images/footer/${icon}`}
