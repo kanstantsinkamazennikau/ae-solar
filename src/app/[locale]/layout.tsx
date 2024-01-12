@@ -124,10 +124,6 @@ export default function RootLayout({
 
   return (
     <html lang={locale}>
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-      ></meta>
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
         <ToastContainerProvider />
         <ModelProvider>
