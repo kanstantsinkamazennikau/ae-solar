@@ -70,7 +70,22 @@ export default function ProductIntro() {
 
   return (
     <div className="flex flex-col items-center xl:mb-[280px] lg:mb-[180px] md:mb-[100px] mb-[80px] w-full">
-      <div className="w-full h-auto bg-[url('/images/productIntro/back.svg')] bg-bottom bg-contain  bg-no-repeat flex md:mb-11 mb-0 flex-col relative">
+      <div
+        className="
+          w-full
+          h-auto
+          bg-[url('/images/productIntro/back.svg')]
+          bg-bottom
+          md:bg-contain
+          bg-[length:600px]
+          bg-no-repeat
+          flex
+          md:mb-11
+          mb-0
+          flex-col
+          relative
+        "
+      >
         <div className="font-bold leading-[1.2] [font-size:_clamp(36px,4vw,64px)] text-center px-5">
           <div>{PRODUCT_INTRO_THE_NEXT_LEVEL_OF}</div>
           <div className="text-base-red mb-6">
@@ -138,7 +153,7 @@ export default function ProductIntro() {
                   width={563}
                   height={730}
                   quality={100}
-                  className="2xl:object-cover object-contain object-bottom md:h-full h-[350px]"
+                  className="2xl:object-cover object-contain object-bottom md:h-full h-[270px]"
                 />
               </SplideSlide>
             ))}
