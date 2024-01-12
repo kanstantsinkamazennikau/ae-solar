@@ -63,6 +63,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
   },
 ];
 export const HEADER_CONTACT_US = "Contact Us";
+export const HEADER_LANGUAGE = "Language";
 export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Aurora.svg",
   "Comet.svg",

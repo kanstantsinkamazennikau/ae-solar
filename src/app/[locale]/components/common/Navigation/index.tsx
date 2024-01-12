@@ -5,13 +5,17 @@ import Button from "@/app/[locale]/components/common/Button";
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Logo from "@/app/[locale]/components/common/Logo";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
+import MobileNavigation from "@/app/[locale]/components/common/Navigation/MobileNavigation";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
 import {
+  FOOTER_CONTACT_INFO,
   HEADER_CONTACT_US,
+  HEADER_LANGUAGE,
   HEADER_NAV_LINKS_ARRAY,
 } from "@/app/[locale]/utils/constants";
+import Image from "next/image";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext, useState } from "react";
 
@@ -68,70 +72,7 @@ export default function Navigation() {
             </div>
 
             {/* MOBILE NAV */}
-            <>
-              <div className="min-[920px]:hidden flex items-center gap-5">
-                <Cart />
-                <div
-                  className="text-3xl cursor-pointer z-50 relative"
-                  onClick={() => setIsHamburgerMenuOpen(!isHamburgerMenuOpen)}
-                >
-                  <div className="flex flex-col gap-[5px] relative h-[16px] w-[16px] justify-center items-center">
-                    {Array(2)
-                      .fill(null)
-                      .map((_, index) => (
-                        <div
-                          key={index}
-                          className={`w-5 h-0.5 bg-white rounded absolute translate-y-1/2 transition-all duration-200 ${
-                            isHamburgerMenuOpen
-                              ? `block ${
-                                  index === 1 ? "rotate-45" : "-rotate-45"
-                                } animate-fadeIn`
-                              : "hidden"
-                          }`}
-                        />
-                      ))}
-                    {Array(3)
-                      .fill(null)
-                      .map((_, index) => (
-                        <div
-                          key={index}
-                          className={`w-5 h-0.5 bg-white rounded ${
-                            isHamburgerMenuOpen ? "hidden" : "block"
-                          }`}
-                        />
-                      ))}
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className={`
-                  min-[920px]:hidden h-screen bg-red-700 fixed w-full top-0 overflow-y-auto bottom-0 py-24 px-4
-                  duration-500 ${
-                    isHamburgerMenuOpen ? "left-0" : "left-[-100%]"
-                  }
-                `}
-              >
-                <ul>
-                  {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
-                    <NavLink
-                      key={navLink.url}
-                      subMenuHeading={subMenuHeading}
-                      onSubMenuHeadingClick={onSubMenuHeadingClick}
-                      onLinkClick={onLinkClick}
-                      {...navLink}
-                    />
-                  ))}
-                </ul>
-
-                <div className="gap-8 flex min-[920px]:hidden">
-                  {/* <ChangeLocale /> */}
-                  <Button onClick={handleClick} size="small">
-                    {HEADER_CONTACT_US}
-                  </Button>
-                </div>
-              </div>
-            </>
+            <MobileNavigation />
           </nav>
         </BasicWidthContainer>
       </div>

@@ -26,7 +26,7 @@ export default function NavLink({
       {!subMenu && (
         <Link
           href={`/${locale}${url}`}
-          className={`flex py-2 md:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between whitespace-nowrap ${
+          className={`flex min-[920px]:py-2 py-4 md:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between whitespace-nowrap ${
             highlightNavigationLink(locale, url, path) &&
             "min-[920px]:border-base-red min-[920px]:border-b-2 min-[920px]:border-solid"
           }}`}
@@ -38,7 +38,7 @@ export default function NavLink({
       {subMenu && (
         <>
           <div
-            className="flex py-2 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer "
+            className="flex min-[920px]:py-2 py-4 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer "
             onClick={() => onSubMenuHeadingClick && onSubMenuHeadingClick(text)}
           >
             {t(text)}
@@ -47,17 +47,16 @@ export default function NavLink({
               alt="navMenuTriangle"
               width={8}
               height={8}
-              className="group-hover:rotate-180 ml-1 hidden min-[920px]:block"
-            />
-            {/* MOBILE SUBMENU TRIANGLE ROTATION ON HEADING CLICK */}
-            <Image
-              src="/images/navMenuTriangle.svg"
-              alt="navMenuTriangle"
-              width={8}
-              height={8}
-              className={`${
-                subMenuHeading === text ? "rotate-180" : ""
-              } ml-1 min-[920px]:hidden block`}
+              className={`
+                ${subMenuHeading === text ? "rotate-180" : ""}
+                ml-1
+                block
+                min-[920px]:group-hover:rotate-180
+                min-[920px]:w-2
+                min-[920px]:h-2
+                w-3
+                h-3
+              `}
             />
           </div>
           <div className="absolute hidden group-hover:min-[920px]:block hover:min-[920px]:block z-10">
