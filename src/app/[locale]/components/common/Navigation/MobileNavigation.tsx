@@ -12,7 +12,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MobileNavigation() {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
@@ -28,9 +28,13 @@ export default function MobileNavigation() {
     setIsHamburgerMenuOpen(false);
   };
 
-  const handleClick = () => {
-    router.push(`/${params?.locale}/consult`);
-  };
+  useEffect(() => {
+    if (isHamburgerMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isHamburgerMenuOpen]);
 
   return (
     <>
@@ -74,13 +78,13 @@ export default function MobileNavigation() {
           min-[920px]:hidden 
           h-screen 
           bg-black 
-          fixed 
+          fixed
+          top-[64px]
           w-full 
-          top-0 
           overflow-y-auto 
           bottom-0 
-          px-4 
-          py-[34px]
+          px-4
+          pt-3
           duration-500 
           ${isHamburgerMenuOpen ? "left-0" : "left-[-100%]"}
         `}
@@ -91,7 +95,7 @@ export default function MobileNavigation() {
           priority
           width={1320}
           height={30}
-          className="mb-5 h-[30px]"
+          className="mb-5 top-[35px] fixed"
         />
         <ul>
           {HEADER_NAV_LINKS_ARRAY.map((navLink) => (

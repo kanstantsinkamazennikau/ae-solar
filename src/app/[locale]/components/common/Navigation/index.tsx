@@ -50,7 +50,7 @@ export default function Navigation() {
       }`}
     >
       {/* MAIN NAVIGATION */}
-      <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-5 md:py-4">
+      <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-4">
         <BasicWidthContainer>
           <nav className="flex items-center justify-between relative font-normal w-full gap-2">
             <Logo />

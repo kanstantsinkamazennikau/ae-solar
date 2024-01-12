@@ -61,6 +61,74 @@ export const HEADER_NAV_LINKS_ARRAY = [
     url: "/join_us",
     text: "Join us",
   },
+  {
+    url: "/products",
+    text: "Products",
+  },
+  {
+    url: "/about",
+    text: "About us",
+  },
+  {
+    url: "/news",
+    text: "News",
+  },
+  {
+    url: "/documents",
+    text: "Documents",
+    subMenu: [
+      {
+        url: "/solutions1",
+        text: "Solutions1",
+      },
+      {
+        url: "/solutions2",
+        text: "Solutions2",
+      },
+      {
+        url: "/solutions3",
+        text: "Solutions3",
+      },
+    ],
+  },
+  {
+    url: "/join_us",
+    text: "Join us",
+  },
+  {
+    url: "/products",
+    text: "Products",
+  },
+  {
+    url: "/about",
+    text: "About us",
+  },
+  {
+    url: "/news",
+    text: "News",
+  },
+  {
+    url: "/documents",
+    text: "Documents",
+    subMenu: [
+      {
+        url: "/solutions1",
+        text: "Solutions1",
+      },
+      {
+        url: "/solutions2",
+        text: "Solutions2",
+      },
+      {
+        url: "/solutions3",
+        text: "Solutions3",
+      },
+    ],
+  },
+  {
+    url: "/join_us",
+    text: "Join us",
+  },
 ];
 export const HEADER_CONTACT_US = "Contact Us";
 export const HEADER_LANGUAGE = "Language";
