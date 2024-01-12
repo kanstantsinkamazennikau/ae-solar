@@ -73,9 +73,9 @@ export default function CartModelDetails({ model }: DetailsProps) {
         return (
           <div
             key={modelKey}
-            className="grid py-1 gap-5 border-b border-dashed border-[#ffffff26] items-center justify-between grid-cols-2"
+            className="grid py-1 gap-5 border-b border-dashed border-[#ffffff26] items-center justify-between grid-cols-2 leading-[normal] md:leading-[inherit]"
           >
-            <div className="font-walsheim [font-size:_clamp(11px,5vw,16px)] capitalize font-medium text-[#606060] -tracking-[0.32px] ">
+            <div className="font-walsheim [font-size:_clamp(11px,5vw,16px)] capitalize font-medium text-[#606060] -tracking-[0.32px]">
               {modelParameterText}
             </div>
             <div

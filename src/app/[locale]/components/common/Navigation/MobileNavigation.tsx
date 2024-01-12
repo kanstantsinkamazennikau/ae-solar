@@ -105,12 +105,7 @@ export default function MobileNavigation() {
           ))}
         </ul>
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
-        {/* <div className="flex py-2 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer">
-          {HEADER_LANGUAGE} */}
-        {/* <div> */}
         <ChangeLocale mobileNavigation />
-        {/* </div> */}
-        {/* </div> */}
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
         <Link
           href={`/${params?.locale}/consult`}
