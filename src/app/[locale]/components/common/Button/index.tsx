@@ -12,7 +12,7 @@ const buttonStyle = (style: string | undefined) => {
     case "secondary":
       return "bg-white text-black";
     case "textOnly":
-      return "bg-transparent px-3 py-3";
+      return "bg-transparent !px-3 !py-3";
     default:
       return "";
   }
@@ -55,8 +55,8 @@ export default function Button({
         hover:opacity-80
         transition
         bg-base-red
-        ${buttonStyle(style)}
         ${buttonSize(size)}
+        ${buttonStyle(style)}
         flex
         justify-center
         items-center

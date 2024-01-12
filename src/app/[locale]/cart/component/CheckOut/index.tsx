@@ -20,7 +20,7 @@ export default function CheckOut() {
   }, [setIsGenerateModel]);
 
   return (
-    <div className="mt-[100px] text-center flex flex-col items-center">
+    <div className="lg:mt-[100px] md:mt-20 text-center flex flex-col items-center">
       {!!modelsInBag.length ? (
         <>
           <div className="[font-size:_clamp(24px,5vw,40px)] font-bold leading-[120%] -tracking-[0.4px] mb-3 max-w-[474px]">

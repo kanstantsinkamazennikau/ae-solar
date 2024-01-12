@@ -11,7 +11,7 @@ export default function CartModelDetails({ model }: DetailsProps) {
   ) as Array<keyof Details>;
 
   return (
-    <div className="p-5 flex flex-col">
+    <div className="md:px-5 md:py-5 py-4 px-0 flex flex-col">
       {modelDetailsKeys.map((modelKey) => {
         let component;
         const modelParameterText =
@@ -37,16 +37,16 @@ export default function CartModelDetails({ model }: DetailsProps) {
           const modelParameterLength = model[modelKey].length;
           const modelParameterWidth = model[modelKey].width;
           component = (
-            <div className="whitespace-nowrap">
+            <span>
               {`${modelParameterLength}(mm) × ${modelParameterWidth}(mm)`}
-            </div>
+            </span>
           );
         }
         if (modelKey === "powerRange") {
           const modelParameterFrom = model[modelKey].from;
           const modelParameterTo = model[modelKey].to;
           component = (
-            <div>{`${modelParameterFrom} — ${modelParameterTo} W`}</div>
+            <span>{`${modelParameterFrom} — ${modelParameterTo} W`}</span>
           );
         }
         if (modelKey === "applications") {
@@ -67,7 +67,7 @@ export default function CartModelDetails({ model }: DetailsProps) {
           modelKey === "moduleSpecification"
         ) {
           const modelParameterValue = model[modelKey];
-          component = <div>{modelParameterValue}</div>;
+          component = <span>{modelParameterValue}</span>;
         }
 
         return (
@@ -75,10 +75,22 @@ export default function CartModelDetails({ model }: DetailsProps) {
             key={modelKey}
             className="grid py-1 gap-5 border-b border-dashed border-[#ffffff26] items-center justify-between grid-cols-2"
           >
-            <div className="font-walsheim text-base capitalize font-medium text-[#606060] -tracking-[0.32px] ">
+            <div className="font-walsheim [font-size:_clamp(11px,5vw,16px)] capitalize font-medium text-[#606060] -tracking-[0.32px] ">
               {modelParameterText}
             </div>
-            <div className="font-walsheim text-sm font-semibold leading-[120%] -tracking-[0.32px] pr-2 max-w-[180px] min-w-[180px]">
+            <div
+              className="
+                font-walsheim
+                [font-size:_clamp(10px,5vw,14px)]
+                font-semibold
+                leading-[120%]
+                -tracking-[0.32px]
+                pr-2
+                min-[420px]:max-w-[180px]
+                min-[420px]:min-w-[180px]
+                break-words
+              "
+            >
               {component}
             </div>
           </div>

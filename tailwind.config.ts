@@ -106,6 +106,12 @@ const config: Config = {
           backgroundPosition: "center center",
           backgroundSize: "cover",
         },
+        ".cartItemsDivider": {
+          backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="360" height="1" viewBox="0 0 360 1" fill="none"><path d="M0 0.508301H360" stroke="url(%23paint0_linear_4212_5475)"/><defs><linearGradient id="paint0_linear_4212_5475" x1="0" y1="0.508301" x2="360" y2="0.508301" gradientUnits="userSpaceOnUse"><stop stop-color="%232D2D2D" stop-opacity="0"/><stop offset="0.5" stop-color="%232D2D2D"/><stop offset="1" stop-color="%232D2D2D" stop-opacity="0"/></linearGradient></defs></svg>')`,
+          backgroundRepeat: "no-repeat no-repeat",
+          backgroundPosition: "center center",
+          backgroundSize: "cover",
+        },
       });
     }),
   ],

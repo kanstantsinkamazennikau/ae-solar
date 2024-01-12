@@ -15,9 +15,10 @@ export default function Options() {
             top-[64px]
             md:top-[110px]
             h-[240px]
-            min-[500px]:h-[40vh]
+            min-[500px]:h-[33vh]
             md:h-[calc(100vh-130px)]
             z-10
+            w-full
           "
         >
           <div
@@ -27,7 +28,7 @@ export default function Options() {
             border-option-border
             rounded-[20px]
             max-w-[985px]
-            min-[500px]:h-[39vh]
+            min-[500px]:h-[32vh]
             h-[240px]
             md:h-[calc(100vh-130px)]
             w-full
@@ -46,17 +47,19 @@ export default function Options() {
             "
             >
               <Image
-                src={`/images/featuredProducts1.png`}
+                src={`/images/featuredProducts.png`}
                 alt={"featuredProducts"}
                 priority
                 width={1920}
                 height={1080}
+                quality={100}
                 className="
                   md:max-w-full
+                  min-[500px]:max-w-[400px]
                   max-h-full
                   md:h-full
                   h-[200px]
-                  min-[500px]:h-[30vh]
+                  min-[500px]:h-[27vh]
                 "
               />
               <div className="absolute w-full top-0">

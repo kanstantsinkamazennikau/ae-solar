@@ -16,7 +16,7 @@ export default function AddMorePanels() {
 
   return (
     <BasicWidthContainer>
-      <div className="w-full flex justify-center items-center gap-2">
+      <div className="w-full flex justify-center items-center min-[640px]:gap-2 min-[640px]:flex-row flex-col gap-5">
         <Image
           src={`/images/cart/addMorePanels.svg`}
           alt={"addMorePanels"}
@@ -25,7 +25,7 @@ export default function AddMorePanels() {
           height={168}
         />
         <Button onClick={handleClick} style="transparent" size="thin">
-          <span className="font-semibold text-xl-tracking-[0.2px] leading-none">
+          <span className="font-semibold text-sm -tracking-[0.2px] leading-none">
             {CART_ADD_ONE_MORE_PANEL}
           </span>
         </Button>
