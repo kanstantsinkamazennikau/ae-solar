@@ -9,7 +9,7 @@ export default function TechDescription() {
     <BasicWidthContainer>
       <Bens />
       <Divider />
-      <Tech />
+      {/* <Tech /> */}
       <FeaturedProducts />
     </BasicWidthContainer>
   );
