@@ -1,17 +1,13 @@
 "use client";
 
-import { CheckoutFormFileds } from "@/app/[locale]/cart/component/CheckoutForm/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import Inputs from "@/app/[locale]/components/common/BuyerForm/Inputs";
 import { BuyerFormProps } from "@/app/[locale]/components/common/BuyerForm/types";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
-  CHECKOUT_FILL_OUT,
-  CHECKOUT_FORM_FIELDS,
   CHECKOUT_GO_TO_HOME_PAGE,
   CHECKOUT_THANK_YOU,
-  FORMS_FIELDS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
@@ -60,7 +56,19 @@ export default function BuyerForm({
   };
 
   return (
-    <div className="w-full flex justify-center items-center relative min-h-screen -top-[64px] -mb-[144px]">
+    <div
+      className="
+        w-full
+        flex
+        justify-center
+        items-center
+        relative
+        min-h-screen
+        -top-[64px]
+        -mb-[144px]
+        overflow-hidden
+      "
+    >
       <Image
         src={`${
           isShowMessageAfterSubmit
@@ -71,7 +79,16 @@ export default function BuyerForm({
         priority
         width={1920}
         height={1080}
-        className="object-fill h-full absolute"
+        className="
+          object-fill
+          h-full
+          absolute
+          translate-y-[9%]
+          lg:scale-100
+          min-[640px]:scale-150
+          min-[500px]:scale-[2.25]
+          scale-[2.75]
+        "
       />
       <BasicWidthContainer>
         <div className="mt-[135px] mb-4">
@@ -88,13 +105,13 @@ export default function BuyerForm({
             >
               <div
                 className="
-                [font-size:_clamp(32px,5vw,96px)]
-                font-extrabold
-                leading-[100%]
-                -tracking-[2.88px]
-              text-white
-                text-center
-              "
+                  [font-size:_clamp(26px,5vw,96px)]
+                  font-extrabold
+                  leading-[100%]
+                  -tracking-[2.88px]
+                text-white
+                  text-center
+                "
               >
                 {CHECKOUT_THANK_YOU.split(/\r?\n|\r|\n/g).map(
                   (string, index) => (

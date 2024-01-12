@@ -42,6 +42,7 @@ export default function SelectedCodeWithFlag({
         alt={countryWithCode?.flagIcon || ""}
         width={24}
         height={24}
+        className="lg:w-6 lg:h-6 h-5 w-5"
       />
       {countryWithCode?.code}
       <Image

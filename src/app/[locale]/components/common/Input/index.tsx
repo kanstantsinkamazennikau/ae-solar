@@ -8,7 +8,7 @@ export default function Input({
   ...props
 }: InputProps) {
   return (
-    <div className="relative">
+    <div className="relative min-[640px]:w-auto w-full">
       <input
         className={`bg-transparent border-b-2 border-solid border-base-red outline-none ${externalStyle} w-full`}
         placeholder={placeholder}

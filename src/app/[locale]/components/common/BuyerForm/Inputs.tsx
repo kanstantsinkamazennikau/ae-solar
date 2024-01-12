@@ -26,7 +26,27 @@ export default function BuyerForm({
   isShowCloseIcon,
 }: InputsProps) {
   return (
-    <form className="p-20 flex flex-col border border-solid border-[#d0d8e91a] rounded-[40px] bg-[#000000b3] backdrop-blur-[50px] relative">
+    <form
+      className="
+        xl:px-20
+        xl:py-20
+        lg:px-12
+        lg:py-12
+        md:px-10
+        md:py-10
+        px-5
+        py-8
+        flex
+        flex-col
+        border
+        border-solid
+        border-[#d0d8e91a]
+        rounded-[40px]
+        bg-[#000000b3]
+        backdrop-blur-[50px]
+        relative
+        "
+    >
       {isShowCloseIcon && (
         <Image
           src={`/images/close.svg`}
@@ -63,7 +83,19 @@ export default function BuyerForm({
             return (
               <div
                 key={inputField.name}
-                className="flex items-center content-center gap-3 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
+                className="
+                  flex
+                  min-[640px]:items-center
+                  min-[640px]:content-center
+                  items-start
+                  content-start
+                  min-[640px]:gap-3 gap-0
+                  self-stretch
+                  flex-wrap
+                  [font-size:_clamp(20px,2.5vw,40px)]
+                  min-[640px]:flex-row
+                  flex-col
+                "
               >
                 <span className="font-semibold leading-[120%]">
                   {inputField.formTitle}
@@ -84,7 +116,7 @@ export default function BuyerForm({
             return (
               <div
                 key={inputField.name}
-                className="flex items-center content-center gap-3 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
+                className="flex items-center content-center min-[640px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
               >
                 <span className="font-semibold leading-[120%]">
                   {inputField.formTitle}
@@ -107,7 +139,7 @@ export default function BuyerForm({
             return (
               <div
                 key={inputField.name}
-                className="flex items-center content-center gap-3 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
+                className="flex items-center content-center min-[640px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
               >
                 <span className="font-semibold leading-[120%]">
                   {inputField.formTitle}
@@ -130,7 +162,7 @@ export default function BuyerForm({
             return (
               <div
                 key={inputField.name}
-                className="flex items-center content-center gap-3 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
+                className="flex items-center content-center min-[640px]:gap-3 gap-1 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
               >
                 <span className="font-semibold leading-[120%]">
                   {inputField.formTitle}
@@ -150,11 +182,14 @@ export default function BuyerForm({
             );
         })}
       </div>
-      <div>
-        <Button onClick={handleSubmit} showArrow size="normal">
-          {CHECKOUT_SEND_REQUEST}
-        </Button>
-      </div>
+      <Button
+        onClick={handleSubmit}
+        showArrow
+        size="normal"
+        externalStyle="min-[640px]:w-fit w-full"
+      >
+        {CHECKOUT_SEND_REQUEST}
+      </Button>
     </form>
   );
 }

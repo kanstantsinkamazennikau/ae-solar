@@ -17,13 +17,18 @@ export default function Range({
   setError,
 }: RangeProps) {
   const { measure1, measure2, upperLimit, lowerLimit, name1, name2 } = values;
-  const { constructorModel, setConstructorModel } =
-    useContext(ConstructorContext);
+  const {
+    constructorModel,
+    setConstructorModel,
+    isGenerateModel,
+    setIsGenerateModel,
+  } = useContext(ConstructorContext);
 
   const onChange = (
     e: ChangeEvent<HTMLInputElement>,
     paramsKey: ObjectKeys<ConstructorModel>
   ) => {
+    isGenerateModel && setIsGenerateModel(false);
     const { value, name } = e.target;
 
     const re = /^[0-9\b]+$/;

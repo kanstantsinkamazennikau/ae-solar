@@ -9,8 +9,20 @@ import Image from "next/image";
 import { useContext } from "react";
 
 export default function Color({ text, paramsKey, values }: ColorProps) {
-  const { constructorModel, setConstructorModel } =
-    useContext(ConstructorContext);
+  const {
+    constructorModel,
+    setConstructorModel,
+    isGenerateModel,
+    setIsGenerateModel,
+  } = useContext(ConstructorContext);
+
+  const onClickHandler = (color: string) => {
+    isGenerateModel && setIsGenerateModel(false);
+    setConstructorModel((prevState: ConstructorModel) => ({
+      ...prevState,
+      [paramsKey]: color,
+    }));
+  };
 
   return (
     <div key={text}>
@@ -28,12 +40,7 @@ export default function Color({ text, paramsKey, values }: ColorProps) {
                   ? "constructor-model-picker-selected-border"
                   : "constructor-model-picker-border"
               }`}
-              onClick={() =>
-                setConstructorModel((prevState: ConstructorModel) => ({
-                  ...prevState,
-                  [paramsKey]: color,
-                }))
-              }
+              onClick={() => onClickHandler(color)}
             >
               <Image
                 src={`/images/option/${icon}`}

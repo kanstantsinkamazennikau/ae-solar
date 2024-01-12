@@ -19,7 +19,7 @@ export default function Cart() {
 
   if (isBagLoading) return <Loader />;
 
-  return isShowCheckoutForm ? (
+  return true ? (
     <CheckoutForm />
   ) : (
     <div className="flex flex-col justify-center items-center">

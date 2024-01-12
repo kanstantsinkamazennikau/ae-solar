@@ -7,7 +7,6 @@ import { useRef, useState } from "react";
 
 export default function DropdownInput({
   placeholder,
-  register,
   externalStyle,
   error,
   name,

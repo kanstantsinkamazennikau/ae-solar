@@ -42,12 +42,14 @@ export default function Button({
   size = "regular",
   style,
   showArrow,
+  externalStyle,
 }: ButtonProps) {
   return (
     <button
       disabled={disabled}
       onClick={onClick}
       className={`
+        ${externalStyle}
         relative
         disabled:opacity-70
         disabled:cursor-not-allowed

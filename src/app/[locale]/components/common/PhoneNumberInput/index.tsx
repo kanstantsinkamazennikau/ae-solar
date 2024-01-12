@@ -34,8 +34,8 @@ export default function PhoneNumberInput({
   };
 
   return (
-    <div className={`${externalStyle} flex relative`}>
-      <div className="bg-transparent border-b-2 border-solid border-base-red outline-none pr-2 flex">
+    <div className={`${externalStyle} flex relative min-[640px]:w-auto w-full`}>
+      <div className="bg-transparent border-b-2 border-solid border-base-red outline-none pr-2 flex w-full">
         <SelectedCodeWithFlag
           code={selectedCode}
           externalStyle={externalStyle}

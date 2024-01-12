@@ -8,8 +8,20 @@ import {
 import { useContext } from "react";
 
 export default function Slider({ text, values, paramsKey }: SliderProps) {
-  const { constructorModel, setConstructorModel } =
-    useContext(ConstructorContext);
+  const {
+    constructorModel,
+    setConstructorModel,
+    isGenerateModel,
+    setIsGenerateModel,
+  } = useContext(ConstructorContext);
+
+  const onClickHandler = (value: string) => {
+    isGenerateModel && setIsGenerateModel(false);
+    setConstructorModel((prevState: ConstructorModel) => ({
+      ...prevState,
+      [paramsKey]: value,
+    }));
+  };
 
   return (
     <div>
@@ -28,12 +40,7 @@ export default function Slider({ text, values, paramsKey }: SliderProps) {
                   ? "constructor-model-picker-selected-outline"
                   : ""
               }`}
-              onClick={() =>
-                setConstructorModel((prevState: ConstructorModel) => ({
-                  ...prevState,
-                  [paramsKey]: value,
-                }))
-              }
+              onClick={() => onClickHandler(value)}
             >
               <div className="px-[14px] py-3 w-full flex justify-center [font-size:_clamp(11px,2vw,14px)] font-semibold leading-[0.9] -tracking-[0.42px]">
                 {value}

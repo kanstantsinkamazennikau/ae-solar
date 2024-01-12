@@ -15,14 +15,19 @@ export default function ApplicationsCheckboxes({
   clarification,
   values,
 }: ApplicationsCheckboxes) {
-  const { constructorModel, setConstructorModel, setIsGenerateModel } =
-    useContext(ConstructorContext);
+  const {
+    constructorModel,
+    setConstructorModel,
+    isGenerateModel,
+    setIsGenerateModel,
+  } = useContext(ConstructorContext);
 
   const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     const isChecked = e.target.checked;
     const applicationType = e.target.name;
 
     const { applications } = constructorModel;
+    isGenerateModel && setIsGenerateModel(false);
 
     if (isChecked) {
       setConstructorModel((prevState: ConstructorModel) => ({
