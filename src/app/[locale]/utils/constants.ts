@@ -1566,3 +1566,21 @@ export const ABOUT_MAP_DESIGNATIONS = [
 ];
 export const ABOUT_OUR_HISTORY = "Our History";
 export const ABOUT_IN_NUMBERS = "in Numbers";
+
+export const COOKIES_AESOLAR = "Cookies on AESolar";
+export const COOKIES_WE_USE_COOKIES =
+  "We use cookies and other tracking technologies to improve your browsing experience on our site, show personalized content and targeted ads, analyze site traffic, and understand where our audiences come from. To learn more or opt-out, read our Cookie Policy. Please also read our Privacy Notice and Terms of Use, which became effective December 20, 2019.";
+export const COOKIES_LINKS = [
+  "Cookie Policy",
+  "Privacy Notice",
+  "Terms of Use",
+];
+export const COOKIES_MATCH_TEXT_WITH_LINK = {
+  "Cookie Policy": "policy",
+  "Privacy Notice": "privacy",
+  "Terms of Use": "terms",
+};
+export const COOKIES_BY_CHOOSING =
+  "By choosing “I Accept”, you consent to our use of cookies and other tracking technologies.";
+export const COOKIES_I_ACCEPT = "I accept";
+export const COOKIES_I_DO_NOT_ACCEPT = "I do not accept";
