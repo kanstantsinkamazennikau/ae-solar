@@ -37,8 +37,8 @@ export default function Ben({
       duration-200
       ${
         isFullHeightRow
-          ? "md:row-start-1 md:row-end-3 md:col-start-2 md:col-end-3 md:max-w-full md:max-h-full min-[500px]:min-h-[270px] min-h-[328px]"
-          : "lg:h-[340px] md:h-[300px]"
+          ? "md:row-start-1 md:row-end-3 md:col-start-2 md:col-end-3 min-[500px]:min-h-full min-h-[328px]"
+          : "h-full"
       }`}
       onMouseLeave={() => setIsReadMoreVisible(false)}
       onMouseEnter={() => setIsReadMoreVisible(true)}
@@ -96,7 +96,7 @@ export default function Ben({
           className={`leading-[120%] font-medium [font-size:_clamp(14px,2.5vw,32px)] ${
             isFullHeightRow
               ? "[word-spacing:normal]"
-              : "min-[500px]:[word-spacing:normal] [word-spacing:100vh]"
+              : "min-[500px]:[word-spacing:normal]"
           }`}
         >
           {title}
@@ -120,7 +120,7 @@ export default function Ben({
           duration-500 ${
             isReadMoreVisible
               ? "translate-x-0"
-              : "translate-x-full -mr-10 min-[500px]:translate-x-0 min-[500px]:-mr-0"
+              : "translate-x-[200%] -mr-10 min-[500px]:translate-x-0 min-[500px]:-mr-0"
           }`}
         >
           <LinkWithArrow label={TECH_INFO_READ_MORE} href="" />

@@ -29,9 +29,9 @@ export default function FeaturedProducts() {
         lg:mb-[180px]
         md:mb-[100px]
         mb-[80px]
-        md:[background-position-y:-70px]
+        md:[background-position-y:-35px]
         lg:[background-position-y:0px]
-        [background-position-y:-28px]
+        [background-position-y:-13px]
         h-[360px]
       "
     >

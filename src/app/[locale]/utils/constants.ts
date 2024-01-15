@@ -218,33 +218,33 @@ export const TECH_INFO_WHY_WE_ARE = "Why We are";
 export const TECH_INFO_BEST_AT_THIS = "Best at This";
 export const TECH_INFO_BENS = [
   {
-    title: `Automation Systems`,
+    title: `Unmatched Precision in Solar Engineering`,
     description:
-      "Stringent quality control measures are implemented at every stage of production to ensure that each solar module meets the highest standards of efficiency, durability, and performance.",
+      "AESOLAR stands as a paragon of German precision, leading the charge in the solar module manufacturing sector. Our Tier 1 status is a testament to our relentless pursuit of innovation and excellence.",
     image: "automation.svg",
   },
   {
-    title: "German Manufacturer",
+    title: "Crafting a Sustainable Tomorrow",
     description:
-      "AESOLAR is a prominent German solar module manufacturer known for its precise and reliable engineering.",
+      "At AESOLAR, we merge advanced technology with unwavering quality and sustainability, forging ahead in our quest for excellence. We’re not just creating solar modules; we’re sculpting a greener future.",
     image: "manufacturer.png",
   },
   {
-    title: "Advanced Technologies",
+    title: "Quality Without Compromise",
     description:
-      "AESOLAR combines advanced technologies, superior quality, and sustainability to contribute to a more sustainable future by manufacturing solar modules.",
+      "Adherence to AAA+ standards and meticulous quality checks are the cornerstones of our process, reflecting our dedication to outstanding quality and customer satisfaction.",
     image: "technologies.svg",
   },
   {
-    title: "Energy Efficiency",
+    title: "Excellence in Manufacturing",
     description:
-      "AESOLAR strives to set new industry benchmarks by focusing on energy efficiency, which not only reduces manufacturing costs but also minimizes the environmental impact.",
+      "Our cutting-edge facilities boast smart automation, ensuring every solar module is a product of precision and cost-efficiency. Rigorous quality controls are integral to our manufacturing ethos, guaranteeing superior efficiency, resilience, and functionality in every product.",
     image: "efficiency.svg",
   },
   {
-    title: "Recyclable Materials",
+    title: "Setting Industry Benchmarks",
     description:
-      "The company is certified for sustainable production and adheres to German quality, labor, and environmental standards.",
+      "AESOLAR is driven to elevate industry standards by enhancing energy efficiency. This not only reduces manufacturing expenses and ecological footprints but also provides our customers with the best total cost of ownership.",
     image: "materials.svg",
   },
 ];

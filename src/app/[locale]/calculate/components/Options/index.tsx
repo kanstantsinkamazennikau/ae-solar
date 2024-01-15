@@ -47,7 +47,7 @@ export default function Options() {
             "
             >
               <Image
-                src={`/images/featuredProducts.png`}
+                src={`/images/featuredProductsConstructor.svg`}
                 alt={"featuredProducts"}
                 priority
                 width={1920}
