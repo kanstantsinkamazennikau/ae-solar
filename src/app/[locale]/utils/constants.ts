@@ -19,6 +19,8 @@ export const FORMS_FIELDS = {
   code: "code",
   budget: "budget",
   service: "service",
+  interest: "interest",
+  comment: "comment",
 };
 
 // NAVIGATION
@@ -124,9 +126,9 @@ export const PRODUCT_INTRO_PANELS_IMAGES = [
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
     stats: {
-      power: "440W",
-      efficiency: "22.57%",
-      voltage: "1000",
+      power: "505W",
+      efficiency: "22.47%",
+      voltage: "1500",
     },
     info: {
       icon: "Comet.svg",
@@ -135,9 +137,9 @@ export const PRODUCT_INTRO_PANELS = {
   },
   Aurora: {
     stats: {
-      power: "441W",
-      efficiency: "22.57%",
-      voltage: "1000",
+      power: "505W",
+      efficiency: "22.47%",
+      voltage: "1500",
     },
     info: {
       icon: "Aurora.svg",
@@ -146,9 +148,9 @@ export const PRODUCT_INTRO_PANELS = {
   },
   Meteor: {
     stats: {
-      power: "44W",
-      efficiency: "22.57%",
-      voltage: "1000",
+      power: "580W",
+      efficiency: "22.47%",
+      voltage: "1500",
     },
     info: {
       icon: "Meteor.svg",
@@ -157,9 +159,9 @@ export const PRODUCT_INTRO_PANELS = {
   },
   Terra: {
     stats: {
-      power: "20W",
-      efficiency: "22.57%",
-      voltage: "1000",
+      power: "525W",
+      efficiency: "21.95%",
+      voltage: "1500",
     },
     info: {
       icon: "Terra.svg",
@@ -168,9 +170,9 @@ export const PRODUCT_INTRO_PANELS = {
   },
   Neptune: {
     stats: {
-      power: "1000W",
-      efficiency: "22.57%",
-      voltage: "1000",
+      power: "380W",
+      efficiency: "20.86%",
+      voltage: "1500",
     },
     info: {
       icon: "Neptune.svg",
@@ -179,8 +181,8 @@ export const PRODUCT_INTRO_PANELS = {
   },
   ShadeStar: {
     stats: {
-      power: "ShadeStar",
-      efficiency: "22.57%",
+      power: "200W",
+      efficiency: "19.22%",
       voltage: "1000",
     },
     info: {
@@ -257,9 +259,9 @@ export const REVIEWS_SEE_WHY_WE_SHINE = "See Why We Shine";
 export const REVIEWS_QUOTES_WITH_AUTHORS = [
   {
     quote:
-      "1Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
-    author: "Emily Johnson",
-    organisation: "Quantum Dynamics",
+      "Why do I like working with the company AE Solar...🤔. Quite simply because it's awesome. Great team, great products, great service. All-round carefree package. There are no problems with the employees, there are only solutions and that for every customer of ours. Just German quality.",
+    author: "Thomas Schneider",
+    organisation: "Purchasing, sales, consulting at the company SVM Solar",
   },
   {
     quote:
@@ -862,15 +864,15 @@ export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
   Aurora: {
     powerRange: {
       parameter: "Power range",
-      value: "320W—335W",
+      value: "495W—505W",
     },
     efficiencyRange: {
       parameter: "Efficiency range",
-      value: "19.01%—19.90%",
+      value: "21.70%—22.47%",
     },
     aximumSystemVoltage: {
       parameter: "Maximum system voltage",
-      value: "1000 (V)",
+      value: "1500 (V)",
     },
     performanceGuarantee: {
       parameter: "Performance Guarantee",
@@ -896,43 +898,87 @@ export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
     },
     performanceGuarantee: {
       parameter: "Performance Guarantee",
-      value: "304 years",
+      value: "30 years",
     },
     productWarranty: {
       parameter: "Product Warranty",
-      value: "12 years",
+      value: "15 years",
     },
   },
   Meteor: {
     powerRange: {
       parameter: "Power range",
-      value: "3250W—335W",
+      value: "560W—580W",
     },
     efficiencyRange: {
       parameter: "Efficiency range",
-      value: "197.01%—19.90%",
+      value: "21.70%—22.47%",
     },
     aximumSystemVoltage: {
       parameter: "Maximum system voltage",
-      value: "10007 (V)",
+      value: "1500 (V)",
     },
     performanceGuarantee: {
       parameter: "Performance Guarantee",
-      value: "307 years",
+      value: "30 years",
     },
     productWarranty: {
       parameter: "Product Warranty",
-      value: "12 years",
+      value: "15 years",
     },
   },
   Terra: {
     powerRange: {
       parameter: "Power range",
-      value: "320W—335W",
+      value: "505W—525W",
     },
     efficiencyRange: {
       parameter: "Efficiency range",
-      value: "195.01%—19.90%",
+      value: "21.12%—21.95%",
+    },
+    aximumSystemVoltage: {
+      parameter: "Maximum system voltage",
+      value: "1500 (V)",
+    },
+    performanceGuarantee: {
+      parameter: "Performance Guarantee",
+      value: "30 years",
+    },
+    productWarranty: {
+      parameter: "Product Warranty",
+      value: "15 years",
+    },
+  },
+  Neptune: {
+    powerRange: {
+      parameter: "Power range",
+      value: "370W—380W",
+    },
+    efficiencyRange: {
+      parameter: "Efficiency range",
+      value: "20.31%—20.86%",
+    },
+    aximumSystemVoltage: {
+      parameter: "Maximum system voltage",
+      value: "1500 (V)",
+    },
+    performanceGuarantee: {
+      parameter: "Performance Guarantee",
+      value: "30 years",
+    },
+    productWarranty: {
+      parameter: "Product Warranty",
+      value: "15 years",
+    },
+  },
+  ShadeStar: {
+    powerRange: {
+      parameter: "Power range",
+      value: "190W—200W",
+    },
+    efficiencyRange: {
+      parameter: "Efficiency range",
+      value: "18.26%—19.22%",
     },
     aximumSystemVoltage: {
       parameter: "Maximum system voltage",
@@ -944,110 +990,150 @@ export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
     },
     productWarranty: {
       parameter: "Product Warranty",
-      value: "12 years",
-    },
-  },
-  Neptune: {
-    powerRange: {
-      parameter: "Power range",
-      value: "32W—335W",
-    },
-    efficiencyRange: {
-      parameter: "Efficiency range",
-      value: "11.01%—19.90%",
-    },
-    aximumSystemVoltage: {
-      parameter: "Maximum system voltage",
-      value: "1001 (V)",
-    },
-    performanceGuarantee: {
-      parameter: "Performance Guarantee",
-      value: "14 years",
-    },
-    productWarranty: {
-      parameter: "Product Warranty",
-      value: "132 years",
-    },
-  },
-  ShadeStar: {
-    powerRange: {
-      parameter: "Power range",
-      value: "350W—370W",
-    },
-    efficiencyRange: {
-      parameter: "Efficiency range",
-      value: "19.11%—20.90%",
-    },
-    aximumSystemVoltage: {
-      parameter: "Maximum system voltage",
-      value: "100 (V)",
-    },
-    performanceGuarantee: {
-      parameter: "Performance Guarantee",
-      value: "300 years",
-    },
-    productWarranty: {
-      parameter: "Product Warranty",
-      value: "121 years",
+      value: "15 years",
     },
   },
 };
 
 export const CONSTRUCTOR_MODELS_SHORT_DETAILS = "Short Details";
 export const CONSTRUCTOR_ADD_TO_BAG = "Add to Bag";
-export const CONSTRUCTOR_MODELS_ADVANTAGES = [
-  {
-    icon: "sun.svg",
-    advantageCategory: "Temperature",
-    advantageDescription:
-      "Hot spot temperature lower than 85°C. The IEC61215 test shows that with a zero percentage, a small and a 100 percentage of shaded area, respectively hot spots will not exceed 85°C, which is the maximum operating condition.",
-  },
-  {
-    icon: "shield.svg",
-    advantageCategory: "Safety",
-    advantageDescription:
-      "Instantly reduced temperature, thus elimination material hazard and ensuring more safery of the module, preventing fire risks caused by hot spots.",
-  },
-  {
-    icon: "euro.svg",
-    advantageCategory: "High returns",
-    advantageDescription:
-      "This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
-  },
-  {
-    icon: "award.svg",
-    advantageCategory: "Certificates",
-    advantageDescription:
-      "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
-  },
-];
+export const CONSTRUCTOR_MODELS_ADVANTAGES = {
+  Aurora: [
+    {
+      advantageCategory: "Benefit",
+      advantageDescription:
+        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+    },
+    {
+      advantageCategory: "Documentation (pdf)",
+      advantageDescription: [
+        { datasheet: "AE CMD-108 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-120 465W-485W", link: "" },
+        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+      ],
+    },
+  ],
+  Comet: [
+    {
+      advantageCategory: "Benefit",
+      advantageDescription:
+        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+    },
+    {
+      advantageCategory: "Documentation (pdf)",
+      advantageDescription: [
+        { datasheet: "AE CMD-108 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-120 465W-485W", link: "" },
+        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+      ],
+    },
+  ],
+  Meteor: [
+    {
+      advantageCategory: "Benefit",
+      advantageDescription:
+        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+    },
+    {
+      advantageCategory: "Documentation (pdf)",
+      advantageDescription: [
+        { datasheet: "AE CMD-108 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-120 465W-485W", link: "" },
+        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+      ],
+    },
+  ],
+  Terra: [
+    {
+      advantageCategory: "Benefit",
+      advantageDescription:
+        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+    },
+    {
+      advantageCategory: "Documentation (pdf)",
+      advantageDescription: [
+        { datasheet: "AE CMD-108 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-120 465W-485W", link: "" },
+        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+      ],
+    },
+  ],
+  Neptune: [
+    {
+      advantageCategory: "Benefit",
+      advantageDescription:
+        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+    },
+    {
+      advantageCategory: "Documentation (pdf)",
+      advantageDescription: [
+        { datasheet: "AE CMD-108 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-120 465W-485W", link: "" },
+        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+      ],
+    },
+  ],
+  ShadeStar: [
+    {
+      advantageCategory: "Benefit",
+      advantageDescription:
+        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+    },
+    {
+      advantageCategory: "Documentation (pdf)",
+      advantageDescription: [
+        { datasheet: "AE CMD-108 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
+        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
+        { datasheet: "AE CMD-120 465W-485W", link: "" },
+        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+      ],
+    },
+  ],
+};
 
 export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   Aurora: {
     materialCharacteristics: {
       cellType: {
         characteristic: "Cell type",
-        value: "Mono-crystalline 158.75 x 158.75 mm",
+        value: "Gallium-doped Mono c-Si PERC, Half-cut cells, 182 mm",
       },
       noOfCells: {
         characteristic: "No. of cells",
-        value: "60 (6 x 10)",
+        value: "120",
       },
       dimensions: {
         characteristic: "Dimensions",
-        value: "1690 × 996 × 35 mm",
+        value: "1902 mm x 1133 mm x 30 mm",
       },
       weight: {
         characteristic: "Weight",
-        value: "19.0 kg",
+        value: "22.5 kg",
       },
       junctionBox: {
         characteristic: "Junction box",
-        value: "IP 67 rated",
+        value: "IP68 rated, 3 Bypass Diodes",
       },
       outputCable: {
         characteristic: "Output cable",
-        value: "1 x 4.0mm2, 900mm length or customised",
+        value: "1 x 4 mm², 350 mm length or customized",
       },
       connectorType: {
         characteristic: "Connector type",
@@ -1055,7 +1141,7 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
       },
       hailResistance: {
         characteristic: "Hail resistance",
-        value: "Max. ⌀ 25 mm, at 23 m/s",
+        value: "Max. ⌀ 25 mm at 23 m/s",
       },
       windLoad: {
         characteristic: "Wind load",
@@ -1076,27 +1162,27 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     materialCharacteristics: {
       cellType: {
         characteristic: "Cell type",
-        value: "Mono-crystalline 158.75 x 158.75 mm",
+        value: "Silicon Heterojunction Technology, Half-cut cells, 210 mm",
       },
       noOfCells: {
         characteristic: "No. of cells",
-        value: "60 (6 x 10)",
+        value: "110",
       },
       dimensions: {
         characteristic: "Dimensions",
-        value: "1690 × 996 × 35 mm",
+        value: "2383 mm x 1095 mm x 35 mm",
       },
       weight: {
         characteristic: "Weight",
-        value: "19.0 kg",
+        value: "32.5 kg",
       },
       junctionBox: {
         characteristic: "Junction box",
-        value: "IP 67 rated",
+        value: "IP68 rated, 3 Bypass Diodes",
       },
       outputCable: {
         characteristic: "Output cable",
-        value: "1 x 4.0mm2, 900mm length or customised",
+        value: "1 x 4.0mm2, 350mm length or customised",
       },
       connectorType: {
         characteristic: "Connector type",
@@ -1125,27 +1211,27 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     materialCharacteristics: {
       cellType: {
         characteristic: "Cell type",
-        value: "Mono-crystalline 158.75 x 158.75 mm",
+        value: "Mono c-Si PERC, Full cells, 158.75 mm",
       },
       noOfCells: {
         characteristic: "No. of cells",
-        value: "60 (6 x 10)",
+        value: "60",
       },
       dimensions: {
         characteristic: "Dimensions",
-        value: "1690 × 996 × 35 mm",
+        value: "2278 mm x 1133 mm x 30 mm",
       },
       weight: {
         characteristic: "Weight",
-        value: "19.0 kg",
+        value: "26.5 kg",
       },
       junctionBox: {
         characteristic: "Junction box",
-        value: "IP 67 rated",
+        value: "IP68 rated, 3 Bypass Diodes",
       },
       outputCable: {
         characteristic: "Output cable",
-        value: "1 x 4.0mm2, 900mm length or customised",
+        value: "1 x 4.0mm2, 350mm length or customised",
       },
       connectorType: {
         characteristic: "Connector type",
@@ -1174,27 +1260,27 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     materialCharacteristics: {
       cellType: {
         characteristic: "Cell type",
-        value: "Mono-crystalline 158.75 x 158.75 mm",
+        value: "Gallium-doped Mono c-Si PERC, Half-cut cells, 182 mm",
       },
       noOfCells: {
         characteristic: "No. of cells",
-        value: "60 (6 x 10)",
+        value: "132",
       },
       dimensions: {
         characteristic: "Dimensions",
-        value: "1690 × 996 × 35 mm",
+        value: "1070 mm x 2235 mm x 30 mm",
       },
       weight: {
         characteristic: "Weight",
-        value: "19.0 kg",
+        value: "30.5 kg",
       },
       junctionBox: {
         characteristic: "Junction box",
-        value: "IP 67 rated",
+        value: "IP68 rated, 3 Bypass Diodes",
       },
       outputCable: {
         characteristic: "Output cable",
-        value: "1 x 4.0mm2, 900mm length or customised",
+        value: "1 x 4.0mm2, 350mm length or customised",
       },
       connectorType: {
         characteristic: "Connector type",
@@ -1223,27 +1309,27 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     materialCharacteristics: {
       cellType: {
         characteristic: "Cell type",
-        value: "Mono-crystalline 158.75 x 158.75 mm",
+        value: "Gallium-doped Mono c-Si PERC, Half-cut cells, 166 mm",
       },
       noOfCells: {
         characteristic: "No. of cells",
-        value: "60 (6 x 10)",
+        value: "120",
       },
       dimensions: {
         characteristic: "Dimensions",
-        value: "1690 × 996 × 35 mm",
+        value: "1755 mm x 1038 mm x 35 mm",
       },
       weight: {
         characteristic: "Weight",
-        value: "19.0 kg",
+        value: "33 kg",
       },
       junctionBox: {
         characteristic: "Junction box",
-        value: "IP 67 rated",
+        value: "IP 68 rated",
       },
       outputCable: {
         characteristic: "Output cable",
-        value: "1 x 4.0mm2, 900mm length or customised",
+        value: "1 x 4.0mm2, 350mm length or customised",
       },
       connectorType: {
         characteristic: "Connector type",
@@ -1272,23 +1358,23 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     materialCharacteristics: {
       cellType: {
         characteristic: "Cell type",
-        value: "Mono-crystalline 158.75 x 158.75 mm",
+        value: "Mono c-Si PERC, Full cells, 158.75 mm",
       },
       noOfCells: {
         characteristic: "No. of cells",
-        value: "60 (6 x 10)",
+        value: "36",
       },
       dimensions: {
         characteristic: "Dimensions",
-        value: "1690 × 996 × 35 mm",
+        value: "1530 mm x 680 mm x 30 mm",
       },
       weight: {
         characteristic: "Weight",
-        value: "19.0 kg",
+        value: "10.8 kg",
       },
       junctionBox: {
         characteristic: "Junction box",
-        value: "IP 67 rated",
+        value: "IP68 rated, 2 Bypass Diodes",
       },
       outputCable: {
         characteristic: "Output cable",
@@ -1353,6 +1439,11 @@ export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
     type: "input",
   },
   {
+    formTitle: "I’m interested in",
+    name: "interest",
+    type: "picker",
+  },
+  {
     formTitle: "Please, contact me at",
     placeholder: "your e-mail",
     name: "email",
@@ -1378,9 +1469,8 @@ export const CONSULT_FORM_FIELDS: FormFileds[] = [
   },
   {
     formTitle: "I’m interested in",
-    placeholder: "services name",
-    name: "service",
-    type: "dropdown",
+    name: "interest",
+    type: "picker",
   },
   {
     formTitle: "My budget",
@@ -1399,6 +1489,12 @@ export const CONSULT_FORM_FIELDS: FormFileds[] = [
     name: "phone",
     type: "phone",
   },
+  {
+    formTitle: "I have a",
+    placeholder: "comment or question, etc.",
+    name: "comment",
+    type: "input",
+  },
 ];
 export const DROPDOWN_INPUT_VALUES = {
   [FORMS_FIELDS.service]: [
@@ -1410,6 +1506,7 @@ export const DROPDOWN_INPUT_VALUES = {
 
 export const PICKER_INPUT_VALUES = {
   [FORMS_FIELDS.budget]: ["$1…5k", "$5…10k", "$10…20k", "$20…50k", "> $50k"],
+  [FORMS_FIELDS.interest]: ["installing", "partnership", "investing"],
 };
 
 export const ABOUT_SUSTAINABLE = `Sustainable

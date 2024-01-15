@@ -39,11 +39,12 @@ export default function Consult() {
 
   const defaultValues = {
     [FORMS_FIELDS.name]: "",
+    [FORMS_FIELDS.interest]: PICKER_INPUT_VALUES[FORMS_FIELDS.interest][0],
+    [FORMS_FIELDS.budget]: PICKER_INPUT_VALUES[FORMS_FIELDS.budget][0],
     [FORMS_FIELDS.email]: "",
     [FORMS_FIELDS.phone]: "",
-    [FORMS_FIELDS.budget]: PICKER_INPUT_VALUES[FORMS_FIELDS.budget][0],
-    [FORMS_FIELDS.service]: "",
     [FORMS_FIELDS.code]: "+49",
+    [FORMS_FIELDS.comment]: "",
   };
 
   return (

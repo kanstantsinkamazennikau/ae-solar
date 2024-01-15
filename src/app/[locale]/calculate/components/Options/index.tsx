@@ -12,7 +12,7 @@ export default function Options() {
           className="
           bg-black
             sticky
-            top-[64px]
+            top-[55px]
             md:top-[110px]
             h-[240px]
             min-[500px]:h-[33vh]

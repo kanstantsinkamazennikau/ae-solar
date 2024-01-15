@@ -12,9 +12,15 @@ import {
 import Image from "next/image";
 import { useContext } from "react";
 
+const advantagesWithIconMappping = {
+  Benefit: "document.svg",
+  "Documentation (pdf)": "file.svg",
+};
+
 export default function ModelSpecs() {
   const { constructorModel } = useContext(ConstructorContext);
   const modelSpecs = CONSTRUCTOR_MODELS_SPECS[constructorModel.model];
+  const modelAdvantages = CONSTRUCTOR_MODELS_ADVANTAGES[constructorModel.model];
   const modelSpecsKeys = Object.keys(modelSpecs) as ModelSpecsKeys[];
 
   return (
@@ -41,13 +47,17 @@ export default function ModelSpecs() {
             h-full
           "
         >
-          {CONSTRUCTOR_MODELS_ADVANTAGES.map(
-            ({ icon, advantageCategory, advantageDescription }) => (
+          {modelAdvantages.map(
+            ({ advantageCategory, advantageDescription }) => (
               <div key={advantageCategory} className="flex flex-col gap-3">
                 <div className="flex items-center gap-2">
                   <Image
-                    src={`/images/option/${icon}`}
-                    alt={icon}
+                    src={`/images/option/${
+                      advantagesWithIconMappping[
+                        advantageCategory as keyof typeof advantagesWithIconMappping
+                      ]
+                    }`}
+                    alt={advantageCategory}
                     priority
                     width={24}
                     height={24}
@@ -58,19 +68,38 @@ export default function ModelSpecs() {
                   </span>
                 </div>
                 <p className="[font-size:_clamp(11px,1.5vw,14px)] font-medium leading-[150%] font-walsheim text-dark-gray-900">
-                  {advantageDescription}
+                  {Array.isArray(advantageDescription)
+                    ? advantageDescription.map(({ datasheet, link }) => (
+                        <a
+                          href={link}
+                          target="_blank"
+                          key={datasheet}
+                          className="
+                            inline-flex
+                            justify-between
+                            w-full
+                            leading-[120%]
+                            font-normal
+                            [font-size:_clamp(14px,1.5vw,16px)]
+                            text-white
+                            -tracking-[0.32px]
+                          "
+                        >
+                          {datasheet}
+                          <Image
+                            src={`/images/option/linkArrow.svg`}
+                            alt={"linkArrow"}
+                            priority
+                            width={16}
+                            height={16}
+                          />
+                        </a>
+                      ))
+                    : advantageDescription}
                 </p>
               </div>
             )
           )}
-          <Image
-            src={`/images/option/frauhofer.svg`}
-            alt={"frauhofer"}
-            priority
-            width={288}
-            height={65}
-            className="inline-block"
-          />
         </div>
 
         <div className="flex flex-col w-full">

@@ -179,7 +179,6 @@ export default function ProductIntro() {
               md:-translate-y-1/2
               md:pr-5
               [&>*:last-child>div:last-child]:hidden
-              hidden
             "
           >
             {modelStatsKeys.map((key) => (

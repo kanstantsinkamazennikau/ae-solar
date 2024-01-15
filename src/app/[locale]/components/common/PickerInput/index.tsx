@@ -11,7 +11,7 @@ export default function PickerInput({
   const [activeValue, setActiveValue] = useState<string>(getValues(name));
 
   return (
-    <div className="flex gap-2 pt-1">
+    <div className="flex gap-2 pt-1 flex-wrap justify-center">
       {pickerValues.map((value) => (
         <Button
           key={value}
@@ -23,7 +23,7 @@ export default function PickerInput({
           }}
           size="extrasmall"
         >
-          <span className="text-xl font-semibold -tracking-[0.2px]">
+          <span className="[font-size:_clamp(14px,2.5vw,20px)] font-semibold -tracking-[0.2px]">
             {value}
           </span>
         </Button>

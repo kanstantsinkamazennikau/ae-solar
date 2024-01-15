@@ -4,6 +4,7 @@ import {
   CHECKOUT_FILL_OUT,
   CHECKOUT_FORM_FIELDS,
   FORMS_FIELDS,
+  PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";
 import { RegisterOptions } from "react-hook-form";
 
@@ -12,6 +13,7 @@ export default function CheckoutForm() {
     name: {
       required: "Name is required",
     },
+    interest: { required: "Interest is required" },
     email: {
       required: "Email is required",
       pattern: {
@@ -19,6 +21,7 @@ export default function CheckoutForm() {
         message: "Invalid email address",
       },
     },
+
     phone: {
       required: "Phone number is required",
       pattern: {
@@ -30,6 +33,7 @@ export default function CheckoutForm() {
 
   const defaultValues = {
     [FORMS_FIELDS.name]: "",
+    [FORMS_FIELDS.interest]: PICKER_INPUT_VALUES[FORMS_FIELDS.interest][0],
     [FORMS_FIELDS.email]: "",
     [FORMS_FIELDS.phone]: "",
     [FORMS_FIELDS.code]: "+49",

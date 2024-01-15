@@ -101,7 +101,7 @@ export default function BuyerForm({
                   {inputField.formTitle}
                 </span>
                 <Input
-                  externalStyle="font-light leading-[120%] "
+                  externalStyle="font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(14px,2vw,40px)]"
                   name={inputField.name}
                   placeholder={inputField.placeholder}
                   register={register(
@@ -122,7 +122,7 @@ export default function BuyerForm({
                   {inputField.formTitle}
                 </span>
                 <DropdownInput
-                  externalStyle="font-light leading-[120%] "
+                  externalStyle="font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(14px,2vw,40px)]"
                   name={inputField.name}
                   placeholder={inputField.placeholder}
                   setValue={setValue}
