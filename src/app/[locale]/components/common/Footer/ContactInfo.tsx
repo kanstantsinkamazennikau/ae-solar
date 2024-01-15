@@ -31,7 +31,7 @@ export default function ContactInfo() {
         max-[500px]:items-start
       "
     >
-      <div className="min-[650px]:px-6 px-0 flex flex-col gap-[10px]">
+      <div className="flex flex-col gap-[10px]">
         {FOOTER_CONTACT_INFO.map(({ icon, info, linkTo }) => {
           return (
             <div
@@ -41,9 +41,8 @@ export default function ContactInfo() {
                 items-start
                 leading-[130%]
                 font-normal
-                font-walshei
+                font-walsheim
                  gap-1
-                max-w-[185px]
                 [font-size:_clamp(10px,1vw,14px)]
               "
             >
@@ -65,24 +64,6 @@ export default function ContactInfo() {
             </div>
           );
         })}
-      </div>
-      <div className="flex p-6 flex-col gap-4 bg-[#0D0D0D] border border-solid border-[#191919] rounded-xl w-full">
-        <p className="text-base leading-[120%] text-dark-gray-900 [font-size:_clamp(11px,1vw,16px)]">
-          {FOOTER_SUBSCRIBE_NEWSLETTER}
-        </p>
-        <Input
-          placeholder={FOOTER_YOUR_EMAIL}
-          externalStyle="placeholder:[font-size:_clamp(11px,1vw,16px)] "
-        />
-        <Button
-          onClick={() => console.log("subscribe")}
-          style="transparent"
-          size="extrasmall"
-        >
-          <span className="text-sm leading-none [font-size:_clamp(10px,1vw,14px)]">
-            {FOOTER_SUBSCRIBE}
-          </span>
-        </Button>
       </div>
     </div>
   );

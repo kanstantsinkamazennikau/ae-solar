@@ -10,6 +10,7 @@ import {
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string;
   externalStyle?: string;
+  externalContainerStyle?: string;
   rule?: RegisterOptions;
   register?: UseFormRegisterReturn<string>;
   error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined;

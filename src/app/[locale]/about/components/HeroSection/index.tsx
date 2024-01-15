@@ -6,23 +6,10 @@ import {
   ABOUT_SUSTAINABLE,
   ABOUT_WATCH_VIDEO,
 } from "@/app/[locale]/utils/constants";
+import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 
 export default async function HeroSection() {
-  const highlightMatchingText = (text: string, textToMatch: string[]) => {
-    const matchRegex = RegExp(textToMatch.join("|"), "ig");
-    const matches = [...text.matchAll(matchRegex)];
-    return text.split(matchRegex).map((nonBoldText, index) => (
-      <span
-        key={nonBoldText}
-        className="font-walsheim leading-[170%] font-semibold [font-size:_clamp(16px,2vw,24px)]"
-      >
-        {nonBoldText}
-        {<span className="text-dark-gray-900">{matches[index]}</span>}
-      </span>
-    ));
-  };
-
   return (
     <div className="w-full flex justify-center items-center relative -top-[60px] h-screen">
       <div className="!-top-[120px] fade-strip-top " />
@@ -59,9 +46,11 @@ export default async function HeroSection() {
           ))}
         </div>
         <div className="text-center">
-          {highlightMatchingText(
+          {styleMatchingText(
             ABOUT_COMPANY_FOUNDATION,
-            ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT
+            ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT,
+            "font-walsheim leading-[170%] font-semibold [font-size:_clamp(16px,2vw,24px)]",
+            "text-dark-gray-900"
           )}
         </div>
         <div className="flex gap-5">

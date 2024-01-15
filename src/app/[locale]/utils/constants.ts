@@ -126,9 +126,9 @@ export const PRODUCT_INTRO_PANELS_IMAGES = [
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
     stats: {
-      power: "505W",
-      efficiency: "22.47%",
-      voltage: "1500",
+      power: "200W",
+      efficiency: "19.22%",
+      voltage: "1000",
     },
     info: {
       icon: "Comet.svg",
@@ -312,11 +312,11 @@ export const FAQ_MORE_SOLUTIONS = "More solutions";
 export const FOOTER_LINKS_ARRAY = [
   {
     category: "Products",
-    links: ["Aurora", "Comet", "Meteor", "Terra", "Neptune", "Hot-Spot Fee"],
+    links: ["Aurora", "Comet", "Meteor", "Terra", "Neptune", "ShadeStar"],
   },
   {
     category: "Company",
-    links: ["Overview", "Manufacturing", "News", "FAQ"],
+    links: ["About Us", "Manufacturing", "News", "Blog"],
   },
   {
     category: "Solution",
@@ -330,11 +330,21 @@ export const FOOTER_LINKS_ARRAY = [
       "Manual",
       "Warranty",
       "Presentations",
+      "FAQ",
     ],
   },
 ];
 export const FOOTER_GERMAN_BRAND =
   "German brand in the renewable energy industry, providing high-quality products and services since 2003.";
+export const FOOTER_GERMAN_BRAND_WORDS_TO_BOLD = ["German brand", "since 2003"];
+export const FOOTER_WE_ARE_SOCIAL = "We are social";
+export const FOOTER_SOCIAL = [
+  { icon: "linkedin.svg", link: "https://www.linkedin.com/company/ae-solar/" },
+  { icon: "facebook.svg", link: "https://www.facebook.com/aesolarenergy/" },
+  { icon: "twitter.svg", link: "https://twitter.com/aesolar_energy/" },
+  { icon: "youtube.svg", link: "https://www.youtube.com/@AESOLAR/featured/" },
+];
+export const FOOTER_SAVE_THE_WORLD = "It's time to save the world!";
 export const FOOTER_CONTACT_INFO = [
   {
     icon: "location.svg",
@@ -356,7 +366,7 @@ export const FOOTER_CONTACT_INFO = [
     linkTo: "mailto:sales@ae-solar.com",
   },
 ];
-export const FOOTER_SUBSCRIBE_NEWSLETTER = "Subscribe to newsletter";
+export const FOOTER_SUBSCRIBE_NEWSLETTER = "Subscribe to Our Newsletter";
 export const FOOTER_COPYRIGHT =
   "Copyright © 2023 AESolar. All rights reserved.";
 export const FOOTER_YOUR_EMAIL = "your e-mail";
@@ -886,15 +896,15 @@ export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
   Comet: {
     powerRange: {
       parameter: "Power range",
-      value: "3201W—335W",
+      value: "190W—200W",
     },
     efficiencyRange: {
       parameter: "Efficiency range",
-      value: "19.031%—19.90%",
+      value: "18.26%—19.22%",
     },
     aximumSystemVoltage: {
       parameter: "Maximum system voltage",
-      value: "10002 (V)",
+      value: "1000 (V)",
     },
     performanceGuarantee: {
       parameter: "Performance Guarantee",

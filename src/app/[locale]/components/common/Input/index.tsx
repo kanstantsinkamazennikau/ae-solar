@@ -4,11 +4,14 @@ export default function Input({
   placeholder,
   register,
   externalStyle,
+  externalContainerStyle,
   error,
   ...props
 }: InputProps) {
   return (
-    <div className="relative min-[640px]:w-auto w-full">
+    <div
+      className={`relative min-[640px]:w-auto w-full ${externalContainerStyle}`}
+    >
       <input
         className={`bg-transparent border-b-2 border-solid border-base-red outline-none ${externalStyle} w-full`}
         placeholder={placeholder}
