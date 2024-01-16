@@ -4,6 +4,10 @@ import {
   PanelParams,
 } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import { FormFileds } from "@/app/[locale]/components/common/BuyerForm/types";
+import {
+  DocumentsTypesOther,
+  DocumentsTypesPresentation,
+} from "@/app/[locale]/documents/documents/types";
 
 export const FORM_FIELDS_INPUT_TYPES = {
   input: "input",
@@ -46,12 +50,12 @@ export const HEADER_NAV_LINKS_ARRAY = [
     text: "Documents",
     subMenu: [
       {
-        url: "/solutions1",
-        text: "Solutions1",
+        url: "/documents",
+        text: "Documents",
       },
       {
-        url: "/solutions2",
-        text: "Solutions2",
+        url: "/faq",
+        text: "FAQ",
       },
       {
         url: "/solutions3",
@@ -1584,3 +1588,119 @@ export const COOKIES_BY_CHOOSING =
   "By choosing “I Accept”, you consent to our use of cookies and other tracking technologies.";
 export const COOKIES_I_ACCEPT = "I accept";
 export const COOKIES_I_DO_NOT_ACCEPT = "I do not accept";
+export const COOKIES_USER_CONSENT_FLAG = "cookieConsentIsTrue";
+
+export const DOCUMENTS_DOCUMENTS_HEADING = "Documents";
+export const DOCUMENTS_YOU_NEED_TO_KNOW = "You Need to Know";
+export const DOCUMENTS_CATEGORIES = "Categories";
+export const DOCUMENTS_SEARCH = "Search";
+export const DOCUMENTS_FILES: (
+  | DocumentsTypesPresentation
+  | DocumentsTypesOther
+)[] = [
+  {
+    type: "Presentation",
+    data: [
+      {
+        title: "Company Profile",
+        linkTitle: "Company Profile (EN)",
+        link: "link",
+      },
+      {
+        title: "Main Product Catalogue",
+        linkTitle: "Main Product Catalogue",
+        link: "link",
+      },
+      {
+        title: "ShadeStar Introduction",
+        linkTitle: "ShadeStar Introduction",
+        image: "Aurora.png",
+        link: "link",
+      },
+      {
+        title: "ShadeStar case study",
+        linkTitle: "ShadeStar case study",
+        image: "Aurora.png",
+        link: "link",
+      },
+      {
+        title: "ShadeStar Presentation (EN)",
+        linkTitle: "ShadeStar Presentation (EN)",
+        image: "Aurora.png",
+        link: "link",
+      },
+      {
+        title: "ShadeStar Presentation (PT)",
+        linkTitle: "ShadeStar Presentation (PT)",
+        image: "Aurora.png",
+        link: "link",
+      },
+      {
+        title: "Production Process",
+        linkTitle: "Production Process",
+        link: "link",
+      },
+      {
+        title: "Terra",
+        linkTitle: "Dr Hamed Hanifi Terra",
+        image: "Aurora.png",
+        link: "link",
+      },
+    ],
+  },
+  {
+    type: "References",
+    data: [
+      { linkTitle: "References1", link: "link" },
+      { linkTitle: "References2", link: "link" },
+      { linkTitle: "References3", link: "link" },
+      { linkTitle: "References4", link: "link" },
+      { linkTitle: "References5", link: "link" },
+      { linkTitle: "References6", link: "link" },
+    ],
+  },
+  {
+    type: "Technical Data",
+    data: [
+      { linkTitle: "Technical Data1", link: "link" },
+      { linkTitle: "Technical Data2", link: "link" },
+      { linkTitle: "Technical Data3", link: "link" },
+      { linkTitle: "Technical Data4", link: "link" },
+      { linkTitle: "Technical Data5", link: "link" },
+      { linkTitle: "Technical Data6", link: "link" },
+    ],
+  },
+  {
+    type: "Certification",
+    data: [
+      { linkTitle: "Certification1", link: "link" },
+      { linkTitle: "Certification2", link: "link" },
+      { linkTitle: "Certification3", link: "link" },
+      { linkTitle: "Certification4", link: "link" },
+      { linkTitle: "Certification5", link: "link" },
+      { linkTitle: "Certification6", link: "link" },
+    ],
+  },
+  {
+    type: "Warranty",
+    data: [
+      { linkTitle: "Warranty1", link: "link" },
+      { linkTitle: "Warranty2", link: "link" },
+      { linkTitle: "Warranty3", link: "link" },
+      { linkTitle: "Warranty4", link: "link" },
+      { linkTitle: "Warranty5", link: "link" },
+      { linkTitle: "Warranty6", link: "link" },
+    ],
+  },
+  {
+    type: "Videos",
+    data: [
+      { linkTitle: "Videos1", link: "link" },
+      { linkTitle: "Videos2", link: "link" },
+      { linkTitle: "Videos3", link: "link" },
+      { linkTitle: "Videos4", link: "link" },
+      { linkTitle: "Videos5", link: "link" },
+      { linkTitle: "Videos6", link: "link" },
+    ],
+  },
+];

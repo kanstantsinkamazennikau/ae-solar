@@ -11,7 +11,7 @@ import StickyNavigationProvider from "@/app/[locale]/context/stickyNavigationCon
 import ConstructorProvider from "@/app/[locale]/context/constructorContext";
 import ToastContainerProvider from "@/app/[locale]/context/toastProvider";
 import "react-toastify/dist/ReactToastify.css";
-import Cookies from "@/app/[locale]/components/common/Cookies";
+import Cookies from "@/app/[locale]/components/common/CookiesBanner";
 
 const walsheim = localFont({
   src: [

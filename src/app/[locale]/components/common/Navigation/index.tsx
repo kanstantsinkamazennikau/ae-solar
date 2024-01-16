@@ -20,23 +20,15 @@ import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext, useState } from "react";
 
 export default function Navigation() {
-  const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
-  const [subMenuHeading, setSubMenuHeading] = useState("");
   const { sticky } = useContext(StickyNavigationContext);
   const params = useParams();
   const router = useRouter();
   const pathname = usePathname();
 
   const hideSubnavigation = () => {
-    return ["calculate", "consult"].some((path) => pathname.includes(path));
-  };
-
-  const onSubMenuHeadingClick = (subMenuHeader: string) => {
-    setSubMenuHeading(subMenuHeader);
-  };
-
-  const onLinkClick = () => {
-    setIsHamburgerMenuOpen(false);
+    return ["calculate", "consult", "documents"].some((path) =>
+      pathname.includes(path)
+    );
   };
 
   const handleClick = () => {

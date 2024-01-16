@@ -12,7 +12,7 @@ const buttonStyle = (style: string | undefined) => {
     case "secondary":
       return "bg-white text-black";
     case "textOnly":
-      return "bg-transparent !px-3 !py-3";
+      return "bg-transparent";
     default:
       return "";
   }
@@ -49,7 +49,6 @@ export default function Button({
       disabled={disabled}
       onClick={onClick}
       className={`
-        ${externalStyle}
         relative
         disabled:opacity-70
         disabled:cursor-not-allowed
@@ -63,6 +62,7 @@ export default function Button({
         justify-center
         items-center
         gap-[6px]
+        ${externalStyle}
       `}
     >
       {children}

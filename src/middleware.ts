@@ -2,6 +2,7 @@ import { defaultLocale, locales } from "@/app/[locale]/i18n/settings";
 import { NextRequest, NextResponse } from "next/server";
 import Negotiator from "negotiator";
 import { match } from "@formatjs/intl-localematcher";
+import { COOKIES_USER_CONSENT_FLAG } from "@/app/[locale]/utils/constants";
 
 export const config = {
   // Do not run the middleware on the following paths
@@ -25,7 +26,9 @@ export default function middleware(request: NextRequest) {
   let nextLocale;
 
   const pathname = request.nextUrl.pathname;
-
+  const isUserAgreeWithCookiesPolicy = request.cookies.get(
+    COOKIES_USER_CONSENT_FLAG
+  );
   const pathLocale = locales.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
@@ -59,6 +62,7 @@ export default function middleware(request: NextRequest) {
 
   if (!response) response = NextResponse.next();
 
-  if (nextLocale) response.cookies.set("NEXT_LOCALE", nextLocale);
+  if (nextLocale && isUserAgreeWithCookiesPolicy)
+    response.cookies.set("NEXT_LOCALE", nextLocale);
   return response;
 }

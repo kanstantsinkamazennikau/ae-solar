@@ -52,6 +52,10 @@ body {
   @apply bg-gradient-to-l fade-strip-vertical right-0;
 }
 
+.presentationFade {
+  @apply from-[#13131380] to-[#131313] bg-gradient-to-b;
+}
+
 .get-in-touch-border {
   @apply border border-solid border-get-in-touch-border bg-get-in-touch backdrop-blur-lg rounded-full;
 }

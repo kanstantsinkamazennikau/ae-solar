@@ -15,6 +15,7 @@ export interface NavLinkProps {
 export interface SubMenuItemsProps {
   subMenuArray: NavLink[];
   onLinkClick?: () => void;
+  parentUrl: string;
 }
 
 export interface SubNavigationProps {

@@ -9,9 +9,12 @@ import {
   COOKIES_I_DO_NOT_ACCEPT,
   COOKIES_LINKS,
   COOKIES_MATCH_TEXT_WITH_LINK,
+  COOKIES_USER_CONSENT_FLAG,
   COOKIES_WE_USE_COOKIES,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { MouseEvent, useEffect, useState } from "react";
+import Cookies from "js-cookie";
 
 const styleLink = (text: string, linkToMatch: string[]) => {
   const matchRegex = RegExp(linkToMatch.join("|"), "ig");
@@ -41,11 +44,36 @@ const styleLink = (text: string, linkToMatch: string[]) => {
   ));
 };
 
-export default function Cookies() {
+export default function CookiesBanner() {
+  const [cookieConsentIsTrue, setCookieConsentIsTrue] = useState(true);
+
+  useEffect(() => {
+    if (localStorage.getItem(COOKIES_USER_CONSENT_FLAG) === "false") {
+      setCookieConsentIsTrue(true);
+      return;
+    }
+    const consentIsTrue = Cookies.get(COOKIES_USER_CONSENT_FLAG) === "true";
+    setCookieConsentIsTrue(consentIsTrue);
+  }, []);
+
+  const onAcceptClick = (e: MouseEvent<HTMLButtonElement>) => {
+    Cookies.set(COOKIES_USER_CONSENT_FLAG, "true");
+    setCookieConsentIsTrue(true);
+  };
+
+  const onRejectClick = (e: MouseEvent<HTMLButtonElement>) => {
+    localStorage.setItem(COOKIES_USER_CONSENT_FLAG, "false");
+    setCookieConsentIsTrue(true);
+  };
+
+  if (cookieConsentIsTrue) {
+    return null;
+  }
+
   return (
-    <div className="flex flex-col py-10 bg-[#0C0C0C] fixed bottom-0 z-40 justify-center items-center w-full hidden">
+    <div className="flex md:py-10 py-4 bg-[#0C0C0C] fixed bottom-0 z-40 justify-center items-center w-full">
       <BasicWidthContainer>
-        <div className="px-[60px] gap-[120px] flex items-center">
+        <div className="lg:px-[60px] md:px-5 lg:gap-[120px] md:gap-12 gap-5 flex items-center md:flex-row flex-col">
           <Image
             src={`/images/glowFull.png`}
             alt="glow"
@@ -63,7 +91,7 @@ export default function Cookies() {
             className="absolute bottom-0"
           />
           <div className="flex [font-size:_clamp(10px,1.5vw,14px)] font-walsheim flex-col text-dark-gray-900">
-            <p className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold font-sans mb-6 text-white">
+            <p className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold font-sans mb-2 text-white">
               {COOKIES_AESOLAR}
             </p>
             <p className="mb-2">
@@ -71,15 +99,18 @@ export default function Cookies() {
             </p>
             <p>{COOKIES_BY_CHOOSING}</p>
           </div>
-          <div className="flex flex-col [font-size:_clamp(14px,1.5vw,20px)] font-semibold">
-            <Button onClick={() => console.log()}>
-              <span className="whitespace-nowrap">{COOKIES_I_ACCEPT}</span>
+          <div className="flex md:flex-col flex-row font-semibold gap-6">
+            <Button onClick={onAcceptClick} size="normal">
+              <span className="whitespace-nowrap [font-size:_clamp(14px,1.5vw,20px)]">
+                {COOKIES_I_ACCEPT}
+              </span>
             </Button>
             <Button
-              onClick={() => localStorage.setItem("cookies", "false")}
+              onClick={onRejectClick}
               style="textOnly"
+              externalStyle="!px-0 !py-0"
             >
-              <span className="whitespace-nowrap text-base-red">
+              <span className="whitespace-nowrap text-base-red [font-size:_clamp(14px,1.5vw,20px)]">
                 {COOKIES_I_DO_NOT_ACCEPT}
               </span>
             </Button>
