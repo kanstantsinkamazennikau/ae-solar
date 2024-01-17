@@ -63,7 +63,7 @@ export default function AccordionItem({
 
       <div
         ref={contentHeight}
-        className="transition-all duration-500 ease-in-out overflow-hidden "
+        className={`transition-all duration-[400ms] ease-in-out overflow-hidden`}
         style={isOpen || isOpenItem ? { height } : { height: 0 }}
       >
         {children}

@@ -1,4 +1,4 @@
-import { CheckoutFormFileds } from "@/app/[locale]/cart/component/CheckoutForm/types";
+import { CheckoutFormFileds } from "@/app/[locale]/cart/components/CheckoutForm/types";
 import BuyerForm from "@/app/[locale]/components/common/BuyerForm";
 import {
   CHECKOUT_FILL_OUT,

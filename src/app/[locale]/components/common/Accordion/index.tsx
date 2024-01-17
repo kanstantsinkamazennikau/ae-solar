@@ -6,15 +6,26 @@ import {
   JSXElementConstructor,
   ReactElement,
   cloneElement,
+  useEffect,
   useState,
 } from "react";
 
-export default function Accordion({ children, multiple }: AccordionProps) {
+export default function Accordion({
+  children,
+  multiple,
+  documentsAccordionActiveIndex,
+}: AccordionProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   const handleItemClick = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+
+  useEffect(() => {
+    if (documentsAccordionActiveIndex !== undefined) {
+      setActiveIndex(documentsAccordionActiveIndex);
+    }
+  }, [documentsAccordionActiveIndex]);
 
   const renderChildren = () => {
     return Children.map(

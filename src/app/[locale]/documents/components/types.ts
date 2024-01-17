@@ -29,17 +29,3 @@ export interface TextProps {
   linkTitle: string;
   link: string;
 }
-
-export interface CategoriesProps {
-  setSelectedCategory: Dispatch<
-    SetStateAction<
-      | "Presentation"
-      | "References"
-      | "Technical Data"
-      | "Certification"
-      | "Warranty"
-      | "Videos"
-    >
-  >;
-  selectedCategory: string;
-}

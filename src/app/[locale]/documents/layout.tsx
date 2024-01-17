@@ -1,30 +1,19 @@
-"use client";
-
-import Accordion from "@/app/[locale]/components/common/Accordion";
-import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import DocumentsHeading from "@/app/[locale]/components/common/DocumentsHeading";
 import Input from "@/app/[locale]/components/common/Input";
-import Categories from "@/app/[locale]/documents/documents/Categories";
-import Presentation from "@/app/[locale]/documents/documents/Presentation";
-import Text from "@/app/[locale]/documents/documents/Text";
+import DocumentsProvider from "@/app/[locale]/context/documentsContext";
+import Categories from "@/app/[locale]/documents/components/Categories";
 import {
   DOCUMENTS_DOCUMENTS_HEADING,
-  DOCUMENTS_FILES,
   DOCUMENTS_SEARCH,
   DOCUMENTS_YOU_NEED_TO_KNOW,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useState } from "react";
 
-export default function Documents() {
-  const [selectedCategory, setSelectedCategory] = useState(
-    DOCUMENTS_FILES[0].category
-  );
-
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <DocumentsProvider>
       <div className="relative -mt-[64px]">
         <Image
           src={`/images/documents/documents.png`}
@@ -56,7 +45,7 @@ export default function Documents() {
           />
           <div className="flex gap-[60px]">
             <div>
-              <Categories {...{ selectedCategory, setSelectedCategory }} />
+              <Categories />
             </div>
 
             <div className="w-full">
@@ -110,60 +99,11 @@ export default function Documents() {
               </div>
 
               <hr className="bg-option-border h-[1px] border-none w-full mt-2" />
-              <Accordion>
-                {DOCUMENTS_FILES.map(({ category, data }) => {
-                  const styledTitle = (
-                    <span
-                      className={`${
-                        category === selectedCategory
-                          ? "text-white"
-                          : "text-dark-gray-900"
-                      } `}
-                    >
-                      {category}
-                    </span>
-                  );
-                  const onClickCallback = () => setSelectedCategory(category);
-
-                  if (category === "Presentation") {
-                    return (
-                      <AccordionItem
-                        title={styledTitle}
-                        key={category}
-                        onClickCallback={onClickCallback}
-                        id={category}
-                      >
-                        <div className="grid grid-cols-3 gap-[6px] pb-10">
-                          {data.map(({ link, linkTitle, title, image }) => (
-                            <Presentation
-                              {...{ link, title, linkTitle, image }}
-                              key={title}
-                            />
-                          ))}
-                        </div>
-                      </AccordionItem>
-                    );
-                  }
-                  return (
-                    <AccordionItem
-                      key={category}
-                      title={styledTitle}
-                      onClickCallback={onClickCallback}
-                      id={category}
-                    >
-                      <div className="pb-10">
-                        {data.map(({ linkTitle, link }) => (
-                          <Text {...{ linkTitle, link }} key={linkTitle} />
-                        ))}
-                      </div>
-                    </AccordionItem>
-                  );
-                })}
-              </Accordion>
+              {children}
             </div>
           </div>
         </BasicWidthContainer>
       </div>
-    </>
+    </DocumentsProvider>
   );
 }

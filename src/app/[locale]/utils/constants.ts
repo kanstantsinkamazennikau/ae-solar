@@ -7,7 +7,7 @@ import { FormFileds } from "@/app/[locale]/components/common/BuyerForm/types";
 import {
   DocumentsTypesOther,
   DocumentsTypesPresentation,
-} from "@/app/[locale]/documents/documents/types";
+} from "@/app/[locale]/documents/components/types";
 
 export const FORM_FIELDS_INPUT_TYPES = {
   input: "input",
@@ -54,11 +54,11 @@ export const HEADER_NAV_LINKS_ARRAY = [
         text: "Documents",
       },
       {
-        url: "/faq",
+        url: "/documents/faq",
         text: "FAQ",
       },
       {
-        url: "/solutions3",
+        url: "/documents/solutions3",
         text: "Solutions3",
       },
     ],
@@ -1701,6 +1701,12 @@ export const DOCUMENTS_FILES: (
       { linkTitle: "Videos4", link: "link" },
       { linkTitle: "Videos5", link: "link" },
       { linkTitle: "Videos6", link: "link" },
+      { linkTitle: "Videos7", link: "link" },
+      { linkTitle: "Videos8", link: "link" },
+      { linkTitle: "Videos9", link: "link" },
+      { linkTitle: "Videos10", link: "link" },
+      { linkTitle: "Videos11", link: "link" },
+      { linkTitle: "Videos12", link: "link" },
     ],
   },
 ];

@@ -23,4 +23,5 @@ export interface AccordionProps {
     | ReactElement<any, string | JSXElementConstructor<any>>
     | readonly ReactElement<any, string | JSXElementConstructor<any>>[];
   multiple?: boolean;
+  documentsAccordionActiveIndex?: number;
 }

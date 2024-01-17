@@ -1,7 +1,7 @@
 import {
   Details,
   DetailsProps,
-} from "@/app/[locale]/cart/component/ModelsInCart/types";
+} from "@/app/[locale]/cart/components/ModelsInCart/types";
 import { CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 

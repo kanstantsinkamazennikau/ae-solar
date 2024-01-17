@@ -1,9 +1,9 @@
 "use client";
 
-import CheckoutForm from "@/app/[locale]/cart/component/CheckoutForm";
-import AddMorePanels from "@/app/[locale]/cart/component/AddMorePanels";
-import CheckOut from "@/app/[locale]/cart/component/CheckOut";
-import ModelsInCart from "@/app/[locale]/cart/component/ModelsInCart";
+import CheckoutForm from "@/app/[locale]/cart/components/CheckoutForm";
+import AddMorePanels from "@/app/[locale]/cart/components/AddMorePanels";
+import CheckOut from "@/app/[locale]/cart/components/CheckOut";
+import ModelsInCart from "@/app/[locale]/cart/components/ModelsInCart";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Loader from "@/app/[locale]/components/common/Loader";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";

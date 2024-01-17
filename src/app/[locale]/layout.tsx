@@ -124,7 +124,7 @@ export default function RootLayout({
   if (!locales.includes(locale as any)) notFound();
 
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale}>
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
         <ToastContainerProvider />
         <ModelProvider>

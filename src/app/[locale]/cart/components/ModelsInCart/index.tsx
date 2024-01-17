@@ -1,7 +1,6 @@
 "use client";
 
-import CartModelDetails from "@/app/[locale]/cart/component/ModelsInCart/CartModelDetails";
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import CartModelDetails from "@/app/[locale]/cart/components/ModelsInCart/CartModelDetails";
 import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { CART_LOCALSTORAGE, CART_REMOVE } from "@/app/[locale]/utils/constants";

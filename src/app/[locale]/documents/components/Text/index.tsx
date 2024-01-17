@@ -1,6 +1,6 @@
 "use client";
 
-import { TextProps } from "@/app/[locale]/documents/documents/types";
+import { TextProps } from "@/app/[locale]/documents/components/types";
 import Image from "next/image";
 import { useState } from "react";
 

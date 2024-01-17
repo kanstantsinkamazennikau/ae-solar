@@ -66,7 +66,7 @@ export default function NavLink({
                     mt-1 bg-white rotate-45"
               ></div>
             </div>
-            <SubMenuItems subMenuArray={subMenu} parentUrl={url} />
+            <SubMenuItems subMenuArray={subMenu} />
           </div>
 
           {/* MOBILE SUBMENU ON HEADING CLICK */}
@@ -75,11 +75,7 @@ export default function NavLink({
               subMenuHeading === text ? "min-[920px]:hidden" : "hidden"
             }`}
           >
-            <SubMenuItems
-              subMenuArray={subMenu}
-              onLinkClick={onLinkClick}
-              parentUrl={url}
-            />
+            <SubMenuItems subMenuArray={subMenu} onLinkClick={onLinkClick} />
           </div>
         </>
       )}

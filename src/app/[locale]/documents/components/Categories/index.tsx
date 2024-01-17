@@ -1,15 +1,21 @@
-import { CategoriesProps } from "@/app/[locale]/documents/documents/types";
+"use client";
+
+import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import {
   DOCUMENTS_CATEGORIES,
   DOCUMENTS_FILES,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
 
-export default function Categories({
-  selectedCategory,
-  setSelectedCategory,
-}: CategoriesProps) {
+export default function Categories() {
+  const {
+    selectedCategory,
+    setSelectedCategory,
+    setDocumentsAccordionActiveIndex,
+  } = useContext(DocumentsContext);
+
   return (
     <div className="flex flex-col sticky min-[920px]:top-[80px] top-[64px]">
       <Image
@@ -46,13 +52,22 @@ export default function Categories({
           leading-[120%]
         "
       >
-        {DOCUMENTS_FILES.map(({ category }) => {
+        {DOCUMENTS_FILES.map(({ category }, index) => {
           const isSelectedcategory = selectedCategory === category;
           return (
             <Link
               key={category}
               href={`#${category}`}
-              onClick={() => setSelectedCategory(category)}
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedCategory(category);
+                setDocumentsAccordionActiveIndex(index);
+                setTimeout(() => {
+                  document
+                    .getElementById(category)!
+                    .scrollIntoView({ behavior: "smooth" });
+                }, 350);
+              }}
             >
               <p
                 className={`
