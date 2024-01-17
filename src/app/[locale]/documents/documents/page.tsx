@@ -1,3 +1,5 @@
+"use client";
+
 import Accordion from "@/app/[locale]/components/common/Accordion";
 import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
@@ -14,8 +16,13 @@ import {
   DOCUMENTS_YOU_NEED_TO_KNOW,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Documents() {
+  const [selectedCategory, setSelectedCategory] = useState(
+    DOCUMENTS_FILES[0].category
+  );
+
   return (
     <>
       <div className="relative -mt-[64px]">
@@ -49,14 +56,15 @@ export default function Documents() {
           />
           <div className="flex gap-[60px]">
             <div>
-              <Categories />
+              <Categories {...{ selectedCategory, setSelectedCategory }} />
             </div>
 
             <div className="w-full">
               <div
                 className="
                   sticky
-                  top-[80px]
+                  min-[920px]:top-[80px]
+                  top-[64px]
                   z-30
                   pb-2
                   bg-black
@@ -65,17 +73,17 @@ export default function Documents() {
               >
                 <div
                   className="
-                  flex
-                  pl-2
-                  pr-[6px]
-                  border-solid
-                  border
-                border-option-border
-                  items-center
-                  rounded-full
-                bg-[#0D0D0D]
-                  w-full
-                "
+                    flex
+                    pl-2
+                    pr-[6px]
+                    border-solid
+                    border
+                  border-option-border
+                    items-center
+                    rounded-full
+                  bg-[#0D0D0D]
+                    w-full
+                  "
                 >
                   <div className="flex py-3 px-2 w-full">
                     <Image
@@ -102,11 +110,29 @@ export default function Documents() {
               </div>
 
               <hr className="bg-option-border h-[1px] border-none w-full mt-2" />
-              <Accordion multiple>
-                {DOCUMENTS_FILES.map(({ type, data }) => {
-                  if (type === "Presentation") {
+              <Accordion>
+                {DOCUMENTS_FILES.map(({ category, data }) => {
+                  const styledTitle = (
+                    <span
+                      className={`${
+                        category === selectedCategory
+                          ? "text-white"
+                          : "text-dark-gray-900"
+                      } `}
+                    >
+                      {category}
+                    </span>
+                  );
+                  const onClickCallback = () => setSelectedCategory(category);
+
+                  if (category === "Presentation") {
                     return (
-                      <AccordionItem key={type} title={type}>
+                      <AccordionItem
+                        title={styledTitle}
+                        key={category}
+                        onClickCallback={onClickCallback}
+                        id={category}
+                      >
                         <div className="grid grid-cols-3 gap-[6px] pb-10">
                           {data.map(({ link, linkTitle, title, image }) => (
                             <Presentation
@@ -119,7 +145,12 @@ export default function Documents() {
                     );
                   }
                   return (
-                    <AccordionItem key={type} title={type}>
+                    <AccordionItem
+                      key={category}
+                      title={styledTitle}
+                      onClickCallback={onClickCallback}
+                      id={category}
+                    >
                       <div className="pb-10">
                         {data.map(({ linkTitle, link }) => (
                           <Text {...{ linkTitle, link }} key={linkTitle} />

@@ -13,6 +13,8 @@ export default function AccordionItem({
   style = "default",
   index,
   activeIndex,
+  onClickCallback,
+  id,
 }: AccordionItemProps) {
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(
@@ -28,11 +30,19 @@ export default function AccordionItem({
     setHeight(contentHeight.current?.scrollHeight);
   }, []);
 
+  const onClickBasedOnAccordeonType = () => {
+    onClickCallback && onClickCallback();
+    multiple ? onItemWithMultipleFlagClick() : onClick!();
+  };
+
   return (
-    <div className="border-b border-solid border-[#242424] overflow-hidden last:border-none">
+    <div
+      className="border-b border-solid border-[#242424] last:border-none scroll-mt-[140px]"
+      id={id}
+    >
       <button
-        className="w-full text-left lg:py-6 md:py-4 py-3 flex items-center justify-between [font-size:_clamp(16px,2.5vw,40px)] leading-[120%]"
-        onClick={multiple ? onItemWithMultipleFlagClick : onClick}
+        className="w-full text-left lg:py-6 md:py-4 py-3 flex items-center justify-between [font-size:_clamp(16px,2.5vw,40px)] leading-[120%] "
+        onClick={onClickBasedOnAccordeonType}
       >
         <p
           className={`${
@@ -53,7 +63,7 @@ export default function AccordionItem({
 
       <div
         ref={contentHeight}
-        className="transition-all duration-500 ease-in-out"
+        className="transition-all duration-500 ease-in-out overflow-hidden "
         style={isOpen || isOpenItem ? { height } : { height: 0 }}
       >
         {children}

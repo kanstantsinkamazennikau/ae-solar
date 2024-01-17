@@ -1,10 +1,12 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface DocumentsTypesPresentation {
-  type: "Presentation";
+  category: "Presentation";
   data: PresentationProps[];
 }
 
 export interface DocumentsTypesOther {
-  type:
+  category:
     | "References"
     | "Technical Data"
     | "Certification"
@@ -26,4 +28,18 @@ export interface PresentationProps {
 export interface TextProps {
   linkTitle: string;
   link: string;
+}
+
+export interface CategoriesProps {
+  setSelectedCategory: Dispatch<
+    SetStateAction<
+      | "Presentation"
+      | "References"
+      | "Technical Data"
+      | "Certification"
+      | "Warranty"
+      | "Videos"
+    >
+  >;
+  selectedCategory: string;
 }

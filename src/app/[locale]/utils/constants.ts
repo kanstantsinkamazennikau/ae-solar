@@ -1599,7 +1599,7 @@ export const DOCUMENTS_FILES: (
   | DocumentsTypesOther
 )[] = [
   {
-    type: "Presentation",
+    category: "Presentation",
     data: [
       {
         title: "Company Profile",
@@ -1649,7 +1649,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    type: "References",
+    category: "References",
     data: [
       { linkTitle: "References1", link: "link" },
       { linkTitle: "References2", link: "link" },
@@ -1660,7 +1660,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    type: "Technical Data",
+    category: "Technical Data",
     data: [
       { linkTitle: "Technical Data1", link: "link" },
       { linkTitle: "Technical Data2", link: "link" },
@@ -1671,7 +1671,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    type: "Certification",
+    category: "Certification",
     data: [
       { linkTitle: "Certification1", link: "link" },
       { linkTitle: "Certification2", link: "link" },
@@ -1682,7 +1682,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    type: "Warranty",
+    category: "Warranty",
     data: [
       { linkTitle: "Warranty1", link: "link" },
       { linkTitle: "Warranty2", link: "link" },
@@ -1693,7 +1693,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    type: "Videos",
+    category: "Videos",
     data: [
       { linkTitle: "Videos1", link: "link" },
       { linkTitle: "Videos2", link: "link" },

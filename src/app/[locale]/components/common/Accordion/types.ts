@@ -1,14 +1,16 @@
 import { JSXElementConstructor, ReactElement } from "react";
 
 export interface AccordionItemProps {
-  title: string;
+  title: string | ReactElement;
   isOpen?: boolean;
   onClick?: () => void;
+  onClickCallback?: () => void;
   children: React.ReactNode;
   multiple?: boolean;
   style?: "default" | "small";
   index?: number;
   activeIndex?: number;
+  id?: string;
 }
 
 export interface AccordionData {
