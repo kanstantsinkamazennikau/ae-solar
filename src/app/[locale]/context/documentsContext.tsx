@@ -1,8 +1,11 @@
 "use client";
 
-import { DOCUMENTS_FILES } from "@/app/[locale]/utils/constants";
+import {
+  DOCUMENTS_FAQ_FILES,
+  DOCUMENTS_FILES,
+} from "@/app/[locale]/utils/constants";
 import { usePathname } from "next/navigation";
-import { createContext, useCallback, useState } from "react";
+import { createContext, useCallback, useEffect, useState } from "react";
 
 export interface DocumentsContext {
   setSelectedCategory: (category: string) => void;
@@ -16,21 +19,23 @@ export interface DocumentsContext {
 
 export const DocumentsContext = createContext<DocumentsContext>(null!);
 
+const mapConstantWithCategory = {
+  documents: DOCUMENTS_FILES,
+  faq: DOCUMENTS_FAQ_FILES,
+};
+
 export default function DocumentsProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-  const initialCategoryBasedOnRoute = () => {
-    if (pathname === "/documents") {
-      return DOCUMENTS_FILES[0].category as string;
-    }
-    return "";
-  };
+  const pathName = usePathname().split("/");
+  const documentsCategory = pathName[pathName.length - 1];
 
   const [selectedCategory, setSelectedCategory] = useState(
-    initialCategoryBasedOnRoute()
+    mapConstantWithCategory[
+      documentsCategory as keyof typeof mapConstantWithCategory
+    ][0].category
   );
   const [documentsAccordionActiveIndex, setDocumentsAccordionActiveIndex] =
     useState(0);
@@ -43,6 +48,14 @@ export default function DocumentsProvider({
       document.getElementById(category)!.scrollIntoView({ behavior: "smooth" });
     }, 350);
   }, []);
+
+  useEffect(() => {
+    setSelectedCategory(
+      mapConstantWithCategory[
+        documentsCategory as keyof typeof mapConstantWithCategory
+      ][0].category
+    );
+  }, [documentsCategory]);
 
   return (
     <DocumentsContext.Provider

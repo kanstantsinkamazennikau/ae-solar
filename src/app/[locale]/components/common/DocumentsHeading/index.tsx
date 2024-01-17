@@ -1,9 +1,28 @@
-import { DocumentsHeadingProps } from "@/app/[locale]/components/common/DocumentsHeading/types";
+"use client";
 
-export default function DocumentsHeading({
-  tierOneHeading,
-  tierTwoHeading,
-}: DocumentsHeadingProps) {
+import {
+  DOCUMENTS_DOCUMENTS_HEADING,
+  DOCUMENTS_FAQ_HAVE_A_QUESTION,
+  DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS,
+  DOCUMENTS_YOU_NEED_TO_KNOW,
+} from "@/app/[locale]/utils/constants";
+import { usePathname } from "next/navigation";
+
+const mapHeadingWithCategory = {
+  documents: {
+    tierOneHeading: DOCUMENTS_DOCUMENTS_HEADING,
+    tierTwoHeading: DOCUMENTS_YOU_NEED_TO_KNOW,
+  },
+  faq: {
+    tierOneHeading: DOCUMENTS_FAQ_HAVE_A_QUESTION,
+    tierTwoHeading: DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS,
+  },
+};
+
+export default function DocumentsHeading() {
+  const pathName = usePathname().split("/");
+  const documentsCategory = pathName[pathName.length - 1];
+
   return (
     <div className="flex flex-col gap-4">
       <p
@@ -14,7 +33,11 @@ export default function DocumentsHeading({
           -tracking-[2.88]
         "
       >
-        {tierOneHeading}
+        {
+          mapHeadingWithCategory[
+            documentsCategory as keyof typeof mapHeadingWithCategory
+          ].tierOneHeading
+        }
       </p>
       <p
         className="
@@ -25,7 +48,11 @@ export default function DocumentsHeading({
           text-base-red
         "
       >
-        {tierTwoHeading}
+        {
+          mapHeadingWithCategory[
+            documentsCategory as keyof typeof mapHeadingWithCategory
+          ].tierTwoHeading
+        }
       </p>
     </div>
   );

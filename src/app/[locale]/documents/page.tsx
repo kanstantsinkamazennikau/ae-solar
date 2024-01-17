@@ -13,7 +13,10 @@ export default function Documents() {
     useContext(DocumentsContext);
 
   return (
-    <Accordion documentsAccordionActiveIndex={documentsAccordionActiveIndex}>
+    <Accordion
+      documentsAccordionActiveIndex={documentsAccordionActiveIndex}
+      multiple
+    >
       {DOCUMENTS_FILES.map(({ category, type, data }, index) => {
         const styledTitle = (
           <span

@@ -14,8 +14,11 @@ export default function Accordion({
   children,
   multiple,
   documentsAccordionActiveIndex,
+  collapseAll,
 }: AccordionProps) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(
+    collapseAll ? null : 0
+  );
 
   const handleItemClick = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));

@@ -10,11 +10,11 @@ export default function AccordionItem({
   onClick,
   children,
   multiple,
-  style = "default",
   index,
   activeIndex,
   onClickCallback,
   id,
+  openCloseStyle,
 }: AccordionItemProps) {
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(
@@ -37,23 +37,43 @@ export default function AccordionItem({
 
   return (
     <div
-      className="border-b border-solid border-[#242424] last:border-none scroll-mt-[140px]"
+      className="border-b border-solid border-[#131313] last:border-none scroll-mt-[140px]"
       id={id}
     >
       <button
-        className="w-full text-left lg:py-6 md:py-4 py-3 flex items-center justify-between [font-size:_clamp(16px,2.5vw,40px)] leading-[120%] "
+        className={`
+          w-full
+          text-left
+          lg:py-6
+          md:py-4
+          py-3
+          flex
+          items-center
+          justify-between
+          [font-size:_clamp(16px,2.5vw,40px)]
+          leading-[120%]
+          ${
+            openCloseStyle
+              ? isOpen || isOpenItem
+                ? "text-white"
+                : "text-dark-gray-900"
+              : "text-white"
+          }
+        `}
         onClick={onClickBasedOnAccordeonType}
       >
-        <p
-          className={`${
-            style === "small" &&
-            "[font-size:_clamp(12px,1.5vw,20px)] leading-[120%] font-semibold"
-          }`}
-        >
-          {title}
-        </p>
+        {title}
+
         <Image
-          className={`arrow ${isOpen || isOpenItem ? "rotate-180" : ""}`}
+          className={`
+            arrow
+            ${isOpen || isOpenItem ? "rotate-180" : ""} 
+            ${
+              openCloseStyle && (isOpen || isOpenItem)
+                ? ""
+                : "invert-[70%] sepia-0 saturate-[1%] hue-rotate-[185deg] brightness-[89%] contrast-[86%]"
+            }
+          `}
           alt="arrow"
           src="/images/arrow.svg"
           width={16}

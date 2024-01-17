@@ -3,14 +3,23 @@
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import {
   DOCUMENTS_CATEGORIES,
+  DOCUMENTS_FAQ_FILES,
   DOCUMENTS_FILES,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useContext } from "react";
+
+const mapConstantWithCategory = {
+  documents: DOCUMENTS_FILES,
+  faq: DOCUMENTS_FAQ_FILES,
+};
 
 export default function Categories() {
   const { selectedCategory, onCategoryClick } = useContext(DocumentsContext);
+  const pathName = usePathname().split("/");
+  const documentsCategory = pathName[pathName.length - 1];
 
   return (
     <div className="flex flex-col sticky min-[920px]:top-[80px] top-[64px]">
@@ -20,6 +29,7 @@ export default function Categories() {
         width={300}
         height={80}
         priority
+        className="w-full min-w-[300px] max-w-[300px]"
       />
       <div className="absolute top-4 w-full px-7">
         <p className="font-semibold text-[#505050] [font-size:_clamp(12px,1.5vw,16px)] leading-[120%] mb-4">
@@ -46,9 +56,13 @@ export default function Categories() {
           font-semibold
           [font-size:_clamp(12px,1.5vw,16px)]
           leading-[120%]
+          min-w-[300px]
+          max-w-[300px]
         "
       >
-        {DOCUMENTS_FILES.map(({ category }, index) => {
+        {mapConstantWithCategory[
+          documentsCategory as keyof typeof mapConstantWithCategory
+        ].map(({ category }, index) => {
           const isSelectedcategory = selectedCategory === category;
           return (
             <Link
@@ -59,20 +73,21 @@ export default function Categories() {
                 onCategoryClick(category, index);
               }}
             >
-              <p
+              <div
                 className={`
                   ${isSelectedcategory ? "text-white" : "text-dark-gray-900"} 
                   mt-4
                   flex
+                  gap-4
                   justify-between
                   items-center
                 `}
               >
-                {category}
+                <p>{category}</p>
                 {isSelectedcategory && (
-                  <span className="w-[10px] h-[10px] rounded-full bg-base-red" />
+                  <div className="min-w-[10px] min-h-[10px] rounded-full bg-base-red" />
                 )}
-              </p>
+              </div>
             </Link>
           );
         })}

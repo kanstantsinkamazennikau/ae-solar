@@ -22,6 +22,12 @@ export default function ModelSpecs() {
   const modelSpecs = CONSTRUCTOR_MODELS_SPECS[constructorModel.model];
   const modelAdvantages = CONSTRUCTOR_MODELS_ADVANTAGES[constructorModel.model];
   const modelSpecsKeys = Object.keys(modelSpecs) as ModelSpecsKeys[];
+  const specKeyWithAccordionTitleMapping = {
+    materialCharacteristics: "Material Characteristics",
+    certificates: "Certificates",
+    packagingInformation: "Packaging Information",
+    dimensionsImage: "Dimensions",
+  };
 
   return (
     <BasicWidthContainer>
@@ -105,12 +111,23 @@ export default function ModelSpecs() {
         <div className="flex flex-col w-full">
           <Accordion multiple>
             {modelSpecsKeys.map((specKey) => {
+              const styledTitle = (
+                <p
+                  className={`${"[font-size:_clamp(12px,1.5vw,20px)] leading-[100%] font-semibold"}`}
+                >
+                  {
+                    specKeyWithAccordionTitleMapping[
+                      specKey as keyof typeof specKeyWithAccordionTitleMapping
+                    ]
+                  }
+                </p>
+              );
               if (specKey === "materialCharacteristics") {
                 const charactristicsKeys = Object.keys(modelSpecs[specKey]);
                 return (
                   <AccordionItem
                     key={specKey}
-                    title="Material Characteristics"
+                    title={styledTitle}
                     style="small"
                   >
                     <div className="pb-8">
@@ -140,7 +157,7 @@ export default function ModelSpecs() {
                 return (
                   <AccordionItem
                     key={specKey}
-                    title="Packaging Information"
+                    title={styledTitle}
                     style="small"
                   >
                     <div className="pb-8">
@@ -155,7 +172,7 @@ export default function ModelSpecs() {
                 return (
                   <AccordionItem
                     key={specKey}
-                    title="Certificates"
+                    title={styledTitle}
                     style="small"
                   >
                     <div className="pb-8">
@@ -168,7 +185,7 @@ export default function ModelSpecs() {
               }
 
               return (
-                <AccordionItem key={specKey} title="Dimensions" style="small">
+                <AccordionItem key={specKey} title={styledTitle} style="small">
                   <div className="pb-8">
                     <Image
                       src={`/images/option/${modelSpecs[specKey]}`}

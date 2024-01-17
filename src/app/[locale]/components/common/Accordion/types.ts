@@ -7,10 +7,10 @@ export interface AccordionItemProps {
   onClickCallback?: () => void;
   children: React.ReactNode;
   multiple?: boolean;
-  style?: "default" | "small";
   index?: number;
   activeIndex?: number;
   id?: string;
+  openCloseStyle?: boolean;
 }
 
 export interface AccordionData {
@@ -24,4 +24,5 @@ export interface AccordionProps {
     | readonly ReactElement<any, string | JSXElementConstructor<any>>[];
   multiple?: boolean;
   documentsAccordionActiveIndex?: number;
+  collapseAll?: boolean;
 }
