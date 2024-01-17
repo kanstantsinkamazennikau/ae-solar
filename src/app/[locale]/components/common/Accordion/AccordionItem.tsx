@@ -15,6 +15,7 @@ export default function AccordionItem({
   onClickCallback,
   id,
   openCloseStyle,
+  documentsAccordion,
 }: AccordionItemProps) {
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(
@@ -29,6 +30,13 @@ export default function AccordionItem({
   useEffect(() => {
     setHeight(contentHeight.current?.scrollHeight);
   }, []);
+
+  useEffect(() => {
+    documentsAccordion &&
+      multiple &&
+      index === activeIndex &&
+      setIsOpenItem(true);
+  }, [activeIndex, index, multiple, documentsAccordion]);
 
   const onClickBasedOnAccordeonType = () => {
     onClickCallback && onClickCallback();

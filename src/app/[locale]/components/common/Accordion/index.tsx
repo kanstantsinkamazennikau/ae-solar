@@ -15,6 +15,7 @@ export default function Accordion({
   multiple,
   documentsAccordionActiveIndex,
   collapseAll,
+  documentsAccordion,
 }: AccordionProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(
     collapseAll ? null : 0
@@ -25,10 +26,10 @@ export default function Accordion({
   };
 
   useEffect(() => {
-    if (documentsAccordionActiveIndex !== undefined) {
+    if (documentsAccordionActiveIndex !== undefined && documentsAccordion) {
       setActiveIndex(documentsAccordionActiveIndex);
     }
-  }, [documentsAccordionActiveIndex]);
+  }, [documentsAccordionActiveIndex, documentsAccordion]);
 
   const renderChildren = () => {
     return Children.map(
@@ -48,6 +49,7 @@ export default function Accordion({
                 multiple,
                 index,
                 activeIndex,
+                documentsAccordion,
               }
         );
       }

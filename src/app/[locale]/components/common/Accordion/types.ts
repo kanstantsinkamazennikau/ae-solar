@@ -11,6 +11,7 @@ export interface AccordionItemProps {
   activeIndex?: number;
   id?: string;
   openCloseStyle?: boolean;
+  documentsAccordion?: boolean;
 }
 
 export interface AccordionData {
@@ -25,4 +26,5 @@ export interface AccordionProps {
   multiple?: boolean;
   documentsAccordionActiveIndex?: number;
   collapseAll?: boolean;
+  documentsAccordion?: boolean;
 }

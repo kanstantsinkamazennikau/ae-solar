@@ -16,6 +16,7 @@ export default function Documents() {
     <Accordion
       documentsAccordionActiveIndex={documentsAccordionActiveIndex}
       multiple
+      documentsAccordion
     >
       {DOCUMENTS_FILES.map(({ category, type, data }, index) => {
         const styledTitle = (
