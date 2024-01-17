@@ -31,16 +31,16 @@ export default function Text({ link, linkTitle }: TextProps) {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         className="
-        [font-size:_clamp(12px,1.5vw,16px)]
-        leading-[100%]
-        p-4
-        font-bold
-        capitalize
-        -tracking-[0.32px]
-        flex
-        gap-4
-        z-20
-      "
+          [font-size:_clamp(12px,1.5vw,16px)]
+          leading-[100%]
+          p-4
+          font-bold
+          capitalize
+          -tracking-[0.32px]
+          flex
+          gap-4
+          z-20
+        "
       >
         <p className={`${isHover ? "text-[#B30006]" : "text-white"}`}>
           {linkTitle}

@@ -10,11 +10,7 @@ import Link from "next/link";
 import { useContext } from "react";
 
 export default function Categories() {
-  const {
-    selectedCategory,
-    setSelectedCategory,
-    setDocumentsAccordionActiveIndex,
-  } = useContext(DocumentsContext);
+  const { selectedCategory, onCategoryClick } = useContext(DocumentsContext);
 
   return (
     <div className="flex flex-col sticky min-[920px]:top-[80px] top-[64px]">
@@ -60,13 +56,7 @@ export default function Categories() {
               href={`#${category}`}
               onClick={(e) => {
                 e.preventDefault();
-                setSelectedCategory(category);
-                setDocumentsAccordionActiveIndex(index);
-                setTimeout(() => {
-                  document
-                    .getElementById(category)!
-                    .scrollIntoView({ behavior: "smooth" });
-                }, 350);
+                onCategoryClick(category, index);
               }}
             >
               <p

@@ -9,15 +9,12 @@ import { DOCUMENTS_FILES } from "@/app/[locale]/utils/constants";
 import { useContext } from "react";
 
 export default function Documents() {
-  const {
-    selectedCategory,
-    setSelectedCategory,
-    documentsAccordionActiveIndex,
-  } = useContext(DocumentsContext);
+  const { selectedCategory, documentsAccordionActiveIndex, onCategoryClick } =
+    useContext(DocumentsContext);
 
   return (
     <Accordion documentsAccordionActiveIndex={documentsAccordionActiveIndex}>
-      {DOCUMENTS_FILES.map(({ category, data }) => {
+      {DOCUMENTS_FILES.map(({ category, type, data }, index) => {
         const styledTitle = (
           <span
             className={`${
@@ -29,14 +26,13 @@ export default function Documents() {
             {category}
           </span>
         );
-        const onClickCallback = () => setSelectedCategory(category);
 
-        if (category === "Presentation") {
+        if (type === "Presentation") {
           return (
             <AccordionItem
               title={styledTitle}
               key={category}
-              onClickCallback={onClickCallback}
+              onClickCallback={() => onCategoryClick(category, index)}
               id={category}
             >
               <div className="grid grid-cols-3 gap-[6px] pb-10">
@@ -54,7 +50,7 @@ export default function Documents() {
           <AccordionItem
             key={category}
             title={styledTitle}
-            onClickCallback={onClickCallback}
+            onClickCallback={() => onCategoryClick(category, index)}
             id={category}
           >
             <div className="pb-10">

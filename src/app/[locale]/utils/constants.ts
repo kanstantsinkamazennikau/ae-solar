@@ -1600,6 +1600,7 @@ export const DOCUMENTS_FILES: (
 )[] = [
   {
     category: "Presentation",
+    type: "Presentation",
     data: [
       {
         title: "Company Profile",
@@ -1650,6 +1651,7 @@ export const DOCUMENTS_FILES: (
   },
   {
     category: "References",
+    type: "Text",
     data: [
       { linkTitle: "References1", link: "link" },
       { linkTitle: "References2", link: "link" },
@@ -1661,6 +1663,7 @@ export const DOCUMENTS_FILES: (
   },
   {
     category: "Technical Data",
+    type: "Text",
     data: [
       { linkTitle: "Technical Data1", link: "link" },
       { linkTitle: "Technical Data2", link: "link" },
@@ -1672,6 +1675,7 @@ export const DOCUMENTS_FILES: (
   },
   {
     category: "Certification",
+    type: "Text",
     data: [
       { linkTitle: "Certification1", link: "link" },
       { linkTitle: "Certification2", link: "link" },
@@ -1683,6 +1687,7 @@ export const DOCUMENTS_FILES: (
   },
   {
     category: "Warranty",
+    type: "Text",
     data: [
       { linkTitle: "Warranty1", link: "link" },
       { linkTitle: "Warranty2", link: "link" },
@@ -1694,6 +1699,7 @@ export const DOCUMENTS_FILES: (
   },
   {
     category: "Videos",
+    type: "Text",
     data: [
       { linkTitle: "Videos1", link: "link" },
       { linkTitle: "Videos2", link: "link" },

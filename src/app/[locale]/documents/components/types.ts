@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 
 export interface DocumentsTypesPresentation {
   category: "Presentation";
+  type: "Presentation";
   data: PresentationProps[];
 }
 
@@ -12,6 +13,7 @@ export interface DocumentsTypesOther {
     | "Certification"
     | "Warranty"
     | "Videos";
+  type: "Text";
   data: {
     linkTitle: string;
     link: string;

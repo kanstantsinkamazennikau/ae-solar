@@ -26,10 +26,19 @@ export default function NavLink({
       {!subMenu && (
         <Link
           href={`/${locale}${url}`}
-          className={`flex min-[920px]:py-2 py-4 md:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between whitespace-nowrap ${
-            highlightNavigationLink(locale, url, path) &&
-            "min-[920px]:border-base-red min-[920px]:border-b-2 min-[920px]:border-solid"
-          }}`}
+          className={`
+            flex min-[920px]:py-2 
+            py-4 
+            md:items-center 
+            [font-size:_clamp(14px,1.5vw,16px)] 
+            leading-none 
+            justify-between 
+            whitespace-nowrap 
+            ${
+              highlightNavigationLink(locale, url, path) &&
+              "min-[920px]:border-base-red min-[920px]:border-b-2 min-[920px]:border-solid"
+            }
+          `}
           onClick={onLinkClick}
         >
           {t(text)}
@@ -38,7 +47,20 @@ export default function NavLink({
       {subMenu && (
         <>
           <div
-            className="flex min-[920px]:py-2 py-4 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer "
+            className={`
+              flex
+              min-[920px]:py-2
+              py-4
+              min-[920px]:items-center
+              [font-size:_clamp(14px,1.5vw,16px)]
+              leading-none
+              justify-between
+              cursor-pointer
+              ${
+                path.includes(url) &&
+                "min-[920px]:border-base-red min-[920px]:border-b-2 min-[920px]:border-solid"
+              }
+            `}
             onClick={() => onSubMenuHeadingClick && onSubMenuHeadingClick(text)}
           >
             {t(text)}
