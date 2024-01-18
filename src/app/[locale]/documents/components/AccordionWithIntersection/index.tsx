@@ -3,13 +3,13 @@
 import Accordion from "@/app/[locale]/components/common/Accordion";
 import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
-import { AccrodionWithIntersection } from "@/app/[locale]/documents/faq/types";
+import { AccordionWithIntersectionPropps } from "@/app/[locale]/documents/faq/types";
 import { useContext, useEffect, useRef } from "react";
 
-export default function AccrodionWithIntersection({
+export default function AccordionWithIntersection({
   category,
   data,
-}: AccrodionWithIntersection) {
+}: AccordionWithIntersectionPropps) {
   const { setSelectedCategory } = useContext(DocumentsContext);
   const accordionRef = useRef<HTMLDivElement>(null);
 

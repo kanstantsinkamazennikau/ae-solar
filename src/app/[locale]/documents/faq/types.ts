@@ -1,4 +1,4 @@
-export interface AccrodionWithIntersection {
+export interface AccordionWithIntersectionPropps {
   category: string;
   data: {
     question: string;
