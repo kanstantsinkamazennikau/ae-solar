@@ -55,6 +55,7 @@ export default function DocumentsProvider({
         documentsCategory as keyof typeof mapConstantWithCategory
       ][0].category
     );
+    setDocumentsAccordionActiveIndex(0);
   }, [documentsCategory]);
 
   return (

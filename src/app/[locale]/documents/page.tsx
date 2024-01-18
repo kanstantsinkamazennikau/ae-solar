@@ -15,7 +15,6 @@ export default function Documents() {
   return (
     <Accordion
       documentsAccordionActiveIndex={documentsAccordionActiveIndex}
-      multiple
       documentsAccordion
     >
       {DOCUMENTS_FILES.map(({ category, type, data }, index) => {
