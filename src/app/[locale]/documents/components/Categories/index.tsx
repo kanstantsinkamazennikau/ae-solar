@@ -70,11 +70,7 @@ export default function Categories() {
               href={`#${category}`}
               onClick={(e) => {
                 e.preventDefault();
-                onCategoryClick(
-                  category,
-                  index,
-                  documentsCategory !== "documents"
-                );
+                onCategoryClick(category, index);
               }}
             >
               <div

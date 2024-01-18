@@ -1,4 +1,4 @@
-import { JSXElementConstructor, ReactElement } from "react";
+import { JSXElementConstructor, LegacyRef, ReactElement } from "react";
 
 export interface AccordionItemProps {
   title: string | ReactElement;

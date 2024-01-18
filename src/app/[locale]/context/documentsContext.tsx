@@ -14,11 +14,7 @@ export interface DocumentsContext {
   documentsAccordionActiveIndex: number;
   setSearchInputValue: (value: string) => void;
   searchInputValue: string;
-  onCategoryClick: (
-    category: string,
-    index: number,
-    isIntersecionScroll?: boolean
-  ) => void;
+  onCategoryClick: (category: string, index: number) => void;
 }
 
 export const DocumentsContext = createContext<DocumentsContext>(null!);
@@ -45,18 +41,12 @@ export default function DocumentsProvider({
     useState(0);
   const [searchInputValue, setSearchInputValue] = useState("");
 
-  const onCategoryClick = useCallback(
-    (category: string, index: number, isIntersecionScroll?: boolean) => {
-      !isIntersecionScroll && setSelectedCategory(category);
-      setDocumentsAccordionActiveIndex(index);
-      setTimeout(() => {
-        document
-          .getElementById(category)!
-          .scrollIntoView({ behavior: "smooth" });
-      }, 350);
-    },
-    []
-  );
+  const onCategoryClick = useCallback((category: string, index: number) => {
+    setDocumentsAccordionActiveIndex(index);
+    setTimeout(() => {
+      document.getElementById(category)!.scrollIntoView({ behavior: "smooth" });
+    }, 350);
+  }, []);
 
   useEffect(() => {
     setSelectedCategory(

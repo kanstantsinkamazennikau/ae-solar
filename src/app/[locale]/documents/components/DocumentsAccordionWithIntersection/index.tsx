@@ -1,15 +1,19 @@
 "use client";
 
-import Accordion from "@/app/[locale]/components/common/Accordion";
+import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
-import { AccordionWithIntersectionPropps } from "@/app/[locale]/documents/faq/types";
+import { DocumentsAccordionWithIntersectionProps } from "@/app/[locale]/documents/components/DocumentsAccordionWithIntersection/types";
 import { useContext, useEffect, useRef } from "react";
 
-export default function AccordionWithIntersection({
+export default function DocumentsAccordionWithIntersection({
+  title,
   category,
+  index,
   children,
-}: AccordionWithIntersectionPropps) {
-  const { setSelectedCategory } = useContext(DocumentsContext);
+  ...props
+}: DocumentsAccordionWithIntersectionProps) {
+  const { onCategoryClick, setSelectedCategory } = useContext(DocumentsContext);
+
   const accordionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,20 +37,16 @@ export default function AccordionWithIntersection({
   }, [category, setSelectedCategory]);
 
   return (
-    <div
-      key={category}
-      className="pb-[3px] scroll-mt-[140px]"
-      id={category}
-      ref={accordionRef}
-    >
-      <p
-        className={`[font-size:_clamp(20px,2.5vw,48px)] font-semibold leading-[120%] mt-6 mb-8`}
+    <div ref={accordionRef}>
+      <AccordionItem
+        title={title}
+        key={category}
+        onClickCallback={() => onCategoryClick(category, index)}
+        id={category}
+        {...props}
       >
-        {category}
-      </p>
-      <Accordion collapseAll multiple>
         {children}
-      </Accordion>
+      </AccordionItem>
     </div>
   );
 }

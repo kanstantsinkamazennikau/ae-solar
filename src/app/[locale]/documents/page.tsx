@@ -3,6 +3,7 @@
 import Accordion from "@/app/[locale]/components/common/Accordion";
 import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
+import DocumentsAccordionWithIntersection from "@/app/[locale]/documents/components/DocumentsAccordionWithIntersection";
 import Presentation from "@/app/[locale]/documents/components/Presentation";
 import Text from "@/app/[locale]/documents/components/Text";
 import { DOCUMENTS_FILES } from "@/app/[locale]/utils/constants";
@@ -32,11 +33,11 @@ export default function Documents() {
 
         if (type === "Presentation") {
           return (
-            <AccordionItem
+            <DocumentsAccordionWithIntersection
               title={styledTitle}
               key={category}
-              onClickCallback={() => onCategoryClick(category, index)}
-              id={category}
+              category={category}
+              index={index}
             >
               <div className="grid grid-cols-3 gap-[6px] pb-10">
                 {data.map(({ link, linkTitle, title, image }) => (
@@ -46,22 +47,22 @@ export default function Documents() {
                   />
                 ))}
               </div>
-            </AccordionItem>
+            </DocumentsAccordionWithIntersection>
           );
         }
         return (
-          <AccordionItem
-            key={category}
+          <DocumentsAccordionWithIntersection
             title={styledTitle}
-            onClickCallback={() => onCategoryClick(category, index)}
-            id={category}
+            key={category}
+            category={category}
+            index={index}
           >
             <div className="pb-10">
               {data.map(({ linkTitle, link }) => (
                 <Text {...{ linkTitle, link }} key={linkTitle} />
               ))}
             </div>
-          </AccordionItem>
+          </DocumentsAccordionWithIntersection>
         );
       })}
     </Accordion>
