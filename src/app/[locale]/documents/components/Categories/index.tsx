@@ -70,7 +70,11 @@ export default function Categories() {
               href={`#${category}`}
               onClick={(e) => {
                 e.preventDefault();
-                onCategoryClick(category, index);
+                onCategoryClick(
+                  category,
+                  index,
+                  documentsCategory !== "documents"
+                );
               }}
             >
               <div
@@ -83,7 +87,7 @@ export default function Categories() {
                   items-center
                 `}
               >
-                <p>{category}</p>
+                <p className="max-w-[215px]">{category}</p>
                 {isSelectedcategory && (
                   <div className="min-w-[10px] min-h-[10px] rounded-full bg-base-red" />
                 )}
