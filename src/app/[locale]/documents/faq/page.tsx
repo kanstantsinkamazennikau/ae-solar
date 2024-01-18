@@ -1,4 +1,4 @@
-import AccrodionWithIntersection from "@/app/[locale]/documents/faq/AccordionWithIntersection";
+import AccrodionWithIntersection from "@/app/[locale]/documents/components/AccordionWithIntersection";
 import { DOCUMENTS_FAQ_FILES } from "@/app/[locale]/utils/constants";
 
 export default function FAQ() {
