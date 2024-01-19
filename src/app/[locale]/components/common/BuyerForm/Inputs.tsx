@@ -45,7 +45,9 @@ export default function BuyerForm({
         bg-[#000000b3]
         backdrop-blur-[50px]
         relative
-        "
+        max-w-[1080px]
+        mx-auto my-0
+      "
     >
       {isShowCloseIcon && (
         <Image
