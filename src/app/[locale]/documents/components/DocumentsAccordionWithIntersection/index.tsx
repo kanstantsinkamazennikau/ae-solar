@@ -21,7 +21,7 @@ export default function DocumentsAccordionWithIntersection({
       if (accordionRef.current) {
         const itemOffset =
           accordionRef.current!.offsetTop -
-          (window.outerWidth >= 920 ? 164 : 120);
+          (window.outerWidth >= 920 ? 160 : 120);
         const scrollTop = window.scrollY;
         if (scrollTop >= itemOffset) {
           setSelectedCategory(category);

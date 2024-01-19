@@ -13,7 +13,6 @@ export default function CheckoutForm() {
     name: {
       required: "Name is required",
     },
-    interest: { required: "Interest is required" },
     email: {
       required: "Email is required",
       pattern: {
@@ -33,7 +32,6 @@ export default function CheckoutForm() {
 
   const defaultValues = {
     [FORMS_FIELDS.name]: "",
-    [FORMS_FIELDS.interest]: PICKER_INPUT_VALUES[FORMS_FIELDS.interest][0],
     [FORMS_FIELDS.email]: "",
     [FORMS_FIELDS.phone]: "",
     [FORMS_FIELDS.code]: "+49",

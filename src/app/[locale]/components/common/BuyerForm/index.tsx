@@ -64,6 +64,8 @@ export default function BuyerForm({
         items-center
         relative
         min-h-screen
+        min-[920px]:-top-[80px]
+        min-[920px]:-mb-[160px]
         -top-[64px]
         -mb-[144px]
         overflow-hidden
@@ -83,6 +85,7 @@ export default function BuyerForm({
           object-fill
           h-full
           absolute
+          w-full
           ${
             isShowMessageAfterSubmit
               ? `translate-y-[40px] lg:scale-100 min-[640px]:scale-[1.25] min-[500px]:scale-[1.5] scale-[1.95]`
@@ -92,7 +95,7 @@ export default function BuyerForm({
         `}
       />
       <BasicWidthContainer>
-        <div className="mt-[135px] mb-4">
+        <div className="mt-[105px] mb-4">
           {isShowMessageAfterSubmit ? (
             <div
               className="

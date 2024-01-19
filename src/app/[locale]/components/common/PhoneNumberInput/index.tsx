@@ -64,7 +64,7 @@ export default function PhoneNumberInput({
           placeholder={placeholder}
           {...register}
           {...props}
-          className="bg-transparent outline-none placeholder:[font-size:_clamp(14px,2vw,40px)]"
+          className="bg-transparent outline-none placeholder:[font-size:_clamp(20px,2vw,30px)]"
         />
       </div>
 

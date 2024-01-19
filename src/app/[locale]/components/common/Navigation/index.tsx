@@ -36,11 +36,7 @@ export default function Navigation() {
   };
 
   return (
-    <div
-      className={`w-full sticky top-0 z-40 h-[64px] ${
-        !hideSubnavigation() ? "min-[920px]:h-[130px]" : "min-[920px]:h-[80px]"
-      }`}
-    >
+    <div className={`w-full sticky top-0 z-40 h-[64px] min-[920px]:h-[80px]`}>
       {/* MAIN NAVIGATION */}
       <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-4 h-full">
         <BasicWidthContainer>

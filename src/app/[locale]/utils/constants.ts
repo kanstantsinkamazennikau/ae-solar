@@ -1453,11 +1453,6 @@ export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
     type: "input",
   },
   {
-    formTitle: "I’m interested in",
-    name: "interest",
-    type: "picker",
-  },
-  {
     formTitle: "Please, contact me at",
     placeholder: "your e-mail",
     name: "email",

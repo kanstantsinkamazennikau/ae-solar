@@ -28,8 +28,8 @@ export default function BuyerForm({
   return (
     <form
       className="
-        xl:px-20
-        xl:py-20
+        xl:px-14
+        xl:py-14
         lg:px-12
         lg:py-12
         md:px-10
@@ -59,7 +59,7 @@ export default function BuyerForm({
         />
       )}
 
-      <div className="[font-size:_clamp(32px,5vw,96px)] font-extrabold leading-[100%] -tracking-[2.88px] text-white mb-5 ">
+      <div className="[font-size:_clamp(32px,5vw,80px)] font-extrabold leading-[100%] -tracking-[2.88px] text-white mb-5 ">
         {formHeader.split(/\r?\n|\r|\n/g).map((string, index) => (
           <div
             key={string}
@@ -92,7 +92,7 @@ export default function BuyerForm({
                   min-[640px]:gap-3 gap-0
                   self-stretch
                   flex-wrap
-                  [font-size:_clamp(20px,2.5vw,40px)]
+                  [font-size:_clamp(20px,2.5vw,30px)]
                   min-[640px]:flex-row
                   flex-col
                 "
@@ -101,7 +101,7 @@ export default function BuyerForm({
                   {inputField.formTitle}
                 </span>
                 <Input
-                  externalStyle="font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(14px,2vw,40px)]"
+                  externalStyle="font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)]"
                   name={inputField.name}
                   placeholder={inputField.placeholder}
                   register={register(
@@ -116,13 +116,13 @@ export default function BuyerForm({
             return (
               <div
                 key={inputField.name}
-                className="flex items-center content-center min-[640px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
+                className="flex items-center content-center min-[640px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,30px)]"
               >
                 <span className="font-semibold leading-[120%]">
                   {inputField.formTitle}
                 </span>
                 <DropdownInput
-                  externalStyle="font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(14px,2vw,40px)]"
+                  externalStyle="font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)]"
                   name={inputField.name}
                   placeholder={inputField.placeholder}
                   setValue={setValue}
@@ -139,7 +139,7 @@ export default function BuyerForm({
             return (
               <div
                 key={inputField.name}
-                className="flex items-center content-center min-[640px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
+                className="flex items-center content-center min-[640px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,30px)]"
               >
                 <span className="font-semibold leading-[120%]">
                   {inputField.formTitle}
@@ -162,7 +162,7 @@ export default function BuyerForm({
             return (
               <div
                 key={inputField.name}
-                className="flex items-center content-center min-[640px]:gap-3 gap-1 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,40px)]"
+                className="flex items-center content-center min-[640px]:gap-3 gap-1 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,30px)]"
               >
                 <span className="font-semibold leading-[120%]">
                   {inputField.formTitle}

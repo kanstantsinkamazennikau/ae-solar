@@ -12,7 +12,7 @@ export default function About() {
       <Mission />
       <AwardsAndStats />
       <BusinessMap />
-      {/* <OurHistory /> */}
+      <OurHistory />
       <SequenceAnimation />
     </>
   );
