@@ -117,7 +117,7 @@ export default function SequenceAnimation({ width = 1158, height = 770 }) {
       <BasicWidthContainer>
         <div className="flex items-center" id="canvas">
           <div className="flex gap-5 max-w-[33%] relative">
-            <div className="sequenceAnimationDivider w-[1px]"></div>
+            <div className="sequenceAnimationDivider w-[1px]" />
             <div className="py-20">
               {SEQUENCE_ANIMATION_TEXT.map(({ title, description }, index) => {
                 const isActive = activeStepIndex === index;

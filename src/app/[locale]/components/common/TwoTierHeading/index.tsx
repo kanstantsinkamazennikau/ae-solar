@@ -22,6 +22,7 @@ export default function TwoTierHeading({
   align = "right",
   size = "default",
   reverseColor = false,
+  marginBottomNone,
 }: TwoTierHeadingProps) {
   return (
     <>
@@ -31,10 +32,7 @@ export default function TwoTierHeading({
           ${headingStyle(size)}
           leading-none
           w-full
-          xl:mb-20
-          lg:mb-16
-          md:mb-12
-          mb-10
+          ${!marginBottomNone ? "xl:mb-20 lg:mb-16 md:mb-12 mb-10" : "mb-0"}
           ${textAlign[align]}
         `}
       >

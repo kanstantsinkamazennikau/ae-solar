@@ -6,162 +6,217 @@ import {
   ABOUT_IN_NUMBERS,
   ABOUT_OUR_HISTORY,
 } from "@/app/[locale]/utils/constants";
-import { useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import Image from "next/image";
+
+const frameIndex = { frame: 0 };
+const history = [
+  {
+    year: 2003,
+    event:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels",
+  },
+  {
+    year: 2009,
+    event: "250 MW/year automated PV modules manufacturing line was installed",
+  },
+  {
+    year: 2010,
+    event:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels",
+  },
+  {
+    year: 2011,
+    event:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels",
+  },
+  {
+    year: 2012,
+    event: "Semiconductor photovoltaic cells convert",
+  },
+  {
+    year: 2013,
+    event:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels",
+  },
+  {
+    year: 2023,
+    event:
+      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels",
+  },
+];
+const numFrames = history.length;
 
 export default function OurHistory() {
-  const [count, setCount] = useState("");
+  const [scrollDirection, setScrollDirection] = useState(1);
+  const [scrollFrame, setScrollFrame] = useState(0);
+  // const [timeline, setTimeline] = useState<gsap.core.Timeline | null>(null);
+  const [activeStepIndex, setActiveStepIndex] = useState(0);
   let refs = useRef([]);
 
   const container = useRef(null);
-
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   const containers = gsap.utils.toArray("#con");
-  //   containers.forEach((container) => {
-  //     gsap.to(container!, {
-  //       autoAlpha: 1,
-  //       ease: "power1.in",
-  //       scrollTrigger: {
-  //         //@ts-ignore
-  //         trigger: container,
-  //         pin: true,
-  //         scrub: true,
-  //       },
-  //     });
-  //   });
-  // const ctx = gsap.context(() => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: "#statAnimationTrigger",
-  //       start: "top bottom",
-  //       toggleActions: "play none none none",
-  //     },
-  //   });
-  //   const myObj = { val: 0 };
-
-  //   tl.to(myObj, {
-  //     val: 0,
-  //     duration: 3,
-  //     ease: "power3.out",
-  //     onUpdate: () => {
-  //       setCount(Number(myObj.val).toFixed(0));
-  //     },
-  //   });
-  // });
-  // return () => ctx.kill();
-  // }, []);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    createAnimation();
+  const renderText = useCallback(() => {
+    setScrollFrame(frameIndex.frame);
   }, []);
 
-  const createAnimation = () => {
-    console.log(refs);
-
-    //@ts-ignore
-    refs.current.forEach((container) => {
-      gsap.to(container, {
-        autoAlpha: 1,
-        ease: "power1.in",
-        scrollTrigger: {
-          trigger: container,
-          // pin: true,
-          scrub: true,
-          markers: true,
-          // start: `center`,
-
-          // end: `+=${window.innerHeight / 1.5}`,
-        },
-      });
+  useLayoutEffect(() => {
+    if (!container.current) return;
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    const ctx = gsap.context(() => {
+      const timeline = gsap
+        .timeline({
+          onUpdate: renderText,
+          scrollTrigger: {
+            onUpdate: (self) => {
+              setScrollDirection(self.direction);
+            },
+            trigger: "#history",
+            start: "top-=140px",
+            pin: true,
+            end: "+=600%",
+            scrub: 1,
+          },
+        })
+        .to(
+          frameIndex,
+          {
+            frame: numFrames - 1,
+            snap: "frame",
+            ease: "none",
+            duration: 1,
+          },
+          0
+        );
+      // setTimeline(timeline);
     });
-    // gsap.to(refs.current, {
-    //   autoAlpha: 1,
-    //   ease: "power1.in",
-    //   scrollTrigger: {
-    //     trigger: ".container",
-    //     pin: true,
-    //     scrub: true,
-    //   },
-    // });
-  };
+    return () => ctx.revert();
+  }, [renderText]);
 
-  const test = [
-    "sdfsdfs",
-    "sfsfsfsfsf",
-    "sdfsfsfsdfsdf",
-    "sfdfsfsfsdfsfsdf",
-    "sdfsdeqwfs",
-    "wqeqw",
-    "qweqwssda",
-    "dasdc",
-  ];
+  useEffect(() => {
+    if (scrollDirection === 1) {
+      if (scrollFrame > activeStepIndex) {
+        setActiveStepIndex(activeStepIndex + 1);
+      }
+    } else {
+      if (scrollFrame < activeStepIndex && activeStepIndex !== 0) {
+        setActiveStepIndex(activeStepIndex - 1);
+      }
+    }
+  }, [activeStepIndex, scrollDirection, scrollFrame]);
 
   return (
-    <BasicWidthContainer>
-      <TwoTierHeading
-        tierOneHeading={ABOUT_OUR_HISTORY}
-        tierTwoHeading={ABOUT_IN_NUMBERS}
-        align="left"
-        size="small"
-        reverseColor
-      />
-      <div ref={container}>
-        {test.map((text) => (
+    <div className="flex flex-col justify-center items-center">
+      <BasicWidthContainer>
+        <div id="history">
+          <TwoTierHeading
+            tierOneHeading={ABOUT_OUR_HISTORY}
+            tierTwoHeading={ABOUT_IN_NUMBERS}
+            align="left"
+            size="small"
+            reverseColor
+            marginBottomNone
+          />
+          <Image
+            src={`/images/glowFull.png`}
+            alt="glow"
+            priority
+            width={1320}
+            height={60}
+          />
           <div
-            ref={(el) => {
-              //@ts-ignore
-              refs.current.push(el);
-            }}
-            key={text}
-            className="opacity-50"
+            ref={container}
+            className="relative py-[60px] w-full overflow-hidden"
           >
-            {text}
+            <div className="ourHistoryDivider w-[1px] h-full absolute -top-[3px] left-[32%]" />
+            {history.map(({ year, event }, index) => {
+              const isActive = activeStepIndex === index;
+              const opacityValue = Math.abs(activeStepIndex - index) || 1;
+
+              return (
+                <div
+                  key={year}
+                  className={`
+                    flex
+                    mb-6
+                    w-full
+                    transition-all
+                    duration-500
+                    relative
+                    ${isActive ? "text-white" : "text-dark-gray-900"}
+                    cursor-pointer
+                  `}
+                  style={{ opacity: 1 / opacityValue }}
+                  // onClick={() => {
+                  //   setActiveStepIndex(index);
+                  //   const { start, end } = timeline!.scrollTrigger!;
+                  //   console.log(start, end);
+
+                  //   const timelineDistance = end - start;
+                  //   const oneSectorScrollDistance =
+                  //     timelineDistance / numFrames;
+                  //   gsap.to(window, {
+                  //     scrollTo: {
+                  //       y: start + oneSectorScrollDistance * index,
+                  //       autoKill: true,
+                  //     },
+                  //     ease: "power2",
+                  //     duration: 1,
+                  //   });
+                  // }}
+                >
+                  <div
+                    className={`
+                      w-[7px]
+                      h-[7px]
+                      border
+                      border-solid
+                      border-base-red
+                      rounded-full
+                      absolute
+                      top-[10px]
+                      left-[calc(32%-3px)]
+                      bg-black
+                      ${isActive ? "block" : "hidden"}
+                    `}
+                  />
+                  <div
+                    className="
+                      w-[32%]
+                      text-end
+                      pr-4
+                      [font-size:_clamp(14px,2vw,32px)]
+                      leading-[120%]
+                    "
+                  >
+                    {year}
+                  </div>
+
+                  <div
+                    className="
+                      w-[68%]
+                      pl-4
+                      max-w-[450px]
+                      [font-size:_clamp(10px,2vw,16px)]
+                      leading-[150%]
+                    "
+                  >
+                    {event}
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        ))}
-      </div>
-    </BasicWidthContainer>
+        </div>
+      </BasicWidthContainer>
+    </div>
   );
 }
-
-// function Test({ text }: { text: string }) {
-//   const container = useRef(null);
-//   useEffect( () => {
-
-//     gsap.registerPlugin(ScrollTrigger);
-
-//     createAnimation();
-
-//   }, [])
-
-//   const createAnimation = () => {
-
-//     gsap.to(refs.current, {
-
-//       scrollTrigger: {
-
-//           trigger: container.current,
-
-//           scrub: true,
-
-//           start: `top`,
-
-//           end: `+=${window.innerHeight / 1.5}`,
-
-//       },
-
-//       opacity: 1,
-
-//       ease: "none",
-
-//       stagger: 0.1
-
-//   })
-
-// }
-
-//   return <div ref={container}>{text}</div>;
-// }

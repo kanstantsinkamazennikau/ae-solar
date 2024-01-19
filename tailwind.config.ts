@@ -112,6 +112,12 @@ const config: Config = {
           backgroundPosition: "center center",
           backgroundSize: "cover",
         },
+        ".ourHistoryDivider": {
+          backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="2" height="515" viewBox="0 0 2 515" fill="none"><path d="M1 514.966L0.999996 0.965798" stroke="url(%23paint0_linear_2674_3862)"/><defs><linearGradient id="paint0_linear_2674_3862" x1="1" y1="514.966" x2="1" y2="0.96582" gradientUnits="userSpaceOnUse"><stop stop-color="%23FF0000" stop-opacity="0"/><stop offset="0.5" stop-color="%23FF0000"/></linearGradient></defs></svg>')`,
+          backgroundRepeat: "no-repeat no-repeat",
+          backgroundPosition: "center center",
+          backgroundSize: "cover",
+        },
       });
     }),
   ],
