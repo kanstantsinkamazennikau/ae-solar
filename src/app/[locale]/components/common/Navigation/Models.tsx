@@ -61,7 +61,7 @@ export default function Models({
               onClick={() => setModel(modelName as Model)}
             >
               <Image
-                alt="arrow"
+                alt="model"
                 src={`/images/models/${panel}`}
                 width={16}
                 height={16}
@@ -69,7 +69,7 @@ export default function Models({
               <span className="font-normal">{modelName}</span>
               {model === modelName && !isLink && isProductionIntroBlock && (
                 <Image
-                  alt="arrow"
+                  alt="productIntroSelector"
                   src={`/images/productIntroSelector.svg`}
                   width={40}
                   height={12}

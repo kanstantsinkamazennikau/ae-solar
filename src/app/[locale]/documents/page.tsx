@@ -4,44 +4,48 @@ import Accordion from "@/app/[locale]/components/common/Accordion";
 import Loader from "@/app/[locale]/components/common/Loader";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import DocumentsAccordionWithIntersection from "@/app/[locale]/documents/components/DocumentsAccordionWithIntersection";
+import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
 import Presentation from "@/app/[locale]/documents/components/Presentation";
 import Text from "@/app/[locale]/documents/components/Text";
+import {
+  DocumentsTypesOther,
+  DocumentsTypesPresentation,
+} from "@/app/[locale]/documents/components/types";
 import { DOCUMENTS_FILES } from "@/app/[locale]/utils/constants";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 
 export default function Documents() {
   const {
     selectedCategory,
     documentsAccordionActiveIndex,
-    searchInputValue,
+    filtersModel,
     setDocumentsFile,
     documentsFile,
+    documentsLoading,
+    setDocumentsLoading,
   } = useContext(DocumentsContext);
 
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    setLoading(true);
-    const filteredDocuments = DOCUMENTS_FILES.map(
-      ({ data, category, type }) => ({
+    setDocumentsLoading(true);
+    let filteredDocuments: (DocumentsTypesPresentation | DocumentsTypesOther)[];
+    if (filtersModel === "") {
+      filteredDocuments = DOCUMENTS_FILES;
+    } else {
+      filteredDocuments = DOCUMENTS_FILES.map(({ data, category, type }) => ({
         category,
         type,
-        data: data.filter(({ linkTitle }) =>
-          linkTitle.toLowerCase().includes(searchInputValue.toLowerCase())
-        ),
-      })
-    ).filter(({ data }) => data.length > 0);
-    setDocumentsFile(filteredDocuments as typeof DOCUMENTS_FILES);
-    setTimeout(() => setLoading(false), 500);
-  }, [searchInputValue, setDocumentsFile]);
+        data: data.filter(({ tags }) => tags?.includes(filtersModel)),
+      })).filter(({ data }) => data.length > 0) as typeof DOCUMENTS_FILES;
+    }
 
-  // useEffect(() => {
-  //   setDocumentsFile(DOCUMENTS_FILES);
-  //   setLoading(false);
-  // }, [setDocumentsFile]);
+    setTimeout(() => {
+      setDocumentsFile(filteredDocuments);
+      setDocumentsLoading(false);
+    }, 500);
+  }, [filtersModel, setDocumentsFile, setDocumentsLoading]);
 
-  return loading ? (
-    <Loader />
+  return documentsLoading ? (
+    <DocumentsLoader />
   ) : (
     <Accordion
       documentsAccordionActiveIndex={documentsAccordionActiveIndex}

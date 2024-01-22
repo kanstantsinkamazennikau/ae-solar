@@ -1613,18 +1613,21 @@ export const DOCUMENTS_FILES: (
         linkTitle: "ShadeStar Introduction",
         image: "Aurora.png",
         link: "link",
+        tags: ["ShadeStar"],
       },
       {
         title: "ShadeStar case study",
         linkTitle: "ShadeStar case study",
         image: "Aurora.png",
         link: "link",
+        tags: ["ShadeStar"],
       },
       {
         title: "ShadeStar Presentation (EN)",
         linkTitle: "ShadeStar Presentation (EN)",
         image: "Aurora.png",
         link: "link",
+        tags: ["ShadeStar"],
       },
       {
         title: "ShadeStar Presentation (PT)",
@@ -1636,12 +1639,14 @@ export const DOCUMENTS_FILES: (
         title: "Production Process",
         linkTitle: "Production Process",
         link: "link",
+        tags: ["Aurora", "Comet", "Meteor", "Terra", "Neptune", "ShadeStar"],
       },
       {
         title: "Terra",
         linkTitle: "Dr Hamed Hanifi Terra",
         image: "Aurora.png",
         link: "link",
+        tags: ["Terra"],
       },
     ],
   },
@@ -1649,9 +1654,17 @@ export const DOCUMENTS_FILES: (
     category: "References",
     type: "Text",
     data: [
-      { linkTitle: "References1", link: "link" },
-      { linkTitle: "References2", link: "link" },
-      { linkTitle: "References3", link: "link" },
+      { linkTitle: "References1", link: "link", tags: ["Aurora", "ShadeStar"] },
+      {
+        linkTitle: "References2",
+        link: "link",
+        tags: ["Aurora", "Neptune", "ShadeStar"],
+      },
+      {
+        linkTitle: "References3",
+        link: "link",
+        tags: ["Aurora", "Comet", "Meteor", "Terra", "Neptune", "ShadeStar"],
+      },
       { linkTitle: "References4", link: "link" },
       { linkTitle: "References5", link: "link" },
       { linkTitle: "References6", link: "link" },
@@ -1812,3 +1825,5 @@ export const DOCUMENTS_FAQ_FILES = [
     ],
   },
 ];
+export const DOCUMENTS_FILTERS = "Filters";
+export const DOCUMENTS_NO_RESULT = "No result for: ";

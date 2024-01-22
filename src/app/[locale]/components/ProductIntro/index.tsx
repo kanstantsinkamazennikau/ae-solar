@@ -153,6 +153,7 @@ export default function ProductIntro() {
                   width={563}
                   height={730}
                   quality={100}
+                  priority={true}
                   className="2xl:object-cover object-contain object-bottom md:h-full h-[270px]"
                 />
               </SplideSlide>

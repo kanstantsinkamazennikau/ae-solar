@@ -17,7 +17,13 @@ export interface DocumentsTypesOther {
   data: {
     linkTitle: string;
     link: string;
+    tags?: string[];
   }[];
+}
+
+export interface FAQ {
+  category: string;
+  data: { question: string; answer: string }[];
 }
 
 export interface PresentationProps {
@@ -25,6 +31,7 @@ export interface PresentationProps {
   linkTitle: string;
   image?: string;
   link: string;
+  tags?: string[];
 }
 
 export interface TextProps {

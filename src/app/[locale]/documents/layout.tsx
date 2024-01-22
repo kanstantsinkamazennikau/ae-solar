@@ -3,8 +3,7 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DocumentsHeading from "@/app/[locale]/components/common/DocumentsHeading";
 import DocumentsProvider from "@/app/[locale]/context/documentsContext";
-import Categories from "@/app/[locale]/documents/components/Categories";
-import SearchBar from "@/app/[locale]/documents/components/SearchBar";
+import CategoriesWithControl from "@/app/[locale]/documents/components/CategoriesControl";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -18,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const documentsCategory = pathName[pathName.length - 1];
 
   return (
-    <DocumentsProvider category={documentsCategory}>
+    <DocumentsProvider category={documentsCategory} key={documentsCategory}>
       <div className="relative -mt-[64px]">
         <Image
           src={
@@ -49,16 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             height={60}
             className="mb-[60px]"
           />
-          <div className="flex gap-[60px]">
-            <div>
-              <Categories />
-            </div>
-
-            <div className="w-full">
-              <SearchBar />
-              {children}
-            </div>
-          </div>
+          <CategoriesWithControl>{children}</CategoriesWithControl>
         </BasicWidthContainer>
       </div>
     </DocumentsProvider>
