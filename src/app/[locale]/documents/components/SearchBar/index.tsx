@@ -1,12 +1,35 @@
+"use client";
+
 import Button from "@/app/[locale]/components/common/Button";
 import Input from "@/app/[locale]/components/common/Input";
-import { DOCUMENTS_SEARCH } from "@/app/[locale]/utils/constants";
+import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
+import { DOCUMENTS_SEARCH, FORMS_FIELDS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useContext, useEffect } from "react";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 export default function SearchBar() {
+  const { setSearchInputValue, documentsType } = useContext(DocumentsContext);
+
+  const defaultValues = {
+    [FORMS_FIELDS.searchInputValue]: "",
+  };
+
+  const { register, handleSubmit, setValue } = useForm<FieldValues>({
+    defaultValues,
+  });
+
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    setSearchInputValue(data[FORMS_FIELDS.searchInputValue]);
+  };
+
+  useEffect(() => {
+    setValue(FORMS_FIELDS.searchInputValue, "");
+  }, [documentsType, setValue]);
+
   return (
     <>
-      <div
+      <form
         className="
           sticky
           min-[920px]:top-[80px]
@@ -16,6 +39,7 @@ export default function SearchBar() {
           bg-black
           backdrop-blur-3xl
         "
+        onSubmit={handleSubmit(onSubmit)}
       >
         <div
           className="
@@ -42,7 +66,11 @@ export default function SearchBar() {
             <Input
               externalStyle="border-none"
               externalContainerStyle="!w-full"
-              placeholder="I’m looking for…"
+              name={FORMS_FIELDS.searchInputValue}
+              placeholder={"I’m looking for…"}
+              register={register(FORMS_FIELDS.searchInputValue)}
+              type="text"
+              autoComplete="nope"
             />
           </div>
           <div>
@@ -53,7 +81,7 @@ export default function SearchBar() {
             </Button>
           </div>
         </div>
-      </div>
+      </form>
 
       <hr className="bg-option-border h-[1px] border-none w-full mt-2" />
     </>

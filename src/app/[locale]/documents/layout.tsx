@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const documentsCategory = pathName[pathName.length - 1];
 
   return (
-    <DocumentsProvider>
+    <DocumentsProvider category={documentsCategory}>
       <div className="relative -mt-[64px]">
         <Image
           src={

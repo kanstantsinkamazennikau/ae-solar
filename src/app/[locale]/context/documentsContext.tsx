@@ -15,6 +15,10 @@ export interface DocumentsContext {
   setSearchInputValue: (value: string) => void;
   searchInputValue: string;
   onCategoryClick: (category: string, index: number) => void;
+  documentsFile: any;
+  setDocumentsFile: (doc: any) => void;
+  documentsType: string;
+  setDocumentsType: (type: string) => void;
 }
 
 export const DocumentsContext = createContext<DocumentsContext>(null!);
@@ -26,20 +30,21 @@ const mapConstantWithCategory = {
 
 export default function DocumentsProvider({
   children,
+  category,
 }: {
+  category: string;
   children: React.ReactNode;
 }) {
-  const pathName = usePathname().split("/");
-  const documentsCategory = pathName[pathName.length - 1];
-
+  const [documentsType, setDocumentsType] = useState(category);
   const [selectedCategory, setSelectedCategory] = useState(
     mapConstantWithCategory[
-      documentsCategory as keyof typeof mapConstantWithCategory
+      documentsType as keyof typeof mapConstantWithCategory
     ][0].category
   );
   const [documentsAccordionActiveIndex, setDocumentsAccordionActiveIndex] =
     useState(0);
   const [searchInputValue, setSearchInputValue] = useState("");
+  const [documentsFile, setDocumentsFile] = useState();
 
   const onCategoryClick = useCallback((category: string, index: number) => {
     setDocumentsAccordionActiveIndex(index);
@@ -51,11 +56,13 @@ export default function DocumentsProvider({
   useEffect(() => {
     setSelectedCategory(
       mapConstantWithCategory[
-        documentsCategory as keyof typeof mapConstantWithCategory
+        category as keyof typeof mapConstantWithCategory
       ][0].category
     );
     setDocumentsAccordionActiveIndex(0);
-  }, [documentsCategory]);
+    setSearchInputValue("");
+    setDocumentsType(category);
+  }, [category]);
 
   return (
     <DocumentsContext.Provider
@@ -67,6 +74,10 @@ export default function DocumentsProvider({
         searchInputValue,
         setSearchInputValue,
         onCategoryClick,
+        documentsFile,
+        setDocumentsFile,
+        documentsType,
+        setDocumentsType,
       }}
     >
       {children}

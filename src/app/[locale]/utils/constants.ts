@@ -25,6 +25,7 @@ export const FORMS_FIELDS = {
   service: "service",
   interest: "interest",
   comment: "comment",
+  searchInputValue: "searchInputValue",
 };
 
 // NAVIGATION
@@ -352,7 +353,7 @@ export const FOOTER_SAVE_THE_WORLD = "It's time to save the world!";
 export const FOOTER_CONTACT_INFO = [
   {
     icon: "location.svg",
-    info: "AE Alternative Energy GMBH Messerschmittring 5486343 Königsbrunn Germany",
+    info: "AE Alternative Energy GMBH Messerschmittring 54 Königsbrunn 86343 Germany",
   },
   {
     icon: "phone.svg",
@@ -1737,76 +1738,76 @@ export const DOCUMENTS_FAQ_FILES = [
   {
     category: "Produkt-Spezifikationen und Technologien",
     data: [
-      { question: "Was bedeutet TIER 1?", answer: "link" },
+      { question: "Was bedeutet TIER 12?", answer: "link3" },
       {
-        question: "Ist AESOLAR TIER 1 gelistet?",
-        answer: "Ist AESOLAR TIER 1 gelistet?",
+        question: "Ist AESOLAR TIER 12 gelistet?",
+        answer: "Ist AESOLAR TIER 12 gelistet?",
       },
       {
-        question: "Welche Module stellt AESOLAR her?",
+        question: "Welche Module stellt AESOLAR her1?",
         answer:
           "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.",
       },
       {
-        question: "Wie groß ist die Produktionskapazität von AESOLAR?",
-        answer: "Wie groß ist die Produktionskapazität von AESOLAR?",
+        question: "Wie groß ist die Produktionskapazität von AESOLAR?1",
+        answer: "Wie groß ist die Produktionskapazität von AESOLAR?1",
       },
     ],
   },
   {
     category: "Kauf und Verfügbarkeit",
     data: [
-      { question: "Was bedeutet TIER 1?", answer: "link" },
+      { question: "Was bedeutet TIER 13?", answer: "link4" },
       {
-        question: "Ist AESOLAR TIER 1 gelistet?",
-        answer: "Ist AESOLAR TIER 1 gelistet?",
+        question: "Ist AESOLAR TIER 13 gelistet?",
+        answer: "Ist AESOLAR TIER 13 gelistet?",
       },
       {
-        question: "Welche Module stellt AESOLAR her?",
+        question: "Welche Module stellt AESOLAR her3?",
         answer:
-          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.",
+          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.3",
       },
       {
-        question: "Wie groß ist die Produktionskapazität von AESOLAR?",
-        answer: "Wie groß ist die Produktionskapazität von AESOLAR?",
+        question: "Wie groß ist die Produktionskapazität von AESOLAR?3",
+        answer: "Wie groß ist die Produktionskapazität von AESOLAR?3",
       },
     ],
   },
   {
     category: "Marktstrategie und Partnerschaften",
     data: [
-      { question: "Was bedeutet TIER 1?", answer: "link" },
+      { question: "Was bedeutet TIER 14?", answer: "link6" },
       {
-        question: "Ist AESOLAR TIER 1 gelistet?",
-        answer: "Ist AESOLAR TIER 1 gelistet?",
+        question: "Ist AESOLAR TIER 1 gelistet?4",
+        answer: "Ist AESOLAR TIER 1 gelistet?4",
       },
       {
-        question: "Welche Module stellt AESOLAR her?",
+        question: "Welche Module stellt AESOLAR her4?",
         answer:
-          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.",
+          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.4",
       },
       {
-        question: "Wie groß ist die Produktionskapazität von AESOLAR?",
-        answer: "Wie groß ist die Produktionskapazität von AESOLAR?",
+        question: "Wie groß ist die Produktionskapazität von AESOLAR?4",
+        answer: "Wie groß ist die Produktionskapazität von AESOLAR?4",
       },
     ],
   },
   {
     category: "Allgemeine Informationen zu Solarmodulen",
     data: [
-      { question: "Was bedeutet TIER 1?", answer: "link" },
+      { question: "Was bedeutet TIER 1?5", answer: "link5" },
       {
-        question: "Ist AESOLAR TIER 1 gelistet?",
-        answer: "Ist AESOLAR TIER 1 gelistet?",
+        question: "Ist AESOLAR TIER 1 gelistet?5",
+        answer: "Ist AESOLAR TIER 1 gelistet?5",
       },
       {
-        question: "Welche Module stellt AESOLAR her?",
+        question: "Welche Module stellt AESOLAR her?5",
         answer:
-          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.",
+          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.5",
       },
       {
-        question: "Wie groß ist die Produktionskapazität von AESOLAR?",
-        answer: "Wie groß ist die Produktionskapazität von AESOLAR?",
+        question: "Wie groß ist die Produktionskapazität von AESOLAR?5",
+        answer: "Wie groß ist die Produktionskapazität von AESOLAR?5",
       },
     ],
   },
