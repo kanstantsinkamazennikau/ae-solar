@@ -9,14 +9,20 @@ import {
   DOCUMENTS_FAQ_FILES,
   DOCUMENTS_FILES,
 } from "@/app/[locale]/utils/constants";
-import { createContext, useCallback, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  createContext,
+  useCallback,
+  useState,
+} from "react";
 
 export interface DocumentsContext {
-  setSelectedCategory: (category: string) => void;
+  setSelectedCategory: Dispatch<SetStateAction<string>>;
   selectedCategory: string;
-  setDocumentsAccordionActiveIndex: (index: number) => void;
+  setDocumentsAccordionActiveIndex: Dispatch<SetStateAction<number>>;
   documentsAccordionActiveIndex: number;
-  setSearchInputValue: (value: string) => void;
+  setSearchInputValue: Dispatch<SetStateAction<string>>;
   searchInputValue: string;
   onCategoryClick: (category: string, index: number) => void;
   documentsFile:
@@ -27,11 +33,11 @@ export interface DocumentsContext {
     doc: (DocumentsTypesPresentation | DocumentsTypesOther)[] | FAQ[] | never[]
   ) => void;
   documentsType: string;
-  setDocumentsType: (type: string) => void;
+  setDocumentsType: Dispatch<SetStateAction<string>>;
   documentsLoading: boolean;
-  setDocumentsLoading: (flag: boolean) => void;
-  filtersModel: string;
-  setFiltersModel: (model: string) => void;
+  setDocumentsLoading: Dispatch<SetStateAction<boolean>>;
+  filterModels: string[];
+  setFilterModels: Dispatch<SetStateAction<string[]>>;
 }
 
 export const DocumentsContext = createContext<DocumentsContext>(null!);
@@ -56,7 +62,7 @@ export default function DocumentsProvider({
   );
   const [documentsAccordionActiveIndex, setDocumentsAccordionActiveIndex] =
     useState(0);
-  const [filtersModel, setFiltersModel] = useState("");
+  const [filterModels, setFilterModels] = useState<string[]>([]);
   const [searchInputValue, setSearchInputValue] = useState("");
   const [documentsFile, setDocumentsFile] = useState<
     (DocumentsTypesPresentation | DocumentsTypesOther)[] | FAQ[] | never[]
@@ -86,8 +92,8 @@ export default function DocumentsProvider({
         setDocumentsType,
         documentsLoading,
         setDocumentsLoading,
-        filtersModel,
-        setFiltersModel,
+        filterModels,
+        setFilterModels,
       }}
     >
       {children}

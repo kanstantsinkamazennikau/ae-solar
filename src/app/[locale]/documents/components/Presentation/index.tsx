@@ -107,6 +107,7 @@ export default function Presentation({
           }`}
           alt={"linkArrow"}
           priority
+          quality={100}
           width={16}
           height={16}
         />

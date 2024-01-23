@@ -18,7 +18,7 @@ export default function Documents() {
   const {
     selectedCategory,
     documentsAccordionActiveIndex,
-    filtersModel,
+    filterModels,
     setDocumentsFile,
     documentsFile,
     documentsLoading,
@@ -28,13 +28,15 @@ export default function Documents() {
   useEffect(() => {
     setDocumentsLoading(true);
     let filteredDocuments: (DocumentsTypesPresentation | DocumentsTypesOther)[];
-    if (filtersModel === "") {
+    if (!filterModels.length) {
       filteredDocuments = DOCUMENTS_FILES;
     } else {
       filteredDocuments = DOCUMENTS_FILES.map(({ data, category, type }) => ({
         category,
         type,
-        data: data.filter(({ tags }) => tags?.includes(filtersModel)),
+        data: data.filter(({ tags }) =>
+          tags?.some((tag) => filterModels.includes(tag))
+        ),
       })).filter(({ data }) => data.length > 0) as typeof DOCUMENTS_FILES;
     }
 
@@ -42,7 +44,7 @@ export default function Documents() {
       setDocumentsFile(filteredDocuments);
       setDocumentsLoading(false);
     }, 500);
-  }, [filtersModel, setDocumentsFile, setDocumentsLoading]);
+  }, [filterModels, setDocumentsFile, setDocumentsLoading]);
 
   return documentsLoading ? (
     <DocumentsLoader />

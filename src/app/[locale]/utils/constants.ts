@@ -1665,7 +1665,7 @@ export const DOCUMENTS_FILES: (
         link: "link",
         tags: ["Aurora", "Comet", "Meteor", "Terra", "Neptune", "ShadeStar"],
       },
-      { linkTitle: "References4", link: "link" },
+      { linkTitle: "References4", link: "link", tags: ["Comet"] },
       { linkTitle: "References5", link: "link" },
       { linkTitle: "References6", link: "link" },
     ],
@@ -1825,5 +1825,6 @@ export const DOCUMENTS_FAQ_FILES = [
     ],
   },
 ];
-export const DOCUMENTS_FILTERS = "Filters";
+export const DOCUMENTS_FILTER = "Filter";
 export const DOCUMENTS_NO_RESULT = "No result for: ";
+export const DOCUMENTS_RESET = "Reset";
