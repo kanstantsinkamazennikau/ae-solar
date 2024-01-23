@@ -21,7 +21,7 @@ export default function MobileNavigation() {
   const router = useRouter();
 
   const onSubMenuHeadingClick = (subMenuHeader: string) => {
-    setSubMenuHeading(subMenuHeader);
+    setSubMenuHeading(subMenuHeading === subMenuHeader ? "" : subMenuHeader);
   };
 
   const onLinkClick = () => {

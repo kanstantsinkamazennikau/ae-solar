@@ -59,8 +59,8 @@ export const HEADER_NAV_LINKS_ARRAY = [
         text: "FAQ",
       },
       {
-        url: "/documents/solutions3",
-        text: "Solutions3",
+        url: "/documents/publishers_info",
+        text: "Publisher's Info",
       },
     ],
   },

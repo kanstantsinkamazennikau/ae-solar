@@ -14,9 +14,26 @@ export default function SubMenuItems({
   const { t } = useClientTranslation(locale, "navigation");
 
   return (
-    <ul className="bg-white p-5 flex flex-col">
+    <ul
+      className="
+        bg-black
+        px-4
+        py-5
+        flex
+        flex-col
+        gap-6
+        min-[920px]:border-2
+        border-solid
+        rounded-xl
+        border-option-border
+        min-[920px]:items-center
+      "
+    >
       {subMenuArray.map(({ url, text }) => (
-        <li className="text-sm text-gray-600 my-2.5" key={text}>
+        <li
+          className="[font-size:_clamp(14px,1.5vw,16px)] hover:text-dark-gray-900"
+          key={text}
+        >
           <Link
             href={`/${locale}/${url}`}
             className="flex items-center text-base hover:text-primary"
