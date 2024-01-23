@@ -59,7 +59,7 @@ export default function Categories() {
               const isSelectedcategory = selectedCategoryIndex === index;
               return (
                 <Link
-                  key={category}
+                  key={index}
                   href={`#${index}`}
                   onClick={(e) => {
                     e.preventDefault();
@@ -76,7 +76,16 @@ export default function Categories() {
                     items-center
                   `}
                   >
-                    <p className="max-w-[215px]">{category}</p>
+                    <p className="max-w-[215px]">
+                      {typeof category === "string" ? (
+                        category
+                      ) : (
+                        <div className="flex gap-1">
+                          <div className="min-w-[20px]">{category.point}</div>
+                          <div>{category.text}</div>
+                        </div>
+                      )}
+                    </p>
                     {isSelectedcategory && (
                       <div className="min-w-[10px] min-h-[10px] rounded-full bg-base-red" />
                     )}
