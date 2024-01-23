@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 const mapBackgroundWithCategory = {
   documents: `/images/documents/documents.png`,
   faq: `/images/documents/faq.png`,
+  publishers_info: `/images/documents/faq.png`,
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -23,7 +23,8 @@ export default function CategoriesWithControl({
       </div>
 
       <div className="w-full">
-        {documentsType !== "documents" ? <SearchBar /> : <Filter />}
+        {documentsType === "documents" && <Filter />}
+        {documentsType === "faq" && <SearchBar />}
         {children}
         {!documentsLoading && !documentsFile.length && (
           <div

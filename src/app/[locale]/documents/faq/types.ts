@@ -5,4 +5,5 @@ export interface AccordionWithIntersectionPropps {
   children:
     | ReactElement<any, string | JSXElementConstructor<any>>
     | readonly ReactElement<any, string | JSXElementConstructor<any>>[];
+  index: number;
 }

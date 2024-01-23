@@ -16,7 +16,7 @@ import { useContext, useEffect } from "react";
 
 export default function Documents() {
   const {
-    selectedCategory,
+    selectedCategoryIndex,
     documentsAccordionActiveIndex,
     filterModels,
     setDocumentsFile,
@@ -58,7 +58,7 @@ export default function Documents() {
           const styledTitle = (
             <span
               className={`${
-                category === selectedCategory
+                index === selectedCategoryIndex
                   ? "text-white"
                   : "text-dark-gray-900"
               } `}

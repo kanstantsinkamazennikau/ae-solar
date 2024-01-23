@@ -83,7 +83,7 @@ export default function NavLink({
               `}
             />
           </div>
-          <div className="absolute hidden group-hover:min-[920px]:block hover:min-[920px]:block z-10 top-full">
+          <div className="absolute hidden group-hover:min-[920px]:block hover:min-[920px]:block z-10 top-[calc(100%-2px)]">
             <SubMenuItems subMenuArray={subMenu} />
           </div>
 

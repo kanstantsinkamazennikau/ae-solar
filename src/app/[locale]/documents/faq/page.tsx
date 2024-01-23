@@ -35,29 +35,39 @@ export default function FAQ() {
   return documentsLoading ? (
     <DocumentsLoader />
   ) : (
-    (documentsFile as typeof DOCUMENTS_FAQ_FILES).map(({ category, data }) => {
-      return (
-        <AccordionWithIntersection category={category} key={category}>
-          {data.map(({ question, answer }) => {
-            const styledTitle = (
-              <span
-                className={`
+    (documentsFile as typeof DOCUMENTS_FAQ_FILES).map(
+      ({ category, data }, index) => {
+        return (
+          <AccordionWithIntersection
+            category={category}
+            key={category}
+            index={index}
+          >
+            {data.map(({ question, answer }) => {
+              const styledTitle = (
+                <span
+                  className={`
                   font-semibold
                   leading-[100%]
                   [font-size:_clamp(10px,1.5vw,24px)]
                 `}
-              >
-                {question}
-              </span>
-            );
-            return (
-              <AccordionItem key={question} title={styledTitle} openCloseStyle>
-                <p className="pb-6">{answer}</p>
-              </AccordionItem>
-            );
-          })}
-        </AccordionWithIntersection>
-      );
-    })
+                >
+                  {question}
+                </span>
+              );
+              return (
+                <AccordionItem
+                  key={question}
+                  title={styledTitle}
+                  openCloseStyle
+                >
+                  <p className="pb-6">{answer}</p>
+                </AccordionItem>
+              );
+            })}
+          </AccordionWithIntersection>
+        );
+      }
+    )
   );
 }

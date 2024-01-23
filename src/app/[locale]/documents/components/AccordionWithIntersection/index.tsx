@@ -8,19 +8,20 @@ import { useContext, useEffect, useRef } from "react";
 export default function AccordionWithIntersection({
   category,
   children,
+  index,
 }: AccordionWithIntersectionPropps) {
-  const { setSelectedCategory } = useContext(DocumentsContext);
+  const { setSelectedCategoryIndex } = useContext(DocumentsContext);
   const accordionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (accordionRef.current) {
         const itemOffset =
-          accordionRef.current!.offsetTop -
-          (window.outerWidth >= 920 ? 164 : 120);
+          accordionRef.current!.offsetTop +
+          (window.outerWidth >= 920 ? 160 : 120);
         const scrollTop = window.scrollY;
         if (scrollTop >= itemOffset) {
-          setSelectedCategory(category);
+          setSelectedCategoryIndex(index);
         }
       }
     };
@@ -30,7 +31,7 @@ export default function AccordionWithIntersection({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [category, setSelectedCategory]);
+  }, [category, index, setSelectedCategoryIndex]);
 
   return (
     <div

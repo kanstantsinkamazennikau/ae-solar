@@ -5,6 +5,7 @@ import {
   DocumentsTypesPresentation,
   FAQ,
 } from "@/app/[locale]/documents/components/types";
+import { DOCUMENTS_PUBLISHERS_INFO_FILES } from "@/app/[locale]/documents/publishers_info/constants";
 import {
   DOCUMENTS_FAQ_FILES,
   DOCUMENTS_FILES,
@@ -18,8 +19,8 @@ import {
 } from "react";
 
 export interface DocumentsContext {
-  setSelectedCategory: Dispatch<SetStateAction<string>>;
-  selectedCategory: string;
+  setSelectedCategoryIndex: Dispatch<SetStateAction<number>>;
+  selectedCategoryIndex: number;
   setDocumentsAccordionActiveIndex: Dispatch<SetStateAction<number>>;
   documentsAccordionActiveIndex: number;
   setSearchInputValue: Dispatch<SetStateAction<string>>;
@@ -45,6 +46,7 @@ export const DocumentsContext = createContext<DocumentsContext>(null!);
 const mapConstantWithCategory = {
   documents: DOCUMENTS_FILES,
   faq: DOCUMENTS_FAQ_FILES,
+  publishers_info: DOCUMENTS_PUBLISHERS_INFO_FILES,
 };
 
 export default function DocumentsProvider({
@@ -55,11 +57,7 @@ export default function DocumentsProvider({
   children: React.ReactNode;
 }) {
   const [documentsType, setDocumentsType] = useState(category);
-  const [selectedCategory, setSelectedCategory] = useState(
-    mapConstantWithCategory[
-      documentsType as keyof typeof mapConstantWithCategory
-    ][0].category
-  );
+  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
   const [documentsAccordionActiveIndex, setDocumentsAccordionActiveIndex] =
     useState(0);
   const [filterModels, setFilterModels] = useState<string[]>([]);
@@ -79,8 +77,8 @@ export default function DocumentsProvider({
   return (
     <DocumentsContext.Provider
       value={{
-        selectedCategory,
-        setSelectedCategory,
+        selectedCategoryIndex,
+        setSelectedCategoryIndex,
         documentsAccordionActiveIndex,
         setDocumentsAccordionActiveIndex,
         searchInputValue,

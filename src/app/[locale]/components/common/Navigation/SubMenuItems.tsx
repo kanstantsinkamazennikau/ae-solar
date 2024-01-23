@@ -31,7 +31,7 @@ export default function SubMenuItems({
     >
       {subMenuArray.map(({ url, text }) => (
         <li
-          className="[font-size:_clamp(14px,1.5vw,16px)] hover:text-dark-gray-900"
+          className="[font-size:_clamp(14px,1.5vw,16px)] hover:text-dark-gray-900 whitespace-nowrap"
           key={text}
         >
           <Link

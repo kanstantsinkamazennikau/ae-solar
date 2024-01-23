@@ -21,6 +21,15 @@ export interface DocumentsTypesOther {
   }[];
 }
 
+export interface DocumentsTypePublisher {
+  category: string;
+  title: string;
+  data: {
+    subtitle: string;
+    paragraphs: string[];
+  }[];
+}
+
 export interface FAQ {
   category: string;
   data: { question: string; answer: string }[];

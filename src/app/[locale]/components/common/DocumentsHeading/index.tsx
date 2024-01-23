@@ -1,6 +1,10 @@
 "use client";
 
 import {
+  DOCUMENTS_PUBLISHERS_INFO_INFORMATION,
+  DOCUMENTS_PUBLISHERS_INFO_PUBLISHERS,
+} from "@/app/[locale]/documents/publishers_info/constants";
+import {
   DOCUMENTS_DOCUMENTS_HEADING,
   DOCUMENTS_FAQ_HAVE_A_QUESTION,
   DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS,
@@ -16,6 +20,10 @@ const mapHeadingWithCategory = {
   faq: {
     tierOneHeading: DOCUMENTS_FAQ_HAVE_A_QUESTION,
     tierTwoHeading: DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS,
+  },
+  publishers_info: {
+    tierOneHeading: DOCUMENTS_PUBLISHERS_INFO_PUBLISHERS,
+    tierTwoHeading: DOCUMENTS_PUBLISHERS_INFO_INFORMATION,
   },
 };
 

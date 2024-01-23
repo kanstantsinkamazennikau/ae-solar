@@ -12,7 +12,8 @@ export default function DocumentsAccordionWithIntersection({
   children,
   ...props
 }: DocumentsAccordionWithIntersectionProps) {
-  const { onCategoryClick, setSelectedCategory } = useContext(DocumentsContext);
+  const { onCategoryClick, setSelectedCategoryIndex } =
+    useContext(DocumentsContext);
 
   const accordionRef = useRef<HTMLDivElement>(null);
 
@@ -20,11 +21,11 @@ export default function DocumentsAccordionWithIntersection({
     const handleScroll = () => {
       if (accordionRef.current) {
         const itemOffset =
-          accordionRef.current!.offsetTop -
+          accordionRef.current!.offsetTop +
           (window.outerWidth >= 920 ? 160 : 120);
         const scrollTop = window.scrollY;
         if (scrollTop >= itemOffset) {
-          setSelectedCategory(category);
+          setSelectedCategoryIndex(index);
         }
       }
     };
@@ -34,7 +35,7 @@ export default function DocumentsAccordionWithIntersection({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [category, setSelectedCategory]);
+  }, [category, setSelectedCategoryIndex, index]);
 
   return (
     <div ref={accordionRef}>

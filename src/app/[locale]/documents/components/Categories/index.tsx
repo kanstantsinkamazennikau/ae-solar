@@ -7,8 +7,12 @@ import Link from "next/link";
 import { useContext } from "react";
 
 export default function Categories() {
-  const { selectedCategory, onCategoryClick, documentsFile, documentsLoading } =
-    useContext(DocumentsContext);
+  const {
+    selectedCategoryIndex,
+    onCategoryClick,
+    documentsFile,
+    documentsLoading,
+  } = useContext(DocumentsContext);
 
   return (
     <div className="flex flex-col sticky min-[920px]:top-[80px] top-[64px] w-full min-w-[300px] max-w-[300px]">
@@ -31,28 +35,28 @@ export default function Categories() {
 
           <div
             className="
-          pt-0
-          px-7
-          pb-7
-          border-t-0
-          border
-          border-solid
-        border-[#131313]
-        bg-[#0D0D0D]
-          relative
-          -top-[10px]
-          rounded-tl-none
-          rounded-tr-none
-          rounded-xl
-          font-semibold
-          [font-size:_clamp(12px,1.5vw,16px)]
-          leading-[120%]
-          min-w-[300px]
-          max-w-[300px]
-        "
+              pt-0
+              px-7
+              pb-7
+              border-t-0
+              border
+              border-solid
+            border-[#131313]
+            bg-[#0D0D0D]
+              relative
+              -top-[10px]
+              rounded-tl-none
+              rounded-tr-none
+              rounded-xl
+              font-semibold
+              [font-size:_clamp(12px,1.5vw,16px)]
+              leading-[120%]
+              min-w-[300px]
+              max-w-[300px]
+            "
           >
             {documentsFile.map(({ category }, index) => {
-              const isSelectedcategory = selectedCategory === category;
+              const isSelectedcategory = selectedCategoryIndex === index;
               return (
                 <Link
                   key={category}
@@ -64,13 +68,13 @@ export default function Categories() {
                 >
                   <div
                     className={`
-                  ${isSelectedcategory ? "text-white" : "text-dark-gray-900"} 
-                  mt-4
-                  flex
-                  gap-4
-                  justify-between
-                  items-center
-                `}
+                    ${isSelectedcategory ? "text-white" : "text-dark-gray-900"} 
+                    mt-4
+                    flex
+                    gap-4
+                    justify-between
+                    items-center
+                  `}
                   >
                     <p className="max-w-[215px]">{category}</p>
                     {isSelectedcategory && (

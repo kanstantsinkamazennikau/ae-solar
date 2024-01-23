@@ -74,7 +74,7 @@ export default function Filter() {
                 width={16}
                 height={16}
               />
-              <span className="font-normal [font-size:_clamp(12px,1.5vw,16px)]">
+              <span className="font-normal [font-size:_clamp(10px,1vw,16px)]">
                 {modelName}
               </span>
               {isAppliedFilter && (
