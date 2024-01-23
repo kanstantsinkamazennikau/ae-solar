@@ -47,11 +47,11 @@ export default function PhoneNumberInput({
               absolute
               codeDropdown
               p-2
-              border
+              border-2
               border-solid
-              border-[#d0d8e91a]
-              rounded-[5px]
-              bg-[#474545b3]
+              border-option-border
+              rounded-[12px]
+              bg-black
               backdrop-blur-[50px]
               translate-y-[52px]
               z-10
