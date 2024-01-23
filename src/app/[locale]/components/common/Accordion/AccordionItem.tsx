@@ -46,7 +46,7 @@ export default function AccordionItem({
   return (
     <div
       className="border-b border-solid border-[#131313] last:border-none scroll-mt-[140px]"
-      id={id}
+      id={id?.toString()}
     >
       <button
         className={`

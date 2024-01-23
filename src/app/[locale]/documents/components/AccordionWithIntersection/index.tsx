@@ -37,7 +37,7 @@ export default function AccordionWithIntersection({
     <div
       key={category}
       className="pb-[3px] scroll-mt-[140px]"
-      id={category}
+      id={index?.toString()}
       ref={accordionRef}
     >
       <p

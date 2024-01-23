@@ -9,7 +9,7 @@ export interface AccordionItemProps {
   multiple?: boolean;
   index?: number;
   activeIndex?: number;
-  id?: string;
+  id?: number;
   openCloseStyle?: boolean;
   documentsAccordion?: boolean;
 }

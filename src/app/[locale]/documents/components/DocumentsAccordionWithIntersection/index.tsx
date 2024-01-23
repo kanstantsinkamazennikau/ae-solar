@@ -42,8 +42,8 @@ export default function DocumentsAccordionWithIntersection({
       <AccordionItem
         title={title}
         key={category}
-        onClickCallback={() => onCategoryClick(category, index)}
-        id={category}
+        onClickCallback={() => onCategoryClick(index)}
+        id={index}
         {...props}
       >
         {children}

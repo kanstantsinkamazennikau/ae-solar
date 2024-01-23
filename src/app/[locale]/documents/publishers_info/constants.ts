@@ -71,6 +71,61 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           `Schweizer Beschwerdestelle:<br /><a href="https://www.edoeb.admin.ch/edoeb/de/home.html">https://www.edoeb.admin.ch/edoeb/de/home.html</a><br />Startseite (admin.ch)`,
         ],
       },
+      {
+        subtitle: "4. Recht auf Datenübertragbarkeit",
+        paragraphs: [
+          "Sie haben das Recht, Daten, die wir aufgrund Ihrer Einwilligung oder in Erfüllung eines Vertrages automatisiert verarbeiten, an Sie oder einen anderen Verantwortlichen in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Wenn Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur in dem Maße, indem es technisch machbar ist.",
+        ],
+      },
+      {
+        subtitle: "5. Auskunft, Berichtigung, Sperrung, Löschung",
+        paragraphs: [
+          "Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der oben in Ziff. I.2. angegebenen Adresse an uns wenden.",
+        ],
+      },
+    ],
+  },
+  {
+    category: "III. Allgemeine Informationen zur Datenverarbeitung",
+    title:
+      "III. Datenverarbeitung bei informatorischer Nutzung der Webseite, technische Hintergründe, Cookies etc.",
+    data: [
+      {
+        subtitle: "1. Rechtsgrundlage und Speicherdauer",
+        paragraphs: [
+          "Soweit Sie in die Verarbeitung Ihrer personenbezogenen Daten im Sinne des Art. 4 Nr. 1 DSGVO durch uns eingewilligt haben, dient Art. 6 (Abs. 1) lit. a) DSGVO und Art. 4 DSG CH als Rechtsgrundlage für die Verarbeitung. Die Verarbeitung personenbezogener Daten, welche wir zur Erfüllung vertraglicher oder vorvertraglicher Pflichten benötigen, erfolgt auf Grundlage des Art. 6 Abs. 1 lit. b) DSGVO und Art. 4 DSG CH. Ist die Verarbeitung zur Wahrnehmung unserer berechtigten Interessen oder derjenigen eines Dritten erforderlich und überwiegen die Interessen, Grundfreiheiten und Grundrechte des Betroffenen nicht, so dient uns Art. 6 (Abs. 1 lit. f) DSGVO und Art. 4 DSG CH als Rechtsgrundlage für die Verarbeitung von personenbezogener Daten. Für die von uns vorgenommenen Verarbeitungsvorgänge geben wir nachfolgend die jeweils anwendbare Rechtsgrundlage an. Die Verarbeitung kann auch auf mehreren Rechtsgrundlagen beruhen.",
+          "Für die von uns vorgenommenen Verarbeitungsvorgänge geben wir im Folgenden jeweils an, wie lange die Daten bei uns gespeichert werden und wann sie gelöscht oder gesperrt werden. Die Dauer der Speicherung der Daten ist abhängig vom Verarbeitungszweck, der Rechtsgrundlage und gesetzlichen Aufbewahrungsfristen.",
+          "Sofern eine Verarbeitung von Daten auf Grundlage einer Einwilligung gemäß Art. 6 Abs. 1 lit. a) DSGVO erfolgt, werden diese Daten gespeichert, bis der Betroffene seine Einwilligung widerruft hat.",
+          "Werden personenbezogene Daten für Direktwerbung auf Grundlage von Art. 6 Abs. 1 lit. f) DSGVO verarbeitet, so werden diese Daten gespeichert, bis der Betroffene sein Widerspruchsrecht nach Art. 21 Abs. 2 DSGVO ausgeübt hat.",
+          "Wenn im Folgenden keine ausdrückliche Speicherdauer angegeben wird, werden Ihre personenbezogenen Daten gelöscht oder gesperrt, sobald der Zweck oder die Rechtsgrundlage für die Speicherung entfällt.",
+          "Eine Speicherung kann jedoch über die angegebene Zeit hinaus im Falle einer (drohenden) Rechtsstreitigkeit mit Ihnen oder eines sonstigen rechtlichen Verfahrens oder wenn die Speicherung durch gesetzliche Vorschriften, denen wir als Verantwortlicher unterliegen, vorgesehen ist (z.B. Schweiz: Art. 958 lit. f) OR & Art. 5 GeBüV; BRD: § 257 HGB, § 147 AO).",
+          "Läuft die durch die gesetzlichen Vorschriften vorgeschriebene Speicherfrist ab, erfolgt eine Sperrung oder Löschung der personenbezogenen Daten, es sei denn, dass eine weitere Speicherung durch uns erforderlich ist und dafür eine Rechtsgrundlage besteht.",
+        ],
+      },
+      {
+        subtitle: "2. Datensicherheit",
+        paragraphs: [
+          "Wir setzen angemessene technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten gegen zufällige oder vorsätzliche Manipulationen, teilweisen oder vollständigen Verlust, Zerstörung oder gegen den unbefugten Zugriff Dritter zu schützen, wobei wir den Stand der Technik, die Implementierungskosten und die Art, den Umfang, den Kontext und den Zweck der Verarbeitung sowie die bestehenden Risiken einer Datenschutzverletzung (einschließlich deren Wahrscheinlichkeit und Auswirkungen) für die betroffene Person berücksichtigen. Unsere Sicherheitsmaßnahmen werden entsprechend der technologischen Entwicklung fortlaufend verbessert.",
+          "Auf Anfrage erteilen wir Ihnen gerne nähere Auskünfte. Bitte wenden Sie sich an unseren Datenschutzverantwortlichen (siehe oben).",
+        ],
+      },
+      {
+        subtitle:
+          "3. Bei der (informatorischen) Nutzung der Website verarbeitete Daten",
+        paragraphs: [
+          "Die Vorzüge unseres Internetangebots können wir Ihnen zwangsläufig nur zur Verfügung stellen, wenn bei der Nutzung von uns bestimmte, für den Webseiten-Betrieb erforderliche Daten zu Ihrer Person erhoben werden. Wir erheben diese Daten, wenn dies für die Erfüllung des Vertrages zwischen Ihnen und uns (auch in Form von Nutzungsbedingungen für diese Webseite) erforderlich ist (Art. 6 Abs. 1 lit. b) DSGVO und Art. 4 Abs. 3. DSG (CH)) oder es liegt Ihre Einwilligung vor (Art. 6 Abs. 1 lit. a) DSGVO und Art. 4 DSG (CH)). Darüber hinaus erheben wir diese Daten aufgrund unseres berechtigten Interesses, wenn dies für die Funktionsfähigkeit der Webseite erforderlich ist und Ihr Interesse am Schutz Ihrer personenbezogenen Daten nicht überwiegt (Art. 6 Abs. 1 lit. f) und Art. 4 Abs. 3 DSG (CH)).",
+          "Wir erheben und verarbeiten bei der lediglich informatorischen Nutzung unserer Website, also wenn Sie sich nicht registrieren oder uns anderweitig Informationen übermitteln, die folgenden Daten von Ihnen, die für uns technisch erforderlich sind, um Ihnen unsere Website anzuzeigen:",
+          "besuchte Website Quelle/Verweis, von welchem Sie auf die Seite gelangten Geräteinformationen: Zu den Zugriffsdaten gehören die IP-Adresse, die Geräte-ID, der Gerätetyp, gerätespezifische Einstellungen, das Datum und die Uhrzeit des Abrufs, Zeitzone, die übertragene Datenmenge in Byte und die Meldung, ob der Datenaustausch vollständig war, Absturz des Endgerätes, Browserart und das Betriebssystem. Diese Zugriffsdaten werden verarbeitet, um den Betrieb der Webseite technisch zu ermöglichen. Informationen mit Ihrer Einwilligung: Sonstige Informationen (z. B. Geo-Lokalisationsdaten, personenbezogene Daten wie Name und E-Mail-Adresse, etc.) verarbeiten wir, wenn Sie uns dies gestatten.",
+          "Eine anderweitige Verwendung oder Weitergabe der Daten findet nicht statt. Es kann jedoch notwendig sein, die Server-Logfiles nachträglich zu überprüfen, sollten konkrete Anhaltspunkte einer rechtswidrigen Nutzung der Webseite vorliegen.",
+        ],
+      },
+      {
+        subtitle: "4. Kontaktaufnahme mit uns",
+        paragraphs: [
+          "Wenn Sie (proaktiv) über ein von uns bereitgestelltes Kontaktformular oder einen Chat Kontakt mit uns aufnehmen, werden die von Ihnen angegebenen Daten von uns gespeichert, um Ihre Anfrage zu beantworten und für die damit verbundene technische Administration verwendet. Rechtsgrundlage für die Verarbeitung dieser Daten ist unser berechtigtes Interesse an der Beantwortung Ihres Anliegens gemäß Art. 6 Abs. 1 lit. f) DSGVO. Die Angabe bestimmter wahrheitsgemäßer Daten ist für die Bearbeitung Ihrer Anfrage erforderlich, andere Angaben sind freiwillig. Pflichtangaben, die zur Beantwortung Ihrer Anfrage erforderlich sind, sind als solche gekennzeichnet, die übrigen Angaben sind freiwillig. Welche Daten bei Nutzung eines Kontaktformulars erhoben werden, ist im jeweiligen Kontaktformular zu erkennen. Die Verarbeitung der oben genannten Daten kann auf Ihrer Einwilligung beruhen, sofern Sie eine solche während Ihrer Kontaktaufnahme abgegeben haben, gemäß Art. 6 Abs. 1) lit. a) DSGVO und Art. 4 DSG CH und, soweit besondere Kategorien von Personendaten (z.B. Gesundheitsdaten oder andere 'sensible' Daten) betroffen sind, gemäß Art. 9 Abs. 2) lit. a) DSGVO und Art. 3 lit. c DSG (CH). Die erhobenen personenbezogenen Daten werden nach vollständiger Erledigung Ihrer Anfrage unverzüglich gelöscht, sofern sie nicht für die Anbahnung oder Abwicklung eines Vertrages mit Ihnen gemäß Art. 6 Abs. 1 lit. b) DSGVO und Art. 4 Abs. 3 DSG CH erforderlich sind oder gesetzliche Aufbewahrungspflichten bestehen.",
+          "Wenn Sie als Unternehmer über ein von uns bereitgestelltes Kontaktformular oder per E-Mail mit uns in Kontakt treten, können Ihre Daten in einem Kundenbetreuungssystem gespeichert werden, das auch dazu genutzt werden kann, Sie zu Werbezwecken zu kontaktieren, wenn Sie uns eine entsprechende zusätzliche Einwilligung erteilt haben (siehe auch den folgenden Abschnitt). Bitte beachten Sie, dass Sie bei Kontaktformularen mit festen Betreff-Auswahlmöglichkeiten den richtigen Betreff für Sie bzw. Ihre Eigenschaft als Verbraucher oder Unternehmer auswählen müssen, um zu vermeiden, dass Sie irrtümlich als Geschäftskunde/Unternehmer erscheinen und unsere Antwort entsprechend anders ausfällt als bei Verbrauchern.",
+        ],
+      },
     ],
   },
   // {

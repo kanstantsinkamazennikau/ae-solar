@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  DocumentsTypePublisher,
   DocumentsTypesOther,
   DocumentsTypesPresentation,
   FAQ,
@@ -25,13 +26,18 @@ export interface DocumentsContext {
   documentsAccordionActiveIndex: number;
   setSearchInputValue: Dispatch<SetStateAction<string>>;
   searchInputValue: string;
-  onCategoryClick: (category: string, index: number) => void;
+  onCategoryClick: (index: number) => void;
   documentsFile:
     | (DocumentsTypesPresentation | DocumentsTypesOther)[]
     | FAQ[]
+    | DocumentsTypePublisher[]
     | never[];
   setDocumentsFile: (
-    doc: (DocumentsTypesPresentation | DocumentsTypesOther)[] | FAQ[] | never[]
+    doc:
+      | (DocumentsTypesPresentation | DocumentsTypesOther)[]
+      | FAQ[]
+      | DocumentsTypePublisher[]
+      | never[]
   ) => void;
   documentsType: string;
   setDocumentsType: Dispatch<SetStateAction<string>>;
@@ -63,14 +69,19 @@ export default function DocumentsProvider({
   const [filterModels, setFilterModels] = useState<string[]>([]);
   const [searchInputValue, setSearchInputValue] = useState("");
   const [documentsFile, setDocumentsFile] = useState<
-    (DocumentsTypesPresentation | DocumentsTypesOther)[] | FAQ[] | never[]
+    | (DocumentsTypesPresentation | DocumentsTypesOther)[]
+    | FAQ[]
+    | DocumentsTypePublisher[]
+    | never[]
   >([]);
   const [documentsLoading, setDocumentsLoading] = useState(true);
 
-  const onCategoryClick = useCallback((category: string, index: number) => {
+  const onCategoryClick = useCallback((index: number) => {
     setDocumentsAccordionActiveIndex(index);
     setTimeout(() => {
-      document.getElementById(category)!.scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById(index.toString())!
+        .scrollIntoView({ behavior: "smooth" });
     }, 350);
   }, []);
 

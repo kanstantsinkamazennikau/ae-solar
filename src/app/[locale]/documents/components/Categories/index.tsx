@@ -60,10 +60,10 @@ export default function Categories() {
               return (
                 <Link
                   key={category}
-                  href={`#${category}`}
+                  href={`#${index}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    onCategoryClick(category, index);
+                    onCategoryClick(index);
                   }}
                 >
                   <div
