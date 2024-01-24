@@ -1,10 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
+//@ts-nocheck
+
 import { ImageResponse } from "next/og";
 
 // Route segment config
 export const runtime = "edge";
 
 // Image metadata
-export const alt = "About Acme";
+export const alt = "AE Solar";
 export const size = {
   width: 1200,
   height: 630,
@@ -19,6 +22,10 @@ export default async function Image() {
     new URL("./fonts/Criteria CF/Criteria CF Medium.otf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
+  const imageData = await fetch(
+    new URL("../../../public/images/featuredProducts.png", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
       // ImageResponse JSX element
@@ -30,10 +37,12 @@ export default async function Image() {
           height: "100%",
           display: "flex",
           alignItems: "center",
+          flexDirection: "column",
           justifyContent: "center",
         }}
       >
-        German TIER1 Manufacturer of High-Quality Solar Panels
+        German TIER1 Manufacturer
+        <img width="256" height="256" src={imageData} alt="AE Solar" />
       </div>
     ),
     // ImageResponse options
