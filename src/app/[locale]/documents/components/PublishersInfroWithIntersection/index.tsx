@@ -38,16 +38,16 @@ export default function PublishersInfroWithIntersection({
       ref={infoRef}
     >
       <div className="[font-size:_clamp(24px,2.5vw,48px)]">{title}</div>
-      {data.map(({ subtitle, paragraphs }) => (
-        <div key={subtitle} className="flex gap-6 flex-col">
+      {data.map(({ subtitle, paragraphs }, index) => (
+        <div key={index} className="flex gap-6 flex-col">
           {subtitle && (
             <div className="[font-size:_clamp(12px,1.5vw,24px)] font-semibold">
               {subtitle}
             </div>
           )}
-          {paragraphs.map((paragraph) => (
+          {paragraphs.map((paragraph, index) => (
             <div
-              key={paragraph}
+              key={index}
               className="[font-size:_clamp(10px,1.5vw,20px)] font-normal font-walsheim"
             >
               {parse(paragraph)}

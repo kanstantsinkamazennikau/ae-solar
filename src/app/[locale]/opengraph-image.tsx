@@ -1,29 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
 
-// async function getFont(): Promise<Buffer> {
-//   const url = process.env.VERCEL_URL;
-//   return new Promise((resolve, reject) => {
-//     http
-//       .get(`${url}/GTWalsheimPro-Medium.ttf`, (res) => {
-//         const chunks: any[] = [];
-//         res.on("data", (c) => chunks.push(c));
-//         res.on("end", () => resolve(Buffer.concat(chunks)));
-//       })
-//       .on("error", (err) => {
-//         reject(err);
-//       });
-//   });
-// }
+// const getCriteriaMedium = async () => {
+//   const response = await fetch(
+//     new URL(`${process.env.VERCEL_URL}/Criteria CF Medium.otf`)
+//   );
+//   const interSemiBold = await response.arrayBuffer();
 
-const getCriteriaMedium = async () => {
-  const response = await fetch(
-    new URL(`${process.env.VERCEL_URL}/Criteria CF Medium.otf`)
-  );
-  const interSemiBold = await response.arrayBuffer();
-
-  return interSemiBold;
-};
+//   return interSemiBold;
+// };
 
 export const contentType = "image/png";
 
@@ -56,14 +41,14 @@ export default async function OpengraphImage() {
     {
       width: 1200,
       height: 630,
-      fonts: [
-        {
-          name: "Criteria CF",
-          data: await getCriteriaMedium(),
-          style: "normal",
-          weight: 500,
-        },
-      ],
+      // fonts: [
+      //   {
+      //     name: "Criteria CF",
+      //     data: await getCriteriaMedium(),
+      //     style: "normal",
+      //     weight: 500,
+      //   },
+      // ],
     }
   );
 }

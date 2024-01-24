@@ -224,7 +224,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           Google Ireland Limited`,
           `Beschreibung<br />
           Sammeln Sie Statistiken über die Nutzung der Website. (Abstandsmessung)Browserinformationen (Browsertyp, Verweis-/Ausstiegsseiten, auf unserer Website angesehene Dateien, Betriebssystem, Zeitstempel und/oder Clickstream-Daten) Nutzungsdaten (Ansichten, Klicks) IP-Adresse (wir haben die IP-Anonymisierung (daher - IP-Maskierung) aktiviert (Ihre IP-Adresse, sodass Ihre IP-Adresse von Google in der EU und im EWR vor der Übertragung gekürzt wird, sodass keine anderen Rückschlüsse auf die Person möglich sind. Nur diese anonymisierte IP-Adresse wird an Google übertragen.)`,
-          `Link zur Datenschutzerklärung<br />
+          `Link zur Datenschutzerklärung<br /> 
           <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a>`,
           `Welche Daten werden erhoben?<br />
           Browser-Informationen; Klickpfad; Datum und Uhrzeit des Besuchs; Standort-Informationen; Internetdienstanbieter; Geräteinformationen; Referrer URL; Bildschirmauflösung; Mausbewegungen; Anonymisierte IP-Adresse; Besuchsdauer; Kontodaten; Absprungraten; Downloads; Verhaltensdaten; App-Aktualisierungen`,
@@ -238,14 +238,14 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           _ga_* 2 Jahre Wird verwendet, um den Sitzungsstatus abzurufen.<br />
           Rechtliche Grundlage<br />
           Einwilligung, Art. 6 Abs. 1 lit. a DSGVO, Art. 49 Abs. 1 lit. a DSGVO`,
-          `Ort der Verarbeitung<br />
+          `Ort der Verarbeitung <br />
           Europäische Union`,
           `Google Tag Manager<br />
           Herausgeber<br />
           Google Ireland Limited`,
           `Beschreibung<br />
           Es ist ein Tag-Management-System. Mittels Google Tag Manager können Tags zentral über die Benutzeroberfläche eingebunden werden. Tags sind kleine Codeteile, die Aktivitäten verfolgen können. Scriptcode für andere Tools wird über den Google Tag Manager eingebunden. Der Tag Manager kann steuern, wann bestimmte Tags aktiviert werden.`,
-          `Link zur Datenschutzerklärung<br />
+          `Link zur Datenschutzerklärung<br />  
           <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a>`,
           `Welche Daten werden erhoben?<br />
           Aggregierte Daten über die Tag-Auslösung; Aggregierte Daten zum Auslösen von Tags; Keine Daten gesammelt`,
@@ -260,14 +260,14 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           _dc_gtm_UA-* Sitzung Wird von Google Tag Manager verwendet, um das Laden von Google Analytics-Skriptcode zu steuern.<br />
           Rechtliche Grundlage<br />
           Einwilligung, Art. 6 Abs. 1 lit. a DSGVO, Art. 49 Abs. 1 lit. a DSGVO`,
-          `Ort der Verarbeitung<br />
+          `Ort der Verarbeitung  <br />
           Europäische Union`,
           `Hotjar<br />
           Herausgeber<br />
           Hotjar Limited`,
           `Beschreibung<br />
           Hotjar verwendet Cookies und andere Technologien, um Informationen über das Nutzerverhalten und ihre Geräte zu sammeln.Erfasst die IP-Adresse des Geräts (nur in anonymisierter Form protokolliert und gespeichert), die Bildschirmgröße, den Gerätetyp (eindeutige Gerätekennung), Informationen über den verwendeten Browser, den Standort (nur Land), die bevorzugte Sprache, in der die Website angezeigt wird). Hotjar speichert diese Informationen in pseudonymen Nutzungsprofilen. Hotjar oder wir verwenden diese Informationen nicht, um einzelne Benutzer zu identifizieren oder mit anderen Daten über einzelne Benutzer zu kombinieren.`,
-          `Link zur Datenschutzerklärung<br />
+          `Link zur Datenschutzerklärung<br />   
           <a href="https://www.hotjar.com/legal/policies/privacy">https://www.hotjar.com/legal/policies/privacy</a>`,
           `Welche Daten werden erhoben?<br />
           Browser-Informationen; Datum und Uhrzeit des Besuchs; IP-Adresse; Gerätebestriebssystem; Referrer URL; Browser-Typ; Geografischer Standort; Bildschirmauflösung; Gerätetyp; Besuchte Seiten; Mausbewegungen; Domain-Name; Eindeutige Gerätekennung; Sprachinformationen; Klicks; Eindeutige Benutzerkennung; Antworten auf Umfragen`,
@@ -311,14 +311,14 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           hjActiveViewportIds n.a. n.a.<br />
           Rechtliche Grundlage<br />
           Einwilligung, Art. 6 Abs. 1 lit. a DSGVO`,
-          `Ort der Verarbeitung<br />
+          `Ort der Verarbeitung    <br />
           Europäische Union`,
           `Bing Ads Retargeting<br />
           Herausgeber<br />
           Microsoft Corporation`,
           `Beschreibung<br />
           Es ist ein Retargeting-Dienst, der Websites dabei hilft, sich wieder mit früheren Besuchern zu verbinden.`,
-          `Link zur Datenschutzerklärung<br />
+          `Link zur Datenschutzerklärung<br />    
           <a href="https://privacy.microsoft.com/en/PrivacyStatement">https://privacy.microsoft.com/en/PrivacyStatement</a>`,
           `Welche Daten werden erhoben?<br />
           Cookie-Informationen; IP-Adresse; Referrer URL; URL; Browser-Sprache; Bildschirmauflösung; Digitale Signatur; Microsoft Klick-ID; Seitentitel; Ladezeit der Seite; IP Address; Version von UET; Eventinformationen; Microsoft Click ID; Browser language; Screen resolution; cookie information; Digital signature; Page title; Version of UET; Event information; Page load time`,
@@ -332,14 +332,14 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           _uetvid 1382400 Es wird verwendet, um Besucher verschiedener Websites zu verfolgen, um relevante Werbung basierend auf den Präferenzen des Besuchers anzuzeigen.<br />
           Rechtliche Grundlage<br />
           Art. 6 Abs. 1 S. 1 lit. a DSGVO`,
-          `Ort der Verarbeitung<br />
+          `Ort der Verarbeitung     <br />
           Europäische Union`,
           `Outbrain<br />
           Herausgeber<br />
           Outbrain Inc.`,
           `Beschreibung<br />
           Outbrain ist die führende SEO-Plattform für das offene Web. Unsere Technologie ermöglicht es einem Drittel der Online-Konsumenten weltweit, neue Dinge durch Empfehlungs-Feeds in ihren Lieblingsmedien zu entdecken und Werbetreibende mit diesen Zielgruppen zu verbinden, um ihr Geschäft auszubauen.`,
-          `Link zur Datenschutzerklärung<br />
+          `Link zur Datenschutzerklärung<br />     
           <a href="https://www.outbrain.com/legal/privacy">https://www.outbrain.com/legal/privacy</a>`,
           `Welche Daten werden erhoben?<br />
           Datum und Uhrzeit des Besuchs; Gerätebestriebssystem; Geräteinformationen; Referrer URL; Browser-Typ; Besuchte Websites; Anonymisierte IP-Adresse`,
@@ -372,7 +372,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           Twitter`,
           `Beschreibung<br />
           Dies sind Twitter-Cookies von Drittanbietern. Diese Cookies ermöglichen es Benutzern, sich bei ihrem Twitter-Konto anzumelden, wenn sie Inhalte auf unserer Website mit ihren Freunden teilen möchten. Diese Cookies ermöglichen es uns nicht, auf Ihr Konto zuzugreifen oder uns vertrauliche Informationen über Ihr Konto bereitzustellen. Diese Cookies ermöglichen auch das Erscheinen von Tweet-Newsfeeds auf der Website.`,
-          `Link zur Datenschutzerklärung<br />
+          `Link zur Datenschutzerklärung<br />       
           <a href="https://twitter.com/en/privacy">https://twitter.com/en/privacy</a>`,
           `Cookies:<br />
           Name Lebensdauer Beschreibung<br />
@@ -401,7 +401,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           tfw_ex 14 Tage Dieses Cookie wird für die Twitter-Integration und die Freigabefunktion verwendet.<br />
           Rechtliche Grundlage<br />
           Einwilligung, Art. 6 Abs. 1 lit. a DSGVO`,
-          `Ort der Verarbeitung<br />
+          `Ort der Verarbeitung       <br />
           Europäische Union`,
           `Anzeigen / Ads<br />
           Google Ads Conversion Tracking<br />
@@ -409,7 +409,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           Google Ireland Limited`,
           `Beschreibung<br />
           Dies ist ein Conversion-Tracking-Dienst. Dieser Dienst zeichnet auf, was passiert, wenn ein Nutzer eine Website besucht und auf eine Anzeige klickt, die wir über Google Ads schalten. Bei Conversions messen wir, ob Nutzer auf einer von uns angegebenen Website eine bestimmte Aktion ausführen (z. B. einen Dienst abonnieren), nachdem sie auf eine von uns über Google Ads geschaltete Anzeige geklickt haben. Auf diese Weise können Benutzer nachvollziehen, welche Keywords, Anzeigen, Anzeigengruppen oder Kampagnen zu der gewünschten Benutzerinteraktion geführt haben.`,
-          `Link zur Datenschutzerklärung<br />
+          `Link zur Datenschutzerklärung<br />        
           <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a>`,
           `Welche Daten werden erhoben?<br />
           Datum und Uhrzeit des Besuchs; IP-Adresse; Referrer URL; Browser-Typ; Browser-Sprache; Cookie ID; Nutzerverhalten; Angeklickte Anzeigen; Web-Anfrage`,
@@ -423,14 +423,14 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           _gcl_dc_ 7776000 Dieses Cookie wird gesetzt, wenn ein Nutzer auf eine Google-Anzeige klickt, um eine Website zu besuchen. Sie enthält Informationen über die angeklickte Anzeige, sodass Erfolge wie eine Bestellung oder eine Kontaktanfrage der Anzeige zugeordnet werden können.<br />
           Rechtliche Grundlage<br />
           Art. 6 Abs. 1 S. 1 lit. a DSGVO`,
-          `Ort der Verarbeitung<br />
+          `Ort der Verarbeitung         <br />
           Europäische Union`,
           `Facebook Pixel<br />
           Herausgeber<br />
           Meta Platforms Ireland Ltd.`,
           `Beschreibung<br />
           Dies ist eine Tracking-Technologie, die von Facebook bereitgestellt und von anderen Facebook-Diensten verwendet wird. Es wird verwendet, um die Interaktionen der Besucher mit der Website („Ereignisse“) zu verfolgen, nachdem sie auf Werbeanzeigen geklickt haben, die auf Facebook oder anderen von Meta angebotenen Diensten („Conversions“) angeboten werden.`,
-          `Link zur Datenschutzerklärung<br />
+          `Link zur Datenschutzerklärung<br />         
           <a href="https://www.facebook.com/privacy/explanation">https://www.facebook.com/privacy/explanation</a>`,
           `Welche Daten werden erhoben?<br />
           Browser-Informationen; Standort-Informationen; IP-Adresse; Nutzungsdaten; Gerätebestriebssystem; Geräteinformationen; Referrer URL; Browser-Typ; User Agent; Geografischer Standort; Facebook Nutzer-ID; HTTP-Header; Besuchte Seiten; Interaktionen mit Werbung, Services und Produkten; Nutzerverhalten; Angesehene Werbeanzeigen; Angesehener Inhalt; Angeklickte Elemente; Marketinginformation; Pixel-ID; Facebook-Cookie-Informationen; Nutzungs-/Klickverhalten; Geräte-ID; Nicht vertrauliche benutzerdefinierte Daten; Erfolg von Marketingkampagnen; IP Adresse; Standortinformationen; Geräteinformation; Facebook-Benutzer-ID; Nicht sensible benutzerdefinierte Daten; Pixel-spezifische Daten; Benutzerverhalten; Anzeigen angesehen; Interaktionen mit Werbung, Dienstleistungen und Produkten; Marketing-Information; Inhalt angesehen; Browserinformationen; Konversionsziele; Besucher-ID; Facebook Benutzer-ID; Pixelspezifische Daten; Browser Informationen; Standort-Information; Device Informationen;`,
@@ -454,7 +454,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           ATN 2 Jahre Facebook stellt keine Beschreibung von Cookies zur Verfügung.<br />
           Rechtliche Grundlage<br />
           Art. 6 Para. 1 DSGVO, Art. 49 Abs. 1 lit. a DSGVO`,
-          `Ort der Verarbeitung<br />
+          `Ort der Verarbeitung           <br />
           Europäische Union`,
           `Fachpartner finden<br />
           Google Maps<br />
@@ -462,7 +462,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           Google Ireland Limited`,
           `Beschreibung<br />
           Wir haben Karten von Google Maps integriert, um Ihnen ein besseres Surferlebnis auf unserer Website zu bieten.`,
-          `Link zur Datenschutzerklärung<br />
+          `Link zur Datenschutzerklärung<br />          
           <a href="http://www.google.com/intl/de/policies/privacy/">http://www.google.com/intl/de/policies/privacy/</a>`,
           `Welche Daten werden erhoben?<br />
           Datum und Uhrzeit des Besuchs; Standort-Informationen; IP-Adresse; Nutzungsdaten; URL; Suchbegriffe; Geografischer Standort; IP Adresse; Nutzung des eingebetteten Kartendienstes (Klicks, Verschiebung der Kartenansicht, etc.); URLs`,
@@ -476,7 +476,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           goog_pem_mod persistent Wird verwendet, um Daten über das Gerät und das Verhalten eines Besuchers an Google Analytics zu senden. Verfolgen Sie Besucher über alle Geräte und Marketingkanäle hinweg.<br />
           Rechtliche Grundlage<br />
           Einwilligung, Art. 6 Abs. 1 lit. a DSGVO, Art. 49 Abs. 1 lit. a DSGVO`,
-          `Ort der Verarbeitung<br />
+          `Ort der Verarbeitung            <br />
           Europäische Union`,
           `Zudem ist es möglich, den Browser so einzustellen, dass der Webseitennutzer über das Setzen von Cookies informiert wird. So kann er selbst entscheiden, ob er Cookies für bestimmte Fälle oder generell ausschließen möchte.`,
           `Cookie-Einstellungen werden je Browser unterschiedlich verwaltet, was im Hilfemenü des Browsers ersichtlich wird. Als Unterstützung werden Ihnen beispielhaft die entsprechenden Links hier angezeigt:`,

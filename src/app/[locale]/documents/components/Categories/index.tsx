@@ -78,7 +78,7 @@ export default function Categories() {
                     items-center
                   `}
                   >
-                    <p className="max-w-[215px]">
+                    <div className="max-w-[215px]">
                       {documentsType !== "publishers_info" ? (
                         category
                       ) : (
@@ -89,7 +89,7 @@ export default function Categories() {
                           <div>{category}</div>
                         </div>
                       )}
-                    </p>
+                    </div>
                     {isSelectedcategory && (
                       <div className="min-w-[10px] min-h-[10px] rounded-full bg-base-red" />
                     )}

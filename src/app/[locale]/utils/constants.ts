@@ -1730,97 +1730,171 @@ export const DOCUMENTS_FAQ_HAVE_A_QUESTION = "Have a Question?";
 export const DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS = "We Have Solutions";
 export const DOCUMENTS_FAQ_FILES = [
   {
-    category: "Unternehmens- und Produktüberblick",
+    category: "AESOLAR Company and Product Overview",
     data: [
-      { question: "Was bedeutet TIER 1?", answer: "link" },
       {
-        question: "Ist AESOLAR TIER 1 gelistet?",
-        answer: "Ist AESOLAR TIER 1 gelistet?",
-      },
-      {
-        question: "Welche Module stellt AESOLAR her?",
+        question: "What does TIER 1 mean?",
         answer:
-          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.",
+          "The Bloomberg New Energy Finance (BNEF) ranking allows for a transparent differentiation among the numerous PV manufacturers in the market. The title Tier-1 manufacturer is one of the highest distinctions in the industry.",
       },
       {
-        question: "Wie groß ist die Produktionskapazität von AESOLAR?",
-        answer: "Wie groß ist die Produktionskapazität von AESOLAR?",
+        question: "Is AESOLAR listed as TIER 1?",
+        answer: "Yes",
+      },
+      {
+        question: "What modules does AESOLAR produce?",
+        answer:
+          "AESOLAR offers a wide range of solar modules, including monocrystalline, polycrystalline, PERC, TOPCon, and HJT modules.",
+      },
+      {
+        question: "What is the production capacity of AESOLAR?",
+        answer:
+          "Our annual production capacity is 2 gigawatts, with expansion plans for the future",
+      },
+      {
+        question: "Where does AESOLAR produce?",
+        answer:
+          "Our production facilities are located in China and Turkey, supplemented by planned production facilities in Germany.",
+      },
+      {
+        question: "Why buy AESOLAR modules?",
+        answer:
+          "AESOLAR modules are characterized by high quality, efficiency, reliability, excellent warranty terms, and outstanding customer service.",
+      },
+      {
+        question:
+          "How does AESOLAR's quality differ from other TIER 1 manufacturers?",
+        answer:
+          "AESOLAR stands out from other TIER 1 manufacturers due to our advanced technology, rigorous quality controls, and innovation. This justifies the higher price of our products, reflecting superior performance and durability.",
+      },
+      {
+        question: "Does AESOLAR produce cells?",
+        answer:
+          "No, AESOLAR does not produce solar cells itself. However, we exclusively offer a wide range of solar cells of all technologies, from which our latest and most advanced modules result.",
+      },
+      {
+        question: "Why do you have a polar bear as a mascot?",
+        answer:
+          "The polar bear symbolizes our commitment to environmental protection and the fight against climate change. It represents our dedication to sustainability and renewable energies.",
       },
     ],
   },
   {
-    category: "Produkt-Spezifikationen und Technologien",
+    category: "Product Specifications and Technologies",
     data: [
-      { question: "Was bedeutet TIER 12?", answer: "link3" },
       {
-        question: "Ist AESOLAR TIER 12 gelistet?",
-        answer: "Ist AESOLAR TIER 12 gelistet?",
-      },
-      {
-        question: "Welche Module stellt AESOLAR her1?",
+        question: "What is PERC?",
         answer:
-          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.",
+          "Passivated Emitter and Rear Cell is a technology designed to enhance the efficiency of solar cells.",
       },
       {
-        question: "Wie groß ist die Produktionskapazität von AESOLAR?1",
-        answer: "Wie groß ist die Produktionskapazität von AESOLAR?1",
+        question: "What is TOPCon?",
+        answer:
+          "Tunnel Oxide Passivated Contact - is an advanced technology aimed at improving the efficiency and lifespan of solar cells",
+      },
+      {
+        question: "What is HJT??",
+        answer:
+          "Heterojunction Technology combines monocrystalline and amorphous silicon to increase efficiency",
+      },
+      {
+        question: "What is BIPV?",
+        answer:
+          "Building Integrated Photovoltaics refers to the integration of solar technology into building structures.",
+      },
+      {
+        question: "What does PVT mean?",
+        answer:
+          "Photovoltaic Thermal denotes the combination of photovoltaic and thermal energy generation, as seen in our Neptune series..",
+      },
+      {
+        question: "Are there colored modules?",
+        answer: "Yes, we offer colored modules to meet aesthetic requirements.",
+      },
+      {
+        question: "What does Weak Light and Low-Temperature Performance mean?",
+        answer:
+          "These terms describe the performance of solar modules under conditions of low sunlight and at low temperatures. AESOLAR modules are designed to operate efficiently even under such conditions.",
       },
     ],
   },
   {
-    category: "Kauf und Verfügbarkeit",
+    category: "Purchase and Availability",
     data: [
-      { question: "Was bedeutet TIER 13?", answer: "link4" },
       {
-        question: "Ist AESOLAR TIER 13 gelistet?",
-        answer: "Ist AESOLAR TIER 13 gelistet?",
-      },
-      {
-        question: "Welche Module stellt AESOLAR her3?",
+        question: "Where can I buy AESOLAR modules?",
         answer:
-          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.3",
-      },
-      {
-        question: "Wie groß ist die Produktionskapazität von AESOLAR?3",
-        answer: "Wie groß ist die Produktionskapazität von AESOLAR?3",
+          "Our modules are available through a network of distributors and dealers. Please contact us directly for more information.",
       },
     ],
   },
   {
-    category: "Marktstrategie und Partnerschaften",
+    category: "Market Strategy and Partnerships",
     data: [
-      { question: "Was bedeutet TIER 14?", answer: "link6" },
       {
-        question: "Ist AESOLAR TIER 1 gelistet?4",
-        answer: "Ist AESOLAR TIER 1 gelistet?4",
-      },
-      {
-        question: "Welche Module stellt AESOLAR her4?",
+        question: "What is your market strategy?",
         answer:
-          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.4",
+          "Our strategy focuses on providing high-quality solar modules, building strong partnerships, and concentrating on innovation and customer service.",
       },
       {
-        question: "Wie groß ist die Produktionskapazität von AESOLAR?4",
-        answer: "Wie groß ist die Produktionskapazität von AESOLAR?4",
+        question: "How many distribution partners do you have per country?",
+        answer:
+          "The number of distribution partners varies depending on the market size and dynamics.",
+      },
+      {
+        question:
+          "How can we protect our market share if we become your distribution partner?",
+        answer:
+          "Through exclusive distribution territories, marketing support, and product training, we offer our partners the opportunity to effectively protect and expand their market share.",
       },
     ],
   },
   {
-    category: "Allgemeine Informationen zu Solarmodulen",
+    category: "General information about solar panels",
     data: [
-      { question: "Was bedeutet TIER 1?5", answer: "link5" },
       {
-        question: "Ist AESOLAR TIER 1 gelistet?5",
-        answer: "Ist AESOLAR TIER 1 gelistet?5",
-      },
-      {
-        question: "Welche Module stellt AESOLAR her?5",
+        question: "What is a solar panel and how does it work?",
         answer:
-          "AESOLAR bietet eine breite Palette an Solarmodulen, darunter monokristalline, polykristalline, PERC-, TOPCon und HJT-Module.5",
+          "A solar panel converts sunlight into electricity based on the photovoltaic effect.",
       },
       {
-        question: "Wie groß ist die Produktionskapazität von AESOLAR?5",
-        answer: "Wie groß ist die Produktionskapazität von AESOLAR?5",
+        question: "How long do solar panels last?",
+        answer:
+          "Typically, 25 to 30 years, with a slight decrease in efficiency over time.",
+      },
+      {
+        question: "How much do solar panels cost?",
+        answer: "Costs vary depending on size, type, and manufacturer.",
+      },
+      {
+        question: "Can solar panels generate energy in any weather?",
+        answer:
+          "Yes, even in cloudy weather, although efficiency is higher in direct sunlight.",
+      },
+      {
+        question: "Do I need a permit to install solar panels?",
+        answer: "Often, a permit is required depending on local regulations.",
+      },
+      {
+        question:
+          "How does the installation of solar panels affect the value of my home?",
+        answer:
+          "The installation can increase the value of a home, especially through improved energy efficiency.",
+      },
+      {
+        question: "How environmentally friendly are solar panels?",
+        answer:
+          "Solar panels are highly environmentally friendly, as they utilize renewable energy and produce no greenhouse gases.",
+      },
+      {
+        question: "Can I install solar panels myself?",
+        answer:
+          "Installation is possible, but professional installation is recommended.",
+      },
+      {
+        question: "How maintenance-intensive are solar panels?",
+        answer:
+          "Solar panels require little maintenance, making them a practical solution for sustainable energy.",
       },
     ],
   },

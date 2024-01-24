@@ -62,7 +62,11 @@ export default function middleware(request: NextRequest) {
 
   if (!response) response = NextResponse.next();
 
-  if (nextLocale && isUserAgreeWithCookiesPolicy)
+  if (nextLocale && isUserAgreeWithCookiesPolicy) {
     response.cookies.set("NEXT_LOCALE", nextLocale);
+  }
+
+  response.headers.set("x-url", request.nextUrl.pathname);
+
   return response;
 }
