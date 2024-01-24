@@ -118,7 +118,7 @@ export const metadata: Metadata = {
     `${
       process.env.NODE_ENV === "development"
         ? `http://${process.env.VERCEL_URL}`
-        : `http://${process.env.VERCEL_URL}`
+        : `https://${process.env.VERCEL_URL}`
     }`
   ),
   openGraph: {
