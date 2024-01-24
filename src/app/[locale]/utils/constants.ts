@@ -291,7 +291,8 @@ export const GET_IN_TOUCH_BECOME_A = "Become ";
 export const FAQ_ACCORDION_DATA = [
   {
     question: "How do solar panels work?",
-    answer: "How do solar panels work?",
+    answer:
+      "Solar panels work by converting sunlight into electricity through a process called the photovoltaic effect. The solar cells within the panels absorb sunlight, and the energy from the absorbed light creates an electric current.",
   },
   {
     question: "What factors affect the efficiency of a solar system?",
@@ -299,14 +300,14 @@ export const FAQ_ACCORDION_DATA = [
       "The efficiency of a solar system is influenced by sunlight exposure, shading, panel orientation, and temperature. Choosing high-quality panels and proper installation also impact overall performance.",
   },
   {
-    question:
-      "How long does it take to see a return on investment (ROI) for a solar system?",
+    question: "What is usual estimated time of delivery?",
     answer:
-      "How long does it take to see a return on investment (ROI) for a solar system?",
+      "You can purchase directly from stocks of our local distributor at your country . Or you can place order for manufacturing and ETA will depend on destination, quantity and other order details.Usually by order ETA is from 30 to 60 days.",
   },
   {
-    question: "What maintenance is required for solar panels?",
-    answer: "What maintenance is required for solar panels?",
+    question: "How to become your distributor?",
+    answer:
+      "Please contact our sales office, send us your company presentation and get Distributorship terms and conditions from dedicated to your country Regional Manager.",
   },
 ];
 export const FAQ_QUESTION = "Have a Question?";

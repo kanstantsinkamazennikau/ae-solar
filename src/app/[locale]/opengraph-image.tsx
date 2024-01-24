@@ -1,55 +1,54 @@
-/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
-const fs = require("fs").promises;
 
-// const getCriteriaMedium = async () => {
-//   const response = await fetch(
-//     new URL(`${process.env.VERCEL_URL}/Criteria CF Medium.otf`)
-//   );
-//   const interSemiBold = await response.arrayBuffer();
+// Route segment config
+export const runtime = "edge";
 
-//   return interSemiBold;
-// };
-export const runtime = "nodejs";
+// Image metadata
+export const alt = "About Acme";
+export const size = {
+  width: 1200,
+  height: 630,
+};
+
 export const contentType = "image/png";
 
 // Image generation
-export default async function OpengraphImage() {
+export default async function Image() {
+  // Font
+  const interSemiBold = fetch(
+    new URL("./fonts/Criteria CF/Criteria CF Medium.otf", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
+      // ImageResponse JSX element
       <div
         style={{
-          display: "flex",
-          background: "#f6f6f6",
+          fontSize: 128,
+          background: "white",
           width: "100%",
           height: "100%",
-          flexDirection: "column",
-          justifyContent: "center",
+          display: "flex",
           alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <img
-          width="256"
-          height="256"
-          src={`${process.env.VERCEL_URL}/images/featuredProducts.png`}
-          alt="image"
-        />
-        <div tw="text-9xl">
-          German TIER1 Manufacturer of High-Quality Solar Panels
-        </div>
+        German TIER1 Manufacturer of High-Quality Solar Panels
       </div>
     ),
+    // ImageResponse options
     {
-      width: 1200,
-      height: 630,
-      // fonts: [
-      //   {
-      //     name: "Criteria CF",
-      //     data: await getCriteriaMedium(),
-      //     style: "normal",
-      //     weight: 500,
-      //   },
-      // ],
+      // For convenience, we can re-use the exported opengraph-image
+      // size config to also set the ImageResponse's width and height.
+      ...size,
+      fonts: [
+        {
+          name: "Inter",
+          data: await interSemiBold,
+          style: "normal",
+          weight: 400,
+        },
+      ],
     }
   );
 }
