@@ -114,21 +114,10 @@ export const metadata: Metadata = {
   title: "AE-Solar",
   description: "German TIER1 Manufacturer of High-Quality Solar Panels",
   keywords: [],
+  metadataBase: new URL("localhost:3000"),
   openGraph: {
     title: "AE-Solar",
     description: "German TIER1 Manufacturer of High-Quality Solar Panels",
-    images: [
-      {
-        url: "/images/featuredProducts.png",
-        width: 1200,
-        height: 630,
-      },
-      {
-        url: "/images/featuredProducts.png",
-        width: 1800,
-        height: 1600,
-      },
-    ],
     type: "website",
   },
 };
