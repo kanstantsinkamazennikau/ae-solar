@@ -22,6 +22,14 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
           "Der für die Verarbeitung Verantwortliche ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung personenbezogener Daten (z. B. Namen, E-Mail-Adressen usw.) entscheidet.",
           "Die verantwortliche Stelle (im Folgenden auch 'wir', 'uns', 'unser') im Sinne des Datenschutzgesetzes ist:<br />AE Alternative Energy GMBH<br />Messerschmittring 54<br />86343 Königsbrunn<br />Germany",
           "+49 8231 978268 0<br />info@ae-solar.com<br />sales@ae-solar.com<br />",
+          `IMPRESSUM<br />
+          Steuernummer: 102/121/20478 AE Alternative Energy GmbH<br />
+          WEEE-Reg.-Nr. DE 20958316<br />
+          Vorgangs-ID: RV-201601-001190<br />
+          Geschäftsführer: Alexander Maier<br />
+          Registrierungsnummer gem ElektroG:<br />
+          VAT no.: DE268975577<br />
+          Registration no. UID: DE268975577`,
         ],
       },
       {

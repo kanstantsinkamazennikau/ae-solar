@@ -1,57 +1,67 @@
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
 
-// Route segment config
-// export const runtime = "edge";
+// async function getFont(): Promise<Buffer> {
+//   const url = process.env.VERCEL_URL;
+//   return new Promise((resolve, reject) => {
+//     http
+//       .get(`${url}/GTWalsheimPro-Medium.ttf`, (res) => {
+//         const chunks: any[] = [];
+//         res.on("data", (c) => chunks.push(c));
+//         res.on("end", () => resolve(Buffer.concat(chunks)));
+//       })
+//       .on("error", (err) => {
+//         reject(err);
+//       });
+//   });
+// }
 
-// Image metadata
-export const alt = "AE-Solar";
-export const size = {
-  width: 1200,
-  height: 630,
+const getCriteriaMedium = async () => {
+  const response = await fetch(
+    new URL(`${process.env.VERCEL_URL}/Criteria CF Medium.otf`)
+  );
+  const interSemiBold = await response.arrayBuffer();
+
+  return interSemiBold;
 };
 
 export const contentType = "image/png";
 
 // Image generation
-export default async function Image() {
-  // Font
-  const criteriaMedium = fetch(
-    new URL("./fonts/GTWalsheim/GTWalsheimPro-Regular.ttf", import.meta.url)
-  ).then((res) => res.arrayBuffer());
-
+export default async function OpengraphImage() {
   return new ImageResponse(
     (
-      // ImageResponse JSX element
-      <>
-        <div
-          tw="text-9xl bg-white font-sans"
-          // style={{
-          //   fontSize: 128,
-          //   background: "white",
-          //   width: "100%",
-          //   height: "100%",
-          //   display: "flex",
-          //   alignItems: "center",
-          //   justifyContent: "center",
-          // }}
-        >
-          High-Quality
+      <div
+        style={{
+          display: "flex",
+          background: "#f6f6f6",
+          width: "100%",
+          height: "100%",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <img
+          width="256"
+          height="256"
+          src={`${process.env.VERCEL_URL}/images/featuredProducts.png`}
+          alt="image"
+        />
+        <div tw="text-9xl">
+          German TIER1 Manufacturer of High-Quality Solar Panels
         </div>
-        <div tw="text-9xl bg-white">High-Quality</div>
-      </>
+      </div>
     ),
-    // ImageResponse options
-
     {
-      // For convenience, we can re-use the exported opengraph-image
-      // size config to also set the ImageResponse's width and height.
-      ...size,
+      width: 1200,
+      height: 630,
       fonts: [
         {
           name: "Criteria CF",
-          data: await criteriaMedium,
+          data: await getCriteriaMedium(),
           style: "normal",
-          weight: 400,
+          weight: 500,
         },
       ],
     }

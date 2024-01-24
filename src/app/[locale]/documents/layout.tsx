@@ -13,7 +13,23 @@ const mapBackgroundWithCategory = {
   publishers_info: `/images/documents/publishers_info.png`,
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+// export async function generateMetadata({ params }: { params: any }) {
+//   console.log(params);
+
+//   return {
+//     title: "...",
+//   };
+// }
+
+export default function Layout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: any;
+}) {
+  console.log("params", params);
+
   const pathName = usePathname().split("/");
   const documentsCategory = pathName[pathName.length - 1];
 
