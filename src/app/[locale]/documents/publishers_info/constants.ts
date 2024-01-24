@@ -4,10 +4,8 @@ export const DOCUMENTS_PUBLISHERS_INFO_PUBLISHERS = "Publisher's";
 export const DOCUMENTS_PUBLISHERS_INFO_INFORMATION = " Information";
 export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
   {
-    category: {
-      point: "I.",
-      text: "Rechtlicher Rahmen, zuständige Stelle, Definitionen",
-    },
+    category: "Rechtlicher Rahmen, zuständige Stelle, Definitionen",
+
     title:
       "I. Allgemeine Informationen, verantwortliche Stelle und rechtlicher Rahmen",
     data: [
@@ -46,7 +44,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
     ],
   },
   {
-    category: { point: "II.", text: "Rechte der betroffenen Person" },
+    category: "Rechte der betroffenen Person",
     title:
       "II. Betroffenenrechte gemäß Art 12 ff DSGVO und Art. 77 DSGVO/Art. 25 ff. DSG (CH)",
     data: [
@@ -89,10 +87,8 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
     ],
   },
   {
-    category: {
-      point: "III.",
-      text: "Allgemeine Informationen zur Datenverarbeitung",
-    },
+    category: "Allgemeine Informationen zur Datenverarbeitung",
+
     title:
       "III. Datenverarbeitung bei informatorischer Nutzung der Webseite, technische Hintergründe, Cookies etc.",
     data: [
@@ -578,10 +574,8 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
     ],
   },
   {
-    category: {
-      point: "IV.",
-      text: "Besondere Hinweise zur Datenverarbeitung im Rahmen der Anwendung von Zusatzfunktionen",
-    },
+    category:
+      "Besondere Hinweise zur Datenverarbeitung im Rahmen der Anwendung von Zusatzfunktionen",
     title:
       "IV. Besondere Hinweise zur Datenverarbeitung im Rahmen der Anwendung von Zusatzfunktionen",
     data: [
@@ -605,10 +599,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
     ],
   },
   {
-    category: {
-      point: "V.",
-      text: "Datenverarbeitung im Bewerbungskontext",
-    },
+    category: "Datenverarbeitung im Bewerbungskontext",
     title: "V. Datenverarbeitung im Bewerbungskontext",
     data: [
       {
@@ -640,10 +631,7 @@ export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
     ],
   },
   {
-    category: {
-      point: "VI.",
-      text: "Sonstiges",
-    },
+    category: "Sonstiges",
     title: "VI.Sonstiges",
     data: [
       {

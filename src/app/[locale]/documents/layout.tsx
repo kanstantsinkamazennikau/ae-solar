@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 const mapBackgroundWithCategory = {
   documents: `/images/documents/documents.png`,
   faq: `/images/documents/faq.png`,
-  publishers_info: `/images/documents/faq.png`,
+  publishers_info: `/images/documents/publishers_info.png`,
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <DocumentsProvider category={documentsCategory} key={documentsCategory}>
-      <div className="relative -mt-[64px]">
+      <div className="relative -mt-[64px] flex justify-center">
         <Image
           src={
             mapBackgroundWithCategory[

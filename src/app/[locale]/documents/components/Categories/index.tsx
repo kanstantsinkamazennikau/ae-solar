@@ -2,6 +2,7 @@
 
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import { DOCUMENTS_CATEGORIES } from "@/app/[locale]/utils/constants";
+import { romanize } from "@/app/[locale]/utils/romanize";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
@@ -12,6 +13,7 @@ export default function Categories() {
     onCategoryClick,
     documentsFile,
     documentsLoading,
+    documentsType,
   } = useContext(DocumentsContext);
 
   return (
@@ -77,12 +79,14 @@ export default function Categories() {
                   `}
                   >
                     <p className="max-w-[215px]">
-                      {typeof category === "string" ? (
+                      {documentsType !== "publishers_info" ? (
                         category
                       ) : (
                         <div className="flex gap-1">
-                          <div className="min-w-[20px]">{category.point}</div>
-                          <div>{category.text}</div>
+                          <div className="min-w-[20px]">
+                            {romanize(index + 1)}.
+                          </div>
+                          <div>{category}</div>
                         </div>
                       )}
                     </p>

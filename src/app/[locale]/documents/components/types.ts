@@ -22,7 +22,7 @@ export interface DocumentsTypesOther {
 }
 
 export interface DocumentsTypePublisher {
-  category: { point: string; text: string };
+  category: string;
   title: string;
   data: {
     subtitle?: string;
