@@ -9,7 +9,7 @@ import { ImageResponse } from "next/og";
 
 //   return interSemiBold;
 // };
-
+export const runtime = "nodejs";
 export const contentType = "image/png";
 
 // Image generation
@@ -30,7 +30,7 @@ export default async function OpengraphImage() {
         <img
           width="256"
           height="256"
-          src={`${process.env.VERCEL_URL}/images/featuredProducts.png`}
+          src={`${process.env.VERCEL_URL}images/featuredProducts.png`}
           alt="image"
         />
         <div tw="text-9xl">
