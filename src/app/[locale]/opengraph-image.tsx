@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
+const fs = require("fs").promises;
 
 // const getCriteriaMedium = async () => {
 //   const response = await fetch(
@@ -30,7 +31,7 @@ export default async function OpengraphImage() {
         <img
           width="256"
           height="256"
-          src={`${process.env.VERCEL_URL}images/featuredProducts.png`}
+          src={`${process.env.VERCEL_URL}/images/featuredProducts.png`}
           alt="image"
         />
         <div tw="text-9xl">
