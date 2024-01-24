@@ -114,7 +114,13 @@ export const metadata: Metadata = {
   title: "AE-Solar",
   description: "German TIER1 Manufacturer of High-Quality Solar Panels",
   keywords: [],
-  metadataBase: new URL(`http://localhost:3000`),
+  metadataBase: new URL(
+    `${
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:3000"
+        : process.env.VERCEL_URL
+    }`
+  ),
   openGraph: {
     title: "AE-Solar",
     description: "German TIER1 Manufacturer of High-Quality Solar Panels",
