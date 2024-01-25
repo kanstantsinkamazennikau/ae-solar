@@ -10,7 +10,7 @@ import {
 } from "@/app/[locale]/utils/constants";
 import { FieldValues, RegisterOptions } from "react-hook-form";
 
-export async function sendEmail(data: FieldValues) {
+async function sendEmail(data: FieldValues) {
   const apiEndpoint = "/api/contact_us";
 
   try {
