@@ -6,10 +6,8 @@ import {
   FieldErrors,
   FieldValues,
   RegisterOptions,
-  SubmitHandler,
   UseFormGetValues,
   UseFormRegister,
-  UseFormRegisterReturn,
   UseFormSetValue,
 } from "react-hook-form";
 
@@ -24,6 +22,7 @@ export interface FormFileds {
 }
 
 export interface BuyerFormProps {
+  submitFunction?: (data: FieldValues) => Promise<void>;
   formHeader: string;
   formFields: FormFileds[];
   defaultValues: {

@@ -4,6 +4,7 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import Inputs from "@/app/[locale]/components/common/BuyerForm/Inputs";
 import { BuyerFormProps } from "@/app/[locale]/components/common/BuyerForm/types";
+import Loader from "@/app/[locale]/components/common/Loader";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
   CHECKOUT_GO_TO_HOME_PAGE,
@@ -18,6 +19,7 @@ import {
   SubmitHandler,
   useForm,
 } from "react-hook-form";
+import { toast } from "react-toastify";
 
 export default function BuyerForm({
   inputsRules,
@@ -25,12 +27,14 @@ export default function BuyerForm({
   formFields,
   formHeader,
   isShowCloseIcon = true,
+  submitFunction,
 }: BuyerFormProps) {
   const locale = useParams()?.locale;
   const router = useRouter();
   const { setIsShowCheckoutForm } = useContext(ConstructorContext);
   const [isShowMessageAfterSubmit, setIsShowMessageAfterSubmit] =
     useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const {
     handleSubmit,
@@ -51,8 +55,16 @@ export default function BuyerForm({
   };
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    setIsShowMessageAfterSubmit(true);
-    console.log(data);
+    //TODO Remove condition
+    try {
+      setLoading(true);
+      submitFunction && (await submitFunction(data));
+      setIsShowMessageAfterSubmit(true);
+    } catch (error) {
+      toast.error((error as Error).message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

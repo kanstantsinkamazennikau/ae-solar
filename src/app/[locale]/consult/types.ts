@@ -4,4 +4,5 @@ export interface ConsultFormFileds {
   email: string;
   phone: string;
   service: string;
+  comment?: string;
 }

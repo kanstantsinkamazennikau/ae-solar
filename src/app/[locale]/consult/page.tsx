@@ -8,7 +8,21 @@ import {
   FORMS_FIELDS,
   PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";
-import { RegisterOptions } from "react-hook-form";
+import { FieldValues, RegisterOptions } from "react-hook-form";
+
+export async function sendEmail(data: FieldValues) {
+  const apiEndpoint = "/api/contact_us";
+
+  try {
+    const res = await fetch(apiEndpoint, {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error("Something went wrong");
+  } catch (err) {
+    throw err;
+  }
+}
 
 export default function Consult() {
   const inputsRules: { [key in keyof ConsultFormFileds]: RegisterOptions } = {
@@ -54,6 +68,7 @@ export default function Consult() {
       formFields={CONSULT_FORM_FIELDS}
       formHeader={CONSULT_READY_TO_CONSULT}
       isShowCloseIcon={false}
+      submitFunction={sendEmail}
     />
   );
 }
