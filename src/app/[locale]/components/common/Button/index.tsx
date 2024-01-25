@@ -53,7 +53,7 @@ export default function Button({
         disabled:opacity-70
         disabled:cursor-not-allowed
         rounded-full
-        hover:opacity-80
+        hover:opacity-90
         transition
         bg-base-red
         ${buttonSize(size)}

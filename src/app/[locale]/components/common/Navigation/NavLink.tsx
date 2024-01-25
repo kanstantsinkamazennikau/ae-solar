@@ -34,7 +34,7 @@ export default function NavLink({
             leading-none 
             justify-between 
             whitespace-nowrap
-            hover:text-dark-gray-900
+            hover:text-base-red
             ${
               highlightNavigationLink(locale, url, path) &&
               "min-[920px]:border-base-red min-[920px]:border-b-2 min-[920px]:border-solid"
@@ -57,7 +57,7 @@ export default function NavLink({
               leading-none
               justify-between
               cursor-pointer
-              hover:text-dark-gray-900
+              hover:text-base-red
               ${
                 path.includes(url) &&
                 "min-[920px]:border-base-red min-[920px]:border-b-2 min-[920px]:border-solid"

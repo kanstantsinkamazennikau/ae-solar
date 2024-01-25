@@ -51,8 +51,10 @@ export default function PhoneNumberInput({
               border-solid
               border-option-border
               rounded-[12px]
-              bg-black
+              bg-[#131313d9]
               backdrop-blur-[50px]
+              min-[920px]:items-center
+              shadow-[0_4px_25px_0px_rgba(0,0,0,0.65)]
               translate-y-[52px]
               z-10
             "

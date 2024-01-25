@@ -60,6 +60,7 @@ export default function AccordionItem({
           justify-between
           [font-size:_clamp(16px,2.5vw,40px)]
           leading-[120%]
+          hover:text-white
           ${
             openCloseStyle
               ? isOpen || isOpenItem

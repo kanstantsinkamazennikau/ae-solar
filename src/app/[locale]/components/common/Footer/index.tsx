@@ -78,6 +78,7 @@ export default function Footer() {
                 priority
                 width={870}
                 height={547}
+                quality={100}
                 className="-z-10 md:max-w-[45%] md:h-full max-w-[40%] h-1/2"
               />
               <Image
@@ -86,6 +87,7 @@ export default function Footer() {
                 priority
                 width={800}
                 height={547}
+                quality={100}
                 className="-z-10 md:max-w-[45%] md:h-full max-w-[40%] h-1/2"
               />
             </div>

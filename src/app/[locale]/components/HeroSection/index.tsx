@@ -37,6 +37,7 @@ export default async function HeroSection() {
           alt="arrow"
           width={23}
           height={24}
+          className="animate-bounce"
         />
       </div>
     </div>

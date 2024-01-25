@@ -100,7 +100,7 @@ export default function CookiesBanner() {
             <p>{COOKIES_BY_CHOOSING}</p>
           </div>
           <div className="flex md:flex-col flex-row font-semibold gap-6">
-            <Button onClick={onAcceptClick} size="normal">
+            <Button onClick={onAcceptClick} size="thin">
               <span className="whitespace-nowrap [font-size:_clamp(14px,1.5vw,20px)]">
                 {COOKIES_I_ACCEPT}
               </span>

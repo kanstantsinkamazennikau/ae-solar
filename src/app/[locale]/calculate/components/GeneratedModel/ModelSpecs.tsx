@@ -1,6 +1,7 @@
 "use client";
 
 import { ModelSpecsKeys } from "@/app/[locale]/calculate/components/ChooseModel/types";
+import DocumentationLink from "@/app/[locale]/calculate/components/GeneratedModel/DocumentationLink";
 import Accordion from "@/app/[locale]/components/common/Accordion";
 import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
@@ -10,7 +11,7 @@ import {
   CONSTRUCTOR_MODELS_SPECS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 const advantagesWithIconMappping = {
   Benefit: "document.svg",
@@ -76,30 +77,11 @@ export default function ModelSpecs() {
                 <p className="[font-size:_clamp(11px,1.5vw,14px)] font-medium leading-[150%] font-walsheim text-dark-gray-900">
                   {Array.isArray(advantageDescription)
                     ? advantageDescription.map(({ datasheet, link }) => (
-                        <a
-                          href={link}
-                          target="_blank"
+                        <DocumentationLink
                           key={datasheet}
-                          className="
-                            inline-flex
-                            justify-between
-                            w-full
-                            leading-[120%]
-                            font-normal
-                            [font-size:_clamp(14px,1.5vw,16px)]
-                            text-white
-                            -tracking-[0.32px]
-                          "
-                        >
-                          {datasheet}
-                          <Image
-                            src={`/images/option/linkArrow.svg`}
-                            alt={"linkArrow"}
-                            priority
-                            width={16}
-                            height={16}
-                          />
-                        </a>
+                          datasheet={datasheet}
+                          link={link}
+                        />
                       ))
                     : advantageDescription}
                 </p>

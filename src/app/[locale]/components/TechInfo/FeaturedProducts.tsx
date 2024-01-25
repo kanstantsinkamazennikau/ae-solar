@@ -6,6 +6,7 @@ import {
   TECH_INFO_EXPLORE,
   TECH_INFO_INNOVATIVE,
 } from "@/app/[locale]/utils/constants";
+import Image from "next/image";
 
 export default function FeaturedProducts() {
   return (
@@ -35,19 +36,39 @@ export default function FeaturedProducts() {
         h-[360px]
       "
     >
-      <div className="flex flex-col items-center lg:gap-[68px] md:gap-[38px] gap-8">
+      <div className="flex flex-col items-center lg:gap-[68px] md:gap-[38px] gap-8 w-full">
         <div className="text-center font-bold leading-[1.2] -tracking-[0.64] [font-size:_clamp(24px,4vw,64px)]">
           <p>{TECH_INFO_INNOVATIVE}</p>
           <p className="text-dark-gray-900">{TECH_INFO_EXPLORE}</p>
         </div>
-        <Button
-          onClick={() => console.log(HEADER_CHOOSE_YOUR_MODEL)}
-          style="outline"
-        >
-          <span className="[font-size:_clamp(12px,2vw,24px)] -tracking-[0.24px] font-semibold">
-            {HEADER_CHOOSE_YOUR_MODEL}
-          </span>
-        </Button>
+        <div className="relative w-full justify-center items-center flex">
+          <Image
+            src={`/images/glowFull.png`}
+            alt="glow"
+            priority
+            width={1320}
+            height={60}
+            className="absolute -translate-y-[calc(50%-1px)]"
+          />
+          <Image
+            src={`/images/glowFull.png`}
+            alt="glow"
+            priority
+            width={1320}
+            height={60}
+            className="w-full absolute rotate-180 translate-y-[calc(50%-1px)]"
+          />
+          <Button
+            onClick={() => console.log(HEADER_CHOOSE_YOUR_MODEL)}
+            style="outline"
+            externalStyle="!bg-black"
+            size="thin"
+          >
+            <span className="[font-size:_clamp(12px,1.5vw,20px)] -tracking-[0.24px] font-semibold">
+              {HEADER_CHOOSE_YOUR_MODEL}
+            </span>
+          </Button>
+        </div>
       </div>
     </div>
   );

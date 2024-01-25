@@ -26,9 +26,15 @@ export default function FlagsList({
       )}
       {COUNTRIES_LIST.map(({ flagIcon, abbr }) => (
         <div
-          className={`cursor-pointer flex items-center gap-2 ${
-            mobileNavigation ? "mb-5" : "mb-2"
-          } text-xs`}
+          className={`
+            cursor-pointer
+            flex
+            items-center
+            gap-2
+            ${mobileNavigation ? "mb-5" : "mb-2"} 
+            text-xs
+            hover:text-base-red
+          `}
           key={abbr}
           onClick={() => handleSelection(abbr)}
         >

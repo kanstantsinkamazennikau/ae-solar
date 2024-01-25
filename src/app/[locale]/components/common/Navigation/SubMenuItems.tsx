@@ -16,7 +16,7 @@ export default function SubMenuItems({
   return (
     <ul
       className="
-        bg-black
+        bg-[#131313d9]
         px-4
         py-5
         flex
@@ -26,17 +26,19 @@ export default function SubMenuItems({
         border-solid
         rounded-xl
         border-option-border
+        backdrop-blur-[50px]
         min-[920px]:items-center
+        shadow-[0_4px_25px_0px_rgba(0,0,0,0.65)]
       "
     >
       {subMenuArray.map(({ url, text }) => (
         <li
-          className="[font-size:_clamp(14px,1.5vw,16px)] hover:text-dark-gray-900 whitespace-nowrap"
+          className="[font-size:_clamp(14px,1.5vw,16px)] hover:text-base-red whitespace-nowrap"
           key={text}
         >
           <Link
             href={`/${locale}/${url}`}
-            className="flex items-center text-base hover:text-primary"
+            className="flex items-center hover:text-primary"
             onClick={onLinkClick}
           >
             {t(text)}

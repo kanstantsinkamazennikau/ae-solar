@@ -11,7 +11,15 @@ export default function CodesListWithFlags({
     <>
       {COUNTRIES_LIST.map(({ flagIcon, code }) => (
         <div
-          className="cursor-pointer flex items-center gap-2 mb-2 [font-size:_clamp(20px,2.5vw,30px)]"
+          className="
+            cursor-pointer
+            flex
+            items-center
+            gap-2
+            mb-2
+            [font-size:_clamp(20px,2.5vw,30px)]
+            hover:text-base-red
+          "
           key={code}
           onClick={() => handleSelection(code)}
         >

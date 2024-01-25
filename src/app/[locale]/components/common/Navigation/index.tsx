@@ -10,14 +10,11 @@ import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
 import {
-  FOOTER_CONTACT_INFO,
   HEADER_CONTACT_US,
-  HEADER_LANGUAGE,
   HEADER_NAV_LINKS_ARRAY,
 } from "@/app/[locale]/utils/constants";
-import Image from "next/image";
 import { useParams, usePathname, useRouter } from "next/navigation";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 export default function Navigation() {
   const { sticky } = useContext(StickyNavigationContext);
@@ -38,13 +35,14 @@ export default function Navigation() {
   return (
     <div className={`w-full sticky top-0 z-40 h-[64px] min-[920px]:h-[80px]`}>
       {/* MAIN NAVIGATION */}
-      <div className="bg-navigation-black backdrop-blur-[50px] flex justify-center py-4 h-full">
+      <div className="w-full h-full backdrop-blur-[50px] absolute" />
+      <div className="bg-navigation-black flex justify-center py-4 h-full">
         <BasicWidthContainer>
           <nav className="flex items-center justify-between relative font-normal w-full gap-2">
             <Logo />
 
             {/* DESKTOP NAV */}
-            <ul className="md:gap-2 lg:gap-5 xl:gap-8 min-[920px]:flex hidden">
+            <ul className="md:gap-2 lg:gap-3 xl:gap-8 min-[920px]:flex hidden">
               {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
                 <NavLink key={navLink.url} {...navLink} />
               ))}

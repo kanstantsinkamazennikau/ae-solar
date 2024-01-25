@@ -47,10 +47,10 @@ export default function FAQ() {
               const styledTitle = (
                 <span
                   className={`
-                  font-semibold
-                  leading-[100%]
-                  [font-size:_clamp(10px,1.5vw,24px)]
-                `}
+                    font-semibold
+                    leading-[100%]
+                    [font-size:_clamp(10px,1.5vw,24px)]
+                  `}
                 >
                   {question}
                 </span>
@@ -61,7 +61,7 @@ export default function FAQ() {
                   title={styledTitle}
                   openCloseStyle
                 >
-                  <p className="pb-6">{answer}</p>
+                  <p className="pb-6 pl-6 font-walsheim">{answer}</p>
                 </AccordionItem>
               );
             })}

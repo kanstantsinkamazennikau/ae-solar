@@ -32,7 +32,7 @@ export async function generateMetadata() {
   };
 }
 
-export default function Layout({
+export default function DocumentsLayout({
   children,
   params,
 }: {
