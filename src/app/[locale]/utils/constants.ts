@@ -1017,108 +1017,328 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
   Aurora: [
     {
       advantageCategory: "Benefit",
-      advantageDescription:
-        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+      advantageDescription: [
+        "PERC Technology",
+        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
+        "Colors",
+        "Variants for extreme climates of high durability ",
+      ],
     },
     {
       advantageCategory: "Documentation (pdf)",
       advantageDescription: [
-        { datasheet: "AE CMD-108 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-120 465W-485W", link: "" },
-        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+        {
+          datasheet: "AE CMD-108 420W-440W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_CMD-108_420W-440W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MB-60E 315W-330W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MB-60E_315W-330W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MB-60 320W-335W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MB-60_320W-335W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MB-72E 380W-395W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MB-72E_380W-395W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MB-72 385W-400W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MB-72_385W-400W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MC-120BD 360W-380W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MC-120BD_360W-380W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MC-120BS 360W-380W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MC-120BS_360W-380W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MC-120E 360W-380W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MC-120E_360W-380W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MC-120 360W-380W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MC-120_360W-380W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MC-144BD 430W-450W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MC-144BD_430W-450W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MC-144BS 430W-450W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MC-144BS_430W-450W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MC-144E 430W-450W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MC-144E_430W-450W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MC-144 430W-450W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MC-144_430W-450W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-108BD 395W-415W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-108BD_395W-415W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-108BS 395W-415W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-108BS_395W-415W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-108E 395W-415W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-108E_395W-415W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-108 395W-415W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-108_395W-415W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-120BD 440W-460W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-120BD_440W-460W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-120BS 440W-460W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-120BS_440W-460W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-120E 440W-460W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-120E_440W-460W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-120 440W-460W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-120_440W-460W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-132BD 485W-505W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-132BD_485W-505W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-132BS 485W-505W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-132BS_485W-505W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-132E 485W-505W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-132E_485W-505W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-132 485W-505W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-132_485W-505W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-144BD 530W-550W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-144BD_530W-550W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-144BS 530W-550W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-144BS_530W-550W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-144 530W-550W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-144_530W-550W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE ME-110BD 530W-550W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_ME-110BD_530W-550W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE ME-110BS 530W-550W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_ME-110BS_530W-550W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE ME-110 530W-550W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_ME-110_530W-550W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE ME-120BD 580W-600W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_ME-120BD_580W-600W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE ME-120BS 580W-600W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_ME-120BS_580W-600W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE ME-120 580W-600W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_ME-120_580W-600W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE ME-132BD 640W-660W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_ME-132_640W-660W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE ME-132BS 640W-660W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_ME-132BD_640W-660W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE ME-132 640W-660W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_ME-132BS_640W-660W_Ver24.1.1.pdf",
+        },
       ],
     },
   ],
   Comet: [
     {
       advantageCategory: "Benefit",
-      advantageDescription:
-        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+      advantageDescription: [
+        "PERC Technology",
+        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
+        "Colors",
+        "Variants for extreme climates of high durability ",
+      ],
     },
     {
       advantageCategory: "Documentation (pdf)",
       advantageDescription: [
-        { datasheet: "AE CMD-108 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-120 465W-485W", link: "" },
-        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+        {
+          datasheet: "AE TMC-120BDS 380W-400W 202309-1",
+          link: "/documents/solar_panels/Comet/AE_TMC-120BDS_380W-400W_202309-1.pdf",
+        },
+        {
+          datasheet: "AE TMC-144BDS 460W-480W 202309-1",
+          link: "/documents/solar_panels/Comet/AE_TMC-144BDS_460W-480W_202309-1.pdf",
+        },
+        {
+          datasheet: "AE TME-110BDS 560W-580W Ver24.1.1",
+          link: "/documents/solar_panels/Comet/AE_TME-110BDS_560W-580W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE TME-120BDS 615W-635W Ver24.1.1",
+          link: "/documents/solar_panels/Comet/AE_TME-120BDS_615W-635W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE TME-132BDS 680W-700W Ver24.1.1",
+          link: "/documents/solar_panels/Comet/AE_TME-132BDS_680W-700W_Ver24.1.1.pdf",
+        },
       ],
     },
   ],
   Meteor: [
     {
       advantageCategory: "Benefit",
-      advantageDescription:
-        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+      advantageDescription: [
+        "PERC Technology",
+        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
+        "Colors",
+        "Variants for extreme climates of high durability ",
+      ],
     },
     {
       advantageCategory: "Documentation (pdf)",
       advantageDescription: [
-        { datasheet: "AE CMD-108 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-120 465W-485W", link: "" },
-        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+        {
+          datasheet: "AE CMD-108BDE 415W-435W Ver24.1.1",
+          link: "/documents/solar_panels/Meteor/AE_CMD-108BDE_415W-435W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE CMD-108BDS 420W-440W Ver24.1.1",
+          link: "/documents/solar_panels/Meteor/AE_CMD-108BDS_420W-440W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE CMD-108E 415W-435W Ver24.1.1",
+          link: "/documents/solar_panels/Meteor/AE_CMD-108E_415W-435W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE CMD-108 420W-440W Ver24.1.1 (1)",
+          link: "/documents/solar_panels/Meteor/AE_CMD-108_420W-440W_Ver24.1.1 (1).pdf",
+        },
+        {
+          datasheet: "AE CMD-120BDS 465W-485W Ver24.1.1",
+          link: "/documents/solar_panels/Meteor/AE_CMD-120BDS_465W-485W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE CMD-120 465W-485W Ver24.1.1",
+          link: "/documents/solar_panels/Meteor/AE_CMD-120_465W-485W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE CMD-144BDS 560W-580W Ver24.1.1",
+          link: "/documents/solar_panels/Meteor/AE_CMD-144BDS_560W-580W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE CMD-144 560W-580W Ver24.1.1",
+          link: "/documents/solar_panels/Meteor/AE_CMD-144_560W-580W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE CME-132BDS 680W-700W Ver24.1.1",
+          link: "/documents/solar_panels/Meteor/AE_CME-132BDS_680W-700W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE CME-132 680W-700W Ver24.1.1",
+          link: "/documents/solar_panels/Meteor/AE_CME-132_680W-700W_Ver24.1.1.pdf",
+        },
       ],
     },
   ],
   Terra: [
     {
       advantageCategory: "Benefit",
-      advantageDescription:
-        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+      advantageDescription: [
+        "PERC Technology",
+        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
+        "Colors",
+        "Variants for extreme climates of high durability ",
+      ],
     },
     {
       advantageCategory: "Documentation (pdf)",
       advantageDescription: [
-        { datasheet: "AE CMD-108 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-120 465W-485W", link: "" },
-        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+        {
+          datasheet: "AE CMD-L132BD 505W-525W Ver24.1.1",
+          link: "/documents/solar_panels/Terra/AE_CMD-L132BD_505W-525W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE MD-L132BD 495W-505W Ver24.1.1",
+          link: "/documents/solar_panels/Terra/AE_MD-L132BD_495W-505W_Ver24.1.1.pdf",
+        },
       ],
     },
   ],
   Neptune: [
     {
       advantageCategory: "Benefit",
-      advantageDescription:
-        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+      advantageDescription: [
+        "PERC Technology",
+        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
+        "Colors",
+        "Variants for extreme climates of high durability ",
+      ],
     },
     {
       advantageCategory: "Documentation (pdf)",
       advantageDescription: [
-        { datasheet: "AE CMD-108 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-120 465W-485W", link: "" },
-        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+        {
+          datasheet: "AE PV-380WtAYThermal-964W-5",
+          link: "/documents/solar_panels/Neptune/AE_PV-380WtAYThermal-964W-5.pdf",
+        },
       ],
     },
   ],
   ShadeStar: [
     {
       advantageCategory: "Benefit",
-      advantageDescription:
-        "Lining with international standards, AE Solar Photovoltaic modules are tested and certified under extreme stress conditions and it can bear harsh environment influences.",
+      advantageDescription: [
+        "PERC Technology",
+        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
+        "Colors",
+        "Variants for extreme climates of high durability ",
+      ],
     },
     {
       advantageCategory: "Documentation (pdf)",
       advantageDescription: [
-        { datasheet: "AE CMD-108 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDS 420W-440W", link: "" },
-        { datasheet: "AE CMD-108BDE 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-108E 415W-435W Black", link: "" },
-        { datasheet: "AE CMD-120 465W-485W", link: "" },
-        { datasheet: "AE CMD-120BDS 465W-485W", link: "" },
+        {
+          datasheet: "AE SMB-36 190W-200W Ver24.1.1",
+          link: "/documents/solar_panels/ShadeStar/AE_SMB-36_190W-200W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE SMB-60 320W-335W Ver24.1.1",
+          link: "/documents/solar_panels/ShadeStar/AE_SMB-60_320W-335W_Ver24.1.1.pdf",
+        },
+        {
+          datasheet: "AE SMD-108E 395W-410W Ver24.1.1",
+          link: "/documents/solar_panels/ShadeStar/AE_SMD-108E_395W-410W_Ver24.1.1.pdf",
+        },
       ],
     },
   ],
@@ -1171,8 +1391,29 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     packagingInformation:
       " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
     dimensionsImage: "AuroraDimensions.png",
-    certificates:
-      "certificates certificates certificates certificates certificates",
+    certificates: [
+      {
+        certificate: "IEC-Cert TUV-Rheinland",
+        link: "/documents/certificates/IEC-Cert_TUV-Rheinland.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD TUNDERECLIPSE",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD_TUNDERECLIPSE.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD.pdf",
+      },
+      { certificate: "VDE", link: "/documents/certificates/VDE.pdf" },
+      {
+        certificate: "CE Mark Compliance Certificate",
+        link: "/documents/certificates/CE-Mark-Compliance-Certificate.pdf",
+      },
+      {
+        certificate: "Management System Certificate",
+        link: "/documents/certificates/Management-System-Certificate.pdf",
+      },
+    ],
   },
   Comet: {
     materialCharacteristics: {
@@ -1219,9 +1460,30 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     },
     packagingInformation:
       " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
-    dimensionsImage: "AuroraDimensions.png",
-    certificates:
-      "certificates certificates certificates certificates certificates",
+    dimensionsImage: "CometDimensions.png",
+    certificates: [
+      {
+        certificate: "IEC-Cert TUV-Rheinland",
+        link: "/documents/certificates/IEC-Cert_TUV-Rheinland.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD TUNDERECLIPSE",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD_TUNDERECLIPSE.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD.pdf",
+      },
+      { certificate: "VDE", link: "/documents/certificates/VDE.pdf" },
+      {
+        certificate: "CE Mark Compliance Certificate",
+        link: "/documents/certificates/CE-Mark-Compliance-Certificate.pdf",
+      },
+      {
+        certificate: "Management System Certificate",
+        link: "/documents/certificates/Management-System-Certificate.pdf",
+      },
+    ],
   },
   Meteor: {
     materialCharacteristics: {
@@ -1268,9 +1530,30 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     },
     packagingInformation:
       " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
-    dimensionsImage: "AuroraDimensions.png",
-    certificates:
-      "certificates certificates certificates certificates certificates",
+    dimensionsImage: "MeteorDimensions.png",
+    certificates: [
+      {
+        certificate: "IEC-Cert TUV-Rheinland",
+        link: "/documents/certificates/IEC-Cert_TUV-Rheinland.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD TUNDERECLIPSE",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD_TUNDERECLIPSE.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD.pdf",
+      },
+      { certificate: "VDE", link: "/documents/certificates/VDE.pdf" },
+      {
+        certificate: "CE Mark Compliance Certificate",
+        link: "/documents/certificates/CE-Mark-Compliance-Certificate.pdf",
+      },
+      {
+        certificate: "Management System Certificate",
+        link: "/documents/certificates/Management-System-Certificate.pdf",
+      },
+    ],
   },
   Terra: {
     materialCharacteristics: {
@@ -1317,9 +1600,30 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     },
     packagingInformation:
       " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
-    dimensionsImage: "AuroraDimensions.png",
-    certificates:
-      "certificates certificates certificates certificates certificates",
+    dimensionsImage: "TerraDimensions.png",
+    certificates: [
+      {
+        certificate: "IEC-Cert TUV-Rheinland",
+        link: "/documents/certificates/IEC-Cert_TUV-Rheinland.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD TUNDERECLIPSE",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD_TUNDERECLIPSE.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD.pdf",
+      },
+      { certificate: "VDE", link: "/documents/certificates/VDE.pdf" },
+      {
+        certificate: "CE Mark Compliance Certificate",
+        link: "/documents/certificates/CE-Mark-Compliance-Certificate.pdf",
+      },
+      {
+        certificate: "Management System Certificate",
+        link: "/documents/certificates/Management-System-Certificate.pdf",
+      },
+    ],
   },
   Neptune: {
     materialCharacteristics: {
@@ -1366,9 +1670,30 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     },
     packagingInformation:
       " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
-    dimensionsImage: "AuroraDimensions.png",
-    certificates:
-      "certificates certificates certificates certificates certificates",
+    dimensionsImage: "NeptuneDimensions.png",
+    certificates: [
+      {
+        certificate: "IEC-Cert TUV-Rheinland",
+        link: "/documents/certificates/IEC-Cert_TUV-Rheinland.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD TUNDERECLIPSE",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD_TUNDERECLIPSE.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD.pdf",
+      },
+      { certificate: "VDE", link: "/documents/certificates/VDE.pdf" },
+      {
+        certificate: "CE Mark Compliance Certificate",
+        link: "/documents/certificates/CE-Mark-Compliance-Certificate.pdf",
+      },
+      {
+        certificate: "Management System Certificate",
+        link: "/documents/certificates/Management-System-Certificate.pdf",
+      },
+    ],
   },
   ShadeStar: {
     materialCharacteristics: {
@@ -1415,9 +1740,30 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
     },
     packagingInformation:
       " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
-    dimensionsImage: "AuroraDimensions.png",
-    certificates:
-      "certificates certificates certificates certificates certificates",
+    dimensionsImage: "ShadeStarDimensions.png",
+    certificates: [
+      {
+        certificate: "IEC-Cert TUV-Rheinland",
+        link: "/documents/certificates/IEC-Cert_TUV-Rheinland.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD TUNDERECLIPSE",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD_TUNDERECLIPSE.pdf",
+      },
+      {
+        certificate: "IEC-Cert TUV-NORD",
+        link: "/documents/certificates/IEC-Cert_TUV-NORD.pdf",
+      },
+      { certificate: "VDE", link: "/documents/certificates/VDE.pdf" },
+      {
+        certificate: "CE Mark Compliance Certificate",
+        link: "/documents/certificates/CE-Mark-Compliance-Certificate.pdf",
+      },
+      {
+        certificate: "Management System Certificate",
+        link: "/documents/certificates/Management-System-Certificate.pdf",
+      },
+    ],
   },
 };
 

@@ -2,9 +2,11 @@
 
 import { ModelSpecsKeys } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import DocumentationLink from "@/app/[locale]/calculate/components/GeneratedModel/DocumentationLink";
+import { GeneratedModelAdvantages } from "@/app/[locale]/calculate/components/GeneratedModel/types";
 import Accordion from "@/app/[locale]/components/common/Accordion";
 import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import LightBoxImage from "@/app/[locale]/components/common/LightBoxImage";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
   CONSTRUCTOR_MODELS_ADVANTAGES,
@@ -12,6 +14,9 @@ import {
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useContext, useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
 
 const advantagesWithIconMappping = {
   Benefit: "document.svg",
@@ -20,8 +25,11 @@ const advantagesWithIconMappping = {
 
 export default function ModelSpecs() {
   const { constructorModel } = useContext(ConstructorContext);
+  const [open, setOpen] = useState(false);
   const modelSpecs = CONSTRUCTOR_MODELS_SPECS[constructorModel.model];
-  const modelAdvantages = CONSTRUCTOR_MODELS_ADVANTAGES[constructorModel.model];
+  const modelAdvantages = CONSTRUCTOR_MODELS_ADVANTAGES[
+    constructorModel.model
+  ] as GeneratedModelAdvantages;
   const modelSpecsKeys = Object.keys(modelSpecs) as ModelSpecsKeys[];
   const specKeyWithAccordionTitleMapping = {
     materialCharacteristics: "Material Characteristics",
@@ -74,17 +82,31 @@ export default function ModelSpecs() {
                     {advantageCategory}
                   </span>
                 </div>
-                <p className="[font-size:_clamp(11px,1.5vw,14px)] font-medium leading-[150%] font-walsheim text-dark-gray-900">
-                  {Array.isArray(advantageDescription)
-                    ? advantageDescription.map(({ datasheet, link }) => (
-                        <DocumentationLink
-                          key={datasheet}
-                          datasheet={datasheet}
-                          link={link}
-                        />
-                      ))
-                    : advantageDescription}
-                </p>
+                <div className="[font-size:_clamp(11px,1.5vw,14px)] font-medium leading-[150%] font-walsheim text-white gap-1 flex flex-col">
+                  {advantageCategory === "Documentation (pdf)" &&
+                    advantageDescription.map(({ datasheet, link }) => (
+                      <DocumentationLink
+                        key={datasheet}
+                        datasheet={datasheet}
+                        link={link}
+                      />
+                    ))}
+                  {advantageCategory === "Benefit" &&
+                    advantageDescription.map((text) => (
+                      <div
+                        key={text}
+                        className="flex gap-2 items-center leading-[120%] mb-1"
+                      >
+                        <div>
+                          <div className="w-[8px] h-[8px] rounded-full bg-base-red" />
+                        </div>
+
+                        <span className="leading-[100%] [font-size:_clamp(11px,1.5vw,14px)]">
+                          {text}
+                        </span>
+                      </div>
+                    ))}
+                </div>
               </div>
             )
           )}
@@ -147,7 +169,13 @@ export default function ModelSpecs() {
                   <AccordionItem key={specKey} title={styledTitle}>
                     <div className="pb-8">
                       <div className="text-[#5A5A5A] [font-size:_clamp(12px,1.5vw,16px)] leading-[150%] font-normal min-w-[240px]">
-                        {modelSpecs[specKey]}
+                        {modelSpecs[specKey].map(({ certificate, link }) => (
+                          <DocumentationLink
+                            key={certificate}
+                            datasheet={certificate}
+                            link={link}
+                          />
+                        ))}
                       </div>
                     </div>
                   </AccordionItem>
@@ -157,13 +185,40 @@ export default function ModelSpecs() {
               return (
                 <AccordionItem key={specKey} title={styledTitle}>
                   <div className="pb-8">
+                    <Lightbox
+                      open={open}
+                      close={() => setOpen(false)}
+                      carousel={{ finite: true }}
+                      slides={[
+                        { src: `/images/option/${modelSpecs[specKey]}` },
+                      ]}
+                      plugins={[Zoom]}
+                      controller={{
+                        closeOnPullDown: true,
+                        closeOnBackdropClick: true,
+                        closeOnPullUp: true,
+                      }}
+                      render={{
+                        slide: LightBoxImage,
+                        buttonPrev: () => null,
+                        buttonNext: () => null,
+                      }}
+                      styles={{
+                        container: {
+                          backgroundColor: "rgb(25, 25, 25, 0.5)",
+                          backdropFilter: "blur(10px)",
+                        },
+                      }}
+                    />
                     <Image
                       src={`/images/option/${modelSpecs[specKey]}`}
                       alt={modelSpecs[specKey]}
                       priority
                       width={455}
                       height={433}
+                      quality={100}
                       className="inline-block"
+                      onClick={() => setOpen(true)}
                     />
                   </div>
                 </AccordionItem>

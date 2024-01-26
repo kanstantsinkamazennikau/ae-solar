@@ -55,11 +55,9 @@ export default function BuyerForm({
   };
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    console.log(data);
-
     try {
       setLoading(true);
-      submitFunction(data);
+      await submitFunction(data);
       setIsShowMessageAfterSubmit(true);
     } catch (error) {
       toast.error((error as Error).message);
@@ -150,6 +148,8 @@ export default function BuyerForm({
                 {CHECKOUT_GO_TO_HOME_PAGE}
               </Button>
             </div>
+          ) : loading ? (
+            <Loader />
           ) : (
             <Inputs
               errors={errors}

@@ -70,13 +70,15 @@ export default function Categories() {
                 >
                   <div
                     className={`
-                    ${isSelectedcategory ? "text-white" : "text-dark-gray-900"} 
-                    mt-4
-                    flex
-                    gap-4
-                    justify-between
-                    items-center
-                  `}
+                      ${
+                        isSelectedcategory ? "text-white" : "text-dark-gray-900"
+                      } 
+                      mt-4
+                      flex
+                      gap-4
+                      justify-between
+                      items-center
+                    `}
                   >
                     <div className="max-w-[215px]">
                       {documentsType !== "publishers_info" ? (

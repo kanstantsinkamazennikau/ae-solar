@@ -150,6 +150,9 @@ export interface ModelsSpecs {
     };
     packagingInformation: string;
     dimensionsImage: string;
-    certificates: string;
+    certificates: {
+      certificate: string;
+      link: string;
+    }[];
   };
 }
