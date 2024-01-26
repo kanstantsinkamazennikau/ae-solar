@@ -10,7 +10,7 @@ import {
 } from "@/app/[locale]/utils/constants";
 import { FieldValues, RegisterOptions } from "react-hook-form";
 
-async function sendEmail(data: FieldValues) {
+async function sendContactUsEmail(data: FieldValues) {
   const apiEndpoint = "/api/contact_us";
 
   try {
@@ -68,7 +68,7 @@ export default function Consult() {
       formFields={CONSULT_FORM_FIELDS}
       formHeader={CONSULT_READY_TO_CONSULT}
       isShowCloseIcon={false}
-      submitFunction={sendEmail}
+      submitFunction={sendContactUsEmail}
     />
   );
 }

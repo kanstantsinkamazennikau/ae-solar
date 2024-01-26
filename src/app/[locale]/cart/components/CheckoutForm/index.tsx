@@ -4,9 +4,22 @@ import {
   CHECKOUT_FILL_OUT,
   CHECKOUT_FORM_FIELDS,
   FORMS_FIELDS,
-  PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";
-import { RegisterOptions } from "react-hook-form";
+import { FieldValues, RegisterOptions } from "react-hook-form";
+
+async function sendCheckoutEmail(data: FieldValues) {
+  const apiEndpoint = "/api/checkout";
+
+  try {
+    const res = await fetch(apiEndpoint, {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error("Something went wrong");
+  } catch (err) {
+    throw err;
+  }
+}
 
 export default function CheckoutForm() {
   const inputsRules: { [key in keyof CheckoutFormFileds]: RegisterOptions } = {
@@ -43,6 +56,7 @@ export default function CheckoutForm() {
       defaultValues={defaultValues}
       formFields={CHECKOUT_FORM_FIELDS}
       formHeader={CHECKOUT_FILL_OUT}
+      submitFunction={sendCheckoutEmail}
     />
   );
 }

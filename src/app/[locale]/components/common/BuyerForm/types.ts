@@ -22,7 +22,7 @@ export interface FormFileds {
 }
 
 export interface BuyerFormProps {
-  submitFunction?: (data: FieldValues) => Promise<void>;
+  submitFunction: (data: FieldValues) => Promise<void>;
   formHeader: string;
   formFields: FormFileds[];
   defaultValues: {

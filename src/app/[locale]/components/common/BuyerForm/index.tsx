@@ -55,10 +55,11 @@ export default function BuyerForm({
   };
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    //TODO Remove condition
+    console.log(data);
+
     try {
       setLoading(true);
-      submitFunction && (await submitFunction(data));
+      submitFunction(data);
       setIsShowMessageAfterSubmit(true);
     } catch (error) {
       toast.error((error as Error).message);
