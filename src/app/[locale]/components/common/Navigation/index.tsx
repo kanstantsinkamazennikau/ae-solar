@@ -23,7 +23,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const hideSubnavigation = () => {
-    return ["calculate", "consult", "documents"].some((path) =>
+    return ["calculate", "consult", "documents", "about"].some((path) =>
       pathname.includes(path)
     );
   };
