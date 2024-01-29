@@ -62,6 +62,10 @@ export const HEADER_NAV_LINKS_ARRAY = [
         url: "/documents/publishers_info",
         text: "Publisher's Info",
       },
+      {
+        url: "/documents/imprint",
+        text: "Imprint Info",
+      },
     ],
   },
   {
@@ -2249,3 +2253,25 @@ export const DOCUMENTS_FAQ_FILES = [
 export const DOCUMENTS_FILTER = "Filter";
 export const DOCUMENTS_NO_RESULT = "No result for: ";
 export const DOCUMENTS_RESET = "Reset";
+
+export const DOCUMENTS_IMPRINT_INFO_IMPRINT = "Imprint";
+export const DOCUMENTS_IMPRINT_INFO_INFORMATION = "Information";
+export const DOCUMENTS_IMPRINT_INFO_LEGAL = {
+  title: "Legal",
+  registration: [
+    `Steuernummer: 102/121/20478AE`,
+    `Alternative Energy GmbH`,
+    `WEEE-Reg.-Nr. DE 20958316`,
+    `Vorgangs-ID: RV-201601-001190`,
+  ],
+  address: [
+    `Geschäftsführer: Alexander Maier`,
+    `Registrierungsnummer gem ElektroG:`,
+    `VAT no.: DE268975577`,
+    `Registration no. UID: DE268975577`,
+    `Messerschmittring 54`,
+    `86343 Königsbrunn`,
+    `Germany`,
+  ],
+};
+export const DOCUMENTS_IMPRINT_INFO_CONTACTS = "Contacts";

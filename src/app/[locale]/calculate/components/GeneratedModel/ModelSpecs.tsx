@@ -92,16 +92,16 @@ export default function ModelSpecs() {
                       />
                     ))}
                   {advantageCategory === "Benefit" &&
-                    advantageDescription.map((text) => (
+                    advantageDescription.map((text, index) => (
                       <div
                         key={text}
-                        className="flex gap-2 items-center leading-[120%] mb-1"
+                        className="flex gap-2 leading-[120%] mb-1 font-sans"
                       >
                         <div>
-                          <div className="w-[8px] h-[8px] rounded-full bg-base-red" />
+                          <p className="w-4">{index + 1}.</p>
                         </div>
 
-                        <span className="leading-[100%] [font-size:_clamp(11px,1.5vw,14px)]">
+                        <span className="[font-size:_clamp(11px,1.5vw,14px)]">
                           {text}
                         </span>
                       </div>

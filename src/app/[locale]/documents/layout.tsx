@@ -8,6 +8,10 @@ const mapTitleWithDocumentsCategory = {
     title: "Publishers Info",
     desription: "Publisher's Information",
   },
+  imprint: {
+    title: "Imprint Info",
+    desription: "Imprint Information",
+  },
 };
 
 export async function generateMetadata() {
@@ -34,10 +38,8 @@ export async function generateMetadata() {
 
 export default function DocumentsLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: any;
 }) {
   return <ClientLayout>{children}</ClientLayout>;
 }

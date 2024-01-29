@@ -11,6 +11,7 @@ const mapBackgroundWithCategory = {
   documents: `/images/documents/documents.png`,
   faq: `/images/documents/faq.png`,
   publishers_info: `/images/documents/publishers_info.png`,
+  imprint: `/images/documents/imprint.png`,
 };
 
 export default function ClientLayout({

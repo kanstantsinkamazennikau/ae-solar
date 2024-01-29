@@ -7,7 +7,6 @@ import { useContext, useEffect } from "react";
 
 export default function PublishersInfo() {
   const {
-    searchInputValue,
     setDocumentsFile,
     documentsFile,
     documentsLoading,
@@ -21,7 +20,8 @@ export default function PublishersInfo() {
       setDocumentsFile(DOCUMENTS_PUBLISHERS_INFO_FILES);
       setDocumentsLoading(false);
     }, 500);
-  }, [searchInputValue, setDocumentsFile, setDocumentsLoading]);
+  }, [setDocumentsFile, setDocumentsLoading]);
+
   return documentsLoading ? (
     <DocumentsLoader />
   ) : (

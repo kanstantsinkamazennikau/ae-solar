@@ -1,6 +1,5 @@
 "use client";
 
-import Loader from "@/app/[locale]/components/common/Loader";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import Categories from "@/app/[locale]/documents/components/Categories";
 import Filter from "@/app/[locale]/documents/components/Filter";
@@ -15,12 +14,15 @@ export default function CategoriesWithControl({
 }) {
   const { documentsFile, documentsLoading, searchInputValue, documentsType } =
     useContext(DocumentsContext);
+  const isImprint = "imprint" === documentsType;
 
   return (
     <div className="flex gap-[60px] relative">
-      <div>
-        <Categories />
-      </div>
+      {!isImprint && (
+        <div>
+          <Categories />
+        </div>
+      )}
 
       <div className="w-full">
         {documentsType === "documents" && <Filter />}

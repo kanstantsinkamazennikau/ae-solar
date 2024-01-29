@@ -8,6 +8,8 @@ import {
   DOCUMENTS_DOCUMENTS_HEADING,
   DOCUMENTS_FAQ_HAVE_A_QUESTION,
   DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS,
+  DOCUMENTS_IMPRINT_INFO_IMPRINT,
+  DOCUMENTS_IMPRINT_INFO_INFORMATION,
   DOCUMENTS_YOU_NEED_TO_KNOW,
 } from "@/app/[locale]/utils/constants";
 import { usePathname } from "next/navigation";
@@ -24,6 +26,10 @@ const mapHeadingWithCategory = {
   publishers_info: {
     tierOneHeading: DOCUMENTS_PUBLISHERS_INFO_PUBLISHERS,
     tierTwoHeading: DOCUMENTS_PUBLISHERS_INFO_INFORMATION,
+  },
+  imprint: {
+    tierOneHeading: DOCUMENTS_IMPRINT_INFO_IMPRINT,
+    tierTwoHeading: DOCUMENTS_IMPRINT_INFO_INFORMATION,
   },
 };
 

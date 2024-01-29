@@ -1,11 +1,4 @@
-import Button from "@/app/[locale]/components/common/Button";
-import Input from "@/app/[locale]/components/common/Input";
-import {
-  FOOTER_CONTACT_INFO,
-  FOOTER_SUBSCRIBE,
-  FOOTER_SUBSCRIBE_NEWSLETTER,
-  FOOTER_YOUR_EMAIL,
-} from "@/app/[locale]/utils/constants";
+import { FOOTER_CONTACT_INFO } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 

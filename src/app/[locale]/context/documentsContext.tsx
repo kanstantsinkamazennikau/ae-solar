@@ -6,11 +6,6 @@ import {
   DocumentsTypesPresentation,
   FAQ,
 } from "@/app/[locale]/documents/components/types";
-import { DOCUMENTS_PUBLISHERS_INFO_FILES } from "@/app/[locale]/documents/publishers_info/constants";
-import {
-  DOCUMENTS_FAQ_FILES,
-  DOCUMENTS_FILES,
-} from "@/app/[locale]/utils/constants";
 import {
   Dispatch,
   SetStateAction,
@@ -48,12 +43,6 @@ export interface DocumentsContext {
 }
 
 export const DocumentsContext = createContext<DocumentsContext>(null!);
-
-const mapConstantWithCategory = {
-  documents: DOCUMENTS_FILES,
-  faq: DOCUMENTS_FAQ_FILES,
-  publishers_info: DOCUMENTS_PUBLISHERS_INFO_FILES,
-};
 
 export default function DocumentsProvider({
   children,

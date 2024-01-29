@@ -30,6 +30,12 @@ export interface DocumentsTypePublisher {
   }[];
 }
 
+export interface ImprintInformation {
+  category: string;
+  title: string;
+  data: string[];
+}
+
 export interface FAQ {
   category: string;
   data: { question: string; answer: string }[];
