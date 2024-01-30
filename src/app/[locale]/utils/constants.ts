@@ -81,11 +81,11 @@ export const HEADER_CONTACT_US = "Contact Us";
 export const HEADER_LANGUAGE = "Language";
 export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Aurora.svg",
-  "Comet.svg",
   "Meteor.svg",
+  "Comet.svg",
   "Terra.svg",
-  "Neptune.svg",
   "ShadeStar.svg",
+  "Neptune.svg",
 ];
 export const HEADER_CHOOSE_YOUR_MODEL = "Choose your model";
 export const HEADER_CALCULATE = "Calculate";
@@ -130,11 +130,11 @@ export const PRODUCT_INTRO_PANELS_MAPPING = {
 };
 export const PRODUCT_INTRO_PANELS_IMAGES = [
   "Aurora",
-  "Comet",
   "Meteor",
+  "Comet",
   "Terra",
-  "Neptune",
   "ShadeStar",
+  "Neptune",
 ];
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
@@ -326,7 +326,7 @@ export const FAQ_MORE_SOLUTIONS = "More solutions";
 export const FOOTER_LINKS_ARRAY = [
   {
     category: "Products",
-    links: ["Aurora", "Comet", "Meteor", "Terra", "Neptune", "ShadeStar"],
+    links: ["Aurora", "Meteor", "Comet", "Terra", "ShadeStar", "Neptune"],
   },
   {
     category: "Company",
@@ -482,18 +482,18 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
     },
   },
-  Comet: {
-    panelTechnology: "HJT Technology",
+  Meteor: {
+    panelTechnology: "TOPCon Technology",
     params: {
       solarCellTechnology: {
         type: "slider",
         text: "Solar Cell Technology",
-        values: ["HJT"],
+        values: ["TOPCon"],
       },
       moduleSpecification: {
         type: "slider",
         text: "Module Specifation",
-        values: ["Bi-Facial"],
+        values: ["Mono-Facial", "Bi-Facial"],
       },
       moduleColor: {
         type: "color",
@@ -549,18 +549,18 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
     },
   },
-  Meteor: {
-    panelTechnology: "TOPCon Technology",
+  Comet: {
+    panelTechnology: "HJT Technology",
     params: {
       solarCellTechnology: {
         type: "slider",
         text: "Solar Cell Technology",
-        values: ["TOPCon"],
+        values: ["HJT"],
       },
       moduleSpecification: {
         type: "slider",
         text: "Module Specifation",
-        values: ["Mono-Facial", "Bi-Facial"],
+        values: ["Bi-Facial"],
       },
       moduleColor: {
         type: "color",
@@ -683,73 +683,6 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
     },
   },
-  Neptune: {
-    panelTechnology: "PV-Thermal Technology",
-    params: {
-      solarCellTechnology: {
-        type: "slider",
-        text: "Solar Cell Technology",
-        values: ["PERc", "TOPCon", "HJT"],
-      },
-      moduleSpecification: {
-        type: "slider",
-        text: "Module Specifation",
-        values: ["Mono-Facial", "Bi-Facial"],
-      },
-      moduleColor: {
-        type: "color",
-        text: "Module Color",
-        values: [
-          { color: "Transparent", icon: "transparent.svg" },
-          { color: "Black", icon: "black.svg" },
-          { color: "White", icon: "white.svg" },
-        ],
-      },
-      backCover: {
-        type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet"],
-      },
-      frameColor: {
-        type: "color",
-        text: "Frame Color",
-        values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "silver.svg" },
-        ],
-      },
-      moduleDimension: {
-        type: "range/dimension",
-        text: "Module Dimension.",
-        clarification: "L (mm) x W (mm)",
-        values: {
-          measure1: "L(mm)",
-          lowerLimit: "4000",
-          measure2: "W(mm)",
-          upperLimit: "5000",
-          name1: "length",
-          name2: "width",
-        },
-      },
-      powerRange: {
-        type: "range/power",
-        text: "Power Range (W)",
-        values: {
-          measure1: "from",
-          measure2: "to",
-          lowerLimit: "100",
-          name1: "from",
-          name2: "to",
-        },
-      },
-      applications: {
-        type: "applications",
-        text: "Applications.",
-        clarification: "Standard",
-        values: ["PV-Thermal"],
-      },
-    },
-  },
   ShadeStar: {
     panelTechnology: "Shede Resident Technology",
     params: {
@@ -814,6 +747,73 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Applications.",
         clarification: "Standard",
         values: ["Shade Resistant", "Carport", "PV-Thermal", "Agri-Voltaics"],
+      },
+    },
+  },
+  Neptune: {
+    panelTechnology: "PV-Thermal Technology",
+    params: {
+      solarCellTechnology: {
+        type: "slider",
+        text: "Solar Cell Technology",
+        values: ["PERc", "TOPCon", "HJT"],
+      },
+      moduleSpecification: {
+        type: "slider",
+        text: "Module Specifation",
+        values: ["Mono-Facial", "Bi-Facial"],
+      },
+      moduleColor: {
+        type: "color",
+        text: "Module Color",
+        values: [
+          { color: "Transparent", icon: "transparent.svg" },
+          { color: "Black", icon: "black.svg" },
+          { color: "White", icon: "white.svg" },
+        ],
+      },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet"],
+      },
+      frameColor: {
+        type: "color",
+        text: "Frame Color",
+        values: [
+          { color: "Black", icon: "black.svg" },
+          { color: "Silver", icon: "silver.svg" },
+        ],
+      },
+      moduleDimension: {
+        type: "range/dimension",
+        text: "Module Dimension.",
+        clarification: "L (mm) x W (mm)",
+        values: {
+          measure1: "L(mm)",
+          lowerLimit: "4000",
+          measure2: "W(mm)",
+          upperLimit: "5000",
+          name1: "length",
+          name2: "width",
+        },
+      },
+      powerRange: {
+        type: "range/power",
+        text: "Power Range (W)",
+        values: {
+          measure1: "from",
+          measure2: "to",
+          lowerLimit: "100",
+          name1: "from",
+          name2: "to",
+        },
+      },
+      applications: {
+        type: "applications",
+        text: "Applications.",
+        clarification: "Standard",
+        values: ["PV-Thermal"],
       },
     },
   },

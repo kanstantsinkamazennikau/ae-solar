@@ -24,7 +24,7 @@ export default function ClientLayout({
 
   return (
     <DocumentsProvider category={documentsCategory} key={documentsCategory}>
-      <div className="relative -mt-[64px] flex justify-center">
+      <div className="relative -mt-[80px] flex justify-center">
         <Image
           src={
             mapBackgroundWithCategory[

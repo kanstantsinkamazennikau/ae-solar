@@ -1,19 +1,6 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Image from "next/image";
 
-const mapTitleWithDocumentsCategory = {
-  documents: { title: "Documents", desription: "Documents You Need to Know" },
-  faq: { title: "FAQ", desription: "Have a Question? We Have Solutions" },
-  publishers_info: {
-    title: "Publishers Info",
-    desription: "Publisher's Information",
-  },
-  imprint: {
-    title: "Imprint Info",
-    desription: "Imprint Information",
-  },
-};
-
 export async function generateMetadata() {
   const title = `AE-Solar | `;
   const description = `AE-Solar | `;
@@ -48,13 +35,8 @@ export default function DocumentsLayout({
           priority
           className="h-[440px]"
         />
-        {/* <div className="flex w-full justify-center absolute bottom-0"> */}
-        {/* <BasicWidthContainer>
-      <DocumentsHeading />
-    </BasicWidthContainer> */}
-        {/* </div> */}
       </div>
-      <div className="flex w-full justify-center">
+      <div className="flex w-full justify-center mb-[60px]">
         <BasicWidthContainer>{children}</BasicWidthContainer>
       </div>
     </>
