@@ -42,7 +42,7 @@ export default function Slider({ text, values, paramsKey }: SliderProps) {
               }`}
               onClick={() => onClickHandler(value)}
             >
-              <div className="px-[14px] py-3 w-full flex justify-center [font-size:_clamp(11px,2vw,14px)] font-semibold leading-[0.9] -tracking-[0.42px]">
+              <div className="px-[14px] py-3 w-full flex justify-center [font-size:_clamp(11px,2vw,14px)] font-semibold leading-[0.9] -tracking-[0.42px] whitespace-nowrap">
                 {value}
               </div>
             </div>

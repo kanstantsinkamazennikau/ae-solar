@@ -116,10 +116,18 @@ export default function Customize() {
       </div>
       <Button
         onClick={() => {
-          if (!constructorModel.powerRange.to) {
+          const isPowerEmpty =
+            !constructorModel.powerRange.to ||
+            !constructorModel.powerRange.from;
+          const isDimensionEmpty =
+            !constructorModel.moduleDimension.length ||
+            !constructorModel.moduleDimension.width;
+
+          if (isPowerEmpty || isDimensionEmpty) {
             setError((prevState) => ({
               ...prevState,
-              power: `"to" value is required`,
+              power: isPowerEmpty ? "Enter value" : "",
+              dimension: isDimensionEmpty ? "Enter value" : "",
             }));
             return;
           }

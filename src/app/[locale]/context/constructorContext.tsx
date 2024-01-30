@@ -75,11 +75,11 @@ export default function ConstructorProvider({
     backCover: defaultModel.backCover.values[0],
     frameColor: defaultModel.frameColor.values[0].color,
     moduleDimension: {
-      length: defaultModel.moduleDimension.values.lowerLimit,
-      width: defaultModel.moduleDimension.values.upperLimit!,
+      length: "",
+      width: "",
     },
     powerRange: {
-      from: defaultModel.powerRange.values.lowerLimit,
+      from: "",
       to: "",
     },
     applications: [defaultModel.applications.values[0]],
@@ -96,11 +96,11 @@ export default function ConstructorProvider({
       backCover: selectedModelParams.backCover.values[0],
       frameColor: selectedModelParams.frameColor.values[0].color,
       moduleDimension: {
-        length: selectedModelParams.moduleDimension.values.lowerLimit,
-        width: selectedModelParams.moduleDimension.values.upperLimit!,
+        length: "",
+        width: "",
       },
       powerRange: {
-        from: selectedModelParams.powerRange.values.lowerLimit,
+        from: "",
         to: "",
       },
       applications: [selectedModelParams.applications.values[0]],

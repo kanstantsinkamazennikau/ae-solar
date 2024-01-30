@@ -421,7 +421,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       solarCellTechnology: {
         type: "slider",
         text: "Solar Cell Technology",
-        values: ["PERc"],
+        values: ["Mono C-Si", "P type PERC"],
       },
       moduleSpecification: {
         type: "slider",
@@ -440,7 +440,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       backCover: {
         type: "slider",
         text: "Back Cover",
-        values: ["Glass", "Backsheet"],
+        values: ["Glass", "Backsheet", "Double-Glass"],
       },
       frameColor: {
         type: "color",
@@ -456,9 +456,9 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
-          lowerLimit: "4000",
+          lowerLimit: "1",
           measure2: "W(mm)",
-          upperLimit: "5000",
+          // upperLimit: "5000",
           name1: "length",
           name2: "width",
         },
@@ -469,7 +469,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         values: {
           measure1: "from",
           measure2: "to",
-          lowerLimit: "100",
+          lowerLimit: "1",
           name1: "from",
           name2: "to",
         },
@@ -488,7 +488,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       solarCellTechnology: {
         type: "slider",
         text: "Solar Cell Technology",
-        values: ["TOPCon"],
+        values: ["Mono C-Si", "N type TOPCon"],
       },
       moduleSpecification: {
         type: "slider",
@@ -499,7 +499,6 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         type: "color",
         text: "Module Color",
         values: [
-          { color: "Transparent", icon: "transparent.svg" },
           { color: "Black", icon: "black.svg" },
           { color: "White", icon: "white.svg" },
         ],
@@ -507,7 +506,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       backCover: {
         type: "slider",
         text: "Back Cover",
-        values: ["Glass", "Backsheet"],
+        values: ["Glass", "Backsheet", "Double-Glass"],
       },
       frameColor: {
         type: "color",
@@ -523,9 +522,9 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
-          lowerLimit: "4000",
+          lowerLimit: "1",
           measure2: "W(mm)",
-          upperLimit: "5000",
+          // upperLimit: "5000",
           name1: "length",
           name2: "width",
         },
@@ -536,7 +535,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         values: {
           measure1: "from",
           measure2: "to",
-          lowerLimit: "100",
+          lowerLimit: "1",
           name1: "from",
           name2: "to",
         },
@@ -555,7 +554,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       solarCellTechnology: {
         type: "slider",
         text: "Solar Cell Technology",
-        values: ["HJT"],
+        values: ["Mono C-Si", "N type HJT"],
       },
       moduleSpecification: {
         type: "slider",
@@ -566,7 +565,6 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         type: "color",
         text: "Module Color",
         values: [
-          { color: "Transparent", icon: "transparent.svg" },
           { color: "Black", icon: "black.svg" },
           { color: "White", icon: "white.svg" },
         ],
@@ -574,7 +572,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       backCover: {
         type: "slider",
         text: "Back Cover",
-        values: ["Glass", "Backsheet"],
+        values: ["Glass", "Backsheet", "Double-Glass"],
       },
       frameColor: {
         type: "color",
@@ -590,9 +588,9 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
-          lowerLimit: "4000",
+          lowerLimit: "1",
           measure2: "W(mm)",
-          upperLimit: "5000",
+          // upperLimit: "5000",
           name1: "length",
           name2: "width",
         },
@@ -603,7 +601,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         values: {
           measure1: "from",
           measure2: "to",
-          lowerLimit: "100",
+          lowerLimit: "1",
           name1: "from",
           name2: "to",
         },
@@ -622,34 +620,27 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       solarCellTechnology: {
         type: "slider",
         text: "Solar Cell Technology",
-        values: ["PERc", "TOPCon"],
+        values: ["Mono C-Si", "N type TOPCon"],
       },
       moduleSpecification: {
         type: "slider",
         text: "Module Specifation",
-        values: ["Mono-Facial", "Bi-Facial"],
+        values: ["Bi-Facial"],
       },
       moduleColor: {
         type: "color",
         text: "Module Color",
-        values: [
-          { color: "Transparent", icon: "transparent.svg" },
-          { color: "Black", icon: "black.svg" },
-          { color: "White", icon: "white.svg" },
-        ],
+        values: [{ color: "Transparent", icon: "transparent.svg" }],
       },
       backCover: {
         type: "slider",
         text: "Back Cover",
-        values: ["Glass", "Backsheet"],
+        values: ["Glass", "Backsheet", "Double-Glass"],
       },
       frameColor: {
         type: "color",
         text: "Frame Color",
-        values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "silver.svg" },
-        ],
+        values: [{ color: "Silver", icon: "silver.svg" }],
       },
       moduleDimension: {
         type: "range/dimension",
@@ -657,9 +648,9 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
-          lowerLimit: "4000",
+          lowerLimit: "1",
           measure2: "W(mm)",
-          upperLimit: "5000",
+          // upperLimit: "5000",
           name1: "length",
           name2: "width",
         },
@@ -670,7 +661,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         values: {
           measure1: "from",
           measure2: "to",
-          lowerLimit: "100",
+          lowerLimit: "1",
           name1: "from",
           name2: "to",
         },
@@ -689,7 +680,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       solarCellTechnology: {
         type: "slider",
         text: "Solar Cell Technology",
-        values: ["PERc"],
+        values: ["Mono C-Si", "P type PERC"],
       },
       moduleSpecification: {
         type: "slider",
@@ -700,7 +691,6 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         type: "color",
         text: "Module Color",
         values: [
-          { color: "Transparent", icon: "transparent.svg" },
           { color: "Black", icon: "black.svg" },
           { color: "White", icon: "white.svg" },
         ],
@@ -708,7 +698,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       backCover: {
         type: "slider",
         text: "Back Cover",
-        values: ["Glass", "Backsheet"],
+        values: ["Glass", "Backsheet", "Double-Glass"],
       },
       frameColor: {
         type: "color",
@@ -724,9 +714,9 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
-          lowerLimit: "4000",
+          lowerLimit: "1",
           measure2: "W(mm)",
-          upperLimit: "5000",
+          // upperLimit: "5000",
           name1: "length",
           name2: "width",
         },
@@ -737,7 +727,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         values: {
           measure1: "from",
           measure2: "to",
-          lowerLimit: "100",
+          lowerLimit: "1",
           name1: "from",
           name2: "to",
         },
@@ -791,9 +781,9 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
-          lowerLimit: "4000",
+          lowerLimit: "1",
           measure2: "W(mm)",
-          upperLimit: "5000",
+          // upperLimit: "5000",
           name1: "length",
           name2: "width",
         },
@@ -804,7 +794,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         values: {
           measure1: "from",
           measure2: "to",
-          lowerLimit: "100",
+          lowerLimit: "1",
           name1: "from",
           name2: "to",
         },
@@ -1036,64 +1026,12 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
       advantageCategory: "Documentation (pdf)",
       advantageDescription: [
         {
-          datasheet: "AE CMD-108 420W-440W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_CMD-108_420W-440W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MB-60E 315W-330W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MB-60E_315W-330W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MB-60 320W-335W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MB-60_320W-335W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MB-72E 380W-395W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MB-72E_380W-395W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MB-72 385W-400W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MB-72_385W-400W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MC-120BD 360W-380W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MC-120BD_360W-380W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MC-120BS 360W-380W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MC-120BS_360W-380W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MC-120E 360W-380W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MC-120E_360W-380W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MC-120 360W-380W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MC-120_360W-380W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MC-144BD 430W-450W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MC-144BD_430W-450W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MC-144BS 430W-450W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MC-144BS_430W-450W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MC-144E 430W-450W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MC-144E_430W-450W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MC-144 430W-450W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MC-144_430W-450W_Ver24.1.1.pdf",
+          datasheet: "AE ME-132 640W-660W",
+          link: "/documents/solar_panels/Aurora/AE ME-132 640W-660W.pdf",
         },
         {
           datasheet: "AE MD-108BD 395W-415W Ver24.1.1",
           link: "/documents/solar_panels/Aurora/AE_MD-108BD_395W-415W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MD-108BS 395W-415W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MD-108BS_395W-415W_Ver24.1.1.pdf",
         },
         {
           datasheet: "AE MD-108E 395W-415W Ver24.1.1",
@@ -1108,10 +1046,6 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
           link: "/documents/solar_panels/Aurora/AE_MD-120BD_440W-460W_Ver24.1.1.pdf",
         },
         {
-          datasheet: "AE MD-120BS 440W-460W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MD-120BS_440W-460W_Ver24.1.1.pdf",
-        },
-        {
           datasheet: "AE MD-120E 440W-460W Ver24.1.1",
           link: "/documents/solar_panels/Aurora/AE_MD-120E_440W-460W_Ver24.1.1.pdf",
         },
@@ -1121,67 +1055,31 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
         },
         {
           datasheet: "AE MD-132BD 485W-505W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MD-132BD_485W-505W_Ver24.1.1.pdf",
+          link: "/documents/solar_panels/Aurora/AE_MD-132BD_485W-505W_Ver24.1.1 (1).pdf",
         },
         {
-          datasheet: "AE MD-132BS 485W-505W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MD-132BS_485W-505W_Ver24.1.1.pdf",
+          datasheet: "AE MD-132BD 485W-505W Ver24.1.1",
+          link: "/documents/solar_panels/Aurora/AE_MD-132BD_485W-505W_Ver24.1.1.pdf",
         },
         {
           datasheet: "AE MD-132E 485W-505W Ver24.1.1",
           link: "/documents/solar_panels/Aurora/AE_MD-132E_485W-505W_Ver24.1.1.pdf",
         },
         {
-          datasheet: "AE MD-132 485W-505W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MD-132_485W-505W_Ver24.1.1.pdf",
-        },
-        {
           datasheet: "AE MD-144BD 530W-550W Ver24.1.1",
           link: "/documents/solar_panels/Aurora/AE_MD-144BD_530W-550W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE MD-144BS 530W-550W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_MD-144BS_530W-550W_Ver24.1.1.pdf",
         },
         {
           datasheet: "AE MD-144 530W-550W Ver24.1.1",
           link: "/documents/solar_panels/Aurora/AE_MD-144_530W-550W_Ver24.1.1.pdf",
         },
         {
-          datasheet: "AE ME-110BD 530W-550W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_ME-110BD_530W-550W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE ME-110BS 530W-550W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_ME-110BS_530W-550W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE ME-110 530W-550W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_ME-110_530W-550W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE ME-120BD 580W-600W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_ME-120BD_580W-600W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE ME-120BS 580W-600W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_ME-120BS_580W-600W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE ME-120 580W-600W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_ME-120_580W-600W_Ver24.1.1.pdf",
-        },
-        {
           datasheet: "AE ME-132BD 640W-660W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_ME-132_640W-660W_Ver24.1.1.pdf",
-        },
-        {
-          datasheet: "AE ME-132BS 640W-660W Ver24.1.1",
           link: "/documents/solar_panels/Aurora/AE_ME-132BD_640W-660W_Ver24.1.1.pdf",
         },
         {
           datasheet: "AE ME-132 640W-660W Ver24.1.1",
-          link: "/documents/solar_panels/Aurora/AE_ME-132BS_640W-660W_Ver24.1.1.pdf",
+          link: "/documents/solar_panels/Aurora/AE_ME-132_640W-660W_Ver24.1.1.pdf",
         },
       ],
     },
@@ -1335,10 +1233,6 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
     {
       advantageCategory: "Documentation (pdf)",
       advantageDescription: [
-        {
-          datasheet: "AE SMB-36 190W-200W Ver24.1.1",
-          link: "/documents/solar_panels/ShadeStar/AE_SMB-36_190W-200W_Ver24.1.1.pdf",
-        },
         {
           datasheet: "AE SMB-60 320W-335W Ver24.1.1",
           link: "/documents/solar_panels/ShadeStar/AE_SMB-60_320W-335W_Ver24.1.1.pdf",

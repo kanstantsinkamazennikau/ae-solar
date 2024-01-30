@@ -67,17 +67,6 @@ export default function Range({
       return;
     }
 
-    if (
-      rangeSubCategory === "power" &&
-      constructorModel.powerRange.from === constructorModel.powerRange.to
-    ) {
-      setError((prevState) => ({
-        ...prevState,
-        [rangeSubCategory]: `Values should be different`,
-      }));
-      return;
-    }
-
     setError((prevState) => {
       return {
         ...prevState,
