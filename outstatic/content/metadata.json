@@ -1,0 +1,24 @@
+{
+  "commit": "4202322d026e7fa45fbd2cdc6e3eff616947c665",
+  "generated": "Wed, 31 Jan 2024 16:33:31 GMT",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "3e995c17a28b66c75b236561bc13e472739ce421",
+        "hash": "439814404",
+        "path": "outstatic/content/blog/test-1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-01-31T16:50:20.810Z",
+      "slug": "test-1",
+      "status": "published",
+      "title": "test 1 "
+    }
+  ]
+}
