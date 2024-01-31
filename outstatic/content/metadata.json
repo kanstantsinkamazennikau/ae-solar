@@ -1,6 +1,6 @@
 {
-  "commit": "4202322d026e7fa45fbd2cdc6e3eff616947c665",
-  "generated": "Wed, 31 Jan 2024 16:33:31 GMT",
+  "commit": "8f328225a60404b65a57144c6a8ba0038ac15370",
+  "generated": "2024-01-31T19:55:07.830Z",
   "metadata": [
     {
       "__outstatic": {
@@ -19,6 +19,24 @@
       "slug": "test-1",
       "status": "published",
       "title": "test 1 "
+    },
+    {
+      "__outstatic": {
+        "commit": "8f328225a60404b65a57144c6a8ba0038ac15370",
+        "hash": "1049047911",
+        "path": "outstatic/content/blog/test-2.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-01-31T20:12:52.467Z",
+      "slug": "test-2",
+      "status": "published",
+      "title": "test 2"
     }
   ]
 }
