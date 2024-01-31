@@ -27,7 +27,7 @@ export default function BlogPostPagination({
     currentPage,
     totalCount: totalBlogPosts,
     siblingCount: 1,
-    pageSize: 1,
+    pageSize: BLOG_POSTS_PER_PAGE,
   });
 
   return (
