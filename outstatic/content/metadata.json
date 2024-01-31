@@ -1,6 +1,6 @@
 {
   "commit": "d37017fe052bae7193e4b00df46577186603f3b7",
-  "generated": "2024-01-31T10:25:20.615Z",
+  "generated": "2024-01-31T10:26:01.675Z",
   "metadata": [
     {
       "__outstatic": {
@@ -149,7 +149,7 @@
     {
       "__outstatic": {
         "commit": "d37017fe052bae7193e4b00df46577186603f3b7",
-        "hash": "1187484236",
+        "hash": "1449223616",
         "path": "outstatic/content/blog/test9.md"
       },
       "author": {
@@ -158,7 +158,7 @@
       },
       "collection": "blog",
       "coverImage": "",
-      "description": "'{\"readingTime\":\"5min\", \"type\":\"exhibition\", \"typeNumber\":\"001\"}'",
+      "description": "{\"readingTime\":\"5min\", \"type\":\"exhibition\", \"typeNumber\":\"001\"}",
       "publishedAt": "2024-01-31T10:38:17.402Z",
       "slug": "test9",
       "status": "published",
