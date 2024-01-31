@@ -1,6 +1,6 @@
 ---
 title: 'test9'
-status: 'draft'
+status: 'published'
 author:
   name: 'K'
   picture: 'https://avatars.githubusercontent.com/u/102024592?v=4'
