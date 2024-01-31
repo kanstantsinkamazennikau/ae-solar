@@ -11,6 +11,7 @@ const nextConfig = {
   },
   experimental: {
     nftTracing: true,
+    serverComponentsExternalPackages: ["outstatic"],
   },
 };
 

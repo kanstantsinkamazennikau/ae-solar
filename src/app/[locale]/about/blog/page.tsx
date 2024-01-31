@@ -1,7 +1,6 @@
 import BlogHeading from "@/app/[locale]/about/blog/components/BlogHeading";
 import BlogPostsList from "@/app/[locale]/about/blog/components/BlogPostsList";
 import BlogPostPagination from "@/app/[locale]/about/blog/components/BlogPostsPagination";
-import MostPopularPosts from "@/app/[locale]/about/blog/components/MostPopularPosts";
 import RecentPosts from "@/app/[locale]/about/blog/components/RecentPosts";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Loader from "@/app/[locale]/components/common/Loader";
