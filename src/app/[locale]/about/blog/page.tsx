@@ -6,8 +6,16 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Loader from "@/app/[locale]/components/common/Loader";
 import { getDocumentSlugs } from "outstatic/server";
 import { Suspense } from "react";
+import path from "path";
+
+export async function getWikiDirectory() {
+  return path.join(process.cwd(), "outstatic");
+}
 
 async function getBlogPostsAmount() {
+  const t = await getWikiDirectory();
+  console.log(t);
+
   const blogs = getDocumentSlugs("blog");
   return blogs.length;
 }
