@@ -1,6 +1,6 @@
 ---
 title: 'кукцук'
-status: 'published'
+status: 'draft'
 author:
   name: ''
   picture: 'https://avatars.githubusercontent.com/u/102024592?v=4'
