@@ -7,6 +7,7 @@ author:
 slug: 'kukcuk'
 description: ''
 coverImage: ''
+readingTime: '10 min'
 publishedAt: '2024-01-31T11:33:18.473Z'
 ---
 
