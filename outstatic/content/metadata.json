@@ -1,6 +1,6 @@
 {
   "commit": "37dcd8b17f4408d33152146cedb04b0af6834980",
-  "generated": "2024-01-31T11:40:52.930Z",
+  "generated": "2024-01-31T11:41:01.089Z",
   "metadata": [
     {
       "__outstatic": {
@@ -167,7 +167,7 @@
     {
       "__outstatic": {
         "commit": "37dcd8b17f4408d33152146cedb04b0af6834980",
-        "hash": "2989605386",
+        "hash": "644337598",
         "path": "outstatic/content/blog/kukcuk.md"
       },
       "author": {
@@ -178,7 +178,7 @@
       "coverImage": "",
       "description": "",
       "publishedAt": "2024-01-31T11:33:18.473Z",
-      "readingTime": "10 min",
+      "readingTime": "10min",
       "slug": "kukcuk",
       "status": "published",
       "title": "кукцук"
