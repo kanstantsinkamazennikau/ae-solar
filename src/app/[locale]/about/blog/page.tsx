@@ -8,7 +8,7 @@ import { getDocumentSlugs } from "outstatic/server";
 import { Suspense } from "react";
 import path from "path";
 
-export async function getWikiDirectory() {
+async function getWikiDirectory() {
   return path.join(process.cwd(), "outstatic");
 }
 
