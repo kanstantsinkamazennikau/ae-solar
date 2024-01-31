@@ -32,7 +32,7 @@ export default async function Blog({
             <Suspense key={currentPage} fallback={<Loader />}>
               <BlogPostsList currentPage={currentPage} />
             </Suspense>
-            <div className="flex flex-col gap-[60px] w-full max-w-[315px] ">
+            <div className="flex flex-col gap-[60px] w-full max-w-[315px]">
               {/* <MostPopularPosts /> */}
               <RecentPosts />
             </div>
