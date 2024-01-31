@@ -1,14 +1,17 @@
 "use client";
 
+import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/about/blog/constants";
+import { DOTS, usePagination } from "@/app/[locale]/hooks/usePagination";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function BlogPostPagination({
-  totalPages,
+  totalBlogPosts,
 }: {
-  totalPages: number;
+  totalBlogPosts: number;
 }) {
+  const totalPages = Math.ceil(totalBlogPosts / BLOG_POSTS_PER_PAGE);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
@@ -20,12 +23,20 @@ export default function BlogPostPagination({
     replace(`${pathname}?${params.toString()}`);
   };
 
+  const paginationRange = usePagination({
+    currentPage,
+    totalCount: totalBlogPosts,
+    siblingCount: 1,
+    pageSize: 1,
+  });
+
   return (
-    <div>
+    <div className="flex gap-5 mt-8 justify-center">
       <button
         type="button"
         onClick={() => createPageURL(currentPage - 1)}
         disabled={currentPage === 1}
+        className="disabled:opacity-60"
       >
         <Image
           src="/images/redArrowRight.svg"
@@ -36,11 +47,38 @@ export default function BlogPostPagination({
           className="rotate-180"
         />
       </button>
+      <ul className="flex gap-3 list-none ">
+        {paginationRange.map((pageNumber, index) => {
+          if (pageNumber === DOTS) {
+            return (
+              <li key={index} className="text-[#505050]">
+                &#8230;
+              </li>
+            );
+          }
+
+          return (
+            <li
+              onClick={() => createPageURL(pageNumber)}
+              key={index}
+              className={`
+                cursor-pointer
+                [font-size:_clamp(11px,1vw,16px)]
+                font-semibold
+                ${+pageNumber <= currentPage ? "text-white" : "text-[#505050]"}
+              `}
+            >
+              {pageNumber}
+            </li>
+          );
+        })}
+      </ul>
 
       <button
         type="button"
         onClick={() => createPageURL(currentPage + 1)}
         disabled={currentPage === totalPages}
+        className="disabled:opacity-60"
       >
         <Image
           src="/images/redArrowRight.svg"

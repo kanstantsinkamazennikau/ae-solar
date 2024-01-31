@@ -3,13 +3,12 @@ import BlogPostsList from "@/app/[locale]/about/blog/components/BlogPostsList";
 import BlogPostPagination from "@/app/[locale]/about/blog/components/BlogPostsPagination";
 import MostPopularPosts from "@/app/[locale]/about/blog/components/MostPopularPosts";
 import RecentPosts from "@/app/[locale]/about/blog/components/RecentPosts";
-import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/about/blog/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Loader from "@/app/[locale]/components/common/Loader";
 import { getDocumentSlugs } from "outstatic/server";
 import { Suspense } from "react";
 
-export async function getBlogPostsAmount() {
+async function getBlogPostsAmount() {
   const blogs = getDocumentSlugs("blog");
   return blogs.length;
 }
@@ -38,9 +37,7 @@ export default async function Blog({
               <RecentPosts />
             </div>
           </div>
-          <BlogPostPagination
-            totalPages={Math.ceil(blogPostsAmount / BLOG_POSTS_PER_PAGE)}
-          />
+          <BlogPostPagination totalBlogPosts={blogPostsAmount} />
         </BasicWidthContainer>
       </div>
     </>
