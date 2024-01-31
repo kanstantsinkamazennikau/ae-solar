@@ -13,6 +13,7 @@ const nextConfig = {
     nftTracing: true,
     serverComponentsExternalPackages: ["outstatic"],
   },
+  output: "standalone",
 };
 
 module.exports = nextConfig;
