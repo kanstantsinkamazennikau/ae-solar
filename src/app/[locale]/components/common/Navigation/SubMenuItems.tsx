@@ -29,6 +29,7 @@ export default function SubMenuItems({
         backdrop-blur-[50px]
         min-[920px]:items-center
         shadow-[0_4px_25px_0px_rgba(0,0,0,0.65)]
+        list-none
       "
     >
       {subMenuArray.map(({ url, text }) => (

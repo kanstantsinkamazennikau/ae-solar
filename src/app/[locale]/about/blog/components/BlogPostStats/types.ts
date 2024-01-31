@@ -1,7 +1,8 @@
 export interface PostStatsProps {
   statistics: {
-    creationDate: string;
-    readingTime: string;
-    author: string;
+    publishedAt: string;
+    readingTime?: string;
+    author?: string;
   };
+  dividerColor?: string;
 }

@@ -97,7 +97,7 @@ export default function MobileNavigation() {
           height={30}
           className="top-[35px] fixed h-[30px]"
         />
-        <ul>
+        <ul className="list-none">
           {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
             <NavLink
               key={navLink.url}

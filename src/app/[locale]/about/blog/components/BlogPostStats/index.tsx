@@ -1,19 +1,34 @@
 import { PostStatsProps } from "@/app/[locale]/about/blog/components/BlogPostStats/types";
 import Image from "next/image";
 
-export default function BlogPostStats({ statistics }: PostStatsProps) {
-  const statisticsParamsWithIconsMapping = {
-    creationDate: "calendar",
-    readingTime: "time",
-    author: "author",
-  };
+const statisticsParamsWithIconsMapping = {
+  publishedAt: "calendar",
+  readingTime: "time",
+  author: "author",
+};
 
+const defaultValues = {
+  readingTime: "5min",
+  author: "NL",
+};
+
+export default function BlogPostStats({
+  statistics,
+  dividerColor,
+}: PostStatsProps) {
   return (
     <div className="flex [&>*:last-child]:border-none [&>*:first-child]:pl-0">
       {Object.keys(statisticsParamsWithIconsMapping).map((statParam) => (
         <div
           key={statParam}
-          className="flex border-r border-solid border-base-red px-4 items-center"
+          className={`
+            flex
+            border-r
+            border-solid
+            ${dividerColor === "gray" ? "border-[#2D2D2D]" : "border-base-red"}
+            px-4
+            items-center
+          `}
         >
           <Image
             src={`/images/about/blog/${
@@ -27,7 +42,8 @@ export default function BlogPostStats({ statistics }: PostStatsProps) {
             className="mr-1"
           />
           <span className="[font-size:_clamp(10px,1vw,14px)] font-bold font-walsheim text-dark-gray-900 leading-[100%]">
-            {statistics[statParam as keyof typeof statistics]}
+            {statistics[statParam as keyof typeof statistics] ||
+              defaultValues[statParam as keyof typeof defaultValues]}
           </span>
         </div>
       ))}

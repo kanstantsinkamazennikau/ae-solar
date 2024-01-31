@@ -1,30 +1,64 @@
-import BlogPostImage from "@/app/[locale]/about/blog/components/BlogPostImage";
 import BlogPostStats from "@/app/[locale]/about/blog/components/BlogPostStats";
-import { BLOG_POSTS } from "@/app/[locale]/about/blog/constants";
-import parse from "html-react-parser";
+import { BlogPost } from "@/app/[locale]/about/blog/components/BlogPostsList/types";
+import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
+import { markdownToHtml } from "@/app/[locale]/utils/markdownToHtml";
+import { getDocumentBySlug } from "outstatic/server";
 
-export default function BlogPost({
-  params: { id },
+async function getBlogPostData(slug: string) {
+  const blogPost = getDocumentBySlug("blog", slug, [
+    "title",
+    "publishedAt",
+    "slug",
+    "author",
+    "content",
+    "coverImage",
+  ]) as BlogPost;
+
+  const content = await markdownToHtml(blogPost?.content || "");
+
+  return {
+    ...blogPost,
+    content,
+  };
+}
+
+export default async function BlogPost({
+  params: { slug },
 }: {
-  params: { id: string };
+  params: { slug: string };
 }) {
-  const blogPost = BLOG_POSTS.find((post) => post.id === +id);
+  const blogPost = await getBlogPostData(slug);
 
-  if (!blogPost) return <div className="text-center">Post not found</div>;
+  if (!blogPost.content)
+    return (
+      <div className="text-center [font-size:_clamp(20px,2vw,32px)]">
+        Post not found
+      </div>
+    );
 
-  const { type, title, statistics, content } = blogPost;
+  const { title, content, publishedAt, author, readingTime } = blogPost;
 
   return (
     <div className="-mt-[160px] relative z-10">
-      <div className="[font-size:_clamp(16px,2vw,24px)] uppercase text-[#B30006] font-extrabold mb-6">
+      {/* <div className="[font-size:_clamp(16px,2vw,24px)] uppercase text-[#B30006] font-extrabold mb-6">
         {type}
-      </div>
+      </div> */}
       <div className="[font-size:_clamp(32px,4vw,64px)] font-semibold leading-[130%] mb-6">
         {title}
       </div>
-      <BlogPostStats statistics={statistics} />
+      <BlogPostStats
+        statistics={{
+          publishedAt: blogPostFormatDate(publishedAt),
+          author: author?.name,
+          readingTime,
+        }}
+      />
       <div className="flex flex-col mt-14">
-        {content.map(({ sectionHeadline, block, image }, index) => (
+        <div
+          dangerouslySetInnerHTML={{ __html: content }}
+          className="max-w-[900px] mx-auto w-full"
+        />
+        {/* {content.map(({ sectionHeadline, block, image }, index) => (
           <div key={index}>
             <div className="flex gap-8">
               <div className="[font-size:_clamp(16px,1.5vw,24px)] font-bold leading-[120%] -tracking-[0.24px] w-[300px] flex">
@@ -54,7 +88,7 @@ export default function BlogPost({
             </div>
             {image && <BlogPostImage image={image} />}
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

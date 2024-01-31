@@ -1,11 +1,24 @@
-import {
-  BLOG_RECENT_POSTS,
-  BLOG_POSTS,
-} from "@/app/[locale]/about/blog/constants";
+import { RecentPost } from "@/app/[locale]/about/blog/components/RecentPosts/types";
+import { BLOG_RECENT_POSTS } from "@/app/[locale]/about/blog/constants";
 import Link from "next/link";
+import { load } from "outstatic/server";
 
-export default function RecentPosts() {
-  const recentPosts = BLOG_POSTS.slice(BLOG_POSTS.length - 5);
+async function getRecentPostsData() {
+  const db = await load();
+  const recentPosts = await db
+    .find({
+      collection: "blog",
+    })
+    .sort({ publishedAt: -1 })
+    .project(["title", "slug"])
+    .limit(5)
+    .toArray();
+
+  return recentPosts as RecentPost[];
+}
+
+export default async function RecentPosts() {
+  const recentPosts = await getRecentPostsData();
 
   return (
     <div
@@ -14,7 +27,6 @@ export default function RecentPosts() {
         p-7
         rounded-xl
         w-full
-        max-w-[315px]
         flex-col
         self-start
       "
@@ -22,15 +34,15 @@ export default function RecentPosts() {
       <div className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold mb-4">
         {BLOG_RECENT_POSTS}
       </div>
-      {recentPosts.map(({ type, title, id }) => (
+      {recentPosts.map(({ title, slug }) => (
         <Link
           key={title}
-          href={`blog/${id}`}
+          href={`blog/${slug}`}
           className="py-3 hover:text-base-red border-t border-solid border-[#191919]"
         >
-          <div className="[font-size:_clamp(8px,1vw,12px)] uppercase font-extrabold text-[#505050] mb-1">
+          {/* <div className="[font-size:_clamp(8px,1vw,12px)] uppercase font-extrabold text-[#505050] mb-1">
             {type}
-          </div>
+          </div> */}
           <div className="leading-[130%] [font-size:_clamp(12px,1vw,16px)] -tracking-[0.32px] font-normal">
             {title}
           </div>

@@ -12,6 +12,7 @@ import ConstructorProvider from "@/app/[locale]/context/constructorContext";
 import ToastContainerProvider from "@/app/[locale]/context/toastProvider";
 import "react-toastify/dist/ReactToastify.css";
 import Cookies from "@/app/[locale]/components/common/CookiesBanner";
+import { headers } from "next/headers";
 
 const walsheim = localFont({
   src: [
@@ -136,21 +137,28 @@ export default function RootLayout({
   params: { locale: LocaleTypes };
 }) {
   if (!locales.includes(locale as any)) notFound();
+  const url = headers().get("x-url")!.split("/");
 
   return (
     <html lang={locale}>
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
-        <ToastContainerProvider />
-        <ModelProvider>
-          <ConstructorProvider>
-            <StickyNavigationProvider>
-              <Navigation />
-              {children}
-              <Footer />
-              <Cookies />
-            </StickyNavigationProvider>
-          </ConstructorProvider>
-        </ModelProvider>
+        {url.includes("outstatic") ? (
+          children
+        ) : (
+          <>
+            <ToastContainerProvider />
+            <ModelProvider>
+              <ConstructorProvider>
+                <StickyNavigationProvider>
+                  <Navigation />
+                  {children}
+                  <Footer />
+                  <Cookies />
+                </StickyNavigationProvider>
+              </ConstructorProvider>
+            </ModelProvider>
+          </>
+        )}
       </body>
     </html>
   );
