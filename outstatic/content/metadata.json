@@ -1,6 +1,6 @@
 {
-  "commit": "6d553d5d839af337d10ef0e3eeda678b39b0a105",
-  "generated": "Wed, 31 Jan 2024 10:21:11 GMT",
+  "commit": "d37017fe052bae7193e4b00df46577186603f3b7",
+  "generated": "2024-01-31T10:25:20.615Z",
   "metadata": [
     {
       "__outstatic": {
@@ -76,24 +76,6 @@
     },
     {
       "__outstatic": {
-        "commit": "184dc77125809ce99367cb29c9670f3867f85047",
-        "hash": "3894423830",
-        "path": "outstatic/content/blog/test9.md"
-      },
-      "author": {
-        "name": "K",
-        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-01-31T10:38:17.402Z",
-      "slug": "test9",
-      "status": "draft",
-      "title": "test9"
-    },
-    {
-      "__outstatic": {
         "commit": "066eac8219c947b99287d8eccc959cf1f22ff716",
         "hash": "509004686",
         "path": "outstatic/content/blog/test8.md"
@@ -163,6 +145,24 @@
       "slug": "test2",
       "status": "published",
       "title": "test2"
+    },
+    {
+      "__outstatic": {
+        "commit": "d37017fe052bae7193e4b00df46577186603f3b7",
+        "hash": "1187484236",
+        "path": "outstatic/content/blog/test9.md"
+      },
+      "author": {
+        "name": "K",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "'{\"readingTime\":\"5min\", \"type\":\"exhibition\", \"typeNumber\":\"001\"}'",
+      "publishedAt": "2024-01-31T10:38:17.402Z",
+      "slug": "test9",
+      "status": "published",
+      "title": "test9"
     }
   ]
 }
