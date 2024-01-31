@@ -1,6 +1,6 @@
 {
-  "commit": "d37017fe052bae7193e4b00df46577186603f3b7",
-  "generated": "2024-01-31T10:26:01.675Z",
+  "commit": "0415da151a356be31229808f80275bf3a31baae2",
+  "generated": "2024-01-31T11:17:38.664Z",
   "metadata": [
     {
       "__outstatic": {
@@ -163,6 +163,24 @@
       "slug": "test9",
       "status": "published",
       "title": "test9"
+    },
+    {
+      "__outstatic": {
+        "commit": "0415da151a356be31229808f80275bf3a31baae2",
+        "hash": "2432343039",
+        "path": "outstatic/content/blog/kukcuk.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-01-31T11:33:18.473Z",
+      "slug": "kukcuk",
+      "status": "draft",
+      "title": "кукцук"
     }
   ]
 }
