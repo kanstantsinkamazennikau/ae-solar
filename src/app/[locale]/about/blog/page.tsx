@@ -26,7 +26,7 @@ export default async function Blog({
   return (
     <>
       <BlogHeading />
-      <div className="flex w-full justify-center flex-col items-center">
+      <div className="flex w-full justify-center flex-col items-center ">
         <BasicWidthContainer>
           <div className="flex gap-[60px] justify-between">
             <Suspense key={currentPage} fallback={<Loader />}>
