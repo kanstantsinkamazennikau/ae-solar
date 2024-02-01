@@ -812,20 +812,20 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
 export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
   {
     type: "Shade Resistant",
-    clarification: "Shade ResistantShade ResistantShade Resistant",
+    clarification: `"Shade resistant" for solar panels means the ability to operate efficiently in shaded conditions, ensuring electricity generation even with partial shading`,
   },
   {
     type: "Carport",
-    clarification:
-      "CarportCarport Carport CarportCarport CarportCarport CarportCarport",
+    clarification: `"Carport" for solar panels is a structure resembling a canopy or veranda positioned over a parking area`,
   },
   {
     type: "PV-Thermal",
-    clarification: "PV-Thermal",
+    clarification:
+      "Solar energy combines photovoltaics and heat to generate electricity and provide heating with one system",
   },
   {
     type: "Agri-Voltaics",
-    clarification: "Agri-VoltaicsAgri-VoltaicsAgri-Voltaics",
+    clarification: `"Agri Voltaics" is the use of solar panels on agricultural lands to simultaneously provide energy and protect crops`,
   },
 ];
 export const SEQUENCE_ANIMATION_TEXT = [

@@ -118,7 +118,7 @@ export default function ApplicationsCheckboxes({
                   height={19.5}
                   className="cursor-pointer"
                 />
-                <p className="hidden group-hover/item:block absolute right-7 top-0 max-w-[200px] bg-dark-gray-700 p-2 rounded-md text-xs z-10">
+                <p className="hidden group-hover/item:block absolute right-7 top-0 w-[200px] bg-dark-gray-700 p-2 rounded-md text-xs z-10">
                   {clarification}
                 </p>
               </div>

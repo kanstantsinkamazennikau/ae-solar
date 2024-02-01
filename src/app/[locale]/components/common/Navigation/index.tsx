@@ -13,6 +13,7 @@ import {
   HEADER_CONTACT_US,
   HEADER_NAV_LINKS_ARRAY,
 } from "@/app/[locale]/utils/constants";
+import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
 
@@ -39,7 +40,9 @@ export default function Navigation() {
       <div className="bg-navigation-black flex justify-center py-4 h-full">
         <BasicWidthContainer>
           <nav className="flex items-center justify-between relative font-normal w-full gap-2">
-            <Logo />
+            <Link href={"/"}>
+              <Logo />
+            </Link>
 
             {/* DESKTOP NAV */}
             <ul className="md:gap-2 lg:gap-3 xl:gap-8 min-[920px]:flex hidden">
