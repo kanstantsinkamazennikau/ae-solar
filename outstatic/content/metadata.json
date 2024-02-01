@@ -1,6 +1,6 @@
 {
-  "commit": "c6550d7c5760bdc31d15f8deafb5207f3b90b89a",
-  "generated": "2024-02-01T13:40:59.715Z",
+  "commit": "52330e9f9325f283d645825d823820264475fad3",
+  "generated": "2024-02-01T13:42:08.724Z",
   "metadata": [
     {
       "__outstatic": {
@@ -76,8 +76,8 @@
     },
     {
       "__outstatic": {
-        "commit": "c6550d7c5760bdc31d15f8deafb5207f3b90b89a",
-        "hash": "435949254",
+        "commit": "52330e9f9325f283d645825d823820264475fad3",
+        "hash": "794368435",
         "path": "outstatic/content/blog/preview-of-aesolar-s-upcoming-exhibitions-for-q1-2024.md"
       },
       "author": {
