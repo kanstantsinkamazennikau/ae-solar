@@ -1,6 +1,6 @@
 {
   "commit": "066c97d26935fb58bf1eb23865e7fca0580a2398",
-  "generated": "2024-02-01T10:01:26.010Z",
+  "generated": "2024-02-01T10:02:03.043Z",
   "metadata": [
     {
       "__outstatic": {
@@ -59,7 +59,7 @@
     {
       "__outstatic": {
         "commit": "066c97d26935fb58bf1eb23865e7fca0580a2398",
-        "hash": "3334551143",
+        "hash": "1284471265",
         "path": "outstatic/content/blog/how-do-grid-connected-pv-systems-save-your-bills.md"
       },
       "author": {
