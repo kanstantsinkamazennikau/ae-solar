@@ -56,4 +56,4 @@ Solar plays a pivotal role in the transition towards sustainable energy sources,
 
 Ultimately there is no one-size-fits-all solution when it comes to choosing solar panels as mentioned above the kind of panel to be used will depend upon the application itself.  To access more comprehensive design proposal details and pricing information, kindly go to: [contact us](/consult)
 
-![](https://ae-solar.com/wp-content/uploads/2024/01/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231229141722-scaled.jpg)  
+  
