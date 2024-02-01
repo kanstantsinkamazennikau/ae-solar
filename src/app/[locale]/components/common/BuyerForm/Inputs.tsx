@@ -11,6 +11,7 @@ import {
   DROPDOWN_INPUT_VALUES,
   PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";
+import { log } from "console";
 import Image from "next/image";
 
 export default function BuyerForm({
@@ -25,6 +26,8 @@ export default function BuyerForm({
   getValues,
   isShowCloseIcon,
 }: InputsProps) {
+  console.log(errors);
+
   return (
     <form
       className="
