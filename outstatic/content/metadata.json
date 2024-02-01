@@ -1,6 +1,6 @@
 {
-  "commit": "8f328225a60404b65a57144c6a8ba0038ac15370",
-  "generated": "2024-01-31T19:55:07.830Z",
+  "commit": "f541a53d73a78c7a568ac8187fa58482d718bf52",
+  "generated": "2024-02-01T09:34:05.673Z",
   "metadata": [
     {
       "__outstatic": {
@@ -37,6 +37,24 @@
       "slug": "test-2",
       "status": "published",
       "title": "test 2"
+    },
+    {
+      "__outstatic": {
+        "commit": "f541a53d73a78c7a568ac8187fa58482d718bf52",
+        "hash": "442085522",
+        "path": "outstatic/content/blog/illuminate-sustainable-future-with-20-mw-rooftop-power-project-in-huaian-china.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-01T09:47:58.127Z",
+      "slug": "illuminate-sustainable-future-with-20-mw-rooftop-power-project-in-huaian-china",
+      "status": "draft",
+      "title": "Illuminate Sustainable Future with 20 MW Rooftop Power Project in Huaian, China"
     }
   ]
 }
