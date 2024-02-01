@@ -24,21 +24,12 @@ export default function PhoneNumberInput({
   setValue,
   ...props
 }: PhoneNumberInputProps) {
-  const [selectedCode, setSelectedCode] = useState("+49");
-  const [selectedCountry, setCountry] = useState<CountryIso2>("de");
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const handleSelection = (code: string) => {
-    setValue("code", code);
-  };
-
   const phoneInput = usePhoneInput({
     defaultCountry: "de",
     onChange: (data) => {
       setValue("code", data.phone);
     },
   });
-  console.log(phoneInput.country);
 
   return (
     <div className="min-[640px]:w-auto bg-transparent border-b-2 border-solid border-base-red outline-none pr-2 flex w-full relative">
