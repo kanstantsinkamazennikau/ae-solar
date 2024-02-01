@@ -1,6 +1,6 @@
 {
-  "commit": "ced64180e3f865047264fbb49f6e51480e74fbce",
-  "generated": "2024-02-01T09:57:21.102Z",
+  "commit": "066c97d26935fb58bf1eb23865e7fca0580a2398",
+  "generated": "2024-02-01T09:57:24.279Z",
   "metadata": [
     {
       "__outstatic": {
@@ -58,8 +58,8 @@
     },
     {
       "__outstatic": {
-        "commit": "ced64180e3f865047264fbb49f6e51480e74fbce",
-        "hash": "3959201830",
+        "commit": "066c97d26935fb58bf1eb23865e7fca0580a2398",
+        "hash": "1083882499",
         "path": "outstatic/content/blog/how-do-grid-connected-pv-systems-save-your-bills.md"
       },
       "author": {
@@ -71,7 +71,7 @@
       "description": "",
       "publishedAt": "2024-02-01T10:14:43.621Z",
       "slug": "how-do-grid-connected-pv-systems-save-your-bills",
-      "status": "draft",
+      "status": "published",
       "title": "HOW DO GRID-CONNECTED PV SYSTEMS SAVE YOUR BILLS?"
     }
   ]

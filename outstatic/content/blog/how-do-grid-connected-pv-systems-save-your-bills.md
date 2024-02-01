@@ -1,6 +1,6 @@
 ---
 title: 'HOW DO GRID-CONNECTED PV SYSTEMS SAVE YOUR BILLS?'
-status: 'draft'
+status: 'published'
 author:
   name: ''
   picture: 'https://avatars.githubusercontent.com/u/102024592?v=4'
