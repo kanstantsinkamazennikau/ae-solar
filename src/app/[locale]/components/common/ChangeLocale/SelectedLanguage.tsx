@@ -1,7 +1,7 @@
 "use client";
 
+import { LOCALIZATION_COUNTRIES_LIST } from "@/app/[locale]/components/common/ChangeLocale/FlagsList";
 import { SelectedLanguageProps } from "@/app/[locale]/components/common/ChangeLocale/types";
-import { COUNTRIES_LIST } from "@/app/[locale]/components/common/PhoneNumberInput";
 import { HEADER_LANGUAGE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -13,7 +13,7 @@ export default function SelectedLanguage({
   dropdownRef,
   mobileNavigation,
 }: SelectedLanguageProps) {
-  const countryWithCode = COUNTRIES_LIST.find(
+  const countryWithCode = LOCALIZATION_COUNTRIES_LIST.find(
     (country) => country.abbr === locale
   );
   const outsideClickRef = useRef<HTMLDivElement>(null);

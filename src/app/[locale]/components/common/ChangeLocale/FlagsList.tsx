@@ -1,9 +1,13 @@
 "use client";
 
 import { FlagsListProps } from "@/app/[locale]/components/common/ChangeLocale/types";
-import { COUNTRIES_LIST } from "@/app/[locale]/components/common/PhoneNumberInput";
 import { HEADER_CHOOSE_LANGUAGE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+
+export const LOCALIZATION_COUNTRIES_LIST = [
+  { flagIcon: "Deutsche.svg", abbr: "DE", language: "Deutsche" },
+  { flagIcon: "English.svg", abbr: "EN", country: "English" },
+];
 
 export default function FlagsList({
   handleSelection,
@@ -24,7 +28,7 @@ export default function FlagsList({
           {HEADER_CHOOSE_LANGUAGE}
         </div>
       )}
-      {COUNTRIES_LIST.map(({ flagIcon, abbr }) => (
+      {LOCALIZATION_COUNTRIES_LIST.map(({ flagIcon, abbr }) => (
         <div
           className={`
             cursor-pointer

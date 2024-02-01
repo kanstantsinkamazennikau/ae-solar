@@ -1,9 +1,19 @@
+import { BlogPost } from "@/app/[locale]/about/blog/components/BlogPostsList/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Image from "next/image";
+import { getDocumentBySlug } from "outstatic/server";
 
-export async function generateMetadata() {
-  const title = `AE-Solar | `;
-  const description = `AE-Solar | `;
+export async function generateMetadata({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
+  const blogPost = (await getDocumentBySlug("blog", slug, [
+    "title",
+  ])) as BlogPost;
+
+  const title = `AE-Solar | ${blogPost.title}`;
+  const description = `AE-Solar | ${blogPost.title}`;
 
   return {
     title,

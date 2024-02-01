@@ -23,6 +23,8 @@ import {
 } from "@/app/[locale]/utils/constants";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 import {
   FieldValues,
   RegisterOptions,
@@ -31,6 +33,7 @@ import {
 } from "react-hook-form";
 
 export default function Footer() {
+  const pathname = usePathname();
   const inputsRules: { [key in keyof FooterFormFields]: RegisterOptions } = {
     email: {
       required: "Email is required",
@@ -56,6 +59,10 @@ export default function Footer() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     console.log(data);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="flex flex-col justify-center items-center relative">

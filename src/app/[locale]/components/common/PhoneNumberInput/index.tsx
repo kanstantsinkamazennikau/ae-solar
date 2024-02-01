@@ -5,10 +5,7 @@ import SelectedCodeWithFlag from "@/app/[locale]/components/common/PhoneNumberIn
 import { PhoneNumberInputProps } from "@/app/[locale]/components/common/PhoneNumberInput/types";
 import { useRef, useState } from "react";
 
-export const COUNTRIES_LIST = [
-  { flagIcon: "Deutsche.svg", code: "+49", abbr: "DE", language: "Deutsche" },
-  { flagIcon: "English.svg", code: "+375", abbr: "EN", country: "English" },
-];
+export const COUNTRIES_LIST = [{ code: "+49" }, { code: "+375" }];
 
 export default function PhoneNumberInput({
   placeholder,

@@ -23,7 +23,9 @@ export default function StickyNavigationProvider({
   const locale = useParams()?.locale as LocaleTypes;
 
   useEffect(() => {
-    if (!["/", `/${locale}`].includes(path)) setSticky(true);
+    if (!["/", `/${locale}`].includes(path)) {
+      setSticky(true);
+    }
   }, [locale, path]);
 
   return (

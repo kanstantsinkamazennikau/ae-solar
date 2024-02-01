@@ -12,10 +12,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const interSemiBold = fetch(
-    new URL(
-      "../../../fonts/Criteria CF/Criteria CF Medium.otf",
-      import.meta.url
-    )
+    new URL("../../fonts/Criteria CF/Criteria CF Medium.otf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
@@ -32,7 +29,7 @@ export default async function Image() {
           justifyContent: "center",
         }}
       >
-        AE Solar | Blog
+        AE Solar | Contacts
       </div>
     ),
     {

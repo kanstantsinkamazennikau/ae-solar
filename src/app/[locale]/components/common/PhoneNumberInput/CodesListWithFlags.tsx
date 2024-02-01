@@ -9,7 +9,7 @@ export default function CodesListWithFlags({
 }: CodesListWithFlagsProps) {
   return (
     <>
-      {COUNTRIES_LIST.map(({ flagIcon, code }) => (
+      {COUNTRIES_LIST.map(({ code }) => (
         <div
           className="
             cursor-pointer
@@ -23,12 +23,6 @@ export default function CodesListWithFlags({
           key={code}
           onClick={() => handleSelection(code)}
         >
-          <Image
-            src={`/images/input/${flagIcon}`}
-            alt="germany"
-            width={24}
-            height={24}
-          />
           {code}
         </div>
       ))}

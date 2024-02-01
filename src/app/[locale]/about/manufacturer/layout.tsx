@@ -1,6 +1,6 @@
 export async function generateMetadata() {
-  const title = `AE-Solar | Blog`;
-  const description = `AE-Solar | Blog`;
+  const title = `AE-Solar | Manufacturer`;
+  const description = `AE-Solar | Manufacturer`;
 
   return {
     title,
@@ -15,7 +15,7 @@ export async function generateMetadata() {
   };
 }
 
-export default function BlogLayout({
+export default function ManufacturerLayout({
   children,
 }: {
   children: React.ReactNode;

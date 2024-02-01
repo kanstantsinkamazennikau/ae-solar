@@ -1,9 +1,8 @@
 "use client";
 
 import { SelectedOptionProps } from "@/app/[locale]/components/common/DropdownInput/types";
-import { COUNTRIES_LIST } from "@/app/[locale]/components/common/PhoneNumberInput";
 import Image from "next/image";
-import { Dispatch, RefObject, SetStateAction, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function SelectedOption({
   selectedOption,

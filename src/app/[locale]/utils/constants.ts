@@ -44,6 +44,8 @@ export const HEADER_NAV_LINKS_ARRAY = [
     subMenu: [
       { url: "/about", text: "About us" },
       { url: "/about/blog", text: "Blog" },
+      { url: "/about/manufacturer", text: "Manufacturer" },
+      { url: "/about/contacts", text: "Contacts" },
     ],
   },
   {

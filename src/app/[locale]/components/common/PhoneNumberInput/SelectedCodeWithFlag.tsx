@@ -37,13 +37,6 @@ export default function SelectedCodeWithFlag({
       onClick={() => setIsSelection((prevState) => !prevState)}
       ref={outsideClickRef}
     >
-      <Image
-        src={`/images/input/${countryWithCode?.flagIcon}`}
-        alt={countryWithCode?.flagIcon || ""}
-        width={24}
-        height={24}
-        className="lg:w-6 lg:h-6 h-5 w-5"
-      />
       {countryWithCode?.code}
       <Image
         src={`/images/input/triangle.svg`}
