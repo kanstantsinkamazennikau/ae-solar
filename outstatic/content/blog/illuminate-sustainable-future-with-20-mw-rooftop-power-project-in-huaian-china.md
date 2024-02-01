@@ -14,10 +14,6 @@ As the demand for sustainable and cost-effective energy solutions continues to g
 \
 The process of grid-connected PV systems can be broken down into the following key steps:
 
-## Heading 2
-
-### Heading 3
-
 Regular text
 
 - bullet list
