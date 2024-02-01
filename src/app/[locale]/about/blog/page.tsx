@@ -8,16 +8,19 @@ import { getDocumentSlugs } from "outstatic/server";
 import { Suspense } from "react";
 import path from "path";
 
-async function getWikiDirectory() {
+async function getOutstaticDirectory() {
   return path.join(process.cwd(), "outstatic");
 }
 
 async function getBlogPostsAmount() {
-  const t = await getWikiDirectory();
-  console.log(t);
+  try {
+    await getOutstaticDirectory();
 
-  const blogs = getDocumentSlugs("blog");
-  return blogs.length;
+    const blogs = getDocumentSlugs("blog");
+    return blogs.length;
+  } catch (error) {
+    return 0;
+  }
 }
 
 export default async function Blog({
@@ -29,6 +32,16 @@ export default async function Blog({
 }) {
   const currentPage = Number(searchParams?.page) || 1;
   const blogPostsAmount = await getBlogPostsAmount();
+
+  if (!blogPostsAmount)
+    return (
+      <>
+        <BlogHeading />
+        <div className="text-center [font-size:_clamp(20px,2vw,32px)]">
+          No blog posts
+        </div>
+      </>
+    );
 
   return (
     <>

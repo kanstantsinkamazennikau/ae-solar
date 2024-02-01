@@ -53,10 +53,10 @@ export default async function BlogPost({
           readingTime,
         }}
       />
-      <div className="flex flex-col mt-14">
+      <div className="flex flex-col mt-14 font-walsheim ">
         <div
           dangerouslySetInnerHTML={{ __html: content }}
-          className="max-w-[900px] mx-auto w-full"
+          className="max-w-[900px] mx-auto w-full leading-[150%] blog_post_content"
         />
         {/* {content.map(({ sectionHeadline, block, image }, index) => (
           <div key={index}>

@@ -193,6 +193,7 @@ export default function ModelSpecs() {
                         { src: `/images/option/${modelSpecs[specKey]}` },
                       ]}
                       plugins={[Zoom]}
+                      noScroll={{ disabled: true }}
                       controller={{
                         closeOnPullDown: true,
                         closeOnBackdropClick: true,
@@ -204,6 +205,9 @@ export default function ModelSpecs() {
                         buttonNext: () => null,
                       }}
                       styles={{
+                        toolbar: {
+                          marginRight: "20px",
+                        },
                         container: {
                           backgroundColor: "rgb(25, 25, 25, 0.5)",
                           backdropFilter: "blur(10px)",

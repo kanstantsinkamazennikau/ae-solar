@@ -3,35 +3,61 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
+  .blog_post_content h1 {
     @apply text-4xl;
     @apply font-bold;
+    margin-bottom: 20px;
   }
-  h2 {
+  .blog_post_content h2 {
     @apply text-3xl;
     @apply font-bold;
+    margin-bottom: 20px;
   }
-  h3 {
+  .blog_post_content h3 {
     @apply text-2xl;
     @apply font-bold;
+    margin-bottom: 20px;
   }
-  h4 {
+  .blog_post_content h4 {
     @apply text-xl;
     @apply font-semibold;
+    margin-bottom: 20px;
   }
-  h5 {
+  .blog_post_content h5 {
     @apply text-lg;
     @apply font-semibold;
+    margin-bottom: 20px;
   }
-  h6 {
+  .blog_post_content h6 {
     @apply text-sm;
     @apply font-semibold;
+    margin-bottom: 20px;
   }
 
-  ul,
-  ol {
+  .blog_post_content ul,
+  .blog_post_content ol {
     list-style: revert;
   }
+}
+
+.blog_post_content p {
+  margin-bottom: 15px;
+  line-height: 150%;
+  font-size: clamp(16px, 1.5vw, 20px);
+}
+
+.blog_post_content img {
+  margin: 0 auto;
+}
+
+.blog_post_content a:hover {
+  margin-bottom: 15px;
+  line-height: 150%;
+  font-size: clamp(16px, 1.5vw, 20px);
+}
+
+.blog_post_content a {
+  color: red;
 }
 
 /* width */
@@ -61,6 +87,7 @@ body {
   background-color: #000;
   color: white;
   overflow-x: hidden;
+  /* padding: 0 !important; */
 }
 
 .fade-strip-horizontal {

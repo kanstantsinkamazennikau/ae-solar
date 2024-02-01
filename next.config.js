@@ -10,11 +10,6 @@ const nextConfig = {
     ];
   },
   pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
-  // experimental: {
-  //   nftTracing: true,
-  //   serverComponentsExternalPackages: ["outstatic"],
-  // },
-  // output: "standalone",
 };
 
 module.exports = nextConfig;
