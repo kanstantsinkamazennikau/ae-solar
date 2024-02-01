@@ -1,6 +1,6 @@
 {
-  "commit": "cee2268915eeba0ffcdce0b08da01b3a4c1dc90c",
-  "generated": "2024-02-01T09:50:31.028Z",
+  "commit": "ced64180e3f865047264fbb49f6e51480e74fbce",
+  "generated": "2024-02-01T09:57:21.102Z",
   "metadata": [
     {
       "__outstatic": {
@@ -55,6 +55,24 @@
       "slug": "illuminate-sustainable-future-with-20-mw-rooftop-power-project-in-huaian-china",
       "status": "published",
       "title": "Illuminate Sustainable Future with 20 MW Rooftop Power Project in Huaian, China"
+    },
+    {
+      "__outstatic": {
+        "commit": "ced64180e3f865047264fbb49f6e51480e74fbce",
+        "hash": "3959201830",
+        "path": "outstatic/content/blog/how-do-grid-connected-pv-systems-save-your-bills.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-01T10:14:43.621Z",
+      "slug": "how-do-grid-connected-pv-systems-save-your-bills",
+      "status": "draft",
+      "title": "HOW DO GRID-CONNECTED PV SYSTEMS SAVE YOUR BILLS?"
     }
   ]
 }
