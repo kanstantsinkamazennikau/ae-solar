@@ -14,7 +14,7 @@ publishedAt: '2024-02-01T10:14:43.621Z'
 
 ![](https://ae-solar.com/wp-content/uploads/2024/01/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231229141722-scaled.jpg)
 
- **INTRODUCTION**
+**INTRODUCTION**
 
 The material composition of the p-n junction is typically silicon-based, with the p-type region doped with elements such as boron and the n-type region doped with elements such as phosphorus. This doping introduces impurities into the semiconductor crystal lattice, altering its electrical properties and enabling the formation of the p-n junction. Things occur when a p-type semiconductor, which has an excess of positively charged 'holes,' is brought into contact with an n-type semiconductor, which has an excess of negatively charged electrons, now a built-in electric field occurs at their junction, allowing for the separation and movement of charge carriers.
 

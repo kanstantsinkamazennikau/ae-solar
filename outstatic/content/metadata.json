@@ -1,6 +1,6 @@
 {
-  "commit": "29d077f985f6ce50c3242ee995cc5f3008534dd0",
-  "generated": "2024-02-01T11:14:50.884Z",
+  "commit": "7f897d477be078363fb6b18f3400dae87b9911a5",
+  "generated": "2024-02-01T11:16:41.226Z",
   "metadata": [
     {
       "__outstatic": {
@@ -40,24 +40,6 @@
     },
     {
       "__outstatic": {
-        "commit": "ca2e48eda3a21bd1cab292c6fce5142da2d8855b",
-        "hash": "3355253470",
-        "path": "outstatic/content/blog/how-do-grid-connected-pv-systems-save-your-bills.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-01T10:14:43.621Z",
-      "slug": "how-do-grid-connected-pv-systems-save-your-bills",
-      "status": "published",
-      "title": "HOW DO GRID-CONNECTED PV SYSTEMS SAVE YOUR BILLS?"
-    },
-    {
-      "__outstatic": {
         "commit": "29d077f985f6ce50c3242ee995cc5f3008534dd0",
         "hash": "3157272326",
         "path": "outstatic/content/blog/illuminate-sustainable-future-with-20-mw-rooftop-power-project-in-huaian-china.md"
@@ -73,6 +55,24 @@
       "slug": "illuminate-sustainable-future-with-20-mw-rooftop-power-project-in-huaian-china",
       "status": "published",
       "title": "Illuminate Sustainable Future with 20 MW Rooftop Power Project in Huaian, China"
+    },
+    {
+      "__outstatic": {
+        "commit": "7f897d477be078363fb6b18f3400dae87b9911a5",
+        "hash": "1724913952",
+        "path": "outstatic/content/blog/how-do-grid-connected-pv-systems-save-your-bills.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-01T10:14:43.621Z",
+      "slug": "how-do-grid-connected-pv-systems-save-your-bills",
+      "status": "published",
+      "title": "HOW DO GRID-CONNECTED PV SYSTEMS SAVE YOUR BILLS?"
     }
   ]
 }
