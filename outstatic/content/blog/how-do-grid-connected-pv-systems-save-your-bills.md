@@ -14,7 +14,7 @@ publishedAt: '2024-02-01T10:14:43.621Z'
 
 ![](https://ae-solar.com/wp-content/uploads/2024/01/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231229141722-scaled.jpg)
 
-#### 
+ ![](/images/afshin-bakhtiari-150x150-AzND.jpg)
 
 #### **INTRODUCTION**
 
