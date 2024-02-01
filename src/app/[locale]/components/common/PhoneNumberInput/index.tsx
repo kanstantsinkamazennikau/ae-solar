@@ -94,7 +94,7 @@ export default function PhoneNumberInput({
         className="bg-transparent outline-none placeholder:[font-size:_clamp(20px,2vw,30px)]"
       />
       {error && (
-        <div className="absolute text-xs text-base-red bottom-0 translate-y-full">
+        <div className="absolute text-xs text-base-red bottom-0 translate-y-full ">
           {error.message!.toString()}
         </div>
       )}
