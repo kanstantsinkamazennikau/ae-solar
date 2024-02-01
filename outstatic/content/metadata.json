@@ -1,6 +1,6 @@
 {
-  "commit": "7f897d477be078363fb6b18f3400dae87b9911a5",
-  "generated": "2024-02-01T11:40:03.642Z",
+  "commit": "c6550d7c5760bdc31d15f8deafb5207f3b90b89a",
+  "generated": "2024-02-01T13:40:59.715Z",
   "metadata": [
     {
       "__outstatic": {
@@ -73,6 +73,24 @@
       "slug": "how-do-grid-connected-pv-systems-save-your-bills",
       "status": "published",
       "title": "HOW DO GRID-CONNECTED PV SYSTEMS SAVE YOUR BILLS?"
+    },
+    {
+      "__outstatic": {
+        "commit": "c6550d7c5760bdc31d15f8deafb5207f3b90b89a",
+        "hash": "435949254",
+        "path": "outstatic/content/blog/preview-of-aesolar-s-upcoming-exhibitions-for-q1-2024.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-01T13:56:42.842Z",
+      "slug": "preview-of-aesolar-s-upcoming-exhibitions-for-q1-2024",
+      "status": "published",
+      "title": "PREVIEW OF AESOLAR’S UPCOMING EXHIBITIONS FOR Q1 2024"
     }
   ]
 }
