@@ -2,17 +2,17 @@ import BlogPostStats from "@/app/[locale]/about/blog/components/BlogPostStats";
 import { BlogPost } from "@/app/[locale]/about/blog/components/BlogPostsList/types";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
 import { markdownToHtml } from "@/app/[locale]/utils/markdownToHtml";
-import { getDocumentBySlug } from "outstatic/server";
+import { getDocumentBySlug, getDocumentSlugs } from "outstatic/server";
 
 async function getBlogPostData(slug: string) {
-  const blogPost = getDocumentBySlug("blog", slug, [
+  const blogPost = (await getDocumentBySlug("blog", slug, [
     "title",
     "publishedAt",
     "slug",
     "author",
     "content",
     "coverImage",
-  ]) as BlogPost;
+  ])) as BlogPost;
 
   const content = await markdownToHtml(blogPost?.content || "");
 

@@ -38,12 +38,12 @@ export default async function RecentPosts() {
         <Link
           key={title}
           href={`blog/${slug}`}
-          className="py-3 hover:text-base-red border-t border-solid border-[#191919]"
+          className="py-3 hover:text-base-red border-t border-solid border-[#191919] leading-[150%]"
         >
           {/* <div className="[font-size:_clamp(8px,1vw,12px)] uppercase font-extrabold text-[#505050] mb-1">
             {type}
           </div> */}
-          <div className="leading-[130%] [font-size:_clamp(12px,1vw,16px)] -tracking-[0.32px] font-normal">
+          <div className="[font-size:_clamp(12px,1vw,16px)] -tracking-[0.32px] font-normal">
             {title}
           </div>
         </Link>

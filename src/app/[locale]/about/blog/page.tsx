@@ -16,7 +16,7 @@ async function getBlogPostsAmount() {
   try {
     await getOutstaticDirectory();
 
-    const blogs = getDocumentSlugs("blog");
+    const blogs = await getDocumentSlugs("blog");
     return blogs.length;
   } catch (error) {
     return 0;
