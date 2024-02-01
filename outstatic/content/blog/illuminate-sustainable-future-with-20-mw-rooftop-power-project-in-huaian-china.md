@@ -1,6 +1,6 @@
 ---
 title: 'Illuminate Sustainable Future with 20 MW Rooftop Power Project in Huaian, China'
-status: 'draft'
+status: 'published'
 author:
   name: ''
   picture: 'https://avatars.githubusercontent.com/u/102024592?v=4'
