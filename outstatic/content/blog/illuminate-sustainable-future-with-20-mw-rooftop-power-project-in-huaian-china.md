@@ -29,8 +29,6 @@ Regular text
 
 > quote quotes
 
-![](/images/photo_2023-02-12_16-43-40-k4Mj.jpg)
-
 **bold**
 
 ***italic***
