@@ -8,11 +8,14 @@ import PhoneNumberInput from "@/app/[locale]/components/common/PhoneNumberInput"
 import PickerInput from "@/app/[locale]/components/common/PickerInput";
 import {
   CHECKOUT_SEND_REQUEST,
+  CONSULT_AGREEMENT,
   DROPDOWN_INPUT_VALUES,
   PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";
-import { log } from "console";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function BuyerForm({
   formHeader,
@@ -26,7 +29,11 @@ export default function BuyerForm({
   getValues,
   isShowCloseIcon,
 }: InputsProps) {
-  console.log(errors);
+  const [agreement, setAgreement] = useState(false);
+
+  const onChangeAgreement = () => {
+    setAgreement((prevState) => !prevState);
+  };
 
   return (
     <form
@@ -82,7 +89,7 @@ export default function BuyerForm({
         height={60}
         className="mt-2 rotate-180"
       />
-      <div className="flex flex-col gap-3 mb-10">
+      <div className="flex flex-col gap-3 mb-2">
         {formFields.map((inputField) => {
           if (inputField.type === "input")
             return (
@@ -187,11 +194,54 @@ export default function BuyerForm({
             );
         })}
       </div>
+
+      {/* <div> */}
+      <label className={`flex items-center cursor-pointer mb-4 w-fit`}>
+        <input
+          type="checkbox"
+          checked={agreement}
+          className={`
+            grid
+            place-content-center
+            appearance-none
+            w-4
+            h-4
+            border-2
+            border-[#E7E7E7]
+            rounded-[3px]
+            bg-black
+            before:shadow-[inset_1em_1em_#F60109]
+            before:content-['']
+            before:w-2
+            before:h-2
+            before:rounded-[1px]
+            before:scale-0
+            before:transition-transform
+            before:delay-150
+            before:ease-in-out
+            checked:before:scale-[1]
+            disabled:border-dark-gray-650
+            cursor-pointer               
+          `}
+          onChange={onChangeAgreement}
+        />
+        <span
+          className={`
+            ml-[6px]
+            font-normal
+            [font-size:_clamp(12px,1vw,14px)]
+          `}
+        >
+          {CONSULT_AGREEMENT}
+        </span>
+      </label>
+      {/* </div> */}
       <Button
         onClick={handleSubmit}
         showArrow
         size="normal"
         externalStyle="min-[640px]:w-fit w-full"
+        disabled={!agreement}
       >
         {CHECKOUT_SEND_REQUEST}
       </Button>

@@ -1,14 +1,9 @@
 "use client";
 
-import CodesListWithFlags from "@/app/[locale]/components/common/PhoneNumberInput/CodesListWithFlags";
-import SelectedCodeWithFlag from "@/app/[locale]/components/common/PhoneNumberInput/SelectedCodeWithFlag";
 import { PhoneNumberInputProps } from "@/app/[locale]/components/common/PhoneNumberInput/types";
-import { useRef, useState } from "react";
 import {
-  CountryIso2,
   CountrySelector,
   DialCodePreview,
-  PhoneInput,
   usePhoneInput,
 } from "react-international-phone";
 import "react-international-phone/style.css";
@@ -83,7 +78,14 @@ export default function PhoneNumberInput({
           dropdownStyleProps={{
             style: {
               height: "150px",
+              background: "#131313d9",
+              color: "white",
+              border: "2px solid #131313",
+              borderRadius: "12px",
+              outline: 0,
             },
+            className: "dropdownContainer",
+            listItemClassName: "listItem",
           }}
         />
       </div>
@@ -94,7 +96,7 @@ export default function PhoneNumberInput({
         className="bg-transparent outline-none placeholder:[font-size:_clamp(20px,2vw,30px)]"
       />
       {error && (
-        <div className="absolute text-xs text-base-red bottom-0 translate-y-full ">
+        <div className="absolute text-xs text-base-red bottom-0 translate-y-full">
           {error.message!.toString()}
         </div>
       )}

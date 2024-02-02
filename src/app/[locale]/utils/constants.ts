@@ -1721,6 +1721,8 @@ export const CHECKOUT_SEND_REQUEST = "Send Request";
 
 export const CONSULT_READY_TO_CONSULT = `Hey! We are Ready
 to Consult You`;
+export const CONSULT_AGREEMENT = "I agree to the processing of personal data";
+
 export const CONSULT_FORM_FIELDS: FormFileds[] = [
   {
     formTitle: "My name is",

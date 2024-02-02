@@ -51,7 +51,7 @@ export default function Navigation() {
               ))}
             </ul>
             <div className="gap-3 min-[920px]:flex hidden">
-              <ChangeLocale />
+              {/* <ChangeLocale /> */}
               <Cart />
               <Button onClick={handleClick} size="small">
                 <span className="[font-size:_clamp(14px,1.5vw,16px)] whitespace-nowrap">

@@ -106,7 +106,7 @@ export default function BuyerForm({
         `}
       />
       <BasicWidthContainer>
-        <div className="mt-[105px] mb-4">
+        <div className="mt-[95px] mb-4">
           {isShowMessageAfterSubmit ? (
             <div
               className="

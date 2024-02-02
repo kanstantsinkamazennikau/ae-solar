@@ -32,6 +32,7 @@ export default function MobileNavigation() {
     if (isHamburgerMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
+      setSubMenuHeading("");
       document.body.style.overflow = "unset";
     }
   }, [isHamburgerMenuOpen]);
@@ -76,7 +77,6 @@ export default function MobileNavigation() {
       <div
         className={`
           min-[920px]:hidden 
-          h-screen 
           bg-black 
           fixed
           top-[64px]
@@ -109,8 +109,8 @@ export default function MobileNavigation() {
           ))}
         </ul>
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
-        <ChangeLocale mobileNavigation />
-        <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
+        {/* <ChangeLocale mobileNavigation /> */}
+        {/* <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" /> */}
         <Link
           href={`/${params?.locale}/consult`}
           className={
@@ -120,34 +120,36 @@ export default function MobileNavigation() {
         >
           {HEADER_CONTACT_US}
         </Link>
-        {FOOTER_CONTACT_INFO.map(({ icon, info, linkTo }) => {
-          if (icon === "location.svg") return;
-          return (
-            <div
-              key={info}
-              className="flex items-start leading-[130%] font-normal font-walsheim gap-1 max-w-[185px] [font-size:_clamp(12px,1.5vw,16px)]"
-            >
-              <Image
-                src={`/images/footer/${icon}`}
-                alt={icon}
-                width={16}
-                height={16}
-                priority
-                className="invert-[68%] sepia-0 saturate-[1954%] hue-rotate-[173deg] brightness-[91%] contrast-[85%]"
-              />
+        <div className="mb-4">
+          {FOOTER_CONTACT_INFO.map(({ icon, info, linkTo }) => {
+            if (icon === "location.svg") return;
+            return (
               <div
-                onClick={() => {
-                  if (linkTo) router.push(linkTo);
-                }}
-                className={`${
-                  linkTo ? "cursor-pointer" : ""
-                } text-dark-gray-900`}
+                key={info}
+                className="flex items-start leading-[130%] font-normal font-walsheim gap-1 max-w-[185px] [font-size:_clamp(12px,1.5vw,16px)]"
               >
-                {info}
+                <Image
+                  src={`/images/footer/${icon}`}
+                  alt={icon}
+                  width={16}
+                  height={16}
+                  priority
+                  className="invert-[68%] sepia-0 saturate-[1954%] hue-rotate-[173deg] brightness-[91%] contrast-[85%]"
+                />
+                <div
+                  onClick={() => {
+                    if (linkTo) router.push(linkTo);
+                  }}
+                  className={`${
+                    linkTo ? "cursor-pointer" : ""
+                  } text-dark-gray-900`}
+                >
+                  {info}
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </>
   );
