@@ -1,6 +1,6 @@
 export interface FooterCategoryProps {
-  category: string;
-  links: string[];
+  category: { title: string; link: string };
+  links: { title: string; link: string }[];
 }
 
 export interface PolicyLinkProps {

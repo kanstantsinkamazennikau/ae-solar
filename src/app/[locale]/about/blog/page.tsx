@@ -1,4 +1,3 @@
-import BlogHeading from "@/app/[locale]/about/blog/components/BlogHeading";
 import BlogPostsList from "@/app/[locale]/about/blog/components/BlogPostsList";
 import BlogPostPagination from "@/app/[locale]/about/blog/components/BlogPostsPagination";
 import RecentPosts from "@/app/[locale]/about/blog/components/RecentPosts";
@@ -7,6 +6,11 @@ import Loader from "@/app/[locale]/components/common/Loader";
 import { getDocumentSlugs } from "outstatic/server";
 import { Suspense } from "react";
 import path from "path";
+import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
+import {
+  BLOG_ON_THE_BLOG,
+  BLOG_READ_THOUGHTS,
+} from "@/app/[locale]/about/blog/constants";
 
 async function getOutstaticDirectory() {
   return path.join(process.cwd(), "outstatic");
@@ -36,7 +40,11 @@ export default async function Blog({
   if (!blogPostsAmount)
     return (
       <>
-        <BlogHeading />
+        <HeadingWithBackground
+          backgroundImage="/images/about/blog/blogBackground.png"
+          tierOneHeading={BLOG_READ_THOUGHTS}
+          tierTwoHeading={BLOG_ON_THE_BLOG}
+        />
         <div className="text-center [font-size:_clamp(20px,2vw,32px)]">
           No blog posts
         </div>
@@ -45,12 +53,19 @@ export default async function Blog({
 
   return (
     <>
-      <BlogHeading />
+      <HeadingWithBackground
+        backgroundImage="/images/about/blog/blogBackground.png"
+        tierOneHeading={BLOG_READ_THOUGHTS}
+        tierTwoHeading={BLOG_ON_THE_BLOG}
+      />
       <div className="flex w-full justify-center flex-col items-center ">
         <BasicWidthContainer>
           <div className="flex gap-[60px] justify-between">
             <Suspense key={currentPage} fallback={<Loader />}>
-              <BlogPostsList currentPage={currentPage} />
+              <BlogPostsList
+                currentPage={currentPage}
+                blogPostsAmount={blogPostsAmount}
+              />
             </Suspense>
             <div className="flex flex-col gap-[60px] w-full max-w-[315px]">
               {/* <MostPopularPosts /> */}

@@ -1,6 +1,6 @@
 export async function generateMetadata() {
   const title = `AE-Solar | Contact`;
-  const description = `AE-Solar | Contact`;
+  const description = `AE-Solar | Contact Us Information`;
 
   return {
     title,

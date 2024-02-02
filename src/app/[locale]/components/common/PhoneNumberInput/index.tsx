@@ -78,7 +78,7 @@ export default function PhoneNumberInput({
           dropdownStyleProps={{
             style: {
               height: "150px",
-              background: "#131313d9",
+              background: "#131313",
               color: "white",
               border: "2px solid #131313",
               borderRadius: "12px",

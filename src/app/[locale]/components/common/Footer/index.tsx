@@ -76,7 +76,7 @@ export default function Footer() {
             height={60}
             className="rotate-180"
           />
-          <nav className="grid md:grid-cols-[auto_auto] min-[500px]:items-start gap-2 grid-cols-[auto] justify-between">
+          <nav className="grid md:grid-cols-[auto_auto] min-[500px]:items-start gap-2 grid-cols-1 justify-between">
             {/* BACKGROUND */}
             <div className="flex justify-between w-full absolute top-0 left-0 mt-20 h-[calc(100%-80px)] items-center">
               <Image
@@ -122,7 +122,7 @@ export default function Footer() {
             <div className="min-[500px]:justify-between min-w-0 lg:min-w-[720px] grid min-[500px]:grid-cols-4 grid-cols-1 w-full">
               {FOOTER_LINKS_ARRAY.map(({ category, links }) => (
                 <FooterCategory
-                  key={category}
+                  key={category.title}
                   category={category}
                   links={links}
                 />

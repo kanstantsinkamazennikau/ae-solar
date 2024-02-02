@@ -45,12 +45,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
       { url: "/about", text: "About us" },
       { url: "/about/blog", text: "Blog" },
       { url: "/about/manufacturer", text: "Manufacturer" },
-      { url: "/about/contacts", text: "Contacts" },
     ],
-  },
-  {
-    url: "/news",
-    text: "News",
   },
   {
     url: "/documents",
@@ -75,8 +70,8 @@ export const HEADER_NAV_LINKS_ARRAY = [
     ],
   },
   {
-    url: "/join_us",
-    text: "Join us",
+    url: "/contacts",
+    text: "Contacts",
   },
 ];
 export const HEADER_CONTACT_US = "Contact Us";
@@ -327,26 +322,40 @@ export const FAQ_MORE_SOLUTIONS = "More solutions";
 //FOOTER
 export const FOOTER_LINKS_ARRAY = [
   {
-    category: "Products",
-    links: ["Aurora", "Meteor", "Comet", "Terra", "ShadeStar", "Neptune"],
-  },
-  {
-    category: "Company",
-    links: ["About Us", "Manufacturing", "News", "Blog"],
-  },
-  {
-    category: "Solution",
-    links: ["Utility", "Residental", "NFC Anti-Piracy"],
-  },
-  {
-    category: "Documents",
+    category: { title: "Products", link: "/products" },
     links: [
-      "Datasheet",
-      "Certifications",
-      "Manual",
-      "Warranty",
-      "Presentations",
-      "FAQ",
+      { title: "Aurora", link: "/products/aurora" },
+      { title: "Meteor", link: "/products/meteor" },
+      { title: "Comet", link: "/products/comet" },
+      { title: "Terra", link: "/products/terra" },
+      { title: "ShadeStar", link: "/products/shadestar" },
+      { title: "Neptune", link: "/products/Neptune" },
+    ],
+  },
+  {
+    category: { title: "Company", link: "/about" },
+    links: [
+      { title: "About Us", link: "/about" },
+      { title: "Manufacturing", link: "/about/blog" },
+      { title: "Blog", link: "/about/manufacturer" },
+    ],
+  },
+  {
+    category: { title: "Legal Info", link: "/documents/imprint" },
+    links: [
+      { title: "Imprint", link: "/documents/imprint" },
+      { title: "Publisher's", link: "/documents/publishers_info" },
+    ],
+  },
+  {
+    category: { title: "Documents", link: "/documents" },
+    links: [
+      { title: "Datasheet", link: "/documents" },
+      { title: "Certifications", link: "/documents" },
+      { title: "Manual", link: "/documents" },
+      { title: "Warranty", link: "/documents" },
+      { title: "Presentations", link: "/documents" },
+      { title: "FAQ", link: "/documents/faq" },
     ],
   },
 ];

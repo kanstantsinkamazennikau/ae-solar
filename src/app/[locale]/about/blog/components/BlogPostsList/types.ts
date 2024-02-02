@@ -20,4 +20,5 @@ export interface Description {
 
 export interface BlogPostsListProps {
   currentPage: number;
+  blogPostsAmount: number;
 }
