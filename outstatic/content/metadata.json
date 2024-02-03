@@ -1,6 +1,6 @@
 {
-  "commit": "52330e9f9325f283d645825d823820264475fad3",
-  "generated": "2024-02-01T13:42:08.724Z",
+  "commit": "33679ac2cdeeb92b285bca72f4f414d41bba014e",
+  "generated": "2024-02-03T09:35:29.266Z",
   "metadata": [
     {
       "__outstatic": {
@@ -91,6 +91,24 @@
       "slug": "preview-of-aesolar-s-upcoming-exhibitions-for-q1-2024",
       "status": "published",
       "title": "PREVIEW OF AESOLAR’S UPCOMING EXHIBITIONS FOR Q1 2024"
+    },
+    {
+      "__outstatic": {
+        "commit": "33679ac2cdeeb92b285bca72f4f414d41bba014e",
+        "hash": "1874533652",
+        "path": "outstatic/content/blog/test1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/158493558?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-03T09:41:03.391Z",
+      "slug": "test1",
+      "status": "published",
+      "title": "test1"
     }
   ]
 }
