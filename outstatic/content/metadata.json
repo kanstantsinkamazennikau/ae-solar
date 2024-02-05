@@ -1,6 +1,6 @@
 {
-  "commit": "33679ac2cdeeb92b285bca72f4f414d41bba014e",
-  "generated": "2024-02-03T09:35:29.266Z",
+  "commit": "7737448e7f3ce4a337908903f0f9d458ede81de1",
+  "generated": "2024-02-05T13:54:01.197Z",
   "metadata": [
     {
       "__outstatic": {
@@ -94,8 +94,8 @@
     },
     {
       "__outstatic": {
-        "commit": "33679ac2cdeeb92b285bca72f4f414d41bba014e",
-        "hash": "1874533652",
+        "commit": "7737448e7f3ce4a337908903f0f9d458ede81de1",
+        "hash": "3525587963",
         "path": "outstatic/content/blog/test1.md"
       },
       "author": {
@@ -108,7 +108,7 @@
       "publishedAt": "2024-02-03T09:41:03.391Z",
       "slug": "test1",
       "status": "published",
-      "title": "test1"
+      "title": "A SOLAR SYSTEM"
     }
   ]
 }
