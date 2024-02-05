@@ -41,7 +41,7 @@ export default function StatWithAnimationCounter({
   return (
     <>
       <div
-        className={`flex flex-row items-center justify-center bg-black text-center ${
+        className={`flex flex-row items-center justify-center bg-transparent text-center ${
           isChangeLayoutStructure
             ? "flex-grow flex-shrink basis-full md:basis-[20%] md:border-none border-y-[2px] border-[#ffffff33] py-6 mt-6 -mb-4 md:py-0 md:mt-0 md:-mb-0"
             : "flex-grow flex-shrink basis-1/3 md:basis-[20%]"
@@ -56,7 +56,7 @@ export default function StatWithAnimationCounter({
           </p>
         </div>
       </div>
-      <div className="w-0.5 bg-white opacity-20 lg:mx-8 xl:mx-10 mx-4" />
+      <div className="w-0.5 bg-[#191919] lg:mx-8 xl:mx-10 mx-4" />
     </>
   );
 }

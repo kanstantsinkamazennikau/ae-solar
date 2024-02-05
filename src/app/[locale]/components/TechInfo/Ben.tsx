@@ -17,29 +17,32 @@ export default function Ben({
     <div
       key={title}
       className={`
-      flex
-      min-[500px]:px-8
-      min-[500px]:py-8
-      py-6
-      px-6
-      items-start
-      self-stretch
-      relative
-      overflow-hidden
-      bg-dark-gray-950
-      rounded-[10px]
-      hover:shadow-bens
-      hover:outline-[3px]
-      hover:outline-base-red
-      outline-transparent
-      hover:outline
-      transition-all
-      duration-200
-      ${
-        isFullHeightRow
-          ? "md:row-start-1 md:row-end-3 md:col-start-2 md:col-end-3 min-[500px]:min-h-full min-h-[328px]"
-          : "h-full"
-      }`}
+        flex
+        min-[500px]:px-8
+        min-[500px]:py-8
+        py-6
+        px-6
+        items-start
+        self-stretch
+        relative
+        overflow-hidden
+        bg-[#131313]
+        rounded-[10px]
+        hover:shadow-bens
+        hover:outline-[3px]
+        hover:outline-base-red
+        outline-transparent
+        hover:outline
+        transition-all
+        duration-200
+        border
+        border-solid
+        border-[#191919]
+        ${
+          isFullHeightRow
+            ? "md:row-start-1 md:row-end-3 md:col-start-2 md:col-end-3 min-[500px]:min-h-full min-h-[328px]"
+            : "h-full"
+        }`}
       onMouseLeave={() => setIsReadMoreVisible(false)}
       onMouseEnter={() => setIsReadMoreVisible(true)}
     >

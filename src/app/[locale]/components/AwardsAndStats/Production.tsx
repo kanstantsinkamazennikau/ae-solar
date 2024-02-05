@@ -20,7 +20,7 @@ export default function Production() {
           className="md:w-[76px] w-10"
         />
       </div>
-      <div className="w-0.5 bg-white opacity-20 h-auto" />
+      <div className="w-0.5 bg-[#191919] h-auto" />
       <div className="[font-size:_clamp(12px,3vw,40px)] font-bold leading-none flex-grow flex-shrink basis-0 self-center">
         {AWARDS_AND_STATS_PRODUCTION_PLANTS}
       </div>

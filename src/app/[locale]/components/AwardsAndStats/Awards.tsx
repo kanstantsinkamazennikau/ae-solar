@@ -27,6 +27,17 @@ export default function Awards() {
   return (
     <div className="flex gap-2.5 flex-col self-stretch items-center">
       <div className="flex md:gap-5 relative gap-4">
+        <div
+          className="
+            z-10
+            flex
+            absolute
+            w-full
+            h-full
+            bg-[linear-gradient(90deg,_rgb(0_0_0_/_20%)_0%,_rgb(0_0_0_/_40%)_20%,_rgb(0_0_0_/_0%)_40%,_rgb(0_0_0_/_0%)_60%,_rgb(0_0_0_/_40%)_80%,_rgb(0_0_0_/_20%)_100%)]
+          "
+        />
+
         <Splide
           aria-label="awards"
           options={options}
@@ -45,8 +56,6 @@ export default function Awards() {
             </SplideSlide>
           ))}
         </Splide>
-        <div className="fade-strip-left !w-20" />
-        <div className="fade-strip-right !w-20" />
       </div>
     </div>
   );
