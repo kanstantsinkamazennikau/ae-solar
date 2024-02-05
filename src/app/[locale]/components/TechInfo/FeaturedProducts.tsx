@@ -26,9 +26,6 @@ export default function FeaturedProducts() {
         items-center
         flex-col
         px-5
-        xl:mb-[280px]
-        lg:mb-[180px]
-        md:mb-[100px]
         mb-[80px]
         md:[background-position-y:-35px]
         lg:[background-position-y:0px]
