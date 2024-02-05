@@ -63,7 +63,7 @@ export default function GetInTouch() {
         bg-[url('/images/getInTouchCircles.svg')]
         -top-[80px]
         relative
-        2xl:bg-contain
+        2xl:bg-auto
         -mb-[200px]
         h-[800px]
         lg:[background-size:1400px]
