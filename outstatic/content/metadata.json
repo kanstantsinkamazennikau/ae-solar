@@ -1,6 +1,6 @@
 {
-  "commit": "3c21b5fe1daab4f94b64483365569e81c92a1d43",
-  "generated": "2024-02-06T15:13:27.747Z",
+  "commit": "2e67483c1d6b6ffa07fc3b17e3f4e136ee0d4c15",
+  "generated": "2024-02-06T15:13:54.920Z",
   "metadata": [
     {
       "__outstatic": {
@@ -415,6 +415,24 @@
       "slug": "floating-pv-systems",
       "status": "published",
       "title": "FLOATING PV SYSTEMS"
+    },
+    {
+      "__outstatic": {
+        "commit": "2e67483c1d6b6ffa07fc3b17e3f4e136ee0d4c15",
+        "hash": "2564404357",
+        "path": "outstatic/content/blog/brazil-solar-energy-market.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:19:32.649Z",
+      "slug": "brazil-solar-energy-market",
+      "status": "draft",
+      "title": "BRAZIL SOLAR ENERGY MARKET"
     }
   ]
 }
