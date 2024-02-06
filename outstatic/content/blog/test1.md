@@ -1,5 +1,5 @@
 ---
-title: 'A SOLAR SYSTEM'
+title: 'AE SOLAR SYSTEM'
 status: 'published'
 author:
   name: ''
