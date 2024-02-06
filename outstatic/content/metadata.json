@@ -1,6 +1,6 @@
 {
-  "commit": "c4e86d3ca20cabefbf1a76763e7fac445aad899e",
-  "generated": "2024-02-06T14:59:25.417Z",
+  "commit": "feb12aaeb7ae7cbb3dc2140248ee4cd6c1fcddde",
+  "generated": "2024-02-06T14:59:48.244Z",
   "metadata": [
     {
       "__outstatic": {
@@ -325,6 +325,24 @@
       "slug": "economic-benefits-and-efficiency-of-solar-panels",
       "status": "draft",
       "title": "ECONOMIC BENEFITS AND EFFICIENCY OF SOLAR PANELS"
+    },
+    {
+      "__outstatic": {
+        "commit": "feb12aaeb7ae7cbb3dc2140248ee4cd6c1fcddde",
+        "hash": "3283360345",
+        "path": "outstatic/content/blog/how-solar-energy-can-help-stop-climate-change.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:05:36.548Z",
+      "slug": "how-solar-energy-can-help-stop-climate-change",
+      "status": "draft",
+      "title": "HOW SOLAR ENERGY CAN HELP STOP CLIMATE CHANGE?"
     }
   ]
 }
