@@ -1,6 +1,6 @@
 {
-  "commit": "37d04f66072d2f6b2381db3a191b7b25c44544fc",
-  "generated": "2024-02-06T15:11:59.726Z",
+  "commit": "15377c1343847497ff4aa3315e2365678d76dfa1",
+  "generated": "2024-02-06T15:13:24.168Z",
   "metadata": [
     {
       "__outstatic": {
@@ -397,6 +397,24 @@
       "slug": "solar-panel-recycling",
       "status": "published",
       "title": "SOLAR PANEL RECYCLING"
+    },
+    {
+      "__outstatic": {
+        "commit": "15377c1343847497ff4aa3315e2365678d76dfa1",
+        "hash": "1369934021",
+        "path": "outstatic/content/blog/floating-pv-systems.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:19:04.832Z",
+      "slug": "floating-pv-systems",
+      "status": "draft",
+      "title": "FLOATING PV SYSTEMS"
     }
   ]
 }
