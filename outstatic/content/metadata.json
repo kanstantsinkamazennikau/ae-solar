@@ -1,6 +1,6 @@
 {
-  "commit": "e848a7c6e6040a0b7190481c3f7fd9a1ae810656",
-  "generated": "2024-02-06T14:56:30.933Z",
+  "commit": "6df11e0f60d08ba8d648c9a69fa01394cdde4bae",
+  "generated": "2024-02-06T14:57:11.206Z",
   "metadata": [
     {
       "__outstatic": {
@@ -235,6 +235,24 @@
       "slug": "off-grid-solar-system",
       "status": "draft",
       "title": "OFF-GRID SOLAR SYSTEM"
+    },
+    {
+      "__outstatic": {
+        "commit": "6df11e0f60d08ba8d648c9a69fa01394cdde4bae",
+        "hash": "1174366916",
+        "path": "outstatic/content/blog/solar-panel-savings-what-to-expect.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:02:58.066Z",
+      "slug": "solar-panel-savings-what-to-expect",
+      "status": "draft",
+      "title": "SOLAR PANEL SAVINGS: WHAT TO EXPECT"
     }
   ]
 }
