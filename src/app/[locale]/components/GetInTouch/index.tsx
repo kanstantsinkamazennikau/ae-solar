@@ -32,25 +32,6 @@ export default function GetInTouch() {
 
   return (
     <div
-      // className="
-      //   flex
-      //   justify-center
-      //   items-center
-      //   bg-gradient-297
-      //   bg-white
-      //   w-full
-      //   xl:h-screen
-      //   lg:h-[600px]
-      //   md:h-[500px]
-      //   h-[400px]
-      //   relative
-      //   px-5
-      //   xl:mb-[280px]
-      //   lg:mb-[180px]
-      //   md:mb-[100px]
-      //   mb-[80px]
-      // "
-
       className="
         flex
         justify-center
@@ -74,29 +55,29 @@ export default function GetInTouch() {
       <BasicWidthContainer styles="mx-auto w-full">
         <div
           className="
-          flex
-          flex-col
-          justify-center
-          items-center
-          xl:gap-[80px]
-          lg:gap-[60px]
-          md:gap-[40px]
-          gap-1
-          w-full
-          bg-[url('/images/getInTouchBackground.svg')]
-          2xl:py-[120px]
-          2xl:px-[60px]
-          py-[80px]
-          px-[50px]
-          rounded-[40px]
-          border-2
-          border-solid
-          border-[#ffffff0d]
-          relative
-          overflow-hidden
-          bg-[#111]
-          -top-[60px]
-        "
+            flex
+            flex-col
+            justify-center
+            items-center
+            xl:gap-[80px]
+            lg:gap-[60px]
+            md:gap-[40px]
+            gap-1
+            w-full
+            bg-[url('/images/getInTouchBackground.svg')]
+            2xl:py-[120px]
+            2xl:px-[60px]
+            py-[80px]
+            px-[50px]
+            rounded-[40px]
+            border-2
+            border-solid
+            border-[#ffffff0d]
+            relative
+            overflow-hidden
+            bg-[#111]
+            -top-[60px]
+          "
         >
           <Image
             src={`/images/getInTouchUnion.svg`}

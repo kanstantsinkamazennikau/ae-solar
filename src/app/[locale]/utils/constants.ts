@@ -40,34 +40,34 @@ export const HEADER_NAV_LINKS_ARRAY = [
   },
   {
     url: "/about",
-    text: "About us",
+    text: "About Us",
     subMenu: [
-      { url: "/about", text: "About us" },
+      { url: "/about", text: "About Us" },
       { url: "/about/blog", text: "Blog" },
       { url: "/about/manufacturer", text: "Manufacturer" },
     ],
   },
   {
-    url: "/documents",
-    text: "Documents",
+    url: "/info",
+    text: "Info",
     subMenu: [
       {
-        url: "/documents",
-        text: "Documents",
-      },
-      {
-        url: "/documents/faq",
+        url: "/info/faq",
         text: "FAQ",
       },
       {
-        url: "/documents/publishers_info",
+        url: "/info/publishers_info",
         text: "Publisher's Info",
       },
       {
-        url: "/documents/imprint",
+        url: "/info/imprint",
         text: "Imprint Info",
       },
     ],
+  },
+  {
+    url: "/documents",
+    text: "Documents",
   },
   {
     url: "/contacts",
@@ -341,10 +341,10 @@ export const FOOTER_LINKS_ARRAY = [
     ],
   },
   {
-    category: { title: "Legal Info", link: "/documents/imprint" },
+    category: { title: "Legal Info", link: "/info/imprint" },
     links: [
-      { title: "Imprint", link: "/documents/imprint" },
-      { title: "Publisher's", link: "/documents/publishers_info" },
+      { title: "Imprint", link: "/info/imprint" },
+      { title: "Publisher's", link: "/info/publishers_info" },
     ],
   },
   {
@@ -355,7 +355,7 @@ export const FOOTER_LINKS_ARRAY = [
       { title: "Manual", link: "/documents" },
       { title: "Warranty", link: "/documents" },
       { title: "Presentations", link: "/documents" },
-      { title: "FAQ", link: "/documents/faq" },
+      { title: "FAQ", link: "/info/faq" },
     ],
   },
 ];

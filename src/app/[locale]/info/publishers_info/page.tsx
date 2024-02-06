@@ -2,7 +2,7 @@
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
 import PublishersInfroWithIntersection from "@/app/[locale]/documents/components/PublishersInfroWithIntersection";
-import { DOCUMENTS_PUBLISHERS_INFO_FILES } from "@/app/[locale]/documents/publishers_info/constants";
+import { DOCUMENTS_PUBLISHERS_INFO_FILES } from "@/app/[locale]/info/publishers_info/constants";
 import { useContext, useEffect } from "react";
 
 export default function PublishersInfo() {

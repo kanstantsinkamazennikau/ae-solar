@@ -2,7 +2,7 @@
 
 import Accordion from "@/app/[locale]/components/common/Accordion";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
-import { AccordionWithIntersectionPropps } from "@/app/[locale]/documents/faq/types";
+import { AccordionWithIntersectionPropps } from "@/app/[locale]/info/faq/types";
 import { useContext, useEffect, useRef } from "react";
 
 export default function AccordionWithIntersection({

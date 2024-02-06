@@ -3,7 +3,7 @@
 import {
   DOCUMENTS_PUBLISHERS_INFO_INFORMATION,
   DOCUMENTS_PUBLISHERS_INFO_PUBLISHERS,
-} from "@/app/[locale]/documents/publishers_info/constants";
+} from "@/app/[locale]/info/publishers_info/constants";
 import {
   DOCUMENTS_DOCUMENTS_HEADING,
   DOCUMENTS_FAQ_HAVE_A_QUESTION,
