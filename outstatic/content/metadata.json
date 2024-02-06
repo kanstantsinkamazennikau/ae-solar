@@ -1,6 +1,6 @@
 {
-  "commit": "fc143a17770d6831f8d9c110a0eb0c9481f57377",
-  "generated": "2024-02-06T15:11:19.032Z",
+  "commit": "39f2395ae1ff3c7c82b5c8260f4ddea9dc778f08",
+  "generated": "2024-02-06T15:11:22.205Z",
   "metadata": [
     {
       "__outstatic": {
@@ -364,8 +364,8 @@
     },
     {
       "__outstatic": {
-        "commit": "fc143a17770d6831f8d9c110a0eb0c9481f57377",
-        "hash": "1827380693",
+        "commit": "39f2395ae1ff3c7c82b5c8260f4ddea9dc778f08",
+        "hash": "824561211",
         "path": "outstatic/content/blog/history-and-the-development-of-photovoltaics.md"
       },
       "author": {
@@ -377,7 +377,7 @@
       "description": "",
       "publishedAt": "2024-02-06T15:17:01.963Z",
       "slug": "history-and-the-development-of-photovoltaics",
-      "status": "draft",
+      "status": "published",
       "title": "HISTORY AND THE DEVELOPMENT OF PHOTOVOLTAICS"
     }
   ]
