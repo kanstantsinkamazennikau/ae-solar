@@ -1,6 +1,6 @@
 {
-  "commit": "e0278b1e1f84d48a055879755ae0403a00707d05",
-  "generated": "2024-02-06T14:58:54.160Z",
+  "commit": "c4e86d3ca20cabefbf1a76763e7fac445aad899e",
+  "generated": "2024-02-06T14:59:25.417Z",
   "metadata": [
     {
       "__outstatic": {
@@ -307,6 +307,24 @@
       "slug": "ten-myths-about-solar-energy",
       "status": "draft",
       "title": "TEN MYTHS ABOUT SOLAR ENERGY"
+    },
+    {
+      "__outstatic": {
+        "commit": "c4e86d3ca20cabefbf1a76763e7fac445aad899e",
+        "hash": "608893114",
+        "path": "outstatic/content/blog/economic-benefits-and-efficiency-of-solar-panels.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:05:07.948Z",
+      "slug": "economic-benefits-and-efficiency-of-solar-panels",
+      "status": "draft",
+      "title": "ECONOMIC BENEFITS AND EFFICIENCY OF SOLAR PANELS"
     }
   ]
 }
