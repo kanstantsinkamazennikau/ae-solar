@@ -39,7 +39,7 @@ export default function ProductIntro() {
     perMove: 1,
     pagination: false,
     arrows: false,
-    drag: true,
+    drag: false,
     dragAngleThreshold: 0,
   };
 
@@ -50,7 +50,9 @@ export default function ProductIntro() {
   const handleScroll = useCallback(() => {
     const { scrollTop } = document.documentElement;
     if (!ref.current) return;
-    scrollTop > ref.current.offsetTop - 95 ? setSticky(true) : setSticky(false);
+    scrollTop > window.scrollY + ref.current.getBoundingClientRect().top - 95
+      ? setSticky(true)
+      : setSticky(false);
   }, [setSticky]);
 
   useEffect(() => {
