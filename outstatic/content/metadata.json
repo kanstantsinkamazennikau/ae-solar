@@ -1,6 +1,6 @@
 {
-  "commit": "eb91e6d891ad1e47960f8f0c80013b57c3bc84a4",
-  "generated": "2024-02-06T15:01:38.732Z",
+  "commit": "a3606d6ca4e5ab91e2c9206151426bfc72861533",
+  "generated": "2024-02-06T15:01:44.782Z",
   "metadata": [
     {
       "__outstatic": {
@@ -202,24 +202,6 @@
     },
     {
       "__outstatic": {
-        "commit": "e0278b1e1f84d48a055879755ae0403a00707d05",
-        "hash": "2551536036",
-        "path": "outstatic/content/blog/ten-myths-about-solar-energy.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:04:31.200Z",
-      "slug": "ten-myths-about-solar-energy",
-      "status": "draft",
-      "title": "TEN MYTHS ABOUT SOLAR ENERGY"
-    },
-    {
-      "__outstatic": {
         "commit": "c4e86d3ca20cabefbf1a76763e7fac445aad899e",
         "hash": "608893114",
         "path": "outstatic/content/blog/economic-benefits-and-efficiency-of-solar-panels.md"
@@ -361,6 +343,24 @@
       "slug": "solar-vs-other-sources-of-energy",
       "status": "published",
       "title": "SOLAR VS OTHER SOURCES OF ENERGY"
+    },
+    {
+      "__outstatic": {
+        "commit": "a3606d6ca4e5ab91e2c9206151426bfc72861533",
+        "hash": "3680300961",
+        "path": "outstatic/content/blog/ten-myths-about-solar-energy.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:04:31.200Z",
+      "slug": "ten-myths-about-solar-energy",
+      "status": "published",
+      "title": "TEN MYTHS ABOUT SOLAR ENERGY"
     }
   ]
 }
