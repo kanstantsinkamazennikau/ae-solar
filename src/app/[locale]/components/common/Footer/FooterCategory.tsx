@@ -36,7 +36,7 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
             hover:text-base-red
             active::text-base-red
           "
-          key={link}
+          key={title}
         >
           {title}
         </Link>

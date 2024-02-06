@@ -67,18 +67,18 @@ export default function Footer() {
   return (
     <div className="flex flex-col justify-center items-center relative">
       <BasicWidthContainer>
-        <footer className="text-sm pt-20 ">
+        <footer className="text-sm pt-20 bg-black bg-clip-content overflow-hidden">
           <Image
             src={`/images/glowFull.png`}
             alt="glow"
             priority
             width={1320}
             height={60}
-            className="rotate-180"
+            className="rotate-180 relative z-10"
           />
           <nav className="grid md:grid-cols-[auto_auto] min-[500px]:items-start gap-2 grid-cols-1 justify-between">
             {/* BACKGROUND */}
-            <div className="flex justify-between w-full absolute top-0 left-0 mt-20 h-[calc(100%-80px)] items-center">
+            <div className="flex justify-between w-full absolute top-0 left-0 mt-20 h-[calc(100%-80px)] items-center z-0">
               <Image
                 src={`/images/footer/productLeft.png`}
                 alt="productLeft"
@@ -86,7 +86,7 @@ export default function Footer() {
                 width={870}
                 height={547}
                 quality={100}
-                className="-z-10 md:max-w-[45%] md:h-full max-w-[40%] h-1/2"
+                className="md:max-w-[45%] md:h-full max-w-[40%] h-1/2"
               />
               <Image
                 src={`/images/footer/productRight.png`}
@@ -95,7 +95,7 @@ export default function Footer() {
                 width={800}
                 height={547}
                 quality={100}
-                className="-z-10 md:max-w-[45%] md:h-full max-w-[40%] h-1/2"
+                className="md:max-w-[45%] md:h-full max-w-[40%] h-1/2"
               />
             </div>
 
@@ -143,6 +143,8 @@ export default function Footer() {
                   min-[500px]:items-end
                   min-[500px]:col-start-1
                   min-[500px]:col-end-5
+                  z-10
+                  static
                 "
               >
                 <span className="leading-[120%] text-white [font-size:_clamp(12px,1vw,16px)] max-w-[140px]">
@@ -170,13 +172,15 @@ export default function Footer() {
             </div>
           </nav>
           {/* POLICY */}
-          <hr className="bg-dark-gray-800 h-[1px] border-none mb-3" />
-          <div className="flex justify-between text-dark-gray-800 mb-5 text-[10px] min-[550px]:flex-row flex-col">
-            <div>{FOOTER_COPYRIGHT}</div>
-            <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row flex-col">
-              {POLICY_LINKS.map((link) => (
-                <PolicyLink key={link} link={link} />
-              ))}
+          <div className="relative z-10">
+            <hr className="bg-dark-gray-800 h-[1px] border-none mb-3" />
+            <div className="flex justify-between text-dark-gray-800 mb-5 text-[10px] min-[550px]:flex-row flex-col">
+              <div>{FOOTER_COPYRIGHT}</div>
+              <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row flex-col">
+                {POLICY_LINKS.map((link) => (
+                  <PolicyLink key={link} link={link} />
+                ))}
+              </div>
             </div>
           </div>
         </footer>
