@@ -1,6 +1,6 @@
 {
-  "commit": "15377c1343847497ff4aa3315e2365678d76dfa1",
-  "generated": "2024-02-06T15:13:24.168Z",
+  "commit": "3c21b5fe1daab4f94b64483365569e81c92a1d43",
+  "generated": "2024-02-06T15:13:27.747Z",
   "metadata": [
     {
       "__outstatic": {
@@ -400,8 +400,8 @@
     },
     {
       "__outstatic": {
-        "commit": "15377c1343847497ff4aa3315e2365678d76dfa1",
-        "hash": "1369934021",
+        "commit": "3c21b5fe1daab4f94b64483365569e81c92a1d43",
+        "hash": "1518426319",
         "path": "outstatic/content/blog/floating-pv-systems.md"
       },
       "author": {
@@ -413,7 +413,7 @@
       "description": "",
       "publishedAt": "2024-02-06T15:19:04.832Z",
       "slug": "floating-pv-systems",
-      "status": "draft",
+      "status": "published",
       "title": "FLOATING PV SYSTEMS"
     }
   ]
