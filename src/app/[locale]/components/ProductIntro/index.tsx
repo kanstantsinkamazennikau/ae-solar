@@ -39,7 +39,7 @@ export default function ProductIntro() {
     perMove: 1,
     pagination: false,
     arrows: false,
-    drag: false,
+    drag: true,
     dragAngleThreshold: 0,
   };
 

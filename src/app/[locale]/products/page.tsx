@@ -31,7 +31,6 @@ export default function ProductsPage() {
                   >
                     <div
                       className={`
-                        
                         p-4
                         rounded-full
                         outline
