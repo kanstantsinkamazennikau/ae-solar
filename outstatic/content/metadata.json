@@ -1,6 +1,6 @@
 {
-  "commit": "c026f2f7f2f6caf1a74411a2dfe52ea94fcf33c7",
-  "generated": "2024-02-06T13:34:57.050Z",
+  "commit": "1b0af0de96716b3754990d82fce0351a6b51a23b",
+  "generated": "2024-02-06T13:41:09.075Z",
   "metadata": [
     {
       "__outstatic": {
@@ -109,6 +109,24 @@
       "slug": "test-2",
       "status": "published",
       "title": "HOW DOES A SOLAR MODULE WORK?"
+    },
+    {
+      "__outstatic": {
+        "commit": "1b0af0de96716b3754990d82fce0351a6b51a23b",
+        "hash": "678015356",
+        "path": "outstatic/content/img/test.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "img",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T13:46:32.367Z",
+      "slug": "test",
+      "status": "draft",
+      "title": "test"
     }
   ]
 }
