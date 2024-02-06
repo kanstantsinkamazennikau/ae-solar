@@ -1,6 +1,6 @@
 {
-  "commit": "2379b081f0a59f332f92fd0c1e5c117cf729287d",
-  "generated": "2024-02-06T15:13:57.828Z",
+  "commit": "0fa345c82dd993d68db08a4969538eeb9dc5c2f6",
+  "generated": "2024-02-06T15:14:28.039Z",
   "metadata": [
     {
       "__outstatic": {
@@ -433,6 +433,24 @@
       "slug": "brazil-solar-energy-market",
       "status": "published",
       "title": "BRAZIL SOLAR ENERGY MARKET"
+    },
+    {
+      "__outstatic": {
+        "commit": "0fa345c82dd993d68db08a4969538eeb9dc5c2f6",
+        "hash": "3969032277",
+        "path": "outstatic/content/blog/latin-america-solar-energy-market.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:20:16.331Z",
+      "slug": "latin-america-solar-energy-market",
+      "status": "draft",
+      "title": "LATIN AMERICA SOLAR ENERGY MARKET"
     }
   ]
 }
