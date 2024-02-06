@@ -1,6 +1,6 @@
 {
-  "commit": "79a018e488fcbf4c63e1cb6b44003db85143d27e",
-  "generated": "2024-02-06T15:15:07.791Z",
+  "commit": "bf84851227506ca814998198f322e87d8b6ae4b8",
+  "generated": "2024-02-06T15:15:48.322Z",
   "metadata": [
     {
       "__outstatic": {
@@ -469,6 +469,24 @@
       "slug": "central-europe-solar-market",
       "status": "published",
       "title": "CENTRAL EUROPE SOLAR MARKET"
+    },
+    {
+      "__outstatic": {
+        "commit": "bf84851227506ca814998198f322e87d8b6ae4b8",
+        "hash": "3364938051",
+        "path": "outstatic/content/blog/heterojunction-solar-panels.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:21:32.904Z",
+      "slug": "heterojunction-solar-panels",
+      "status": "draft",
+      "title": "HETEROJUNCTION SOLAR PANELS"
     }
   ]
 }
