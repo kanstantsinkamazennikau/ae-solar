@@ -1,6 +1,6 @@
 {
-  "commit": "7ed0aa57e6c85c6767583a11fc548e05b4ae50b8",
-  "generated": "2024-02-06T15:15:51.430Z",
+  "commit": "3afb5c0e244da8251b82f65b7c7331fb8917ac76",
+  "generated": "2024-02-06T15:16:34.007Z",
   "metadata": [
     {
       "__outstatic": {
@@ -487,6 +487,24 @@
       "slug": "heterojunction-solar-panels",
       "status": "published",
       "title": "HETEROJUNCTION SOLAR PANELS"
+    },
+    {
+      "__outstatic": {
+        "commit": "3afb5c0e244da8251b82f65b7c7331fb8917ac76",
+        "hash": "1422902800",
+        "path": "outstatic/content/blog/middle-east-solar-market.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:22:13.762Z",
+      "slug": "middle-east-solar-market",
+      "status": "draft",
+      "title": "MIDDLE EAST SOLAR MARKET"
     }
   ]
 }
