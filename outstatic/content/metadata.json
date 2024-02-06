@@ -1,6 +1,6 @@
 {
-  "commit": "6df11e0f60d08ba8d648c9a69fa01394cdde4bae",
-  "generated": "2024-02-06T14:57:11.206Z",
+  "commit": "3c70cae2039053129f93425156d37aa12af3158f",
+  "generated": "2024-02-06T14:57:41.522Z",
   "metadata": [
     {
       "__outstatic": {
@@ -253,6 +253,24 @@
       "slug": "solar-panel-savings-what-to-expect",
       "status": "draft",
       "title": "SOLAR PANEL SAVINGS: WHAT TO EXPECT"
+    },
+    {
+      "__outstatic": {
+        "commit": "3c70cae2039053129f93425156d37aa12af3158f",
+        "hash": "686547439",
+        "path": "outstatic/content/blog/solar-advancements-in-2020-2021.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:03:28.198Z",
+      "slug": "solar-advancements-in-2020-2021",
+      "status": "draft",
+      "title": "SOLAR ADVANCEMENTS IN 2020-2021"
     }
   ]
 }
