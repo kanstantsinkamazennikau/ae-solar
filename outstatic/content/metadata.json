@@ -1,6 +1,6 @@
 {
-  "commit": "7737448e7f3ce4a337908903f0f9d458ede81de1",
-  "generated": "2024-02-05T13:54:01.197Z",
+  "commit": "c026f2f7f2f6caf1a74411a2dfe52ea94fcf33c7",
+  "generated": "2024-02-06T13:34:57.050Z",
   "metadata": [
     {
       "__outstatic": {
@@ -19,24 +19,6 @@
       "slug": "test-1",
       "status": "published",
       "title": "test 1 "
-    },
-    {
-      "__outstatic": {
-        "commit": "8f328225a60404b65a57144c6a8ba0038ac15370",
-        "hash": "1049047911",
-        "path": "outstatic/content/blog/test-2.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-01-31T20:12:52.467Z",
-      "slug": "test-2",
-      "status": "published",
-      "title": "test 2"
     },
     {
       "__outstatic": {
@@ -109,6 +91,24 @@
       "slug": "test1",
       "status": "published",
       "title": "A SOLAR SYSTEM"
+    },
+    {
+      "__outstatic": {
+        "commit": "c026f2f7f2f6caf1a74411a2dfe52ea94fcf33c7",
+        "hash": "4185357693",
+        "path": "outstatic/content/blog/test-2.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-01-31T20:12:52.467Z",
+      "slug": "test-2",
+      "status": "published",
+      "title": "HOW DOES A SOLAR MODULE WORK?"
     }
   ]
 }
