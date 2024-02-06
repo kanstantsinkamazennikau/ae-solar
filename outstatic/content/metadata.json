@@ -1,6 +1,6 @@
 {
-  "commit": "0fa345c82dd993d68db08a4969538eeb9dc5c2f6",
-  "generated": "2024-02-06T15:14:28.039Z",
+  "commit": "cf9296a2a4f641d9e7ed92b896c53b85644eebcd",
+  "generated": "2024-02-06T15:14:39.224Z",
   "metadata": [
     {
       "__outstatic": {
@@ -436,8 +436,8 @@
     },
     {
       "__outstatic": {
-        "commit": "0fa345c82dd993d68db08a4969538eeb9dc5c2f6",
-        "hash": "3969032277",
+        "commit": "cf9296a2a4f641d9e7ed92b896c53b85644eebcd",
+        "hash": "2947418299",
         "path": "outstatic/content/blog/latin-america-solar-energy-market.md"
       },
       "author": {
