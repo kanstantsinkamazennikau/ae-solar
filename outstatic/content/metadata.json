@@ -1,6 +1,6 @@
 {
-  "commit": "c2ae29492db98a85f0857d9ad1ee8342a34522e3",
-  "generated": "2024-02-06T14:54:28.567Z",
+  "commit": "36dad1b706983bd8d31f6b788751a8f5c7518f57",
+  "generated": "2024-02-06T14:55:04.705Z",
   "metadata": [
     {
       "__outstatic": {
@@ -199,6 +199,24 @@
       "slug": "net-metering",
       "status": "published",
       "title": "NET METERING"
+    },
+    {
+      "__outstatic": {
+        "commit": "36dad1b706983bd8d31f6b788751a8f5c7518f57",
+        "hash": "1434576141",
+        "path": "outstatic/content/blog/solar-inverters.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:00:44.429Z",
+      "slug": "solar-inverters",
+      "status": "draft",
+      "title": "SOLAR INVERTERS"
     }
   ]
 }
