@@ -1,6 +1,6 @@
 {
-  "commit": "cf9296a2a4f641d9e7ed92b896c53b85644eebcd",
-  "generated": "2024-02-06T15:14:42.302Z",
+  "commit": "95c5b8409ba89bd79def5389145e516f247f69cb",
+  "generated": "2024-02-06T15:15:04.487Z",
   "metadata": [
     {
       "__outstatic": {
@@ -451,6 +451,24 @@
       "slug": "latin-america-solar-energy-market",
       "status": "published",
       "title": "LATIN AMERICA SOLAR ENERGY MARKET"
+    },
+    {
+      "__outstatic": {
+        "commit": "95c5b8409ba89bd79def5389145e516f247f69cb",
+        "hash": "1596170964",
+        "path": "outstatic/content/blog/central-europe-solar-market.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:20:47.147Z",
+      "slug": "central-europe-solar-market",
+      "status": "draft",
+      "title": "CENTRAL EUROPE SOLAR MARKET"
     }
   ]
 }
