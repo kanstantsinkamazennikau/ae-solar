@@ -1,6 +1,6 @@
 {
-  "commit": "f5e8801eff01e7180530c7561c920df52f77f822",
-  "generated": "2024-02-06T14:39:10.523Z",
+  "commit": "51abb2664cfeb355591abe02dc741b818c0a59e8",
+  "generated": "2024-02-06T14:45:37.075Z",
   "metadata": [
     {
       "__outstatic": {
@@ -130,24 +130,6 @@
     },
     {
       "__outstatic": {
-        "commit": "e4cdfd904e538f73b587323054c59c07bbd60523",
-        "hash": "3170412660",
-        "path": "outstatic/content/blog/srgfas.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T14:44:21.434Z",
-      "slug": "srgfas",
-      "status": "published",
-      "title": "srgfas"
-    },
-    {
-      "__outstatic": {
         "commit": "f5e8801eff01e7180530c7561c920df52f77f822",
         "hash": "387258981",
         "path": "outstatic/content/blog/test1.md"
@@ -163,6 +145,24 @@
       "slug": "test1",
       "status": "published",
       "title": "AE SOLAR SYSTEM"
+    },
+    {
+      "__outstatic": {
+        "commit": "51abb2664cfeb355591abe02dc741b818c0a59e8",
+        "hash": "1834182931",
+        "path": "outstatic/content/blog/srgfas.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T14:44:21.434Z",
+      "slug": "srgfas",
+      "status": "published",
+      "title": "PEAK SHAVING – OFF GRID SYSTEM"
     }
   ]
 }
