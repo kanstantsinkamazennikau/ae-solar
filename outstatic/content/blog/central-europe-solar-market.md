@@ -1,6 +1,6 @@
 ---
 title: 'CENTRAL EUROPE SOLAR MARKET'
-status: 'draft'
+status: 'published'
 author:
   name: 'Yan Prysovetskyi'
   picture: 'https://avatars.githubusercontent.com/u/114078546?v=4'
@@ -15,8 +15,6 @@ The solar market in recent years has been surpassing expectations in terms of ra
 ![](https://ae-solar.com/wp-content/uploads/2021/11/Image-01-4-1024x683.png)
 
 Figure 1: Annual solar PV installed capacity in 2000-2020. Source: solar power euro 2020.
-
- 
 
 In central European region, Germany was the largest market in 2020, adding 4.8GW new capacity which means that the country saw its installed PV power increase by around 1 GW more than in 2019, when annual PV additions hit 3.94 GW. In 2018 and 2017, new capacity totalled 2.96 GW and 1.75 GW, respectively. The reason for this new boo is because of the increase climate awareness, significantly lower solar technology prices, improved subsidy conditions and a   demand for more independent striving condition.  Poland had reached 3.9 GW of cumulative solar capacity by the end of 2020, 1.3 GW at the end of 2019, and just 486 MW at the end of 2018. The exponential growth recorded last year was mainly due to the growing number of grid-connected solar parks. By the end of 2025, it is predicted that Poland will add up to around 2 GW per year with a total cumulative capacity of 14.93 GW.
 

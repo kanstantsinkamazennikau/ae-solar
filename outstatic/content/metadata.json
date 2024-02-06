@@ -1,6 +1,6 @@
 {
-  "commit": "95c5b8409ba89bd79def5389145e516f247f69cb",
-  "generated": "2024-02-06T15:15:04.487Z",
+  "commit": "79a018e488fcbf4c63e1cb6b44003db85143d27e",
+  "generated": "2024-02-06T15:15:07.791Z",
   "metadata": [
     {
       "__outstatic": {
@@ -454,8 +454,8 @@
     },
     {
       "__outstatic": {
-        "commit": "95c5b8409ba89bd79def5389145e516f247f69cb",
-        "hash": "1596170964",
+        "commit": "79a018e488fcbf4c63e1cb6b44003db85143d27e",
+        "hash": "3891061503",
         "path": "outstatic/content/blog/central-europe-solar-market.md"
       },
       "author": {
@@ -467,7 +467,7 @@
       "description": "",
       "publishedAt": "2024-02-06T15:20:47.147Z",
       "slug": "central-europe-solar-market",
-      "status": "draft",
+      "status": "published",
       "title": "CENTRAL EUROPE SOLAR MARKET"
     }
   ]
