@@ -1,6 +1,6 @@
 {
-  "commit": "bf84851227506ca814998198f322e87d8b6ae4b8",
-  "generated": "2024-02-06T15:15:48.322Z",
+  "commit": "7ed0aa57e6c85c6767583a11fc548e05b4ae50b8",
+  "generated": "2024-02-06T15:15:51.430Z",
   "metadata": [
     {
       "__outstatic": {
@@ -472,8 +472,8 @@
     },
     {
       "__outstatic": {
-        "commit": "bf84851227506ca814998198f322e87d8b6ae4b8",
-        "hash": "3364938051",
+        "commit": "7ed0aa57e6c85c6767583a11fc548e05b4ae50b8",
+        "hash": "582117173",
         "path": "outstatic/content/blog/heterojunction-solar-panels.md"
       },
       "author": {
@@ -485,7 +485,7 @@
       "description": "",
       "publishedAt": "2024-02-06T15:21:32.904Z",
       "slug": "heterojunction-solar-panels",
-      "status": "draft",
+      "status": "published",
       "title": "HETEROJUNCTION SOLAR PANELS"
     }
   ]
