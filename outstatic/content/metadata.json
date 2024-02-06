@@ -1,6 +1,6 @@
 {
-  "commit": "77c56f0e553b2edaafeb89f7cbf00481693ca96a",
-  "generated": "2024-02-06T15:00:20.701Z",
+  "commit": "3abc9b767bfd75dd0941189d2cb1211e4ac930aa",
+  "generated": "2024-02-06T15:01:11.250Z",
   "metadata": [
     {
       "__outstatic": {
@@ -202,24 +202,6 @@
     },
     {
       "__outstatic": {
-        "commit": "36dad1b706983bd8d31f6b788751a8f5c7518f57",
-        "hash": "1434576141",
-        "path": "outstatic/content/blog/solar-inverters.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:00:44.429Z",
-      "slug": "solar-inverters",
-      "status": "draft",
-      "title": "SOLAR INVERTERS"
-    },
-    {
-      "__outstatic": {
         "commit": "e848a7c6e6040a0b7190481c3f7fd9a1ae810656",
         "hash": "2697469153",
         "path": "outstatic/content/blog/off-grid-solar-system.md"
@@ -361,6 +343,24 @@
       "slug": "pathway-to-zero-carbon-emissions",
       "status": "draft",
       "title": "PATHWAY TO ZERO CARBON EMISSIONS"
+    },
+    {
+      "__outstatic": {
+        "commit": "3abc9b767bfd75dd0941189d2cb1211e4ac930aa",
+        "hash": "836673308",
+        "path": "outstatic/content/blog/solar-inverters.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:00:44.429Z",
+      "slug": "solar-inverters",
+      "status": "published",
+      "title": "SOLAR INVERTERS"
     }
   ]
 }
