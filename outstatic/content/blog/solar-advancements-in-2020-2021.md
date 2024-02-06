@@ -1,6 +1,6 @@
 ---
 title: 'SOLAR ADVANCEMENTS IN 2020-2021'
-status: 'draft'
+status: 'published'
 author:
   name: 'Yan Prysovetskyi'
   picture: 'https://avatars.githubusercontent.com/u/114078546?v=4'
