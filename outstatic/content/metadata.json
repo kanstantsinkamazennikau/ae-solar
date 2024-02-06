@@ -1,6 +1,6 @@
 {
-  "commit": "51abb2664cfeb355591abe02dc741b818c0a59e8",
-  "generated": "2024-02-06T14:45:37.075Z",
+  "commit": "ac3a162e73f75708abf734866e47b8b3cc325f9a",
+  "generated": "2024-02-06T14:53:23.263Z",
   "metadata": [
     {
       "__outstatic": {
@@ -163,6 +163,24 @@
       "slug": "srgfas",
       "status": "published",
       "title": "PEAK SHAVING – OFF GRID SYSTEM"
+    },
+    {
+      "__outstatic": {
+        "commit": "ac3a162e73f75708abf734866e47b8b3cc325f9a",
+        "hash": "1982477899",
+        "path": "outstatic/content/blog/solar-panel-technical-datasheet.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T14:58:37.186Z",
+      "slug": "solar-panel-technical-datasheet",
+      "status": "published",
+      "title": "SOLAR PANEL TECHNICAL DATASHEET"
     }
   ]
 }
