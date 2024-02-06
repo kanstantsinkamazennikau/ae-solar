@@ -1,6 +1,5 @@
 "use client";
 
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import LightingTheWay from "@/app/[locale]/products/components/LightingTheWay";
 import { PRODUCT_SELECTOR_IMAGES } from "@/app/[locale]/products/constants";
@@ -10,6 +9,7 @@ import {
 } from "@/app/[locale]/utils/constants";
 //@ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -96,19 +96,16 @@ export default function ProductsPage() {
               aria-label="solar panels"
               options={options}
               className="
-                  h-[480px]
-                  !absolute
-                  bottom-[100px]
-                  left-1/2
-                  -translate-x-1/2
-                "
+                h-[480px]
+                !absolute
+                bottom-[100px]
+                left-1/2
+                -translate-x-1/2
+              "
               ref={sliderRef}
             >
               {PRODUCT_INTRO_PANELS_IMAGES.map((image) => (
-                <SplideSlide
-                  key={image}
-                  className="flex justify-center w-full h-full"
-                >
+                <SplideSlide key={image} className="flex justify-center">
                   <Image
                     src={`/images/productIntro/${image}.png`}
                     alt="Aurora"
