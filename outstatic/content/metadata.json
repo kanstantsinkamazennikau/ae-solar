@@ -1,25 +1,7 @@
 {
-  "commit": "8a9a255ea8cffc98381c823a8f7c70524750af30",
-  "generated": "2024-02-06T13:47:22.808Z",
+  "commit": "a7255632fe1d8441801ad60dcc4612a8aa35db59",
+  "generated": "2024-02-06T14:22:42.396Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "3e995c17a28b66c75b236561bc13e472739ce421",
-        "hash": "439814404",
-        "path": "outstatic/content/blog/test-1.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-01-31T16:50:20.810Z",
-      "slug": "test-1",
-      "status": "published",
-      "title": "test 1 "
-    },
     {
       "__outstatic": {
         "commit": "29d077f985f6ce50c3242ee995cc5f3008534dd0",
@@ -127,6 +109,24 @@
       "slug": "test-2",
       "status": "published",
       "title": "HOW DOES A SOLAR MODULE WORK?"
+    },
+    {
+      "__outstatic": {
+        "commit": "a7255632fe1d8441801ad60dcc4612a8aa35db59",
+        "hash": "421418532",
+        "path": "outstatic/content/blog/test-1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/102024592?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-01-31T16:50:20.810Z",
+      "slug": "test-1",
+      "status": "published",
+      "title": "PHOTOVOLTAIC MODULES OPERATION IN DIFFERENT WEATHER CONDITIONS"
     }
   ]
 }
