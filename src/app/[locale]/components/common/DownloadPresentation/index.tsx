@@ -51,7 +51,7 @@ export default function DownloadPresentation({
           pl-4
           pt-4
           !bg-cover
-          [background:url('/images/documents/presentationBackground.png')_padding-box_no-repeat,linear-gradient(180deg,_rgba(227,_34,_34,_82%)_0%,_#131313_100%)_border-box]
+          [background:url('/images/downloadPresentationBg.png')_padding-box_no-repeat,linear-gradient(180deg,_rgba(227,_34,_34,_82%)_0%,_#131313_100%)_border-box]
         "
         >
           <Image
