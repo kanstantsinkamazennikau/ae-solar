@@ -1,6 +1,6 @@
 {
-  "commit": "feb12aaeb7ae7cbb3dc2140248ee4cd6c1fcddde",
-  "generated": "2024-02-06T14:59:48.244Z",
+  "commit": "77c56f0e553b2edaafeb89f7cbf00481693ca96a",
+  "generated": "2024-02-06T15:00:20.701Z",
   "metadata": [
     {
       "__outstatic": {
@@ -343,6 +343,24 @@
       "slug": "how-solar-energy-can-help-stop-climate-change",
       "status": "draft",
       "title": "HOW SOLAR ENERGY CAN HELP STOP CLIMATE CHANGE?"
+    },
+    {
+      "__outstatic": {
+        "commit": "77c56f0e553b2edaafeb89f7cbf00481693ca96a",
+        "hash": "3674013393",
+        "path": "outstatic/content/blog/pathway-to-zero-carbon-emissions.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:06:08.487Z",
+      "slug": "pathway-to-zero-carbon-emissions",
+      "status": "draft",
+      "title": "PATHWAY TO ZERO CARBON EMISSIONS"
     }
   ]
 }
