@@ -1,6 +1,6 @@
 {
-  "commit": "7bc5d922c4a640a4fe121c4913b6581f14d06fa5",
-  "generated": "2024-02-06T14:58:18.240Z",
+  "commit": "e0278b1e1f84d48a055879755ae0403a00707d05",
+  "generated": "2024-02-06T14:58:54.160Z",
   "metadata": [
     {
       "__outstatic": {
@@ -289,6 +289,24 @@
       "slug": "solar-vs-other-sources-of-energy",
       "status": "draft",
       "title": "SOLAR VS OTHER SOURCES OF ENERGY"
+    },
+    {
+      "__outstatic": {
+        "commit": "e0278b1e1f84d48a055879755ae0403a00707d05",
+        "hash": "2551536036",
+        "path": "outstatic/content/blog/ten-myths-about-solar-energy.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:04:31.200Z",
+      "slug": "ten-myths-about-solar-energy",
+      "status": "draft",
+      "title": "TEN MYTHS ABOUT SOLAR ENERGY"
     }
   ]
 }
