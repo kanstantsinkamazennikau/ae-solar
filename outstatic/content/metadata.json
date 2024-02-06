@@ -1,6 +1,6 @@
 {
-  "commit": "36dad1b706983bd8d31f6b788751a8f5c7518f57",
-  "generated": "2024-02-06T14:55:04.705Z",
+  "commit": "e848a7c6e6040a0b7190481c3f7fd9a1ae810656",
+  "generated": "2024-02-06T14:56:30.933Z",
   "metadata": [
     {
       "__outstatic": {
@@ -217,6 +217,24 @@
       "slug": "solar-inverters",
       "status": "draft",
       "title": "SOLAR INVERTERS"
+    },
+    {
+      "__outstatic": {
+        "commit": "e848a7c6e6040a0b7190481c3f7fd9a1ae810656",
+        "hash": "2697469153",
+        "path": "outstatic/content/blog/off-grid-solar-system.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:02:15.645Z",
+      "slug": "off-grid-solar-system",
+      "status": "draft",
+      "title": "OFF-GRID SOLAR SYSTEM"
     }
   ]
 }
