@@ -1,6 +1,6 @@
 {
-  "commit": "a7255632fe1d8441801ad60dcc4612a8aa35db59",
-  "generated": "2024-02-06T14:22:42.396Z",
+  "commit": "c9d438aa543bfeeed8064de6db02ba8edf0b6a44",
+  "generated": "2024-02-06T14:34:04.092Z",
   "metadata": [
     {
       "__outstatic": {
@@ -127,6 +127,24 @@
       "slug": "test-1",
       "status": "published",
       "title": "PHOTOVOLTAIC MODULES OPERATION IN DIFFERENT WEATHER CONDITIONS"
+    },
+    {
+      "__outstatic": {
+        "commit": "c9d438aa543bfeeed8064de6db02ba8edf0b6a44",
+        "hash": "4258236003",
+        "path": "outstatic/content/blog/solar-panel-maintenance-checklist.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T14:35:51.398Z",
+      "slug": "solar-panel-maintenance-checklist",
+      "status": "draft",
+      "title": "SOLAR PANEL MAINTENANCE CHECKLIST"
     }
   ]
 }
