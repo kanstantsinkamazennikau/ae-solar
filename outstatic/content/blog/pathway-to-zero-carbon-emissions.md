@@ -1,6 +1,6 @@
 ---
 title: 'PATHWAY TO ZERO CARBON EMISSIONS'
-status: 'draft'
+status: 'published'
 author:
   name: 'Yan Prysovetskyi'
   picture: 'https://avatars.githubusercontent.com/u/114078546?v=4'
