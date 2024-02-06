@@ -1,6 +1,6 @@
 {
-  "commit": "42095960a076cc27fc105083fa81c35116851e2a",
-  "generated": "2024-02-06T14:34:18.226Z",
+  "commit": "e4cdfd904e538f73b587323054c59c07bbd60523",
+  "generated": "2024-02-06T14:38:27.236Z",
   "metadata": [
     {
       "__outstatic": {
@@ -145,6 +145,24 @@
       "slug": "solar-panel-maintenance-checklist",
       "status": "published",
       "title": "SOLAR PANEL MAINTENANCE CHECKLIST"
+    },
+    {
+      "__outstatic": {
+        "commit": "e4cdfd904e538f73b587323054c59c07bbd60523",
+        "hash": "3170412660",
+        "path": "outstatic/content/blog/srgfas.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T14:44:21.434Z",
+      "slug": "srgfas",
+      "status": "published",
+      "title": "srgfas"
     }
   ]
 }
