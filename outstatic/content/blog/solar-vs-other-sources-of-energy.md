@@ -1,6 +1,6 @@
 ---
 title: 'SOLAR VS OTHER SOURCES OF ENERGY'
-status: 'draft'
+status: 'published'
 author:
   name: 'Yan Prysovetskyi'
   picture: 'https://avatars.githubusercontent.com/u/114078546?v=4'
