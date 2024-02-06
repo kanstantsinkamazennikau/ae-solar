@@ -1,6 +1,6 @@
 ---
 title: 'HOW SOLAR ENERGY CAN HELP STOP CLIMATE CHANGE?'
-status: 'draft'
+status: 'published'
 author:
   name: 'Yan Prysovetskyi'
   picture: 'https://avatars.githubusercontent.com/u/114078546?v=4'
@@ -25,8 +25,6 @@ The authors conclude that it is “unequivocal” that humans have warmed the pl
 The production of solar energy is one way to mitigate global warming and reduce our dependence on fossil fuels. The benefits of using solar energy have been campaigned repeatedly for a long time, and with a purpose. Utilizing it to generate power can greatly reduce the emissions of CO2 by decreasing the demand for fossil fuels. Several studies have been done to see how Solar energy can be used to mitigate the effects of climate change and achieve carbon net neutrality in the energy sector.
 
 ## **LIFE CYCLE ASSESSMENT**
-
- 
 
 Life cycle assessment of energy systems can help in assessing the amount of CO2 upstream to the downstream process i.e., from its extraction stage till the plants decommission / disposal stage. Of different technologies. According to the National Renewable Energy Laboratory (NREL), Solar produces less life-cycle GHG emissions than conventional fossil fuel energy sources.
 
