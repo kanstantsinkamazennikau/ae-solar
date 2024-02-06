@@ -1,6 +1,6 @@
 {
-  "commit": "ac3a162e73f75708abf734866e47b8b3cc325f9a",
-  "generated": "2024-02-06T14:53:23.263Z",
+  "commit": "42db5425ecee3261802690e3924720086c3d96bd",
+  "generated": "2024-02-06T14:54:04.285Z",
   "metadata": [
     {
       "__outstatic": {
@@ -181,6 +181,24 @@
       "slug": "solar-panel-technical-datasheet",
       "status": "published",
       "title": "SOLAR PANEL TECHNICAL DATASHEET"
+    },
+    {
+      "__outstatic": {
+        "commit": "42db5425ecee3261802690e3924720086c3d96bd",
+        "hash": "3544581678",
+        "path": "outstatic/content/blog/net-metering.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T14:59:42.300Z",
+      "slug": "net-metering",
+      "status": "draft",
+      "title": "NET METERING"
     }
   ]
 }
