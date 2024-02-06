@@ -1,6 +1,6 @@
 {
-  "commit": "1a3d2daf13ea9c5c90ee6ae9c9a9a342f387a70a",
-  "generated": "2024-02-06T15:02:02.353Z",
+  "commit": "fc143a17770d6831f8d9c110a0eb0c9481f57377",
+  "generated": "2024-02-06T15:11:19.032Z",
   "metadata": [
     {
       "__outstatic": {
@@ -361,6 +361,24 @@
       "slug": "pathway-to-zero-carbon-emissions",
       "status": "published",
       "title": "PATHWAY TO ZERO CARBON EMISSIONS"
+    },
+    {
+      "__outstatic": {
+        "commit": "fc143a17770d6831f8d9c110a0eb0c9481f57377",
+        "hash": "1827380693",
+        "path": "outstatic/content/blog/history-and-the-development-of-photovoltaics.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-06T15:17:01.963Z",
+      "slug": "history-and-the-development-of-photovoltaics",
+      "status": "draft",
+      "title": "HISTORY AND THE DEVELOPMENT OF PHOTOVOLTAICS"
     }
   ]
 }
