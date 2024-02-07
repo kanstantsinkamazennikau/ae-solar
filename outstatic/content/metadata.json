@@ -1,6 +1,6 @@
 {
-  "commit": "5b8ac68ac332d115311f6d0bdd56e472f56ee2b8",
-  "generated": "2024-02-07T12:53:35.577Z",
+  "commit": "f933486027c45ad92bed192c70c9b0c3eb018e23",
+  "generated": "2024-02-07T12:54:15.097Z",
   "metadata": [
     {
       "__outstatic": {
@@ -703,6 +703,24 @@
       "slug": "fvi",
       "status": "published",
       "title": "INTERVIEW WITH DR. HAMED HANIFI"
+    },
+    {
+      "__outstatic": {
+        "commit": "f933486027c45ad92bed192c70c9b0c3eb018e23",
+        "hash": "3179754558",
+        "path": "outstatic/content/blog/what-is-aurora-pv-module-series-and-why-it-is-unique.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T13:00:01.519Z",
+      "slug": "what-is-aurora-pv-module-series-and-why-it-is-unique",
+      "status": "published",
+      "title": "WHAT IS AURORA PV MODULE SERIES AND WHY IT IS UNIQUE?"
     }
   ]
 }
