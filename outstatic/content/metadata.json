@@ -1,6 +1,6 @@
 {
-  "commit": "75a1cb581d813da16f6d3883b4b1e60443e46c69",
-  "generated": "2024-02-07T14:21:13.197Z",
+  "commit": "b71d7803835f6b823bfcd8a715abecb81e13ea7f",
+  "generated": "2024-02-07T14:26:08.101Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "75a1cb581d813da16f6d3883b4b1e60443e46c69",
-        "hash": "1908048855",
+        "commit": "b71d7803835f6b823bfcd8a715abecb81e13ea7f",
+        "hash": "1683333547",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -843,10 +843,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:26:30.121Z",
+      "publishedAt": "2024-02-07T14:31:55.376Z",
       "slug": "11",
       "status": "published",
-      "title": "HOW MUCH ENERGY DOES A SOLAR PANEL PRODUCE"
+      "title": "11"
     }
   ]
 }
