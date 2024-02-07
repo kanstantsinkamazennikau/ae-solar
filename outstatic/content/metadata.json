@@ -1,6 +1,6 @@
 {
-  "commit": "1b559a0e7f69cb24234d3c3d48f3bec20ec8227c",
-  "generated": "2024-02-07T14:15:15.019Z",
+  "commit": "83f5e3ccfe69d94eb7fa5bd3e4c72f6648f08749",
+  "generated": "2024-02-07T14:16:07.780Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "1b559a0e7f69cb24234d3c3d48f3bec20ec8227c",
-        "hash": "1552228674",
+        "commit": "83f5e3ccfe69d94eb7fa5bd3e4c72f6648f08749",
+        "hash": "538004535",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -846,7 +846,7 @@
       "publishedAt": "2024-02-07T14:21:04.109Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "WIND EFFECT ON SOLAR PANELS"
     }
   ]
 }
