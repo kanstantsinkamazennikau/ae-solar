@@ -1,6 +1,6 @@
 {
-  "commit": "91feee62917e358784e19c91bf9a6130648376f2",
-  "generated": "2024-02-07T13:06:14.337Z",
+  "commit": "067352f3e46d1b69227a62f80dbbc54418fd00b4",
+  "generated": "2024-02-07T13:06:30.983Z",
   "metadata": [
     {
       "__outstatic": {
@@ -760,8 +760,8 @@
     },
     {
       "__outstatic": {
-        "commit": "91feee62917e358784e19c91bf9a6130648376f2",
-        "hash": "1090552394",
+        "commit": "067352f3e46d1b69227a62f80dbbc54418fd00b4",
+        "hash": "2105585015",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -771,10 +771,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T13:11:42.938Z",
+      "publishedAt": "2024-02-07T13:12:26.659Z",
       "slug": "11",
       "status": "published",
-      "title": "HOW TO ADD SOLAR PANELS TO EXISTING SYSTEM"
+      "title": "11"
     }
   ]
 }
