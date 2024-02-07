@@ -1,6 +1,6 @@
 {
-  "commit": "7ed31e64cfb46009a1ce2158edf1349dcb6e9d8d",
-  "generated": "2024-02-07T12:25:46.835Z",
+  "commit": "b8782401deb2982ee0c9a09703f621fd2a12b1a5",
+  "generated": "2024-02-07T12:26:08.681Z",
   "metadata": [
     {
       "__outstatic": {
@@ -508,8 +508,8 @@
     },
     {
       "__outstatic": {
-        "commit": "7ed31e64cfb46009a1ce2158edf1349dcb6e9d8d",
-        "hash": "1505672772",
+        "commit": "b8782401deb2982ee0c9a09703f621fd2a12b1a5",
+        "hash": "3744169112",
         "path": "outstatic/content/blog/apapr.md"
       },
       "author": {
@@ -522,7 +522,7 @@
       "publishedAt": "2024-02-07T12:31:38.947Z",
       "slug": "apapr",
       "status": "published",
-      "title": "апапр"
+      "title": "SOLAR PANEL WIRING – BASICS"
     }
   ]
 }
