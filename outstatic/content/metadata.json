@@ -1,6 +1,6 @@
 {
-  "commit": "3863e38025efe1ebe654f7fb30fb5e24878a35af",
-  "generated": "2024-02-07T12:57:06.968Z",
+  "commit": "697dd379d8c8739b6e3993a648ada77dfa01bb39",
+  "generated": "2024-02-07T12:57:14.431Z",
   "metadata": [
     {
       "__outstatic": {
@@ -757,6 +757,24 @@
       "slug": "fiv",
       "status": "published",
       "title": "AFSHIN BAKHTIARI INTERVIEW"
+    },
+    {
+      "__outstatic": {
+        "commit": "697dd379d8c8739b6e3993a648ada77dfa01bb39",
+        "hash": "568919984",
+        "path": "outstatic/content/blog/11.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T13:03:10.819Z",
+      "slug": "11",
+      "status": "published",
+      "title": "11"
     }
   ]
 }
