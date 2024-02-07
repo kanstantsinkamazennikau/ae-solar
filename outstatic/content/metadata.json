@@ -1,6 +1,6 @@
 {
-  "commit": "beb7b152e681986b5da97c602f84832ecb207c19",
-  "generated": "2024-02-07T14:35:21.215Z",
+  "commit": "362317db36d428b6cf948a51949ed1bc0124ae87",
+  "generated": "2024-02-07T14:35:46.349Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "beb7b152e681986b5da97c602f84832ecb207c19",
-        "hash": "2493791715",
+        "commit": "362317db36d428b6cf948a51949ed1bc0124ae87",
+        "hash": "308035001",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -846,7 +846,7 @@
       "publishedAt": "2024-02-07T14:41:17.823Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "TOPCON TECHNOLOGY "
     }
   ]
 }
