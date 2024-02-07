@@ -57,6 +57,7 @@ export default function PanelsFlower() {
               -bottom-5
               left-1/2
               -translate-x-1/2
+              z-10
             "
           >
             {PRODUCT_SELECTOR_IMAGES.map((product) => (
@@ -94,6 +95,8 @@ export default function PanelsFlower() {
                       min-[560px]:h-[32px]
                       h-5
                       w-5
+                      relative
+                      z-40
                     "
                   />
                 </div>
@@ -207,6 +210,7 @@ export default function PanelsFlower() {
               left-1/2
               -translate-x-1/2
               overflow-hidden
+              z-10
             "
           >
             <div
@@ -255,7 +259,7 @@ export default function PanelsFlower() {
                     ]
                   }
                 </div>
-                <div className="flex z-10">
+                <div className="flex">
                   <LinkWithArrow
                     label={PRODUCT_INTRO_LEARN_MORE}
                     href=""

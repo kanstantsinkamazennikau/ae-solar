@@ -1,5 +1,6 @@
 "use client";
 
+import { GetInTuchProps } from "@/app/[locale]/components/GetInTouch/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import {
@@ -13,7 +14,7 @@ import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function GetInTouch() {
+export default function GetInTouch({ children }: GetInTuchProps) {
   const [clientType, setClientType] =
     useState<keyof typeof matchPartnerTypeWithArticle>("partner");
   const locale = useParams()?.locale;
@@ -52,9 +53,11 @@ export default function GetInTouch() {
         [background-size:1100px]
       "
     >
-      <BasicWidthContainer styles="mx-auto w-full">
+      <BasicWidthContainer
+        styles={`mx-auto w-full ${children ? "max-w-[1440px]" : ""}`}
+      >
         <div
-          className="
+          className={`
             flex
             flex-col
             justify-center
@@ -62,13 +65,15 @@ export default function GetInTouch() {
             xl:gap-[80px]
             lg:gap-[60px]
             md:gap-[40px]
-            gap-1
+            gap-4
             w-full
             bg-[url('/images/getInTouchBackground.svg')]
-            2xl:py-[120px]
-            2xl:px-[60px]
-            py-[80px]
-            px-[50px]
+            2xl:py-[100px]
+            2xl:px-[100px]
+            md:py-[80px]
+            md:px-[50px]
+            py-[40px]
+            px-[30px]
             rounded-[40px]
             border-2
             border-solid
@@ -77,7 +82,7 @@ export default function GetInTouch() {
             overflow-hidden
             bg-[#111]
             -top-[60px]
-          "
+          `}
         >
           <Image
             src={`/images/getInTouchUnion.svg`}
@@ -87,7 +92,11 @@ export default function GetInTouch() {
             className="absolute h-full mix-blend-hard-light"
           />
           {/* CLIENT TYPE */}
-          <div className="flex p-1 justify-center items-center md:gap-5 gap-1 get-in-touch-border [&>*:last-child>div:last-child]:hidden relative">
+          <div
+            className={`flex p-1 justify-center ${
+              !children ? "items-center" : "md:self-baseline items-center"
+            } md:gap-5 gap-1 get-in-touch-border [&>*:last-child>div:last-child]:hidden relative`}
+          >
             {GET_IN_TOUCH_CLIENT_TYPE.map((type) => (
               <div
                 key={type}
@@ -105,7 +114,7 @@ export default function GetInTouch() {
                     )
                   }
                 >
-                  <span className="[font-size:_clamp(12px,2vw,24px)] leading-[0.9] capitalize">
+                  <span className="[font-size:_clamp(10px,2vw,24px)] leading-[0.9] capitalize">
                     {type}
                   </span>
                 </button>
@@ -116,29 +125,47 @@ export default function GetInTouch() {
 
           {/* TITLE */}
 
-          <div className="flex flex-col xl:gap-[40px] lg:gap-[40px] md:gap-[40px] gap-[20px] items-center text-center self-stretch z-10">
-            <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
-              {GET_IN_TOUCH_ELEVATE_GROWTH}
+          {!children ? (
+            <div className="flex flex-col xl:gap-[40px] lg:gap-[40px] md:gap-[40px] gap-[20px] items-center text-center self-stretch z-10">
+              <>
+                <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
+                  {GET_IN_TOUCH_ELEVATE_GROWTH}
+                </div>
+                <div className="[font-size:_clamp(26px,4vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[900px] leading-[120%] overflow-hidden">
+                  <span>{GET_IN_TOUCH_JOIN_US}</span>
+                  <span
+                    className="relative animate-partnerTransition"
+                    key={clientType}
+                  >
+                    {matchPartnerTypeWithArticle[clientType]}
+                  </span>
+                  <span>{GET_IN_TOUCH_OUR_VISION}</span>
+                </div>
+              </>
             </div>
-            <div className="[font-size:_clamp(26px,4vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[900px] leading-[120%] overflow-hidden">
-              <span>{GET_IN_TOUCH_JOIN_US}</span>
-              <span
-                className="relative animate-partnerTransition"
-                key={clientType}
-              >
-                {matchPartnerTypeWithArticle[clientType]}
-              </span>
-              <span>{GET_IN_TOUCH_OUR_VISION}</span>
-            </div>
-          </div>
+          ) : (
+            children
+          )}
 
           {/* BUTTON */}
-          <Button onClick={handleClick} showArrow>
+          <Button
+            onClick={handleClick}
+            showArrow
+            externalStyle={`${
+              !children ? "items-center" : "md:self-baseline items-center"
+            }`}
+          >
             <span className="overflow-hidden">
               <span className="[font-size:_clamp(12px,1.5vw,16px)]">
                 {GET_IN_TOUCH_BECOME_A}
               </span>
-              <span className="[font-size:_clamp(12px,1.5vw,16px)]">
+              <span
+                className={`
+                  [font-size:_clamp(12px,1.5vw,16px)]
+                  relative
+                  ${children ? "animate-partnerTransition" : ""}`}
+                key={clientType}
+              >
                 {matchPartnerTypeWithArticle[clientType]}
               </span>
             </span>
