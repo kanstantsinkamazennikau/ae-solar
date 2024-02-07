@@ -1,6 +1,6 @@
 {
-  "commit": "e6c183d2b3480accef4089a51715ac4ff7078f45",
-  "generated": "2024-02-07T14:44:49.028Z",
+  "commit": "8e43377adf699b7809174b0abb249809be851c9c",
+  "generated": "2024-02-07T14:45:09.998Z",
   "metadata": [
     {
       "__outstatic": {
@@ -850,8 +850,8 @@
     },
     {
       "__outstatic": {
-        "commit": "e6c183d2b3480accef4089a51715ac4ff7078f45",
-        "hash": "2307430047",
+        "commit": "8e43377adf699b7809174b0abb249809be851c9c",
+        "hash": "209310850",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -864,7 +864,7 @@
       "publishedAt": "2024-02-07T14:50:44.660Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "AE-SOLAR TOPCON TECHNOLOGY METEOR SERIES"
     }
   ]
 }
