@@ -1,6 +1,6 @@
 {
-  "commit": "5678ccc71ea180b8a24071b85d7bfac8d1b806b6",
-  "generated": "2024-02-07T14:27:01.815Z",
+  "commit": "dc5327816b98a80f50d2639965dbd1090aa822e2",
+  "generated": "2024-02-07T14:27:18.697Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "5678ccc71ea180b8a24071b85d7bfac8d1b806b6",
-        "hash": "3025208908",
+        "commit": "dc5327816b98a80f50d2639965dbd1090aa822e2",
+        "hash": "151841834",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -846,7 +846,7 @@
       "publishedAt": "2024-02-07T14:32:57.615Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "ARE SOLAR PANELS WORTH IT?"
     }
   ]
 }
