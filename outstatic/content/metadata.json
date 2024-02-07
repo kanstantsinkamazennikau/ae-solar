@@ -1,6 +1,6 @@
 {
-  "commit": "81cf8165389044eaf0923135dd1f627e9f9a8ae6",
-  "generated": "2024-02-07T14:41:43.863Z",
+  "commit": "9ce500fe01e0147f6305b43429bb6d4cf9eec6c9",
+  "generated": "2024-02-07T14:42:02.618Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "81cf8165389044eaf0923135dd1f627e9f9a8ae6",
-        "hash": "1998174480",
+        "commit": "9ce500fe01e0147f6305b43429bb6d4cf9eec6c9",
+        "hash": "2521429451",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -846,7 +846,7 @@
       "publishedAt": "2024-02-07T14:47:32.870Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "WHAT ARE HOT SPOTS AND HOW THEY AFFECT SOLAR PANELS"
     }
   ]
 }
