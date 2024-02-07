@@ -1,6 +1,6 @@
 {
-  "commit": "89684958bb501681701e7c51ddda4bde8b45e4f2",
-  "generated": "2024-02-07T12:45:58.022Z",
+  "commit": "a95539d532675fbc875a2434a4c9701cc4e58207",
+  "generated": "2024-02-07T12:46:54.167Z",
   "metadata": [
     {
       "__outstatic": {
@@ -559,6 +559,24 @@
       "slug": "latin-america-solar-energy-market",
       "status": "published",
       "title": "LATIN AMERICA SOLAR ENERGY MARKET"
+    },
+    {
+      "__outstatic": {
+        "commit": "a95539d532675fbc875a2434a4c9701cc4e58207",
+        "hash": "1733552373",
+        "path": "outstatic/content/blog/fiv.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:52:50.324Z",
+      "slug": "fiv",
+      "status": "published",
+      "title": "фів"
     }
   ]
 }
