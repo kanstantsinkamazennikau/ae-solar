@@ -1,6 +1,6 @@
 {
-  "commit": "fbb0b228c3228655f1ddb20c65bf428c5065fe8a",
-  "generated": "2024-02-07T14:50:57.311Z",
+  "commit": "068e1cab9ed2197ad04abe294af94ba8f3a593e6",
+  "generated": "2024-02-07T14:51:15.908Z",
   "metadata": [
     {
       "__outstatic": {
@@ -868,8 +868,8 @@
     },
     {
       "__outstatic": {
-        "commit": "fbb0b228c3228655f1ddb20c65bf428c5065fe8a",
-        "hash": "1545383243",
+        "commit": "068e1cab9ed2197ad04abe294af94ba8f3a593e6",
+        "hash": "975671033",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -882,7 +882,7 @@
       "publishedAt": "2024-02-07T14:56:54.117Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "EXPLOSIVE NEW INSTALLATION GROWTH IN CHINA’S PHOTOVOLTAIC MARKET: A LOOK AT Q1-Q3 2023"
     }
   ]
 }
