@@ -1,6 +1,6 @@
 {
-  "commit": "067352f3e46d1b69227a62f80dbbc54418fd00b4",
-  "generated": "2024-02-07T13:06:30.983Z",
+  "commit": "0923dfb4c3597b0714d3e88f044d7865bc3d5531",
+  "generated": "2024-02-07T13:06:49.632Z",
   "metadata": [
     {
       "__outstatic": {
@@ -760,8 +760,8 @@
     },
     {
       "__outstatic": {
-        "commit": "067352f3e46d1b69227a62f80dbbc54418fd00b4",
-        "hash": "2105585015",
+        "commit": "0923dfb4c3597b0714d3e88f044d7865bc3d5531",
+        "hash": "78899373",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -774,7 +774,7 @@
       "publishedAt": "2024-02-07T13:12:26.659Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "HOW MANY SOLAR PANELS ARE REQUIRED TO RUN A HOUSE OFF–GRID"
     }
   ]
 }
