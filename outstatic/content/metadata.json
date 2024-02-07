@@ -1,6 +1,6 @@
 {
-  "commit": "beddfa5f57cc919ec3d531b6d97d4b96f3475171",
-  "generated": "2024-02-07T11:51:45.342Z",
+  "commit": "1805d43243e962197d23716bdde6bd518bd94d62",
+  "generated": "2024-02-07T11:53:54.215Z",
   "metadata": [
     {
       "__outstatic": {
@@ -55,24 +55,6 @@
       "slug": "preview-of-aesolar-s-upcoming-exhibitions-for-q1-2024",
       "status": "published",
       "title": "PREVIEW OF AESOLAR’S UPCOMING EXHIBITIONS FOR Q1 2024"
-    },
-    {
-      "__outstatic": {
-        "commit": "1b0af0de96716b3754990d82fce0351a6b51a23b",
-        "hash": "678015356",
-        "path": "outstatic/content/img/test.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "img",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T13:46:32.367Z",
-      "slug": "test",
-      "status": "draft",
-      "title": "test"
     },
     {
       "__outstatic": {
