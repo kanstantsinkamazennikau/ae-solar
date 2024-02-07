@@ -1,6 +1,6 @@
 {
-  "commit": "ca87eb30eb72ab964468abf7b8ae24987a5dd84e",
-  "generated": "2024-02-07T12:52:44.292Z",
+  "commit": "edfa210e74edcbbf597f8896d922d8b4a2d255c0",
+  "generated": "2024-02-07T12:53:18.719Z",
   "metadata": [
     {
       "__outstatic": {
@@ -685,6 +685,24 @@
       "slug": "ivaiva",
       "status": "published",
       "title": "SOLAR PANEL THIRD PARTY INSURANCE WARRANTY"
+    },
+    {
+      "__outstatic": {
+        "commit": "edfa210e74edcbbf597f8896d922d8b4a2d255c0",
+        "hash": "64476321",
+        "path": "outstatic/content/blog/fvi.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:59:13.458Z",
+      "slug": "fvi",
+      "status": "published",
+      "title": "фві"
     }
   ]
 }
