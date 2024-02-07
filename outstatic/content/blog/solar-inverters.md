@@ -7,7 +7,7 @@ author:
 slug: 'solar-inverters'
 description: ''
 coverImage: ''
-publishedAt: '2024-02-06T15:00:44.429Z'
+publishedAt: '2024-02-07T12:32:29.557Z'
 ---
 
 ## **INTRODUCTION**

@@ -1,6 +1,6 @@
 {
-  "commit": "b8782401deb2982ee0c9a09703f621fd2a12b1a5",
-  "generated": "2024-02-07T12:26:08.681Z",
+  "commit": "0e3338c46722ce73c780bf91e9813f31568a85c1",
+  "generated": "2024-02-07T12:27:00.327Z",
   "metadata": [
     {
       "__outstatic": {
@@ -181,24 +181,6 @@
       "slug": "net-metering",
       "status": "published",
       "title": "NET METERING"
-    },
-    {
-      "__outstatic": {
-        "commit": "3abc9b767bfd75dd0941189d2cb1211e4ac930aa",
-        "hash": "836673308",
-        "path": "outstatic/content/blog/solar-inverters.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:00:44.429Z",
-      "slug": "solar-inverters",
-      "status": "published",
-      "title": "SOLAR INVERTERS"
     },
     {
       "__outstatic": {
@@ -523,6 +505,24 @@
       "slug": "apapr",
       "status": "published",
       "title": "SOLAR PANEL WIRING – BASICS"
+    },
+    {
+      "__outstatic": {
+        "commit": "0e3338c46722ce73c780bf91e9813f31568a85c1",
+        "hash": "2569888016",
+        "path": "outstatic/content/blog/solar-inverters.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:32:29.557Z",
+      "slug": "solar-inverters",
+      "status": "published",
+      "title": "SOLAR INVERTERS"
     }
   ]
 }
