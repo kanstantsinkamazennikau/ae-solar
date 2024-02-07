@@ -1,6 +1,6 @@
 {
-  "commit": "d9cfa3c5a1cdfbf1a1e0fa4ac9affc7dab91bf77",
-  "generated": "2024-02-07T13:07:51.652Z",
+  "commit": "ca04f88c90b34215d756e56a0600d9d6f9eddbca",
+  "generated": "2024-02-07T13:08:25.113Z",
   "metadata": [
     {
       "__outstatic": {
@@ -757,6 +757,24 @@
       "slug": "fiv",
       "status": "published",
       "title": "AFSHIN BAKHTIARI INTERVIEW"
+    },
+    {
+      "__outstatic": {
+        "commit": "ca04f88c90b34215d756e56a0600d9d6f9eddbca",
+        "hash": "1311730759",
+        "path": "outstatic/content/blog/how-to-add-solar-panels-to-existing-system.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T13:14:03.883Z",
+      "slug": "how-to-add-solar-panels-to-existing-system",
+      "status": "published",
+      "title": "HOW TO ADD SOLAR PANELS TO EXISTING SYSTEM"
     }
   ]
 }
