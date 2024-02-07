@@ -7,7 +7,7 @@ author:
 slug: 'pathway-to-zero-carbon-emissions'
 description: ''
 coverImage: ''
-publishedAt: '2024-02-06T15:06:08.487Z'
+publishedAt: '2024-02-07T12:36:28.987Z'
 ---
 
 EU 2030 Renewable Energy Targets\

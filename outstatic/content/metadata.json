@@ -1,6 +1,6 @@
 {
-  "commit": "d3673592de78e02cb9dee5ed547903c1258b5c39",
-  "generated": "2024-02-07T12:30:06.089Z",
+  "commit": "c1996a7e59de09c21771f471fa9330981d09c89b",
+  "generated": "2024-02-07T12:30:56.685Z",
   "metadata": [
     {
       "__outstatic": {
@@ -217,24 +217,6 @@
       "slug": "solar-advancements-in-2020-2021",
       "status": "published",
       "title": "SOLAR ADVANCEMENTS IN 2020-2021"
-    },
-    {
-      "__outstatic": {
-        "commit": "1a3d2daf13ea9c5c90ee6ae9c9a9a342f387a70a",
-        "hash": "1420685555",
-        "path": "outstatic/content/blog/pathway-to-zero-carbon-emissions.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:06:08.487Z",
-      "slug": "pathway-to-zero-carbon-emissions",
-      "status": "published",
-      "title": "PATHWAY TO ZERO CARBON EMISSIONS"
     },
     {
       "__outstatic": {
@@ -523,6 +505,24 @@
       "slug": "ten-myths-about-solar-energy",
       "status": "published",
       "title": "TEN MYTHS ABOUT SOLAR ENERGY"
+    },
+    {
+      "__outstatic": {
+        "commit": "c1996a7e59de09c21771f471fa9330981d09c89b",
+        "hash": "480059224",
+        "path": "outstatic/content/blog/pathway-to-zero-carbon-emissions.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:36:28.987Z",
+      "slug": "pathway-to-zero-carbon-emissions",
+      "status": "published",
+      "title": "PATHWAY TO ZERO CARBON EMISSIONS"
     }
   ]
 }
