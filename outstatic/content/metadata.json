@@ -1,6 +1,6 @@
 {
-  "commit": "6fcba9488962b1d153d06320b7012688f9e6b471",
-  "generated": "2024-02-07T12:28:07.781Z",
+  "commit": "01f0dce4af5f09ee076f59080b0cc966aaee2172",
+  "generated": "2024-02-07T12:29:02.309Z",
   "metadata": [
     {
       "__outstatic": {
@@ -256,24 +256,6 @@
     },
     {
       "__outstatic": {
-        "commit": "041aa4668cc152fd4aa133d2a0aebce0e97efc87",
-        "hash": "4143627685",
-        "path": "outstatic/content/blog/how-solar-energy-can-help-stop-climate-change.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:05:36.548Z",
-      "slug": "how-solar-energy-can-help-stop-climate-change",
-      "status": "published",
-      "title": "HOW SOLAR ENERGY CAN HELP STOP CLIMATE CHANGE?"
-    },
-    {
-      "__outstatic": {
         "commit": "1a3d2daf13ea9c5c90ee6ae9c9a9a342f387a70a",
         "hash": "1420685555",
         "path": "outstatic/content/blog/pathway-to-zero-carbon-emissions.md"
@@ -523,6 +505,24 @@
       "slug": "solar-vs-other-sources-of-energy",
       "status": "published",
       "title": "SOLAR VS OTHER SOURCES OF ENERGY"
+    },
+    {
+      "__outstatic": {
+        "commit": "01f0dce4af5f09ee076f59080b0cc966aaee2172",
+        "hash": "897912920",
+        "path": "outstatic/content/blog/how-solar-energy-can-help-stop-climate-change.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:34:47.814Z",
+      "slug": "how-solar-energy-can-help-stop-climate-change",
+      "status": "published",
+      "title": "HOW SOLAR ENERGY CAN HELP STOP CLIMATE CHANGE?"
     }
   ]
 }
