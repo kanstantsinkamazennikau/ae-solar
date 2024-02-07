@@ -1,6 +1,6 @@
 {
-  "commit": "9cbc5fb97ebcbb6da5f131f2893be548c28a3275",
-  "generated": "2024-02-07T14:34:18.846Z",
+  "commit": "dcf3596e37ab5e0d6c49d070d3383b2f1cba2fe3",
+  "generated": "2024-02-07T14:34:42.406Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "9cbc5fb97ebcbb6da5f131f2893be548c28a3275",
-        "hash": "2338158690",
+        "commit": "dcf3596e37ab5e0d6c49d070d3383b2f1cba2fe3",
+        "hash": "3177400719",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -846,7 +846,7 @@
       "publishedAt": "2024-02-07T14:40:15.463Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "INSTALLING SOLAR PANELS COSTS AND CHALLENGES"
     }
   ]
 }
