@@ -7,7 +7,7 @@ author:
 slug: 'solar-vs-other-sources-of-energy'
 description: ''
 coverImage: ''
-publishedAt: '2024-02-06T15:04:04.644Z'
+publishedAt: '2024-02-07T12:33:53.224Z'
 ---
 
 Sustainability is the need of the hour to tackle our growing energy needs. To make progress in reducing greenhouse gas emissions energy is one of the fundamental areas we need to work on. By shifting towards renewable sources, nuclear and relying less on natural resources we can decarbonize the energy systems. It is important to harness them correctly and make maximum use of the capacity. Out of all the energy sources available solar energy seems to be the best option in terms of availability, cost-effectiveness, and accessibility. Theoretically, solar energy possesses the potential to adequately fulfill the energy demands of the entire world if technologies for its harvesting and supplies were readily available

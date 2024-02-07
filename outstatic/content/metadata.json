@@ -1,6 +1,6 @@
 {
-  "commit": "04d5b4a9f7a9a4e54b831275e2ffd509af994ea3",
-  "generated": "2024-02-07T12:27:34.421Z",
+  "commit": "6fcba9488962b1d153d06320b7012688f9e6b471",
+  "generated": "2024-02-07T12:28:07.781Z",
   "metadata": [
     {
       "__outstatic": {
@@ -217,24 +217,6 @@
       "slug": "solar-advancements-in-2020-2021",
       "status": "published",
       "title": "SOLAR ADVANCEMENTS IN 2020-2021"
-    },
-    {
-      "__outstatic": {
-        "commit": "eb91e6d891ad1e47960f8f0c80013b57c3bc84a4",
-        "hash": "1613587284",
-        "path": "outstatic/content/blog/solar-vs-other-sources-of-energy.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:04:04.644Z",
-      "slug": "solar-vs-other-sources-of-energy",
-      "status": "published",
-      "title": "SOLAR VS OTHER SOURCES OF ENERGY"
     },
     {
       "__outstatic": {
@@ -523,6 +505,24 @@
       "slug": "off-grid-solar-system",
       "status": "published",
       "title": "OFF-GRID SOLAR SYSTEM"
+    },
+    {
+      "__outstatic": {
+        "commit": "6fcba9488962b1d153d06320b7012688f9e6b471",
+        "hash": "3725619210",
+        "path": "outstatic/content/blog/solar-vs-other-sources-of-energy.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:33:53.224Z",
+      "slug": "solar-vs-other-sources-of-energy",
+      "status": "published",
+      "title": "SOLAR VS OTHER SOURCES OF ENERGY"
     }
   ]
 }
