@@ -1,6 +1,6 @@
 {
-  "commit": "fee58323d8df57ab747a7fb08c857110aa000478",
-  "generated": "2024-02-07T14:50:48.245Z",
+  "commit": "fbb0b228c3228655f1ddb20c65bf428c5065fe8a",
+  "generated": "2024-02-07T14:50:57.311Z",
   "metadata": [
     {
       "__outstatic": {
@@ -868,8 +868,8 @@
     },
     {
       "__outstatic": {
-        "commit": "fee58323d8df57ab747a7fb08c857110aa000478",
-        "hash": "96533953",
+        "commit": "fbb0b228c3228655f1ddb20c65bf428c5065fe8a",
+        "hash": "1545383243",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -879,10 +879,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:56:05.371Z",
+      "publishedAt": "2024-02-07T14:56:54.117Z",
       "slug": "11",
       "status": "published",
-      "title": "WHAT’S IN A NUMBER? THE 1.5°C PATHWAY AND HOW TO STOP IRREVERSIBLE GLOBAL WARMING "
+      "title": "11"
     }
   ]
 }
