@@ -1,6 +1,6 @@
 {
-  "commit": "edfa210e74edcbbf597f8896d922d8b4a2d255c0",
-  "generated": "2024-02-07T12:53:18.719Z",
+  "commit": "5b8ac68ac332d115311f6d0bdd56e472f56ee2b8",
+  "generated": "2024-02-07T12:53:35.577Z",
   "metadata": [
     {
       "__outstatic": {
@@ -688,8 +688,8 @@
     },
     {
       "__outstatic": {
-        "commit": "edfa210e74edcbbf597f8896d922d8b4a2d255c0",
-        "hash": "64476321",
+        "commit": "5b8ac68ac332d115311f6d0bdd56e472f56ee2b8",
+        "hash": "167483154",
         "path": "outstatic/content/blog/fvi.md"
       },
       "author": {
@@ -702,7 +702,7 @@
       "publishedAt": "2024-02-07T12:59:13.458Z",
       "slug": "fvi",
       "status": "published",
-      "title": "фві"
+      "title": "INTERVIEW WITH DR. HAMED HANIFI"
     }
   ]
 }
