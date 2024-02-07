@@ -1,6 +1,6 @@
 {
-  "commit": "cec74a87d93dec7642c40af3654fd95f6b61cbef",
-  "generated": "2024-02-07T12:58:05.365Z",
+  "commit": "d87677f91ff9c0b33f587c3752092d48c8f0e0eb",
+  "generated": "2024-02-07T13:05:02.031Z",
   "metadata": [
     {
       "__outstatic": {
@@ -760,8 +760,8 @@
     },
     {
       "__outstatic": {
-        "commit": "cec74a87d93dec7642c40af3654fd95f6b61cbef",
-        "hash": "394736963",
+        "commit": "d87677f91ff9c0b33f587c3752092d48c8f0e0eb",
+        "hash": "2677979204",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -771,10 +771,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T13:03:41.067Z",
+      "publishedAt": "2024-02-07T13:10:56.213Z",
       "slug": "11",
       "status": "published",
-      "title": "TOP TRENDS IN SOLAR ENERGY INDUSTRY 2022"
+      "title": "11"
     }
   ]
 }
