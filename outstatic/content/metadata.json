@@ -1,6 +1,6 @@
 {
-  "commit": "28b7a45d53989f57cdc40bd6bffe92460e5a9c38",
-  "generated": "2024-02-07T12:44:10.646Z",
+  "commit": "b7490d0723ad729ad1b83e02e82ca40bf7a2f430",
+  "generated": "2024-02-07T12:44:34.179Z",
   "metadata": [
     {
       "__outstatic": {
@@ -235,24 +235,6 @@
       "slug": "history-and-the-development-of-photovoltaics",
       "status": "published",
       "title": "HISTORY AND THE DEVELOPMENT OF PHOTOVOLTAICS"
-    },
-    {
-      "__outstatic": {
-        "commit": "2379b081f0a59f332f92fd0c1e5c117cf729287d",
-        "hash": "2783209337",
-        "path": "outstatic/content/blog/brazil-solar-energy-market.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:19:32.649Z",
-      "slug": "brazil-solar-energy-market",
-      "status": "published",
-      "title": "BRAZIL SOLAR ENERGY MARKET"
     },
     {
       "__outstatic": {
@@ -559,6 +541,24 @@
       "slug": "floating-pv-systems",
       "status": "published",
       "title": "FLOATING PV SYSTEMS"
+    },
+    {
+      "__outstatic": {
+        "commit": "b7490d0723ad729ad1b83e02e82ca40bf7a2f430",
+        "hash": "159970531",
+        "path": "outstatic/content/blog/brazil-solar-energy-market.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:50:23.613Z",
+      "slug": "brazil-solar-energy-market",
+      "status": "published",
+      "title": "BRAZIL SOLAR ENERGY MARKET"
     }
   ]
 }
