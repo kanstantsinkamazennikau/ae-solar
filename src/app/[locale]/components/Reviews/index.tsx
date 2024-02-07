@@ -52,9 +52,9 @@ export default function Reviews() {
   };
 
   return (
-    <div className="relative w-full">
-      <div className="absolute w-full h-[50%] flex bottom-[150px] left-0 -z-0 ">
-        <div className="fade-strip-top !h-[50px]" />
+    <div className="relative w-full max-w-[1920px]">
+      <div className="absolute w-full h-[50%] flex bottom-[150px] left-0 -z-0">
+        <div className="fade-strip-top !h-[50px] " />
         <Image
           src="/images/solarSystem2.svg"
           alt="solarSystem"

@@ -13,10 +13,12 @@ export default function LightingTheWay() {
         2xl:h-[600px]
         h-[400px]
         bg-[url('/images/products/productsFlower.png')]
-        2xl:[background-size:100%_600px]
-        [background-size:100%_400px]
+        bg-cover
+        bg-center
         bg-no-repeat
         w-full
+        max-w-[1920px]
+        mx-auto
       "
     >
       <div
@@ -39,7 +41,7 @@ export default function LightingTheWay() {
         <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,2vw,36px)]">
           {PRODUCTS_WELCOME}
         </p>
-        <p className="text-8xl text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,102px)] max-w-[1000px]">
+        <p className="text-8xl text-center -tracking-[2.88px] leading-none [font-size:_clamp(34px,5vw,102px)] max-w-[1000px]">
           {PRODUCTS_LIGHTING}
         </p>
       </div>
@@ -49,7 +51,7 @@ export default function LightingTheWay() {
         priority
         width={1320}
         height={60}
-        className="absolute -bottom-[60px] -translate-x-1/2 left-1/2 rotate-180"
+        className="absolute -bottom-[60px] -translate-x-1/2 left-1/2 rotate-180 h-[60px]"
       />
     </div>
   );

@@ -5,13 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
-export default function LinkWithArrow({ label, href }: ButtonWithArrowProps) {
+export default function LinkWithArrow({
+  label,
+  href,
+  externalStyle,
+}: ButtonWithArrowProps) {
   const locale = useParams()?.locale;
 
   return (
     <div className="flex justify-center items-center gap-2">
       <Link
-        className="text-base-red [font-size:_clamp(14px,1vw,16px)]"
+        className={`text-base-red [font-size:_clamp(14px,1vw,16px)] ${externalStyle}`}
         href={`/${locale}/${href}`}
       >
         {label}
