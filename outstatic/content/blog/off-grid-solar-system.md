@@ -7,7 +7,7 @@ author:
 slug: 'off-grid-solar-system'
 description: ''
 coverImage: ''
-publishedAt: '2024-02-06T15:02:15.645Z'
+publishedAt: '2024-02-07T12:33:21.394Z'
 ---
 
 ## **INTRODUCTION**

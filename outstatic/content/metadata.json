@@ -1,6 +1,6 @@
 {
-  "commit": "0e3338c46722ce73c780bf91e9813f31568a85c1",
-  "generated": "2024-02-07T12:27:00.327Z",
+  "commit": "04d5b4a9f7a9a4e54b831275e2ffd509af994ea3",
+  "generated": "2024-02-07T12:27:34.421Z",
   "metadata": [
     {
       "__outstatic": {
@@ -181,24 +181,6 @@
       "slug": "net-metering",
       "status": "published",
       "title": "NET METERING"
-    },
-    {
-      "__outstatic": {
-        "commit": "4d88c1cc71747ae0d2905a96f396c7f5607371cc",
-        "hash": "914972316",
-        "path": "outstatic/content/blog/off-grid-solar-system.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:02:15.645Z",
-      "slug": "off-grid-solar-system",
-      "status": "published",
-      "title": "OFF-GRID SOLAR SYSTEM"
     },
     {
       "__outstatic": {
@@ -523,6 +505,24 @@
       "slug": "solar-inverters",
       "status": "published",
       "title": "SOLAR INVERTERS"
+    },
+    {
+      "__outstatic": {
+        "commit": "04d5b4a9f7a9a4e54b831275e2ffd509af994ea3",
+        "hash": "2962246400",
+        "path": "outstatic/content/blog/off-grid-solar-system.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:33:21.394Z",
+      "slug": "off-grid-solar-system",
+      "status": "published",
+      "title": "OFF-GRID SOLAR SYSTEM"
     }
   ]
 }
