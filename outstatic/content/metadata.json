@@ -1,6 +1,6 @@
 {
-  "commit": "6563c4393b0823b292acfe8d39dfe6bd5eca9f84",
-  "generated": "2024-02-07T12:56:48.506Z",
+  "commit": "3863e38025efe1ebe654f7fb30fb5e24878a35af",
+  "generated": "2024-02-07T12:57:06.968Z",
   "metadata": [
     {
       "__outstatic": {
@@ -742,8 +742,8 @@
     },
     {
       "__outstatic": {
-        "commit": "6563c4393b0823b292acfe8d39dfe6bd5eca9f84",
-        "hash": "2640325275",
+        "commit": "3863e38025efe1ebe654f7fb30fb5e24878a35af",
+        "hash": "3180750612",
         "path": "outstatic/content/blog/fiv.md"
       },
       "author": {
@@ -756,7 +756,7 @@
       "publishedAt": "2024-02-07T13:02:42.737Z",
       "slug": "fiv",
       "status": "published",
-      "title": "фів"
+      "title": "AFSHIN BAKHTIARI INTERVIEW"
     }
   ]
 }
