@@ -1,6 +1,6 @@
 {
-  "commit": "84824787dda3894c361f3d78b4e46d7d1c7b2744",
-  "generated": "2024-02-07T12:50:23.200Z",
+  "commit": "58db803c5817aed2fe589c0f4f24049c3abd7e26",
+  "generated": "2024-02-07T12:52:27.905Z",
   "metadata": [
     {
       "__outstatic": {
@@ -667,6 +667,24 @@
       "slug": "global-solar-supply-and-demand-in-2021",
       "status": "published",
       "title": "GLOBAL SOLAR SUPPLY AND DEMAND IN 2021"
+    },
+    {
+      "__outstatic": {
+        "commit": "58db803c5817aed2fe589c0f4f24049c3abd7e26",
+        "hash": "581126673",
+        "path": "outstatic/content/blog/ivaiva.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:58:23.229Z",
+      "slug": "ivaiva",
+      "status": "published",
+      "title": "іваіва"
     }
   ]
 }
