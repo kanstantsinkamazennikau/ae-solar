@@ -1,6 +1,6 @@
 {
-  "commit": "44615cd62a009bfe1d4b3b4d2fbfbc492277b7bb",
-  "generated": "2024-02-07T14:15:00.711Z",
+  "commit": "1b559a0e7f69cb24234d3c3d48f3bec20ec8227c",
+  "generated": "2024-02-07T14:15:15.019Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "44615cd62a009bfe1d4b3b4d2fbfbc492277b7bb",
-        "hash": "4191758038",
+        "commit": "1b559a0e7f69cb24234d3c3d48f3bec20ec8227c",
+        "hash": "1552228674",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -843,10 +843,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:20:33.901Z",
+      "publishedAt": "2024-02-07T14:21:04.109Z",
       "slug": "11",
       "status": "published",
-      "title": "HOW LONG DOES IT TAKE TO INSTALL SOLAR PANELS?"
+      "title": "11"
     }
   ]
 }
