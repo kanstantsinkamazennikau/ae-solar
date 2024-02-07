@@ -1,6 +1,6 @@
 {
-  "commit": "d137a4f3ca6f18f395d773c75afe7bbdf91eb48a",
-  "generated": "2024-02-07T12:45:29.155Z",
+  "commit": "89684958bb501681701e7c51ddda4bde8b45e4f2",
+  "generated": "2024-02-07T12:45:58.022Z",
   "metadata": [
     {
       "__outstatic": {
@@ -235,24 +235,6 @@
       "slug": "history-and-the-development-of-photovoltaics",
       "status": "published",
       "title": "HISTORY AND THE DEVELOPMENT OF PHOTOVOLTAICS"
-    },
-    {
-      "__outstatic": {
-        "commit": "cf9296a2a4f641d9e7ed92b896c53b85644eebcd",
-        "hash": "986999754",
-        "path": "outstatic/content/blog/latin-america-solar-energy-market.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:20:16.331Z",
-      "slug": "latin-america-solar-energy-market",
-      "status": "published",
-      "title": "LATIN AMERICA SOLAR ENERGY MARKET"
     },
     {
       "__outstatic": {
@@ -559,6 +541,24 @@
       "slug": "central-europe-solar-market",
       "status": "published",
       "title": "CENTRAL EUROPE SOLAR MARKET"
+    },
+    {
+      "__outstatic": {
+        "commit": "89684958bb501681701e7c51ddda4bde8b45e4f2",
+        "hash": "1902493145",
+        "path": "outstatic/content/blog/latin-america-solar-energy-market.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:51:45.996Z",
+      "slug": "latin-america-solar-energy-market",
+      "status": "published",
+      "title": "LATIN AMERICA SOLAR ENERGY MARKET"
     }
   ]
 }
