@@ -1,6 +1,6 @@
 {
-  "commit": "9411a4c8909a76ee3829159c973402b7ca750a76",
-  "generated": "2024-02-07T12:57:37.283Z",
+  "commit": "c74e3005308dca5fc57d563d505958d84059aefc",
+  "generated": "2024-02-07T12:57:45.966Z",
   "metadata": [
     {
       "__outstatic": {
@@ -760,8 +760,8 @@
     },
     {
       "__outstatic": {
-        "commit": "9411a4c8909a76ee3829159c973402b7ca750a76",
-        "hash": "3937417196",
+        "commit": "c74e3005308dca5fc57d563d505958d84059aefc",
+        "hash": "3524223387",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -771,10 +771,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T13:03:10.819Z",
+      "publishedAt": "2024-02-07T13:03:41.067Z",
       "slug": "11",
       "status": "published",
-      "title": "DO’S AND DON’TS OF SOLAR PANEL INSTALLATION"
+      "title": "11"
     }
   ]
 }
