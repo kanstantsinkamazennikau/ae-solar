@@ -1,6 +1,6 @@
 {
-  "commit": "93a383d1b318ad66a4a2d561607a5e64a460ac00",
-  "generated": "2024-02-07T11:54:02.031Z",
+  "commit": "7ed31e64cfb46009a1ce2158edf1349dcb6e9d8d",
+  "generated": "2024-02-07T12:25:46.835Z",
   "metadata": [
     {
       "__outstatic": {
@@ -505,6 +505,24 @@
       "slug": "solar-panel-solar-inverters",
       "status": "published",
       "title": "SOLAR PANEL SOLAR INVERTERS"
+    },
+    {
+      "__outstatic": {
+        "commit": "7ed31e64cfb46009a1ce2158edf1349dcb6e9d8d",
+        "hash": "1505672772",
+        "path": "outstatic/content/blog/apapr.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:31:38.947Z",
+      "slug": "apapr",
+      "status": "published",
+      "title": "апапр"
     }
   ]
 }
