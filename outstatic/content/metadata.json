@@ -1,6 +1,6 @@
 {
-  "commit": "402deb6e6b052c090dc9a7f3ad47e8aca0759e26",
-  "generated": "2024-02-07T12:41:50.352Z",
+  "commit": "d5f74cfabb3b959e9cee1c1eaabca2f18d28465a",
+  "generated": "2024-02-07T12:41:53.386Z",
   "metadata": [
     {
       "__outstatic": {
@@ -544,8 +544,8 @@
     },
     {
       "__outstatic": {
-        "commit": "402deb6e6b052c090dc9a7f3ad47e8aca0759e26",
-        "hash": "1052629658",
+        "commit": "d5f74cfabb3b959e9cee1c1eaabca2f18d28465a",
+        "hash": "2737043277",
         "path": "outstatic/content/blog/fiviv.md"
       },
       "author": {
@@ -557,7 +557,7 @@
       "description": "",
       "publishedAt": "2024-02-07T12:47:47.078Z",
       "slug": "fiviv",
-      "status": "draft",
+      "status": "published",
       "title": "фівів"
     }
   ]
