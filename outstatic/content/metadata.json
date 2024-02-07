@@ -1,6 +1,6 @@
 {
-  "commit": "a95539d532675fbc875a2434a4c9701cc4e58207",
-  "generated": "2024-02-07T12:46:54.167Z",
+  "commit": "689bbab0c637c79ebe939cf0f83a4b6d36304770",
+  "generated": "2024-02-07T12:47:10.246Z",
   "metadata": [
     {
       "__outstatic": {
@@ -562,8 +562,8 @@
     },
     {
       "__outstatic": {
-        "commit": "a95539d532675fbc875a2434a4c9701cc4e58207",
-        "hash": "1733552373",
+        "commit": "689bbab0c637c79ebe939cf0f83a4b6d36304770",
+        "hash": "687435841",
         "path": "outstatic/content/blog/fiv.md"
       },
       "author": {
@@ -576,7 +576,7 @@
       "publishedAt": "2024-02-07T12:52:50.324Z",
       "slug": "fiv",
       "status": "published",
-      "title": "фів"
+      "title": "LOW CARBON – CHRISTMAS"
     }
   ]
 }
