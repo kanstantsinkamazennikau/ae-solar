@@ -1,6 +1,6 @@
 {
-  "commit": "0923dfb4c3597b0714d3e88f044d7865bc3d5531",
-  "generated": "2024-02-07T13:06:49.632Z",
+  "commit": "d9cfa3c5a1cdfbf1a1e0fa4ac9affc7dab91bf77",
+  "generated": "2024-02-07T13:07:20.805Z",
   "metadata": [
     {
       "__outstatic": {
@@ -773,6 +773,24 @@
       "description": "",
       "publishedAt": "2024-02-07T13:12:26.659Z",
       "slug": "11",
+      "status": "published",
+      "title": "HOW MANY SOLAR PANELS ARE REQUIRED TO RUN A HOUSE OFF–GRID"
+    },
+    {
+      "__outstatic": {
+        "commit": "d9cfa3c5a1cdfbf1a1e0fa4ac9affc7dab91bf77",
+        "hash": "646974344",
+        "path": "outstatic/content/blog/how-many-solar-panels-are-required-to-run-a-house-off-grid.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T13:13:07.387Z",
+      "slug": "how-many-solar-panels-are-required-to-run-a-house-off-grid",
       "status": "published",
       "title": "HOW MANY SOLAR PANELS ARE REQUIRED TO RUN A HOUSE OFF–GRID"
     }
