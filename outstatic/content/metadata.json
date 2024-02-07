@@ -1,6 +1,6 @@
 {
-  "commit": "01f0dce4af5f09ee076f59080b0cc966aaee2172",
-  "generated": "2024-02-07T12:29:02.309Z",
+  "commit": "cfd3f58d5c3f6d60194bfe5072fe0dcd27b6c378",
+  "generated": "2024-02-07T12:29:39.755Z",
   "metadata": [
     {
       "__outstatic": {
@@ -235,24 +235,6 @@
       "slug": "ten-myths-about-solar-energy",
       "status": "published",
       "title": "TEN MYTHS ABOUT SOLAR ENERGY"
-    },
-    {
-      "__outstatic": {
-        "commit": "7068fdc8594eb7866cd76b4a801e140e4508f947",
-        "hash": "1173332945",
-        "path": "outstatic/content/blog/economic-benefits-and-efficiency-of-solar-panels.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:05:07.948Z",
-      "slug": "economic-benefits-and-efficiency-of-solar-panels",
-      "status": "published",
-      "title": "ECONOMIC BENEFITS AND EFFICIENCY OF SOLAR PANELS"
     },
     {
       "__outstatic": {
@@ -523,6 +505,24 @@
       "slug": "how-solar-energy-can-help-stop-climate-change",
       "status": "published",
       "title": "HOW SOLAR ENERGY CAN HELP STOP CLIMATE CHANGE?"
+    },
+    {
+      "__outstatic": {
+        "commit": "cfd3f58d5c3f6d60194bfe5072fe0dcd27b6c378",
+        "hash": "4118068546",
+        "path": "outstatic/content/blog/economic-benefits-and-efficiency-of-solar-panels.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:35:07.611Z",
+      "slug": "economic-benefits-and-efficiency-of-solar-panels",
+      "status": "published",
+      "title": "ECONOMIC BENEFITS AND EFFICIENCY OF SOLAR PANELS"
     }
   ]
 }
