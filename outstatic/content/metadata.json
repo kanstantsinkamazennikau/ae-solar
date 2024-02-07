@@ -1,6 +1,6 @@
 {
-  "commit": "f989a1efbafe9bb4595e2d38c1ec7b57f43c7071",
-  "generated": "2024-02-07T14:35:53.692Z",
+  "commit": "f275c17b4b2559a59f9ad015d5b53e85ecd664e6",
+  "generated": "2024-02-07T14:36:18.180Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "f989a1efbafe9bb4595e2d38c1ec7b57f43c7071",
-        "hash": "2605931387",
+        "commit": "f275c17b4b2559a59f9ad015d5b53e85ecd664e6",
+        "hash": "1559688831",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -846,7 +846,7 @@
       "publishedAt": "2024-02-07T14:41:50.186Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "SOLAR PANEL MANUFACTURING"
     }
   ]
 }
