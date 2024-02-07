@@ -1,6 +1,6 @@
 {
-  "commit": "d579e0df19ab6d4e0d3828c2c445128a33385678",
-  "generated": "2024-02-06T15:16:37.641Z",
+  "commit": "beddfa5f57cc919ec3d531b6d97d4b96f3475171",
+  "generated": "2024-02-07T11:51:45.342Z",
   "metadata": [
     {
       "__outstatic": {
@@ -505,6 +505,24 @@
       "slug": "middle-east-solar-market",
       "status": "published",
       "title": "MIDDLE EAST SOLAR MARKET"
+    },
+    {
+      "__outstatic": {
+        "commit": "beddfa5f57cc919ec3d531b6d97d4b96f3475171",
+        "hash": "129792321",
+        "path": "outstatic/content/blog/solar-panel-solar-inverters.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T11:55:15.473Z",
+      "slug": "solar-panel-solar-inverters",
+      "status": "published",
+      "title": "SOLAR PANEL SOLAR INVERTERS"
     }
   ]
 }
