@@ -1,6 +1,6 @@
 {
-  "commit": "b7490d0723ad729ad1b83e02e82ca40bf7a2f430",
-  "generated": "2024-02-07T12:44:34.179Z",
+  "commit": "165c9bd4e88e042ca1cd205a036a4d33460466e4",
+  "generated": "2024-02-07T12:45:02.115Z",
   "metadata": [
     {
       "__outstatic": {
@@ -274,24 +274,6 @@
     },
     {
       "__outstatic": {
-        "commit": "7ed0aa57e6c85c6767583a11fc548e05b4ae50b8",
-        "hash": "582117173",
-        "path": "outstatic/content/blog/heterojunction-solar-panels.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:21:32.904Z",
-      "slug": "heterojunction-solar-panels",
-      "status": "published",
-      "title": "HETEROJUNCTION SOLAR PANELS"
-    },
-    {
-      "__outstatic": {
         "commit": "d579e0df19ab6d4e0d3828c2c445128a33385678",
         "hash": "2274421245",
         "path": "outstatic/content/blog/middle-east-solar-market.md"
@@ -559,6 +541,24 @@
       "slug": "brazil-solar-energy-market",
       "status": "published",
       "title": "BRAZIL SOLAR ENERGY MARKET"
+    },
+    {
+      "__outstatic": {
+        "commit": "165c9bd4e88e042ca1cd205a036a4d33460466e4",
+        "hash": "2874407248",
+        "path": "outstatic/content/blog/heterojunction-solar-panels.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:50:51.658Z",
+      "slug": "heterojunction-solar-panels",
+      "status": "published",
+      "title": "HETEROJUNCTION SOLAR PANELS"
     }
   ]
 }
