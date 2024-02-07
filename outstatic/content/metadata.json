@@ -1,6 +1,6 @@
 {
-  "commit": "76c7a06bc9062a99335a3da224ab138b7c6c1677",
-  "generated": "2024-02-07T13:05:39.421Z",
+  "commit": "010f666da06805e6a7c6ea8b4d4f495fa2de669c",
+  "generated": "2024-02-07T13:05:47.286Z",
   "metadata": [
     {
       "__outstatic": {
@@ -760,8 +760,8 @@
     },
     {
       "__outstatic": {
-        "commit": "76c7a06bc9062a99335a3da224ab138b7c6c1677",
-        "hash": "3049689265",
+        "commit": "010f666da06805e6a7c6ea8b4d4f495fa2de669c",
+        "hash": "634759417",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -771,10 +771,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T13:10:56.213Z",
+      "publishedAt": "2024-02-07T13:11:42.938Z",
       "slug": "11",
       "status": "published",
-      "title": "THE DUTCH SOLAR ENERGY MARKET"
+      "title": "11"
     }
   ]
 }
