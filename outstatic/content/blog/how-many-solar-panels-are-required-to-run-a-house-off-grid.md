@@ -7,7 +7,7 @@ author:
 slug: 'how-many-solar-panels-are-required-to-run-a-house-off-grid'
 description: ''
 coverImage: ''
-publishedAt: '2024-02-07T13:13:07.387Z'
+publishedAt: '2024-02-07T13:14:38.676Z'
 ---
 
 Off-Grid solar systems work independently of the grid compared to on-grid solar systems. Many people are under the assumption that off-grid solar systems are easy to put together compared to their other counterparts. This may be true for small houses like a cabin but for homes and businesses it has to be carefully planned.\

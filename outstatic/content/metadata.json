@@ -1,6 +1,6 @@
 {
-  "commit": "ca04f88c90b34215d756e56a0600d9d6f9eddbca",
-  "generated": "2024-02-07T13:08:25.113Z",
+  "commit": "1e1e30ee904d66e6a9aef13fadb2eb8c0d396f85",
+  "generated": "2024-02-07T13:08:54.165Z",
   "metadata": [
     {
       "__outstatic": {
@@ -775,6 +775,24 @@
       "slug": "how-to-add-solar-panels-to-existing-system",
       "status": "published",
       "title": "HOW TO ADD SOLAR PANELS TO EXISTING SYSTEM"
+    },
+    {
+      "__outstatic": {
+        "commit": "1e1e30ee904d66e6a9aef13fadb2eb8c0d396f85",
+        "hash": "791554256",
+        "path": "outstatic/content/blog/how-many-solar-panels-are-required-to-run-a-house-off-grid.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T13:14:38.676Z",
+      "slug": "how-many-solar-panels-are-required-to-run-a-house-off-grid",
+      "status": "published",
+      "title": "HOW MANY SOLAR PANELS ARE REQUIRED TO RUN A HOUSE OFF–GRID"
     }
   ]
 }
