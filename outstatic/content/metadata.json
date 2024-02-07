@@ -1,6 +1,6 @@
 {
   "commit": "d1c294adf2219e2b17f3c804438924cfc519e556",
-  "generated": "2024-02-07T14:42:48.261Z",
+  "generated": "2024-02-07T14:43:45.828Z",
   "metadata": [
     {
       "__outstatic": {
@@ -833,7 +833,7 @@
     {
       "__outstatic": {
         "commit": "d1c294adf2219e2b17f3c804438924cfc519e556",
-        "hash": "3344573079",
+        "hash": "1346859890",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -845,8 +845,8 @@
       "description": "",
       "publishedAt": "2024-02-07T14:48:45.342Z",
       "slug": "11",
-      "status": "draft",
-      "title": "11"
+      "status": "published",
+      "title": "WHAT ARE THE CLEAN ENERGY SOURCES AND WHY IS SOLAR PHOTOVOLTAICS ONE OF THE BEST?"
     }
   ]
 }
