@@ -1,6 +1,6 @@
 {
-  "commit": "689bbab0c637c79ebe939cf0f83a4b6d36304770",
-  "generated": "2024-02-07T12:47:10.246Z",
+  "commit": "68514d029cbe889ca869d6ae403d33507f8e7d7d",
+  "generated": "2024-02-07T12:47:48.385Z",
   "metadata": [
     {
       "__outstatic": {
@@ -577,6 +577,24 @@
       "slug": "fiv",
       "status": "published",
       "title": "LOW CARBON – CHRISTMAS"
+    },
+    {
+      "__outstatic": {
+        "commit": "68514d029cbe889ca869d6ae403d33507f8e7d7d",
+        "hash": "2165168374",
+        "path": "outstatic/content/blog/chyas.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:53:44.856Z",
+      "slug": "chyas",
+      "status": "published",
+      "title": "чяс"
     }
   ]
 }
