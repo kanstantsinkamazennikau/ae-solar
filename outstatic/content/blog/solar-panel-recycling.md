@@ -7,7 +7,7 @@ author:
 slug: 'solar-panel-recycling'
 description: ''
 coverImage: ''
-publishedAt: '2024-02-06T15:17:43.304Z'
+publishedAt: '2024-02-07T12:49:28.974Z'
 ---
 
 The average lifespan of a solar panel being approximately 20 years, many installations from the early 2000s are set to reach end-of-life. So, it's about time for them to be recycled but the real question is will they be recycled? With the presence of heavy metals waste cannot be managed poorly. It is also a known fact that the value of the recovered materials after recycling is nothing compared to the original materials.
@@ -66,4 +66,4 @@ A study was done on the environmental impacts of recycling crystalline silicon (
 
 For **CdTe panels**, the contribution of the recycling phase on the entire life cycle is minor 3 -4 % depending on chosen recycling method. Less electricity consumption results in fewer impacts. In comparison c -Si produced significantly higher impacts than CdTe. This is mainly because c -Si material separation utilizes more mass of chemicals than CdTe. The recycling of c -Si PV panels should primarily be planned to recover Ag(silver) metal.
 
-In this way, more environmental impacts can be avoided, and the cost of remanufacturing can be reduced significantly. As for Cadmium Telluride panels, Glass is the most impactful element because it occupies about 94% of the CdTe panel and cadmium and tellurium are more expensive as they are rare earth metals. So, recycling methods should be focused on recovering these materials primarily in an environmentally friendly way. Reuse, repair, remanufacturing, and repurposing are expected to play key roles in the future to develop a circular economy model based on PV waste manufacturing.
+In this way, more environmental impacts can be avoided, and the cost of remanufacturing can be reduced significantly. As for Cadmium Telluride panels, Glass is the most impactful element because it occupies about 94% of the CdTe panel and cadmium and tellurium are more expensive as they are rare earth metals. So, recycling methods should be focused on recovering these materials primarily in an environmentally friendly way. Reuse, repair, remanufacturing, and repurposing are expected to play key roles in the future to develop a circular econ

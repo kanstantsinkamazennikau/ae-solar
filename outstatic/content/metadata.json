@@ -1,6 +1,6 @@
 {
-  "commit": "548eeaf855c5bebf8042cfce9ce082375dae11c9",
-  "generated": "2024-02-07T12:43:03.604Z",
+  "commit": "eaf09fe08ccf4b46deacc963131ee3eca4c7ab23",
+  "generated": "2024-02-07T12:43:46.910Z",
   "metadata": [
     {
       "__outstatic": {
@@ -235,24 +235,6 @@
       "slug": "history-and-the-development-of-photovoltaics",
       "status": "published",
       "title": "HISTORY AND THE DEVELOPMENT OF PHOTOVOLTAICS"
-    },
-    {
-      "__outstatic": {
-        "commit": "37d04f66072d2f6b2381db3a191b7b25c44544fc",
-        "hash": "2416742381",
-        "path": "outstatic/content/blog/solar-panel-recycling.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:17:43.304Z",
-      "slug": "solar-panel-recycling",
-      "status": "published",
-      "title": "SOLAR PANEL RECYCLING"
     },
     {
       "__outstatic": {
@@ -559,6 +541,24 @@
       "slug": "fiviv",
       "status": "published",
       "title": "HISTORY AND THE DEVELOPMENT OF PHOTOVOLTAICS"
+    },
+    {
+      "__outstatic": {
+        "commit": "eaf09fe08ccf4b46deacc963131ee3eca4c7ab23",
+        "hash": "891451526",
+        "path": "outstatic/content/blog/solar-panel-recycling.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:49:28.974Z",
+      "slug": "solar-panel-recycling",
+      "status": "published",
+      "title": "SOLAR PANEL RECYCLING"
     }
   ]
 }
