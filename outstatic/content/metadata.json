@@ -1,6 +1,6 @@
 {
-  "commit": "217811932c06c005c73e7cb7c57571c8518dbb13",
-  "generated": "2024-02-07T14:41:19.954Z",
+  "commit": "81cf8165389044eaf0923135dd1f627e9f9a8ae6",
+  "generated": "2024-02-07T14:41:43.863Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "217811932c06c005c73e7cb7c57571c8518dbb13",
-        "hash": "371405093",
+        "commit": "81cf8165389044eaf0923135dd1f627e9f9a8ae6",
+        "hash": "1998174480",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -843,10 +843,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:46:44.440Z",
+      "publishedAt": "2024-02-07T14:47:32.870Z",
       "slug": "11",
       "status": "published",
-      "title": "PHOTOVOLTAIC THERMAL COLLECTORS"
+      "title": "11"
     }
   ]
 }
