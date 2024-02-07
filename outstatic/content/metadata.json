@@ -1,6 +1,6 @@
 {
-  "commit": "d5f74cfabb3b959e9cee1c1eaabca2f18d28465a",
-  "generated": "2024-02-07T12:41:53.386Z",
+  "commit": "548eeaf855c5bebf8042cfce9ce082375dae11c9",
+  "generated": "2024-02-07T12:43:03.604Z",
   "metadata": [
     {
       "__outstatic": {
@@ -544,8 +544,8 @@
     },
     {
       "__outstatic": {
-        "commit": "d5f74cfabb3b959e9cee1c1eaabca2f18d28465a",
-        "hash": "2737043277",
+        "commit": "548eeaf855c5bebf8042cfce9ce082375dae11c9",
+        "hash": "2267241431",
         "path": "outstatic/content/blog/fiviv.md"
       },
       "author": {
@@ -558,7 +558,7 @@
       "publishedAt": "2024-02-07T12:47:47.078Z",
       "slug": "fiviv",
       "status": "published",
-      "title": "фівів"
+      "title": "HISTORY AND THE DEVELOPMENT OF PHOTOVOLTAICS"
     }
   ]
 }
