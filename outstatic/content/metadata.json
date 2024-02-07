@@ -1,6 +1,6 @@
 {
-  "commit": "70dc24006b99d0f66ba6f11d7aa04e0b0e3b003f",
-  "generated": "2024-02-07T14:39:15.746Z",
+  "commit": "fec141a3a9ab5f7fb7c237f66e3e0d762114a869",
+  "generated": "2024-02-07T14:39:38.623Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "70dc24006b99d0f66ba6f11d7aa04e0b0e3b003f",
-        "hash": "1425940654",
+        "commit": "fec141a3a9ab5f7fb7c237f66e3e0d762114a869",
+        "hash": "4097586193",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -843,10 +843,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:42:57.917Z",
+      "publishedAt": "2024-02-07T14:45:34.992Z",
       "slug": "11",
       "status": "published",
-      "title": "SILVER AND ITS USE IN SOLAR TECHNOLOGY"
+      "title": "11"
     }
   ]
 }
