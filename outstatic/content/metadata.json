@@ -1,6 +1,6 @@
 {
-  "commit": "f446b489a12f9a07f19b4b7b7498f8a5d002e77e",
-  "generated": "2024-02-07T12:49:55.324Z",
+  "commit": "84824787dda3894c361f3d78b4e46d7d1c7b2744",
+  "generated": "2024-02-07T12:50:23.200Z",
   "metadata": [
     {
       "__outstatic": {
@@ -649,6 +649,24 @@
       "slug": "solar-energy-trends-and-innovations-in-2022",
       "status": "published",
       "title": "SOLAR ENERGY TRENDS AND INNOVATIONS IN 2022"
+    },
+    {
+      "__outstatic": {
+        "commit": "84824787dda3894c361f3d78b4e46d7d1c7b2744",
+        "hash": "1896545757",
+        "path": "outstatic/content/blog/global-solar-supply-and-demand-in-2021.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:56:00.468Z",
+      "slug": "global-solar-supply-and-demand-in-2021",
+      "status": "published",
+      "title": "GLOBAL SOLAR SUPPLY AND DEMAND IN 2021"
     }
   ]
 }
