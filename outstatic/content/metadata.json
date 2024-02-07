@@ -1,6 +1,6 @@
 {
-  "commit": "f933486027c45ad92bed192c70c9b0c3eb018e23",
-  "generated": "2024-02-07T12:54:15.097Z",
+  "commit": "865a009dbc9aa11345c4d587954a53edf74506a3",
+  "generated": "2024-02-07T12:55:27.315Z",
   "metadata": [
     {
       "__outstatic": {
@@ -721,6 +721,24 @@
       "slug": "what-is-aurora-pv-module-series-and-why-it-is-unique",
       "status": "published",
       "title": "WHAT IS AURORA PV MODULE SERIES AND WHY IT IS UNIQUE?"
+    },
+    {
+      "__outstatic": {
+        "commit": "865a009dbc9aa11345c4d587954a53edf74506a3",
+        "hash": "976497631",
+        "path": "outstatic/content/blog/ycuy.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T13:01:23.679Z",
+      "slug": "ycuy",
+      "status": "published",
+      "title": "йцуй"
     }
   ]
 }
