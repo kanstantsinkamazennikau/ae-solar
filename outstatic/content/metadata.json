@@ -1,6 +1,6 @@
 {
-  "commit": "913075b73e4fa2fb4a72bc21496e8eee14fd9005",
-  "generated": "2024-02-07T14:30:03.368Z",
+  "commit": "1f782c1e95fd3b2bf695ffa6cdfcac2366cfdccc",
+  "generated": "2024-02-07T14:30:32.599Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "913075b73e4fa2fb4a72bc21496e8eee14fd9005",
-        "hash": "4231209540",
+        "commit": "1f782c1e95fd3b2bf695ffa6cdfcac2366cfdccc",
+        "hash": "1117587559",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -843,10 +843,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:35:44.731Z",
+      "publishedAt": "2024-02-07T14:36:28.709Z",
       "slug": "11",
       "status": "published",
-      "title": "WHICH SOLAR PANELS ARE THE BEST?"
+      "title": "11"
     }
   ]
 }
