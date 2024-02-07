@@ -1,6 +1,6 @@
 {
-  "commit": "8423200fed91a39ad07efa336a4ffc12fdd4c9e4",
-  "generated": "2024-02-07T12:41:43.050Z",
+  "commit": "402deb6e6b052c090dc9a7f3ad47e8aca0759e26",
+  "generated": "2024-02-07T12:41:50.352Z",
   "metadata": [
     {
       "__outstatic": {
@@ -541,6 +541,24 @@
       "slug": "fivf",
       "status": "published",
       "title": "GLOBAL PV MARKET 2020 – 2021 "
+    },
+    {
+      "__outstatic": {
+        "commit": "402deb6e6b052c090dc9a7f3ad47e8aca0759e26",
+        "hash": "1052629658",
+        "path": "outstatic/content/blog/fiviv.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:47:47.078Z",
+      "slug": "fiviv",
+      "status": "draft",
+      "title": "фівів"
     }
   ]
 }
