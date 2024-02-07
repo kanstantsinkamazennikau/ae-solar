@@ -1,6 +1,6 @@
 {
-  "commit": "edca871df0c2dd5ea5323c0a604e74ca6838fe49",
-  "generated": "2024-02-07T14:30:54.329Z",
+  "commit": "8ca612c1495f9de872365ad95ab0a179647c4b31",
+  "generated": "2024-02-07T14:31:02.158Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "edca871df0c2dd5ea5323c0a604e74ca6838fe49",
-        "hash": "2772760255",
+        "commit": "8ca612c1495f9de872365ad95ab0a179647c4b31",
+        "hash": "925774138",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -843,10 +843,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:36:28.709Z",
+      "publishedAt": "2024-02-07T14:36:58.505Z",
       "slug": "11",
       "status": "published",
-      "title": "HOW EFFICIENT ARE SOLAR PANELS?"
+      "title": "11"
     }
   ]
 }
