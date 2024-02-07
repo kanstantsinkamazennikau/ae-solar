@@ -1,6 +1,6 @@
 {
-  "commit": "654258525012463de332d14786be78e9e4a3b897",
-  "generated": "2024-02-07T12:49:05.608Z",
+  "commit": "787c85c07acc4e2d22b02f0cd4b8d67c2c5fe1c6",
+  "generated": "2024-02-07T12:49:31.195Z",
   "metadata": [
     {
       "__outstatic": {
@@ -613,6 +613,24 @@
       "slug": "yy",
       "status": "published",
       "title": "MIDDLE EAST SOLAR MARKET"
+    },
+    {
+      "__outstatic": {
+        "commit": "787c85c07acc4e2d22b02f0cd4b8d67c2c5fe1c6",
+        "hash": "3612496403",
+        "path": "outstatic/content/blog/bulgaria-solar-energy-market.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:55:18.130Z",
+      "slug": "bulgaria-solar-energy-market",
+      "status": "published",
+      "title": "BULGARIA SOLAR ENERGY MARKET"
     }
   ]
 }
