@@ -1,6 +1,6 @@
 {
-  "commit": "58db803c5817aed2fe589c0f4f24049c3abd7e26",
-  "generated": "2024-02-07T12:52:27.905Z",
+  "commit": "ca87eb30eb72ab964468abf7b8ae24987a5dd84e",
+  "generated": "2024-02-07T12:52:44.292Z",
   "metadata": [
     {
       "__outstatic": {
@@ -670,8 +670,8 @@
     },
     {
       "__outstatic": {
-        "commit": "58db803c5817aed2fe589c0f4f24049c3abd7e26",
-        "hash": "581126673",
+        "commit": "ca87eb30eb72ab964468abf7b8ae24987a5dd84e",
+        "hash": "2261797176",
         "path": "outstatic/content/blog/ivaiva.md"
       },
       "author": {
@@ -684,7 +684,7 @@
       "publishedAt": "2024-02-07T12:58:23.229Z",
       "slug": "ivaiva",
       "status": "published",
-      "title": "іваіва"
+      "title": "SOLAR PANEL THIRD PARTY INSURANCE WARRANTY"
     }
   ]
 }
