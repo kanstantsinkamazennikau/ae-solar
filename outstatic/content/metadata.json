@@ -1,6 +1,6 @@
 {
-  "commit": "aebc4fc3e9778b9a5239eed6480a32ad81c94acf",
-  "generated": "2024-02-07T14:47:16.373Z",
+  "commit": "a225f9f1dfb5dd0ed65738bdd8fc6e819bb75e2b",
+  "generated": "2024-02-07T14:48:11.638Z",
   "metadata": [
     {
       "__outstatic": {
@@ -865,6 +865,24 @@
       "slug": "11",
       "status": "published",
       "title": "AE SOLAR IMAR CHINA JALAID BANNER 20.86 MWP ROOFTOP PROJECT"
+    },
+    {
+      "__outstatic": {
+        "commit": "a225f9f1dfb5dd0ed65738bdd8fc6e819bb75e2b",
+        "hash": "2405004668",
+        "path": "outstatic/content/blog/will-the-eu-really-be-carbon-neutral-by-2050.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T14:53:32.193Z",
+      "slug": "will-the-eu-really-be-carbon-neutral-by-2050",
+      "status": "published",
+      "title": "WILL THE EU REALLY BE CARBON NEUTRAL BY 2050?"
     }
   ]
 }
