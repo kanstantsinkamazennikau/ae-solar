@@ -1,6 +1,6 @@
 {
-  "commit": "5e9253736c6a873c0ed10d64c673583604e92004",
-  "generated": "2024-02-07T12:55:58.047Z",
+  "commit": "ff48db94c710ae9786d89d8b2f3d00dd6c1cb89f",
+  "generated": "2024-02-07T12:56:25.598Z",
   "metadata": [
     {
       "__outstatic": {
@@ -739,6 +739,24 @@
       "slug": "ycuy",
       "status": "published",
       "title": "SOLAR ENERGY IN THE MIDDLE EAST/ NORTH AFRICA"
+    },
+    {
+      "__outstatic": {
+        "commit": "ff48db94c710ae9786d89d8b2f3d00dd6c1cb89f",
+        "hash": "2499762990",
+        "path": "outstatic/content/blog/india-solar-energy-market.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T13:02:12.905Z",
+      "slug": "india-solar-energy-market",
+      "status": "published",
+      "title": "INDIA SOLAR ENERGY MARKET"
     }
   ]
 }
