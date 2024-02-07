@@ -1,6 +1,6 @@
 {
-  "commit": "ea877f7371a82b6f0df10357671acbef9aa57387",
-  "generated": "2024-02-07T14:48:53.676Z",
+  "commit": "38ef10569bac052f643b693535e9abfb835449db",
+  "generated": "2024-02-07T14:49:09.757Z",
   "metadata": [
     {
       "__outstatic": {
@@ -868,8 +868,8 @@
     },
     {
       "__outstatic": {
-        "commit": "ea877f7371a82b6f0df10357671acbef9aa57387",
-        "hash": "3772532077",
+        "commit": "38ef10569bac052f643b693535e9abfb835449db",
+        "hash": "1390002617",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -879,10 +879,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:54:16.329Z",
+      "publishedAt": "2024-02-07T14:55:06.500Z",
       "slug": "11",
       "status": "published",
-      "title": "DETAILED EXPLANATION OF CHINA’S GRID-CONNECTED NEW PV INSTALLATIONS Q1-Q3 2023"
+      "title": "11"
     }
   ]
 }
