@@ -1,6 +1,6 @@
 {
   "commit": "b46e8e7de7445c5613836d0dbc93414ad614fa6f",
-  "generated": "2024-02-07T14:16:15.316Z",
+  "generated": "2024-02-07T14:16:34.805Z",
   "metadata": [
     {
       "__outstatic": {
@@ -833,7 +833,7 @@
     {
       "__outstatic": {
         "commit": "b46e8e7de7445c5613836d0dbc93414ad614fa6f",
-        "hash": "3740949016",
+        "hash": "929379265",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -846,7 +846,7 @@
       "publishedAt": "2024-02-07T14:22:11.371Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "HOW LONG DOES A SOLAR PANEL LAST?"
     }
   ]
 }
