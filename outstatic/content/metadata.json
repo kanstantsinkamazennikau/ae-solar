@@ -1,6 +1,6 @@
 {
-  "commit": "d1c294adf2219e2b17f3c804438924cfc519e556",
-  "generated": "2024-02-07T14:43:45.828Z",
+  "commit": "e5f2e300f9c28e74004d1a44f45fab103e100911",
+  "generated": "2024-02-07T14:44:09.409Z",
   "metadata": [
     {
       "__outstatic": {
@@ -847,6 +847,24 @@
       "slug": "11",
       "status": "published",
       "title": "WHAT ARE THE CLEAN ENERGY SOURCES AND WHY IS SOLAR PHOTOVOLTAICS ONE OF THE BEST?"
+    },
+    {
+      "__outstatic": {
+        "commit": "e5f2e300f9c28e74004d1a44f45fab103e100911",
+        "hash": "2300508726",
+        "path": "outstatic/content/blog/ae-solar-listed-as-tier-1-pv-module-manufacturer-by-bloombergnef.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T14:49:57.779Z",
+      "slug": "ae-solar-listed-as-tier-1-pv-module-manufacturer-by-bloombergnef",
+      "status": "published",
+      "title": "AE SOLAR LISTED AS TIER 1 PV MODULE MANUFACTURER BY BLOOMBERGNEF"
     }
   ]
 }
