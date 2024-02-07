@@ -1,6 +1,6 @@
 {
-  "commit": "4d56a6136f7d2b3efeb8a35b2e3da49af4039a73",
-  "generated": "2024-02-07T14:45:49.365Z",
+  "commit": "ba7e6f6f8ecccbd56e1dc15eb1b31d988015a693",
+  "generated": "2024-02-07T14:47:04.031Z",
   "metadata": [
     {
       "__outstatic": {
@@ -850,8 +850,8 @@
     },
     {
       "__outstatic": {
-        "commit": "4d56a6136f7d2b3efeb8a35b2e3da49af4039a73",
-        "hash": "3735045866",
+        "commit": "ba7e6f6f8ecccbd56e1dc15eb1b31d988015a693",
+        "hash": "1517649250",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -861,10 +861,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:51:20.645Z",
+      "publishedAt": "2024-02-07T14:53:00.332Z",
       "slug": "11",
       "status": "published",
-      "title": "EUROPE REMAINS THE LARGEST BUYER OF CHINESE SOLAR MODULES"
+      "title": "11"
     }
   ]
 }
