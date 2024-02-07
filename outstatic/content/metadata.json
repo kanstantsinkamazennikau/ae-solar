@@ -1,6 +1,6 @@
 {
-  "commit": "91f40e3ab6cfe7eedb0c969e0b698b618fe4e217",
-  "generated": "2024-02-07T12:48:40.830Z",
+  "commit": "654258525012463de332d14786be78e9e4a3b897",
+  "generated": "2024-02-07T12:49:05.608Z",
   "metadata": [
     {
       "__outstatic": {
@@ -598,8 +598,8 @@
     },
     {
       "__outstatic": {
-        "commit": "91f40e3ab6cfe7eedb0c969e0b698b618fe4e217",
-        "hash": "2452730787",
+        "commit": "654258525012463de332d14786be78e9e4a3b897",
+        "hash": "526605879",
         "path": "outstatic/content/blog/yy.md"
       },
       "author": {
@@ -612,7 +612,7 @@
       "publishedAt": "2024-02-07T12:54:36.905Z",
       "slug": "yy",
       "status": "published",
-      "title": "йй"
+      "title": "MIDDLE EAST SOLAR MARKET"
     }
   ]
 }
