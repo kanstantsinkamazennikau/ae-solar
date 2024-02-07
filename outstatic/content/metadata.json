@@ -1,6 +1,6 @@
 {
-  "commit": "9f3a5c43d730a6cbe1c08256c8754abd7df3d489",
-  "generated": "2024-02-07T13:09:49.993Z",
+  "commit": "d827235b04d8014f705b90c199bf6e4be978f8c8",
+  "generated": "2024-02-07T14:14:07.072Z",
   "metadata": [
     {
       "__outstatic": {
@@ -829,6 +829,24 @@
       "slug": "how-much-power-does-a-solar-panel-produce",
       "status": "published",
       "title": "HOW MUCH POWER DOES A SOLAR PANEL PRODUCE?"
+    },
+    {
+      "__outstatic": {
+        "commit": "d827235b04d8014f705b90c199bf6e4be978f8c8",
+        "hash": "2089653060",
+        "path": "outstatic/content/blog/11.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T14:20:02.595Z",
+      "slug": "11",
+      "status": "published",
+      "title": "11"
     }
   ]
 }
