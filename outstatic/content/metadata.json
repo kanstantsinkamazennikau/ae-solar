@@ -1,6 +1,6 @@
 {
-  "commit": "fec141a3a9ab5f7fb7c237f66e3e0d762114a869",
-  "generated": "2024-02-07T14:39:38.623Z",
+  "commit": "18c46b16f965072a064729a7fa4460e318816349",
+  "generated": "2024-02-07T14:39:54.322Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "fec141a3a9ab5f7fb7c237f66e3e0d762114a869",
-        "hash": "4097586193",
+        "commit": "18c46b16f965072a064729a7fa4460e318816349",
+        "hash": "2025659198",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -846,7 +846,7 @@
       "publishedAt": "2024-02-07T14:45:34.992Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "BIFACIAL SOLAR PANELS WHAT ARE THEY AND HOW DO THEY WORK?"
     }
   ]
 }
