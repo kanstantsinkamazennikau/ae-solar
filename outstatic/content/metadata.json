@@ -1,6 +1,6 @@
 {
-  "commit": "68514d029cbe889ca869d6ae403d33507f8e7d7d",
-  "generated": "2024-02-07T12:47:48.385Z",
+  "commit": "1a0ff6b7c0879d27079cbd2be21fa19ad0f5387c",
+  "generated": "2024-02-07T12:48:03.920Z",
   "metadata": [
     {
       "__outstatic": {
@@ -580,8 +580,8 @@
     },
     {
       "__outstatic": {
-        "commit": "68514d029cbe889ca869d6ae403d33507f8e7d7d",
-        "hash": "2165168374",
+        "commit": "1a0ff6b7c0879d27079cbd2be21fa19ad0f5387c",
+        "hash": "806934474",
         "path": "outstatic/content/blog/chyas.md"
       },
       "author": {
@@ -594,7 +594,7 @@
       "publishedAt": "2024-02-07T12:53:44.856Z",
       "slug": "chyas",
       "status": "published",
-      "title": "чяс"
+      "title": "FLOATING SOLAR PANELS CHALLENGES – AE SOLAR"
     }
   ]
 }
