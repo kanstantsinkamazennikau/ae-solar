@@ -1,6 +1,6 @@
 {
-  "commit": "6551f01c7675d7d3eb9ca15ce623fab8217af4a4",
-  "generated": "2024-02-07T14:36:43.826Z",
+  "commit": "e520c613e74fee5efa5e22aa8ae8a09c8036e418",
+  "generated": "2024-02-07T14:37:01.073Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "6551f01c7675d7d3eb9ca15ce623fab8217af4a4",
-        "hash": "1795604528",
+        "commit": "e520c613e74fee5efa5e22aa8ae8a09c8036e418",
+        "hash": "678344735",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -843,10 +843,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:42:21.301Z",
+      "publishedAt": "2024-02-07T14:42:57.917Z",
       "slug": "11",
       "status": "published",
-      "title": "SOLAR PANELS FOR BUSINESS"
+      "title": "11"
     }
   ]
 }
