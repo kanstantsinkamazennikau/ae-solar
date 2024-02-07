@@ -1,6 +1,6 @@
 {
-  "commit": "eaf09fe08ccf4b46deacc963131ee3eca4c7ab23",
-  "generated": "2024-02-07T12:43:46.910Z",
+  "commit": "28b7a45d53989f57cdc40bd6bffe92460e5a9c38",
+  "generated": "2024-02-07T12:44:10.646Z",
   "metadata": [
     {
       "__outstatic": {
@@ -235,24 +235,6 @@
       "slug": "history-and-the-development-of-photovoltaics",
       "status": "published",
       "title": "HISTORY AND THE DEVELOPMENT OF PHOTOVOLTAICS"
-    },
-    {
-      "__outstatic": {
-        "commit": "3c21b5fe1daab4f94b64483365569e81c92a1d43",
-        "hash": "1518426319",
-        "path": "outstatic/content/blog/floating-pv-systems.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:19:04.832Z",
-      "slug": "floating-pv-systems",
-      "status": "published",
-      "title": "FLOATING PV SYSTEMS"
     },
     {
       "__outstatic": {
@@ -559,6 +541,24 @@
       "slug": "solar-panel-recycling",
       "status": "published",
       "title": "SOLAR PANEL RECYCLING"
+    },
+    {
+      "__outstatic": {
+        "commit": "28b7a45d53989f57cdc40bd6bffe92460e5a9c38",
+        "hash": "3118170573",
+        "path": "outstatic/content/blog/floating-pv-systems.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:49:59.002Z",
+      "slug": "floating-pv-systems",
+      "status": "published",
+      "title": "FLOATING PV SYSTEMS"
     }
   ]
 }
