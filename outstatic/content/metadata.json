@@ -1,6 +1,6 @@
 {
   "commit": "a7422c5a19291b8a761dcb2a1dabb5530272b0ea",
-  "generated": "2024-02-07T14:42:21.753Z",
+  "generated": "2024-02-07T14:42:39.074Z",
   "metadata": [
     {
       "__outstatic": {
@@ -833,7 +833,7 @@
     {
       "__outstatic": {
         "commit": "a7422c5a19291b8a761dcb2a1dabb5530272b0ea",
-        "hash": "3335415338",
+        "hash": "2127120720",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -846,7 +846,7 @@
       "publishedAt": "2024-02-07T14:48:17.841Z",
       "slug": "11",
       "status": "published",
-      "title": "11"
+      "title": "LIGHT-INDUCED DEGRADATION"
     }
   ]
 }
