@@ -1,6 +1,6 @@
 {
-  "commit": "1522ddb239af29823e1d5acc805506ec5815ee4d",
-  "generated": "2024-02-07T14:33:02.476Z",
+  "commit": "7f1dc932d61b58099d8ef76c2e44d13fd1933fdf",
+  "generated": "2024-02-07T14:33:09.705Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,8 +832,8 @@
     },
     {
       "__outstatic": {
-        "commit": "1522ddb239af29823e1d5acc805506ec5815ee4d",
-        "hash": "2451032223",
+        "commit": "7f1dc932d61b58099d8ef76c2e44d13fd1933fdf",
+        "hash": "1748234957",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -843,10 +843,10 @@
       "collection": "blog",
       "coverImage": "",
       "description": "",
-      "publishedAt": "2024-02-07T14:36:58.505Z",
+      "publishedAt": "2024-02-07T14:39:06.286Z",
       "slug": "11",
       "status": "published",
-      "title": "HOW DOES SOLAR PANEL CREATE ENERGY"
+      "title": "11"
     }
   ]
 }
