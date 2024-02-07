@@ -1,6 +1,6 @@
 {
-  "commit": "cfd3f58d5c3f6d60194bfe5072fe0dcd27b6c378",
-  "generated": "2024-02-07T12:29:39.755Z",
+  "commit": "d3673592de78e02cb9dee5ed547903c1258b5c39",
+  "generated": "2024-02-07T12:30:06.089Z",
   "metadata": [
     {
       "__outstatic": {
@@ -217,24 +217,6 @@
       "slug": "solar-advancements-in-2020-2021",
       "status": "published",
       "title": "SOLAR ADVANCEMENTS IN 2020-2021"
-    },
-    {
-      "__outstatic": {
-        "commit": "a3606d6ca4e5ab91e2c9206151426bfc72861533",
-        "hash": "3680300961",
-        "path": "outstatic/content/blog/ten-myths-about-solar-energy.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-06T15:04:31.200Z",
-      "slug": "ten-myths-about-solar-energy",
-      "status": "published",
-      "title": "TEN MYTHS ABOUT SOLAR ENERGY"
     },
     {
       "__outstatic": {
@@ -523,6 +505,24 @@
       "slug": "economic-benefits-and-efficiency-of-solar-panels",
       "status": "published",
       "title": "ECONOMIC BENEFITS AND EFFICIENCY OF SOLAR PANELS"
+    },
+    {
+      "__outstatic": {
+        "commit": "d3673592de78e02cb9dee5ed547903c1258b5c39",
+        "hash": "3208980978",
+        "path": "outstatic/content/blog/ten-myths-about-solar-energy.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T12:35:51.896Z",
+      "slug": "ten-myths-about-solar-energy",
+      "status": "published",
+      "title": "TEN MYTHS ABOUT SOLAR ENERGY"
     }
   ]
 }

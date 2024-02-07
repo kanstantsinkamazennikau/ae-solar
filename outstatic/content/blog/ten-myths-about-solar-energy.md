@@ -7,7 +7,7 @@ author:
 slug: 'ten-myths-about-solar-energy'
 description: ''
 coverImage: ''
-publishedAt: '2024-02-06T15:04:31.200Z'
+publishedAt: '2024-02-07T12:35:51.896Z'
 ---
 
 ## **MYTH 1: SOLAR ENERGY IS TOO COSTLY AND NOT A VIABLE OPTION.**
