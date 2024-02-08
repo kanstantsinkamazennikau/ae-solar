@@ -262,7 +262,7 @@ export default function PanelsFlower() {
                 <div className="flex">
                   <LinkWithArrow
                     label={PRODUCT_INTRO_LEARN_MORE}
-                    href=""
+                    href={`/product/${panel}`}
                     externalStyle="[font-size:_clamp(10px,1vw,16px)!important]"
                   />
                 </div>

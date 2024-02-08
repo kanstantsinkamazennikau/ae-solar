@@ -41,7 +41,7 @@ export default function LightingTheWay() {
         <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,2vw,36px)]">
           {PRODUCTS_WELCOME}
         </p>
-        <p className="text-8xl text-center -tracking-[2.88px] leading-none [font-size:_clamp(34px,5vw,102px)] max-w-[1000px]">
+        <p className="text-8xl text-center -tracking-[2.88px] leading-none [font-size:_clamp(34px,5vw,102px)] max-w-[1000px] after:p-0">
           {PRODUCTS_LIGHTING}
         </p>
       </div>

@@ -20,7 +20,15 @@ export default function ProductsPage() {
               <div className="[font-size:_clamp(14px,3vw,48px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
                 {GET_IN_TOUCH_ELEVATE_GROWTH}
               </div>
-              <div className="[font-size:_clamp(20px,3.5vw,64px)] -tracking-[-1.92px] font-semibold max-w-[1180px] leading-[130%]">
+              <div
+                className="
+                  [font-size:_clamp(20px,3.5vw,64px)]
+                  -tracking-[-1.92px]
+                  font-semibold
+                  max-w-[1180px]
+                  leading-[130%]
+                "
+              >
                 {PRODUCT_JOIN}
               </div>
             </div>
