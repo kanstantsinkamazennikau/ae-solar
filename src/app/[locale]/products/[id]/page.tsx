@@ -4,6 +4,17 @@ import PanelTechnology from "@/app/[locale]/products/[id]/components/PanelTechno
 import ProductsPanel from "@/app/[locale]/products/[id]/components/ProductsPanel";
 import { ProductPageProps } from "@/app/[locale]/products/[id]/types";
 
+export async function generateStaticParams() {
+  return [
+    { slug: "Aurora" },
+    { slug: "Meteor" },
+    { slug: "Terra" },
+    { slug: "Neptune" },
+    { slug: "ShadeStar" },
+    { slug: "Comet" },
+  ];
+}
+
 export default function ProductPage({ params: { id } }: ProductPageProps) {
   return (
     <div className="flex flex-col items-center w-full">
