@@ -169,3 +169,24 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
     },
   ],
 };
+export const PRODUCT_CREATE_YOUR = "Create Your";
+export const PRODUCT_OWN_SPACE = "Own Space";
+export const CREATE_SPACE = [
+  {
+    image: "customizationModules.png",
+    element: "Modules",
+    elementTitle: "Many variations",
+    elementDescription:
+      "As we forge ahead into a future where sustainable energy is crucial, we turn our gaze towards the vast, renewable power source in our cosmos—the Sun.",
+  },
+  {
+    image: "customizationFrames.png",
+    element: "Frames",
+    elementTitle: "Two colors",
+    elementDescription:
+      "As we forge ahead into a future where sustainable energy is crucial, we turn our gaze towards the vast, renewable power source in our cosmos—the Sun.",
+  },
+];
+export const PRODUCT_IN_CONCLUSION = "In Conclusion";
+export const PRODUCT_PERC_TECHNOLOGY =
+  "PERC technology is a leap forward in harnessing solar energy, representing a commitment to superior technology, exceptional quality, and a cleaner, greener world.";

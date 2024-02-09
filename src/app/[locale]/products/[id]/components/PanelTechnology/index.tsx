@@ -6,13 +6,13 @@ import Image from "next/image";
 
 export default function PanelTechnology() {
   return (
-    <div className="relative -translate-y-[24%] overflow-hidden w-full [background:radial-gradient(black,transparent)] -mb-[24%]">
+    <div className="relative -translate-y-[24%] overflow-hidden w-full -mb-[24%] mt-[100px]">
       <Image
         src="/images/products/starPath.svg"
         alt="starPath"
         width={1320}
         height={1320}
-        className="scale-[1.45] mx-auto"
+        className=" mx-auto"
       />
       <div
         className="
@@ -37,7 +37,7 @@ export default function PanelTechnology() {
         "
       >
         <div className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-bold -tracking-[0.48px] leading-[100%] text-center">
-          <p>{PRODUCT_PERC}</p>
+          {PRODUCT_PERC}
         </div>
         <div className="text-center [font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim">
           {PRODUCT_PERC_DESCRIPTION.split(/\r?\n|\r|\n/g).map((string) => (

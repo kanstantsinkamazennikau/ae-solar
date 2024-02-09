@@ -1,6 +1,7 @@
 "use client";
 
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
+import PanelsFlowerIcon from "@/app/[locale]/products/components/PanelsFlowerIcon";
 import {
   PRODUCT_DESCRIPTIONS,
   PRODUCT_PANELS_IMAGES,
@@ -16,7 +17,20 @@ import { useEffect, useRef, useState } from "react";
 export default function PanelsFlower() {
   const sliderRef = useRef<Splide>(null);
   const [panel, setPanel] = useState("Aurora");
+  const [autoplay, setAutoPlay] = useState(false);
   const sliderId = PRODUCT_PANELS_IMAGES.indexOf(panel);
+
+  const onMouseEnter = () => {
+    setAutoPlay(true);
+  };
+
+  const onMouseLeave = () => {
+    setAutoPlay(false);
+  };
+
+  const onClick = (panel: string) => {
+    setPanel(panel);
+  };
 
   const options = {
     type: "loop",
@@ -61,60 +75,15 @@ export default function PanelsFlower() {
             "
           >
             {PRODUCT_SELECTOR_IMAGES.map((product) => (
-              <div
+              <PanelsFlowerIcon
+                chosenPanel={panel}
+                container={product.container}
+                icon={product.icon}
+                onClick={onClick}
+                panel={product.panel}
+                position={product.position}
                 key={product.panel}
-                className={`${product.container} ${product.position}`}
-                onClick={() => setPanel(product.panel)}
-              >
-                <div
-                  className={`
-                    min-[560px]:p-4
-                    p-3
-                    rounded-full
-                    outline
-                    outline-[#B30006]
-                    bg-[#00000033]
-                    hover:outline-2
-                    hover:[box-shadow:0px_0px_160px_0px_#F60109,0px_0px_40px_0px_#F60109]
-                    ${
-                      panel === product.panel
-                        ? "[box-shadow:0px_0px_160px_0px_#F60109,0px_0px_40px_0px_#F60109] outline-2"
-                        : ""
-                    }
-                    outline-1
-              `}
-                >
-                  <Image
-                    src={`/images/models/${product.icon}`}
-                    alt={product.icon}
-                    priority
-                    width={32}
-                    height={32}
-                    className="
-                      min-[560px]:w-[32px]
-                      min-[560px]:h-[32px]
-                      h-5
-                      w-5
-                      relative
-                      z-40
-                    "
-                  />
-                </div>
-                <div
-                  className=" 
-                    min-[1024px]:text-2xl
-                    md:text-lg
-                    min-[560px]:text-sm
-                    text-xs
-                    -tracking-[0.24px]
-                    font-semibold
-                    min-[560px]:block
-                    hidden
-                  "
-                >
-                  {product.panel}
-                </div>
-              </div>
+              />
             ))}
           </div>
           <Image

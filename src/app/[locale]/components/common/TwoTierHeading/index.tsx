@@ -39,9 +39,7 @@ export default function TwoTierHeading({
         <div className={`${reverseColor ? "text-white" : "text-base-red"}`}>
           {tierOneHeading}
         </div>
-        <div
-          className={`${reverseColor ? "text-dark-gray-900" : "text-white"}`}
-        >
+        <div className={`${reverseColor ? "text-base-red" : "text-white"}`}>
           {tierTwoHeading}
         </div>
       </div>

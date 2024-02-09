@@ -28,6 +28,7 @@ export function MainPageFAQ() {
         tierOneHeading={FAQ_QUESTION}
         tierTwoHeading={FAQ_SOLUTIONS}
         align="left"
+        size="small"
       />
       <div className="flex flex-col items-end lg:mb-[120px] md:mb-[80px] mb-0">
         <div className="max-w-[873px] w-full">

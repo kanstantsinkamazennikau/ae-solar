@@ -53,17 +53,17 @@ export default function Introduction({ id }: IntroductionProps) {
               height={700}
               quality={100}
               className="
-              static
-              z-10
-              lg:w-[578px]
-              lg:h-[700px]
-              md:w-[495px]
-              md:h-[600px]
-              min-[540px]:w-[340px]
-              min-[540px]:h-[461px]
-              w-[240px]
-              h-[361px]
-            "
+                static
+                z-10
+                lg:w-[578px]
+                lg:h-[700px]
+                md:w-[495px]
+                md:h-[600px]
+                min-[540px]:w-[340px]
+                min-[540px]:h-[461px]
+                w-[240px]
+                h-[361px]
+              "
               //0.83
             />
             <Image
@@ -95,22 +95,13 @@ export default function Introduction({ id }: IntroductionProps) {
             />
           </div>
 
-          {/* <div className="absolute bottom-0 left-0">
-            <Image
-              src="/images/products/introductionLight.svg"
-              alt="introductionLight"
-              priority
-              width={678}
-              height={678}
-            />
-          </div> */}
           <div
             className="
               flex
               flex-col
               gap-10
               self-end
-              max-w-[670px]
+              max-w-[700px]
               static
               z-20
               px-5
