@@ -9,11 +9,10 @@ import Image from "next/image";
 
 export default function Power() {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-[148px]">
       <BasicWidthContainer styles="relative justify-center items-center flex">
         <div
           className="
-            mt-[148px]
             xl:py-[60px]
             xl:px-[60px]
             md:py-[40px]
@@ -64,7 +63,7 @@ export default function Power() {
           priority
           width={1320}
           height={136}
-          className="absolute translate-y-[calc(10%)] scale-x-[1.2] scale-y-[1]"
+          className="absolute scale-x-[1.2] scale-y-[1]"
         />
       </BasicWidthContainer>
     </div>

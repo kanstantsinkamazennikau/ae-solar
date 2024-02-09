@@ -7,11 +7,11 @@ import Image from "next/image";
 
 export default function Conclusion() {
   return (
-    <div className="flex justify-center xl:mb-[150px] lg:mb-[120px] md:mb-[100px] mb-[80px]">
+    <div className="flex justify-center xl:mb-[150px] lg:mb-[120px] md:mb-[100px] mb-[80px] mt-20">
       <BasicWidthContainer styles="relative justify-center items-center flex">
         <div
           className="
-            mt-20
+
             xl:py-[130px]
             xl:px-[60px]
             md:py-[80px]
@@ -68,7 +68,10 @@ export default function Conclusion() {
           priority
           width={1320}
           height={136}
-          className="absolute translate-y-[calc(4%)] scale-[1.75]"
+          className="
+            absolute
+            scale-[1.75]
+          "
         />
       </BasicWidthContainer>
     </div>
