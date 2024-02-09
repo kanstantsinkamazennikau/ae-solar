@@ -3,11 +3,12 @@ import {
   PRODUCT_IN_CONCLUSION,
   PRODUCT_PERC_TECHNOLOGY,
 } from "@/app/[locale]/products/[id]/constants";
+import Image from "next/image";
 
 export default function Conclusion() {
   return (
     <div className="flex justify-center xl:mb-[150px] lg:mb-[120px] md:mb-[100px] mb-[80px]">
-      <BasicWidthContainer>
+      <BasicWidthContainer styles="relative justify-center items-center flex">
         <div
           className="
             mt-20
@@ -20,40 +21,55 @@ export default function Conclusion() {
             border
             border-solid
             backdrop-blur-[10px]
-            bg-[#00000033]
+            bg-[#000000c2]
             [border-image:linear-gradient(154deg,_#f60109_0%,_rgb(49_9_10_/_73%)_27%,_rgb(49_9_10_/_73%)_51%,_rgb(246_1_9_/_28%)_80%,_#f60109_100%)_1]
-            max-w-[870px]
+            xl:max-w-[870px]
+            lg:max-w-[670px]
+            md:max-w-[550px]
+            min-[560px]:max-w-[400px]
+            max-w-[300px]
             flex
             flex-col
-            xl:gap-10
-            md:gap-6
+            md:gap-12
             gap-5
             justify-center
             mx-auto
             relative
+            overflow-hidden
+            z-10
           "
         >
-          <p className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-extrabold -tracking-[1.44px] leading-[120%]">
+          <p className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-extrabold -tracking-[1.44px] leading-[120%] text-center">
             {PRODUCT_IN_CONCLUSION}
           </p>
-          <p className="[font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim">
+          <p className="[font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim text-center">
             {PRODUCT_PERC_TECHNOLOGY}
           </p>
-          {/* <Image
-            src="/images/products/energy.svg"
-            alt="energy"
-            width={720}
-            height={250}
-            className="absolute top-0 -translate-y-1/2 -translate-x-1/4"
+          <Image
+            src={`/images/products/moduleAngleConclusionLeft.png`}
+            alt="moduleAngleConclusionLeft"
+            priority
+            width={310}
+            height={310}
+            className="absolute left-0 top-0"
           />
           <Image
-            src="/images/products/energy.svg"
-            alt="energy"
-            width={720}
-            height={250}
-            className="absolute bottom-0 -scale-x-100"
-          /> */}
+            src={`/images/products/moduleAngleConclusionRight.png`}
+            alt="moduleAngleConclusionRight"
+            priority
+            width={240}
+            height={240}
+            className="absolute right-0 bottom-0"
+          />
         </div>
+        <Image
+          src={`/images/products/backLight.svg`}
+          alt="backLight"
+          priority
+          width={1320}
+          height={136}
+          className="absolute translate-y-[calc(4%)] scale-[1.75]"
+        />
       </BasicWidthContainer>
     </div>
   );

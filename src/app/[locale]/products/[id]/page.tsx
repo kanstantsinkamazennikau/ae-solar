@@ -10,7 +10,7 @@ import { ProductPageProps } from "@/app/[locale]/products/[id]/types";
 
 export default async function Page({ params: { id } }: ProductPageProps) {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full overflow-hidden">
       <ProductsPanel id={id} />
       <PanelTechnology />
       <Introduction id={id} />

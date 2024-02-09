@@ -9,7 +9,7 @@ import { GET_IN_TOUCH_ELEVATE_GROWTH } from "@/app/[locale]/utils/constants";
 
 export default function ProductsPage() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <LightingTheWay />
       <PanelsFlower />
       <Power />

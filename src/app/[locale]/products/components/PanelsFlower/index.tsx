@@ -86,16 +86,13 @@ export default function PanelsFlower() {
               />
             ))}
           </div>
-          <Image
-            src={`/images/products/selector.svg`}
-            alt="selector"
-            priority
-            width={606}
-            height={606}
+          <div
             className="
               absolute
               bottom-0
-              left-1/2
+              md:left-[calc(50%+24px)]
+              min-[560px]:left-[calc(50%+18px)]
+              left-[calc(50%+13px)]
               -translate-x-1/2
               md:w-[606px]
               md:h-[606px]
@@ -103,8 +100,44 @@ export default function PanelsFlower() {
               min-[560px]:w-[450px]
               h-[310px]
               w-[310px]
+              overflow-hidden
+              flex
+              justify-center items-center
             "
-          />
+          >
+            <Image
+              src={`/images/products/selector1.svg`}
+              alt="selector"
+              priority
+              width={606}
+              height={606}
+              className="absolute"
+            />
+            <video
+              width="600"
+              height="600"
+              loop
+              autoPlay
+              muted
+              className="
+                md:w-[475px]
+                md:h-[548px]
+                min-[560px]:h-[406px]
+                min-[560px]:w-[353px]
+                h-[279px]
+                w-[242px]
+                object-cover
+                relative
+                md:-left-[25px]
+                min-[560px]:-left-[18px]
+                -left-[13px]
+                [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]
+              "
+            >
+              <source src="/images/products/shine.mp4" type="video/mp4" />
+            </video>
+          </div>
+
           <Splide
             aria-label="solar panels"
             options={options}

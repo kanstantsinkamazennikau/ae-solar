@@ -18,7 +18,7 @@ export const PRODUCT_DESCRIPTIONS = {
   Meteor: `Meteor (TOPCon) Our Tunnel Oxide Passivated Contact (TOPCon) technology - named Meteor - minimizes power loss and shines brightly, even in low light conditions. Its robust design and energy-efficient manufacturing process make it a game-changer in solar technology.`,
 };
 
-export const PRODUCT_WE_TRANSFORM = "We transform sunlight into power.";
+export const PRODUCT_WE_TRANSFORM = "We transform sunlight into power — ";
 export const PRODUCT_FOR_YOU = "for you and for the planet";
 export const PRODUCT_ADVANCED_TECHNOLOGY =
   "Our range of advanced solar technologies is designed to harness the abundant energy of the sun, providing renewable, clean, and highly efficient solutions.";
