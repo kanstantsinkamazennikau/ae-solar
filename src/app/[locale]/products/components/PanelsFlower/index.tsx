@@ -48,6 +48,11 @@ export default function PanelsFlower() {
 
   return (
     <div className="flex items-center flex-col">
+      <div className="[font-size:_clamp(24px,3vw,48px)] font-bold leading-[100%] -tracking-[0.48px] text-center mb-10">
+        <p>Time to choose</p>
+        <p className="text-[#B30006]">your module</p>
+      </div>
+
       <div className="relative flex justify-center xl:h-[960px] md:h-[860px] min-[560px]:h-[650px] h-[500px] overflow-hidden w-full">
         <Image
           src={`/images/products/solarSystem.svg`}
@@ -55,10 +60,10 @@ export default function PanelsFlower() {
           priority
           width={1520}
           height={426}
-          className="absolute bottom-0 scale-125"
+          className="absolute bottom-0 scale-x-125 scale-y-110"
         />
         {/* SELECTOR */}
-        <div className="relative w-full xl:bottom-[250px] md:bottom-[140px] min-[560px]:bottom-[100px] bottom-[60px]">
+        <div className="relative w-full xl:bottom-[250px] md:bottom-[140px] min-[560px]:bottom-[100px] bottom-[84px]">
           <div
             className="
               absolute
@@ -253,7 +258,7 @@ export default function PanelsFlower() {
                   {panel}
                 </span>
               </div>
-              <div className="flex flex-col min-[560px]:gap-5 gap-2 self-end max-w-[356px] w-full">
+              <div className="flex flex-col min-[560px]:gap-5 gap-2 self-end max-w-[356px] w-full z-10">
                 <div className="[font-size:_clamp(10px,1vw,16px)] font-normal font-walsheim">
                   {
                     PRODUCT_DESCRIPTIONS[
@@ -264,7 +269,7 @@ export default function PanelsFlower() {
                 <div className="flex">
                   <LinkWithArrow
                     label={PRODUCT_INTRO_LEARN_MORE}
-                    href={`/product/${panel}`}
+                    href={`/products/${panel}`}
                     externalStyle="[font-size:_clamp(10px,1vw,16px)!important]"
                   />
                 </div>

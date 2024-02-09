@@ -48,7 +48,7 @@ export default function GetInTouch({ children }: GetInTuchProps) {
         2xl:bg-auto
         -mb-[200px]
         h-[800px]
-        lg:[background-size:1500px]
+        lg:[background-size:1450px]
         md:[background-size:1120px]
         [background-size:1100px]
       "

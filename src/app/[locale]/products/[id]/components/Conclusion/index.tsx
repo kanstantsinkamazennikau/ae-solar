@@ -39,10 +39,10 @@ export default function Conclusion() {
             z-10
           "
         >
-          <p className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-extrabold -tracking-[1.44px] leading-[120%] text-center">
+          <p className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-extrabold -tracking-[1.44px] leading-[120%] text-center z-10">
             {PRODUCT_IN_CONCLUSION}
           </p>
-          <p className="[font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim text-center">
+          <p className="[font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim text-center z-10">
             {PRODUCT_PERC_TECHNOLOGY}
           </p>
           <Image
@@ -51,7 +51,7 @@ export default function Conclusion() {
             priority
             width={310}
             height={310}
-            className="absolute left-0 top-0"
+            className="absolute left-0 top-0 z-0"
           />
           <Image
             src={`/images/products/moduleAngleConclusionRight.png`}

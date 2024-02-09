@@ -13,7 +13,7 @@ export default function Power() {
       <BasicWidthContainer styles="relative justify-center items-center flex">
         <div
           className="
-            mt-20
+            mt-[148px]
             xl:py-[60px]
             xl:px-[60px]
             md:py-[40px]
@@ -45,7 +45,7 @@ export default function Power() {
             <p className="max-w-[540px]">{PRODUCT_WE_TRANSFORM}</p>
             <p className="text-[#B30006]">{PRODUCT_FOR_YOU}</p>
           </div>
-          <div className="flex justify-center items-start md:gap-8 gap-4 self-stretch [font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim">
+          <div className="flex justify-center items-start md:gap-8 gap-4 self-stretch [font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim z-10">
             <p className="max-w-[360px]">{PRODUCT_ADVANCED_TECHNOLOGY}</p>
             <p className="max-w-[360px]">{PRODUCT_INNOVATIVE_PRODUCTS}</p>
           </div>
@@ -64,7 +64,7 @@ export default function Power() {
           priority
           width={1320}
           height={136}
-          className="absolute translate-y-[calc(4%)] scale-[1.2]"
+          className="absolute translate-y-[calc(10%)] scale-x-[1.2] scale-y-[1]"
         />
       </BasicWidthContainer>
     </div>
