@@ -23,6 +23,7 @@ export default function TwoTierHeading({
   size = "default",
   reverseColor = false,
   marginBottomNone,
+  externalStyle,
 }: TwoTierHeadingProps) {
   return (
     <>
@@ -34,6 +35,7 @@ export default function TwoTierHeading({
           w-full
           ${!marginBottomNone ? "xl:mb-20 lg:mb-16 md:mb-12 mb-10" : "mb-0"}
           ${textAlign[align]}
+          ${externalStyle}
         `}
       >
         <div className={`${reverseColor ? "text-white" : "text-base-red"}`}>

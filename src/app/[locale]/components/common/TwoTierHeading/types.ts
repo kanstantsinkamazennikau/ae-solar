@@ -4,5 +4,6 @@ export interface TwoTierHeadingProps {
   align?: "right" | "left";
   size?: "default" | "small";
   reverseColor?: boolean;
+  externalStyle?: string;
   marginBottomNone?: boolean;
 }

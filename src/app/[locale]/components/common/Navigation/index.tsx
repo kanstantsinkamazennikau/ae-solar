@@ -40,7 +40,9 @@ export default function Navigation() {
   };
 
   return (
-    <div className={`w-full sticky top-0 z-40 h-[64px] min-[920px]:h-[80px]`}>
+    <div
+      className={`w-full sticky top-0 z-40 h-[64px] min-[920px]:h-[80px] border-b border-solid border-[#d0d8e91a]`}
+    >
       {/* MAIN NAVIGATION */}
       <div className="w-full h-full backdrop-blur-[50px] absolute" />
       <div className="bg-navigation-black flex justify-center py-4 h-full">

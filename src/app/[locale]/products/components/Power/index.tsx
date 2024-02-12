@@ -22,8 +22,8 @@ export default function Power() {
             border
             border-solid
             backdrop-blur-[10px]
-            bg-[#000000c2]
             [border-image:linear-gradient(154deg,_#f60109_0%,_rgb(49_9_10_/_73%)_27%,_rgb(49_9_10_/_73%)_51%,_rgb(246_1_9_/_28%)_80%,_#f60109_100%)_1]
+            [background:linear-gradient(0deg,#000_0%,#000_100%),rgba(0,0,0,0.60)]
             xl:max-w-[870px]
             lg:max-w-[670px]
             md:max-w-[550px]
@@ -40,6 +40,7 @@ export default function Power() {
             z-10
           "
         >
+          <div className="w-full h-[130%] absolute left-0 top-0 [background:radial-gradient(#7474744d_0%,transparent_70%,transparent_100%)] -translate-y-1/2" />
           <div className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-extrabold -tracking-[1.44px] leading-[120%]">
             <p className="max-w-[540px]">{PRODUCT_WE_TRANSFORM}</p>
             <p className="text-[#B30006]">{PRODUCT_FOR_YOU}</p>

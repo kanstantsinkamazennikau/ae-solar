@@ -14,8 +14,7 @@ export default function Introduction({ id }: IntroductionProps) {
   const modelStatsKeys = Object.keys(modelStats);
 
   return (
-    <div className="flex w-full justify-center xl:mb-[280px] lg:mb-[180px] md:mb-[100px] mb-[80px]">
-      {/* <BasicWidthContainer> */}
+    <div className="flex w-full justify-center" id="introduction">
       <div
         className="
           relative
@@ -73,24 +72,23 @@ export default function Introduction({ id }: IntroductionProps) {
               width={418}
               height={606}
               className="
-              relative
-              lg:-left-[60px]
-              md:-left-[50px]
-              min-[540px]:-left-[40px]
-              -left-[20px]
-              max-h-[600px]
-              bg-blend-soft-light
-              mix-blend-plus-lighter
-              lg:w-[418px]
-              lg:h-[606px]
-              md:w-[289px]
-              md:h-[520px]
-              min-[540px]:w-[200px]
-              min-[540px]:h-[390px]
-              w-[120px]
-              h-[300px]
-
-            "
+                relative
+                lg:-left-[60px]
+                md:-left-[50px]
+                min-[540px]:-left-[40px]
+                -left-[20px]
+                max-h-[600px]
+                bg-blend-soft-light
+                mix-blend-plus-lighter
+                lg:w-[418px]
+                lg:h-[606px]
+                md:w-[289px]
+                md:h-[520px]
+                min-[540px]:w-[200px]
+                min-[540px]:h-[390px]
+                w-[120px]
+                h-[300px]
+              "
               //1.45
             />
           </div>
@@ -119,7 +117,7 @@ export default function Introduction({ id }: IntroductionProps) {
                 className="
                   [font-size:_clamp(20px,3.5vw,64px)]
                   font-semibold
-                  -tracking-[1.92]
+                  -tracking-[1.92px]
                 "
               >
                 {PRODUCT_INTRODUCTION}
@@ -133,7 +131,7 @@ export default function Introduction({ id }: IntroductionProps) {
                   -tracking-[1.92]
                 "
               >
-                {PRODUCT_INTRODUCTION_DESCRIPTION}
+                {PRODUCT_INTRODUCTION_DESCRIPTION[id]}
               </p>
             </div>
 
@@ -170,7 +168,6 @@ export default function Introduction({ id }: IntroductionProps) {
           </div>
         </div>
       </div>
-      {/* </BasicWidthContainer> */}
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default async function Image() {
           justifyContent: "center",
         }}
       >
-        AE Solar | Contacts
+        AE Solar | Products
       </div>
     ),
     {

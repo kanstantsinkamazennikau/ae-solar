@@ -7,11 +7,13 @@ import Image from "next/image";
 
 export default function Conclusion() {
   return (
-    <div className="flex justify-center xl:mb-[150px] lg:mb-[120px] md:mb-[100px] mb-[80px] mt-20">
+    <div
+      className="flex justify-center xl:mb-[150px] lg:mb-[120px] md:mb-[100px] mb-[80px] mt-20 w-full"
+      id="conclusion"
+    >
       <BasicWidthContainer styles="relative justify-center items-center flex">
         <div
           className="
-
             xl:py-[130px]
             xl:px-[60px]
             md:py-[80px]
@@ -21,7 +23,7 @@ export default function Conclusion() {
             border
             border-solid
             backdrop-blur-[10px]
-            bg-[#000000c2]
+            bg-[#000]
             [border-image:linear-gradient(154deg,_#f60109_0%,_rgb(49_9_10_/_73%)_27%,_rgb(49_9_10_/_73%)_51%,_rgb(246_1_9_/_28%)_80%,_#f60109_100%)_1]
             xl:max-w-[870px]
             lg:max-w-[670px]
@@ -39,6 +41,7 @@ export default function Conclusion() {
             z-10
           "
         >
+          <div className="w-full h-[130%] absolute left-0 top-0 [background:radial-gradient(#490002_0%,transparent_70%,transparent_100%)] -translate-y-1/2" />
           <p className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-extrabold -tracking-[1.44px] leading-[120%] text-center z-10">
             {PRODUCT_IN_CONCLUSION}
           </p>
@@ -70,7 +73,8 @@ export default function Conclusion() {
           height={136}
           className="
             absolute
-            scale-[1.75]
+            scale-x-100
+            scale-y-115
           "
         />
       </BasicWidthContainer>

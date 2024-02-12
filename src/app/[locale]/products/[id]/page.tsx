@@ -10,9 +10,9 @@ import { ProductPageProps } from "@/app/[locale]/products/[id]/types";
 
 export default async function Page({ params: { id } }: ProductPageProps) {
   return (
-    <div className="flex flex-col items-center w-full overflow-hidden">
+    <div className="flex flex-col items-center w-full">
       <ProductsPanel id={id} />
-      <PanelTechnology />
+      <PanelTechnology id={id} />
       <Introduction id={id} />
       <Benefits id={id} />
       <Customization />
@@ -22,14 +22,3 @@ export default async function Page({ params: { id } }: ProductPageProps) {
     </div>
   );
 }
-
-// export async function generateStaticParams() {
-//   return [
-//     { id: "Aurora" },
-//     { id: "Meteor" },
-//     { id: "Terra" },
-//     { id: "Neptune" },
-//     { id: "ShadeStar" },
-//     { id: "Comet" },
-//   ];
-// }
