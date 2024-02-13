@@ -69,16 +69,29 @@ export default function PanelsFlowerIcon({
           "
         />
         {(autoplay || isChosenPanel) && (
-          <video
-            width="213"
-            height="120"
-            loop
-            autoPlay
-            muted
-            className="scale-[2] absolute"
-          >
-            <source src="/images/products/shine.mp4" type="video/mp4" />
-          </video>
+          <>
+            <video
+              width="213"
+              height="120"
+              loop
+              autoPlay
+              muted
+              className="scale-[2] absolute hidden min-[920px]:block"
+            >
+              <source src="/images/products/shine.mp4" type="video/mp4" />
+            </video>
+            <Image
+              src={`/images/products/mobileShine.png`}
+              alt="mobileShine"
+              priority
+              width={200}
+              height={200}
+              className="
+                min-[920px]:hidden
+                block
+              "
+            />
+          </>
         )}
       </div>
       <div

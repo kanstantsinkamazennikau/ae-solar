@@ -43,7 +43,7 @@ export default function DocumentsLayout({
           height={440}
           quality={100}
           priority
-          className="h-[440px]"
+          className="lg:h-[440px] xl:h-[400px] md:h-[350px] min-[560px]:h-[320px] h-[300px] min-[920px]:mt-0 mt-[80px] object-cover"
         />
       </div>
       <div className="flex w-full justify-center mb-[60px]">

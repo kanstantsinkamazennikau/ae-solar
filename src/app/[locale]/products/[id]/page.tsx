@@ -16,7 +16,7 @@ export default async function Page({ params: { id } }: ProductPageProps) {
       <Introduction id={id} />
       <Benefits id={id} />
       <Customization />
-      <Conclusion />
+      <Conclusion id={id} />
       <GetInTouch />
       <MainPageFAQ />
     </div>

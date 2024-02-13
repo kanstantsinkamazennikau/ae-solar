@@ -44,7 +44,7 @@ export default async function BlogPost({
         {type}
       </div> */}
       <div className="[font-size:_clamp(32px,4vw,64px)] font-semibold leading-[130%] mb-6">
-        {title}
+        {title.slice(0, 1).toUpperCase() + title.slice(1).toLowerCase()}
       </div>
       <BlogPostStats
         statistics={{

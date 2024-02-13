@@ -28,13 +28,13 @@ export default async function HeroSection() {
       <div className="absolute inline-flex flex-col gap-[70px] font-medium max-w-[810px] items-center top-1/4 z-30 mx-5">
         <div
           className="
-                [font-size:_clamp(50px,6vw,128px)]
-                font-extrabold
-                leading-[100%]
-                -tracking-[3.84px]
-              text-white
-                text-center
-              "
+            [font-size:_clamp(50px,6vw,128px)]
+            font-extrabold
+            leading-[100%]
+            -tracking-[3.84px]
+          text-white
+            text-center
+          "
         >
           {ABOUT_SUSTAINABLE.split(/\r?\n|\r|\n/g).map((string, index) => (
             <div

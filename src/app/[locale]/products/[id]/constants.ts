@@ -68,18 +68,36 @@ export const PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS = {
 };
 export const PRODUCT_INTRODUCTION = "Introduction";
 export const PRODUCT_INTRODUCTION_DESCRIPTION = {
-  Aurora:
-    "As we forge ahead into a future where sustainable energy is crucial, we turn our gaze towards the vast, renewable power source in our cosmos—the Sun. Capturing solar energy is a clean, eco-friendly, and sustainable solution. The key to making the most of this inexhaustible energy lies in leveraging innovative solar technologies. One such breakthrough technology is Passivated Emitter and Rear Cell (PERC).",
-  Comet:
-    "Our earth's most abundant, renewable, and free energy source lies in our very own star—the Sun. Solar energy is clean, green, and environmentally friendly. But how do we best capture this bountiful resource? The answer lies in advanced solar technologies. One such cutting-edge technology is Heterojunction Technology (HJT).",
-  Meteor:
-    "The Sun—an inexhaustible, abundant, and cost-free source of energy, continually showers our planet with its potent rays. The art of harnessing this rich energy source in an eco-friendly and efficient way lies in the advancements in solar technology. One such breakthrough that is gaining ground is Tunnel Oxide Passivated Contact (TOPCon) technology. ",
-  ShadeStar:
-    "The vast, endless energy of our sun provides an unparalleled renewable power source. It's clean, it's green, and most importantly, it's sustainable. But harnessing this infinite energy is not without its challenges. One such challenge is the impact of shading. So how do we overcome this obstacle? The key lies in a novel technology called Smart Cell Technology. ",
-  Neptune:
-    "The Sun, our mighty celestial torchbearer, is a source of energy beyond measure. It bestows upon us an immense wealth of renewable, eco-friendly power. Tapping into this vast potential necessitates the use of innovative solar technologies. And standing at the forefront of these pioneering solutions is Photovoltaic Thermal (PVT) Hybrid Technology.",
-  Terra:
-    "The sun, a colossal sphere of hot plasma, is the most abundant and reliable energy source for our planet. With its capacity to provide clean, sustainable, and eco-friendly energy, solar power is the future of global energy needs. But how do we optimize the extraction of this bountiful resource? The answer lies in the innovation of solar applications. We present three cutting-edge solar technologies: Agrivoltaics, Photovoltaic Noise Barriers (PVNBs), and Solar Fencing.",
+  Aurora: {
+    title: "Diverse and Dynamic Solar Solutions",
+    description:
+      "As we forge ahead into a future where sustainable energy is crucial, we turn our gaze towards the vast, renewable power source in our cosmos—the Sun. Capturing solar energy is a clean, eco-friendly, and sustainable solution. The key to making the most of this inexhaustible energy lies in leveraging innovative solar technologies. One such breakthrough technology is Passivated Emitter and Rear Cell (PERC).",
+  },
+  Comet: {
+    title: "Leading Efficiency, Whatever the Weather",
+    description:
+      "Our earth's most abundant, renewable, and free energy source lies in our very own star—the Sun. Solar energy is clean, green, and environmentally friendly. But how do we best capture this bountiful resource? The answer lies in advanced solar technologies. One such cutting-edge technology is Heterojunction Technology (HJT).",
+  },
+  Meteor: {
+    title: "Efficiency and Durability in Harmony",
+    description:
+      "The Sun—an inexhaustible, abundant, and cost-free source of energy, continually showers our planet with its potent rays. The art of harnessing this rich energy source in an eco-friendly and efficient way lies in the advancements in solar technology. One such breakthrough that is gaining ground is Tunnel Oxide Passivated Contact (TOPCon) technology. ",
+  },
+  ShadeStar: {
+    title: "Smart Energy for Every Roof",
+    description:
+      "The vast, endless energy of our sun provides an unparalleled renewable power source. It's clean, it's green, and most importantly, it's sustainable. But harnessing this infinite energy is not without its challenges. One such challenge is the impact of shading. So how do we overcome this obstacle? The key lies in a novel technology called Smart Cell Technology. ",
+  },
+  Neptune: {
+    title: "The Future of Hybrid Solar Energy",
+    description:
+      "The Sun, our mighty celestial torchbearer, is a source of energy beyond measure. It bestows upon us an immense wealth of renewable, eco-friendly power. Tapping into this vast potential necessitates the use of innovative solar technologies. And standing at the forefront of these pioneering solutions is Photovoltaic Thermal (PVT) Hybrid Technology.",
+  },
+  Terra: {
+    title: "Adaptable Power for Every Environment",
+    description:
+      "The sun, a colossal sphere of hot plasma, is the most abundant and reliable energy source for our planet. With its capacity to provide clean, sustainable, and eco-friendly energy, solar power is the future of global energy needs. But how do we optimize the extraction of this bountiful resource? The answer lies in the innovation of solar applications. We present three cutting-edge solar technologies: Agrivoltaics, Photovoltaic Noise Barriers (PVNBs), and Solar Fencing.",
+  },
 };
 export const PRODUCT_BENEFITS = "Benefits";
 export const PRODUCT_WHAT_ARE_ITS = "What Are Its ";
@@ -298,5 +316,16 @@ export const CREATE_SPACE = [
   },
 ];
 export const PRODUCT_IN_CONCLUSION = "In Conclusion";
-export const PRODUCT_PERC_TECHNOLOGY =
-  "PERC technology is a leap forward in harnessing solar energy, representing a commitment to superior technology, exceptional quality, and a cleaner, greener world.";
+export const PRODUCT_CONCLUSION_FOR_PANELS = {
+  Aurora: `At AESOLAR, we are unwavering in our commitment to a sustainable future. 
+  Our PERC solar modules represent more than just a product; they symbolize our devotion to advanced technology, exceptional quality, and a cleaner, greener world. We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC. `,
+  Meteor: `At GreenSolar, we are dedicated to propelling a sustainable future. Our TOPCon solar modules symbolize our commitment to ground-breaking technology, exceptional quality, and the promise of a cleaner, brighter world. 
+  Stand with us in this solar revolution, where we harness the Sun's power with unrivaled efficiency using TOPCon.`,
+  Comet: `At AESOLAR, we are committed to powering a sustainable future. 
+  Our HJT solar modules are not just a product, but an embodiment of our dedication to superior technology, exceptional quality, and the promise of a cleaner, greener world. Join us in this solar revolution, where we capture the sun's power in the most efficient way possible with HJT.`,
+  Terra: `At AESOLAR, we strive for a future where clean, renewable energy is accessible to all. Our agrivoltaic systems, photovoltaic noise barriers, and solar fences represent our commitment to innovative design, superior quality, and sustainable living. Join us in this solar revolution, where we capture the sun's power in the most creative and efficient way possible.`,
+  ShadeStar: `We're pioneering a brighter, more sustainable future. 
+  Our Smart Cell solar modules embody our commitment to cutting-edge technology, superior quality, and sustainable energy solutions. Be a part of this revolution and shine a light on the shadows with our Smart Cell technology. Let's harness the sun's power more intelligently and resiliently, bringing light into every corner of our world.`,
+  Neptune: `We are unwavering in our commitment to a sustainable, energy-efficient future. 
+  Our PVT Hybrid solar modules symbolize not just a product, but our dedication to pioneering technology, superior quality, and the pledge of a cleaner, more sustainable world. Join us in this solar energy transformation, where we unlock the Sun's power in the most comprehensive way possible with PVT Hybrid technology.`,
+};

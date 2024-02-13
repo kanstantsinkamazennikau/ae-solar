@@ -17,7 +17,17 @@ export default function BlogPostStats({
   dividerColor,
 }: PostStatsProps) {
   return (
-    <div className="flex [&>*:last-child]:border-none [&>*:first-child]:pl-0">
+    <div
+      className="
+        flex
+        [&>*:last-child]:border-none
+        [&>*:first-child]:pl-0
+        md:[&>*:first-child]:flex
+        [&>*:first-child]:hidden
+        md:[&>*:nth-child(2)]:pl-4
+        [&>*:nth-child(2)]:pl-0
+      "
+    >
       {Object.keys(statisticsParamsWithIconsMapping).map((statParam) => (
         <div
           key={statParam}

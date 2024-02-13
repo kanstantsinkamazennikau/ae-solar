@@ -16,7 +16,7 @@ export default function SubMenuItems({
   return (
     <ul
       className="
-        bg-[#131313d9]
+        bg-[#191919]
         px-4
         py-5
         flex
@@ -26,9 +26,7 @@ export default function SubMenuItems({
         border-solid
         rounded-xl
         border-option-border
-        backdrop-blur-[50px]
         min-[920px]:items-center
-        shadow-[0_4px_25px_0px_rgba(0,0,0,0.65)]
         list-none
       "
     >

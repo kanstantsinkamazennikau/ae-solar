@@ -103,17 +103,18 @@ export default function BuyerForm({
                   content-start
                   min-[640px]:gap-3 gap-0
                   self-stretch
-                  flex-wrap
                   [font-size:_clamp(20px,2.5vw,30px)]
                   min-[640px]:flex-row
                   flex-col
+                  flex-nowrap
                 "
               >
-                <span className="font-semibold leading-[120%]">
+                <span className="font-semibold leading-[120%] whitespace-nowrap">
                   {inputField.formTitle}
                 </span>
                 <Input
                   externalStyle="font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)]"
+                  externalContainerStyle="!w-full"
                   name={inputField.name}
                   placeholder={inputField.placeholder}
                   register={register(
@@ -121,6 +122,7 @@ export default function BuyerForm({
                     inputsRules[inputField.name as keyof typeof inputsRules]
                   )}
                   error={errors?.[inputField.name]}
+                  showDot
                 />
               </div>
             );
@@ -174,9 +176,20 @@ export default function BuyerForm({
             return (
               <div
                 key={inputField.name}
-                className="flex items-center content-center min-[640px]:gap-3 gap-1 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,30px)]"
+                className="
+                  flex
+                  content-center 
+                  min-[640px]:gap-3 
+                  gap-1 
+                  flex-nowrap
+                  min-[640px]:flex-row
+                  flex-col
+                  min-[640px]:items-center
+                  items-start
+                  [font-size:_clamp(20px,2.5vw,30px)]
+                "
               >
-                <span className="font-semibold leading-[120%]">
+                <span className="font-semibold leading-[120%] whitespace-nowrap">
                   {inputField.formTitle}
                 </span>
                 <PhoneNumberInput
@@ -189,14 +202,16 @@ export default function BuyerForm({
                   )}
                   setValue={setValue}
                   error={errors?.[inputField.name]}
+                  showDot
                 />
               </div>
             );
         })}
       </div>
 
-      {/* <div> */}
-      <label className={`flex items-center cursor-pointer mb-4 w-fit`}>
+      <label
+        className={`flex items-center cursor-pointer mb-4 border-t border-solid border-[#2D2D2D] pt-2 mt-4 w-full`}
+      >
         <input
           type="checkbox"
           checked={agreement}
@@ -235,7 +250,7 @@ export default function BuyerForm({
           {CONSULT_AGREEMENT}
         </span>
       </label>
-      {/* </div> */}
+
       <Button
         onClick={handleSubmit}
         showArrow

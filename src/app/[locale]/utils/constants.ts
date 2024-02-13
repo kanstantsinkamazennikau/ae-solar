@@ -892,7 +892,7 @@ export const CONSTRUCTOR_CUSTOMIZE = "Customize.";
 export const CONSTRUCTOR_YOUR_MODEL = "Your model";
 export const CONSTRUCTOR_APPLICATIONS = "Applications.";
 export const CONSTRUCTOR_STANDARD = "Standard";
-export const CONSTRUCTOR_GENERATE_YOUR_MODEL = "Generate your model";
+export const CONSTRUCTOR_CHOOSE_YOUR_MODEL = "Choose your model";
 export const CONSTRUCTOR_YOUR_MODEL_IS = "Your model is";
 export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
   Aurora: {

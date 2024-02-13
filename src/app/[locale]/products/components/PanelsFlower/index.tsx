@@ -17,16 +17,7 @@ import { useEffect, useRef, useState } from "react";
 export default function PanelsFlower() {
   const sliderRef = useRef<Splide>(null);
   const [panel, setPanel] = useState("Aurora");
-  const [autoplay, setAutoPlay] = useState(false);
   const sliderId = PRODUCT_PANELS_IMAGES.indexOf(panel);
-
-  const onMouseEnter = () => {
-    setAutoPlay(true);
-  };
-
-  const onMouseLeave = () => {
-    setAutoPlay(false);
-  };
 
   const onClick = (panel: string) => {
     setPanel(panel);
@@ -125,6 +116,8 @@ export default function PanelsFlower() {
               autoPlay
               muted
               className="
+                min-[920px]:block
+                hidden
                 md:w-[475px]
                 md:h-[548px]
                 min-[560px]:h-[406px]
@@ -141,18 +134,45 @@ export default function PanelsFlower() {
             >
               <source src="/images/products/shine.mp4" type="video/mp4" />
             </video>
+            <Image
+              src={`/images/products/mobileShine.png`}
+              alt="selector"
+              priority
+              quality={100}
+              width={600}
+              height={600}
+              className="
+                min-[920px]:hidden
+                block
+                md:w-[475px]
+                md:h-[548px]
+                min-[560px]:h-[406px]
+                min-[560px]:w-[353px]
+                h-[279px]
+                w-[242px]
+                object-cover
+                relative
+                md:-left-[25px]
+                min-[560px]:-left-[18px]
+                -left-[13px]
+                [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]
+              "
+            />
           </div>
 
           <Splide
             aria-label="solar panels"
             options={options}
             className="        
-              !absolute
               md:bottom-[100px]
               min-[560px]:bottom-[75px]
               bottom-[55px]
               left-1/2
               -translate-x-1/2
+              xl:translate-y-[480px]
+              md:translate-y-[380px]
+              min-[560px]:translate-y-[290px]
+              translate-y-[280px]
               w-[220px]
               min-[560px]:w-auto
             "

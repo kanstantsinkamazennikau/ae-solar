@@ -54,14 +54,18 @@ export default function Benefits({ id }: BenefitProps) {
                   md:py-[30px]
                   py-[20px]
                   justify-between
-                  items-center
-                  self-stretch
+                  md:items-center
+                  items-start
+                  md:self-stretch
                   gap-4
                   md:flex-row
                   flex-col
                   border-t
                   border-solid
                   border-[#191919]
+                  md:w-auto
+                  w-fit
+                  self-center
                 "
               >
                 <div
@@ -70,10 +74,11 @@ export default function Benefits({ id }: BenefitProps) {
                     items-center
                     lg:gap-20
                     gap-5 
-                    xl:w-[678px]
-                    lg:w-[478px]
+                    xl:w-[778px]
+                    lg:w-[578px]
                     md:w-[340px]
-                    w-[340px]
+                    justify-between
+                    w-auto
                   "
                 >
                   <Image
@@ -82,7 +87,7 @@ export default function Benefits({ id }: BenefitProps) {
                     priority
                     width={140}
                     height={140}
-                    className="lg:w-[140px] lg:h-[140px] md:w-[100px] md:h-[100px] w-[80px] h-[80px]"
+                    className="lg:w-[140px] lg:h-[140px] md:w-[100px] md:h-[100px] w-[60px] h-[60px]"
                   />
                   <div
                     className="
@@ -104,7 +109,7 @@ export default function Benefits({ id }: BenefitProps) {
 
                 {/* <div className="flex justify-between items-center gap-3"> */}
                 <div className="flex flex-col items-start lg:gap-6 md:gap-3 gap-2">
-                  <div className="flex leading-[100%] font-walsheim font-bold h-5 text-[#505050]">
+                  <div className="md:flex leading-[100%] font-walsheim font-bold h-5 text-[#505050] hidden">
                     <div className="[font-size:_clamp(10px,1.5vw,20px)] flex items-end h-full">
                       {formatNumber(index + 1)}
                     </div>

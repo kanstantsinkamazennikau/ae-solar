@@ -97,7 +97,9 @@ export default function Introduction({ id }: IntroductionProps) {
             className="
               flex
               flex-col
-              gap-10
+              lg:gap-10
+              md:gap-6
+              gap-4
               self-end
               max-w-[700px]
               static
@@ -110,17 +112,19 @@ export default function Introduction({ id }: IntroductionProps) {
                 flex
                 flex-col
                 items-start
-                gap-8  
+                lg:gap-8 
+                gap-3
               "
             >
               <p
                 className="
-                  [font-size:_clamp(20px,3.5vw,64px)]
+                  [font-size:_clamp(24px,3vw,48px)]
                   font-semibold
-                  -tracking-[1.92px]
+                  md:-tracking-[1.92px]
+                  leading-[120%]
                 "
               >
-                {PRODUCT_INTRODUCTION}
+                {PRODUCT_INTRODUCTION_DESCRIPTION[id].title}
               </p>
               <p
                 className="
@@ -131,7 +135,7 @@ export default function Introduction({ id }: IntroductionProps) {
                   -tracking-[1.92]
                 "
               >
-                {PRODUCT_INTRODUCTION_DESCRIPTION[id]}
+                {PRODUCT_INTRODUCTION_DESCRIPTION[id].description}
               </p>
             </div>
 

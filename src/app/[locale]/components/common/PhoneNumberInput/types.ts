@@ -23,6 +23,7 @@ export interface PhoneNumberInputProps
   error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined;
   name: string;
   setValue: UseFormSetValue<FieldValues>;
+  showDot?: boolean;
 }
 
 export interface SelectedCodeWithFlagProps {

@@ -44,6 +44,7 @@ export default async function Blog({
           backgroundImage="/images/about/blog/blogBackground.png"
           tierOneHeading={BLOG_READ_THOUGHTS}
           tierTwoHeading={BLOG_ON_THE_BLOG}
+          mobileBackgroundImage="/images/about/blog/blogMobileBackground.png"
         />
         <div className="text-center [font-size:_clamp(20px,2vw,32px)]">
           No blog posts
@@ -57,8 +58,9 @@ export default async function Blog({
         backgroundImage="/images/about/blog/blogBackground.png"
         tierOneHeading={BLOG_READ_THOUGHTS}
         tierTwoHeading={BLOG_ON_THE_BLOG}
+        mobileBackgroundImage="/images/about/blog/blogMobileBackground.png"
       />
-      <div className="flex w-full justify-center flex-col items-center ">
+      <div className="flex w-full justify-center flex-col items-center md:mt-0 -mt-[60px]">
         <BasicWidthContainer>
           <div className="flex gap-[60px] justify-between">
             <Suspense key={currentPage} fallback={<Loader />}>
@@ -67,7 +69,7 @@ export default async function Blog({
                 blogPostsAmount={blogPostsAmount}
               />
             </Suspense>
-            <div className="flex flex-col gap-[60px] w-full max-w-[315px]">
+            <div className="hidden flex-col gap-[60px] w-full max-w-[315px] min-[920px]:flex">
               {/* <MostPopularPosts /> */}
               <RecentPosts />
             </div>

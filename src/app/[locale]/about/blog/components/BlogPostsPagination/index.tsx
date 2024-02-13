@@ -47,7 +47,7 @@ export default function BlogPostPagination({
           className="rotate-180"
         />
       </button>
-      <ul className="flex gap-3 list-none ">
+      <ul className="flex gap-3 list-none items-center">
         {paginationRange.map((pageNumber, index) => {
           if (pageNumber === DOTS) {
             return (

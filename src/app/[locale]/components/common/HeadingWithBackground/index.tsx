@@ -6,25 +6,37 @@ export default function HeadingWithBackground({
   tierOneHeading,
   tierTwoHeading,
   backgroundImage,
+  mobileBackgroundImage,
 }: HeadingWithBackgroundProps) {
   return (
     <>
       <div className="relative -mt-[80px] flex justify-center">
         <Image
           src={backgroundImage}
-          alt="documents"
+          alt="backgroundImage"
           width={1920}
           height={440}
           quality={100}
           priority
-          className="h-[440px]"
+          className="xl:h-[440px] lg:h-[380px] min-[920px]:h-[320px] md:h-[300px] min-[560px]:h-[250px] min-[920px]:mt-0 mt-[80px] min-[560px]:block hidden"
         />
+        {mobileBackgroundImage && (
+          <Image
+            src={mobileBackgroundImage}
+            alt="backgroundImage"
+            width={360}
+            height={440}
+            quality={100}
+            priority
+            className="block min-[560px]:hidden h-[300px] w-full"
+          />
+        )}
         <div className="flex w-full justify-center absolute bottom-0">
           <BasicWidthContainer>
             <div className="flex flex-col gap-4">
               <p
                 className="
-                  [font-size:_clamp(24px,4vw,96px)]
+                  [font-size:_clamp(40px,4vw,96px)]
                   font-extrabold
                   leading-[100%]
                   -tracking-[2.88]
@@ -34,7 +46,7 @@ export default function HeadingWithBackground({
               </p>
               <p
                 className="
-                  [font-size:_clamp(16px,4vw,64px)]
+                  [font-size:_clamp(32px,4vw,64px)]
                   font-medium
                   leading-[100%]
                   -tracking-[1.92]

@@ -6,14 +6,14 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
   return (
     <div className="relative -translate-y-[14%] overflow-hidden w-full -mb-[14%] mt-[100px]">
       <Image
-        src="/images/products/starPath.svg"
+        src={`/images/products/${id}StarPath.svg`}
         alt="starPath"
         width={1320}
         height={1320}
         className=" mx-auto"
       />
       <div
-        className="
+        className={`
           xl:p-20
           md:p-12
           p-4
@@ -21,7 +21,7 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
           border-solid
           backdrop-blur-[10px]
           bg-[#00000033]
-          [border-image:linear-gradient(154deg,_#f60109_0%,_rgb(49_9_10_/_73%)_27%,_rgb(49_9_10_/_73%)_51%,_rgb(246_1_9_/_28%)_80%,_#f60109_100%)_1]
+          [border-image:linear-gradient(154deg,_#4f4f4f_0%,_#191919_27%,_#191919_51%,_#313131_80%,_#4f4f4f_100%)_1]
           max-w-[650px]
           flex
           flex-col
@@ -32,7 +32,7 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
           bottom-40
           left-1/2
           -translate-x-1/2
-        "
+        `}
       >
         <div className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-bold -tracking-[0.48px] leading-[100%] text-center">
           {PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS[id].technology}

@@ -15,4 +15,5 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   register?: UseFormRegisterReturn<string>;
   error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined;
   name?: string;
+  showDot?: boolean;
 }

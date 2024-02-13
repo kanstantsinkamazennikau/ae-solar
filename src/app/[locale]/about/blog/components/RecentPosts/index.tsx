@@ -44,7 +44,7 @@ export default async function RecentPosts() {
             {type}
           </div> */}
           <div className="[font-size:_clamp(12px,1vw,16px)] -tracking-[0.32px] font-normal">
-            {title}
+            {title.slice(0, 1).toUpperCase() + title.slice(1).toLowerCase()}
           </div>
         </Link>
       ))}

@@ -5,6 +5,7 @@ import {
 } from "@/app/[locale]/about/blog/components/BlogPostsList/types";
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/about/blog/constants";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
+import Image from "next/image";
 import Link from "next/link";
 import { getDocumentSlugs, load } from "outstatic/server";
 
@@ -48,13 +49,65 @@ export default async function BlogPostsList({
           return (
             <div
               key={slug}
-              className="flex py-8 border-b border-solid border-[#191919] first:border-t items-center gap-5"
+              className="
+                flex
+                md:pt-8
+                md:pb-8
+                pt-8
+                pb-7
+                border-b
+                border-solid
+                border-[#191919]
+                md:first:border-t
+                md:items-center
+                gap-5
+                md:flex-row
+                flex-col
+                items-start
+              "
             >
-              <div className="flex flex-col text-[#505050] uppercase leading-[100%] gap-4 flex-grow-0 flex-shrink-0 basis-[200px] break-all">
+              <div
+                className="
+                  flex
+                  flex-col
+                  text-[#505050]
+                  uppercase
+                  leading-[100%]
+                  gap-4
+                  flex-grow-0
+                  flex-shrink-0
+                  xl:basis-[200px]
+                  lg:basis-[150px]
+                  min-[920px]:basis-[100px]
+                  md:basis-[100px]
+                  break-all
+                "
+              >
                 {/* <div className="[font-size:_clamp(10px,1vw,16px)] font-extrabold">
                 {descr?.type}
-              </div> */}
-                <div className="[font-size:_clamp(20px,2vw,32px)] font-normal -tracking-[1.6]">
+                </div> */}
+                {/* MOBILE VERSION DATE */}
+
+                <div
+                  className={`
+                    flex
+                    items-center
+                    md:hidden
+                  `}
+                >
+                  <Image
+                    src={`/images/about/blog/calendar.svg`}
+                    alt="calendar"
+                    width={16}
+                    height={16}
+                    className="mr-1"
+                  />
+                  <span className="[font-size:_clamp(10px,1vw,14px)] font-bold font-walsheim text-dark-gray-900 leading-[100%]">
+                    {blogPostFormatDate(publishedAt)}
+                  </span>
+                </div>
+
+                <div className="[font-size:_clamp(20px,2vw,32px)] font-normal -tracking-[1.6] md:block hidden">
                   {/* {descr?.typeNumber && `#${descr.typeNumber}`} */}#
                   {String(
                     blogPostsAmount -
@@ -67,7 +120,8 @@ export default async function BlogPostsList({
               <div className="flex flex-col gap-4">
                 <Link href={`blog/${slug}`}>
                   <h2 className="[font-size:_clamp(16px,1.5vw,24px)] font-bold -tracking-[0.24] hover:text-base-red">
-                    {title}
+                    {title.slice(0, 1).toUpperCase() +
+                      title.slice(1).toLowerCase()}
                   </h2>
                 </Link>
                 <BlogPostStats
