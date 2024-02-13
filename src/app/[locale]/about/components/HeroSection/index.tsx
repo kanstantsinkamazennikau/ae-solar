@@ -1,68 +1,89 @@
-import Button from "@/app/[locale]/components/common/Button";
 import {
-  ABOUT_COMPANY_FOUNDATION,
-  ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT,
+  ABOUT_ILLUMINATING,
+  ABOUT_MANUFACTURER,
   ABOUT_DOWNLOAD_PRESENTATION,
-  ABOUT_SUSTAINABLE,
   ABOUT_WATCH_VIDEO,
-} from "@/app/[locale]/utils/constants";
+} from "@/app/[locale]/about/constants";
+import Button from "@/app/[locale]/components/common/Button";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 
 export default async function HeroSection() {
   return (
-    <div className="w-full flex justify-center items-center relative -top-[60px] h-screen">
-      <div className="!-top-[120px] fade-strip-top " />
-      <div className="fade-strip-bottom" />
-      <div className="fade-strip-left" />
-      <div className="fade-strip-right" />
-
+    <div className="w-full flex justify-center items-center relative -mt-[80px] flex-col overflow-x-hidden">
+      <div className="fade-strip-bottom !h-[200px]" />
       <Image
-        src="/images/about/heroSection.svg"
+        src="/images/about/aboutPath.svg"
         alt="solar panel"
         priority
-        width={1920}
-        height={1080}
-        className="object-fill h-full w-full"
+        width={1320}
+        height={525}
+        className="h-[525px]"
       />
-      <div className="absolute inline-flex flex-col gap-[70px] font-medium max-w-[810px] items-center top-1/4 z-30 mx-5">
-        <div
-          className="
-            [font-size:_clamp(50px,6vw,128px)]
-            font-extrabold
+      <Image
+        src="/images/about/aboutPath.svg"
+        alt="solar panel"
+        priority
+        width={1320}
+        height={525}
+        className="rotate-180 h-[525px] relative -mt-[100px]"
+      />
+      <div className="absolute inline-flex flex-col gap-[60px] max-w-[1100px] items-center -translate-y-1/2 top-1/2">
+        <div className="flex flex-col gap-6">
+          <div
+            className="
+            [font-size:_clamp(20px,2vw,36px)]
+            font-medium
             leading-[100%]
-            -tracking-[3.84px]
-          text-white
+            -tracking-[1.08px]
+          text-base-red
             text-center
           "
-        >
-          {ABOUT_SUSTAINABLE.split(/\r?\n|\r|\n/g).map((string, index) => (
-            <div
-              key={string}
-              className={`${index === 0 ? "text-dark-gray-900" : ""}`}
-            >
-              {string}
-            </div>
-          ))}
+          >
+            {ABOUT_MANUFACTURER}
+          </div>
+          <div
+            className="
+          text-center
+          shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
+          [font-size:_clamp(50px,5.5vw,102px)]
+          font-semibold
+          leading-[100%]
+          -tracking-[4.08px]
+        "
+          >
+            {ABOUT_ILLUMINATING}
+          </div>
         </div>
-        <div className="text-center">
-          {styleMatchingText(
-            ABOUT_COMPANY_FOUNDATION,
-            ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT,
-            "font-walsheim leading-[170%] font-semibold [font-size:_clamp(16px,2vw,24px)]",
-            "text-dark-gray-900"
-          )}
-        </div>
+
         <div className="flex gap-5">
           <Button size="normal">
-            <span className="max-w-[236px] [font-size:_clamp(16px,2vw,20px)] font-semibold -tracking-[0.2px] leading-none">
-              {ABOUT_DOWNLOAD_PRESENTATION}
-            </span>
+            <div className="flex items-center justify-center gap-4">
+              <Image
+                src="/images/downloadFileWhite.svg"
+                alt="downloadFileWhite"
+                priority
+                width={24}
+                height={24}
+              />
+              <p className="max-w-[160px] [font-size:_clamp(12px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
+                {ABOUT_DOWNLOAD_PRESENTATION}
+              </p>
+            </div>
           </Button>
-          <Button size="normal">
-            <span className="max-w-[236px] [font-size:_clamp(16px,2vw,20px)] font-semibold -tracking-[0.2px] leading-none">
-              {ABOUT_WATCH_VIDEO}
-            </span>
+          <Button size="normal" style="outline">
+            <div className="flex items-center justify-center gap-4">
+              <Image
+                src="/images/video.svg"
+                alt="downloadFileWhite"
+                priority
+                width={24}
+                height={24}
+              />
+              <p className="max-w-[160px] [font-size:_clamp(12px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
+                {ABOUT_WATCH_VIDEO}
+              </p>
+            </div>
           </Button>
         </div>
       </div>

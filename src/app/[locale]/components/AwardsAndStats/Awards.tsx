@@ -6,15 +6,16 @@ import Image from "next/image";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/react-splide/css";
+import { useEffect, useRef, useState } from "react";
 
 export default function Awards() {
   const options = {
     type: "loop",
     drag: true,
-    gap: "10px",
+    gap: "40px",
     arrows: false,
     pagination: false,
-    width: 700,
+    width: 950,
     perPage: 6,
     autoScroll: {
       pauseOnHover: true,
@@ -25,16 +26,16 @@ export default function Awards() {
   };
 
   return (
-    <div className="flex gap-2.5 flex-col self-stretch items-center">
-      <div className="flex md:gap-5 relative gap-4">
+    <div className="flex gap-2.5 flex-col self-stretch items-center relative">
+      <div className="flex md:gap-5 relative gap-4 overflow-y-visible overflow-x-clip">
         <div
           className="
-            z-10
-            flex
-            absolute
             w-full
             h-full
-            bg-[linear-gradient(90deg,_rgb(0_0_0_/_20%)_0%,_rgb(0_0_0_/_40%)_20%,_rgb(0_0_0_/_0%)_40%,_rgb(0_0_0_/_0%)_60%,_rgb(0_0_0_/_40%)_80%,_rgb(0_0_0_/_20%)_100%)]
+            absolute
+            [background:linear-gradient(90deg,#000000e8_0%,#000000e6_5%,#000000e6_10%,#00000000_50%,#000000e6_90%,#000000e6_95%,#000000e8_100%)]
+            z-10
+            pointer-events-none
           "
         />
 
@@ -51,7 +52,7 @@ export default function Awards() {
                 width={120}
                 height={120}
                 priority
-                className="object-contain md:h-[120px] md:w-[120px] h-20 w-20"
+                className="object-contain md:h-[120px] md:w-[120px] h-20"
               />
             </SplideSlide>
           ))}
