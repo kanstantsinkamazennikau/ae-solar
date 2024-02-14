@@ -20,13 +20,17 @@ export default function CartModelDetails({ model }: DetailsProps) {
           const modelParameterValue = model[modelKey];
           component = (
             <div className="flex items-center gap-2">
-              <Image
-                src={`/images/option/${modelParameterValue.toLowerCase()}.svg`}
-                alt={modelParameterValue}
-                priority
-                width={16}
-                height={16}
-              />
+              {["transparent", "black", "white", "silver"].includes(
+                modelParameterValue.toLowerCase()
+              ) && (
+                <Image
+                  src={`/images/option/${modelParameterValue.toLowerCase()}.svg`}
+                  alt={modelParameterValue}
+                  priority
+                  width={16}
+                  height={16}
+                />
+              )}
               <span className="text-sm font-semibold leading-[0.9] -tracking-[0.42px]">
                 {modelParameterValue}
               </span>

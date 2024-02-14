@@ -151,8 +151,28 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Comet.svg",
-      text: "Propel into the future of solar energy with our Comet HJT. Superior performance under all conditions.",
+      text: "Comet (HJT). Highlight Comet's unparalleled all-weather performance and cutting-edge technology, drawing a parallel with the relentless journey of a comet.",
     },
+    advantages: [
+      {
+        title: "n-Type Heterojunction",
+        description: "Advanced solar technology",
+      },
+      { title: "Reliability", description: "Exceptionally low degradation" },
+      { title: "Temperature Stability", description: "Very low coefficient" },
+      {
+        title: "Low-Light Performance",
+        description: "High output in dim conditions",
+      },
+      {
+        title: "Extreme Climate Suitability",
+        description: "Designed for harsh environments",
+      },
+      {
+        title: "Closing Statement",
+        description: `"Comet: Leading Efficiency, Whatever the Weather"`,
+      },
+    ],
   },
   Aurora: {
     stats: {
@@ -162,8 +182,22 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Aurora.svg",
-      text: "Experience minimum power loss and shine brightly even in low light conditions123123",
+      text: "Aurora (PERC). Redesigned with the Theme of Aurora Borealis. Reinvent Aurora as a solar module inspired by the dynamic and vibrant colors of the Northern Lights. Emphasize its versatility and aesthetic appeal, mirroring the ever-changing colors of auroras",
     },
+    advantages: [
+      { title: "Advanced Cells", description: "PERC and Topcon technology" },
+      { title: "Size Variety", description: "small, medium, large modules" },
+      { title: "Design Option", description: "Mono/Bifacial, color choices" },
+      { title: "Custom Features", description: "Tailored material and power" },
+      {
+        title: "Climate Adaptability",
+        description: "Suitable for extreme conditions",
+      },
+      {
+        title: "Closing Statement",
+        description: `"Aurora: Diverse and Dynamic Solar Solutions"`,
+      },
+    ],
   },
   Meteor: {
     stats: {
@@ -173,8 +207,28 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Meteor.svg",
-      text: "Experience minimum power loss and shine brightly even in low light conditions Meteor",
+      text: "Meteor (TOPCon). Focus on Meteor's ability to shine bright in low-light conditions, just like a meteor streaking across the night sky",
     },
+    advantages: [
+      { title: "TOPCon N-Type", description: "Superior efficiency technology" },
+      {
+        title: "Broad Customization",
+        description: "Materials, power, dimensions",
+      },
+      { title: "Color Diversity", description: "Wide range of choices" },
+      {
+        title: "Resilient Performance",
+        description: "Low degradation, high durability",
+      },
+      {
+        title: "Climate Versatility",
+        description: "Ideal for varied weather conditions",
+      },
+      {
+        title: "Closing Statement",
+        description: `"Meteor: Efficiency and Durability in Harmony"`,
+      },
+    ],
   },
   Terra: {
     stats: {
@@ -184,8 +238,28 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Terra.svg",
-      text: "Experience123 minimum power loss and shine brightly even in low light conditions",
+      text: "Versatile and Robust Solar Power. Terra (Agricultural Photovoltaic, Noise Barrier, and Solar Fence Applications) Showcase Terra's multifunctional applications, emphasizing its role in harmonizing with the Earth's needs.",
     },
+    advantages: [
+      { title: "n-Type TOPCon Tech", description: "Cutting-edge efficiency" },
+      {
+        title: "Application Flexibility",
+        description: "Ideal for various installations",
+      },
+      {
+        title: "Design Strength",
+        description: "High wind and snow resistance",
+      },
+      { title: "Long-Term Reliability", description: "Minimal degradation" },
+      {
+        title: "Bifacial Efficiency",
+        description: "Optimal energy capture",
+      },
+      {
+        title: "Closing Statement",
+        description: `"Terra: Adaptable Power for Every Environment"`,
+      },
+    ],
   },
   Neptune: {
     stats: {
@@ -195,8 +269,31 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Neptune.svg",
-      text: "Experience minimum power loss and shine brightly even in low light conditions",
+      text: "Neptune: Dual Power, Maximum Efficiency",
     },
+    advantages: [
+      {
+        title: "Hybrid Energy",
+        description: "Electricity and thermal production",
+      },
+      {
+        title: "High Efficiency",
+        description: "About 70% combined Efficiency",
+      },
+      {
+        title: "Economic Benefit",
+        description: "Long-term low LCOE",
+      },
+      { title: "Versatile Use", description: "Effective in various climates" },
+      {
+        title: "Sustainable Design",
+        description: "Eco-conscious technology",
+      },
+      {
+        title: "Closing Statement",
+        description: `"Neptune: The Future of Hybrid Solar Energy"`,
+      },
+    ],
   },
   ShadeStar: {
     stats: {
@@ -206,8 +303,31 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "ShadeStar.svg",
-      text: "Experience minimum power loss and shine brightly even in low light Smart",
+      text: `"ShadeStar: Light Where You Need It" (Smart Cell) Focus on ShadeStar resilience to partial shading, akin to a guardian in the cosmos`,
     },
+    advantages: [
+      {
+        title: "Shade Resilience",
+        description: "Maintains high output in shade",
+      },
+      {
+        title: "Rooftop Optimization",
+        description: "Ideal for limited space",
+      },
+      {
+        title: "Economic Performance",
+        description: "Low LCOE",
+      },
+      { title: "Smart Technology", description: "Advanced shade resistance" },
+      {
+        title: "Sustainable Solution",
+        description: "Eco-friendly design",
+      },
+      {
+        title: "Closing Statement",
+        description: `"ShadeStar: Smart Energy for Every Roof"`,
+      },
+    ],
   },
 };
 export const PRODUCT_INTRO_LEARN_MORE = "Learn more";

@@ -24,8 +24,8 @@ import { useCallback, useContext, useEffect, useRef } from "react";
 export default function ProductIntro() {
   const { model } = useContext(ModelContext);
   const { sticky, setSticky } = useContext(StickyNavigationContext);
-  const modelStats = PRODUCT_INTRO_PANELS[model].stats;
-  const modelStatsKeys = Object.keys(modelStats);
+  const modelAdvantages = PRODUCT_INTRO_PANELS[model].advantages;
+  // const modelStatsKeys = Object.keys(modelStats);
   const modelInfo = PRODUCT_INTRO_PANELS[model].info;
   const ref = useRef<HTMLDivElement | null>(null);
   const locale = useParams()?.locale;
@@ -135,7 +135,7 @@ export default function ProductIntro() {
                 {model}
               </span>
             </div>
-            <div className="font-walsheim text-lg leading-[1.5] font-medium [font-size:_clamp(16px,2vw,18px)] max-w-[328px] md:text-left text-center">
+            <div className="font-walsheim text-lg leading-[1.5] font-medium [font-size:_clamp(12px,1.5vw,18px)] xl:max-w-[328px] max-w-[300px] md:text-left text-center">
               {modelInfo.text}
             </div>
             <LinkWithArrow label={PRODUCT_INTRO_LEARN_MORE} href="" />
@@ -164,35 +164,54 @@ export default function ProductIntro() {
           <div
             className="
               flex-1
+              flex
               gap-3
-              md:gap-4
-              xl:gap-11
+              md:gap-1
+              xl:gap-3
               flex-col
               justify-center
               absolute
-              md:px-0
-              md:py-0
+              md:px-5
+              md:py-4
+              w-fit
+              h-fit
               px-5
               py-6
               bottom-0
               left-0
-              md:right-0
+              md:right-5
               md:left-auto
               md:top-1/2
               md:-translate-y-1/2
               md:pr-5
-              [&>*:last-child>div:last-child]:hidden
+              [&>*:last-child>div>div:last-child]:hidden
+              border
+              border-solid
+              backdrop-blur-[10px]
+              bg-[#00000033]
+              [border-image:linear-gradient(154deg,_#f60109_0%,_rgb(49_9_10_/_73%)_27%,_rgb(49_9_10_/_73%)_51%,_rgb(246_1_9_/_28%)_80%,_#f60109_100%)_1]
+              xl:max-w-[315px]
+              lg:max-w-[305px]
+              md:max-w-[300px]
+              xl:mt-0
+              lg:-mt-11
+              -mt-11
             "
           >
-            {modelStatsKeys.map((key) => (
-              <div key={key}>
-                <div className="leading-[1.3] font-semibold [font-size:_clamp(24px,3vw,48px)]">
-                  {modelStats[key as keyof typeof modelStats]}
+            {modelAdvantages.map(({ title, description }, index) => (
+              <div key={title} className="flex gap-2">
+                <div className="leading-[130%] font-semibold [font-size:_clamp(8px,1vw,10px)] text-base-red">
+                  {String(index + 1).padStart(2, "0")}
                 </div>
-                <div className="text-lg leading-[1.7] font-bold font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,18px)]">
-                  {PRODUCT_INTRO_PANELS_MAPPING[key as keyof typeof modelStats]}
+                <div>
+                  <div className="leading-[130%] font-semibold [font-size:_clamp(16px,1.5vw,20px)]">
+                    {title}
+                  </div>
+                  <div className="text-lg leading-[170%] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,16px)]">
+                    {description}
+                  </div>
+                  <div className="bg-white opacity-20 h-0.5 mt-3 md:hidden block" />
                 </div>
-                <div className="bg-white opacity-20 h-0.5 mt-3 md:hidden block" />
               </div>
             ))}
           </div>

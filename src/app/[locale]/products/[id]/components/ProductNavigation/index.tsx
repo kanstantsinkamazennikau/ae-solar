@@ -2,15 +2,44 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
+import {
+  ConstructorContext,
+  ConstructorModel,
+} from "@/app/[locale]/context/constructorContext";
 import { ProductNavigationProps } from "@/app/[locale]/products/[id]/components/ProductNavigation/types";
 import {
+  PRODUCT_DEFAULT_MODEL_PARAMS,
   PRODUCT_NAVIGATION,
   PRODUCT_OVERVIEW,
 } from "@/app/[locale]/products/[id]/constants";
-import { CONSTRUCTOR_ADD_TO_BAG } from "@/app/[locale]/utils/constants";
+import {
+  CART_LOCALSTORAGE,
+  CART_SUCCESSFULLY_ADDED,
+  CONSTRUCTOR_ADD_TO_BAG,
+} from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useContext } from "react";
+import { toast } from "react-toastify";
 
 export default function ProductNavigation({ id }: ProductNavigationProps) {
+  const { setModelsInBag } = useContext(ConstructorContext);
+
+  const addModelToBag = () => {
+    setModelsInBag((prevState) => {
+      let previousElementId = prevState[prevState.length - 1]?.id ?? 0;
+      const modelsInBag = [
+        ...prevState,
+        {
+          id: ++previousElementId,
+          ...(PRODUCT_DEFAULT_MODEL_PARAMS[id] as ConstructorModel),
+        },
+      ];
+      localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
+      return modelsInBag;
+    });
+    toast.success(CART_SUCCESSFULLY_ADDED);
+  };
+
   return (
     <div
       className="
@@ -63,11 +92,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
               })}
             </div>
           </div>
-          <Button
-            onClick={() => console.log("da")}
-            size="extrasmall"
-            style="outline"
-          >
+          <Button onClick={addModelToBag} size="extrasmall" style="outline">
             <div className="flex justify-center items-center gap-[6px]">
               <Image
                 src={`/images/cart.svg`}
