@@ -2,10 +2,14 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DocumentsHeading from "@/app/[locale]/components/common/DocumentsHeading";
-import DocumentsProvider from "@/app/[locale]/context/documentsContext";
+import DocumentsProvider, {
+  DocumentsContext,
+} from "@/app/[locale]/context/documentsContext";
 import CategoriesWithControl from "@/app/[locale]/documents/components/CategoriesControl";
+import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useContext } from "react";
 
 const mapBackgroundWithCategory = {
   documents: `/images/documents/documents.png`,
@@ -36,7 +40,7 @@ export default function ClientLayout({
           height={440}
           quality={100}
           priority
-          className="h-[440px]"
+          className="lg:h-[440px] min-[920px]:h-[400px] md:h-[360px] h-[300px]"
         />
         <div className="flex w-full justify-center absolute bottom-0">
           <BasicWidthContainer>
@@ -52,7 +56,7 @@ export default function ClientLayout({
             priority
             width={1320}
             height={60}
-            className="mb-[60px]"
+            className="min-[920px]:mb-[60px] mb-[40px]"
           />
           <CategoriesWithControl>{children}</CategoriesWithControl>
         </BasicWidthContainer>

@@ -33,7 +33,7 @@ export default function PublishersInfroWithIntersection({
 
   return (
     <div
-      className="flex gap-10 flex-col scroll-mt-[100px]"
+      className="flex gap-10 flex-col min-[920px]:scroll-mt-[100px] scroll-mt-[140px]"
       id={index.toString()}
       ref={infoRef}
     >

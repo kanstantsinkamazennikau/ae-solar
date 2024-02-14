@@ -48,8 +48,8 @@ export default function FAQ() {
                 <span
                   className={`
                     font-semibold
-                    leading-[100%]
-                    [font-size:_clamp(10px,1.5vw,24px)]
+                    [font-size:_clamp(20px,1.5vw,24px)]
+                    leading-[120%]
                   `}
                 >
                   {question}
@@ -60,8 +60,11 @@ export default function FAQ() {
                   key={question}
                   title={styledTitle}
                   openCloseStyle
+                  dropdownIcon="/images/selectorWhite.svg"
                 >
-                  <p className="pb-6 pl-6 font-walsheim">{answer}</p>
+                  <p className="pb-4 pt-2 pl-4 font-walsheim [font-size:_clamp(16px,1.5vw,20px)]">
+                    {answer}
+                  </p>
                 </AccordionItem>
               );
             })}

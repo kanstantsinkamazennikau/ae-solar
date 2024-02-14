@@ -1,7 +1,6 @@
 "use client";
 
 import Accordion from "@/app/[locale]/components/common/Accordion";
-import Loader from "@/app/[locale]/components/common/Loader";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import DocumentsAccordionWithIntersection from "@/app/[locale]/documents/components/DocumentsAccordionWithIntersection";
 import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
@@ -23,6 +22,7 @@ export default function Documents() {
     documentsFile,
     documentsLoading,
     setDocumentsLoading,
+    setDocumentsAccordionActiveIndex,
   } = useContext(DocumentsContext);
 
   useEffect(() => {
@@ -38,13 +38,19 @@ export default function Documents() {
           tags?.some((tag) => filterModels.includes(tag))
         ),
       })).filter(({ data }) => data.length > 0) as typeof DOCUMENTS_FILES;
+      setDocumentsAccordionActiveIndex(0);
     }
 
     setTimeout(() => {
       setDocumentsFile(filteredDocuments);
       setDocumentsLoading(false);
     }, 500);
-  }, [filterModels, setDocumentsFile, setDocumentsLoading]);
+  }, [
+    filterModels,
+    setDocumentsFile,
+    setDocumentsLoading,
+    setDocumentsAccordionActiveIndex,
+  ]);
 
   return documentsLoading ? (
     <DocumentsLoader />
@@ -52,19 +58,25 @@ export default function Documents() {
     <Accordion
       documentsAccordionActiveIndex={documentsAccordionActiveIndex}
       documentsAccordion
+      collapseAll={documentsAccordionActiveIndex === undefined}
     >
       {(documentsFile as typeof DOCUMENTS_FILES).map(
         ({ category, type, data }, index) => {
           const styledTitle = (
-            <span
-              className={`${
+            <div
+              className={`
+              flex
+              ${
                 index === selectedCategoryIndex
                   ? "text-white"
                   : "text-dark-gray-900"
               } `}
             >
               {category}
-            </span>
+              <p className="text-[#505050] font-semibold leading-[130%] [font-size:_clamp(12px,1.5vw,26px)] ml-2 mb-4">
+                {data.length}
+              </p>
+            </div>
           );
 
           if (type === "Presentation") {

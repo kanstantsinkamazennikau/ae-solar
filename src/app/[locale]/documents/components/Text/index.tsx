@@ -38,19 +38,23 @@ export default function Text({ link, linkTitle }: TextProps) {
           capitalize
           -tracking-[0.32px]
           flex
-          gap-4
           z-20
+          items-center
         "
       >
-        <p className={`${isHover ? "text-[#B30006]" : "text-white"}`}>
+        <Image
+          src="/images/option/documentGrey.svg"
+          alt={"linkArrow"}
+          priority
+          width={16}
+          height={16}
+          className="mr-1"
+        />
+        <p className={`${isHover ? "text-[#B30006]" : "text-white"} mr-4`}>
           {linkTitle}
         </p>
         <Image
-          src={`${
-            isHover
-              ? "/images/option/linkArrowDarkRed.svg"
-              : "/images/option/linkArrow.svg"
-          }`}
+          src="/images/option/linkArrowDarkRed.svg"
           alt={"linkArrow"}
           priority
           width={16}

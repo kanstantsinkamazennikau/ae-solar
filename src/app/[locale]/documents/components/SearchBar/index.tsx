@@ -9,7 +9,8 @@ import { useContext, useEffect } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 export default function SearchBar() {
-  const { setSearchInputValue, documentsType } = useContext(DocumentsContext);
+  const { setSearchInputValue, documentsType, documentsLoading } =
+    useContext(DocumentsContext);
 
   const defaultValues = {
     [FORMS_FIELDS.searchInputValue]: "",
@@ -27,22 +28,26 @@ export default function SearchBar() {
     setValue(FORMS_FIELDS.searchInputValue, "");
   }, [documentsType, setValue]);
 
+  if (documentsLoading) return;
+
   return (
     <>
       <form
         className="
-          sticky
-          min-[920px]:top-[80px]
-          top-[64px]
+          min-[920px]:sticky
+          min-[920px]:top-[79px]
+          top-[63px]
           z-30
           pb-2
           bg-black
           backdrop-blur-3xl
+          pt-1
         "
         onSubmit={handleSubmit(onSubmit)}
       >
         <div
           className="
+           
             flex
             pl-2
             pr-[6px]

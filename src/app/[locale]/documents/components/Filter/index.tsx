@@ -11,16 +11,19 @@ import Image from "next/image";
 import { useContext } from "react";
 
 export default function Filter() {
+  const { documentsLoading } = useContext(DocumentsContext);
   const { setFilterModels, filterModels } = useContext(DocumentsContext);
+  if (documentsLoading) return;
 
   return (
     <div
       className="
-        sticky
-        min-[920px]:top-[80px]
-        top-[64px]
+        min-[920px]:sticky
+        min-[920px]:top-[79px]
+        top-[63px]
         z-30
         pb-2
+        pt-[6px]
         bg-black
         backdrop-blur-3xl
       "
@@ -33,9 +36,37 @@ export default function Filter() {
           flex-wrap
         "
       >
-        <span className="mr-2 font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-dark-gray-900">
-          {DOCUMENTS_FILTER}
-        </span>
+        <div
+          className="
+            mr-2
+            font-semibold
+            [font-size:_clamp(12px,1.5vw,16px)]
+            text-dark-gray-900
+            max-[920px]:flex
+            max-[920px]:w-full
+            max-[920px]:justify-between
+            max-[920px]:mb-2
+          "
+        >
+          <div>{DOCUMENTS_FILTER}</div>
+          {!!filterModels.length && (
+            <Button
+              style="textOnly"
+              externalStyle="!px-0 ml-2 !py-0 max-[920px]:flex hidden"
+              onClick={() => setFilterModels([])}
+            >
+              <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red">
+                {DOCUMENTS_RESET}
+              </span>
+              <Image
+                alt="close"
+                src={`/images/documents/closeRed.svg`}
+                width={16}
+                height={16}
+              />
+            </Button>
+          )}
+        </div>
         {HEADER_SUBNAVIGATION_PANELS_MODELS.map((panel) => {
           const modelName = panel.split(".")[0];
           const isAppliedFilter = filterModels.includes(modelName);
@@ -91,7 +122,7 @@ export default function Filter() {
         {!!filterModels.length && (
           <Button
             style="textOnly"
-            externalStyle="!px-0 ml-2"
+            externalStyle="!px-0 ml-2 min-[920px]:flex hidden"
             onClick={() => setFilterModels([])}
           >
             <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red">

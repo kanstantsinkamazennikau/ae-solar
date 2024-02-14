@@ -17,9 +17,9 @@ export default function CategoriesWithControl({
   const isImprint = "imprint" === documentsType;
 
   return (
-    <div className="flex gap-[60px] relative">
+    <div className="flex min-[920px]:gap-[60px] gap-[12px] gaprelative min-[920px]:flex-row flex-col relative min-h-[200px]">
       {!isImprint && (
-        <div>
+        <div className="max-[920px]:sticky max-[920px]:top-[62px] max-[920px]:z-10 max-[920px]:bg-black">
           <Categories />
         </div>
       )}

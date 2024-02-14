@@ -17,8 +17,10 @@ import {
 export interface DocumentsContext {
   setSelectedCategoryIndex: Dispatch<SetStateAction<number>>;
   selectedCategoryIndex: number;
-  setDocumentsAccordionActiveIndex: Dispatch<SetStateAction<number>>;
-  documentsAccordionActiveIndex: number;
+  setDocumentsAccordionActiveIndex: Dispatch<
+    SetStateAction<number | undefined>
+  >;
+  documentsAccordionActiveIndex: number | undefined;
   setSearchInputValue: Dispatch<SetStateAction<string>>;
   searchInputValue: string;
   onCategoryClick: (index: number) => void;
@@ -54,7 +56,7 @@ export default function DocumentsProvider({
   const [documentsType, setDocumentsType] = useState(category);
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
   const [documentsAccordionActiveIndex, setDocumentsAccordionActiveIndex] =
-    useState(0);
+    useState<undefined | number>(category === "documents" ? undefined : 0);
   const [filterModels, setFilterModels] = useState<string[]>([]);
   const [searchInputValue, setSearchInputValue] = useState("");
   const [documentsFile, setDocumentsFile] = useState<

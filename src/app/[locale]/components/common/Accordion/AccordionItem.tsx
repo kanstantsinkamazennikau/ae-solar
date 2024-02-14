@@ -16,6 +16,7 @@ export default function AccordionItem({
   id,
   openCloseStyle,
   documentsAccordion,
+  dropdownIcon,
 }: AccordionItemProps) {
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(
@@ -45,7 +46,7 @@ export default function AccordionItem({
 
   return (
     <div
-      className="border-b border-solid border-[#131313] last:border-none scroll-mt-[140px]"
+      className="border-b border-solid border-[#131313] last:border-none min-[920px]:scroll-mt-[120px] scroll-mt-[160px]"
       id={id?.toString()}
     >
       <button
@@ -84,7 +85,7 @@ export default function AccordionItem({
             }
           `}
           alt="arrow"
-          src="/images/arrow.svg"
+          src={dropdownIcon || "/images/arrow.svg"}
           width={16}
           height={16}
         />

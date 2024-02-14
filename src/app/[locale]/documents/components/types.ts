@@ -12,6 +12,7 @@ export interface DocumentsTypesOther {
     | "Technical Data"
     | "Certification"
     | "Warranty"
+    | "Datasheets"
     | "Videos";
   type: "Text";
   data: {

@@ -12,6 +12,7 @@ export interface AccordionItemProps {
   id?: number;
   openCloseStyle?: boolean;
   documentsAccordion?: boolean;
+  dropdownIcon?: string;
 }
 
 export interface AccordionData {
