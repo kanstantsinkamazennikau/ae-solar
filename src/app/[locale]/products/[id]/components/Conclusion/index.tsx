@@ -48,7 +48,7 @@ export default function Conclusion({ id }: ConclusionProps) {
           <p className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-extrabold -tracking-[1.44px] leading-[120%] text-center z-10">
             {PRODUCT_IN_CONCLUSION}
           </p>
-          <p className="[font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim text-center z-10">
+          <div className="[font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim text-center z-10">
             {PRODUCT_CONCLUSION_FOR_PANELS[id]
               .split(/\r?\n|\r|\n/g)
               .map((string) => (
@@ -56,7 +56,7 @@ export default function Conclusion({ id }: ConclusionProps) {
                   {string}
                 </p>
               ))}
-          </p>
+          </div>
           <div className="self-center">
             <Button size="thin">
               <div className="flex justify-center items-center px-2">

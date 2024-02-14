@@ -36,7 +36,7 @@ export default function ContactInfo() {
                 font-normal
                 font-walsheim
                  gap-1
-                [font-size:_clamp(10px,1vw,14px)]
+                [font-size:_clamp(14px,1vw,14px)]
               "
             >
               <Image
@@ -45,6 +45,7 @@ export default function ContactInfo() {
                 width={16}
                 height={16}
                 priority
+                className="w-4 h-4"
               />
               <div
                 onClick={() => {

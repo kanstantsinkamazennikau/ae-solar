@@ -78,7 +78,7 @@ export default function Footer() {
           />
           <nav className="grid md:grid-cols-[auto_auto] min-[500px]:items-start gap-2 grid-cols-1 justify-between">
             {/* BACKGROUND */}
-            <div className="flex justify-between w-full absolute top-0 left-0 mt-20 h-[calc(100%-80px)] items-center z-0">
+            <div className="md:flex justify-between w-full absolute top-0 left-0 mt-20 h-[calc(100%-80px)] items-center z-0 hidden">
               <Image
                 src={`/images/footer/productLeft.png`}
                 alt="productLeft"
@@ -115,8 +115,10 @@ export default function Footer() {
                   "text-dark-gray-900 font-bold"
                 )}
               </div>
-              <ContactInfo />
-              <Social />
+              <div className="min-[500px]:flex gap-8 flex-col hidden">
+                <ContactInfo />
+                <Social />
+              </div>
             </div>
             {/* LINKS */}
             <div className="min-[500px]:justify-between min-w-0 lg:min-w-[720px] grid min-[500px]:grid-cols-4 grid-cols-1 w-full">
@@ -145,15 +147,26 @@ export default function Footer() {
                   min-[500px]:col-end-5
                   z-10
                   static
+                  max-[500px]:items-center
                 "
               >
-                <span className="leading-[120%] text-white [font-size:_clamp(12px,1vw,16px)] max-w-[140px]">
+                <span
+                  className="
+                  leading-[120%]
+                  text-white
+                  min-[500px]:[font-size:_clamp(12px,1vw,16px)]
+                  min-[500px]:max-w-[140px]
+                  text-2xl
+                  max-[500px]:text-center
+                  max-w-[200px]
+                "
+                >
                   {FOOTER_SUBSCRIBE_NEWSLETTER}
                 </span>
                 <Input
                   placeholder={FOOTER_YOUR_EMAIL}
                   externalContainerStyle="!w-full"
-                  externalStyle="placeholder:[font-size:_clamp(11px,1vw,16px)]"
+                  externalStyle="placeholder:[font-size:_clamp(11px,1vw,16px)] max-[500px]:placeholder:text-center"
                   error={errors?.email}
                   name="email"
                   register={register("email", inputsRules.email)}
@@ -162,7 +175,7 @@ export default function Footer() {
                   onClick={handleSubmit(onSubmit)}
                   style="outline"
                   size="extrasmall"
-                  externalStyle="py-3 px-6"
+                  externalStyle="py-3 px-6 max-[500px]:w-full"
                 >
                   <span className="leading-none [font-size:_clamp(12px,1vw,14px)]">
                     {FOOTER_SUBSCRIBE}
@@ -170,13 +183,17 @@ export default function Footer() {
                 </Button>
               </form>
             </div>
+            <div className="min-[500px]:hidden gap-8 flex-col flex mt-8">
+              <ContactInfo />
+              <Social />
+            </div>
           </nav>
           {/* POLICY */}
           <div className="relative z-10">
             <hr className="bg-dark-gray-800 h-[1px] border-none mb-3" />
             <div className="flex justify-between text-dark-gray-800 mb-5 text-[10px] min-[550px]:flex-row flex-col">
               <div>{FOOTER_COPYRIGHT}</div>
-              <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row flex-col">
+              <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row max-[550px]:gap-4">
                 {POLICY_LINKS.map((link) => (
                   <PolicyLink key={link} link={link} />
                 ))}

@@ -333,11 +333,11 @@ export const FOOTER_LINKS_ARRAY = [
   {
     category: { title: "Products", link: "/products" },
     links: [
-      { title: "Aurora", link: "/products/aurora" },
-      { title: "Meteor", link: "/products/meteor" },
-      { title: "Comet", link: "/products/comet" },
-      { title: "Terra", link: "/products/terra" },
-      { title: "ShadeStar", link: "/products/shadestar" },
+      { title: "Aurora", link: "/products/Aurora" },
+      { title: "Meteor", link: "/products/Meteor" },
+      { title: "Comet", link: "/products/Comet" },
+      { title: "Terra", link: "/products/Terra" },
+      { title: "ShadeStar", link: "/products/ShadeStar" },
       { title: "Neptune", link: "/products/Neptune" },
     ],
   },
@@ -360,10 +360,10 @@ export const FOOTER_LINKS_ARRAY = [
     category: { title: "Documents", link: "/documents" },
     links: [
       { title: "Datasheet", link: "/documents" },
-      { title: "Certifications", link: "/documents" },
-      { title: "Manual", link: "/documents" },
-      { title: "Warranty", link: "/documents" },
-      { title: "Presentations", link: "/documents" },
+      // { title: "Certifications", link: "/documents" },
+      // { title: "Manual", link: "/documents" },
+      // { title: "Warranty", link: "/documents" },
+      // { title: "Presentations", link: "/documents" },
       { title: "FAQ", link: "/info/faq" },
     ],
   },
@@ -373,8 +373,9 @@ export const FOOTER_GERMAN_BRAND =
 export const FOOTER_GERMAN_BRAND_WORDS_TO_BOLD = ["German brand", "since 2003"];
 export const FOOTER_WE_ARE_SOCIAL = "We are social";
 export const FOOTER_SOCIAL = [
-  { icon: "linkedin.svg", link: "https://www.linkedin.com/company/ae-solar/" },
   { icon: "facebook.svg", link: "https://www.facebook.com/aesolarenergy/" },
+  { icon: "linkedin.svg", link: "https://www.linkedin.com/company/ae-solar/" },
+  { icon: "instagram.svg", link: "https://www.instagram.com/aesolarenergy/" },
   { icon: "twitter.svg", link: "https://twitter.com/aesolar_energy/" },
   { icon: "youtube.svg", link: "https://www.youtube.com/@AESOLAR/featured/" },
 ];

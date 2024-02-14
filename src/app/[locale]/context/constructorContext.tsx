@@ -21,6 +21,15 @@ export type Model =
   | "Neptune"
   | "ShadeStar";
 
+export enum ModelsEnum {
+  Aurora = "Aurora",
+  Comet = "Comet",
+  Meteor = "Meteor",
+  Terra = "Terra",
+  Neptune = "Neptune",
+  ShadeStar = "ShadeStar",
+}
+
 export interface ConstructorModel {
   model: Model;
   solarCellTechnology: string;
