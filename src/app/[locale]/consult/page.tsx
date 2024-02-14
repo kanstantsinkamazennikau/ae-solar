@@ -34,7 +34,6 @@ const patnerTypeMapping = {
 export default function Consult() {
   const searchParams = useSearchParams();
   const type = searchParams.get("type");
-  console.log(type);
 
   const inputsRules: { [key in keyof ConsultFormFileds]: RegisterOptions } = {
     name: {

@@ -12,7 +12,7 @@ export default function Awards() {
   const options = {
     type: "loop",
     drag: true,
-    gap: "40px",
+    gap: "10px",
     arrows: false,
     pagination: false,
     width: 950,
@@ -34,7 +34,6 @@ export default function Awards() {
             h-full
             absolute
             [background:linear-gradient(90deg,#000000e8_0%,#000000e6_5%,#000000e6_10%,#00000000_50%,#000000e6_90%,#000000e6_95%,#000000e8_100%)]
-            
             z-10
             pointer-events-none
           "

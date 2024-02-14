@@ -25,6 +25,7 @@ export default async function AwardsAndStats() {
           border
           border-solid
           border-[#191919]
+          overflow-hidden
         "
       >
         {/* bg-[linear-gradient(0deg,_rgb(0_0_0_/_50%),_rgb(0_0_0_/_50%)),_linear-gradient(0deg,_#19191947,_#19191947)] */}
@@ -44,7 +45,7 @@ export default async function AwardsAndStats() {
           alt="dividerBig"
           width={300}
           height={300}
-          className="absolute bottom-0 -right-[1px]"
+          className="absolute bottom-0 -right-[1px] pointer-events-none z-0"
         />
       </div>
     </BasicWidthContainer>

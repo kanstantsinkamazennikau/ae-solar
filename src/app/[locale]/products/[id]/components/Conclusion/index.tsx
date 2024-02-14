@@ -1,14 +1,45 @@
+"use client";
+
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
+import {
+  ConstructorContext,
+  ConstructorModel,
+} from "@/app/[locale]/context/constructorContext";
 import { ConclusionProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
 import {
   PRODUCT_IN_CONCLUSION,
   PRODUCT_CONCLUSION_FOR_PANELS,
+  PRODUCT_DEFAULT_MODEL_PARAMS,
 } from "@/app/[locale]/products/[id]/constants";
-import { CONSTRUCTOR_ADD_TO_BAG } from "@/app/[locale]/utils/constants";
+import {
+  CART_LOCALSTORAGE,
+  CART_SUCCESSFULLY_ADDED,
+  CONSTRUCTOR_ADD_TO_BAG,
+} from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useContext } from "react";
+import { toast } from "react-toastify";
 
 export default function Conclusion({ id }: ConclusionProps) {
+  const { setModelsInBag } = useContext(ConstructorContext);
+
+  const addModelToBag = () => {
+    setModelsInBag((prevState) => {
+      let previousElementId = prevState[prevState.length - 1]?.id ?? 0;
+      const modelsInBag = [
+        ...prevState,
+        {
+          id: ++previousElementId,
+          ...(PRODUCT_DEFAULT_MODEL_PARAMS[id] as ConstructorModel),
+        },
+      ];
+      localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
+      return modelsInBag;
+    });
+    toast.success(CART_SUCCESSFULLY_ADDED);
+  };
+
   return (
     <div
       className="flex justify-center xl:mb-[150px] lg:mb-[120px] md:mb-[100px] mb-[80px] mt-20 w-full"
@@ -58,7 +89,7 @@ export default function Conclusion({ id }: ConclusionProps) {
               ))}
           </div>
           <div className="self-center">
-            <Button size="thin">
+            <Button size="thin" onClick={addModelToBag}>
               <div className="flex justify-center items-center px-2">
                 <Image
                   src={`/images/cart.svg`}
