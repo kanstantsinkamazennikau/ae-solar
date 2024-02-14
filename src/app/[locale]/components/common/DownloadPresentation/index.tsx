@@ -1,4 +1,5 @@
 import { DownloadPresentationProps } from "@/app/[locale]/components/common/DownloadPresentation/types";
+import { CONTACTS_DOWNLOAD_PRESENTATION } from "@/app/[locale]/contacts/constants";
 import Image from "next/image";
 
 export default function DownloadPresentation({
@@ -10,7 +11,8 @@ export default function DownloadPresentation({
       className="
         flex
         flex-col
-        gap-6
+        min-[920px]:gap-6
+        gap-4
         px-10
         pt-10
         border
@@ -21,22 +23,35 @@ export default function DownloadPresentation({
         -top-[10px]
         rounded-xl
         font-semibold
-        [font-size:_clamp(12px,1.5vw,16px)]
         leading-[120%]
-        min-w-[300px]
-        max-w-[300px]
       "
     >
-      <div className="flex gap-2 items-start">
+      <div className="flex min-[920px]:gap-2 gap-1 min-[920px]:items-start items-end">
         <Image
           src="/images/downloadFile.svg"
           alt="downloadFile"
           width={18}
           height={18}
+          className="min-[920px]:block hidden"
         />
-        <div className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold leading-[120%]">
-          Download Presentation
+        <Image
+          src="/images/downloadFileGrey.svg"
+          alt="downloadFile"
+          width={18}
+          height={18}
+          className="min-[920px]:hidden block"
+        />
+
+        <div className="min-[920px]:text-2xl text-[13px] font-semibold min-[920px]:leading-[120%] leading-[100%]">
+          {CONTACTS_DOWNLOAD_PRESENTATION}
         </div>
+        <Image
+          src="/images/arrowFutureRed.svg"
+          alt="downloadFile"
+          width={16}
+          height={16}
+          className="min-[920px]:hidden block -rotate-[135deg] ml-1"
+        />
       </div>
       <a href={link} target="_blank">
         <div

@@ -21,12 +21,13 @@ export default async function AwardsAndStats() {
           relative
           mt-[60px]
           py-[60px]
-          bg-[linear-gradient(0deg,_rgb(0_0_0_/_50%),_rgb(0_0_0_/_50%)),_linear-gradient(0deg,_#19191947,_#19191947)]
+          bg-[linear-gradient(0deg,_rgb(0_0_0_/_80%),_rgb(0_0_0_/_80%)),_linear-gradient(0deg,_#19191961,_#1919195c)]
           border
           border-solid
           border-[#191919]
         "
       >
+        {/* bg-[linear-gradient(0deg,_rgb(0_0_0_/_50%),_rgb(0_0_0_/_50%)),_linear-gradient(0deg,_#19191947,_#19191947)] */}
         <Image
           src="/images/awards/dividerSmall.svg"
           alt="dividerSmall"

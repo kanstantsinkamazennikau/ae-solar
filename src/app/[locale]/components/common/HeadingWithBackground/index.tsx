@@ -18,7 +18,18 @@ export default function HeadingWithBackground({
           height={440}
           quality={100}
           priority
-          className="xl:h-[440px] lg:h-[380px] min-[920px]:h-[320px] md:h-[300px] min-[560px]:h-[250px] min-[920px]:mt-0 mt-[80px] min-[560px]:block hidden"
+          className={`
+            xl:h-[440px]
+            lg:h-[380px]
+            min-[920px]:h-[320px]
+            md:h-[300px]
+            min-[560px]:h-[250px]
+            min-[920px]:mt-0
+            mt-[80px]
+            min-[560px]:block
+            h-[200px]
+            ${mobileBackgroundImage ? "hidden" : ""}
+          `}
         />
         {mobileBackgroundImage && (
           <Image

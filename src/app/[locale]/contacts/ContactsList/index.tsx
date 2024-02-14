@@ -16,20 +16,21 @@ export default function ContactsList() {
 
   return (
     <BasicWidthContainer>
-      <div className="flex gap-[60px] relative">
+      <div className="flex gap-[60px] relative min-[920px]:flex-row flex-col">
         <div>
-          <div className="flex flex-col sticky min-[920px]:top-[100px] top-[80px] w-full min-w-[300px] max-w-[300px] gap-6">
-            <DownloadPresentation link="" />
+          <div className="flex min-[920px]:flex-col flex-col-reverse sticky min-[920px]:top-[100px] top-[80px] w-full min-w-[300px] max-w-[300px] gap-6 mx-auto ">
+            <DownloadPresentation link="/documents/references.pdf" />
             <div
               className="
                 p-7
                 border
                 border-solid
+                max-[920px]:border-b-0
               border-[#131313]
               bg-[#0D0D0D]
                 rounded-xl
-                min-w-[300px]
-                max-w-[300px]
+                -mb-12
+                z-10
               "
             >
               {styleMatchingText(
@@ -38,6 +39,7 @@ export default function ContactsList() {
                 "text-sm font-normal leading-[130%] font-walsheim text-[#747474]",
                 "text-dark-gray-900 font-bold"
               )}
+              <hr className="mt-6 border-[#131313] min-[920px]:hidden" />
             </div>
           </div>
         </div>
@@ -45,17 +47,27 @@ export default function ContactsList() {
           {CONTACTS_OFFICES.map(({ office, contacts }) => (
             <div key={office} className="w-full mb-[40px]">
               <hr className="bg-[#131313] h-[1px] border-none mb-[60px]" />
-              <div className="grid grid-cols-[clamp(100px,20%,280px)_auto] gap-4 w-full">
-                <div className="[font-size:_clamp(20px,2.5vw,40px)] [word-spacing:1000px]">
+              <div className="min-[560px]:grid grid-cols-[clamp(100px,20%,280px)_auto] gap-4 w-full max-[920px]:justify-center flex flex-col">
+                <div className="[font-size:_clamp(20px,2.5vw,40px)] min-[560px]:[word-spacing:1000px]">
                   {office}
                 </div>
                 <div className="flex flex-col">
                   {contacts.map(({ title, icon, info, linkTo }) => (
                     <div
                       key={info}
-                      className="grid grid-cols-[clamp(100px,20%,160px)_auto] justify-start items-center gap-4 mb-4"
+                      className="
+                        min-[560px]:grid
+                        grid-cols-[clamp(100px,20%,160px)_auto]
+                        justify-start
+                        min-[560px]:items-center
+                        min-[560px]:gap-4
+                        gap-1
+                        mb-4
+                        flex flex-col
+                        items-start
+                      "
                     >
-                      <div className="flex items-baseline justify-start h-full gap-2 text-[#505050]">
+                      <div className="flex items-baseline justify-start h-full min-[560px]:gap-2 gap-1 text-[#505050]">
                         <Image
                           src={`/images/footer/${icon}`}
                           alt={icon}
@@ -63,7 +75,7 @@ export default function ContactsList() {
                           height={16}
                           priority
                         />
-                        <div className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold">
+                        <div className="[font-size:_clamp(11px,1.5vw,20px)] font-semibold">
                           {title}
                         </div>
                       </div>
