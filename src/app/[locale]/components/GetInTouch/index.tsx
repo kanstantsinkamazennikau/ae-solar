@@ -22,7 +22,7 @@ export default function GetInTouch({ children }: GetInTuchProps) {
 
   //TODO fill form with partner type value for "intrested in" dropdown
   const handleClick = () => {
-    router.push(`/${locale}/consult`);
+    router.push(`/consult?type=${clientType}`);
   };
 
   const matchPartnerTypeWithArticle = {

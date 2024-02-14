@@ -8,6 +8,7 @@ import {
   FORMS_FIELDS,
   PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";
+import { useSearchParams } from "next/navigation";
 import { FieldValues, RegisterOptions } from "react-hook-form";
 
 async function sendContactUsEmail(data: FieldValues) {
@@ -24,7 +25,17 @@ async function sendContactUsEmail(data: FieldValues) {
   }
 }
 
+const patnerTypeMapping = {
+  partner: "partnership",
+  investor: "investing",
+  installer: "installing",
+};
+
 export default function Consult() {
+  const searchParams = useSearchParams();
+  const type = searchParams.get("type");
+  console.log(type);
+
   const inputsRules: { [key in keyof ConsultFormFileds]: RegisterOptions } = {
     name: {
       required: "Name is required",
@@ -53,7 +64,9 @@ export default function Consult() {
 
   const defaultValues = {
     [FORMS_FIELDS.name]: "",
-    [FORMS_FIELDS.interest]: PICKER_INPUT_VALUES[FORMS_FIELDS.interest][0],
+    [FORMS_FIELDS.interest]: type
+      ? patnerTypeMapping[type as keyof typeof patnerTypeMapping]
+      : PICKER_INPUT_VALUES[FORMS_FIELDS.interest][0],
     [FORMS_FIELDS.budget]: PICKER_INPUT_VALUES[FORMS_FIELDS.budget][0],
     [FORMS_FIELDS.email]: "",
     [FORMS_FIELDS.phone]: "",
