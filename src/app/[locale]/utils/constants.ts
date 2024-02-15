@@ -142,6 +142,7 @@ export const PRODUCT_INTRO_PANELS_IMAGES = [
   "ShadeStar",
   "Neptune",
 ];
+export const PRODUCT_INTRO_DETAILED_INFO = "Detailed Info";
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
     stats: {
