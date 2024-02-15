@@ -16,7 +16,7 @@ export default function Introduction({ id }: IntroductionProps) {
 
   return (
     <div
-      className="flex w-full justify-center min-[540px]:flex-row flex-col"
+      className="flex w-full justify-center min-[540px]:flex-row flex-col min-[540px]:scroll-mt-[150px] lg:scroll-mt-[50px] scroll-mt-[300px]"
       id="introduction"
     >
       <div
@@ -38,6 +38,7 @@ export default function Introduction({ id }: IntroductionProps) {
           max-[540px]:-mt-[150px]
           max-[460px]:-mt-[180px]
           max-[400px]:-mt-[220px]
+          
         `}
       >
         <div className="fade-strip-top !z-10"></div>

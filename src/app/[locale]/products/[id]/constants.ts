@@ -2,7 +2,7 @@ export const PRODUCT_NAVIGATION = [
   {
     title: "Introduction",
     link: "introduction",
-    position: "center",
+    position: "start",
   },
   {
     title: "Benefits",

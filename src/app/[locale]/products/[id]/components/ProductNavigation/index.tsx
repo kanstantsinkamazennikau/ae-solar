@@ -166,7 +166,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
         bg-navigation-black
           overflow-hidden
           w-full
-          z-20
+          z-30
         `}
         style={isOpenItem ? { height } : { height: 0 }}
       >
@@ -180,6 +180,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
                 behavior: "smooth",
                 block: position as ScrollLogicalPosition,
               });
+              setIsOpenItem(false);
             };
             return (
               <div
