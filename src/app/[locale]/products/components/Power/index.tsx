@@ -38,6 +38,10 @@ export default function Power() {
             relative
             overflow-hidden
             z-10
+            mt-0
+            mb-0
+            max-[560px]:-mt-28
+            max-[560px]:-mb-10
           "
         >
           <div className="w-full h-[130%] absolute left-0 top-0 [background:radial-gradient(#7474744d_0%,transparent_70%,transparent_100%)] -translate-y-1/2" />
@@ -45,7 +49,7 @@ export default function Power() {
             <p className="max-w-[540px]">{PRODUCT_WE_TRANSFORM}</p>
             <p className="text-[#B30006]">{PRODUCT_FOR_YOU}</p>
           </div>
-          <div className="flex justify-center items-start md:gap-8 gap-4 self-stretch [font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim z-10">
+          <div className="flex md:flex-row flex-col justify-center items-start md:gap-8 gap-4 self-stretch [font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim z-10">
             <p className="max-w-[360px]">{PRODUCT_ADVANCED_TECHNOLOGY}</p>
             <p className="max-w-[360px]">{PRODUCT_INNOVATIVE_PRODUCTS}</p>
           </div>
@@ -55,7 +59,17 @@ export default function Power() {
             priority
             width={200}
             height={200}
-            className="absolute right-0 bottom-[1px]"
+            className="
+              absolute
+              right-0
+              bottom-[1px]
+              lg:w-[200px]
+              lg:h-[200px]
+              md:w-[150px]
+              md:h-[150px]
+              w-[100px]
+              h-[100px]
+            "
           />
         </div>
         <Image

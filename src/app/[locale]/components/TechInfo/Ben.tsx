@@ -37,6 +37,7 @@ export default function Ben({
         duration-200
         border
         border-solid
+        cursor-pointer
         border-[#191919]
         ${
           isFullHeightRow
@@ -119,12 +120,18 @@ export default function Ben({
           {description}
         </div>
         <div
-          className={`whitespace-nowrap transition-all
-          duration-500 ${
-            isReadMoreVisible
-              ? "translate-x-0"
-              : "translate-x-[200%] -mr-10 min-[500px]:translate-x-0 min-[500px]:-mr-0"
-          }`}
+          className={`
+            whitespace-nowrap
+            transition-all
+            duration-500
+            ${
+              isReadMoreVisible
+                ? "translate-x-0"
+                : "translate-x-[200%] -mr-10 min-[500px]:translate-x-0 min-[500px]:-mr-0"
+            }
+
+            hidden
+          `}
         >
           <LinkWithArrow label={TECH_INFO_READ_MORE} href="" />
         </div>

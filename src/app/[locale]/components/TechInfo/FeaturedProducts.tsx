@@ -7,6 +7,7 @@ import {
   TECH_INFO_INNOVATIVE,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FeaturedProducts() {
   return (
@@ -55,15 +56,12 @@ export default function FeaturedProducts() {
             height={60}
             className="w-full absolute rotate-180 translate-y-[calc(50%-1px)]"
           />
-          <Button
-            onClick={() => console.log(HEADER_CHOOSE_YOUR_MODEL)}
-            style="outline"
-            externalStyle="!bg-black"
-            size="thin"
-          >
-            <span className="[font-size:_clamp(12px,1.5vw,20px)] -tracking-[0.24px] font-semibold">
-              {HEADER_CHOOSE_YOUR_MODEL}
-            </span>
+          <Button style="outline" externalStyle="!bg-black" size="thin">
+            <Link href="/calculate">
+              <span className="[font-size:_clamp(12px,1.5vw,20px)] -tracking-[0.24px] font-semibold">
+                {HEADER_CHOOSE_YOUR_MODEL}
+              </span>
+            </Link>
           </Button>
         </div>
       </div>
