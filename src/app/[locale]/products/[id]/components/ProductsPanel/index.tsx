@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ProductsPanel({ id }: ProductsPanelProps) {
   return (
-    <div className="w-full flex justify-center items-center relative -top-[64px] h-screen">
+    <div className="w-full flex justify-center items-center relative -top-[64px] lg:h-screen">
       <Image
         src={`/images/products/${id}ProductBackground.png`}
         alt={`${id}ProductBackground`}
@@ -16,7 +16,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
       />
 
       {/* BACKGROUND IMAGE */}
-      <div className="absolute bottom-[6%]">
+      <div className="absolute 2xl:bottom-[6%] xl:bottom-[12%] lg:bottom-[20%] md:bottom-[25%] min-[460px]:">
         <Image
           src="/images/products/moduleProducts.png"
           alt="moduleProducts"
@@ -24,14 +24,21 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           width={1582}
           height={701}
           quality={100}
-          className="z-10 relative"
+          className="z-10 relative md:scale-100 scale-[1.75] max-[460px]:-translate-y-[50px]"
         />
         <Image
           src="/images/products/bottomLight.svg"
           alt="bottomLight"
           width={1582}
           height={480}
-          className="absolute bottom-[calc(-39%+4px)]"
+          className="
+            absolute
+            md:bottom-[calc(-39%+4px)]
+            min-[460px]:bottom-[calc(-66%+4px)]
+            bottom-[calc(-53%+4px)]
+            min-[460px]:scale-100
+            scale-150
+          "
         />
         <div className="fade-strip-bottom !z-0 !h-[112px] !from-[#0000006e] !bottom-[0] rotate-180"></div>
         {/* PANEL DESCRIPTION */}
@@ -43,9 +50,9 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             md:pt-[30px]
             md:pb-[45px]
             md:px-[45px]
-            pt-[20px]
-            pb-[30px]
-            px-[30px]
+            pt-[10px]
+            pb-[20px]
+            px-[10px]
             inline-flex
             flex-col
             items-center         
@@ -55,6 +62,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             left-[50%]
             -translate-x-1/2
             z-10
+            w-full
           "
         >
           <Image
@@ -62,16 +70,16 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             alt="dividerSmall"
             width={30}
             height={30}
-            className="absolute top-0 left-0"
+            className="absolute top-0 left-0 lg:block hidden"
           />
           <Image
             src="/images/awards/dividerSmall.svg"
             alt="dividerSmall"
             width={30}
             height={30}
-            className="absolute bottom-0 right-0 rotate-180"
+            className="absolute bottom-0 right-0 rotate-180 lg:block hidden"
           />
-          <div className="flex flex-col items-center gap-3 w-min">
+          <div className="flex flex-col items-center gap-3 md:w-min w-full">
             <Image
               src={`/images/models/${id}.svg`}
               alt={id}
@@ -82,7 +90,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             />
             <div
               className="
-                [font-size:_clamp(40px,8.5vw,170px)]
+                [font-size:_clamp(60px,8.5vw,170px)]
                 drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
                 font-bold
                 leading-[100%]
@@ -91,35 +99,38 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             >
               {id}
             </div>
-            <p className="font-walsheim [font-size:_clamp(12px,1.5vw,24px)] leading-[150%] font-medium text-center max-w-[650px]">
+            <p className="font-walsheim [font-size:_clamp(18px,1.5vw,24px)] leading-[150%] font-medium text-center max-w-[650px]">
               {PRODUCT_PANEL_TITLES[id]}
             </p>
           </div>
         </div>
-      </div>
-      <div
-        className="
-          flex
-          items-center
-          flex-col
-          gap-4
-          absolute
-          bottom-[50px]
-          left-2/4
-          -translate-x-2/4
-          text-centerfade 
-          font-semibold
-          text-xl
-        "
-      >
-        <span>{"Scroll to the future"}</span>
-        <Image
-          src="/images/arrowFuture.svg"
-          alt="arrow"
-          width={23}
-          height={24}
-          className="animate-bounce"
-        />
+        <div
+          className="
+            flex
+            items-center
+            flex-col
+            gap-4
+            absolute
+            lg:bottom-[0px]
+            md:-bottom-6
+            min-[460px]:-bottom-[120px]
+            left-2/4
+            -translate-x-2/4
+            text-centerfade 
+            font-semibold
+            [font-size:_clamp(14px,1.5vw,20px)]
+            z-10
+          "
+        >
+          <span>{"Scroll to the future"}</span>
+          <Image
+            src="/images/arrowFuture.svg"
+            alt="arrow"
+            width={23}
+            height={24}
+            className="animate-bounce"
+          />
+        </div>
       </div>
     </div>
   );

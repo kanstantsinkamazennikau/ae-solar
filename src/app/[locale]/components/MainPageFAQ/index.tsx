@@ -30,7 +30,7 @@ export function MainPageFAQ() {
         align="left"
         size="small"
       />
-      <div className="flex flex-col items-end lg:mb-[120px] md:mb-[80px] mb-0">
+      <div className="flex flex-col items-end lg:mb-[120px] md:mb-[80px] mb-0 pb-20">
         <div className="max-w-[873px] w-full">
           <Accordion multiple>
             {FAQ_ACCORDION_DATA.map((item) => (

@@ -60,7 +60,7 @@ export default async function Blog({
         tierTwoHeading={BLOG_ON_THE_BLOG}
         mobileBackgroundImage="/images/about/blog/blogMobileBackground.png"
       />
-      <div className="flex w-full justify-center flex-col items-center md:mt-0 -mt-[60px]">
+      <div className="flex w-full justify-center flex-col items-center md:mt-0 -mt-[60px] pb-20">
         <BasicWidthContainer>
           <div className="flex gap-[60px] justify-between">
             <Suspense key={currentPage} fallback={<Loader />}>

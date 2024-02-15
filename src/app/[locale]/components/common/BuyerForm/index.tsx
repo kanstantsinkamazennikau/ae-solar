@@ -80,6 +80,7 @@ export default function BuyerForm({
         -top-[64px]
         -mb-[144px]
         overflow-hidden
+        
       "
     >
       <Image

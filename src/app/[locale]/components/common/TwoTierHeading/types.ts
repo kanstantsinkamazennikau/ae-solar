@@ -6,4 +6,5 @@ export interface TwoTierHeadingProps {
   reverseColor?: boolean;
   externalStyle?: string;
   marginBottomNone?: boolean;
+  showDivider?: boolean;
 }

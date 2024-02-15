@@ -14,10 +14,12 @@ import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function GetInTouch({ children }: GetInTuchProps) {
+export default function GetInTouch({
+  children,
+  containerStyle,
+}: GetInTuchProps) {
   const [clientType, setClientType] =
     useState<keyof typeof matchPartnerTypeWithArticle>("partner");
-  const locale = useParams()?.locale;
   const router = useRouter();
 
   //TODO fill form with partner type value for "intrested in" dropdown
@@ -40,21 +42,26 @@ export default function GetInTouch({ children }: GetInTuchProps) {
         w-full
         2xl:h-[1600px]
         lg:h-[1200px]
-        bg-center
+        min-[540px]:bg-center
+        bg-top
         bg-no-repeat
         bg-[url('/images/getInTouchCircles.svg')]
         -top-[80px]
         relative
         2xl:bg-auto
         -mb-[200px]
+        min-[540px]:h-[800px]
         h-[800px]
         lg:[background-size:1450px]
         md:[background-size:1120px]
-        [background-size:1100px]
+        min-[540px]:[background-size:1100px]
+        [background-size:780px]
       "
     >
       <BasicWidthContainer
-        styles={`mx-auto w-full ${children ? "max-w-[1440px]" : ""}`}
+        styles={`mx-auto w-full max-[540px]:!px-0 ${containerStyle} ${
+          children ? "max-w-[1440px]" : "p-0"
+        }`}
       >
         <div
           className={`
@@ -75,6 +82,8 @@ export default function GetInTouch({ children }: GetInTuchProps) {
             py-[40px]
             px-[30px]
             rounded-[40px]
+            max-[540px]:rounded-none
+            max-[540px]:border-x-0
             border-2
             border-solid
             border-[#ffffff0d]
@@ -84,13 +93,13 @@ export default function GetInTouch({ children }: GetInTuchProps) {
             -top-[60px]
           `}
         >
-          <Image
+          {/* <Image
             src={`/images/getInTouchUnion.svg`}
             alt="getInTouchUnion"
             width={1440}
             height={1000}
             className="absolute h-full mix-blend-hard-light"
-          />
+          /> */}
           {/* CLIENT TYPE */}
           <div
             className={`flex p-1 justify-center ${

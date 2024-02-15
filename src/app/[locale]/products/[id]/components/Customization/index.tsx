@@ -90,8 +90,9 @@ export default function Customization() {
             tierTwoHeading={PRODUCT_OWN_SPACE}
             reverseColor
             align="left"
+            showDivider
           />
-          <div className="flex justify-center items-start gap-8 self-stretch">
+          <div className="flex justify-center items-start gap-8 self-stretch min-[540px]:flex-row flex-col">
             {CREATE_SPACE.map(
               ({ element, elementDescription, elementTitle, image }) => (
                 <div
@@ -105,7 +106,7 @@ export default function Customization() {
                     width={644}
                     height={420}
                     quality={100}
-                    className="self-stretch"
+                    className="self-stretch max-[540px]:w-[300px] max-[540px]:h-[200px] max-[540px]:mx-auto"
                   />
                   <div className="flex flex-col items-start gap-5 self-stretch">
                     <div className="flex flex-col gap-3">
@@ -123,7 +124,7 @@ export default function Customization() {
                       </p>
                       <p
                         className="
-                          [font-size:_clamp(32px,3.5vw,64px)]
+                          [font-size:_clamp(22px,3.5vw,64px)]
                           font-semibold
                           -tracking-[1.92px]
                           capitalize
@@ -136,7 +137,7 @@ export default function Customization() {
 
                     <p
                       className="
-                        [font-size:_clamp(10px,1.5vw,20px)]
+                        [font-size:_clamp(14px,1.5vw,20px)]
                         font-normal
                         leading-[150%]
                         font-walsheim

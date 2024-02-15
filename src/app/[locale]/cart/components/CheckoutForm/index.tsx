@@ -51,12 +51,14 @@ export default function CheckoutForm() {
   };
 
   return (
-    <BuyerForm
-      inputsRules={inputsRules as RegisterOptions}
-      defaultValues={defaultValues}
-      formFields={CHECKOUT_FORM_FIELDS}
-      formHeader={CHECKOUT_FILL_OUT}
-      submitFunction={sendCheckoutEmail}
-    />
+    <div className="pb-20">
+      <BuyerForm
+        inputsRules={inputsRules as RegisterOptions}
+        defaultValues={defaultValues}
+        formFields={CHECKOUT_FORM_FIELDS}
+        formHeader={CHECKOUT_FILL_OUT}
+        submitFunction={sendCheckoutEmail}
+      />
+    </div>
   );
 }

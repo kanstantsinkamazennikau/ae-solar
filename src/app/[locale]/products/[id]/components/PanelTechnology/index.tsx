@@ -4,13 +4,32 @@ import Image from "next/image";
 
 export default function PanelTechnology({ id }: PanelTechnologyProps) {
   return (
-    <div className="relative -translate-y-[14%] overflow-hidden w-full -mb-[14%] mt-[100px]">
+    <div
+      className="
+        relative
+        2xl:-translate-y-[11%]
+        2xl:xl:-mb-[11%]
+        xl:-translate-y-[15%]
+        xl:xl:-mb-[15%]
+        lg:-translate-y-[24%]
+        lg:-mb-[24%]
+        md:-translate-y-[24%]
+        md:-mb-[24%]
+        min-[600px]:-translate-y-[24%]
+        min-[540px]:-translate-y-[34%]
+        min-[540px]:-mb-[26%]
+        -translate-y-[45%]
+        -mb-[40%]
+        overflow-hidden
+        w-full
+      "
+    >
       <Image
         src={`/images/products/${id}StarPath.svg`}
         alt="starPath"
         width={1320}
         height={1320}
-        className=" mx-auto"
+        className="mx-auto min-[540px]:w-auto min-[540px]:h-auto h-[610px] min-[540px]:object-contain object-cover"
       />
       <div
         className={`
@@ -22,16 +41,19 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
           backdrop-blur-[10px]
           bg-[#00000033]
           [border-image:linear-gradient(154deg,_#4f4f4f_0%,_#191919_27%,_#191919_51%,_#313131_80%,_#4f4f4f_100%)_1]
-          max-w-[650px]
+          min-[540px]:max-w-[650px]
           flex
           flex-col
           md:gap-8
           gap-5
           justify-center
           absolute
-          bottom-40
+          bottom-[108px]
           left-1/2
           -translate-x-1/2
+          min-[540px]:w-auto
+          max-w-[320px]
+          w-full
         `}
       >
         <div className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-bold -tracking-[0.48px] leading-[100%] text-center">

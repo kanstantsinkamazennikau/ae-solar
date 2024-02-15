@@ -16,7 +16,7 @@ export default function AddMorePanels() {
 
   return (
     <BasicWidthContainer>
-      <div className="w-full flex justify-center items-center min-[640px]:gap-2 min-[640px]:flex-row flex-col gap-5">
+      <div className="w-full flex justify-center items-center min-[640px]:gap-2 min-[640px]:flex-row flex-col gap-5 pb-20">
         <Image
           src={`/images/cart/addMorePanels.svg`}
           alt={"addMorePanels"}

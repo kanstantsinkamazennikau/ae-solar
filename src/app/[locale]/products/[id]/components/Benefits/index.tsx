@@ -64,16 +64,17 @@ export default function Benefits({ id }: BenefitProps) {
                   border-solid
                   border-[#191919]
                   md:w-auto
-                  w-fit
+                  w-full
                   self-center
                 "
               >
                 <div
                   className="
                     flex
-                    items-center
+                    md:items-center
+                    items-end
                     lg:gap-20
-                    gap-5 
+                    gap-4
                     xl:w-[778px]
                     lg:w-[578px]
                     md:w-[340px]
@@ -87,14 +88,14 @@ export default function Benefits({ id }: BenefitProps) {
                     priority
                     width={140}
                     height={140}
-                    className="lg:w-[140px] lg:h-[140px] md:w-[100px] md:h-[100px] w-[60px] h-[60px]"
+                    className="lg:w-[140px] lg:h-[140px] md:w-[100px] md:h-[100px] w-[80px] h-[80px]"
                   />
                   <div
                     className="
                       xl:max-w-[538px]
                       lg:max-w-[338px]
                       md:max-w-[200px]
-                      max-w-[200px]
+                      max-w-full
                       [font-size:_clamp(24px,2.5vw,48px)]
                       font-extrabold
                       leading-[120%]
@@ -103,12 +104,21 @@ export default function Benefits({ id }: BenefitProps) {
                       w-full
                     "
                   >
+                    <div className="md:hidden leading-[100%] font-walsheim font-bold h-5 text-[#505050] flex">
+                      <div className="[font-size:_clamp(11px,1.5vw,20px)] flex items-start h-full">
+                        {formatNumber(index + 1)}
+                      </div>
+                      <div className="[font-size:_clamp(8px,1.2vw,14px)] flex items-end h-full">
+                        /{formatNumber(benefits.length)}
+                      </div>
+                    </div>
                     {benefitTitle}
                   </div>
                 </div>
 
                 {/* <div className="flex justify-between items-center gap-3"> */}
                 <div className="flex flex-col items-start lg:gap-6 md:gap-3 gap-2">
+                  {/* DESKTOP COUNTER */}
                   <div className="md:flex leading-[100%] font-walsheim font-bold h-5 text-[#505050] hidden">
                     <div className="[font-size:_clamp(10px,1.5vw,20px)] flex items-end h-full">
                       {formatNumber(index + 1)}
@@ -119,12 +129,12 @@ export default function Benefits({ id }: BenefitProps) {
                   </div>
                   <p
                     className="
-                        [font-size:_clamp(10px,1.5vw,20px)]
+                        [font-size:_clamp(12px,1.5vw,20px)]
                         font-normal
                         leading-[150%]
                         font-walsheim
                         capitalize
-                        max-w-[427px]
+                        md:max-w-[427px]
                         w-full
                       "
                   >

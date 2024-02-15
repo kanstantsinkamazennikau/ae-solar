@@ -166,7 +166,7 @@ export default function Categories() {
               {documentsFile[selectedCategoryIndex].category}
               <Image
                 src={`/images/selectorWhite.svg`}
-                alt="folderTop"
+                alt="selectorWhite"
                 width={16}
                 height={16}
               />

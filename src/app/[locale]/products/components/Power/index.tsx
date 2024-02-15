@@ -41,7 +41,9 @@ export default function Power() {
             mt-0
             mb-0
             max-[560px]:-mt-28
-            max-[560px]:-mb-10
+            max-[560px]:-mb-24
+            min-[560px]:[box-shadow:none]
+            [box-shadow:0px_0px_120px_0px_rgba(179,0,6,0.40)]
           "
         >
           <div className="w-full h-[130%] absolute left-0 top-0 [background:radial-gradient(#7474744d_0%,transparent_70%,transparent_100%)] -translate-y-1/2" />
@@ -78,7 +80,15 @@ export default function Power() {
           priority
           width={1320}
           height={136}
-          className="absolute scale-x-[1.2] scale-y-[1]"
+          className="
+            absolute
+            xl:scale-110
+            lg:scale-125
+            md:scale-150
+            min-[560px]:scale-150
+            min-[560px]:block
+            hidden
+          "
         />
       </BasicWidthContainer>
     </div>

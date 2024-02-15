@@ -75,7 +75,18 @@ export default function Conclusion({ id }: ConclusionProps) {
             z-10
           "
         >
-          <div className="w-full h-[130%] absolute left-0 top-0 [background:radial-gradient(#490002_0%,transparent_70%,transparent_100%)] -translate-y-1/2" />
+          <div
+            className="
+              w-full
+              h-[130%]
+              absolute
+              left-0
+              top-0
+              md:[background:radial-gradient(#490002_0%,transparent_70%,transparent_100%)]
+              [background:radial-gradient(#490002_0%,#210000_70%,transparent_100%)]
+              -translate-y-1/2
+            "
+          />
           <p className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-extrabold -tracking-[1.44px] leading-[120%] text-center z-10">
             {PRODUCT_IN_CONCLUSION}
           </p>
@@ -88,7 +99,7 @@ export default function Conclusion({ id }: ConclusionProps) {
                 </p>
               ))}
           </div>
-          <div className="self-center">
+          <div className="self-center relative z-10">
             <Button size="thin" onClick={addModelToBag}>
               <div className="flex justify-center items-center px-2">
                 <Image
@@ -112,7 +123,7 @@ export default function Conclusion({ id }: ConclusionProps) {
             priority
             width={310}
             height={310}
-            className="absolute left-0 top-0 z-0"
+            className="absolute left-0 top-0 z-0 md:w-[310px] md:h-[310px] w-[130px] h-[130px]"
           />
           <Image
             src={`/images/products/moduleAngleConclusionRight.png`}
@@ -120,7 +131,7 @@ export default function Conclusion({ id }: ConclusionProps) {
             priority
             width={240}
             height={240}
-            className="absolute right-0 bottom-0"
+            className="absolute right-0 bottom-0 md:w-[240px] md:h-[240px] h-[150px] w-[150px]"
           />
         </div>
         <Image
@@ -131,8 +142,11 @@ export default function Conclusion({ id }: ConclusionProps) {
           height={136}
           className="
             absolute
-            scale-x-100
-            scale-y-115
+            xl:scale-110
+            lg:scale-125
+            md:scale-150
+            min-[480px]:scale-150
+            scale-[3.5]
           "
         />
       </BasicWidthContainer>

@@ -74,13 +74,15 @@ export default function Consult() {
   };
 
   return (
-    <BuyerForm
-      inputsRules={inputsRules as RegisterOptions}
-      defaultValues={defaultValues}
-      formFields={CONSULT_FORM_FIELDS}
-      formHeader={CONSULT_READY_TO_CONSULT}
-      isShowCloseIcon={false}
-      submitFunction={sendContactUsEmail}
-    />
+    <div className="pb-20">
+      <BuyerForm
+        inputsRules={inputsRules as RegisterOptions}
+        defaultValues={defaultValues}
+        formFields={CONSULT_FORM_FIELDS}
+        formHeader={CONSULT_READY_TO_CONSULT}
+        isShowCloseIcon={false}
+        submitFunction={sendContactUsEmail}
+      />
+    </div>
   );
 }

@@ -13,7 +13,21 @@ export default function ProductsPage() {
       <LightingTheWay />
       <PanelsFlower />
       <Power />
-      <div className="w-full 2xl:-mb-60 lg:-mb-40 md:mt-[200px] mt-[160px]">
+      <div
+        className="
+          w-full
+          2xl:-mb-60
+          lg:-mb-2
+          md:mb-12
+          min-[560px]:-mb-16
+          -mb-20
+          2xl:mt-10
+          lg:mt-10
+          md:mt-40
+          min-[560px]:mt-20
+          mt-40
+        "
+      >
         <GetInTouch>
           {
             <div className="flex flex-col xl:gap-[20px] lg:gap-[40px] md:gap-[40px] gap-[20px] self-stretch z-10">

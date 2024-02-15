@@ -41,7 +41,7 @@ export default function GeneratedModel() {
 
   return (
     isGenerateModel && (
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center pb-20">
         <div
           id="model"
           className="

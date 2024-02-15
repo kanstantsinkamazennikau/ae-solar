@@ -1,4 +1,5 @@
 import { TwoTierHeadingProps } from "@/app/[locale]/components/common/TwoTierHeading/types";
+import Image from "next/image";
 
 const textAlign = {
   right: "text-right",
@@ -24,6 +25,7 @@ export default function TwoTierHeading({
   reverseColor = false,
   marginBottomNone,
   externalStyle,
+  showDivider,
 }: TwoTierHeadingProps) {
   return (
     <>
@@ -33,11 +35,21 @@ export default function TwoTierHeading({
           ${headingStyle(size)}
           leading-none
           w-full
+          relative
           ${!marginBottomNone ? "xl:mb-20 lg:mb-16 md:mb-12 mb-10" : "mb-0"}
           ${textAlign[align]}
           ${externalStyle}
         `}
       >
+        {showDivider && (
+          <Image
+            src="/images/awards/dividerSmall.svg"
+            alt="dividerSmall"
+            width={30}
+            height={30}
+            className="absolute top-0 -right-[1px] rotate-90"
+          />
+        )}
         <div className={`${reverseColor ? "text-white" : "text-base-red"}`}>
           {tierOneHeading}
         </div>
