@@ -20,9 +20,13 @@ export default function CartModelDetails({ model }: DetailsProps) {
           const modelParameterValue = model[modelKey];
           component = (
             <div className="flex items-center gap-2">
-              {["transparent", "black", "white", "silver"].includes(
-                modelParameterValue.toLowerCase()
-              ) && (
+              {[
+                "transparent",
+                "black",
+                "white",
+                "silver",
+                "without frame",
+              ].includes(modelParameterValue.toLowerCase()) && (
                 <Image
                   src={`/images/option/${modelParameterValue.toLowerCase()}.svg`}
                   alt={modelParameterValue}

@@ -782,7 +782,10 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       frameColor: {
         type: "color",
         text: "Frame Color",
-        values: [{ color: "Silver", icon: "silver.svg" }],
+        values: [
+          { color: "Silver", icon: "silver.svg" },
+          { color: "Without Frame", icon: "transparent.svg" },
+        ],
       },
       moduleDimension: {
         type: "range/dimension",

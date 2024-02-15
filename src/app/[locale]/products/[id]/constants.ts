@@ -127,7 +127,7 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
       benefitTitle: "Reduced Power Loss",
       benefitDescription:
         "The unique passivation layer in PERC cells minimizes the recombination of electrons, reducing power loss, and enhancing overall cell efficiency.",
-      benefitPicture: "power.svg",
+      benefitPicture: "shield.svg",
     },
     {
       benefitTitle: "Environmentally Friendly",
@@ -141,25 +141,25 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
       benefitTitle: "High Efficiency",
       benefitDescription:
         "HJT solar cells are recognized for their outstanding efficiency. They provide an excellent temperature coefficient, making them suitable for regions with high ambient temperatures. This means more electricity production, even on hot sunny days.",
-      benefitPicture: "lightning.svg",
+      benefitPicture: "power.svg",
     },
     {
       benefitTitle: "Superior Performance in Shaded Conditions",
       benefitDescription:
         "HJT solar modules perform exceptionally well under shaded conditions. Thanks to their superior bifaciality, they can absorb sunlight from both sides, maximizing energy output. ",
-      benefitPicture: "brightness.svg",
+      benefitPicture: "performance.svg",
     },
     {
       benefitTitle: "Low Light Performance",
       benefitDescription:
         "Unlike conventional PV cells, HJT modules continue to perform optimally even under low light conditions. So, whether it's an overcast day or dawn/dusk, your solar power generation doesn't need to pause. ",
-      benefitPicture: "lightning2.svg",
+      benefitPicture: "brightness.svg",
     },
     {
       benefitTitle: "Long-Term Stability",
       benefitDescription:
         "The amalgamation of crystalline and amorphous silicon gives HJT modules long-term stability, making them an investment that stands the test of time. ",
-      benefitPicture: "power.svg",
+      benefitPicture: "longTerm.svg",
     },
     {
       benefitTitle: "Environmentally Friendly",
@@ -185,13 +185,13 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
       benefitTitle: "Robust Temperature Coefficient",
       benefitDescription:
         "TOPCon modules offer an impressive temperature coefficient, maintaining high efficiency even in high-temperature zones. Thus, your solar power generation remains optimal even on sweltering days. ",
-      benefitPicture: "lightning2.svg",
+      benefitPicture: "temperature.svg",
     },
     {
       benefitTitle: "Enhanced Durability",
       benefitDescription:
         "The passivated contact layer in TOPCon modules ensures a robust design and improved durability. This technology boasts high resistance to degradation, ensuring your investment is future-proof.",
-      benefitPicture: "power.svg",
+      benefitPicture: "shield2.svg",
     },
     {
       benefitTitle: "Environmentally Friendly",
@@ -205,7 +205,7 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
       benefitTitle: "High Efficiency",
       benefitDescription:
         "With a superior temperature coefficient, PERC solar cells offer enhanced electricity production even in regions with high ambient temperatures, making them a power-efficient solution.",
-      benefitPicture: "lightning.svg",
+      benefitPicture: "power.svg",
     },
     {
       benefitTitle: "Excellent Performance in Diffuse Light",
@@ -223,7 +223,7 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
       benefitTitle: "Reduced Power Loss",
       benefitDescription:
         "The unique passivation layer in PERC cells minimizes the recombination of electrons, reducing power loss, and enhancing overall cell efficiency.",
-      benefitPicture: "power.svg",
+      benefitPicture: "shield.svg",
     },
     {
       benefitTitle: "Environmentally Friendly",
@@ -237,25 +237,25 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
       benefitTitle: "Double Duty, Double Gain",
       benefitDescription:
         "The PVT system is a two-in-one solution, converting sunlight into electricity while simultaneously capturing heat. This dual action maximizes energy yield and promotes efficiency.",
-      benefitPicture: "lightning.svg",
+      benefitPicture: "double.svg",
     },
     {
       benefitTitle: "Optimal Utilization of Heat",
       benefitDescription:
         "Unlike standard PV cells, which lose efficiency as they heat up, PVT modules make productive use of this heat, turning a potential disadvantage into a powerful benefit.",
-      benefitPicture: "brightness.svg",
+      benefitPicture: "heat.svg",
     },
     {
       benefitTitle: "High Efficiency in Various Climates",
       benefitDescription:
         "Regardless of whether it's a chilly winter day or a sweltering summer afternoon, PVT modules deliver consistent performance, thanks to their unique ability to utilize both solar and thermal energy.",
-      benefitPicture: "lightning2.svg",
+      benefitPicture: "temperature.svg",
     },
     {
       benefitTitle: "Longevity and Durability",
       benefitDescription:
         "The cooling effect of the thermal system on the PV cells in a PVT module enhances the lifespan and performance of the system, making it a reliable and long-term investment.",
-      benefitPicture: "power.svg",
+      benefitPicture: "shield2.svg",
     },
     {
       benefitTitle: "Eco-Conscious",
@@ -269,31 +269,31 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
       benefitTitle: "Impressive Shade Resistance",
       benefitDescription:
         "Smart Cell solar modules offer extraordinary resistance to partial shading. Even when just 5% of the module is shaded, Smart Cell modules prevent the power loss which is commonplace in other PV systems.",
-      benefitPicture: "lightning.svg",
+      benefitPicture: "performance.svg",
     },
     {
       benefitTitle: "Superior Energy Output",
       benefitDescription:
         "Smart Cell modules shine in their ability to deliver high power output even under challenging conditions. They can achieve up to 80% higher power production under partial shading conditions.",
-      benefitPicture: "brightness.svg",
+      benefitPicture: "power.svg",
     },
     {
       benefitTitle: "Increased Installation Capacity",
       benefitDescription:
         "With the Smart Cell technology, you can install more modules on limited rooftop areas. This means you get more energy yield under partial shading conditions.",
-      benefitPicture: "lightning2.svg",
+      benefitPicture: "capacity.svg",
     },
     {
       benefitTitle: "Lower Levelized Cost of Energy (LCOE)",
       benefitDescription:
         "By enhancing the energy output per total area, Smart Cell modules not only maximize your energy production but also significantly reduce the levelized cost of energy.",
-      benefitPicture: "power.svg",
+      benefitPicture: "costEnergy.svg",
     },
     {
       benefitTitle: "Unmatched Durability",
       benefitDescription:
         "Through extensive testing, Smart Cell modules have shown no power loss even after 10,000 cycles of negative/positive bias switching.",
-      benefitPicture: "leaf.svg",
+      benefitPicture: "shield2.svg",
     },
   ],
 };
