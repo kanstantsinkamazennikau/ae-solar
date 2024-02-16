@@ -1,5 +1,6 @@
-"use client";
 //@ts-nocheck
+"use client";
+
 import ProductSlogan from "@/app/[locale]/components/ProductIntro/ProductSlogan";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
