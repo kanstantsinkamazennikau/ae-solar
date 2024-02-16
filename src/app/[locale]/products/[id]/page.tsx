@@ -17,7 +17,7 @@ export default async function Page({ params: { id } }: ProductPageProps) {
       <Benefits id={id} />
       <Customization />
       <Conclusion id={id} />
-      <div className="min-[560px]:mb-0 -mb-20">
+      <div className="min-[560px]:mb-0 -mb-20 w-full">
         <GetInTouch />
       </div>
       <MainPageFAQ />
