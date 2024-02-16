@@ -66,7 +66,9 @@ export default function SolutionsPage() {
               showRedArrow
               externalStyle="items-baseline !p-0"
             >
-              <span className="text-base-red mr-1">{SOLUTIONS_LEARN_MORE}</span>
+              <span className="text-base-red mr-1 [font-size:_clamp(11px,1vw,14px)]">
+                {SOLUTIONS_LEARN_MORE}
+              </span>
             </Button>
           </div>
         </div>
