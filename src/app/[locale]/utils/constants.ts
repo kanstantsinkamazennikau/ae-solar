@@ -30,57 +30,57 @@ export const FORMS_FIELDS = {
 
 // NAVIGATION
 export const HEADER_NAV_LINKS_ARRAY = [
-  {
-    url: "/",
-    text: "Home",
-  },
+  // {
+  //   url: "/",
+  //   text: "Home",
+  // },
   {
     url: "/products",
     text: "Products",
-    subMenu: [
-      { url: "/products", text: "All Products" },
-      { url: "/products/Aurora", text: "Aurora" },
-      { url: "/products/Meteor", text: "Meteor" },
-      { url: "/products/Comet", text: "Comet" },
-      { url: "/products/Terra", text: "Terra" },
-      { url: "/products/ShadeStar", text: "ShadeStar" },
-      { url: "/products/Neptune", text: "Neptune" },
-    ],
+    // subMenu: [
+    //   { url: "/products", text: "All Products" },
+    //   { url: "/products/Aurora", text: "Aurora" },
+    //   { url: "/products/Meteor", text: "Meteor" },
+    //   { url: "/products/Comet", text: "Comet" },
+    //   { url: "/products/Terra", text: "Terra" },
+    //   { url: "/products/ShadeStar", text: "ShadeStar" },
+    //   { url: "/products/Neptune", text: "Neptune" },
+    // ],
   },
   {
-    url: "/about",
-    text: "About Us",
+    url: "/company",
+    text: "Company",
     subMenu: [
-      { url: "/about", text: "About Us" },
-      { url: "/about/blog", text: "Blog" },
-      { url: "/about/manufacturer", text: "Manufacturer" },
+      { url: "/company/manufacturer", text: "Manufacturer" },
+      { url: "/company/blog", text: "Blog" },
+      { url: "/company/faq", text: "FAQ" },
     ],
   },
-  {
-    url: "/info",
-    text: "Info",
-    subMenu: [
-      {
-        url: "/info/faq",
-        text: "FAQ",
-      },
-      {
-        url: "/info/publishers_info",
-        text: "Publisher's Info",
-      },
-      {
-        url: "/info/imprint",
-        text: "Imprint Info",
-      },
-    ],
-  },
+  // {
+  //   url: "/info",
+  //   text: "Info",
+  //   subMenu: [
+  //     {
+  //       url: "/info/faq",
+  //       text: "FAQ",
+  //     },
+  //     {
+  //       url: "/info/publishers_info",
+  //       text: "Publisher's Info",
+  //     },
+  //     {
+  //       url: "/info/imprint",
+  //       text: "Imprint Info",
+  //     },
+  //   ],
+  // },
   {
     url: "/documents",
     text: "Documents",
   },
   {
-    url: "/contacts",
-    text: "Contacts",
+    url: "/solutions",
+    text: "Solutions",
   },
 ];
 export const HEADER_CONTACT_US = "Contact Us";

@@ -1,6 +1,10 @@
 "use client";
 
 import {
+  MANUFACTURER_MANUFACTURER,
+  MANUFACTURER_QUALITY,
+} from "@/app/[locale]/about/manufacturer/constants";
+import {
   DOCUMENTS_PUBLISHERS_INFO_INFORMATION,
   DOCUMENTS_PUBLISHERS_INFO_PUBLISHERS,
 } from "@/app/[locale]/info/publishers_info/constants";
@@ -35,6 +39,7 @@ const mapHeadingWithCategory = {
 
 export default function DocumentsHeading() {
   const pathName = usePathname().split("/");
+
   const documentsCategory = pathName[pathName.length - 1];
 
   return (
