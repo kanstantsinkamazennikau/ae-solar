@@ -1,5 +1,5 @@
-import { TheMostPopularPost } from "@/app/[locale]/about/blog/components/MostPopularPosts/types";
-import { BLOG_MOST_POPULAR } from "@/app/[locale]/about/blog/constants";
+import { TheMostPopularPost } from "@/app/[locale]/company/blog/components/MostPopularPosts/types";
+import { BLOG_MOST_POPULAR } from "@/app/[locale]/company/blog/constants";
 import Link from "next/link";
 import { getDocumentBySlug } from "outstatic/server";
 

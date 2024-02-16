@@ -1,4 +1,4 @@
-import { BlogPost } from "@/app/[locale]/about/blog/components/BlogPostsList/types";
+import { BlogPost } from "@/app/[locale]/company/blog/components/BlogPostsList/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Image from "next/image";
 import { getDocumentBySlug } from "outstatic/server";

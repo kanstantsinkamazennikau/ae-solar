@@ -1,7 +1,7 @@
 import {
   ABOUT_AS_A_TIER,
   ABOUT_SYNONYMOUS,
-} from "@/app/[locale]/about/constants";
+} from "@/app/[locale]/company/constants";
 import Awards from "@/app/[locale]/components/AwardsAndStats/Awards";
 import Production from "@/app/[locale]/components/AwardsAndStats/Production";
 import Stats from "@/app/[locale]/components/AwardsAndStats/Stats";

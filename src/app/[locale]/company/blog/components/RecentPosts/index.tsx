@@ -1,5 +1,5 @@
-import { RecentPost } from "@/app/[locale]/about/blog/components/RecentPosts/types";
-import { BLOG_RECENT_POSTS } from "@/app/[locale]/about/blog/constants";
+import { RecentPost } from "@/app/[locale]/company/blog/components/RecentPosts/types";
+import { BLOG_RECENT_POSTS } from "@/app/[locale]/company/blog/constants";
 import Link from "next/link";
 import { load } from "outstatic/server";
 

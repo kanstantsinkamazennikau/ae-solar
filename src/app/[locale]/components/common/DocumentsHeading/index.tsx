@@ -3,11 +3,11 @@
 import {
   MANUFACTURER_MANUFACTURER,
   MANUFACTURER_QUALITY,
-} from "@/app/[locale]/about/manufacturer/constants";
+} from "@/app/[locale]/company/manufacturer/constants";
 import {
   DOCUMENTS_PUBLISHERS_INFO_INFORMATION,
   DOCUMENTS_PUBLISHERS_INFO_PUBLISHERS,
-} from "@/app/[locale]/info/publishers_info/constants";
+} from "@/app/[locale]/company/publishers_info/constants";
 import {
   DOCUMENTS_DOCUMENTS_HEADING,
   DOCUMENTS_FAQ_HAVE_A_QUESTION,

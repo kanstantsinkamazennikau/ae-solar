@@ -463,18 +463,21 @@ export const FOOTER_LINKS_ARRAY = [
     ],
   },
   {
-    category: { title: "Company", link: "/about" },
+    category: { title: "About Us", link: "/company" },
     links: [
-      { title: "About Us", link: "/about" },
-      { title: "Manufacturing", link: "/about/blog" },
-      { title: "Blog", link: "/about/manufacturer" },
+      { title: "Company", link: "/company" },
+      { title: "Manufacturer", link: "/company/manufacturer" },
+      { title: "Solutions", link: "/solutions" },
+      { title: "Contacts", link: "/contacts" },
+      { title: "Blog", link: "/company/blog" },
+      { title: "FAQ", link: "/company/faq" },
     ],
   },
   {
-    category: { title: "Legal Info", link: "/info/imprint" },
+    category: { title: "Legal Info", link: "/company/imprint" },
     links: [
-      { title: "Imprint", link: "/info/imprint" },
-      { title: "Publisher's", link: "/info/publishers_info" },
+      { title: "Imprint", link: "/company/imprint" },
+      { title: "Publisher's", link: "/company/publishers_info" },
     ],
   },
   {
@@ -485,7 +488,7 @@ export const FOOTER_LINKS_ARRAY = [
       // { title: "Manual", link: "/documents" },
       // { title: "Warranty", link: "/documents" },
       // { title: "Presentations", link: "/documents" },
-      { title: "FAQ", link: "/info/faq" },
+      // { title: "FAQ", link: "/info/faq" },
     ],
   },
 ];

@@ -1,7 +1,7 @@
 import {
   BLOG_ON_THE_BLOG,
   BLOG_READ_THOUGHTS,
-} from "@/app/[locale]/about/blog/constants";
+} from "@/app/[locale]/company/blog/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Image from "next/image";
 

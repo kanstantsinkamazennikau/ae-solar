@@ -1,10 +1,10 @@
-import BusinessMap from "@/app/[locale]/about/components/BusinessMap";
-import HeroSection from "@/app/[locale]/about/components/HeroSection";
-import BornInGermany from "@/app/[locale]/about/components/BornInGermany";
-import OurHistory from "@/app/[locale]/about/components/OurHistory";
-import SequenceAnimation from "@/app/[locale]/about/components/SequenceAnimation";
+import BusinessMap from "@/app/[locale]/company/components/BusinessMap";
+import HeroSection from "@/app/[locale]/company/components/HeroSection";
+import BornInGermany from "@/app/[locale]/company/components/BornInGermany";
+import OurHistory from "@/app/[locale]/company/components/OurHistory";
+import SequenceAnimation from "@/app/[locale]/company/components/SequenceAnimation";
 import AwardsAndStats from "@/app/[locale]/components/AwardsAndStats";
-import AboutAwards from "@/app/[locale]/about/components/AboutAwards";
+import AboutAwards from "@/app/[locale]/company/components/AboutAwards";
 
 export default function About() {
   return (

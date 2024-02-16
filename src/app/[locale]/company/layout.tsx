@@ -20,6 +20,10 @@ const mapTitleWithDocumentsCategory = {
     title: `Blog`,
     description: `Read Our Thoughts On the Blog`,
   },
+  company: {
+    title: `Company`,
+    description: `lluminating Your Journey towards a Greener Tomorrow`,
+  },
 };
 
 export async function generateMetadata() {
@@ -28,6 +32,7 @@ export async function generateMetadata() {
   const documentsCategory = url[
     url.length - 1
   ] as keyof typeof mapTitleWithDocumentsCategory;
+  console.log(url);
 
   const title = `AE-Solar | ${mapTitleWithDocumentsCategory[documentsCategory].title}`;
   const description = `AE-Solar | ${mapTitleWithDocumentsCategory[documentsCategory].description}`;

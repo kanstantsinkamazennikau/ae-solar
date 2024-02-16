@@ -1,9 +1,9 @@
-import BlogPostStats from "@/app/[locale]/about/blog/components/BlogPostStats";
+import BlogPostStats from "@/app/[locale]/company/blog/components/BlogPostStats";
 import {
   BlogPost,
   BlogPostsListProps,
-} from "@/app/[locale]/about/blog/components/BlogPostsList/types";
-import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/about/blog/constants";
+} from "@/app/[locale]/company/blog/components/BlogPostsList/types";
+import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/blog/constants";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
 import Image from "next/image";
 import Link from "next/link";

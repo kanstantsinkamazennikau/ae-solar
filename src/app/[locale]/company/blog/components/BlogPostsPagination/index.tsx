@@ -1,6 +1,6 @@
 "use client";
 
-import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/about/blog/constants";
+import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/blog/constants";
 import { DOTS, usePagination } from "@/app/[locale]/hooks/usePagination";
 import Image from "next/image";
 import Link from "next/link";

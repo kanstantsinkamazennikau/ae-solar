@@ -26,7 +26,7 @@ export default function SubMenuItems({
         border-solid
         rounded-xl
         border-option-border
-        min-[920px]:items-center
+        min-[920px]:items-start
         list-none
       "
     >

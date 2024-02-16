@@ -2,7 +2,7 @@ import {
   ABOUT_BORN_IN_GERMANY,
   ABOUT_BORN_STORY,
   ABOUT_BORN_STORY_WORDS_TO_HIGHLIGHT,
-} from "@/app/[locale]/about/constants";
+} from "@/app/[locale]/company/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 

@@ -3,7 +3,7 @@ import {
   ABOUT_MANUFACTURER,
   ABOUT_DOWNLOAD_PRESENTATION,
   ABOUT_WATCH_VIDEO,
-} from "@/app/[locale]/about/constants";
+} from "@/app/[locale]/company/constants";
 import Button from "@/app/[locale]/components/common/Button";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
