@@ -29,6 +29,8 @@ export function MainPageFAQ() {
         tierTwoHeading={FAQ_SOLUTIONS}
         align="left"
         size="small"
+        externalStyle="[&>*:last-child]:!font-medium"
+        reverseColor
       />
       <div className="flex flex-col items-end lg:mb-[120px] md:mb-[80px] mb-0 pb-20">
         <div className="max-w-[873px] w-full">

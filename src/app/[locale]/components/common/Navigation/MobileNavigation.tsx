@@ -108,13 +108,13 @@ export default function MobileNavigation() {
         >
           {HEADER_CONTACT_US}
         </Link>
-        <div className="mb-4">
+        <div className="mb-4 flex flex-col gap-2">
           {FOOTER_CONTACT_INFO.map(({ icon, info, linkTo }) => {
             if (icon === "location.svg") return;
             return (
               <div
                 key={info}
-                className="flex items-start leading-[130%] font-normal font-walsheim gap-1 max-w-[185px] [font-size:_clamp(12px,1.5vw,16px)]"
+                className="flex items-start leading-[130%] font-normal font-walsheim gap- max-w-[185px] [font-size:_clamp(12px,1.5vw,16px)]"
               >
                 <Image
                   src={`/images/footer/${icon}`}
