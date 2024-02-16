@@ -28,10 +28,9 @@ export default function Navigation() {
       "calculate",
       "consult",
       "documents",
-      "about",
       "contacts",
-      "info",
       "products",
+      "solutions",
     ].some((path) => pathname.includes(path));
   };
 

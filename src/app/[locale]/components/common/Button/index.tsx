@@ -43,6 +43,7 @@ export default function Button({
   style,
   showArrow,
   externalStyle,
+  showRedArrow,
 }: ButtonProps) {
   return (
     <button
@@ -73,6 +74,14 @@ export default function Button({
           src="/images/arrow.svg"
           width={12}
           height={12}
+        />
+      )}
+      {showRedArrow && (
+        <Image
+          alt="arrow"
+          src="/images/redArrowRight.svg"
+          width={8}
+          height={8}
         />
       )}
     </button>

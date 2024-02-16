@@ -33,8 +33,8 @@ export async function generateMetadata() {
     url.length - 1
   ] as keyof typeof mapTitleWithDocumentsCategory;
 
-  const title = `AE-Solar | ${mapTitleWithDocumentsCategory[documentsCategory].title}`;
-  const description = `AE-Solar | ${mapTitleWithDocumentsCategory[documentsCategory].description}`;
+  const title = `AE-Solar | ${mapTitleWithDocumentsCategory[documentsCategory]?.title}`;
+  const description = `AE-Solar | ${mapTitleWithDocumentsCategory[documentsCategory]?.description}`;
 
   return {
     title,

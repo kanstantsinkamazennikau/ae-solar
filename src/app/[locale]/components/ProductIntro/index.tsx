@@ -5,7 +5,7 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
-import { ModelContext } from "@/app/[locale]/context/modelContext";
+import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
 import {
   PRODUCT_INTRO_CALCULATE_YOUR_MODEL,
@@ -23,7 +23,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useCallback, useContext, useEffect, useRef } from "react";
 
 export default function ProductIntro() {
-  const { model } = useContext(ModelContext);
+  const { model, setModel } = useContext(ModelContext);
   const { sticky, setSticky } = useContext(StickyNavigationContext);
 
   const modelInfo = PRODUCT_INTRO_PANELS[model].info;
@@ -33,14 +33,27 @@ export default function ProductIntro() {
   const sliderRef = useRef<Splide>(null);
   const sliderId = PRODUCT_INTRO_PANELS_IMAGES.indexOf(model);
 
+  // const options = {
+  //   type: "loop",
+  //   perPage: 1,
+  //   perMove: 1,
+  //   pagination: false,
+  //   arrows: false,
+  //   drag: false,
+  //   dragAngleThreshold: 0,
+  // };
+
   const options = {
     type: "loop",
     perPage: 1,
     perMove: 1,
     pagination: false,
+    autoplay: true,
+    pauseOnHover: true,
+    resetProgress: false,
     arrows: false,
     drag: false,
-    dragAngleThreshold: 0,
+    interval: 4000,
   };
 
   const handleClick = () => {
@@ -146,6 +159,9 @@ export default function ProductIntro() {
             options={options}
             className="md:h-[400px] lg:h-[520px] xl:h-[600px] 2xl:h-[730px] h-auto w-full flex justify-center flex-1"
             ref={sliderRef}
+            onMove={(splide) => {
+              setModel(PRODUCT_INTRO_PANELS_IMAGES[splide.index] as Model);
+            }}
           >
             {PRODUCT_INTRO_PANELS_IMAGES.map((image) => (
               <SplideSlide key={image} className="flex justify-center">
