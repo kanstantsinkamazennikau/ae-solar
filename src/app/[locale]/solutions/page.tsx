@@ -57,8 +57,8 @@ export default function SolutionsPage() {
               "text-base-red"
             )}
           </div>
-          <div className="max-w-[538px] flex flex-col items-start lg:gap-8 gap-4 pr-11">
-            <p className="[font-size:_clamp(16px,1vw,16px)] font-walsheim font-medium leading-[150%]">
+          <div className="max-w-[538px] flex flex-col md:items-start items-center lg:gap-8 gap-4 md:pr-11">
+            <p className="[font-size:_clamp(16px,1vw,16px)] font-walsheim font-medium leading-[150%] md:text-start text-center">
               {SOLUTIONS_LEADING_PROVIDER}
             </p>
             <Button

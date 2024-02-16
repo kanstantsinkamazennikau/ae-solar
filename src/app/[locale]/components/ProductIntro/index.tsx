@@ -159,6 +159,7 @@ export default function ProductIntro() {
             options={options}
             className="md:h-[400px] lg:h-[520px] xl:h-[600px] 2xl:h-[730px] h-auto w-full flex justify-center flex-1"
             ref={sliderRef}
+            //@ts-nocheck
             onMove={(splide) => {
               setModel(PRODUCT_INTRO_PANELS_IMAGES[splide.index] as Model);
             }}
