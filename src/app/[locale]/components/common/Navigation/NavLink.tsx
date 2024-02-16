@@ -13,8 +13,6 @@ export default function NavLink({
   url,
   text,
   subMenu,
-  onSubMenuHeadingClick,
-  subMenuHeading,
   onLinkClick,
 }: NavLinkProps) {
   const path = usePathname();
@@ -47,7 +45,8 @@ export default function NavLink({
       )}
       {subMenu && (
         <>
-          <div
+          <Link
+            href={`/${locale}${url}`}
             className={`
               flex
               min-[920px]:py-2
@@ -63,7 +62,7 @@ export default function NavLink({
                 "min-[920px]:border-base-red min-[920px]:border-b-2 min-[920px]:border-solid"
               }
             `}
-            onClick={() => onSubMenuHeadingClick && onSubMenuHeadingClick(text)}
+            onClick={onLinkClick}
           >
             {t(text)}
             <Image
@@ -72,27 +71,30 @@ export default function NavLink({
               width={8}
               height={8}
               className={`
-                ${subMenuHeading === text ? "rotate-180" : ""}
                 ml-1
-                block
                 min-[920px]:group-hover:rotate-180
                 min-[920px]:w-2
                 min-[920px]:h-2
                 w-3
                 h-3
+                min-[920px]:block
+                hidden
               `}
             />
-          </div>
+            <Image
+              src={`/images/selectorWhite.svg`}
+              alt="selectorWhite"
+              width={16}
+              height={16}
+              className="min-[920px]:hidden block"
+            />
+          </Link>
           <div className="absolute hidden group-hover:min-[920px]:block hover:min-[920px]:block z-10 top-[calc(100%-2px)]">
             <SubMenuItems subMenuArray={subMenu} />
           </div>
 
           {/* MOBILE SUBMENU ON HEADING CLICK */}
-          <div
-            className={`${
-              subMenuHeading === text ? "min-[920px]:hidden" : "hidden"
-            }`}
-          >
+          <div className="min-[920px]:hidden">
             <SubMenuItems subMenuArray={subMenu} onLinkClick={onLinkClick} />
           </div>
         </>

@@ -16,13 +16,8 @@ import { useEffect, useState } from "react";
 
 export default function MobileNavigation() {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
-  const [subMenuHeading, setSubMenuHeading] = useState("");
   const params = useParams();
   const router = useRouter();
-
-  const onSubMenuHeadingClick = (subMenuHeader: string) => {
-    setSubMenuHeading(subMenuHeading === subMenuHeader ? "" : subMenuHeader);
-  };
 
   const onLinkClick = () => {
     setIsHamburgerMenuOpen(false);
@@ -32,7 +27,6 @@ export default function MobileNavigation() {
     if (isHamburgerMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      setSubMenuHeading("");
       document.body.style.overflow = "unset";
     }
   }, [isHamburgerMenuOpen]);
@@ -99,13 +93,7 @@ export default function MobileNavigation() {
         />
         <ul className="list-none">
           {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
-            <NavLink
-              key={navLink.url}
-              subMenuHeading={subMenuHeading}
-              onSubMenuHeadingClick={onSubMenuHeadingClick}
-              onLinkClick={onLinkClick}
-              {...navLink}
-            />
+            <NavLink key={navLink.url} onLinkClick={onLinkClick} {...navLink} />
           ))}
         </ul>
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />

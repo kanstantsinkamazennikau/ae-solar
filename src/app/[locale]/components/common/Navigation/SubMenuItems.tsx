@@ -16,7 +16,8 @@ export default function SubMenuItems({
   return (
     <ul
       className="
-        bg-[#191919]
+        min-[920px]:bg-[#191919]
+        bg-black
         px-4
         py-5
         flex

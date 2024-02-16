@@ -53,7 +53,7 @@ export default function Navigation() {
             </Link>
 
             {/* DESKTOP NAV */}
-            <ul className="md:gap-2 lg:gap-3 xl:gap-8 min-[920px]:flex hidden">
+            <ul className="gap-8 min-[920px]:flex hidden">
               {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
                 <NavLink key={navLink.url} {...navLink} />
               ))}

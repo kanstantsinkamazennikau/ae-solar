@@ -37,7 +37,7 @@ export default async function AboutAwards() {
           alt="dividerSmall"
           width={30}
           height={30}
-          className="absolute top-0 -left-[1px]"
+          className="absolute top-0 left-0"
         />
         <div className="flex md:pt-10 md:pb-20 pt-0 pb-10 border-b border-solid border-[#191919] max-w-[1100px] self-center items-center px-5 gap-4 md:flex-row flex-col justify-center">
           <div className="font-semibold leading-[110%] [font-size:_clamp(26px,3.5vw,64px)] -tracking-[1.92px] max-w-[426px] w-full text-center">
@@ -54,7 +54,7 @@ export default async function AboutAwards() {
           alt="dividerBig"
           width={300}
           height={300}
-          className="absolute bottom-0 -right-[1px] pointer-events-none z-0"
+          className="absolute bottom-0 right-0 pointer-events-none z-0"
         />
       </div>
     </BasicWidthContainer>

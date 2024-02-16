@@ -34,7 +34,7 @@ export default async function AwardsAndStats() {
           alt="dividerSmall"
           width={30}
           height={30}
-          className="absolute top-0 -left-[1px]"
+          className="absolute top-0 left-[0px]"
         />
 
         <Stats />
@@ -45,7 +45,7 @@ export default async function AwardsAndStats() {
           alt="dividerBig"
           width={300}
           height={300}
-          className="absolute bottom-0 -right-[1px] pointer-events-none z-0"
+          className="absolute bottom-0 -right-[0px] pointer-events-none z-0"
         />
       </div>
     </BasicWidthContainer>
