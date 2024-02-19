@@ -17,7 +17,7 @@ export default function ContactsList() {
 
   return (
     <BasicWidthContainer>
-      <div className="flex gap-[60px] relative min-[920px]:flex-row flex-col">
+      <div className="flex lg:gap-[60px] min-[920px]:gap-[20px] gap-[60px] relative min-[920px]:flex-row flex-col">
         <div>
           <div className="flex min-[920px]:flex-col flex-col-reverse sticky min-[920px]:top-[100px] top-[80px] w-full min-w-[300px] max-w-[300px] gap-6 mx-auto ">
             <DownloadPresentation link="/documents/references.pdf" />
