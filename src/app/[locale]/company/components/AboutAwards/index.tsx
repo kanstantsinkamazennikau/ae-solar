@@ -18,8 +18,8 @@ export default async function AboutAwards() {
           md:gap-20
           lg:gap-14
           gap-10
-          xl:mb-[280px]
-          lg:mb-[180px]
+          xl:mb-[180px]
+          lg:mb-[140px]
           md:mb-[100px]
           mb-[80px]
           relative

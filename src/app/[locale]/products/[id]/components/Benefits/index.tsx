@@ -24,12 +24,12 @@ export default function Benefits({ id }: BenefitProps) {
             flex
             flex-col
             w-full
-            xl:mt-[280px]
-            lg:mt-[180px]
+            xl:mt-[180px]
+            lg:mt-[140px]
             md:mt-[100px]
             mt-[80px]
-            xl:mb-[280px]
-            lg:mb-[180px]
+            xl:mb-[180px]
+            lg:mb-[140px]
             md:mb-[100px]
             mb-[80px]
             scroll-mt-[140px]

@@ -4,6 +4,7 @@ import Image from "next/image";
 const textAlign = {
   right: "text-right",
   left: "text-left",
+  center: "text-center",
 };
 
 const headingStyle = (size: "default" | "small") => {

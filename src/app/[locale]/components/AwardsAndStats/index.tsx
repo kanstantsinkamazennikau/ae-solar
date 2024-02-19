@@ -14,8 +14,8 @@ export default async function AwardsAndStats() {
           md:gap-20
           lg:gap-14
           gap-10
-          xl:mb-[280px]
-          lg:mb-[180px]
+          xl:mb-[180px]
+          lg:mb-[140px]
           md:mb-[100px]
           mb-[80px]
           relative
@@ -45,7 +45,7 @@ export default async function AwardsAndStats() {
           alt="dividerBig"
           width={300}
           height={300}
-          className="absolute bottom-0 -right-[0px] pointer-events-none z-0"
+          className="absolute bottom-0 -right-[0px] pointer-events-none z-10"
         />
       </div>
     </BasicWidthContainer>

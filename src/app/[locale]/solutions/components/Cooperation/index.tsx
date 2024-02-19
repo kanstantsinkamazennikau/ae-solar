@@ -12,7 +12,14 @@ import Link from "next/link";
 
 export default function Cooperation() {
   return (
-    <div className="">
+    <div
+      className="
+        xl:mb-[180px]
+        lg:mb-[140px]
+        md:mb-[100px]
+        mb-[80px]
+      "
+    >
       <div className="flex flex-col items-center">
         <BasicWidthContainer>
           <TwoTierHeading

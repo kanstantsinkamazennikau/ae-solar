@@ -47,7 +47,7 @@ export default async function BlogPostsList({
       {blogPosts.map(
         ({ slug, title, publishedAt, author, readingTime }, index) => {
           return (
-            <div
+            <article
               key={slug}
               className="
                 flex
@@ -133,7 +133,7 @@ export default async function BlogPostsList({
                   dividerColor="gray"
                 />
               </div>
-            </div>
+            </article>
           );
         }
       )}

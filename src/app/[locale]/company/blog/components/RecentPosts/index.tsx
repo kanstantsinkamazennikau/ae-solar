@@ -21,7 +21,7 @@ export default async function RecentPosts() {
   const recentPosts = await getRecentPostsData();
 
   return (
-    <div
+    <aside
       className="
         flex
         p-7
@@ -48,6 +48,6 @@ export default async function RecentPosts() {
           </div>
         </Link>
       ))}
-    </div>
+    </aside>
   );
 }

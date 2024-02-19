@@ -36,3 +36,49 @@ export const SOLUTIONS_COOPERATION = [
   },
 ];
 export const SOLUTIONS_EXPLORE_OUR = "Explore Our";
+export const SOLUTIONS_GLOBAL_IMPACT = "Global Impact";
+export const SOLUTIONS_GLOBAL_IMPACT_DESCRIPTION =
+  "Global Impact Our expansive product range and services embody the promise of a cleaner, brighter tomorrow, seamlessly integrating into your unique energy requirements. Every project we undertake, each spanning the globe, is a testament to our dedication to renewable energy and reducing carbon footprints.";
+export const SOLUTIONS_SEE_DETAILED_PRESENTATION = "See Detailed Presentation";
+export const SOLUTIONS_GLOBAL_IMPACT_STATS = [
+  { value: "108,600 sqm", measure: "Total Area" },
+  { value: "62,000 sqm", measure: "Manufacturing Area" },
+  { value: "2GW/year", measure: "Capacity" },
+];
+export const SOLUTIONS_GLOBAL_IMPACT_STATS_WITH_IMAGES = [
+  {
+    value: "116.1 MWp",
+    country: "Europe",
+    desktopImage: "EuropeDesktop.png",
+    mobileImage: "EuropeMobile.png",
+  },
+  {
+    value: "54.0 MWp",
+    country: "Asia",
+    desktopImage: "AsiaDesktop.png",
+    mobileImage: "AsiaMobile.png",
+  },
+  {
+    value: "2.2 MWp",
+    country: "Latin America",
+    desktopImage: "LatinAmericaDesktop.png",
+    mobileImage: "LatinAmericaMobile.png",
+  },
+  {
+    value: "2.2 MWp",
+    country: "Africa",
+    desktopImage: "AfricaDesktop.png",
+    mobileImage: "AfricaMobile.png",
+  },
+  {
+    value: "3.2 MWp",
+    country: "Others",
+    desktopImage: "OthersDesktop.png",
+    mobileImage: "OthersMobile.png",
+  },
+];
+export const SOLUTIONS_JOIN = "Join";
+export const SOLUTIONS_OUR_MISSION = "Our Mission";
+export const SOLUTIONS_OUR_MISSION_TEXT = `With each sunrise, we take another step towards a sustainable future. Every ray of sunlight we harness through our solar modules brings us closer to a cleaner world. 
+It's time to save the world—together, one ray at a time.`;
+export const SOLUTIONS_CONTACTS_US = "Contact us for a Sustainable Future";

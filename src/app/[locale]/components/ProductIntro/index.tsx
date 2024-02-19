@@ -85,7 +85,7 @@ export default function ProductIntro() {
   }, [sliderId]);
 
   return (
-    <div className="flex flex-col items-center xl:mb-[280px] lg:mb-[180px] md:mb-[100px] mb-[80px] w-full z-30 relative">
+    <div className="flex flex-col items-center xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[80px] w-full z-30 relative">
       <div
         className="
           w-full

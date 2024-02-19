@@ -85,8 +85,8 @@ export default function Reviews() {
             gap-10
             self-stretch
             relative
-            xl:mb-[280px]
-            lg:mb-[180px]
+            xl:mb-[180px]
+            lg:mb-[140px]
             md:mb-[100px]
             mb-[80px]
           "
