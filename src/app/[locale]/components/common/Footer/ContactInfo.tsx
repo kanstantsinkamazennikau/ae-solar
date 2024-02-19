@@ -1,3 +1,4 @@
+"use client";
 import { FOOTER_CONTACT_INFO } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useRouter } from "next/navigation";

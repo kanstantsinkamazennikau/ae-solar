@@ -18,6 +18,7 @@ export default function PhoneNumberInput({
   name,
   setValue,
   showDot,
+  inputBorders,
   ...props
 }: PhoneNumberInputProps) {
   const phoneInput = usePhoneInput({
@@ -29,7 +30,9 @@ export default function PhoneNumberInput({
 
   return (
     <div className={`${externalStyle} flex w-full relative`}>
-      <div className="flex relative w-auto bg-transparent border-b-2 border-solid border-base-red outline-none pr-2">
+      <div
+        className={` ${inputBorders} flex relative w-auto bg-transparent border-b-2 border-solid border-base-red outline-none pr-2`}
+      >
         <DialCodePreview
           dialCode={phoneInput.country.dialCode}
           prefix="+"
@@ -94,7 +97,7 @@ export default function PhoneNumberInput({
         placeholder={placeholder}
         {...register}
         {...props}
-        className="bg-transparent outline-none placeholder:[font-size:_clamp(20px,2vw,30px)] border-b-2 border-solid border-base-red  pr-2 flex w-full"
+        className={`bg-transparent outline-none placeholder:[font-size:_clamp(20px,2vw,30px)] border-b-2 border-solid border-base-red ${inputBorders} pr-2 flex w-full`}
       />
       {showDot && <p className="[font-size:_clamp(24px,2.25vw,40px)]">.</p>}
       {error && (

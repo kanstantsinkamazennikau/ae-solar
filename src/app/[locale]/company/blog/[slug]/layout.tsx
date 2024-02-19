@@ -11,9 +11,11 @@ export async function generateMetadata({
   const blogPost = (await getDocumentBySlug("blog", slug, [
     "title",
   ])) as BlogPost;
-
-  const title = `AE-Solar | ${blogPost.title}`;
-  const description = `AE-Solar | ${blogPost.title}`;
+  const formattedTitle =
+    blogPost.title.slice(0, 1).toUpperCase() +
+    blogPost.title.slice(1).toLowerCase();
+  const title = `AE-Solar | ${formattedTitle}`;
+  const description = `AE-Solar | ${formattedTitle}`;
 
   return {
     title,

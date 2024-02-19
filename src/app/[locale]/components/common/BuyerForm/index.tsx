@@ -28,6 +28,15 @@ export default function BuyerForm({
   formHeader,
   isShowCloseIcon = true,
   submitFunction,
+  hideBackgroundImage = false,
+  formHeaderStyle,
+  hideDivider,
+  formStyles,
+  containerStyle,
+  basicWidthContainerStyles,
+  inputBorders,
+  agreementInputColor,
+  agreementTextColor,
 }: BuyerFormProps) {
   const locale = useParams()?.locale;
   const router = useRouter();
@@ -68,7 +77,7 @@ export default function BuyerForm({
 
   return (
     <div
-      className="
+      className={`
         w-full
         flex
         justify-center
@@ -80,20 +89,21 @@ export default function BuyerForm({
         -top-[64px]
         -mb-[144px]
         overflow-hidden
-        
-      "
+        ${containerStyle}
+      `}
     >
-      <Image
-        src={`${
-          isShowMessageAfterSubmit
-            ? "/images/cart/submittedFormBack.svg"
-            : "/images/cart/checkout.svg"
-        }`}
-        alt="solar panel"
-        priority
-        width={1920}
-        height={1080}
-        className={`
+      {!hideBackgroundImage && (
+        <Image
+          src={`${
+            isShowMessageAfterSubmit
+              ? "/images/cart/submittedFormBack.svg"
+              : "/images/cart/checkout.svg"
+          }`}
+          alt="solar panel"
+          priority
+          width={1920}
+          height={1080}
+          className={`
           object-fill
           h-full
           absolute
@@ -105,8 +115,9 @@ export default function BuyerForm({
           }
           
         `}
-      />
-      <BasicWidthContainer>
+        />
+      )}
+      <BasicWidthContainer styles={basicWidthContainerStyles}>
         <div className="mt-[95px] mb-4">
           {isShowMessageAfterSubmit ? (
             <div
@@ -163,6 +174,12 @@ export default function BuyerForm({
               onClose={onClose}
               getValues={getValues}
               isShowCloseIcon={isShowCloseIcon}
+              hideDivider={hideDivider}
+              formHeaderStyle={formHeaderStyle}
+              formStyles={formStyles}
+              inputBorders={inputBorders}
+              agreementInputColor={agreementInputColor}
+              agreementTextColor={agreementTextColor}
             />
           )}
         </div>

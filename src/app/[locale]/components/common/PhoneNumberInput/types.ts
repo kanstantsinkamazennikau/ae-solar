@@ -24,6 +24,7 @@ export interface PhoneNumberInputProps
   name: string;
   setValue: UseFormSetValue<FieldValues>;
   showDot?: boolean;
+  inputBorders?: string;
 }
 
 export interface SelectedCodeWithFlagProps {

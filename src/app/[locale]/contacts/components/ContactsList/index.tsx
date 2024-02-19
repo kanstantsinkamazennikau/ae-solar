@@ -2,6 +2,7 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
+import ConsultForm from "@/app/[locale]/contacts/components/ConsultForm";
 import { CONTACTS_OFFICES } from "@/app/[locale]/contacts/constants";
 import {
   FOOTER_GERMAN_BRAND,
@@ -44,6 +45,7 @@ export default function ContactsList() {
           </div>
         </div>
         <div className="w-full">
+          <ConsultForm />
           {CONTACTS_OFFICES.map(({ office, contacts }) => (
             <div key={office} className="w-full mb-[40px]">
               <hr className="bg-[#131313] h-[1px] border-none mb-[60px]" />

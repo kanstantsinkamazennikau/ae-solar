@@ -5,6 +5,7 @@ import {
   GET_IN_TOUCH_ELEVATE_GROWTH,
   HEADER_CONTACT_US,
 } from "@/app/[locale]/utils/constants";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ContactUs() {
@@ -36,6 +37,13 @@ export default function ContactUs() {
         bg-[#111]
       `}
       >
+        <Image
+          src={`/images/getInTouchUnion.svg`}
+          alt="getInTouchUnion"
+          width={1440}
+          height={1000}
+          className="absolute h-full mix-blend-hard-light md:hidden"
+        />
         <div
           className="
             flex
@@ -46,6 +54,8 @@ export default function ContactUs() {
             gap-6
             justify-center
             items-center
+            z-10
+            relative
           "
         >
           <div

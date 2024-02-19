@@ -24,7 +24,9 @@ export default function DownloadPresentation({
         rounded-xl
         font-semibold
         leading-[120%]
+        border-b-0
       "
+      id="presentation"
     >
       <div className="flex min-[920px]:gap-2 gap-1 min-[920px]:items-start items-end">
         <Image
@@ -56,18 +58,18 @@ export default function DownloadPresentation({
       <a href={link} target="_blank">
         <div
           className="
-          w-[220px]
-          min-h-[124px]
-          rounded-t-lg
-          border
-          border-solid
-          border-transparent
-          [box-shadow:_0px_0px_35px_-10px_rgba(246,1,9,0.30)]
-          pl-4
-          pt-4
-          !bg-cover
-          [background:url('/images/downloadPresentationBg.png')_padding-box_no-repeat,linear-gradient(180deg,_rgba(227,_34,_34,_82%)_0%,_#131313_100%)_border-box]
-        "
+            w-[220px]
+            min-h-[124px]
+            rounded-t-lg
+            border
+            border-solid
+            border-transparent
+            [box-shadow:_0px_0px_35px_-10px_rgba(246,1,9,0.30)]
+            pl-4
+            pt-4
+            !bg-cover
+            [background:url('/images/downloadPresentationBg.png')_padding-box_no-repeat,linear-gradient(180deg,_rgba(227,_34,_34,_82%)_0%,_#131313_100%)_border-box]
+          "
         >
           <Image
             src="/logo.svg"

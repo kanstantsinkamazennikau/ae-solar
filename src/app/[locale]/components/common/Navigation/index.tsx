@@ -31,6 +31,7 @@ export default function Navigation() {
       "contacts",
       "products",
       "solutions",
+      "manufacturer",
     ].some((path) => pathname.includes(path));
   };
 

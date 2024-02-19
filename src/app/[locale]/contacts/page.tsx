@@ -1,6 +1,6 @@
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
-import ContactsList from "@/app/[locale]/contacts/ContactsList";
+import ContactsList from "@/app/[locale]/contacts/components/ContactsList";
 import {
   CONTACTS_CONTACT_US,
   CONTACTS_INFORMATION,

@@ -30,6 +30,15 @@ export interface BuyerFormProps {
   };
   inputsRules: RegisterOptions;
   isShowCloseIcon?: boolean;
+  hideBackgroundImage?: boolean;
+  formHeaderStyle?: string;
+  hideDivider?: boolean;
+  formStyles?: string;
+  containerStyle?: string;
+  basicWidthContainerStyles?: string;
+  inputBorders?: string;
+  agreementTextColor?: string;
+  agreementInputColor?: string;
 }
 
 export interface InputsProps {
@@ -43,4 +52,10 @@ export interface InputsProps {
   onClose: () => void;
   getValues: UseFormGetValues<FieldValues>;
   isShowCloseIcon: boolean;
+  formHeaderStyle?: string;
+  hideDivider?: boolean;
+  formStyles?: string;
+  inputBorders?: string;
+  agreementTextColor?: string;
+  agreementInputColor?: string;
 }

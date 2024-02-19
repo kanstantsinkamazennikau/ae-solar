@@ -19,6 +19,7 @@ import { useState } from "react";
 
 export default function BuyerForm({
   formHeader,
+  formHeaderStyle,
   formFields,
   register,
   inputsRules,
@@ -28,6 +29,11 @@ export default function BuyerForm({
   onClose,
   getValues,
   isShowCloseIcon,
+  hideDivider = false,
+  formStyles,
+  inputBorders,
+  agreementTextColor,
+  agreementInputColor,
 }: InputsProps) {
   const [agreement, setAgreement] = useState(false);
 
@@ -37,7 +43,7 @@ export default function BuyerForm({
 
   return (
     <form
-      className="
+      className={`
         xl:px-14
         xl:py-14
         lg:px-12
@@ -56,8 +62,10 @@ export default function BuyerForm({
         backdrop-blur-[50px]
         relative
         max-w-[1080px]
-        mx-auto my-0
-      "
+        mx-auto
+        my-0
+        ${formStyles}
+      `}
     >
       {isShowCloseIcon && (
         <Image
@@ -71,7 +79,18 @@ export default function BuyerForm({
         />
       )}
 
-      <div className="[font-size:_clamp(32px,5vw,80px)] font-extrabold leading-[100%] -tracking-[2.88px] text-white mb-5 ">
+      <div
+        className={`
+          [font-size:_clamp(32px,5vw,80px)]
+          font-extrabold
+          leading-[100%]
+          -tracking-[2.88px]
+          text-white
+          mb-5
+          ${formHeaderStyle}
+        
+        `}
+      >
         {formHeader.split(/\r?\n|\r|\n/g).map((string, index) => (
           <div
             key={string}
@@ -81,15 +100,17 @@ export default function BuyerForm({
           </div>
         ))}
       </div>
-      <Image
-        src={`/images/glowFull.png`}
-        alt="glow"
-        priority
-        width={1320}
-        height={60}
-        className="mt-2 rotate-180"
-      />
-      <div className="flex flex-col gap-3 mb-2">
+      {!hideDivider && (
+        <Image
+          src={`/images/glowFull.png`}
+          alt="glow"
+          priority
+          width={1320}
+          height={60}
+          className="mt-2 rotate-180"
+        />
+      )}
+      <div className="flex flex-col gap-3 mb-2 ">
         {formFields.map((inputField) => {
           if (inputField.type === "input")
             return (
@@ -113,7 +134,7 @@ export default function BuyerForm({
                   {inputField.formTitle}
                 </span>
                 <Input
-                  externalStyle="font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)]"
+                  externalStyle={`font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)] ${inputBorders}`}
                   externalContainerStyle="!w-full"
                   name={inputField.name}
                   placeholder={inputField.placeholder}
@@ -203,6 +224,7 @@ export default function BuyerForm({
                   setValue={setValue}
                   error={errors?.[inputField.name]}
                   showDot
+                  inputBorders={inputBorders}
                 />
               </div>
             );
@@ -216,6 +238,7 @@ export default function BuyerForm({
           type="checkbox"
           checked={agreement}
           className={`
+            ${agreementInputColor}
             grid
             place-content-center
             appearance-none
@@ -236,7 +259,8 @@ export default function BuyerForm({
             before:ease-in-out
             checked:before:scale-[1]
             disabled:border-dark-gray-650
-            cursor-pointer               
+            cursor-pointer
+            text-green-700  
           `}
           onChange={onChangeAgreement}
         />
@@ -245,6 +269,7 @@ export default function BuyerForm({
             ml-[6px]
             font-normal
             [font-size:_clamp(12px,1vw,14px)]
+           ${agreementTextColor}
           `}
         >
           {CONSULT_AGREEMENT}
