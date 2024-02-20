@@ -52,7 +52,6 @@ export default function Awards() {
           className="awards"
           options={options}
           extensions={{ AutoScroll }}
-          onScroll={(splide) => console.log(splide)}
         >
           {AWARDS_AND_STATS_AWARDS_IMAGES.map((image) => (
             <SplideSlide key={image}>
