@@ -217,7 +217,7 @@ export default function Categories() {
                       {isSelectedcategory && (
                         <Image
                           src={`/images/selector.svg`}
-                          alt="folderTop"
+                          alt="selector"
                           width={16}
                           height={16}
                         />

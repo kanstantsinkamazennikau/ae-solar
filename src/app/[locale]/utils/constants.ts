@@ -93,7 +93,7 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "ShadeStar.svg",
   "Neptune.svg",
 ];
-export const HEADER_CHOOSE_YOUR_MODEL = "Choose your model";
+export const HEADER_CONFIGURE_YOUR_MODEL = "Configure your model";
 export const HEADER_CALCULATE = "Calculate";
 export const HEADER_CHOOSE_LANGUAGE = "Choose language";
 
@@ -332,7 +332,7 @@ export const PRODUCT_INTRO_PANELS = {
   },
 };
 export const PRODUCT_INTRO_LEARN_MORE = "Learn more";
-export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "Calculate your model";
+export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "Configure your model";
 
 export const FEATURED_PRODUCTS_HIGH_QUALITY = "High-Quality";
 
@@ -1020,7 +1020,7 @@ export const CONSTRUCTOR_CUSTOMIZE = "Customize.";
 export const CONSTRUCTOR_YOUR_MODEL = "Your model";
 export const CONSTRUCTOR_APPLICATIONS = "Applications.";
 export const CONSTRUCTOR_STANDARD = "Standard";
-export const CONSTRUCTOR_CHOOSE_YOUR_MODEL = "Choose your model";
+export const CONSTRUCTOR_CONFIGURE_YOUR_MODEL = "Configure your model";
 export const CONSTRUCTOR_YOUR_MODEL_IS = "Your model is";
 export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
   Aurora: {
@@ -1814,7 +1814,7 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   },
 };
 
-export const CART_MODELS_ARE_READY = "Your models are ready for the next step";
+export const CART_MODELS_ARE_READY = "Your modules";
 export const CART_PLEASE_CHECKOUT =
   "Please check out your order and we will finalize it.";
 export const CART_GET_A_QUOTE = "Get a quote";

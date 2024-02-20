@@ -5,7 +5,7 @@ import { ModelsProps } from "@/app/[locale]/components/common/Navigation/types";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import {
   HEADER_CALCULATE,
-  HEADER_CHOOSE_YOUR_MODEL,
+  HEADER_CONFIGURE_YOUR_MODEL,
   HEADER_SUBNAVIGATION_PANELS_MODELS,
   PRODUCT_INTRO_MODULES,
 } from "@/app/[locale]/utils/constants";
@@ -99,7 +99,7 @@ export default function Models({
       {isLink && (
         <Button onClick={handleClick} size="extrasmall" style="outline">
           <span className="leading-[10px] font-semibold text-sm">
-            {HEADER_CHOOSE_YOUR_MODEL}
+            {HEADER_CONFIGURE_YOUR_MODEL}
           </span>
         </Button>
       )}

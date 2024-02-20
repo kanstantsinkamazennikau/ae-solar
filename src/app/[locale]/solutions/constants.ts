@@ -39,7 +39,7 @@ export const SOLUTIONS_EXPLORE_OUR = "Explore Our";
 export const SOLUTIONS_GLOBAL_IMPACT = "Global Impact";
 export const SOLUTIONS_GLOBAL_IMPACT_DESCRIPTION =
   "Global Impact Our expansive product range and services embody the promise of a cleaner, brighter tomorrow, seamlessly integrating into your unique energy requirements. Every project we undertake, each spanning the globe, is a testament to our dedication to renewable energy and reducing carbon footprints.";
-export const SOLUTIONS_SEE_DETAILED_PRESENTATION = "See Detailed Presentation";
+export const SOLUTIONS_SEE_DETAILED_PRESENTATION = "View PDF-Presentation";
 export const SOLUTIONS_GLOBAL_IMPACT_STATS = [
   { value: "108,600 sqm", measure: "Total Area" },
   { value: "62,000 sqm", measure: "Manufacturing Area" },

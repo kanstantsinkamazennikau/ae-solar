@@ -11,7 +11,7 @@ export default function BusinessMap() {
   return (
     <div className="flex flex-col justify-center items-center">
       <BasicWidthContainer>
-        <div className="pb-20 -mt-40">
+        <div className="pb-20">
           <TwoTierHeading
             tierOneHeading={ABOUT_BUSINESS}
             tierTwoHeading={ABOUT_MAP}

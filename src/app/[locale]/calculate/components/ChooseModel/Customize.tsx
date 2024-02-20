@@ -16,7 +16,7 @@ import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
   CONSTRUCTOR_CUSTOMIZE,
-  CONSTRUCTOR_CHOOSE_YOUR_MODEL,
+  CONSTRUCTOR_CONFIGURE_YOUR_MODEL,
   CONSTRUCTOR_MODELS_SPEC,
   CONSTRUCTOR_YOUR_MODEL,
 } from "@/app/[locale]/utils/constants";
@@ -138,7 +138,7 @@ export default function Customize() {
         size="normal"
       >
         <span className="text-sm leading-none">
-          {CONSTRUCTOR_CHOOSE_YOUR_MODEL}
+          {CONSTRUCTOR_CONFIGURE_YOUR_MODEL}
         </span>
       </Button>
     </div>

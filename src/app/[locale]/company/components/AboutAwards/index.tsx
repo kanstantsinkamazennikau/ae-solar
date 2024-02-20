@@ -24,7 +24,8 @@ export default async function AboutAwards() {
           mb-[80px]
           relative
           mt-[60px]
-          py-[60px]
+          md:py-[60px]
+          py-[36px]
           bg-[linear-gradient(0deg,_rgb(0_0_0_/_50%),_rgb(0_0_0_/_50%)),_linear-gradient(0deg,_#19191947,_#19191947)]
           border
           border-solid
@@ -39,11 +40,49 @@ export default async function AboutAwards() {
           height={30}
           className="absolute top-0 left-0"
         />
-        <div className="flex md:pt-10 md:pb-20 pt-0 pb-10 border-b border-solid border-[#191919] max-w-[1100px] self-center items-center px-5 gap-4 md:flex-row flex-col justify-center">
-          <div className="font-semibold leading-[110%] [font-size:_clamp(26px,3.5vw,64px)] -tracking-[1.92px] max-w-[426px] w-full text-center">
+        <div
+          className="
+          flex
+          md:pt-10
+          md:pb-20
+          pt-0
+          pb-10
+          border-b
+          border-solid
+          border-[#191919]
+          max-w-[1100px]
+          self-center
+          md:items-center
+          px-5
+          gap-4
+          md:flex-row
+          flex-col
+          justify-center
+        "
+        >
+          <div
+            className="
+              font-semibold
+              leading-[110%]
+              [font-size:_clamp(36px,3.5vw,64px)]
+              -tracking-[1.92px]
+              max-w-[426px]
+              w-full
+              md:text-center
+            "
+          >
             {ABOUT_AS_A_TIER}
           </div>
-          <div className="font-medium leading-[150%] [font-size:_clamp(14px,1.5vw,24px)] font-walsheim max-w-[650px] text-center">
+          <div
+            className="
+              font-medium
+              leading-[150%]
+              [font-size:_clamp(16px,1.5vw,24px)]
+              font-walsheim
+              max-w-[650px]
+              md:text-center
+            "
+          >
             {ABOUT_SYNONYMOUS}
           </div>
         </div>
@@ -54,7 +93,7 @@ export default async function AboutAwards() {
           alt="dividerBig"
           width={300}
           height={300}
-          className="absolute bottom-0 right-0 pointer-events-none z-0"
+          className="absolute bottom-0 right-0 pointer-events-none z-10"
         />
       </div>
     </BasicWidthContainer>

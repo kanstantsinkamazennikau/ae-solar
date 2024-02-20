@@ -24,13 +24,12 @@ export default function Home() {
           />
           <div className="fade-strip-bottom !h-[100px]" />
         </div>
-
         <AwardsAndStats />
         <ProductIntro />
       </div>
       <TechInfo />
       <GetInTouch />
-      <Reviews />
+      {/* <Reviews /> */}
       <MainPageFAQ />
     </main>
   );

@@ -56,7 +56,7 @@ export default function BuyerForm({
         flex-col
         border
         border-solid
-        border-[#d0d8e91a]
+        border-[#131313]
         rounded-[40px]
         bg-[#000000b3]
         backdrop-blur-[50px]

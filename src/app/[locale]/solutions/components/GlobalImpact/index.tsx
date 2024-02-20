@@ -47,7 +47,7 @@ export default function GlobalImpact() {
             <p className="md:text-[20px] text-[16px] font-normal font-walsheim leading-[150%]">
               {SOLUTIONS_GLOBAL_IMPACT_DESCRIPTION}
             </p>
-            <Link href="/documents/references.pdf">
+            <a href="/documents/presentation.pdf" target="_blank">
               <Button style="textOnly" externalStyle="!p-0">
                 <p
                   className="
@@ -69,7 +69,7 @@ export default function GlobalImpact() {
                   className="-rotate-[135deg] ml-1"
                 />
               </Button>
-            </Link>
+            </a>
           </div>
           {/* STATS */}
           <div

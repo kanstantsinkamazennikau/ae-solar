@@ -2,7 +2,7 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import {
-  HEADER_CHOOSE_YOUR_MODEL,
+  HEADER_CONFIGURE_YOUR_MODEL,
   TECH_INFO_EXPLORE,
   TECH_INFO_INNOVATIVE,
 } from "@/app/[locale]/utils/constants";
@@ -59,7 +59,7 @@ export default function FeaturedProducts() {
           <Button style="outline" externalStyle="!bg-black" size="thin">
             <Link href="/calculate">
               <span className="[font-size:_clamp(12px,1.5vw,20px)] -tracking-[0.24px] font-semibold">
-                {HEADER_CHOOSE_YOUR_MODEL}
+                {HEADER_CONFIGURE_YOUR_MODEL}
               </span>
             </Link>
           </Button>

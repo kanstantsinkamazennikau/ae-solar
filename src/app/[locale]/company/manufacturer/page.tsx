@@ -41,7 +41,7 @@ export default function ManufacturerPage() {
                   max-[920px]:[&>*>#contacts]:z-10
                 "
               >
-                <DownloadPresentation link="/documents/references.pdf" />
+                <DownloadPresentation link="/documents/presentation.pdf" />
                 <div className="relative">
                   <Contacts />
                   <hr className="border-[#131313] min-[920px]:hidden absolute -bottom-[11%] z-10 w-[calc(100%-40px)] left-1/2 -translate-x-1/2" />

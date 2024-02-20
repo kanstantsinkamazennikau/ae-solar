@@ -60,9 +60,14 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
             if (index === modelAdvantages.length - 1) setStopIntersecting(true);
           }}
         >
-          <div className="leading-[130%] font-semibold [font-size:_clamp(8px,1vw,10px)] text-base-red">
-            {String(index + 1).padStart(2, "0")}
-          </div>
+          <Image
+            src={`/images/selector.svg`}
+            alt="selector"
+            width={16}
+            height={16}
+            className="mt-1 self-baseline flex"
+          />
+
           <div>
             <div className="leading-[130%] font-semibold [font-size:_clamp(16px,1.5vw,20px)]">
               {title}

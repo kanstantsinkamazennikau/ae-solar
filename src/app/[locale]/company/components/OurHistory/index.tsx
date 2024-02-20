@@ -80,7 +80,7 @@ export default function OurHistory() {
               setScrollDirection(self.direction);
             },
             trigger: "#history",
-            start: "top-=140px",
+            start: "top-=80px",
             pin: true,
             end: "+=600%",
             scrub: 1,
@@ -96,7 +96,6 @@ export default function OurHistory() {
           },
           0
         );
-      // setTimeline(timeline);
     });
     return () => ctx.revert();
   }, [renderText]);
@@ -148,30 +147,12 @@ export default function OurHistory() {
                     flex
                     mb-6
                     w-full
-                    transition-all
-                    duration-500
+                    transition-[color]
+                    duration-300
                     relative
                     ${isActive ? "text-white" : "text-dark-gray-900"}
-                    cursor-pointer
                   `}
                   style={{ opacity: 1 / opacityValue }}
-                  // onClick={() => {
-                  //   setActiveStepIndex(index);
-                  //   const { start, end } = timeline!.scrollTrigger!;
-                  //   console.log(start, end);
-
-                  //   const timelineDistance = end - start;
-                  //   const oneSectorScrollDistance =
-                  //     timelineDistance / numFrames;
-                  //   gsap.to(window, {
-                  //     scrollTo: {
-                  //       y: start + oneSectorScrollDistance * index,
-                  //       autoKill: true,
-                  //     },
-                  //     ease: "power2",
-                  //     duration: 1,
-                  //   });
-                  // }}
                 >
                   <div
                     className={`
@@ -201,13 +182,17 @@ export default function OurHistory() {
                   </div>
 
                   <div
-                    className="
-                      w-[68%]
-                      pl-4
-                      max-w-[450px]
-                      [font-size:_clamp(10px,2vw,16px)]
-                      leading-[150%]
-                    "
+                    className={`
+                    w-[68%]
+                    pl-4
+                    max-w-[450px]
+                    ${
+                      isActive
+                        ? "[font-size:_clamp(20px,2vw,24px)]"
+                        : "[font-size:_clamp(10px,2vw,16px)]"
+                    }
+                    leading-[150%]
+                  `}
                   >
                     {event}
                   </div>
