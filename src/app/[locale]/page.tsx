@@ -2,6 +2,7 @@ import AwardsAndStats from "@/app/[locale]/components/AwardsAndStats";
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import HeroSection from "@/app/[locale]/components/HeroSection";
 import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
+import MainPageNews from "@/app/[locale]/components/MainPageNews";
 import ProductIntro from "@/app/[locale]/components/ProductIntro";
 import Reviews from "@/app/[locale]/components/Reviews";
 import TechInfo from "@/app/[locale]/components/TechInfo";
@@ -30,6 +31,7 @@ export default function Home() {
       <TechInfo />
       <GetInTouch />
       {/* <Reviews /> */}
+      <MainPageNews />
       <MainPageFAQ />
     </main>
   );

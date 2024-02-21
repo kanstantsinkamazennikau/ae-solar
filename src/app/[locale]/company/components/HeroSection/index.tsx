@@ -27,31 +27,39 @@ export default function HeroSection() {
       <LightBoxYoutubeVideo open={showVideo} onClose={onVideoClose} />
       <div
         className="
-        w-full
-        flex
-        justify-end
-        items-center
-        relative
-        -mt-[80px]
-        flex-col
-        overflow-x-hidden
-        2xl:h-[1000px]
-        xl:h-[700px]
-        lg:h-[650px]
-        md:h-[600px]
-        h-[735px]
-        md:mb-0
-        -mb-[40px]
-      "
+          w-full
+          flex
+          justify-end
+          items-center
+          relative
+          -mt-[80px]
+          flex-col
+          overflow-hidden
+          2xl:h-[1000px]
+          xl:h-[700px]
+          lg:h-[650px]
+          md:h-[600px]
+          h-[735px]
+          md:mb-0
+          -mb-[40px]
+        "
       >
         <div className="fade-strip-bottom md:!h-[200px] !h-[50px]" />
         <Image
-          src="/images/about/aboutPath2.svg"
+          src="/images/about/aboutPath3.svg"
           alt="solar panel"
           priority
           width={1320}
           height={1320}
-          className="xl:h-[525px] lg:h-[475px] md:h-[425px] md:block hidden absolute top-[80px]"
+          className="xl:h-[525px] lg:h-[475px] md:h-[425px] md:block hidden absolute top-[24px]"
+        />
+        <Image
+          src="/images/about/aboutPathBottom3.svg"
+          alt="solar panel"
+          priority
+          width={1320}
+          height={1320}
+          className="absolute -mb-1/2 -bottom-1/2"
         />
         <Image
           src="/images/about/heroSectionMobile.svg"

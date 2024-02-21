@@ -77,6 +77,8 @@ export default function AccordionItem({
         <Image
           className={`
             arrow
+            duration-300
+            transition-all
             ${isOpen || isOpenItem ? "rotate-180" : ""} 
             ${
               openCloseStyle && (isOpen || isOpenItem)

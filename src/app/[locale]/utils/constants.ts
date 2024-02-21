@@ -417,6 +417,9 @@ export const REVIEWS_QUOTES_WITH_AUTHORS = [
   },
 ];
 
+export const MAIN_PAGE_NEWS_INSIGHTS = "News and Insights";
+export const MAIN_PAGE_COMPANY = "of Our Company ";
+
 export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installer"];
 export const GET_IN_TOUCH_ELEVATE_GROWTH = "Elevate growth together";
 export const GET_IN_TOUCH_JOIN_US = "Join as ";

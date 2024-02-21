@@ -7,28 +7,21 @@ import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/blog/constants";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
 import Image from "next/image";
 import Link from "next/link";
-import { getDocumentSlugs, getDocuments, load } from "outstatic/server";
+import { getDocumentSlugs, load } from "outstatic/server";
 
 export async function generateStaticParams() {
   const blogs = getDocumentSlugs("blog");
   return blogs.map((slug) => ({ slug }));
 }
 
-const getPostsAmount = async () => {
-  const posts = getDocuments("blog");
-
-  return posts.length;
-};
-
-const getBlogPosts = async (currentPage: number) => {
+const getBlogPosts = async () => {
   const db = await load();
   const blogPosts = await db
     .find({
       collection: "blog",
     })
     .sort({ publishedAt: -1 })
-    .skip((currentPage - 1) * BLOG_POSTS_PER_PAGE)
-    .limit(BLOG_POSTS_PER_PAGE)
+    .limit(3)
     .project([
       "title",
       "slug",
@@ -42,11 +35,18 @@ const getBlogPosts = async (currentPage: number) => {
   return blogPosts as BlogPost[];
 };
 
-export default async function BlogPostsList({
-  currentPage,
-  blogPostsAmount,
-}: BlogPostsListProps) {
-  const blogPosts = await getBlogPosts(currentPage);
+async function getBlogPostsAmount() {
+  try {
+    const blogs = await getDocumentSlugs("blog");
+    return blogs.length;
+  } catch (error) {
+    return 0;
+  }
+}
+
+export default async function RecentNews() {
+  const blogPosts = await getBlogPosts();
+  const blogPostsAmount = await getBlogPostsAmount();
 
   return (
     <div className="flex flex-col w-full max-w-[945px]">
@@ -115,11 +115,7 @@ export default async function BlogPostsList({
 
                 <div className="[font-size:_clamp(20px,2vw,32px)] font-normal -tracking-[1.6] md:block hidden">
                   {/* {descr?.typeNumber && `#${descr.typeNumber}`} */}#
-                  {String(
-                    blogPostsAmount -
-                      (currentPage - 1) * BLOG_POSTS_PER_PAGE -
-                      index
-                  ).padStart(3, "0")}
+                  {String(blogPostsAmount - index).padStart(3, "0")}
                 </div>
               </div>
 

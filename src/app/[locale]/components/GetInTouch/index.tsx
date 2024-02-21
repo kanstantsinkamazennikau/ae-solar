@@ -10,8 +10,7 @@ import {
   GET_IN_TOUCH_JOIN_US,
   GET_IN_TOUCH_OUR_VISION,
 } from "@/app/[locale]/utils/constants";
-import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function GetInTouch({
