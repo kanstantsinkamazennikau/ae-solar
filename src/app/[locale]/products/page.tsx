@@ -18,18 +18,18 @@ export default function ProductsPage() {
         <Power />
         <div
           className="
-          w-full
-          2xl:-mb-60
-          lg:-mb-2
-          md:mb-12
-          min-[560px]:-mb-16
-          -mb-20
-          2xl:mt-10
-          lg:mt-10
-          md:mt-40
-          min-[560px]:mt-20
-          mt-40
-        "
+            w-full
+            2xl:-mb-60
+            lg:-mb-2
+            md:mb-12
+            min-[560px]:-mb-16
+            -mb-20
+            2xl:mt-10
+            lg:mt-10
+            md:mt-40
+            min-[560px]:mt-20
+            mt-40
+          "
         >
           <GetInTouch>
             {
@@ -39,12 +39,12 @@ export default function ProductsPage() {
                 </div>
                 <div
                   className="
-                  [font-size:_clamp(20px,3.5vw,64px)]
-                  -tracking-[-1.92px]
-                  font-semibold
-                  max-w-[1180px]
-                  leading-[130%]
-                "
+                    [font-size:_clamp(20px,3.5vw,64px)]
+                    -tracking-[-1.92px]
+                    font-semibold
+                    max-w-[1180px]
+                    leading-[130%]
+                  "
                 >
                   {PRODUCT_JOIN}
                 </div>

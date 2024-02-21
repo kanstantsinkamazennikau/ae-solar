@@ -86,6 +86,7 @@ export default function Documents() {
                 key={category}
                 category={category}
                 index={index}
+                dropdownIcon="/images/documents/dropDownIcon.svg"
               >
                 <div className="grid grid-cols-3 gap-[6px] pb-10">
                   {data.map(({ link, linkTitle, title, image }) => (
@@ -104,6 +105,7 @@ export default function Documents() {
               key={category}
               category={category}
               index={index}
+              dropdownIcon="/images/documents/dropdownIcon.svg"
             >
               <div className="pb-10">
                 {data.map(({ linkTitle, link }) => (

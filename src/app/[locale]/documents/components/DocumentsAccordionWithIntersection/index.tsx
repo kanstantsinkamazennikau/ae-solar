@@ -10,6 +10,7 @@ export default function DocumentsAccordionWithIntersection({
   category,
   index,
   children,
+  dropdownIcon,
   ...props
 }: DocumentsAccordionWithIntersectionProps) {
   const { onCategoryClick, setSelectedCategoryIndex } =
@@ -46,6 +47,7 @@ export default function DocumentsAccordionWithIntersection({
         onClickCallback={() => onCategoryClick(index)}
         id={index}
         openCloseStyle
+        dropdownIcon={dropdownIcon}
         {...props}
       >
         {children}

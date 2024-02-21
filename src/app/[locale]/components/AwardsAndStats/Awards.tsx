@@ -61,7 +61,7 @@ export default function Awards() {
                 width={120}
                 height={120}
                 priority
-                className="object-contain md:h-[120px] md:w-[120px] h-20 w-20 max-md:hover:scale-[2] hover:z-10"
+                className="object-contain md:h-[120px] md:w-[120px] h-20 w-20 md:hover:scale-150 hover:scale-[2] hover:z-10"
               />
             </SplideSlide>
           ))}

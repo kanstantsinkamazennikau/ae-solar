@@ -163,7 +163,7 @@ export default function Categories() {
                 items-center
               "
             >
-              {documentsFile[selectedCategoryIndex].category}
+              {documentsFile[selectedCategoryIndex]?.category}
               <Image
                 src={`/images/selectorWhite.svg`}
                 alt="selectorWhite"

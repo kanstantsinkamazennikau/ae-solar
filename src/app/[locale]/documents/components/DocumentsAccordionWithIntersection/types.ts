@@ -5,4 +5,5 @@ export interface DocumentsAccordionWithIntersectionProps {
   category: string;
   index: number;
   children: React.ReactNode;
+  dropdownIcon?: string;
 }

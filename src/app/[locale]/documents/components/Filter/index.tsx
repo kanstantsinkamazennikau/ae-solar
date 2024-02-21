@@ -72,7 +72,7 @@ export default function Filter() {
           const isAppliedFilter = filterModels.includes(modelName);
 
           return (
-            <div
+            <button
               key={panel}
               className={`
                 flex
@@ -116,7 +116,7 @@ export default function Filter() {
                   height={16}
                 />
               )}
-            </div>
+            </button>
           );
         })}
         {!!filterModels.length && (
