@@ -31,7 +31,7 @@ export default function ContactUs() {
         max-[540px]:border-x-0
         border-2
         border-solid
-        border-[#ffffff0d]
+        border-[#0D0D0D]
         relative
         overflow-hidden
         bg-[#111]
