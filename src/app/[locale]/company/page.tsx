@@ -7,39 +7,46 @@ import SequenceAnimation2 from "@/app/[locale]/company/components/SequenceAnimat
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
 import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
+import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import GlobalImpact from "@/app/[locale]/solutions/components/GlobalImpact";
 import JoinOurMission from "@/app/[locale]/solutions/components/JoinOurMission";
 
 export default function About() {
   return (
     <>
-      {/* <HeroSection />
+      <HeroSection />
       <BornInGermany />
       <AboutAwards />
       <PortfolioBackground />
       <GlobalImpact />
       <JoinOurMission />
-      <div
-        className="
+      <BasicWidthContainer styles="mx-auto">
+        <div
+          className="
           xl:mb-[180px]
           lg:mb-[140px]
           md:mb-[100px]
           mb-[80px]
+          xl:mt-[180px]
+          lg:mt-[140px]
+          md:mt-[100px]
+          mt-[80px]
         "
-      >
-        <FeaturedProducts />
-      </div> */}
+        >
+          <FeaturedProducts />
+        </div>
+      </BasicWidthContainer>
 
       {/* <BusinessMap /> */}
-      {/* <OurHistory /> */}
+      <OurHistory />
 
-      {/* <GetInTouch />
-      <div className="flex justify-center">
+      <GetInTouch />
+      {/*<div className="flex justify-center">
         <MainPageFAQ />
       </div> */}
 
       {/* <SequenceAnimation /> */}
-      <SequenceAnimation2 />
+      {/* <SequenceAnimation2 /> */}
     </>
   );
 }

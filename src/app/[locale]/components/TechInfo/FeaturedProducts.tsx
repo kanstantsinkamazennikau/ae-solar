@@ -1,7 +1,6 @@
 "use client";
 
 import Button from "@/app/[locale]/components/common/Button";
-import { usePlayIntersection } from "@/app/[locale]/hooks/usePlayIntersection";
 import {
   HEADER_CONFIGURE_YOUR_MODEL,
   TECH_INFO_EXPLORE,
@@ -9,53 +8,64 @@ import {
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 export default function FeaturedProducts() {
-  const [observe, containerRef] = usePlayIntersection();
+  const ref = useRef(null);
+  const [isPlayed, setIsPlayed] = useState(false);
+
+  useEffect(() => {
+    if (isPlayed) return;
+    if (ref.current) {
+      const intersectionObserver = new IntersectionObserver(
+        (entries: IntersectionObserverEntry[]) => {
+          if (entries[0].isIntersecting) {
+            setIsPlayed(true);
+            (entries[0].target as HTMLVideoElement).play();
+          } else {
+            (entries[0].target as HTMLVideoElement).currentTime = 0;
+          }
+        }
+      );
+
+      intersectionObserver.observe(ref.current);
+
+      return () => {
+        if (ref.current) {
+          intersectionObserver.unobserve(ref.current);
+        }
+      };
+    }
+  }, [isPlayed]);
 
   return (
     <div
       className="
-        object-fill 
-        w-full
-        xl:h-[800px]
-        lg:h-[700px]
-        md:h-[500px]
-        bg-no-repeat 
-        bg-contain 
-        bg-center 
-        justify-end 
-        flex 
-        items-center
-        flex-col
-        px-5
+        relative
+        xl:mb-[140px]
+        lg:mb-[120px]
+        md:mb-[100px]
         mb-[80px]
-        md:[background-position-y:-35px]
-        lg:[background-position-y:0px]
-        [background-position-y:-13px]
-        h-[400px]
       "
-      ref={containerRef}
     >
       <video
-        autoPlay
         muted
-        ref={observe}
+        onEnded={() => console.log("sdfsf")}
+        ref={ref}
         className="
           w-full
-          xl:h-[800px]
+          xl:h-[840px]
           lg:h-[700px]
           md:h-[500px]
           h-[400px]
           md:object-cover
-          absolute
-          md:bottom-[100px]
-          bottom-[120px]
+          md:pb-0
+          pb-10
         "
       >
         <source src="/videos/productRange.mp4" type="video/mp4" />
       </video>
-      <div className="flex flex-col items-center lg:gap-[68px] md:gap-[38px] gap-8 w-full">
+      <div className="flex flex-col items-center lg:gap-[68px] md:gap-[38px] gap-8 w-full absolute bottom-0">
         <div className="text-center font-bold leading-[1.2] -tracking-[0.64] [font-size:_clamp(24px,4vw,64px)] z-10">
           <p>{TECH_INFO_INNOVATIVE}</p>
           <p className="text-dark-gray-900">{TECH_INFO_EXPLORE}</p>

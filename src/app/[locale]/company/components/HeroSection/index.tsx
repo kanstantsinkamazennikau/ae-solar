@@ -101,7 +101,6 @@ export default function HeroSection() {
             <div
               className="
               text-center
-              shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
               [font-size:_clamp(40px,5.5vw,102px)]
               font-semibold
               leading-[100%]
