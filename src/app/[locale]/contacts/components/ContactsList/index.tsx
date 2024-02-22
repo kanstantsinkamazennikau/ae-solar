@@ -24,11 +24,12 @@ export default function ContactsList() {
             <div
               className="
                 p-7
-                border
-                border-solid
+                min-[920px]:pt-0
+                max-[920px]:border
+                max-[920px]:border-solid
                 max-[920px]:border-b-0
-              border-[#131313]
-              bg-[#0D0D0D]
+                max-[920px]:border-[#131313]
+                max-[920px]:bg-[#0D0D0D]
                 rounded-xl
                 -mb-12
                 z-10

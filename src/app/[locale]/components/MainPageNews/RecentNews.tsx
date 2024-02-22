@@ -52,8 +52,31 @@ export default async function RecentNews() {
 
   return (
     <div className="flex">
-      <Image src={`/images/news.png`} alt="news" width={426} height={685} />
-      <div className="flex flex-col w-full max-w-[915px] p-20 rounded-xl border-solid border border-[#131313] bg-[url('/images/getInTouchBackground.svg')]">
+      <Image
+        src={`/images/news.png`}
+        alt="news"
+        width={426}
+        height={685}
+        className="min-[920px]:w-auto w-[300px]"
+      />
+      <div
+        className="
+          flex
+          flex-col
+          w-full
+          max-w-[915px]
+          xl:p-20
+          lg:p-12
+          p-6
+          justify-center
+          rounded-xl
+          border-solid
+          border
+          border-[#131313]
+          -ml-5
+          bg-[url('/images/getInTouchBackground.svg')]
+        "
+      >
         {blogPosts.map(
           ({ slug, title, publishedAt, author, readingTime }, index) => {
             return (
@@ -87,9 +110,9 @@ export default async function RecentNews() {
                     flex-grow-0
                     flex-shrink-0
                     xl:basis-[200px]
-                    lg:basis-[150px]
-                    min-[920px]:basis-[100px]
-                    md:basis-[100px]
+                    lg:basis-[80px]
+                    min-[920px]:basis-[60px]
+                
                     break-all
                   "
                 >
@@ -117,7 +140,7 @@ export default async function RecentNews() {
                     </span>
                   </div>
 
-                  <div className="[font-size:_clamp(20px,2vw,32px)] font-normal -tracking-[1.6] md:block hidden">
+                  <div className="[font-size:_clamp(20px,2vw,32px)] font-normal -tracking-[1.6] min-[920px]:block hidden">
                     {/* {descr?.typeNumber && `#${descr.typeNumber}`} */}#
                     {String(blogPostsAmount - index).padStart(3, "0")}
                   </div>

@@ -75,7 +75,6 @@ export default function ProductIntroVideo() {
     if (sliderRef.current) {
       sliderRef.current.go(sliderId);
     }
-    return () => observe(null);
   }, [sliderId, observe]);
 
   return (
@@ -160,7 +159,7 @@ export default function ProductIntroVideo() {
           >
             {/* CONTROL */}
             <button
-              className="splide__toggle absolute top-10 z-20 hidden"
+              className="splide__toggle absolute top-10 z-20 "
               type="button"
             >
               <span className="splide__toggle__play">Play</span>
