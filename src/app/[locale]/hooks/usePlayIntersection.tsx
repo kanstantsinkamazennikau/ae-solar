@@ -6,8 +6,6 @@ export const usePlayIntersection = () => {
   useEffect(() => {
     const cb = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(({ isIntersecting, target }) => {
-        console.log(isIntersecting);
-
         if (isIntersecting) (target as HTMLVideoElement).play();
         else {
           (target as HTMLVideoElement).currentTime = 0;
@@ -30,7 +28,13 @@ export const usePlayIntersection = () => {
   const observe = useCallback(
     //@ts-ignore
     (el) => {
-      if (observer) observer.observe(el);
+      if (observer) {
+        try {
+          observer.observe(el);
+        } catch (error) {
+          observer.disconnect();
+        }
+      }
     },
     [observer]
   );

@@ -75,7 +75,8 @@ export default function ProductIntroVideo() {
     if (sliderRef.current) {
       sliderRef.current.go(sliderId);
     }
-  }, [sliderId]);
+    return () => observe(null);
+  }, [sliderId, observe]);
 
   return (
     <div className="flex flex-col items-center xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[80px] w-full z-30 relative">
