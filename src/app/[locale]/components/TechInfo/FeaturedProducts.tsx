@@ -50,7 +50,6 @@ export default function FeaturedProducts() {
     >
       <video
         muted
-        onEnded={() => console.log("sdfsf")}
         ref={ref}
         className="
           w-full
