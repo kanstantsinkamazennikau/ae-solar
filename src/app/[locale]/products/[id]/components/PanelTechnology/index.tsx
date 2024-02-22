@@ -10,18 +10,19 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
         2xl:-translate-y-[11%]
         2xl:xl:-mb-[11%]
         xl:-translate-y-[15%]
-        xl:xl:-mb-[15%]
-        lg:-translate-y-[24%]
-        lg:-mb-[24%]
+        xl:-mb-[15%]
+        lg:-translate-y-[18%]
+        lg:-mb-[18%]
         md:-translate-y-[24%]
         md:-mb-[24%]
         min-[600px]:-translate-y-[24%]
         min-[540px]:-translate-y-[34%]
         min-[540px]:-mb-[26%]
-        -translate-y-[45%]
+        -translate-y-[40%]
         -mb-[40%]
         overflow-hidden
         w-full
+        z-10
       "
     >
       <Image

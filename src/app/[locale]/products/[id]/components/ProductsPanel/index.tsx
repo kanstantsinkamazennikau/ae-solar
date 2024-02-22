@@ -4,8 +4,21 @@ import Image from "next/image";
 
 export default function ProductsPanel({ id }: ProductsPanelProps) {
   return (
-    <div className="w-full flex justify-center items-center relative -top-[64px] lg:h-screen">
-      <Image
+    <div
+      className="
+        w-full
+        flex
+        justify-center
+        items-center
+        relative
+        min-[540px]:-top-[64px]
+        -top-[100px]
+        max-md:min-h-[630px]
+        min-h-[700px]
+        max-h-[1000px]
+      "
+    >
+      {/* <Image
         src={`/images/products/${id}ProductBackground.png`}
         alt={`${id}ProductBackground`}
         priority
@@ -13,11 +26,22 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
         height={780}
         quality={100}
         className="object-cover h-[780px] w-full relative -top-[64px] "
-      />
+      /> */}
+      <video
+        width="1920"
+        height="780"
+        autoPlay
+        muted
+        className="
+        z-10 relative md:scale-100 min-[540px]:scale-[1.25] scale-[1.5] max-md:min-h-[630px] min-h-[700px] max-h-[1000px] 
+        "
+      >
+        <source src="/videos/products/AuroraHeader.mp4" type="video/mp4" />
+      </video>
 
       {/* BACKGROUND IMAGE */}
-      <div className="absolute 2xl:bottom-[6%] xl:bottom-[12%] lg:bottom-[20%] md:bottom-[25%] min-[460px]:">
-        <Image
+
+      {/* <Image
           src="/images/products/moduleProducts.png"
           alt="moduleProducts"
           priority
@@ -39,11 +63,11 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             min-[460px]:scale-100
             scale-150
           "
-        />
-        <div className="fade-strip-bottom !z-0 !h-[112px] !from-[#0000006e] !bottom-[0] rotate-180"></div>
-        {/* PANEL DESCRIPTION */}
-        <div
-          className="
+        /> */}
+      {/* <div className="fade-strip-bottom !z-0 !h-[112px] !from-[#0000006e] !bottom-[0] rotate-180"></div> */}
+      {/* PANEL DESCRIPTION */}
+      <div
+        className="
             xl:pt-10
             xl:pb-[60px]
             xl:px-[60px]
@@ -58,79 +82,85 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             items-center         
             absolute
             max-w-[770px]
-            bottom-[20%]
+            min-[920px]:bottom-[20%]
+            bottom-[30%]
             left-[50%]
             -translate-x-1/2
             z-10
-            w-full
+            md:w-fit
+            max-[460px]:w-full
+            max-md:top-[160px]
           "
-        >
+      >
+        <Image
+          src="/images/awards/dividerSmall.svg"
+          alt="dividerSmall"
+          width={30}
+          height={30}
+          className="absolute top-0 left-0 lg:block hidden"
+        />
+        <Image
+          src="/images/awards/dividerSmall.svg"
+          alt="dividerSmall"
+          width={30}
+          height={30}
+          className="absolute bottom-0 right-0 rotate-180 lg:block hidden"
+        />
+        <div className="flex flex-col items-center md:gap-3 gap-1 md:w-min w-full">
           <Image
-            src="/images/awards/dividerSmall.svg"
-            alt="dividerSmall"
-            width={30}
-            height={30}
-            className="absolute top-0 left-0 lg:block hidden"
+            src={`/images/models/${id}.svg`}
+            alt={id}
+            priority
+            width={120}
+            height={120}
+            className="xl:w-[120px] xl:h-[120px] md:w-[80px] md:h-[80px] w-[48px] h-[48px]"
           />
-          <Image
-            src="/images/awards/dividerSmall.svg"
-            alt="dividerSmall"
-            width={30}
-            height={30}
-            className="absolute bottom-0 right-0 rotate-180 lg:block hidden"
-          />
-          <div className="flex flex-col items-center gap-3 md:w-min w-full">
-            <Image
-              src={`/images/models/${id}.svg`}
-              alt={id}
-              priority
-              width={120}
-              height={120}
-              className="xl:w-[120px] xl:h-[120px] md:w-[80px] md:h-[80px] w-[60px] h-[60px]"
-            />
-            <div
-              className="
+          <div
+            className="
                 [font-size:_clamp(60px,8.5vw,170px)]
                 drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
                 font-bold
                 leading-[100%]
                 -tracking-[5.1px]
               "
-            >
-              {id}
-            </div>
-            <p className="font-walsheim [font-size:_clamp(18px,1.5vw,24px)] leading-[150%] font-medium text-center max-w-[650px]">
-              {PRODUCT_PANEL_TITLES[id]}
-            </p>
+          >
+            {id}
           </div>
+          <p className="font-walsheim [font-size:_clamp(18px,1.5vw,24px)] leading-[150%] font-medium text-center max-w-[650px]">
+            {PRODUCT_PANEL_TITLES[id]}
+          </p>
         </div>
-        <div
-          className="
-            flex
-            items-center
-            flex-col
-            gap-4
-            absolute
-            lg:bottom-[0px]
-            md:-bottom-6
-            min-[460px]:-bottom-[120px]
-            left-2/4
-            -translate-x-2/4
-            text-centerfade 
-            font-semibold
-            [font-size:_clamp(14px,1.5vw,20px)]
-            z-10
-          "
-        >
-          <span>{"Scroll to the future"}</span>
-          <Image
-            src="/images/arrowFuture.svg"
-            alt="arrow"
-            width={23}
-            height={24}
-            className="animate-bounce"
-          />
-        </div>
+      </div>
+      <div
+        className="
+          flex
+          items-center
+          flex-col
+          gap-4
+          absolute
+          lg:bottom-[10%]
+          min-[920px]:bottom-[13%]
+          md:bottom-[18%]
+          
+          min-[460px]:bottom-[14%]
+          bottom-[21%]
+          left-2/4
+          -translate-x-2/4
+          text-centerfade 
+          font-semibold
+          [font-size:_clamp(14px,1.5vw,20px)]
+
+          z-10
+        "
+      >
+        <span>{"Scroll to the future"}</span>
+        <Image
+          src="/images/arrowFuture.svg"
+          alt="arrow"
+          width={23}
+          height={24}
+          className="animate-bounce"
+        />
       </div>
     </div>
   );

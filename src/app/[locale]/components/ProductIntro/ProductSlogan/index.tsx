@@ -35,7 +35,7 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
   }, []);
 
   return (
-    <div className="overflow-hidden" ref={ref}>
+    <div className="overflow-hidden flex flex-col gap-3" ref={ref}>
       {modelAdvantages.map(({ title, description }, index) => (
         <div
           key={title}
@@ -67,7 +67,7 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
             <div className="leading-[130%] font-semibold [font-size:_clamp(16px,1.5vw,20px)]">
               {title}
             </div>
-            <div className="text-lg leading-[170%] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,16px)]">
+            <div className="text-lg leading-[120%] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,16px)]">
               {description}
             </div>
           </div>
