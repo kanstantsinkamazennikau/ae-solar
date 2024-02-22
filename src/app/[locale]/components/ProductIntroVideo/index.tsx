@@ -29,7 +29,6 @@ import { useCallback, useContext, useEffect, useRef, useState } from "react";
 export default function ProductIntroVideo() {
   const { model, setModel } = useContext(ModelContext);
   const { sticky, setSticky } = useContext(StickyNavigationContext);
-  const [observe, containerRef] = usePlayIntersection();
   const modelInfo = PRODUCT_INTRO_PANELS[model].info;
   const ref = useRef<HTMLDivElement | null>(null);
   const locale = useParams()?.locale;
@@ -75,7 +74,7 @@ export default function ProductIntroVideo() {
     if (sliderRef.current) {
       sliderRef.current.go(sliderId);
     }
-  }, [sliderId, observe]);
+  }, [sliderId]);
 
   return (
     <div className="flex flex-col items-center xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[80px] w-full z-30 relative">
@@ -145,7 +144,14 @@ export default function ProductIntroVideo() {
             href={`/products/${model}`}
           />
         </div>
-        <div ref={containerRef}>
+        <div
+          className="
+            2xl:h-[800px]
+            xl:h-[650px]
+            md:h-[500px]
+            h-[300px]
+          "
+        >
           <Splide
             hasTrack={false}
             aria-label="solar panels"
@@ -174,15 +180,15 @@ export default function ProductIntroVideo() {
                     height="800"
                     muted
                     autoPlay
-                    ref={observe}
+                    key={model}
                     className="
-                    w-[1320px]
-                    2xl:h-[800px]
-                    xl:h-[650px]
-                    md:h-[500px]
-                    h-[300px]
-                    object-cover
-                  "
+                      w-[1320px]
+                      2xl:h-[800px]
+                      xl:h-[650px]
+                      md:h-[500px]
+                      h-[300px]
+                      object-cover
+                    "
                   >
                     <source
                       src={`/videos/slider/${video}.mp4`}
