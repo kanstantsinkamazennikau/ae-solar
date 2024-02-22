@@ -12,6 +12,7 @@
     "@formatjs/intl-localematcher": "^0.5.2",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "@splidejs/splide-extension-video": "^0.8.0",
     "@types/nodemailer": "^6.4.14",
     "gsap": "^3.12.4",
     "html-react-parser": "^5.1.1",

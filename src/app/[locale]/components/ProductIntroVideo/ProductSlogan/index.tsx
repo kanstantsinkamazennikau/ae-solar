@@ -16,13 +16,18 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
 
   useEffect(() => {
     if (ref.current) {
-      const intersectionObserver = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          setIntersecting(true);
-        } else {
-          setIntersecting(false);
+      const intersectionObserver = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            setIntersecting(true);
+          } else {
+            setIntersecting(false);
+          }
         }
-      });
+        // {
+        //   threshold: 1,
+        // }
+      );
 
       intersectionObserver.observe(ref.current);
 
@@ -70,6 +75,7 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
             <div className="text-lg leading-[170%] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,16px)]">
               {description}
             </div>
+            {/* <div className="bg-white opacity-20 h-0.5 mt-3 md:hidden block" /> */}
           </div>
         </div>
       ))}
@@ -120,8 +126,8 @@ export default function ProductSlogan({ model }: ProductSloganProps) {
         className={`
           ${
             showDetails
-              ? "translate-x-0 "
-              : "max-[1200px]:translate-x-full md:translate-x-[calc(100%+20px)] min-[1200px]:translate-x-0 min-[1200px]:pointer-events-none"
+              ? "translate-x-0"
+              : "max-[1200px]:translate-x-full md:translate-x-[calc(100%+20px)] min-[1200px]:translate-x-0"
           }
           transition-all
           duration-300
@@ -159,7 +165,6 @@ export default function ProductSlogan({ model }: ProductSloganProps) {
           xl:-mt-6
           lg:-mt-11
           -mt-11
-          z-20
         `}
       >
         <div

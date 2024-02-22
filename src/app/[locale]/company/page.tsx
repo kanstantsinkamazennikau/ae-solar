@@ -3,6 +3,7 @@ import BornInGermany from "@/app/[locale]/company/components/BornInGermany";
 import HeroSection from "@/app/[locale]/company/components/HeroSection";
 import OurHistory from "@/app/[locale]/company/components/OurHistory";
 import PortfolioBackground from "@/app/[locale]/company/components/PortfolioBackground";
+import SequenceAnimation2 from "@/app/[locale]/company/components/SequenceAnimation2";
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
 import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
@@ -12,7 +13,7 @@ import JoinOurMission from "@/app/[locale]/solutions/components/JoinOurMission";
 export default function About() {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection />
       <BornInGermany />
       <AboutAwards />
       <PortfolioBackground />
@@ -27,16 +28,18 @@ export default function About() {
         "
       >
         <FeaturedProducts />
-      </div>
+      </div> */}
 
       {/* <BusinessMap /> */}
-      <OurHistory />
-      <GetInTouch />
+      {/* <OurHistory /> */}
+
+      {/* <GetInTouch />
       <div className="flex justify-center">
         <MainPageFAQ />
-      </div>
+      </div> */}
 
       {/* <SequenceAnimation /> */}
+      <SequenceAnimation2 />
     </>
   );
 }

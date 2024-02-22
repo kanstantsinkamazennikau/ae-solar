@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/app/[locale]/components/common/Button";
+import { usePlayIntersection } from "@/app/[locale]/hooks/usePlayIntersection";
 import {
   HEADER_CONFIGURE_YOUR_MODEL,
   TECH_INFO_EXPLORE,
@@ -10,15 +11,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function FeaturedProducts() {
+  const [observe, containerRef] = usePlayIntersection();
+
   return (
     <div
       className="
-        bg-[url('/images/featuredProducts.png')] 
         object-fill 
         w-full
         xl:h-[800px]
-        lg:h-[600px]
-        md:h-[400px]
+        lg:h-[700px]
+        md:h-[500px]
         bg-no-repeat 
         bg-contain 
         bg-center 
@@ -31,11 +33,30 @@ export default function FeaturedProducts() {
         md:[background-position-y:-35px]
         lg:[background-position-y:0px]
         [background-position-y:-13px]
-        h-[360px]
+        h-[400px]
       "
+      ref={containerRef}
     >
+      <video
+        autoPlay
+        muted
+        ref={observe}
+        className="
+          w-full
+          xl:h-[800px]
+          lg:h-[700px]
+          md:h-[500px]
+          h-[400px]
+          md:object-cover
+          absolute
+          md:bottom-[100px]
+          bottom-[120px]
+        "
+      >
+        <source src="/videos/productRange.mp4" type="video/mp4" />
+      </video>
       <div className="flex flex-col items-center lg:gap-[68px] md:gap-[38px] gap-8 w-full">
-        <div className="text-center font-bold leading-[1.2] -tracking-[0.64] [font-size:_clamp(24px,4vw,64px)]">
+        <div className="text-center font-bold leading-[1.2] -tracking-[0.64] [font-size:_clamp(24px,4vw,64px)] z-10">
           <p>{TECH_INFO_INNOVATIVE}</p>
           <p className="text-dark-gray-900">{TECH_INFO_EXPLORE}</p>
         </div>
