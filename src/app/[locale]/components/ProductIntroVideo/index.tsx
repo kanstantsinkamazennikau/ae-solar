@@ -119,9 +119,9 @@ export default function ProductIntroVideo() {
             md:items-start
             md:justify-center
             items-center
-            pl-5
             relative
             z-10
+            mb-5
           "
         >
           <div className="flex gap-3 items-center">
@@ -156,7 +156,7 @@ export default function ProductIntroVideo() {
             hasTrack={false}
             aria-label="solar panels"
             options={options}
-            className="h-auto w-full max-w-[1360px] flex justify-center mx-auto flex-1 absolute bottom-0 z-10"
+            className="h-auto w-full flex justify-center mx-auto flex-1 absolute bottom-0 z-10"
             ref={sliderRef}
             onMove={(splide) => {
               setModel(PRODUCT_INTRO_PANELS_VIDEOS[splide.index] as Model);
@@ -164,14 +164,41 @@ export default function ProductIntroVideo() {
             extensions={{ Video }}
           >
             {/* CONTROL */}
+            {/* <div className="custom-wrapper"> */}
             <button
-              className="splide__toggle absolute top-10 z-20 "
-              type="button"
+              className="
+                splide__toggle
+                absolute
+                xl:top-10
+                md:top-5
+                -top-2
+                z-20
+                bg-black
+                py-2
+                px-3
+                rounded-full
+                border-2
+                border-solid
+                border-base-red
+              "
             >
-              <span className="splide__toggle__play">Play</span>
-              <span className="splide__toggle__pause">Pause</span>
+              <span className="splide__toggle__play flex items-center gap-[2px]">
+                <Image
+                  src={`/images/play.svg`}
+                  alt="play"
+                  priority
+                  width={20}
+                  height={20}
+                  className="inline"
+                />
+                Play Slider
+              </span>
+              <span className="splide__toggle__pause">Pause Slider</span>
             </button>
-
+            {/* </button> */}
+            {/* <div className="splide__progress">
+                <div className="splide__progress__bar" />
+              </div> */}
             <SplideTrack>
               {PRODUCT_INTRO_PANELS_VIDEOS.map((video) => (
                 <SplideSlide key={video} className="flex justify-center">
@@ -182,7 +209,7 @@ export default function ProductIntroVideo() {
                     autoPlay
                     key={model}
                     className="
-                      w-[1320px]
+                      w-[1920px]
                       2xl:h-[800px]
                       xl:h-[650px]
                       md:h-[500px]
@@ -198,6 +225,7 @@ export default function ProductIntroVideo() {
                 </SplideSlide>
               ))}
             </SplideTrack>
+            {/* </div> */}
           </Splide>
         </div>
 

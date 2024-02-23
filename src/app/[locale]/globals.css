@@ -85,6 +85,23 @@
   border-radius: 3px;
 }
 
+.bensPopUp::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 3px;
+}
+
+/* Track */
+.bensPopUp::-webkit-scrollbar-track {
+  background: #c7c7c7;
+  border-radius: 3px;
+}
+
+/* Handle */
+.bensPopUp::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

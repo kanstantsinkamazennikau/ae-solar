@@ -29,15 +29,24 @@ export default function Bens() {
           md:[&>*:nth-child(5)]:col-end-auto
         "
       >
-        {TECH_INFO_BENS.map(({ title, description, image }, index) => {
-          const isFullHeightRow = index === 1;
-          return (
-            <Ben
-              key={title}
-              {...{ title, description, image, isFullHeightRow }}
-            />
-          );
-        })}
+        {TECH_INFO_BENS.map(
+          ({ title, description, image, link, fullDescription }, index) => {
+            const isFullHeightRow = index === 1;
+            return (
+              <Ben
+                key={title}
+                {...{
+                  title,
+                  description,
+                  image,
+                  isFullHeightRow,
+                  link,
+                  fullDescription,
+                }}
+              />
+            );
+          }
+        )}
       </div>
     </>
   );

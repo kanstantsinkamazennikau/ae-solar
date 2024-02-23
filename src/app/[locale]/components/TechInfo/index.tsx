@@ -47,7 +47,7 @@ export default function TechDescription() {
           "
         />
       </div>
-      <BasicWidthContainer styles="relative z-10">
+      <BasicWidthContainer styles="relative">
         <Bens />
         <Divider />
         {/* <Tech /> */}

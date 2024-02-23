@@ -130,7 +130,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
               onClick={addModelToBag}
               size="extrasmall"
               style="outline"
-              externalStyle="md:!bg-transparent !bg-base-red"
+              externalStyle="md:!bg-transparent !bg-base-red max-md:!py-2"
             >
               <div className="flex justify-center items-center gap-[6px] [font-size:_clamp(14px,1vw,14px)]">
                 <Image

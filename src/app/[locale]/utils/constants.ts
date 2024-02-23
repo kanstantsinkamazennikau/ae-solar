@@ -366,18 +366,25 @@ export const TECH_INFO_PANELS_DETAILS = [
 export const TECH_INFO_PANELS = ["structure.png", "frame.png", "panel.png"];
 export const TECH_INFO_WHY_WE_ARE = "Why We are";
 export const TECH_INFO_BEST_AT_THIS = "Best at This";
+export const TECH_INFO_CLOSE = "Close";
 export const TECH_INFO_BENS = [
   {
     title: `Unmatched Precision in Solar Engineering`,
     description:
       "AESOLAR stands as a paragon of German precision, leading the charge in the solar module manufacturing sector. Our Tier 1 status is a testament to our relentless pursuit of innovation and excellence.",
     image: "automation.svg",
+    fullDescription: `On February 19, 2024, Bloomberg New Energy Finance (BNEF) released the 1Q 2024 Global PV Market Outlook. AESOLAR has once again secured its position in the tier 1 list of PV module manufacturers, marking the 13th consecutive time since Q1 2021. As a leading solar brand, this recognition underscores AESOLAR's consistent quality, brand credibility, and strong bankability.
+    BNEF's methodology for tier 1 PV module manufacturers is stringent, requiring manufacturers to have received non-recourse finance from 6 different commercial banks over the past 2 years. This selection process demonstrates the bankability of the chosen brands and provides a reliable reference for the market.
+    Notably, starting from the 2024 Q1, BNEF has raised the project threshold from the previous 1.5MW to 5MW. This change has led to a decrease in the number of companies included in the Tier 1 list compared to the previous quarter (45 companies in Q4 2023 to 26 companies in Q1 2024). Despite this change, AESOLAR maintains its position, showcasing the company's strength and outstanding credibility once again.
+    Commenting on this change, BNEF stated, 'This is due to the increasing size of the solar industry, where 5MW is no longer a particularly large project, and projects below 5MW are extremely difficult to crosscheck with independent data sources when claimed by module manufacturers. The change unsurprisingly reduces the number of companies on the tier 1 list, but total capacity is still 783GW/year, far more than global installation expected in2024.'
+    Furthermore, AESOLAR received a '*' in the list, indicating that their investigation report can be obtained from PV Evolution Labs (PVEL). The Aurora series PV module from AESOLAR has passed testing conducted by PVEL and was among the 'Best Performers' in 2023. This is a result of AESOLAR's continuous focus on research and development, technological innovation, and enhancement of production processes and quality management.`,
   },
   {
     title: "Crafting a Sustainable Tomorrow",
     description:
       "At AESOLAR, we merge advanced technology with unwavering quality and sustainability, forging ahead in our quest for excellence. We’re not just creating solar modules; we’re sculpting a greener future.",
-    image: "manufacturer.png",
+    image: "manufacturer1.png",
+    link: "company",
   },
   {
     title: "Quality Without Compromise",
@@ -398,7 +405,7 @@ export const TECH_INFO_BENS = [
     image: "materials.svg",
   },
 ];
-export const TECH_INFO_READ_MORE = "Read more";
+export const TECH_INFO_READ_MORE = "Read More";
 export const TECH_INFO_INNOVATIVE = "Innovative. Stylish. Essential:";
 export const TECH_INFO_EXPLORE = "Explore Our Product Range";
 

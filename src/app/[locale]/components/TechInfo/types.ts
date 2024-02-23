@@ -3,4 +3,6 @@ interface BenProps {
   description: string;
   image: string;
   isFullHeightRow: boolean;
+  link?: string;
+  fullDescription?: string;
 }
