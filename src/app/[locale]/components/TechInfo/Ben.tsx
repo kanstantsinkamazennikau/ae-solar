@@ -49,34 +49,35 @@ export default function Ben({
       <div
         key={title}
         className={`
-        flex
-        lg:p-8
-        min-[500px]:px-4
-        min-[500px]:py-8
-        py-6
-        px-6
-        items-start
-        self-stretch
-        relative
-        overflow-hidden
-        bg-[#131313]
-        rounded-[10px]
-        hover:shadow-bens
-        hover:outline-[3px]
-        hover:outline-base-red
-        outline-transparent
-        hover:outline
-        transition-all
-        duration-200
-        border
-        border-solid
-        cursor-pointer
-        border-[#191919]
-        ${
-          isFullHeightRow
-            ? "md:row-start-1 md:row-end-3 md:col-start-2 md:col-end-3 min-[500px]:min-h-full min-h-[328px]"
-            : "h-full xl:min-h-[340px]"
-        }`}
+          flex
+          lg:p-8
+          min-[500px]:px-4
+          min-[500px]:py-8
+          py-6
+          px-6
+          items-start
+          self-stretch
+          relative
+          overflow-hidden
+          bg-[#131313]
+          rounded-[10px]
+          hover:shadow-bens
+          hover:outline-[3px]
+          hover:outline-base-red
+          outline-transparent
+          hover:outline
+          transition-all
+          duration-200
+          border
+          border-solid
+          cursor-pointer
+          border-[#191919]
+          ${
+            isFullHeightRow
+              ? "md:row-start-1 md:row-end-3 md:col-start-2 md:col-end-3 min-[500px]:min-h-full min-h-[328px]"
+              : "h-full xl:min-h-[340px]"
+          }
+        `}
         onMouseLeave={() => setIsReadMoreVisible(false)}
         onMouseEnter={() => setIsReadMoreVisible(true)}
       >
@@ -95,7 +96,7 @@ export default function Ben({
         />
         {isFullHeightRow && (
           <Image
-            src={`/images/techInfo/manufacturer1.png`}
+            src={`/images/techInfo/manufacturerSmall.png`}
             alt={image}
             width={328}
             height={300}
@@ -130,10 +131,10 @@ export default function Ben({
           `}
         >
           <div
-            className={`leading-[120%] font-medium [font-size:_clamp(14px,2.5vw,32px)] ${
+            className={`leading-[120%] font-medium ${
               isFullHeightRow
-                ? "[word-spacing:normal]"
-                : "min-[500px]:[word-spacing:normal]"
+                ? "[word-spacing:normal] [font-size:_clamp(26px,2.5vw,48px)]"
+                : "min-[500px]:[word-spacing:normal] [font-size:_clamp(14px,2.5vw,32px)]"
             }`}
           >
             {title}
@@ -144,7 +145,7 @@ export default function Ben({
             leading-[150%]
             font-medium
             font-walsheim
-            text-dark-gray-900
+            ${isFullHeightRow ? "text-white" : "text-dark-gray-900"}
             [font-size:_clamp(12px,1.5vw,16px)]
             ${isFullHeightRow ? "block" : "min-[500px]:block hidden"}
 

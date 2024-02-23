@@ -65,16 +65,18 @@ export default function Cooperation() {
                     flex
                     flex-col
                     items-start
-                    xl:gap-10
+                    xl:gap-8
                     gap-6
                   "
                 >
                   <div className="flex gap-6 items-start [font-size:_clamp(30px,3.5vw,64px)] leading-[100%] ">
-                    <span className="text-[#505050]">
+                    {/* <span className="text-[#505050]">
                       {String(index + 1).padStart(2, "0")}
-                    </span>
+                    </span> */}
                     <span className="font-semibold -tracking-[1.08px]">
-                      {clientType}
+                      {clientType.split(/\r?\n|\r|\n/g).map((string, index) => (
+                        <div key={string}>{string}</div>
+                      ))}
                     </span>
                   </div>
                   <p

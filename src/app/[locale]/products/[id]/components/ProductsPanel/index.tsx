@@ -13,12 +13,17 @@ const VideoPlayer = dynamic(() => import("./Video"), {
 
 export default function ProductsPanel({ id }: ProductsPanelProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoEnded, setVideoEnded] = useState(false);
   const [startTextTransition, setStartTextTransition] = useState(false);
   const onLoaded = () => {
     setVideoLoaded(true);
     setTimeout(() => {
       setStartTextTransition(true);
     }, 1200);
+  };
+
+  const onEnded = () => {
+    setVideoEnded(true);
   };
 
   return (
@@ -46,7 +51,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
         className="object-cover h-[780px] w-full relative -top-[64px] "
       /> */}
       {!videoLoaded && (
-        <div className="absolute z-50 -mt-[64px]">
+        <div className="absolute z-50 -mt-[136px]">
           <Loader />
         </div>
       )}
@@ -61,7 +66,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           h-[630px]
         "
       >
-        <VideoPlayer onLoaded={onLoaded} videoLoaded={videoLoaded} />
+        <VideoPlayer onLoaded={onLoaded} onEnded={onEnded} />
       </div>
 
       {/* BACKGROUND IMAGE */}
@@ -118,8 +123,8 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           transition-all
           duration-[1.5s]
           ease-out
-          
-          ${!startTextTransition ? "opacity-0 !bottom-[0%]" : "opacity-100"}
+          ease-[cubic-bezier(0.87, 0, 0.13, 1)]
+          ${!startTextTransition ? "opacity-0 md:!bottom-[0%]" : "opacity-100"}
         `}
       >
         <Image
@@ -178,9 +183,10 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           text-centerfade 
           font-semibold
           [font-size:_clamp(14px,1.5vw,20px)]
+          delay-500
           duration-[1.5s]
           ease-out
-          ${!startTextTransition ? "opacity-0 !bottom-[0%]" : "opacity-100"}
+          ${!videoEnded ? "opacity-0 !bottom-[0%]" : "opacity-100"}
           z-10
         `}
       >

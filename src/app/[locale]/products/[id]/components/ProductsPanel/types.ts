@@ -6,5 +6,5 @@ export interface ProductsPanelProps {
 
 export interface VideoProps {
   onLoaded: () => void;
-  videoLoaded: boolean;
+  onEnded: () => void;
 }

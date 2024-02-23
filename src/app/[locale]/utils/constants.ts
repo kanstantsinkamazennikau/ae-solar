@@ -383,7 +383,7 @@ export const TECH_INFO_BENS = [
     title: "Crafting a Sustainable Tomorrow",
     description:
       "At AESOLAR, we merge advanced technology with unwavering quality and sustainability, forging ahead in our quest for excellence. We’re not just creating solar modules; we’re sculpting a greener future.",
-    image: "manufacturer1.png",
+    image: "manufacturer.png",
   },
   {
     title: "Quality Without Compromise",

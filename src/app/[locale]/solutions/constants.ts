@@ -11,28 +11,35 @@ export const SOLUTIONS_WE_ARE_OPEN = "We Are Open";
 export const SOLUTIONS_TO_COOPERATION = "To cooperation";
 export const SOLUTIONS_COOPERATION = [
   {
-    clientType: "Investors",
+    clientType: `Investor in
+    Our Company`,
     picture: "investors.png",
     description:
       "Be a part of our vision. Your investment in AESOLAR supports innovative solar technologies and contributes to a cleaner future. Discover our corporate strategy and how you can benefit.",
     links: [{ title: "Invest in AESOLAR", link: "/consult?type=investor" }],
   },
   {
-    clientType: "Partners",
-    picture: "partners.png",
+    clientType: `Investor in
+    Solar Parks`,
+    picture: "investorsPark.png",
     description:
-      "Be a part of our vision. Your investment in AESOLAR supports innovative solar technologies and contributes to a cleaner future. Discover our corporate strategy and how you can benefit.",
-    links: [{ title: "Invest in AESOLAR", link: "/consult?type=partner" }],
+      "Invest in the future with us. Our solar parks symbolize sustainability and profitability. Learn more about our projects and how your investment contributes to environmental protection.",
+    links: [{ title: "Invest in AESOLAR", link: "/consult?type=investor" }],
   },
   {
     clientType: "Installers",
     picture: "installers.png",
     description:
       "Expand your portfolio with AESOLAR. Our high-quality solar modules, shaped by German engineering, offer diversity and top-tier quality. Join our network and rely on innovative solar technology.",
-    links: [
-      { title: "Products", link: "/products" },
-      { title: "Documentations", link: "/documents" },
-    ],
+    links: [{ title: "Discover Our Products", link: "/products" }],
+  },
+  {
+    clientType: `End Consumer
+    and Home Owner`,
+    picture: "consumer.png",
+    description:
+      "Learn how AESOLAR can empower your independence. Our solar modules offer an efficient, eco-friendly energy solution for your home. Discover our products and start your sustainable journey.",
+    links: [{ title: "Discover Our Products", link: "/products" }],
   },
 ];
 export const SOLUTIONS_EXPLORE_OUR = "Explore Our";
