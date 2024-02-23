@@ -1,6 +1,5 @@
 "use client";
 
-import Video from "@/app/[locale]/products/[id]/components/ProductsPanel/Video";
 import { ProductsPanelProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
 import { PRODUCT_PANEL_TITLES } from "@/app/[locale]/products/[id]/constants";
 import Image from "next/image";
@@ -13,6 +12,13 @@ const VideoPlayer = dynamic(() => import("./Video"), {
 
 export default function ProductsPanel({ id }: ProductsPanelProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [startTextTransition, setStartTextTransition] = useState(false);
+  const onLoaded = () => {
+    setVideoLoaded(true);
+    setTimeout(() => {
+      setStartTextTransition(true);
+    }, 2000);
+  };
 
   return (
     <div
@@ -49,7 +55,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           h-[630px]
         "
       >
-        <VideoPlayer />
+        <VideoPlayer onLoaded={onLoaded} videoLoaded={videoLoaded} />
       </div>
 
       {/* BACKGROUND IMAGE */}
@@ -80,7 +86,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
       {/* <div className="fade-strip-bottom !z-0 !h-[112px] !from-[#0000006e] !bottom-[0] rotate-180"></div> */}
       {/* PANEL DESCRIPTION */}
       <div
-        className="
+        className={`
           xl:pt-10
           xl:pb-[60px]
           xl:px-[60px]
@@ -103,7 +109,10 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           md:w-fit
           max-[460px]:w-full
           max-md:top-[160px]
-        "
+          transition-all
+          duration-1000
+          ${!startTextTransition ? "opacity-0 !bottom-[0%]" : "opacity-100"}
+        `}
       >
         <Image
           src="/images/awards/dividerSmall.svg"
@@ -145,7 +154,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
         </div>
       </div>
       <div
-        className="
+        className={`
           flex
           items-center
           flex-col
@@ -154,7 +163,6 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           lg:bottom-[10%]
           min-[920px]:bottom-[13%]
           md:bottom-[18%]
-          
           min-[460px]:bottom-[14%]
           bottom-[21%]
           left-2/4
@@ -162,9 +170,10 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           text-centerfade 
           font-semibold
           [font-size:_clamp(14px,1.5vw,20px)]
-
+          duration-1000
+          ${!startTextTransition ? "opacity-0 !bottom-[0%]" : "opacity-100"}
           z-10
-        "
+        `}
       >
         <span>{"Scroll to the future"}</span>
         <Image

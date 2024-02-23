@@ -1,31 +1,19 @@
-export default function Video() {
+import Loader from "@/app/[locale]/components/common/Loader";
+import { VideoProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
+
+export default function Video({ onLoaded, videoLoaded }: VideoProps) {
   return (
-    <video
-      width="1920"
-      height="780"
-      autoPlay
-      muted
-      onPlay={(event) => {
-        console.log("play ✅");
-        // console.log(event);
-      }}
-      onPause={(event) => {
-        console.log("pause ✅✅");
-        // console.log(event);
-      }}
-      onEnded={(event) => {
-        console.log("ended ✅✅✅");
-        // console.log(event)
-      }}
-      onLoadedData={(event) => {
-        console.log("loadeddata 👻");
-        // scrollToBottom();
-      }}
-      onError={(event) => {
-        console.log("error ❌");
-        // console.log(event);
-      }}
-      className="
+    <>
+      {!videoLoaded && <Loader />}
+      <video
+        width="1920"
+        height="780"
+        autoPlay
+        muted
+        onLoadedData={() => {
+          onLoaded();
+        }}
+        className="
         z-10
         relative
         md:scale-100
@@ -39,8 +27,9 @@ export default function Video() {
         lg:h-[700px]
         h-[630px]
       "
-    >
-      <source src="/videos/products/AuroraHeader.mp4" type="video/mp4" />
-    </video>
+      >
+        <source src="/videos/products/AuroraHeader.mp4" type="video/mp4" />
+      </video>
+    </>
   );
 }
