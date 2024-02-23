@@ -12,11 +12,6 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
 export default async function Page({ params: { id } }: ProductPageProps) {
-  // const ProductsPanel = dynamic(() => import("./components/ProductsPanel"), {
-  //   ssr: false,
-  //   suspense: true,
-  // });
-
   return (
     <div className="flex flex-col items-center w-full overflow-hidden">
       <ProductsPanel id={id} />

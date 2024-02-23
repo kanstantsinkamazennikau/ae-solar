@@ -4,7 +4,6 @@ import { VideoProps } from "@/app/[locale]/products/[id]/components/ProductsPane
 export default function Video({ onLoaded, videoLoaded }: VideoProps) {
   return (
     <>
-      {!videoLoaded && <Loader />}
       <video
         width="1920"
         height="780"

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 import dynamic from "next/dynamic";
+import Loader from "@/app/[locale]/components/common/Loader";
 const VideoPlayer = dynamic(() => import("./Video"), {
   ssr: false,
 });
@@ -17,7 +18,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
     setVideoLoaded(true);
     setTimeout(() => {
       setStartTextTransition(true);
-    }, 2000);
+    }, 1200);
   };
 
   return (
@@ -44,6 +45,11 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
         quality={100}
         className="object-cover h-[780px] w-full relative -top-[64px] "
       /> */}
+      {!videoLoaded && (
+        <div className="absolute z-50 -mt-[64px]">
+          <Loader />
+        </div>
+      )}
       <div
         className="
           max-md:min-h-[630px]
@@ -110,7 +116,9 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           max-[460px]:w-full
           max-md:top-[160px]
           transition-all
-          duration-1000
+          duration-[1.5s]
+          ease-out
+          
           ${!startTextTransition ? "opacity-0 !bottom-[0%]" : "opacity-100"}
         `}
       >
@@ -170,7 +178,8 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           text-centerfade 
           font-semibold
           [font-size:_clamp(14px,1.5vw,20px)]
-          duration-1000
+          duration-[1.5s]
+          ease-out
           ${!startTextTransition ? "opacity-0 !bottom-[0%]" : "opacity-100"}
           z-10
         `}
