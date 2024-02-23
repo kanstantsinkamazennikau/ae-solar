@@ -4,6 +4,7 @@ import {
   BlogPostsListProps,
 } from "@/app/[locale]/company/blog/components/BlogPostsList/types";
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/blog/constants";
+import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
 import { MAIN_PAGE_NEWS_READ_ALL } from "@/app/[locale]/utils/constants";
@@ -53,13 +54,6 @@ export default async function RecentNews() {
   return (
     <div className="flex md:flex-row flex-col">
       <Image
-        src={`/images/news.png`}
-        alt="news"
-        width={426}
-        height={685}
-        className="min-[920px]:w-auto w-[300px] md:block hidden"
-      />
-      <Image
         src={`/images/newsMobile.png`}
         alt="news"
         width={426}
@@ -67,9 +61,17 @@ export default async function RecentNews() {
         quality={100}
         className="w-full h-[300px] md:hidden block min-[500px]:h-[350px] object-cover"
       />
+      <BasicWidthContainer styles="flex">
+        <Image
+          src={`/images/news.png`}
+          alt="news"
+          width={426}
+          height={685}
+          className="min-[920px]:w-auto w-[300px] md:block hidden"
+        />
 
-      <div
-        className="
+        <div
+          className="
           flex
           flex-col
           w-full
@@ -85,13 +87,13 @@ export default async function RecentNews() {
           -ml-5
           bg-[url('/images/getInTouchBackground.svg')]
         "
-      >
-        {blogPosts.map(
-          ({ slug, title, publishedAt, author, readingTime }, index) => {
-            return (
-              <article
-                key={slug}
-                className="
+        >
+          {blogPosts.map(
+            ({ slug, title, publishedAt, author, readingTime }, index) => {
+              return (
+                <article
+                  key={slug}
+                  className="
                   flex
                   md:pt-8
                   md:pb-8
@@ -107,9 +109,9 @@ export default async function RecentNews() {
                   flex-col
                   items-start
                 "
-              >
-                <div
-                  className="
+                >
+                  <div
+                    className="
                     flex
                     flex-col
                     text-[#505050]
@@ -124,65 +126,66 @@ export default async function RecentNews() {
                 
                     break-all
                   "
-                >
-                  {/* <div className="[font-size:_clamp(10px,1vw,16px)] font-extrabold">
+                  >
+                    {/* <div className="[font-size:_clamp(10px,1vw,16px)] font-extrabold">
                 {descr?.type}
                 </div> */}
-                  {/* MOBILE VERSION DATE */}
+                    {/* MOBILE VERSION DATE */}
 
-                  <div
-                    className={`
+                    <div
+                      className={`
                       flex
                       items-center
                       md:hidden
                     `}
-                  >
-                    <Image
-                      src={`/images/about/blog/calendar.svg`}
-                      alt="calendar"
-                      width={16}
-                      height={16}
-                      className="mr-1"
+                    >
+                      <Image
+                        src={`/images/about/blog/calendar.svg`}
+                        alt="calendar"
+                        width={16}
+                        height={16}
+                        className="mr-1"
+                      />
+                      <span className="[font-size:_clamp(10px,1vw,14px)] font-bold font-walsheim text-dark-gray-900 leading-[100%]">
+                        {blogPostFormatDate(publishedAt)}
+                      </span>
+                    </div>
+
+                    <div className="[font-size:_clamp(20px,2vw,32px)] font-normal -tracking-[1.6] min-[920px]:block hidden">
+                      {/* {descr?.typeNumber && `#${descr.typeNumber}`} */}#
+                      {String(blogPostsAmount - index).padStart(3, "0")}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                    <Link href={`blog/${slug}`}>
+                      <h2 className="[font-size:_clamp(16px,1.5vw,24px)] font-bold -tracking-[0.24] hover:text-base-red">
+                        {title.slice(0, 1).toUpperCase() +
+                          title.slice(1).toLowerCase()}
+                      </h2>
+                    </Link>
+                    <BlogPostStats
+                      statistics={{
+                        publishedAt: blogPostFormatDate(publishedAt),
+                        author: author.name,
+                        readingTime,
+                      }}
+                      dividerColor="gray"
                     />
-                    <span className="[font-size:_clamp(10px,1vw,14px)] font-bold font-walsheim text-dark-gray-900 leading-[100%]">
-                      {blogPostFormatDate(publishedAt)}
-                    </span>
                   </div>
-
-                  <div className="[font-size:_clamp(20px,2vw,32px)] font-normal -tracking-[1.6] min-[920px]:block hidden">
-                    {/* {descr?.typeNumber && `#${descr.typeNumber}`} */}#
-                    {String(blogPostsAmount - index).padStart(3, "0")}
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-4">
-                  <Link href={`blog/${slug}`}>
-                    <h2 className="[font-size:_clamp(16px,1.5vw,24px)] font-bold -tracking-[0.24] hover:text-base-red">
-                      {title.slice(0, 1).toUpperCase() +
-                        title.slice(1).toLowerCase()}
-                    </h2>
-                  </Link>
-                  <BlogPostStats
-                    statistics={{
-                      publishedAt: blogPostFormatDate(publishedAt),
-                      author: author.name,
-                      readingTime,
-                    }}
-                    dividerColor="gray"
-                  />
-                </div>
-              </article>
-            );
-          }
-        )}
-        <Link href="company/blog" className="mt-10 mx-auto">
-          <Button style="outline" showArrow>
-            <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">
-              {MAIN_PAGE_NEWS_READ_ALL}
-            </span>
-          </Button>
-        </Link>
-      </div>
+                </article>
+              );
+            }
+          )}
+          <Link href="company/blog" className="mt-10 mx-auto">
+            <Button style="outline" showArrow>
+              <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">
+                {MAIN_PAGE_NEWS_READ_ALL}
+              </span>
+            </Button>
+          </Link>
+        </div>
+      </BasicWidthContainer>
     </div>
   );
 }

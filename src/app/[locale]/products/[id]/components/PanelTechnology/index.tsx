@@ -7,6 +7,7 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
     <div
       className="
         relative
+        min-[2560px]:-mb-[0%]
         2xl:-translate-y-[11%]
         2xl:xl:-mb-[11%]
         xl:-translate-y-[15%]
@@ -22,7 +23,10 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
         -mb-[40%]
         overflow-hidden
         w-full
+        h-full
         z-10
+        min-[1340px]:min-h-[1320px]
+        min-[540px]:min-h-[100vw]
       "
     >
       <Image

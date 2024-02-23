@@ -80,10 +80,7 @@ export default function Models({
           );
 
           return isLink ? (
-            <Link
-              href={`/${locale}/products/${modelName.toLowerCase()}`}
-              key={panel}
-            >
+            <Link href={`/${locale}/products/${modelName}`} key={panel}>
               <span className="[font-size:_clamp(12px,1vw,16px)]">
                 {component}
               </span>

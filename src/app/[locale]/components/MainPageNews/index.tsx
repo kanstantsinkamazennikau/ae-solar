@@ -27,8 +27,8 @@ export default function MainPageNews() {
           tierTwoHeading={MAIN_PAGE_COMPANY}
           align="left"
         />
-        <RecentNews />
       </BasicWidthContainer>
+      <RecentNews />
     </div>
   );
 }

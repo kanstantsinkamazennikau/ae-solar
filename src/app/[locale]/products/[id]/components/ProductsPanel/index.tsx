@@ -1,8 +1,19 @@
+"use client";
+
+import Video from "@/app/[locale]/products/[id]/components/ProductsPanel/Video";
 import { ProductsPanelProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
 import { PRODUCT_PANEL_TITLES } from "@/app/[locale]/products/[id]/constants";
 import Image from "next/image";
+import { useState } from "react";
+
+import dynamic from "next/dynamic";
+const VideoPlayer = dynamic(() => import("./Video"), {
+  ssr: false,
+});
 
 export default function ProductsPanel({ id }: ProductsPanelProps) {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   return (
     <div
       className="
@@ -27,17 +38,19 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
         quality={100}
         className="object-cover h-[780px] w-full relative -top-[64px] "
       /> */}
-      <video
-        width="1920"
-        height="780"
-        autoPlay
-        muted
+      <div
         className="
-        z-10 relative md:scale-100 min-[540px]:scale-[1.25] scale-[1.5] max-md:min-h-[630px] min-h-[700px] max-h-[1000px] 
+          max-md:min-h-[630px]
+          min-h-[700px]
+          2xl:h-[1000px]
+          min-[1360px]:h-[900px]
+          xl:h-[850px]
+          lg:h-[700px]
+          h-[630px]
         "
       >
-        <source src="/videos/products/AuroraHeader.mp4" type="video/mp4" />
-      </video>
+        <VideoPlayer />
+      </div>
 
       {/* BACKGROUND IMAGE */}
 
@@ -68,29 +81,29 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
       {/* PANEL DESCRIPTION */}
       <div
         className="
-            xl:pt-10
-            xl:pb-[60px]
-            xl:px-[60px]
-            md:pt-[30px]
-            md:pb-[45px]
-            md:px-[45px]
-            pt-[10px]
-            pb-[20px]
-            px-[10px]
-            inline-flex
-            flex-col
-            items-center         
-            absolute
-            max-w-[770px]
-            min-[920px]:bottom-[20%]
-            bottom-[30%]
-            left-[50%]
-            -translate-x-1/2
-            z-10
-            md:w-fit
-            max-[460px]:w-full
-            max-md:top-[160px]
-          "
+          xl:pt-10
+          xl:pb-[60px]
+          xl:px-[60px]
+          md:pt-[30px]
+          md:pb-[45px]
+          md:px-[45px]
+          pt-[10px]
+          pb-[20px]
+          px-[10px]
+          inline-flex
+          flex-col
+          items-center         
+          absolute
+          max-w-[770px]
+          min-[920px]:bottom-[20%]
+          bottom-[30%]
+          left-[50%]
+          -translate-x-1/2
+          z-10
+          md:w-fit
+          max-[460px]:w-full
+          max-md:top-[160px]
+        "
       >
         <Image
           src="/images/awards/dividerSmall.svg"
@@ -117,12 +130,12 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           />
           <div
             className="
-                [font-size:_clamp(60px,8.5vw,170px)]
-                drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
-                font-bold
-                leading-[100%]
-                -tracking-[5.1px]
-              "
+              [font-size:_clamp(60px,8.5vw,170px)]
+              drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
+              font-bold
+              leading-[100%]
+              -tracking-[5.1px]
+            "
           >
             {id}
           </div>

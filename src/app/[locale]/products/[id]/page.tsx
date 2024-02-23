@@ -1,5 +1,6 @@
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
+import Loader from "@/app/[locale]/components/common/Loader";
 import Benefits from "@/app/[locale]/products/[id]/components/Benefits";
 import Conclusion from "@/app/[locale]/products/[id]/components/Conclusion";
 import Customization from "@/app/[locale]/products/[id]/components/Customization";
@@ -7,8 +8,15 @@ import Introduction from "@/app/[locale]/products/[id]/components/Introduction";
 import PanelTechnology from "@/app/[locale]/products/[id]/components/PanelTechnology";
 import ProductsPanel from "@/app/[locale]/products/[id]/components/ProductsPanel";
 import { ProductPageProps } from "@/app/[locale]/products/[id]/types";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
 
 export default async function Page({ params: { id } }: ProductPageProps) {
+  // const ProductsPanel = dynamic(() => import("./components/ProductsPanel"), {
+  //   ssr: false,
+  //   suspense: true,
+  // });
+
   return (
     <div className="flex flex-col items-center w-full overflow-hidden">
       <ProductsPanel id={id} />
