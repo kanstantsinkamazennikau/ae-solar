@@ -1,5 +1,7 @@
 "use client";
 
+import BensPopUp from "@/app/[locale]/components/TechInfo/BensPopUp";
+import { BenProps } from "@/app/[locale]/components/TechInfo/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
@@ -15,7 +17,6 @@ export default function Ben({
   description,
   image,
   isFullHeightRow,
-  link,
   fullDescription,
 }: BenProps) {
   const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
@@ -39,77 +40,11 @@ export default function Ben({
   return (
     <>
       {isShowPopUp && (
-        <div className="fixed justify-center z-[40] flex w-full top-0 left-0 h-full items-center">
-          <div
-            className="bg-[#000000bf] backdrop-blur-md absolute w-full h-full"
-            onClick={hidePopUp}
-          />
-          <BasicWidthContainer styles="">
-            <div
-              className="
-                justify-center
-                bg-[#131313]
-                flex
-                flex-col
-                w-full
-                mx-auto
-                max-w-[1320px]
-                h-[700px]
-                rounded-xl
-                border
-                border-solid
-                border-[#191919]
-                relative
-              "
-            >
-              <Image
-                src={`/images/techInfo/popUpHeader.png`}
-                alt={image}
-                width={1320}
-                height={300}
-                priority
-                className="min-h-[160px] rounded-xl"
-              />
-              <div className="absolute top-[30px] right-[30px]">
-                <Button externalStyle="!py-2 !px-3" onClick={hidePopUp}>
-                  <div className="flex justify-center items-center gap-1">
-                    {TECH_INFO_CLOSE}
-                    <Image
-                      src={`/images/close.svg`}
-                      alt="close"
-                      priority
-                      width={20}
-                      height={20}
-                    />
-                  </div>
-                </Button>
-              </div>
-
-              <div className="w-full md:p-8 p-4 overflow-y-scroll bensPopUp relative overflow-x-hidden">
-                <Image
-                  src={`/images/techInfo/fadeBackground.svg`}
-                  alt={image}
-                  width={408}
-                  height={408}
-                  priority
-                  className={`-top-32 -right-1/4 w-full h-full absolute`}
-                />
-                <div className="leading-[110%] font-semibold [font-size:_clamp(24px,3vw,48px)] mt-5 mb-6">
-                  {title}
-                </div>
-
-                {fullDescription?.split(/\r?\n|\r|\n/g).map((string) => (
-                  <p
-                    key={string}
-                    className="mb-6 last:mb-0 [font-size:_clamp(14px,1.5vw,20px)] font-walsheim"
-                  >
-                    {string}
-                  </p>
-                ))}
-              </div>
-            </div>
-          </BasicWidthContainer>
-        </div>
+        <BensPopUp
+          onClose={hidePopUp}
+          title={title}
+          fullDescription={fullDescription}
+        />
       )}
       <div
         key={title}
@@ -239,10 +174,10 @@ export default function Ben({
                   {TECH_INFO_READ_MORE}
                 </div>
                 <Image
-                  src="/images/redArrowRight.svg"
+                  src="/images/techInfo/expand.svg"
                   alt="arrow"
-                  width={8}
-                  height={8}
+                  width={20}
+                  height={20}
                   priority
                 />
               </Button>

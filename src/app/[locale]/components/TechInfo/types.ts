@@ -1,8 +1,13 @@
-interface BenProps {
+export interface BenProps {
   title: string;
   description: string;
   image: string;
   isFullHeightRow: boolean;
-  link?: string;
   fullDescription?: string;
+}
+
+export interface BensPopUpProps {
+  title: string;
+  fullDescription?: string;
+  onClose: () => void;
 }

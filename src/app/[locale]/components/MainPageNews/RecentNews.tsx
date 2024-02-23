@@ -51,14 +51,23 @@ export default async function RecentNews() {
   const blogPostsAmount = await getBlogPostsAmount();
 
   return (
-    <div className="flex">
+    <div className="flex md:flex-row flex-col">
       <Image
         src={`/images/news.png`}
         alt="news"
         width={426}
         height={685}
-        className="min-[920px]:w-auto w-[300px]"
+        className="min-[920px]:w-auto w-[300px] md:block hidden"
       />
+      <Image
+        src={`/images/newsMobile.png`}
+        alt="news"
+        width={426}
+        height={685}
+        quality={100}
+        className="w-full h-[300px] md:hidden block min-[500px]:h-[350px] object-cover"
+      />
+
       <div
         className="
           flex

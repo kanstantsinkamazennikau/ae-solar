@@ -30,7 +30,7 @@ export default function Bens() {
         "
       >
         {TECH_INFO_BENS.map(
-          ({ title, description, image, link, fullDescription }, index) => {
+          ({ title, description, image, fullDescription }, index) => {
             const isFullHeightRow = index === 1;
             return (
               <Ben
@@ -40,7 +40,6 @@ export default function Bens() {
                   description,
                   image,
                   isFullHeightRow,
-                  link,
                   fullDescription,
                 }}
               />
