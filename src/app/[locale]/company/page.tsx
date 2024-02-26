@@ -41,9 +41,9 @@ export default function About() {
       <OurHistory />
 
       <GetInTouch />
-      {/*<div className="flex justify-center">
-        <MainPageFAQ />
-      </div> */}
+      {/* <div className="flex justify-center"> */}
+      <MainPageFAQ />
+      {/* </div> */}
 
       {/* <SequenceAnimation /> */}
       {/* <SequenceAnimation2 /> */}

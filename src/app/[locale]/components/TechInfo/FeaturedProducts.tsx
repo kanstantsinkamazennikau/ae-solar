@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export default function FeaturedProducts() {
+const Video = ({ videoLink }: { videoLink: string }) => {
   const ref = useRef(null);
   const [isPlayed, setIsPlayed] = useState(false);
 
@@ -39,6 +39,28 @@ export default function FeaturedProducts() {
   }, [isPlayed]);
 
   return (
+    <>
+      <video
+        muted
+        ref={ref}
+        className="
+          w-full
+          xl:h-[840px]
+          lg:h-[700px]
+          md:h-[500px]
+          md:object-cover
+          md:pb-0
+          pb-10
+        "
+      >
+        <source src={videoLink} type="video/mp4" />
+      </video>
+    </>
+  );
+};
+
+export default function FeaturedProducts() {
+  return (
     <div
       className="
         relative
@@ -48,23 +70,22 @@ export default function FeaturedProducts() {
         mb-[80px]
       "
     >
-      <video
-        muted
-        ref={ref}
+      {/* DESKTOP */}
+      <div
         className="
-          w-full
-          xl:h-[840px]
-          lg:h-[700px]
-          md:h-[500px]
-          h-[400px]
-          md:object-cover
-          md:pb-0
-          pb-10
+          md:block
+          hidden
         "
       >
-        <source src="/videos/productRange.mp4" type="video/mp4" />
-      </video>
-      <div className="flex flex-col items-center lg:gap-[68px] md:gap-[38px] gap-8 w-full absolute bottom-0">
+        <Video videoLink="/videos/productRange.mp4" />
+      </div>
+
+      {/* MOBILE */}
+      <div className="md:hidden">
+        <Video videoLink="/videos/productRangeMobile.mp4" />
+      </div>
+
+      <div className="flex flex-col items-center lg:gap-[68px] md:gap-[38px] gap-8 w-full md:absolute bottom-0 max-md:-mt-[70px]">
         <div className="text-center font-bold leading-[1.2] -tracking-[0.64] [font-size:_clamp(24px,4vw,64px)] z-10">
           <p>{TECH_INFO_INNOVATIVE}</p>
           <p className="text-dark-gray-900">{TECH_INFO_EXPLORE}</p>

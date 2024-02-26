@@ -1,10 +1,12 @@
+import { Model } from "@/app/[locale]/context/constructorContext";
 import { Dispatch, SetStateAction } from "react";
 
 export interface ProductsPanelProps {
-  id: "Aurora" | "Comet" | "Meteor" | "ShadeStar" | "Neptune" | "Terra";
+  id: Model;
 }
 
 export interface VideoProps {
   onLoaded: () => void;
   onEnded: () => void;
+  id: Model;
 }

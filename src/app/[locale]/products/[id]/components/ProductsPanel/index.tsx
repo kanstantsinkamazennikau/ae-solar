@@ -66,7 +66,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           h-[630px]
         "
       >
-        <VideoPlayer onLoaded={onLoaded} onEnded={onEnded} />
+        <VideoPlayer onLoaded={onLoaded} onEnded={onEnded} id={id} />
       </div>
 
       {/* BACKGROUND IMAGE */}

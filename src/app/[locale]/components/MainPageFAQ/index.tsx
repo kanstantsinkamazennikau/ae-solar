@@ -52,7 +52,7 @@ export function MainPageFAQ() {
           items-center
         "
       >
-        <div className="flex min-[920px]:flex-col flex-col-reverse sticky w-full min-w-[316px] top-[100px] max-w-[316px] gap-6">
+        <div className="flex min-[920px]:flex-col flex-col-reverse w-full min-w-[316px] top-[100px] max-w-[316px] gap-6">
           <DownloadPresentation link="/documents/presentation.pdf" />
           <div
             className="
