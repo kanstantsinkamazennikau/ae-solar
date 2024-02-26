@@ -7,7 +7,10 @@ import Accordion from "@/app/[locale]/components/common/Accordion";
 import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import LightBoxImage from "@/app/[locale]/components/common/LightBoxImage";
-import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import {
+  ConstructorContext,
+  Model,
+} from "@/app/[locale]/context/constructorContext";
 import {
   CONSTRUCTOR_MODELS_ADVANTAGES,
   CONSTRUCTOR_MODELS_SPECS,
@@ -28,7 +31,7 @@ export default function ModelSpecs() {
   const [open, setOpen] = useState(false);
   const modelSpecs = CONSTRUCTOR_MODELS_SPECS[constructorModel.model];
   const modelAdvantages = CONSTRUCTOR_MODELS_ADVANTAGES[
-    constructorModel.model
+    constructorModel.model as Model
   ] as GeneratedModelAdvantages;
   const modelSpecsKeys = Object.keys(modelSpecs) as ModelSpecsKeys[];
   const specKeyWithAccordionTitleMapping = {

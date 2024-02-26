@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Discover() {
   return (
-    <div className="-mt-[80px] overflow-hidden 2xl:-mb-[120px] xl:-mb-[60px] md:-mb-[20px] mb-[100px]">
+    <div className="-mt-[80px] overflow-hidden 2xl:-mb-[120px] xl:-mb-[60px] md:-mb-[20px] mb-[100px] flex justify-center">
       <Image
         src="/images/solutions/heroSectionBackground.svg"
         alt="heroSectionBackground"
@@ -34,6 +34,7 @@ export default function Discover() {
           md:items-end
           items-center
           justify-center
+          min-[2560px]:top-[10%]
           xl:top-[22%]
           lg:top-[15%]
           top-[10%]
