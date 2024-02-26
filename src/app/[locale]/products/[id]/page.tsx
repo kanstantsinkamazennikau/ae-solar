@@ -5,18 +5,18 @@ import Benefits from "@/app/[locale]/products/[id]/components/Benefits";
 import Conclusion from "@/app/[locale]/products/[id]/components/Conclusion";
 import Customization from "@/app/[locale]/products/[id]/components/Customization";
 import Introduction from "@/app/[locale]/products/[id]/components/Introduction";
+import VideoIntroduction from "@/app/[locale]/products/[id]/components/VideoIntroduction";
 import PanelTechnology from "@/app/[locale]/products/[id]/components/PanelTechnology";
 import ProductsPanel from "@/app/[locale]/products/[id]/components/ProductsPanel";
 import { ProductPageProps } from "@/app/[locale]/products/[id]/types";
-import dynamic from "next/dynamic";
-import { Suspense } from "react";
 
 export default async function Page({ params: { id } }: ProductPageProps) {
   return (
     <div className="flex flex-col items-center w-full overflow-hidden">
       <ProductsPanel id={id} />
       <PanelTechnology id={id} />
-      <Introduction id={id} />
+      {/* <Introduction id={id} /> */}
+      <VideoIntroduction id={id} />
       <Benefits id={id} />
       <Customization />
       <Conclusion id={id} />

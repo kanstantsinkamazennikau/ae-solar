@@ -189,11 +189,21 @@ export default function ProductIntroVideo() {
                   priority
                   width={20}
                   height={20}
-                  className="inline"
+                  className="inline relative -top-[1px]"
                 />
                 Play Slider
               </span>
-              <span className="splide__toggle__pause">Pause Slider</span>
+              <span className="splide__toggle__pause flex items-center gap-[2px]">
+                <Image
+                  src={`/images/pause.svg`}
+                  alt="play"
+                  priority
+                  width={20}
+                  height={20}
+                  className="inline relative -top-[1px]"
+                />
+                Pause Slider
+              </span>
             </button>
             {/* </button> */}
             {/* <div className="splide__progress">

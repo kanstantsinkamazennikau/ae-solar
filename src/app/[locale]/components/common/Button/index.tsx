@@ -51,7 +51,7 @@ export default function Button({
       onClick={onClick}
       className={`
         relative
-        disabled:opacity-70
+        disabled:bg-[#2D2D2D]
         disabled:cursor-not-allowed
         rounded-full
         hover:opacity-90
