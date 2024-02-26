@@ -1,6 +1,9 @@
 "use client";
 
-import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import {
+  ConstructorContext,
+  Model,
+} from "@/app/[locale]/context/constructorContext";
 import {
   CONSTRUCTOR_MODELS_SHORT_DETAILS,
   CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS,
@@ -17,7 +20,7 @@ export default function ShortDetails() {
   )[0];
 
   const seletedModelSpecs =
-    CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS[constructorModel.model];
+    CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS[constructorModel.model as Model];
   const selectedModelSpecsKeys = Object.keys(seletedModelSpecs);
 
   return (
