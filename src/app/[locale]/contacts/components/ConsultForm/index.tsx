@@ -41,7 +41,11 @@ export default function ConsultForm() {
       required: "Name is required",
     },
     capacity: {
-      required: "Budget is required",
+      required: "Capacity is required",
+      pattern: {
+        value: /^[0-9]+$/,
+        message: "Please enter a number",
+      },
     },
     email: {
       required: "Email is required",
