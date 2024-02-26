@@ -592,6 +592,11 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Module Specifation",
         values: ["Mono-Facial", "Bi-Facial"],
       },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet", "Double-Glass"],
+      },
       moduleColor: {
         type: "color",
         text: "Module Color",
@@ -600,11 +605,6 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           { color: "Black", icon: "black.svg" },
           { color: "White", icon: "white.svg" },
         ],
-      },
-      backCover: {
-        type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet", "Double-Glass"],
       },
       frameColor: {
         type: "color",
@@ -659,6 +659,11 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Module Specifation",
         values: ["Mono-Facial", "Bi-Facial"],
       },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet", "Double-Glass"],
+      },
       moduleColor: {
         type: "color",
         text: "Module Color",
@@ -666,11 +671,6 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           { color: "Black", icon: "black.svg" },
           { color: "White", icon: "white.svg" },
         ],
-      },
-      backCover: {
-        type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet", "Double-Glass"],
       },
       frameColor: {
         type: "color",
@@ -725,6 +725,11 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Module Specifation",
         values: ["Bi-Facial"],
       },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet", "Double-Glass"],
+      },
       moduleColor: {
         type: "color",
         text: "Module Color",
@@ -732,11 +737,6 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           { color: "Black", icon: "black.svg" },
           { color: "White", icon: "white.svg" },
         ],
-      },
-      backCover: {
-        type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet", "Double-Glass"],
       },
       frameColor: {
         type: "color",
@@ -791,15 +791,15 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Module Specifation",
         values: ["Bi-Facial"],
       },
-      moduleColor: {
-        type: "color",
-        text: "Module Color",
-        values: [{ color: "Transparent", icon: "transparent.svg" }],
-      },
       backCover: {
         type: "slider",
         text: "Back Cover",
         values: ["Glass", "Backsheet", "Double-Glass"],
+      },
+      moduleColor: {
+        type: "color",
+        text: "Module Color",
+        values: [{ color: "Transparent", icon: "transparent.svg" }],
       },
       frameColor: {
         type: "color",
@@ -854,6 +854,11 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Module Specifation",
         values: ["Mono-Facial"],
       },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet", "Double-Glass"],
+      },
       moduleColor: {
         type: "color",
         text: "Module Color",
@@ -861,11 +866,6 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           { color: "Black", icon: "black.svg" },
           { color: "White", icon: "white.svg" },
         ],
-      },
-      backCover: {
-        type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet", "Double-Glass"],
       },
       frameColor: {
         type: "color",
@@ -920,6 +920,11 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
         text: "Module Specifation",
         values: ["Mono-Facial", "Bi-Facial"],
       },
+      backCover: {
+        type: "slider",
+        text: "Back Cover",
+        values: ["Glass", "Backsheet"],
+      },
       moduleColor: {
         type: "color",
         text: "Module Color",
@@ -928,11 +933,6 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
           { color: "Black", icon: "black.svg" },
           { color: "White", icon: "white.svg" },
         ],
-      },
-      backCover: {
-        type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet"],
       },
       frameColor: {
         type: "color",

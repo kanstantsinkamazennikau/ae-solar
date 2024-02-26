@@ -31,7 +31,7 @@ export enum ModelsEnum {
 }
 
 export interface ConstructorModel {
-  model: Model;
+  model: Model | "";
   solarCellTechnology: string;
   moduleSpecification: string;
   moduleColor: string;
@@ -77,7 +77,7 @@ export default function ConstructorProvider({
   const [isBagLoading, setIsBagLoading] = useState<boolean>(true);
   const [isShowCheckoutForm, setIsShowCheckoutForm] = useState<boolean>(false);
   const [constructorModel, setConstructorModel] = useState<ConstructorModel>({
-    model: "Aurora",
+    model: "",
     solarCellTechnology: defaultModel.solarCellTechnology.values[0],
     moduleSpecification: defaultModel.moduleSpecification.values[0],
     moduleColor: defaultModel.moduleColor.values[0].color,
@@ -96,7 +96,8 @@ export default function ConstructorProvider({
 
   useEffect(() => {
     const selectedModelParams =
-      CONSTRUCTOR_MODELS_SPEC[constructorModel.model].params;
+      CONSTRUCTOR_MODELS_SPEC[constructorModel.model]?.params || "";
+    if (!selectedModelParams) return;
     setConstructorModel({
       model: constructorModel.model,
       solarCellTechnology: selectedModelParams.solarCellTechnology.values[0],
