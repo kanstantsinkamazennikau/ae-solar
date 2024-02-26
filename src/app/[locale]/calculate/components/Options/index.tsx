@@ -12,7 +12,7 @@ const ImagesWithAnimation = ({ image }: { image: string }) => {
   return (
     <Image
       src={`/images/calculate/${image}.png`}
-      alt={"Frame"}
+      alt={image}
       priority
       width={1920}
       height={1080}
