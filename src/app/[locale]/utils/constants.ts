@@ -22,6 +22,7 @@ export const FORMS_FIELDS = {
   phone: "phone",
   code: "code",
   budget: "budget",
+  capacity: "capacity",
   service: "service",
   interest: "interest",
   comment: "comment",
@@ -1897,9 +1898,10 @@ export const CONSULT_FORM_FIELDS: FormFileds[] = [
     type: "picker",
   },
   {
-    formTitle: "My budget",
-    name: "budget",
-    type: "picker",
+    formTitle: "Capacity",
+    placeholder: "kW",
+    name: "capacity",
+    type: "input",
   },
   {
     formTitle: "Please, contact me at",

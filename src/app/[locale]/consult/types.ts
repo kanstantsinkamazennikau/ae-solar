@@ -1,6 +1,6 @@
 export interface ConsultFormFileds {
   name: string;
-  budget: string;
+  capacity: string;
   email: string;
   phone: string;
   service: string;

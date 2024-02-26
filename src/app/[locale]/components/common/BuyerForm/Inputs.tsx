@@ -143,7 +143,6 @@ export default function BuyerForm({
                     inputsRules[inputField.name as keyof typeof inputsRules]
                   )}
                   error={errors?.[inputField.name]}
-                  showDot
                 />
               </div>
             );
@@ -223,7 +222,6 @@ export default function BuyerForm({
                   )}
                   setValue={setValue}
                   error={errors?.[inputField.name]}
-                  showDot
                   inputBorders={inputBorders}
                 />
               </div>

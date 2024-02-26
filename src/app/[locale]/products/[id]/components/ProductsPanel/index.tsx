@@ -184,7 +184,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           font-semibold
           [font-size:_clamp(14px,1.5vw,20px)]
           delay-500
-          duration-[1.5s]
+          duration-[0.5s]
           ease-out
           ${!videoEnded ? "opacity-0 !bottom-[0%]" : "opacity-100"}
           z-10

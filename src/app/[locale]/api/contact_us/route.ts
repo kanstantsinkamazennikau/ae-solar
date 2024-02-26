@@ -3,7 +3,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
-  const { name, interest, budget, email, phone, code, comment } =
+  const { name, interest, capacity, email, phone, code, comment } =
     await request.json();
 
   const mailOptions: Mail.Options = {
@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     <p><strong>Email: </strong> ${email}</p>
     <p><strong>Phone number: </strong> ${code + phone}</p>
     <p><strong>Interested in: </strong> ${interest}</p>
-    <p><strong>Budget: </strong> ${budget}</p>
+    <p><strong>Capacity: </strong> ${capacity}</p>
     <p><strong>Comment: </strong> ${comment}</p>`,
   };
 

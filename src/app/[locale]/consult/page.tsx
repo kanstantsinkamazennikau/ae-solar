@@ -39,8 +39,12 @@ export default function Consult() {
     name: {
       required: "Name is required",
     },
-    budget: {
-      required: "Budget is required",
+    capacity: {
+      required: "Capacity is required",
+      pattern: {
+        value: /^[0-9]+$/,
+        message: "Please enter a number",
+      },
     },
     email: {
       required: "Email is required",
@@ -66,7 +70,7 @@ export default function Consult() {
     [FORMS_FIELDS.interest]: type
       ? patnerTypeMapping[type as keyof typeof patnerTypeMapping]
       : PICKER_INPUT_VALUES[FORMS_FIELDS.interest][0],
-    [FORMS_FIELDS.budget]: PICKER_INPUT_VALUES[FORMS_FIELDS.budget][0],
+    [FORMS_FIELDS.capacity]: "",
     [FORMS_FIELDS.email]: "",
     [FORMS_FIELDS.phone]: "",
     [FORMS_FIELDS.code]: "+49",

@@ -19,7 +19,7 @@ export default function Input({
         {...register}
         {...props}
       />
-      {showDot && <p className="[font-size:_clamp(24px,2.25vw,40px)]">.</p>}
+      {showDot && <p>.</p>}
 
       {error && (
         <p className="text-xs text-base-red absolute bottom-0 translate-y-full">

@@ -14,7 +14,7 @@ export default function ProductsPage() {
       <SubNavigationProductPanels />
       <div className="overflow-hidden">
         <LightingTheWay />
-        <PanelsFlower />
+        {/* <PanelsFlower /> */}
         <Power />
         <div
           className="
