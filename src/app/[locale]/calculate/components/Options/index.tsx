@@ -11,13 +11,13 @@ const ImagesWithAnimation = ({ image }: { image: string }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
     <Image
-      src={`/images/constructor/${image}.png`}
+      src={`/images/calculate/${image}.png`}
       alt={"Frame"}
       priority
       width={1920}
       height={1080}
       quality={100}
-      // onLoadingComplete={() => setIsLoaded(true)}
+      onLoadingComplete={() => setIsLoaded(true)}
       className={`
         md:max-w-full
         min-[500px]:max-w-[400px]
@@ -28,7 +28,7 @@ const ImagesWithAnimation = ({ image }: { image: string }) => {
         absolute
         top-0
         transition-all
-       
+        ${isLoaded ? "animate-[fadeIn_0.5s_ease-in-out]" : "opacity-0"}
         animate-[fadeIn_0.5s_ease-in-out]
       `}
     />
@@ -41,9 +41,9 @@ export default function Options() {
   } = useContext(ConstructorContext);
 
   const moduleImages = [
-    `${model}-Frame-${frameColor}`,
-    `${model}-Backplate-${moduleColor}`,
-    `${model}-Front`,
+    `${model}Frame${frameColor}`,
+    `${model}Backplate${moduleColor}`,
+    `${model}Front`,
   ].filter((image) => !image.toLowerCase().includes("transparent"));
 
   return (
