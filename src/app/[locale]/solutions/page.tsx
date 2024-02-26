@@ -15,7 +15,6 @@ export default function SolutionsPage() {
       "
     >
       <Discover />
-      {/* <Cooperation /> */}
       <Cooperation />
       <GlobalImpact />
       <JoinOurMission />
