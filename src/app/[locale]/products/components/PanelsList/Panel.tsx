@@ -66,6 +66,7 @@ export default function Panel({ panel }: PanelProps) {
       <Image
         src={`/images/products/${panel}Background.png`}
         width={650}
+        priority
         height={340}
         alt={`${panel}Background`}
         className="rounded-xl"
@@ -73,6 +74,7 @@ export default function Panel({ panel }: PanelProps) {
       <Image
         src={`/images/productIntro/${panel}Module.png`}
         width={300}
+        priority
         height={300}
         alt={`${panel}Module`}
         className="rounded-xl absolute bottom-0 z-[11] -translate-x-1/2 left-1/2 md:h-[300px] h-[270px]"
