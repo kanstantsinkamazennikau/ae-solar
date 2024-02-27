@@ -31,7 +31,7 @@ export default function ModelsInCart() {
                     height={48}
                     className="md:h-12 md:w-12 h-[28px] w-[28px]"
                   />
-                  <div className="[font-size:_clamp(22px,2.5vw,40px)] leading-[120%] font-bold -tracking-[0.4px] ">
+                  <div className="[font-size:_clamp(22px,2.5vw,36px)] leading-[120%] font-bold -tracking-[0.4px] ">
                     {modelInBag.model}
                   </div>
                 </div>

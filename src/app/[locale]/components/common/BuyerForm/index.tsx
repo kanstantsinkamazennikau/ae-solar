@@ -104,15 +104,15 @@ export default function BuyerForm({
           width={1920}
           height={1080}
           className={`
-          object-fill
-          h-full
-          absolute
-          w-full
-          ${
-            isShowMessageAfterSubmit
-              ? `translate-y-[40px] lg:scale-100 min-[640px]:scale-[1.25] min-[500px]:scale-[1.5] scale-[1.95]`
-              : `translate-y-[80px] lg:scale-100 min-[640px]:scale-150 min-[500px]:scale-[2.25] scale-[2.75]`
-          }
+            object-fill
+            h-full
+            absolute
+            w-full
+            ${
+              isShowMessageAfterSubmit
+                ? `translate-y-[40px] lg:scale-100 min-[640px]:scale-[1.25] min-[500px]:scale-[1.5] scale-[1.95]`
+                : `translate-y-[80px] lg:scale-100 min-[640px]:scale-150 min-[500px]:scale-[2.25] scale-[2.75]`
+            }
           
         `}
         />

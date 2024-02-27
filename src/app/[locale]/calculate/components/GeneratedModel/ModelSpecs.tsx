@@ -132,7 +132,11 @@ export default function ModelSpecs() {
               if (specKey === "materialCharacteristics") {
                 const charactristicsKeys = Object.keys(modelSpecs[specKey]);
                 return (
-                  <AccordionItem key={specKey} title={styledTitle}>
+                  <AccordionItem
+                    key={specKey}
+                    title={styledTitle}
+                    dropdownIcon="/images/selectorWhite.svg"
+                  >
                     <div className="pb-8">
                       {charactristicsKeys.map((characteristicKey) => {
                         return (
@@ -158,7 +162,11 @@ export default function ModelSpecs() {
               }
               if (specKey === "packagingInformation") {
                 return (
-                  <AccordionItem key={specKey} title={styledTitle}>
+                  <AccordionItem
+                    key={specKey}
+                    title={styledTitle}
+                    dropdownIcon="/images/selectorWhite.svg"
+                  >
                     <div className="pb-8">
                       <div className="text-[#5A5A5A] [font-size:_clamp(12px,1.5vw,16px)] leading-[150%] font-normal min-w-[240px]">
                         {modelSpecs[specKey]}
@@ -169,7 +177,11 @@ export default function ModelSpecs() {
               }
               if (specKey === "certificates") {
                 return (
-                  <AccordionItem key={specKey} title={styledTitle}>
+                  <AccordionItem
+                    key={specKey}
+                    title={styledTitle}
+                    dropdownIcon="/images/selectorWhite.svg"
+                  >
                     <div className="pb-8">
                       <div className="text-[#5A5A5A] [font-size:_clamp(12px,1.5vw,16px)] leading-[150%] font-normal min-w-[240px]">
                         {modelSpecs[specKey].map(({ certificate, link }) => (
@@ -186,7 +198,11 @@ export default function ModelSpecs() {
               }
 
               return (
-                <AccordionItem key={specKey} title={styledTitle}>
+                <AccordionItem
+                  key={specKey}
+                  title={styledTitle}
+                  dropdownIcon="/images/selectorWhite.svg"
+                >
                   <div className="pb-8">
                     <Lightbox
                       open={open}

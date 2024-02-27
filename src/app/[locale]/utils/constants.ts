@@ -1878,6 +1878,12 @@ export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
     name: "phone",
     type: "phone",
   },
+  {
+    formTitle: "I have a",
+    placeholder: "comment or question, etc.",
+    name: "comment",
+    type: "input",
+  },
 ];
 export const CHECKOUT_SEND_REQUEST = "Send Request";
 

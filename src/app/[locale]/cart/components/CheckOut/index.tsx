@@ -1,14 +1,10 @@
 "use client";
 
-import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
   CART_BAG_IS_EMPTY,
-  CART_GET_A_QUOTE,
   CART_MODELS_ARE_READY,
-  CART_PLEASE_CHECKOUT,
 } from "@/app/[locale]/utils/constants";
-import Image from "next/image";
 import { useContext, useEffect } from "react";
 
 export default function CheckOut() {

@@ -97,7 +97,6 @@ export default function ConstructorProvider({
   useEffect(() => {
     const selectedModelParams =
       CONSTRUCTOR_MODELS_SPEC[constructorModel?.model]?.params;
-    console.log("constructorModel.model", constructorModel.model);
 
     if (!selectedModelParams) return;
     setConstructorModel({

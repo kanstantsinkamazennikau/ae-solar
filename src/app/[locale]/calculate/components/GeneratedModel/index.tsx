@@ -2,6 +2,7 @@
 
 import ModelSpecs from "@/app/[locale]/calculate/components/GeneratedModel/ModelSpecs";
 import ShortDetails from "@/app/[locale]/calculate/components/GeneratedModel/ShortDetails";
+import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
 import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
@@ -41,7 +42,7 @@ export default function GeneratedModel() {
 
   return (
     isGenerateModel && (
-      <div className="w-full flex flex-col items-center pb-20">
+      <div className="w-full flex flex-col items-center">
         <div
           id="model"
           className="
@@ -124,6 +125,9 @@ export default function GeneratedModel() {
           className="mt-8 mb-20"
         />
         <ModelSpecs />
+        <div className="mt-20">
+          <FeaturedProducts />
+        </div>
       </div>
     )
   );
