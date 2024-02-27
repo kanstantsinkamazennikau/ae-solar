@@ -10,6 +10,7 @@ import { useContext, useState } from "react";
 
 const ImagesWithAnimation = ({ image }: { image: string }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <>
       {!isLoaded && (
@@ -31,7 +32,7 @@ const ImagesWithAnimation = ({ image }: { image: string }) => {
         width={1920}
         height={1080}
         quality={100}
-        onLoad={() => setIsLoaded(true)}
+        onLoadingComplete={() => setIsLoaded(true)}
         onError={(event) =>
           ((event.target as HTMLImageElement).style.display = "none")
         }
