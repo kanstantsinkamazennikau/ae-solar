@@ -2,6 +2,7 @@
 
 import ChooseModel from "@/app/[locale]/calculate/components/ChooseModel";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import Loader from "@/app/[locale]/components/common/Loader";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { CONSTRUCTOR_OPTION_LINES } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
@@ -17,7 +18,10 @@ const ImagesWithAnimation = ({ image }: { image: string }) => {
       width={1920}
       height={1080}
       quality={100}
-      onLoadingComplete={() => setIsLoaded(true)}
+      onLoad={() => setIsLoaded(true)}
+      onError={(event) =>
+        ((event.target as HTMLImageElement).style.display = "none")
+      }
       className={`
         md:max-w-full
         min-[500px]:max-w-[400px]
@@ -40,11 +44,13 @@ export default function Options() {
     constructorModel: { model, moduleColor, frameColor },
   } = useContext(ConstructorContext);
 
+  const [isGeneralImageLoading, setIsGeneralImageLoading] = useState(true);
+
   const moduleImages = [
     `${model}Frame${frameColor}`,
-    `${model}Backplate${moduleColor}`,
+    `${model}Backsheet${moduleColor}`,
     `${model}Front`,
-  ].filter((image) => !image.toLowerCase().includes("transparent"));
+  ].filter((image) => !image.toLowerCase().includes("without"));
 
   return (
     <BasicWidthContainer>
@@ -92,8 +98,18 @@ export default function Options() {
                 w-auto h-auto
               `}
             >
-              {/* {!constructorModel.model && ( */}
               <>
+                {isGeneralImageLoading && (
+                  <div
+                    className=" 
+                      absolute
+                      left-1/2
+                      -translate-x-1/2
+                    "
+                  >
+                    <Loader />
+                  </div>
+                )}
                 <Image
                   src={`/images/featuredProductsConstructor.svg`}
                   alt={"featuredProducts"}
@@ -101,6 +117,7 @@ export default function Options() {
                   width={1920}
                   height={1080}
                   quality={100}
+                  onLoad={() => setIsGeneralImageLoading(false)}
                   className={`
                     md:max-w-full
                     min-[500px]:max-w-[400px]
@@ -110,12 +127,20 @@ export default function Options() {
                     min-[500px]:h-[27vh]
                     transition-all
                     duration-500
-                    ${!model ? "opacity-100" : "opacity-0"}
+                    ${
+                      !model && !isGeneralImageLoading
+                        ? "opacity-100"
+                        : "opacity-0"
+                    }
                   `}
                 />
                 <div
                   className={`absolute w-full top-0  transition-all
-                  duration-500 ${!model ? "opacity-100" : "opacity-0"}`}
+                  duration-500 ${
+                    !model && !isGeneralImageLoading
+                      ? "opacity-100"
+                      : "opacity-0"
+                  }`}
                 >
                   {CONSTRUCTOR_OPTION_LINES.map(({ panelName, position }) => (
                     <div

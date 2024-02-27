@@ -127,20 +127,6 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           ${!startTextTransition ? "opacity-0 md:!bottom-[0%]" : "opacity-100"}
         `}
       >
-        <Image
-          src="/images/awards/dividerSmall.svg"
-          alt="dividerSmall"
-          width={30}
-          height={30}
-          className="absolute top-0 left-0 lg:block hidden"
-        />
-        <Image
-          src="/images/awards/dividerSmall.svg"
-          alt="dividerSmall"
-          width={30}
-          height={30}
-          className="absolute bottom-0 right-0 rotate-180 lg:block hidden"
-        />
         <div className="flex flex-col items-center md:gap-3 gap-1 md:w-min w-full">
           <Image
             src={`/images/models/${id}.svg`}
