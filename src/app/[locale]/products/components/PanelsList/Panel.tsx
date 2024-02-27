@@ -14,6 +14,7 @@ const PanelVideo = dynamic(() => import("./PanelVideo"), {
 
 export default function Panel({ panel }: PanelProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const onLoaded = () => {
     setVideoLoaded(true);
@@ -54,7 +55,7 @@ export default function Panel({ panel }: PanelProps) {
           z-[12]
         "
       />
-      {
+      {imageLoaded && (
         <div
           className={`${
             videoLoaded
@@ -64,7 +65,7 @@ export default function Panel({ panel }: PanelProps) {
         >
           <PanelVideo panel={panel} onLoaded={onLoaded} />
         </div>
-      }
+      )}
 
       <Image
         src={`/images/products/${panel}Background.png`}
@@ -73,6 +74,9 @@ export default function Panel({ panel }: PanelProps) {
         height={340}
         alt={`${panel}Background`}
         className="rounded-xl"
+        onLoad={() => {
+          setImageLoaded(true);
+        }}
       />
       <Image
         src={`/images/productIntro/${panel}Module.png`}
