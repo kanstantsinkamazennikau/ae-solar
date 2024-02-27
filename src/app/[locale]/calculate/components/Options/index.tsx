@@ -11,18 +11,31 @@ import { useContext, useState } from "react";
 const ImagesWithAnimation = ({ image }: { image: string }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
-    <Image
-      src={`/images/calculate/${image}.png`}
-      alt={image}
-      priority
-      width={1920}
-      height={1080}
-      quality={100}
-      onLoad={() => setIsLoaded(true)}
-      onError={(event) =>
-        ((event.target as HTMLImageElement).style.display = "none")
-      }
-      className={`
+    <>
+      {!isLoaded && (
+        <div
+          className=" 
+            absolute
+            left-1/2
+            -translate-x-1/2
+            z-10
+          "
+        >
+          <Loader />
+        </div>
+      )}
+      <Image
+        src={`/images/calculate/${image}.png`}
+        alt={image}
+        priority
+        width={1920}
+        height={1080}
+        quality={100}
+        onLoad={() => setIsLoaded(true)}
+        onError={(event) =>
+          ((event.target as HTMLImageElement).style.display = "none")
+        }
+        className={`
         md:max-w-full
         min-[500px]:max-w-[400px]
         max-h-full
@@ -35,7 +48,8 @@ const ImagesWithAnimation = ({ image }: { image: string }) => {
         ${isLoaded ? "animate-[fadeIn_0.5s_ease-in-out]" : "opacity-0"}
         animate-[fadeIn_0.5s_ease-in-out]
       `}
-    />
+      />
+    </>
   );
 };
 

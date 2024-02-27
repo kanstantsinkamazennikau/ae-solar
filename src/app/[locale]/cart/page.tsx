@@ -9,16 +9,11 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Loader from "@/app/[locale]/components/common/Loader";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import Image from "next/image";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 
 export default function Cart() {
   const { isBagLoading, modelsInBag } = useContext(ConstructorContext);
-  const [showBuyerForm, setShowBuyerForm] = useState(!!modelsInBag.length);
-  console.log(showBuyerForm);
-
-  useEffect(() => {
-    // return () => setShowBuyerForm(false);
-  }, []);
+  const [showBuyerForm, _] = useState(!!modelsInBag.length);
 
   if (isBagLoading) return <Loader />;
 
