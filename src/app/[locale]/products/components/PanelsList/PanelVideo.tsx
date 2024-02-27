@@ -9,7 +9,7 @@ export default function PanelVideo({ onLoaded, panel }: PanelVideoProps) {
         autoPlay
         loop
         muted
-        onLoadedData={onLoaded}
+        onLoad={onLoaded}
         className="min-[1440px]:w-[650px] w-[548px]"
       >
         <source src={`/videos/products/${panel}Choose.mp4`} type="video/mp4" />
