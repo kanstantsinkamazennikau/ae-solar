@@ -27,7 +27,6 @@ export default function CheckoutForm() {
 
       setModelsInBag([]);
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify([]));
-      // toast.success("Thank You! We are Contact You Soon");
       if (!res.ok) throw new Error("Something went wrong");
     } catch (err) {
       throw err;
