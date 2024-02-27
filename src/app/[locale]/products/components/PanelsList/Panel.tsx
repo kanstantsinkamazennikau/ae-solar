@@ -54,14 +54,17 @@ export default function Panel({ panel }: PanelProps) {
           z-[12]
         "
       />
-      <div
-        className={`${
-          videoLoaded &&
-          "group-hover:z-[11] group-hover:block hidden z-0 absolute top-0 left-0 bottom-0 right-0"
-        }`}
-      >
-        <PanelVideo panel={panel} onLoaded={onLoaded} />
-      </div>
+      {
+        <div
+          className={`${
+            videoLoaded
+              ? "group-hover:z-[11] group-hover:block hidden z-0 absolute top-0 left-0 bottom-0 right-0"
+              : "opacity-0 absolute z-10"
+          }`}
+        >
+          <PanelVideo panel={panel} onLoaded={onLoaded} />
+        </div>
+      }
 
       <Image
         src={`/images/products/${panel}Background.png`}
