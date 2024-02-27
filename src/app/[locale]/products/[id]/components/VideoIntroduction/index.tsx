@@ -1,6 +1,6 @@
 "use client";
 
-import { IntroductionProps } from "@/app/[locale]/products/[id]/components/Introduction/types";
+import { IntroductionProps } from "@/app/[locale]/products/[id]/components/VideoIntroduction/types";
 import { PRODUCT_INTRODUCTION_DESCRIPTION } from "@/app/[locale]/products/[id]/constants";
 import {
   PRODUCT_INTRO_PANELS,
