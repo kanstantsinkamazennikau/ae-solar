@@ -1,4 +1,4 @@
-import AboutAwards from "@/app/[locale]/company/components/AboutAwards";
+import AboutTier1 from "@/app/[locale]/company/components/AboutTier1";
 import BornInGermany from "@/app/[locale]/company/components/BornInGermany";
 import HeroSection from "@/app/[locale]/company/components/HeroSection";
 import OurHistory from "@/app/[locale]/company/components/OurHistory";
@@ -16,7 +16,7 @@ export default function About() {
     <>
       <HeroSection />
       <BornInGermany />
-      <AboutAwards />
+      <AboutTier1 />
       <PortfolioBackground />
       <GlobalImpact />
       <JoinOurMission />
@@ -47,6 +47,94 @@ export default function About() {
 
       {/* <SequenceAnimation /> */}
       {/* <SequenceAnimation2 /> */}
+
+      {/* <BasicWidthContainer styles="mx-auto z-30 relative -top-[64px]">
+      <div
+        className="
+          flex
+          flex-col
+          md:gap-20
+          lg:gap-14
+          gap-10
+          xl:mb-[180px]
+          lg:mb-[140px]
+          md:mb-[100px]
+          mb-[80px]
+          relative
+          mt-[60px]
+          md:py-[60px]
+          py-[36px]
+          bg-[linear-gradient(0deg,_rgb(0_0_0_/_50%),_rgb(0_0_0_/_50%)),_linear-gradient(0deg,_#19191947,_#19191947)]
+          border
+          border-solid
+          border-[#191919]
+          overflow-hidden
+        "
+      >
+        <Image
+          src="/images/awards/dividerSmall.svg"
+          alt="dividerSmall"
+          width={30}
+          height={30}
+          className="absolute top-0 left-0"
+        />
+        <div
+          className="
+          flex
+          md:pt-10
+          md:pb-20
+          pt-0
+          pb-10
+          border-b
+          border-solid
+          border-[#191919]
+          max-w-[1100px]
+          self-center
+          md:items-center
+          px-5
+          gap-4
+          md:flex-row
+          flex-col
+          justify-center
+        "
+        >
+          <div
+            className="
+              font-semibold
+              leading-[110%]
+              [font-size:_clamp(36px,3.5vw,64px)]
+              -tracking-[1.92px]
+              max-w-[426px]
+              w-full
+              md:text-center
+            "
+          >
+            {ABOUT_AS_A_TIER}
+          </div>
+          <div
+            className="
+              font-medium
+              leading-[150%]
+              [font-size:_clamp(16px,1.5vw,24px)]
+              font-walsheim
+              max-w-[650px]
+              md:text-center
+            "
+          >
+            {ABOUT_SYNONYMOUS}
+          </div>
+        </div>
+        <Stats />
+        <Awards />
+        <Image
+          src="/images/awards/dividerBig.svg"
+          alt="dividerBig"
+          width={300}
+          height={300}
+          className="absolute bottom-0 right-0 pointer-events-none z-10"
+        />
+      </div>
+    </BasicWidthContainer> */}
     </>
   );
 }

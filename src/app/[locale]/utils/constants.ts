@@ -143,14 +143,6 @@ export const PRODUCT_INTRO_PANELS_IMAGES = [
   "ShadeStar",
   "Neptune",
 ];
-export const PRODUCT_INTRO_PANELS_VIDEOS = [
-  "Aurora",
-  "Meteor",
-  "Comet",
-  "Terra",
-  "ShadeStar",
-  "Neptune",
-];
 export const PRODUCT_INTRO_DETAILED_INFO = "Detailed Info";
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
@@ -503,9 +495,10 @@ export const FOOTER_LINKS_ARRAY = [
     category: { title: "Documents", link: "/documents" },
     links: [
       { title: "Datasheet", link: "/documents" },
+      { title: "Warranty", link: "/documents" },
       // { title: "Certifications", link: "/documents" },
       // { title: "Manual", link: "/documents" },
-      // { title: "Warranty", link: "/documents" },
+
       // { title: "Presentations", link: "/documents" },
       // { title: "FAQ", link: "/info/faq" },
     ],
@@ -2227,6 +2220,32 @@ export const DOCUMENTS_FILES: (
         linkTitle: "AE SMD-108E 395W-410W Ver24.1.1",
         link: "/documents/solar_panels/ShadeStar/AE_SMD-108E_395W-410W_Ver24.1.1.pdf",
         tags: ["ShadeStar"],
+      },
+    ],
+  },
+  {
+    category: "Warranty",
+    type: "Text",
+    data: [
+      {
+        linkTitle: "Warranty-EN",
+        link: "/documents/warranty/Warranty-EN.pdf",
+      },
+      {
+        linkTitle: "Warranty-DE",
+        link: "/documents/warranty/Warranty-DE.pdf",
+      },
+      {
+        linkTitle: "Garantía-SPA",
+        link: "/documents/warranty/Garantía-SPA.pdf",
+      },
+      {
+        linkTitle: "Garantia-BRA",
+        link: "/documents/warranty/Garantia-BRA.pdf",
+      },
+      {
+        linkTitle: "限定保証-JP",
+        link: "/documents/warranty/限定保証-JP.pdf",
       },
     ],
   },

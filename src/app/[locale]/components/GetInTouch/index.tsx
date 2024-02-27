@@ -85,20 +85,22 @@ export default function GetInTouch({
             max-[540px]:border-x-0
             border-2
             border-solid
-            border-[#ffffff0d]
+            border-[#3e0002]
             relative
             overflow-hidden
             bg-[#111]
             -top-[60px]
           `}
         >
-          {/* <Image
-            src={`/images/getInTouchUnion.svg`}
-            alt="getInTouchUnion"
-            width={1440}
-            height={1000}
-            className="absolute h-full mix-blend-hard-light"
-          /> */}
+          <div
+            className="
+              [background:radial-gradient(100%_100%_at_50%_100%,rgba(109,2,7,0.30)_0%,rgba(109,2,7,0.00)_100%),linear-gradient(297deg,#000_0%,rgba(0,0,0,0.00)_100%),#0d0d0d00]
+              w-full
+              h-full
+              absolute
+            "
+          />
+
           {/* CLIENT TYPE */}
           <div
             className={`flex p-1 justify-center ${

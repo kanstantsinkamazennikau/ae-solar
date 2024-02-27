@@ -1,4 +1,3 @@
-import Loader from "@/app/[locale]/components/common/Loader";
 import { VideoProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
 
 export default function Video({ onLoaded, onEnded, id }: VideoProps) {

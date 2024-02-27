@@ -1,6 +1,6 @@
 "use client";
 
-import { ProductSloganProps } from "@/app/[locale]/components/ProductIntro/ProductSlogan/types";
+import { ProductSloganProps } from "@/app/[locale]/components/ProductIntroVideo/ProductSlogan/types";
 import {
   PRODUCT_INTRO_DETAILED_INFO,
   PRODUCT_INTRO_PANELS,

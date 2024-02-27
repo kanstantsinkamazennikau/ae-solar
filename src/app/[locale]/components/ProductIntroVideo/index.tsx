@@ -2,21 +2,19 @@
 
 "use client";
 
-import ProductSlogan from "@/app/[locale]/components/ProductIntro/ProductSlogan";
+import ProductSlogan from "@/app/[locale]/components/ProductIntroVideo/ProductSlogan";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
-import { usePlayIntersection } from "@/app/[locale]/hooks/usePlayIntersection";
 import {
   PRODUCT_INTRO_CALCULATE_YOUR_MODEL,
   PRODUCT_INTRO_HIGH_QUALITY_SP,
   PRODUCT_INTRO_LEARN_MORE,
   PRODUCT_INTRO_PANELS,
   PRODUCT_INTRO_PANELS_IMAGES,
-  PRODUCT_INTRO_PANELS_VIDEOS,
   PRODUCT_INTRO_THE_NEXT_LEVEL_OF,
 } from "@/app/[locale]/utils/constants";
 //@ts-ignore
@@ -24,7 +22,7 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { Video } from "@splidejs/splide-extension-video";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useRef } from "react";
 
 export default function ProductIntroVideo() {
   const { model, setModel } = useContext(ModelContext);
@@ -159,7 +157,7 @@ export default function ProductIntroVideo() {
             className="h-auto w-full flex justify-center mx-auto flex-1 absolute bottom-0 z-10"
             ref={sliderRef}
             onMove={(splide) => {
-              setModel(PRODUCT_INTRO_PANELS_VIDEOS[splide.index] as Model);
+              setModel(PRODUCT_INTRO_PANELS_IMAGES[splide.index] as Model);
             }}
             extensions={{ Video }}
           >
@@ -210,7 +208,7 @@ export default function ProductIntroVideo() {
                 <div className="splide__progress__bar" />
               </div> */}
             <SplideTrack>
-              {PRODUCT_INTRO_PANELS_VIDEOS.map((video) => (
+              {PRODUCT_INTRO_PANELS_IMAGES.map((video) => (
                 <SplideSlide key={video} className="flex justify-center">
                   <video
                     width="1320"

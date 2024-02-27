@@ -20,6 +20,8 @@ const config: Config = {
       },
       boxShadow: {
         bens: "0px 140px 200px -80px rgba(246, 1, 9, 0.30), 0px 40px 80px -50px rgba(246, 1, 9, 0.70)",
+        product:
+          "0px 140px 200px -80px rgba(246, 1, 9, 0.30), 0px 40px 80px -50px rgba(246, 1, 9, 0.70)",
       },
       backgroundColor: {
         "get-in-touch": "rgba(49, 49, 49, 0.10)",

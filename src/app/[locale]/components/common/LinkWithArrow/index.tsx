@@ -13,7 +13,7 @@ export default function LinkWithArrow({
   const locale = useParams()?.locale;
 
   return (
-    <div className="flex justify-center items-center gap-2 cursor-pointer">
+    <div className="flex justify-center items-center gap-2 cursor-pointer hover:opacity-80">
       <Link
         className={`text-base-red [font-size:_clamp(14px,1vw,16px)] ${externalStyle}`}
         href={`/${locale}/${href}`}

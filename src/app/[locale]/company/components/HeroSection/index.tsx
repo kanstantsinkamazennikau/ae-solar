@@ -35,7 +35,7 @@ export default function HeroSection() {
           -mt-[80px]
           flex-col
           overflow-hidden
-          2xl:h-[1000px]
+          2xl:h-[800px]
           xl:h-[700px]
           lg:h-[650px]
           md:h-[600px]
@@ -46,55 +46,39 @@ export default function HeroSection() {
       >
         <div className="fade-strip-bottom md:!h-[200px] !h-[50px]" />
         <Image
-          src="/images/about/aboutPath3.svg"
-          alt="solar panel"
+          src="/images/about/headerBackground.png"
+          alt="headerBackground"
           priority
-          width={1320}
-          height={1320}
-          className="xl:h-[525px] lg:h-[475px] md:h-[425px] md:block hidden absolute top-[24px]"
-        />
-        <Image
-          src="/images/about/aboutPathBottom3.svg"
-          alt="solar panel"
-          priority
-          width={1320}
-          height={1320}
-          className="absolute -mb-1/2 -bottom-1/2"
-        />
-        <Image
-          src="/images/about/heroSectionMobile.svg"
-          alt="solar panel"
-          priority
-          width={768}
-          height={733}
-          className="h-[735px] md:hidden object-cover"
+          width={1920}
+          height={800}
+          className="absolute top-[0px] h-full md:block hidden"
         />
         <div
           className="
-          absolute
-          inline-flex
-          flex-col
-          md:gap-[60px]
-          gap-8
-          xl:max-w-[1100px]
-          lg:max-w-[900px]
-          md:max-w-[600px]
-          max-w-[400px]
-          items-center
-          -translate-y-1/2
-          top-1/2
-        "
+            absolute
+            inline-flex
+            flex-col
+            md:gap-[60px]
+            gap-8
+            xl:max-w-[1100px]
+            lg:max-w-[900px]
+            md:max-w-[600px]
+            max-w-[400px]
+            items-center
+            -translate-y-1/2
+            top-1/2
+          "
         >
           <div className="flex flex-col gap-6">
             <div
               className="
-              [font-size:_clamp(20px,2vw,36px)]
-              font-medium
-              leading-[100%]
-              -tracking-[1.08px]
-            text-base-red
-              text-center
-            "
+                [font-size:_clamp(20px,2vw,36px)]
+                font-medium
+                leading-[100%]
+                -tracking-[1.08px]
+              text-base-red
+                text-center
+              "
             >
               {ABOUT_MANUFACTURER}
             </div>

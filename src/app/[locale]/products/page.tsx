@@ -2,7 +2,7 @@
 
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import LightingTheWay from "@/app/[locale]/products/components/LightingTheWay";
-import PanelsFlower from "@/app/[locale]/products/components/PanelsFlower";
+import PanelsList from "@/app/[locale]/products/components/PanelsList";
 import Power from "@/app/[locale]/products/components/Power";
 import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
 import { PRODUCT_JOIN } from "@/app/[locale]/products/constants";
@@ -14,7 +14,7 @@ export default function ProductsPage() {
       <SubNavigationProductPanels />
       <div className="overflow-hidden">
         <LightingTheWay />
-        {/* <PanelsFlower /> */}
+        <PanelsList />
         <Power />
         <div
           className="

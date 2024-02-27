@@ -68,33 +68,6 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
       >
         <VideoPlayer onLoaded={onLoaded} onEnded={onEnded} id={id} />
       </div>
-
-      {/* BACKGROUND IMAGE */}
-
-      {/* <Image
-          src="/images/products/moduleProducts.png"
-          alt="moduleProducts"
-          priority
-          width={1582}
-          height={701}
-          quality={100}
-          className="z-10 relative md:scale-100 scale-[1.75] max-[460px]:-translate-y-[50px]"
-        />
-        <Image
-          src="/images/products/bottomLight.svg"
-          alt="bottomLight"
-          width={1582}
-          height={480}
-          className="
-            absolute
-            md:bottom-[calc(-39%+4px)]
-            min-[460px]:bottom-[calc(-66%+4px)]
-            bottom-[calc(-53%+4px)]
-            min-[460px]:scale-100
-            scale-150
-          "
-        /> */}
-      {/* <div className="fade-strip-bottom !z-0 !h-[112px] !from-[#0000006e] !bottom-[0] rotate-180"></div> */}
       {/* PANEL DESCRIPTION */}
       <div
         className={`
