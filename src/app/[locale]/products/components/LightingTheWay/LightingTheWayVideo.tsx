@@ -40,7 +40,7 @@ export default function LightingTheWayVideo() {
     <>
       {!isPlaying && !isLongVideoLoadingTime && (
         <div
-          className={` z-20 fixed -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 ${
+          className={`z-20 fixed -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 ${
             isStartAnimation &&
             ` 
               2xl:!-top-32
@@ -49,7 +49,6 @@ export default function LightingTheWayVideo() {
               min-[640px]:!top-10
               min-[540px]:!top-20
               min-[540px]:scale-100
-              scale-150
               !top-28
               transition-all
               duration-[1.5s]
@@ -57,7 +56,7 @@ export default function LightingTheWayVideo() {
             `
           }`}
         >
-          <Loader />
+          <Loader externalStyle="!h-screen" />
         </div>
       )}
       {isLongVideoLoadingTime && (
