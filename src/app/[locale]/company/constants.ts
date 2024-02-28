@@ -11,7 +11,7 @@ export const ABOUT_BORN_STORY_WORDS_TO_HIGHLIGHT = [
   `"It's time to save the world"`,
 ];
 export const ABOUT_AS_A_TIER = "As a TIER 1 Company";
-export const ABOUT_AS_A_TIER_HIGHLIGHT = "TIER 1 Company";
+export const ABOUT_AS_A_TIER_HIGHLIGHT = ["TIER 1 Company"];
 export const ABOUT_SYNONYMOUS =
   "We've become synonymous with quality, sustainability, and technological advancement in the renewable energy industry, continually setting benchmarks through our multi-award-winning brand.";
 export const ABOUT_SYNONYMOUS_HIGHLIGHT = [

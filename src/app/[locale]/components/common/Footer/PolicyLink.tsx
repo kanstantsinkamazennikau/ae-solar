@@ -9,10 +9,7 @@ export default function PolicyLink({ link }: PolicyLinkProps) {
 
   return (
     <>
-      <Link
-        className="min-[550px]:px-3 px-0"
-        href={`/${locale}/${link.toLowerCase()}`}
-      >
+      <Link className="min-[550px]:px-3 px-0" href={`/company/publishers_info`}>
         {link}
       </Link>
       <div className="w-[1px] h-5 bg-dark-gray-700 min-[550px]:inline-block hidden"></div>

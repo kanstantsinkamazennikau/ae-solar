@@ -124,6 +124,7 @@ export default function ProductSlogan({ model }: ProductSloganProps) {
     <>
       <div
         className={`
+          z-10
           ${
             showDetails
               ? "translate-x-0"

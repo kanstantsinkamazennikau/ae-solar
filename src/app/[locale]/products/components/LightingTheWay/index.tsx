@@ -12,20 +12,14 @@ import { useContext, useState } from "react";
 const LightingTheWayVideo = dynamic(() => import("./LightingTheWayVideo"), {
   ssr: false,
 });
-// bg-[url('/images/products/productsFlower.png')]
+
 export default function LightingTheWay() {
   const { isStartAnimation } = useContext(ProductsContext);
-
-  // bg-[url('/images/products/productsFlower.png')]
-  // 2xl:[background-position-y:-55px]
-  // min-[920px]:[background-position-y:-40px]
-  // [background-position-y:-20px]
 
   return (
     <div className={`relative`}>
       <div
         className={`
-          
           relative
           2xl:h-[600px]
           min-[920px]:h-[400px]

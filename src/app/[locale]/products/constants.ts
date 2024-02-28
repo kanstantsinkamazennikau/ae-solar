@@ -18,8 +18,17 @@ export const PRODUCT_SLOGAN = {
   Meteor: `Harness Stellar Power with Meteor`,
 };
 
-export const PRODUCT_WE_TRANSFORM = "We transform sunlight into power — ";
-export const PRODUCT_FOR_YOU = "for you and for the planet";
+export const PRODUCT_WE_TRANSFORM = "We Transform";
+export const PRODUCT_WE_TRANSFORM_SUNLIGHT = "Sunlight Into Power";
+export const PRODUCT_FOR_YOU = "for You and";
+export const PRODUCT_FOR_PLANET = "for The Planet";
+export const PRODUCT_WE_TRANSFORM_RANGE = `Our range of advanced solar technologies is designed to harness the abundant energy of the sun, providing renewable, clean, and highly efficient solutions. 
+Each of our innovative products draws inspiration from the universe, embodying our belief in the vast potential of renewable energy.`;
+export const PRODUCT_WE_TRANSFORM_HIGHLIGHT = [
+  "designed to harness the abundant energy of the sun",
+  "draws inspiration from the universe",
+];
+
 export const PRODUCT_ADVANCED_TECHNOLOGY =
   "Our range of advanced solar technologies is designed to harness the abundant energy of the sun, providing renewable, clean, and highly efficient solutions.";
 export const PRODUCT_INNOVATIVE_PRODUCTS =
@@ -29,3 +38,42 @@ export const PRODUCT_JOIN =
 
 export const PRODUCT_TIME_TO_CHOOSE = "Time To Choose";
 export const PRODUCT_YOUR_MODULE = "Your Module";
+export const PRODUCT_SINCE =
+  "Since 2003, AE Solar has been at the forefront of the renewable energy industry. We're not just a Tier 1 solar panel manufacturer, we're a leader and innovator in clean, efficient, and sustainable energy. We stand for quality, durability, and efficiency in harnessing the sun's power.";
+export const PRODUCT_SINCE_HIGHLIGHT = [
+  "Since 2003, AE Solar",
+  "we're a leader and innovator",
+];
+export const PRODUCT_WE_ARE_TIER = "We’re TIER 1 Company";
+export const PRODUCT_WE_ARE_TIER_HIGHLIGHT = ["TIER 1 Company"];
+export const PRODUCT_ADVANTAGES = [
+  {
+    image: "solutions.svg",
+    title: `Flexible Solar Solutions 
+    for All Energy Needs`,
+    description:
+      "Our comprehensive solar panel portfolio is designed to maximize flexibility and efficiency. Whether you're aiming to power your home or looking to energize large commercial buildings and expansive solar farms, AE Solar's products are up to the task. With us, powering your world with the sun's energy is simpler and more efficient than ever.",
+  },
+  {
+    image: "quality.svg",
+    title: `German Engineering 
+    at Its Finest `,
+    description:
+      "Two decades in the business have shaped us and the solar world. Our commitment to German engineering excellence has led to the creation of next-generation solar modules - powerful, elegant, and innovative. We have the ideal solar solution tailored to your needs. With AESOLAR, gain independence and experience the exceptional performance of our modules.",
+  },
+  {
+    image: "engineering.svg",
+    title: `Quality and 
+    Innovation`,
+    description:
+      "Years of experience and innovation have made our solar modules synonymous with top-tier design and technology. We take pride in our rigorous quality control procedures, ensuring that our products always meet and surpass your expectations.",
+  },
+
+  {
+    image: "profit.svg",
+    title: `Profitable and 
+    Durable Solar Modules`,
+    description:
+      "Our solar modules are more than just energy-efficient - they're a profitable investment. Each one surpasses its stated output while boasting exceptional robustness. Thanks to our years of experience in Photovoltaic (PV) module production, stringent material selection, and consistent quality checks, our products are built to last, ensuring you long-term efficiency and minimal worries. Choose AE Solar and invest in a brighter, cleaner future.",
+  },
+];

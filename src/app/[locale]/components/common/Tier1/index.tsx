@@ -8,15 +8,23 @@ import Awards from "@/app/[locale]/components/AwardsAndStats/Awards";
 import Production from "@/app/[locale]/components/AwardsAndStats/Production";
 import Stats from "@/app/[locale]/components/AwardsAndStats/Stats";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import { Tier1Props } from "@/app/[locale]/components/common/Tier1/types";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 
-export default async function AboutTier1() {
+export default function Tier1({
+  tier1TextStyle = "text-[#038DF4]",
+  descriptionText,
+  descriptionTextHighlight,
+  tier1Text,
+  tier1TextHighlight,
+  externalStyle,
+}: Tier1Props) {
   return (
-    // <div className="flex flex-col items-center justify-center w-full">
     <BasicWidthContainer styles="mx-auto z-30 relative">
       <div
-        className="
+        className={`
+          ${externalStyle}
           flex
           md:flex-row
           flex-col
@@ -34,7 +42,7 @@ export default async function AboutTier1() {
           w-full
           mx-auto
           gap-4
-        "
+        `}
       >
         <div
           className="
@@ -47,12 +55,7 @@ export default async function AboutTier1() {
             max-md:text-center
           "
         >
-          {styleMatchingText(
-            ABOUT_AS_A_TIER,
-            [ABOUT_AS_A_TIER_HIGHLIGHT],
-            "",
-            "text-[#038DF4]"
-          )}
+          {styleMatchingText(tier1Text, tier1TextHighlight, "", tier1TextStyle)}
         </div>
         <div
           className="
@@ -65,14 +68,13 @@ export default async function AboutTier1() {
             "
         >
           {styleMatchingText(
-            ABOUT_SYNONYMOUS,
-            ABOUT_SYNONYMOUS_HIGHLIGHT,
+            descriptionText,
+            descriptionTextHighlight,
             "text-dark-gray-900",
             "text-white"
           )}
         </div>
       </div>
     </BasicWidthContainer>
-    // </div>
   );
 }

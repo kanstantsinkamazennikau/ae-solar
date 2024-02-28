@@ -66,7 +66,7 @@ export default function Footer() {
 
   return (
     <div className="flex flex-col justify-center items-center relative max-w-[1920px] mx-auto">
-      <BasicWidthContainer>
+      <BasicWidthContainer styles="bg-black">
         <footer className="text-sm bg-black bg-clip-content overflow-hidden">
           <Image
             src={`/images/glowFull.png`}

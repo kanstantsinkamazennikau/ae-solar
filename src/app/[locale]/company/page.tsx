@@ -1,4 +1,4 @@
-import AboutTier1 from "@/app/[locale]/company/components/AboutTier1";
+import Tier1 from "@/app/[locale]/components/common/Tier1";
 import BornInGermany from "@/app/[locale]/company/components/BornInGermany";
 import HeroSection from "@/app/[locale]/company/components/HeroSection";
 import OurHistory from "@/app/[locale]/company/components/OurHistory";
@@ -10,13 +10,24 @@ import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProduct
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import GlobalImpact from "@/app/[locale]/solutions/components/GlobalImpact";
 import JoinOurMission from "@/app/[locale]/solutions/components/JoinOurMission";
+import {
+  ABOUT_AS_A_TIER,
+  ABOUT_AS_A_TIER_HIGHLIGHT,
+  ABOUT_SYNONYMOUS,
+  ABOUT_SYNONYMOUS_HIGHLIGHT,
+} from "@/app/[locale]/company/constants";
 
 export default function About() {
   return (
     <>
       <HeroSection />
       <BornInGermany />
-      <AboutTier1 />
+      <Tier1
+        tier1Text={ABOUT_AS_A_TIER}
+        tier1TextHighlight={ABOUT_AS_A_TIER_HIGHLIGHT}
+        descriptionText={ABOUT_SYNONYMOUS}
+        descriptionTextHighlight={ABOUT_SYNONYMOUS_HIGHLIGHT}
+      />
       <PortfolioBackground />
       <GlobalImpact />
       <JoinOurMission />
