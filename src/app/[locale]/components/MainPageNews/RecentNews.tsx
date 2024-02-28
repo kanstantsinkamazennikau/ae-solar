@@ -157,7 +157,7 @@ export default async function RecentNews() {
                   </div>
 
                   <div className="flex flex-col gap-4">
-                    <Link href={`blog/${slug}`}>
+                    <Link href={`company/blog/${slug}`}>
                       <h2 className="[font-size:_clamp(16px,1.5vw,24px)] font-bold -tracking-[0.24] hover:text-base-red">
                         {title.slice(0, 1).toUpperCase() +
                           title.slice(1).toLowerCase()}
