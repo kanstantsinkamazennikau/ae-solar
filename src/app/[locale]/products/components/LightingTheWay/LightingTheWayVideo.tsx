@@ -66,6 +66,19 @@ export default function LightingTheWayVideo() {
           priority
           width={1920}
           height={1080}
+          className={`!w-screen object-cover fixed
+            2xl:!-top-32
+            xl:!-top-20
+            lg:!-top-10
+            min-[640px]:!top-10
+            min-[540px]:!top-20
+            min-[540px]:scale-100
+            scale-150
+            !top-28
+            transition-all
+            duration-[1.5s]
+            !translate-y-0
+         `}
         />
       )}
       {!isLongVideoLoadingTime && (

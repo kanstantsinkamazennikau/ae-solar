@@ -73,7 +73,7 @@ export default function Panel({ panel }: PanelProps) {
         priority
         height={340}
         alt={`${panel}Background`}
-        className="rounded-xl"
+        className="rounded-xl max-md:min-h-[330px] max-md:object-cover"
         onLoad={() => {
           setImageLoaded(true);
         }}

@@ -12,7 +12,7 @@ export default function PanelVideo({ onLoaded, panel }: PanelVideoProps) {
         onPlay={() => {
           onLoaded();
         }}
-        className="min-[1440px]:w-[650px] w-[548px]"
+        className="w-[650px] max-md:min-h-[330px] max-md:object-cover"
       >
         <source src={`/videos/products/${panel}Choose.mp4`} type="video/mp4" />
       </video>
