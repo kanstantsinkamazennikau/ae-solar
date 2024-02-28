@@ -12,9 +12,7 @@ export default function SubNavigationProductPanels() {
         py-2
         flex
         justify-center
-        sticky
-        min-[920px]:top-[79px]
-        top-[63px]
+
         z-20
       `}
     >

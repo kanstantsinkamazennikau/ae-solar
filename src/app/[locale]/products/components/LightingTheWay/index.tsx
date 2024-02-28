@@ -1,58 +1,75 @@
+"use client";
+
+import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import {
   PRODUCTS_LIGHTING,
   PRODUCTS_WELCOME,
 } from "@/app/[locale]/products/constants";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useContext, useState } from "react";
 
+const LightingTheWayVideo = dynamic(() => import("./LightingTheWayVideo"), {
+  ssr: false,
+});
+// bg-[url('/images/products/productsFlower.png')]
 export default function LightingTheWay() {
+  const { isStartAnimation } = useContext(ProductsContext);
+
+  // bg-[url('/images/products/productsFlower.png')]
+  // 2xl:[background-position-y:-55px]
+  // min-[920px]:[background-position-y:-40px]
+  // [background-position-y:-20px]
+
   return (
-    <div
-      className="
-        relative
-        -top-20
-        2xl:h-[600px]
-        h-[400px]
-        bg-[url('/images/products/productsFlower.png')]
-        bg-cover
-        bg-center
-        bg-no-repeat
-        w-full
-        max-w-[1920px]
-        mx-auto
-      "
-    >
+    <div className={`relative`}>
       <div
-        className="
-          absolute
-          inline-flex
-          flex-col
-          md:gap-[30px]
-          gap-4
-          font-medium
-          max-w-[1100px]
+        className={`
+          
+          relative
+          2xl:h-[600px]
+          min-[920px]:h-[400px]
+          h-[300px]
+          bg-cover
+          bg-center
+          bg-no-repeat
           w-full
-          px-5
-          items-center
-          bottom-[15%]
-          -translate-x-1/2
-          left-1/2
-        "
+          max-w-[1920px]
+          mx-auto
+          z-0
+        `}
       >
-        <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,2vw,36px)]">
-          {PRODUCTS_WELCOME}
-        </p>
-        <p className="text-8xl text-center -tracking-[2.88px] leading-none [font-size:_clamp(34px,5vw,102px)] max-w-[1000px] after:p-0">
-          {PRODUCTS_LIGHTING}
-        </p>
+        <LightingTheWayVideo />
+        <div
+          className={`
+            absolute
+            inline-flex
+            flex-col
+            md:gap-[30px]
+            gap-4
+            font-medium
+            min-[920px]:max-w-[1100px]
+            max-w-[600px]
+            w-full
+            px-5
+            items-center
+            -translate-y-1/2
+            top-[calc(50%+30px)]
+            -translate-x-1/2
+            left-1/2
+            transition-all
+            duration-[1.5s]
+            ${isStartAnimation ? " opacity-100" : "opacity-0"}
+          `}
+        >
+          <p className="text-center text-base-red md:-tracking-[1.2px] -tracking-[0.5px] leading-none [font-size:_clamp(20px,2vw,36px)]">
+            {PRODUCTS_WELCOME}
+          </p>
+          <p className="text-8xl text-center md:-tracking-[2.88px] -tracking-[0px] leading-none [font-size:_clamp(34px,5vw,102px)] max-w-[1000px] after:p-0">
+            {PRODUCTS_LIGHTING}
+          </p>
+        </div>
       </div>
-      <Image
-        src={`/images/glowFull.png`}
-        alt="glow"
-        priority
-        width={1320}
-        height={60}
-        className="absolute -bottom-[60px] -translate-x-1/2 left-1/2 rotate-180 h-[60px]"
-      />
     </div>
   );
 }

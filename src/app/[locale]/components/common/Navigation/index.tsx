@@ -8,7 +8,9 @@ import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import MobileNavigation from "@/app/[locale]/components/common/Navigation/MobileNavigation";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
+import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
+import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
 import {
   HEADER_CONTACT_US,
   HEADER_NAV_LINKS_ARRAY,
@@ -19,9 +21,12 @@ import { useContext } from "react";
 
 export default function Navigation() {
   const { sticky } = useContext(StickyNavigationContext);
+  const { isStartAnimation } = useContext(ProductsContext);
   const params = useParams();
   const router = useRouter();
   const pathname = usePathname();
+
+  const isProductsPage = pathname === "/products";
 
   const hideSubnavigation = () => {
     return [
@@ -42,7 +47,23 @@ export default function Navigation() {
 
   return (
     <div
-      className={`w-full sticky top-0 z-40 h-[64px] min-[920px]:h-[80px] border-b border-solid border-[#d0d8e91a]`}
+      className={`
+        w-full
+        sticky
+        top-0
+        z-40
+        h-[64px]
+        min-[920px]:h-[80px]
+        border-b
+        border-solid
+        border-[#d0d8e91a]
+        transition-all
+        duration-1000
+        ${
+          isProductsPage &&
+          `${isStartAnimation ? "translate-y-0" : "-translate-y-[144px]"}`
+        }
+      `}
     >
       {/* MAIN NAVIGATION */}
       <div className="w-full h-full backdrop-blur-[50px] absolute" />
@@ -77,6 +98,8 @@ export default function Navigation() {
 
       {/* SUBNAVIGATION */}
       {sticky && !hideSubnavigation() && <SubNavigation isLink />}
+
+      {isProductsPage && <SubNavigationProductPanels />}
     </div>
   );
 }
