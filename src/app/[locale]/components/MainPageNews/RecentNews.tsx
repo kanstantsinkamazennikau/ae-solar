@@ -61,7 +61,7 @@ export default async function RecentNews() {
         quality={100}
         className="w-full h-[300px] md:hidden block min-[500px]:h-[350px] object-cover"
       />
-      <BasicWidthContainer styles="flex">
+      <BasicWidthContainer styles="flex max-md:p-0 w-full">
         <Image
           src={`/images/news.png`}
           alt="news"
@@ -78,13 +78,13 @@ export default async function RecentNews() {
           max-w-[915px]
           xl:p-20
           lg:p-12
-          p-6
+          px-6
           justify-center
           rounded-xl
           border-solid
           border
           border-[#131313]
-          -ml-5
+          md:-ml-5
           bg-[url('/images/getInTouchBackground.svg')]
         "
         >
@@ -123,7 +123,6 @@ export default async function RecentNews() {
                     xl:basis-[200px]
                     lg:basis-[80px]
                     min-[920px]:basis-[60px]
-                
                     break-all
                   "
                   >
