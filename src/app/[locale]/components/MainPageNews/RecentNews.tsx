@@ -1,10 +1,10 @@
-import BlogPostStats from "@/app/[locale]/company/resources/components/BlogPostStats";
-import Post from "@/app/[locale]/company/resources/components/BlogPostsList/Post";
+import BlogPostStats from "@/app/[locale]/company/news/components/BlogPostStats";
+import Post from "@/app/[locale]/company/news/components/BlogPostsList/Post";
 import {
   BlogPost,
   BlogPostsListProps,
-} from "@/app/[locale]/company/resources/components/BlogPostsList/types";
-import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/resources/constants";
+} from "@/app/[locale]/company/news/components/BlogPostsList/types";
+import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
@@ -40,18 +40,8 @@ const getBlogPosts = async () => {
   return blogPosts as BlogPost[];
 };
 
-async function getBlogPostsAmount() {
-  try {
-    const blogs = await getDocumentSlugs("blog");
-    return blogs.length;
-  } catch (error) {
-    return 0;
-  }
-}
-
 export default async function RecentNews() {
   const blogPosts = await getBlogPosts();
-  const blogPostsAmount = await getBlogPostsAmount();
 
   return (
     <div className="flex md:flex-row flex-col">
@@ -98,7 +88,7 @@ export default async function RecentNews() {
               />
             )
           )}
-          <Link href="company/resources" className="mt-10 mx-auto">
+          <Link href="company/news" className="mt-10 mx-auto">
             <Button style="outline" showArrow>
               <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">
                 {MAIN_PAGE_NEWS_READ_ALL}

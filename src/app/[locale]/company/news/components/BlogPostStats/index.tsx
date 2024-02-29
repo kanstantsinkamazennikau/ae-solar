@@ -1,4 +1,4 @@
-import { PostStatsProps } from "@/app/[locale]/company/resources/components/BlogPostStats/types";
+import { PostStatsProps } from "@/app/[locale]/company/news/components/BlogPostStats/types";
 import Image from "next/image";
 
 const statisticsParamsWithIconsMapping = {

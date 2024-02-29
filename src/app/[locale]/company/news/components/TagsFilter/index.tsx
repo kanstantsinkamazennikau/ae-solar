@@ -1,6 +1,6 @@
 "use client";
 
-import { TagsFilterProps } from "@/app/[locale]/company/resources/types";
+import { TagsFilterProps } from "@/app/[locale]/company/news/types";
 import Button from "@/app/[locale]/components/common/Button";
 import {
   DOCUMENTS_FILTER,

@@ -53,7 +53,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
     text: "Company",
     subMenu: [
       { url: "/company/manufacturer", text: "Manufacturer" },
-      { url: "/company/resources", text: "Resources" },
+      { url: "/company/news", text: "News" },
       { url: "/company/faq", text: "FAQ" },
     ],
   },
@@ -480,7 +480,7 @@ export const FOOTER_LINKS_ARRAY = [
       { title: "Manufacturer", link: "/company/manufacturer" },
       { title: "Solutions", link: "/solutions" },
       { title: "Contacts", link: "/contacts" },
-      { title: "Resources", link: "/company/resources" },
+      { title: "News", link: "/company/news" },
       { title: "FAQ", link: "/company/faq" },
     ],
   },

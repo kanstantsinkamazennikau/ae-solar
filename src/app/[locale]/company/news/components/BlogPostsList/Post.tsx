@@ -1,5 +1,5 @@
-import BlogPostStats from "@/app/[locale]/company/resources/components/BlogPostStats";
-import { PostProps } from "@/app/[locale]/company/resources/components/BlogPostsList/types";
+import BlogPostStats from "@/app/[locale]/company/news/components/BlogPostStats";
+import { PostProps } from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
 import Image from "next/image";
 import Link from "next/link";
@@ -96,7 +96,7 @@ export default function Post({
       </div>
 
       <div className="flex flex-col gap-4">
-        <Link href={`blog/${slug}`}>
+        <Link href={`/company/news/${slug}`}>
           <h2 className="[font-size:_clamp(16px,1.5vw,24px)] font-bold -tracking-[0.24] hover:text-base-red">
             {title.slice(0, 1).toUpperCase() + title.slice(1).toLowerCase()}
           </h2>

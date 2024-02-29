@@ -1,6 +1,6 @@
 "use client";
 
-import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/resources/constants";
+import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
 import { DOTS, usePagination } from "@/app/[locale]/hooks/usePagination";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";

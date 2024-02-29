@@ -1,9 +1,9 @@
-import Post from "@/app/[locale]/company/resources/components/BlogPostsList/Post";
+import Post from "@/app/[locale]/company/news/components/BlogPostsList/Post";
 import {
   BlogPost,
   BlogPostsListProps,
-} from "@/app/[locale]/company/resources/components/BlogPostsList/types";
-import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/resources/constants";
+} from "@/app/[locale]/company/news/components/BlogPostsList/types";
+import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
 import { getDocumentSlugs, getDocuments, load } from "outstatic/server";
 import { useEffect } from "react";
 

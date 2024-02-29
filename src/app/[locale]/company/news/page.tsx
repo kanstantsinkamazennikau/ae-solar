@@ -1,6 +1,6 @@
-import BlogPostsList from "@/app/[locale]/company/resources/components/BlogPostsList";
-import BlogPostPagination from "@/app/[locale]/company/resources/components/BlogPostsPagination";
-import RecentPosts from "@/app/[locale]/company/resources/components/RecentPosts";
+import BlogPostsList from "@/app/[locale]/company/news/components/BlogPostsList";
+import BlogPostPagination from "@/app/[locale]/company/news/components/BlogPostsPagination";
+import RecentPosts from "@/app/[locale]/company/news/components/RecentPosts";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Loader from "@/app/[locale]/components/common/Loader";
 import { getDocumentSlugs, load } from "outstatic/server";
@@ -10,8 +10,8 @@ import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithB
 import {
   BLOG_ON_THE_BLOG,
   BLOG_READ_THOUGHTS,
-} from "@/app/[locale]/company/resources/constants";
-import TagsFilter from "@/app/[locale]/company/resources/components/TagsFilter";
+} from "@/app/[locale]/company/news/constants";
+import TagsFilter from "@/app/[locale]/company/news/components/TagsFilter";
 
 async function getOutstaticDirectory() {
   return path.join(process.cwd(), "outstatic");
