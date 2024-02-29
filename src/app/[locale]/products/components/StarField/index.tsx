@@ -8,6 +8,7 @@ interface Props {
   starColor?: [number, number, number];
   starCount?: number;
   style?: string;
+  id?: string;
 }
 
 export default function Starfield(props: Props) {
@@ -17,10 +18,13 @@ export default function Starfield(props: Props) {
     starColor = [255, 255, 255],
     starCount = 5000,
     style = "fixed",
+    id,
   } = props;
 
   useEffect(() => {
-    const canvas = document.getElementById("starfield") as HTMLCanvasElement;
+    const canvas = document.getElementById(
+      `${id || "starfield"}`
+    ) as HTMLCanvasElement;
 
     if (canvas) {
       const c = canvas.getContext("2d");
@@ -145,7 +149,7 @@ export default function Starfield(props: Props) {
 
   return (
     <canvas
-      id="starfield"
+      id={`${id || "starfield"}`}
       className={`overflow-hidden ${style}`}
       style={{
         padding: 0,

@@ -30,14 +30,14 @@ export default function Advantages() {
         priority
         className={`absolute top-0 h-full object-cover`}
       /> */}
-      <div className={`relative top-0 h-full object-cover overflow-hidden`}>
+      {/* <div className={`relative top-0 h-full object-cover overflow-hidden`}>
         <Starfield
           starCount={1000}
           starColor={[255, 255, 255]}
           speedFactor={0.02}
           backgroundColor="black"
         />
-      </div>
+      </div> */}
 
       <Tier1
         tier1TextStyle="text-[#F60109]"
