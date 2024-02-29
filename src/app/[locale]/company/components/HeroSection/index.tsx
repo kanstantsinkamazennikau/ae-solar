@@ -44,7 +44,7 @@ export default function HeroSection() {
           -mb-[40px]
         "
       >
-        <div className="fade-strip-bottom md:!h-[200px] !h-[50px]" />
+        <div className="fade-strip-bottom md:!h-[200px] !h-[50px] !z-10" />
         <Image
           src="/images/about/headerBackground.png"
           alt="headerBackground"
@@ -58,7 +58,7 @@ export default function HeroSection() {
             absolute
             inline-flex
             flex-col
-            md:gap-[60px]
+            md:gap-[40px]
             gap-8
             xl:max-w-[1100px]
             lg:max-w-[900px]
@@ -67,9 +67,11 @@ export default function HeroSection() {
             items-center
             -translate-y-1/2
             top-1/2
+            z-10
+            mt-[55px]
           "
         >
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-5">
             <div
               className="
                 [font-size:_clamp(20px,2vw,36px)]
@@ -98,7 +100,7 @@ export default function HeroSection() {
 
           <div className="flex gap-5 md:flex-row flex-col">
             <a href="/documents/presentation.pdf" target="_blank">
-              <Button size="normal" externalStyle="max-[768px]:!py-4">
+              <Button size="normal" externalStyle="!py-[18px]">
                 <div className="flex items-center justify-center gap-4">
                   <Image
                     src="/images/downloadFileWhite.svg"
@@ -116,7 +118,7 @@ export default function HeroSection() {
             <Button
               size="normal"
               style="outline"
-              externalStyle="max-[768px]:!py-4"
+              externalStyle="!py-[14px]"
               onClick={onVideoOpen}
             >
               <div className="flex items-center justify-center gap-4">

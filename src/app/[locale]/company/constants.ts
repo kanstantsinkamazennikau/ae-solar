@@ -1,6 +1,6 @@
 export const ABOUT_MANUFACTURER = "AESOLAR is German TIER1 Manufacturer";
 export const ABOUT_ILLUMINATING =
-  "Illuminating Your Journey towards a Greener Tomorrow";
+  "Illuminating Your Journey Towards a Greener Tomorrow";
 export const ABOUT_DOWNLOAD_PRESENTATION = "Company presentation";
 export const ABOUT_WATCH_VIDEO = "Watch the video of our history";
 export const ABOUT_BORN_IN_GERMANY = "Born in Germany";

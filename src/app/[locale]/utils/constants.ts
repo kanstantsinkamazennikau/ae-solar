@@ -81,7 +81,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
   },
   {
     url: "/solutions",
-    text: "Solutions",
+    text: "B2B Solutions",
   },
 ];
 export const HEADER_CONTACT_US = "Contact Us";
@@ -478,7 +478,7 @@ export const FOOTER_LINKS_ARRAY = [
     links: [
       { title: "Company", link: "/company" },
       { title: "Manufacturer", link: "/company/manufacturer" },
-      { title: "Solutions", link: "/solutions" },
+      { title: "B2B Solutions", link: "/solutions" },
       { title: "Contacts", link: "/contacts" },
       { title: "News", link: "/company/news" },
       { title: "FAQ", link: "/company/faq" },
