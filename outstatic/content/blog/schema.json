@@ -1,0 +1,13 @@
+{
+  "title": "blog",
+  "type": "object",
+  "properties": {
+    "tag": {
+      "required": false,
+      "description": "Tag for post (blog/news)",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "tag"
+    }
+  }
+}
