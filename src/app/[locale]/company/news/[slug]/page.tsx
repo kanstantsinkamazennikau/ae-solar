@@ -48,7 +48,6 @@ export default async function BlogPost({
       </div>
       <BlogPostStats
         statistics={{
-          publishedAt: blogPostFormatDate(publishedAt),
           author: author?.name,
           readingTime,
         }}
