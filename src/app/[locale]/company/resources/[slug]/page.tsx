@@ -1,5 +1,5 @@
-import BlogPostStats from "@/app/[locale]/company/blog/components/BlogPostStats";
-import { BlogPost } from "@/app/[locale]/company/blog/components/BlogPostsList/types";
+import BlogPostStats from "@/app/[locale]/company/resources/components/BlogPostStats";
+import { BlogPost } from "@/app/[locale]/company/resources/components/BlogPostsList/types";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
 import { markdownToHtml } from "@/app/[locale]/utils/markdownToHtml";
 import { getDocumentBySlug, getDocumentSlugs } from "outstatic/server";

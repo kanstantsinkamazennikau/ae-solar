@@ -1,6 +1,6 @@
 "use client";
 
-import { BlogPostImageProps } from "@/app/[locale]/company/blog/components/BlogPostImage/types";
+import { BlogPostImageProps } from "@/app/[locale]/company/resources/components/BlogPostImage/types";
 import LightBoxImage from "@/app/[locale]/components/common/LightBoxImage";
 import Image from "next/image";
 import { useState } from "react";

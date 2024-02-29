@@ -1,9 +1,9 @@
-import BlogPostStats from "@/app/[locale]/company/blog/components/BlogPostStats";
+import BlogPostStats from "@/app/[locale]/company/resources/components/BlogPostStats";
 import {
   BlogPost,
   BlogPostsListProps,
-} from "@/app/[locale]/company/blog/components/BlogPostsList/types";
-import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/blog/constants";
+} from "@/app/[locale]/company/resources/components/BlogPostsList/types";
+import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/resources/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
@@ -72,21 +72,21 @@ export default async function RecentNews() {
 
         <div
           className="
-          flex
-          flex-col
-          w-full
-          max-w-[915px]
-          xl:p-20
-          lg:p-12
-          px-6
-          justify-center
-          rounded-xl
-          border-solid
-          border
-          border-[#131313]
-          md:-ml-5
-          bg-[url('/images/getInTouchBackground.svg')]
-        "
+            flex
+            flex-col
+            w-full
+            max-w-[915px]
+            xl:p-20
+            lg:p-12
+            px-6
+            justify-center
+            rounded-xl
+            border-solid
+            border
+            border-[#131313]
+            md:-ml-5
+            bg-[url('/images/getInTouchBackground.svg')]
+          "
         >
           {blogPosts.map(
             ({ slug, title, publishedAt, author, readingTime }, index) => {
@@ -94,21 +94,21 @@ export default async function RecentNews() {
                 <article
                   key={slug}
                   className="
-                  flex
-                  md:pt-8
-                  md:pb-8
-                  pt-8
-                  pb-7
-                  border-b
-                  border-solid
-                  border-[#191919]
-                  md:first:border-t
-                  md:items-center
-                  gap-5
-                  md:flex-row
-                  flex-col
-                  items-start
-                "
+                    flex
+                    md:pt-8
+                    md:pb-8
+                    pt-8
+                    pb-7
+                    border-b
+                    border-solid
+                    border-[#191919]
+                    md:first:border-t
+                    md:items-center
+                    gap-5
+                    md:flex-row
+                    flex-col
+                    items-start
+                  "
                 >
                   <div
                     className="
@@ -157,7 +157,7 @@ export default async function RecentNews() {
                   </div>
 
                   <div className="flex flex-col gap-4">
-                    <Link href={`company/blog/${slug}`}>
+                    <Link href={`company/resources/${slug}`}>
                       <h2 className="[font-size:_clamp(16px,1.5vw,24px)] font-bold -tracking-[0.24] hover:text-base-red">
                         {title.slice(0, 1).toUpperCase() +
                           title.slice(1).toLowerCase()}
@@ -176,7 +176,7 @@ export default async function RecentNews() {
               );
             }
           )}
-          <Link href="company/blog" className="mt-10 mx-auto">
+          <Link href="company/resources" className="mt-10 mx-auto">
             <Button style="outline" showArrow>
               <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">
                 {MAIN_PAGE_NEWS_READ_ALL}

@@ -1,4 +1,4 @@
-import { BlogPosts } from "@/app/[locale]/company/blog/types";
+import { BlogPosts } from "@/app/[locale]/company/resources/types";
 
 export const BLOG_READ_THOUGHTS = "Read Our Thoughts";
 export const BLOG_ON_THE_BLOG = "On the Blog";
