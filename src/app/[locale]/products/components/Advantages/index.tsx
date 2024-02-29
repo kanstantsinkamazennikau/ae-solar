@@ -1,5 +1,6 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Tier1 from "@/app/[locale]/components/common/Tier1";
+import Starfield from "@/app/[locale]/products/components/StarField";
 import {
   PRODUCT_ADVANTAGES,
   PRODUCT_SINCE,
@@ -18,16 +19,25 @@ export default function Advantages() {
         lg:mb-[120px]
         md:mb-[100px]
         mb-[80px]
+        overflow-hidden
       "
     >
-      <Image
+      {/* <Image
         src={`/images/products/advantagesBackStars.svg`}
         alt="AdvantagesBackStars"
         width={1920}
         height={1080}
         priority
         className={`absolute top-0 h-full object-cover`}
-      />
+      /> */}
+      <div className={`relative top-0 h-full object-cover overflow-hidden`}>
+        <Starfield
+          starCount={1000}
+          starColor={[255, 255, 255]}
+          speedFactor={0.02}
+          backgroundColor="black"
+        />
+      </div>
 
       <Tier1
         tier1TextStyle="text-[#F60109]"

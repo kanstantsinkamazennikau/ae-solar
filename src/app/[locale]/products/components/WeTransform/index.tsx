@@ -8,6 +8,7 @@ import {
   PRODUCT_WE_TRANSFORM_SUNLIGHT,
 } from "@/app/[locale]/products/constants";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
+import Image from "next/image";
 
 export default function WeTransform() {
   return (
@@ -131,6 +132,14 @@ export default function WeTransform() {
               )
             )}
           </div>
+          <Image
+            src={`/images/products/weTransformPathes.svg`}
+            alt="weTransformPathes"
+            priority
+            width={540}
+            height={540}
+            className="absolute left-0 bottom-0 max-lg:max-h-[300px] max-lg:max-w-[300px]"
+          />
 
           <div
             className="

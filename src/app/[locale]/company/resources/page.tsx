@@ -106,15 +106,13 @@ export default async function Blog({
       <div className="flex w-full justify-center flex-col items-center md:mt-0 -mt-[60px] pb-20">
         <BasicWidthContainer>
           <div className="flex gap-[60px] justify-between">
-            <Suspense fallback={<Loader />}>
-              <div className="flex flex-col">
-                <TagsFilter tags={tags as string[]} />
-                <BlogPostsList
-                  currentPage={currentPage}
-                  searchParamsTags={searchParamsTags}
-                />
-              </div>
-            </Suspense>
+            <div className="flex flex-col">
+              <TagsFilter tags={tags as string[]} />
+              <BlogPostsList
+                currentPage={currentPage}
+                searchParamsTags={searchParamsTags}
+              />
+            </div>
             <div className="hidden flex-col gap-[60px] w-full max-w-[315px] min-[920px]:flex">
               {/* <MostPopularPosts /> */}
               <RecentPosts />

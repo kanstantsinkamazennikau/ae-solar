@@ -5,6 +5,7 @@ import {
 } from "@/app/[locale]/company/resources/components/BlogPostsList/types";
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/resources/constants";
 import { getDocumentSlugs, getDocuments, load } from "outstatic/server";
+import { useEffect } from "react";
 
 export async function generateStaticParams() {
   const blogs = getDocumentSlugs("blog");
@@ -51,7 +52,9 @@ export default async function BlogPostsList({
   searchParamsTags,
 }: BlogPostsListProps) {
   const blogPosts = await getBlogPosts(currentPage, searchParamsTags);
+  //  useEffect(() => {
 
+  //  },)
   return (
     <div className="flex flex-col w-full max-w-[945px]">
       {blogPosts.map(
