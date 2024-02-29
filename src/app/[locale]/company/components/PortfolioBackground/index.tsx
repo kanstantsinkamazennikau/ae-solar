@@ -4,38 +4,46 @@ import {
   ABOUT_OUR_GOES_BEYOND,
   ABOUT_OUR_PORTFOLIO,
 } from "@/app/[locale]/company/constants";
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import {
-  CONSTRUCTOR_CONFIGURE_YOUR_MODEL,
-  HEADER_CONFIGURE_YOUR_MODEL,
-} from "@/app/[locale]/utils/constants";
+import { CONSTRUCTOR_CONFIGURE_YOUR_MODEL } from "@/app/[locale]/utils/constants";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
-import Image from "next/image";
 
 export default function PortfolioBackground() {
   return (
-    <div className="xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[80px] flex justify-center items-start -mt-20">
-      {/* <BasicWidthContainer> */}
-      <div className="relative flex justify-center">
-        <Image
-          src="/images/about/portfolioBackground.png"
-          alt="solar panel"
-          priority
-          width={1320}
-          height={720}
-          className="max-md:h-[540px] object-cover"
-        />
-        <div className="flex flex-col items-start md:gap-10 gap-8 absolute top-1/2 -translate-y-1/2 right-0">
+    <div className="xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[60px] flex justify-center items-start max-w-[1360px] mx-auto">
+      <div className="relative flex items-center md:justify-end justify-center overflow-hidden">
+        <div className="fade-strip-left max-lg:!w-[100px] md:block hidden" />
+        <video
+          width="1320"
+          height="700"
+          autoPlay
+          muted
+          className="relative md:-left-[240px] min-h-[430px] object-cover"
+        >
+          <source src={`/videos/products/HeaderFlower.mp4`} type="video/mp4" />
+        </video>
+        <div
+          className="
+            flex
+            flex-col
+            md:items-start
+            items-center
+            md:gap-10
+            gap-8
+            absolute
+            px-5
+          "
+        >
           <div
             className="
               flex
               2xl:max-w-[650px]
               xl:max-w-[600px]
               lg:max-w-[550px]
-              md:max-w-[550px]
+              md:max-w-[450px]
+              max-w-[400px]
               flex-col
-              items-start
+              md:items-start
               md:gap-8
               gap-6
             "
@@ -47,6 +55,7 @@ export default function PortfolioBackground() {
                   font-medium
                   [font-size:_clamp(20px,3.5vw,36px)]
                   capitalize
+                  max-md:text-center
                   md:-tracking-[1.08px]
                   text-base-red
                 "
@@ -59,6 +68,7 @@ export default function PortfolioBackground() {
                   font-semibold
                   [font-size:_clamp(32px,3.5vw,64px)]
                   capitalize
+                  max-md:text-center
                   md:-tracking-[1.92px]
                   -tracking-[1.08px]
                 "
@@ -72,6 +82,7 @@ export default function PortfolioBackground() {
                   font-walsheim
                   leading-[150%]
                   [font-size:_clamp(16px,1.5vw,24px)]
+                  max-md:text-center
                 "
             >
               {styleMatchingText(
@@ -89,7 +100,6 @@ export default function PortfolioBackground() {
           </Button>
         </div>
       </div>
-      {/* </BasicWidthContainer> */}
     </div>
   );
 }

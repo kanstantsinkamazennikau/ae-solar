@@ -7,6 +7,7 @@ interface Props {
   backgroundColor?: string;
   starColor?: [number, number, number];
   starCount?: number;
+  style?: string;
 }
 
 export default function Starfield(props: Props) {
@@ -15,6 +16,7 @@ export default function Starfield(props: Props) {
     backgroundColor = "black",
     starColor = [255, 255, 255],
     starCount = 5000,
+    style = "fixed",
   } = props;
 
   useEffect(() => {
@@ -144,11 +146,10 @@ export default function Starfield(props: Props) {
   return (
     <canvas
       id="starfield"
-      className="overflow-hidden"
+      className={`overflow-hidden ${style}`}
       style={{
         padding: 0,
         margin: 0,
-        position: "fixed",
         width: "100%",
         top: 0,
         right: 0,

@@ -37,8 +37,8 @@ export default function Tier1({
           xl:mb-[180px]
           lg:mb-[140px]
           md:mb-[100px]
-          py-20
           mb-[80px]
+          py-20
           w-full
           mx-auto
           gap-4

@@ -24,3 +24,24 @@ export const ABOUT_OUR_GOES_BEYOND = "Goes beyond standard products";
 export const ABOUT_OUR_DESIGN =
   "We design advanced solar panels and groundbreaking energy storage solutions, fostering an environmentally conscious future while maximizing your return on investment.";
 export const ABOUT_OUR_DESIGN_HIGHLIGHT = ["We design advanced solar panels"];
+
+export const ABOUT_EXPLORE_HEADER = [
+  `Solar Solutions
+for Everyone`,
+  `AE Solar
+Quality Promise`,
+  `German
+Engineering`,
+];
+export const ABOUT_EXPLORE_CENTER = `Explore Our
+Difference`;
+export const ABOUT_EXPLORE_FOOTER = [
+  `Power of
+Innovation`,
+  `Unmatched 
+Durability Meets
+Elegant Design
+`,
+  `Our Commitment
+to You`,
+];

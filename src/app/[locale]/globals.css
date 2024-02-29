@@ -133,6 +133,30 @@ body {
   border-radius: 3px;
 }
 
+.gradient-border-mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      144deg,
+      #f60109 0%,
+      rgb(49 9 10 / 73%) 27%,
+      rgb(49 9 10 / 73%) 51%,
+      rgb(246 1 9 / 10%) 80%,
+      #f60109 100%
+    )
+    border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
 .fade-strip-horizontal {
   @apply from-fade-start-color to-fade-end-color w-full h-[250px] max-w-full absolute z-30;
 }

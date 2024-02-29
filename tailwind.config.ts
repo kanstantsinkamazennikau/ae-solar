@@ -22,6 +22,8 @@ const config: Config = {
         bens: "0px 140px 200px -80px rgba(246, 1, 9, 0.30), 0px 40px 80px -50px rgba(246, 1, 9, 0.70)",
         product:
           "0px 140px 200px -80px rgba(246, 1, 9, 0.30), 0px 40px 80px -50px rgba(246, 1, 9, 0.70)",
+        difference:
+          "0 2px 1px rgb(203 33 33 / 40%), 0 4px 2px rgba(203 33 33 / 14%), 0 8px 4px rgba(203 33 33 / 14%), 0 16px 8px rgba(203 33 33 / 14%), 0 0px 2px rgba(203 33 33 / 14%)",
       },
       backgroundColor: {
         "get-in-touch": "rgba(49, 49, 49, 0.10)",

@@ -16,6 +16,12 @@ import {
   ABOUT_SYNONYMOUS,
   ABOUT_SYNONYMOUS_HIGHLIGHT,
 } from "@/app/[locale]/company/constants";
+import Stats from "@/app/[locale]/components/AwardsAndStats/Stats";
+import Awards from "@/app/[locale]/components/AwardsAndStats/Awards";
+import Image from "next/image";
+import CompanyStats from "@/app/[locale]/company/components/CompanyStats";
+import ExploreOurDifference from "@/app/[locale]/company/components/ExploreOurDifference";
+import BusinessMap from "@/app/[locale]/company/components/BusinessMap";
 
 export default function About() {
   return (
@@ -23,6 +29,14 @@ export default function About() {
       <HeroSection />
       <BornInGermany />
       <Tier1
+        externalStyle="
+          md:!py-20
+          !py-14
+          xl:!mb-[160px]
+          lg:!mb-[100px]
+          md:!mb-[60px]
+          !mb-[0px]
+        "
         tier1Text={ABOUT_AS_A_TIER}
         tier1TextHighlight={ABOUT_AS_A_TIER_HIGHLIGHT}
         descriptionText={ABOUT_SYNONYMOUS}
@@ -30,25 +44,27 @@ export default function About() {
       />
       <PortfolioBackground />
       <GlobalImpact />
+      <CompanyStats />
       <JoinOurMission />
       <BasicWidthContainer styles="mx-auto">
         <div
           className="
-          xl:mb-[180px]
-          lg:mb-[140px]
-          md:mb-[100px]
-          mb-[80px]
-          xl:mt-[180px]
-          lg:mt-[140px]
-          md:mt-[100px]
-          mt-[80px]
-        "
+            xl:mb-[180px]
+            lg:mb-[140px]
+            md:mb-[100px]
+            mb-[80px]
+            xl:mt-[180px]
+            lg:mt-[140px]
+            md:mt-[100px]
+            mt-[80px]
+          "
         >
           <FeaturedProducts />
         </div>
       </BasicWidthContainer>
+      <ExploreOurDifference />
 
-      {/* <BusinessMap /> */}
+      <BusinessMap />
       <OurHistory />
 
       <GetInTouch />
@@ -58,94 +74,6 @@ export default function About() {
 
       {/* <SequenceAnimation /> */}
       {/* <SequenceAnimation2 /> */}
-
-      {/* <BasicWidthContainer styles="mx-auto z-30 relative -top-[64px]">
-      <div
-        className="
-          flex
-          flex-col
-          md:gap-20
-          lg:gap-14
-          gap-10
-          xl:mb-[180px]
-          lg:mb-[140px]
-          md:mb-[100px]
-          mb-[80px]
-          relative
-          mt-[60px]
-          md:py-[60px]
-          py-[36px]
-          bg-[linear-gradient(0deg,_rgb(0_0_0_/_50%),_rgb(0_0_0_/_50%)),_linear-gradient(0deg,_#19191947,_#19191947)]
-          border
-          border-solid
-          border-[#191919]
-          overflow-hidden
-        "
-      >
-        <Image
-          src="/images/awards/dividerSmall.svg"
-          alt="dividerSmall"
-          width={30}
-          height={30}
-          className="absolute top-0 left-0"
-        />
-        <div
-          className="
-          flex
-          md:pt-10
-          md:pb-20
-          pt-0
-          pb-10
-          border-b
-          border-solid
-          border-[#191919]
-          max-w-[1100px]
-          self-center
-          md:items-center
-          px-5
-          gap-4
-          md:flex-row
-          flex-col
-          justify-center
-        "
-        >
-          <div
-            className="
-              font-semibold
-              leading-[110%]
-              [font-size:_clamp(36px,3.5vw,64px)]
-              -tracking-[1.92px]
-              max-w-[426px]
-              w-full
-              md:text-center
-            "
-          >
-            {ABOUT_AS_A_TIER}
-          </div>
-          <div
-            className="
-              font-medium
-              leading-[150%]
-              [font-size:_clamp(16px,1.5vw,24px)]
-              font-walsheim
-              max-w-[650px]
-              md:text-center
-            "
-          >
-            {ABOUT_SYNONYMOUS}
-          </div>
-        </div>
-        <Stats />
-        <Awards />
-        <Image
-          src="/images/awards/dividerBig.svg"
-          alt="dividerBig"
-          width={300}
-          height={300}
-          className="absolute bottom-0 right-0 pointer-events-none z-10"
-        />
-      </div>
-    </BasicWidthContainer> */}
     </>
   );
 }
