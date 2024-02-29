@@ -61,7 +61,7 @@ export default function HeadingWithBackground({
                   font-medium
                   leading-[100%]
                   -tracking-[1.92]
-                  text-base-red
+                  text-[#B30006]
                 "
               >
                 {tierTwoHeading}

@@ -3,7 +3,6 @@
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/resources/constants";
 import { DOTS, usePagination } from "@/app/[locale]/hooks/usePagination";
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function BlogPostPagination({

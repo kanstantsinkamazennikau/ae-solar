@@ -48,7 +48,7 @@ export default function Filter() {
             max-[920px]:mb-2
           "
         >
-          <div>{DOCUMENTS_FILTER}</div>
+          <div className="text-[#505050]">{DOCUMENTS_FILTER}</div>
           {!!filterModels.length && (
             <Button
               style="textOnly"

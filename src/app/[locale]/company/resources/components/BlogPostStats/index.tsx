@@ -2,7 +2,6 @@ import { PostStatsProps } from "@/app/[locale]/company/resources/components/Blog
 import Image from "next/image";
 
 const statisticsParamsWithIconsMapping = {
-  publishedAt: "calendar",
   readingTime: "time",
   author: "author",
 };
@@ -22,10 +21,8 @@ export default function BlogPostStats({
         flex
         [&>*:last-child]:border-none
         [&>*:first-child]:pl-0
-        md:[&>*:first-child]:flex
-        [&>*:first-child]:hidden
+        [&>*:first-child]:flex
         md:[&>*:nth-child(2)]:pl-4
-        [&>*:nth-child(2)]:pl-0
       "
     >
       {Object.keys(statisticsParamsWithIconsMapping).map((statParam) => (
@@ -51,7 +48,7 @@ export default function BlogPostStats({
             height={16}
             className="mr-1"
           />
-          <span className="[font-size:_clamp(10px,1vw,14px)] font-bold font-walsheim text-dark-gray-900 leading-[100%]">
+          <span className="[font-size:_clamp(12px,1vw,14px)] font- font-walsheim text-dark-gray-900 leading-[100%]">
             {statistics[statParam as keyof typeof statistics] ||
               defaultValues[statParam as keyof typeof defaultValues]}
           </span>

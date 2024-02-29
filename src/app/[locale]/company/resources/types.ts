@@ -19,3 +19,7 @@ export interface BlogPosts {
     block?: BlogPostBlockData[];
   }[];
 }
+
+export interface TagsFilterProps {
+  tags: string[];
+}

@@ -1,6 +1,5 @@
 export interface PostStatsProps {
   statistics: {
-    publishedAt: string;
     readingTime?: string;
     author?: string;
   };
