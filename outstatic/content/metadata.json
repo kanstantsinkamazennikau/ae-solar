@@ -1,6 +1,6 @@
 {
-  "commit": "22f674626a106bab0682569edda38c84f94b6b42",
-  "generated": "2024-02-29T09:08:23.601Z",
+  "commit": "a261c4c6ed4bed5dad36492d9b281e6d279efb89",
+  "generated": "2024-02-29T09:08:39.595Z",
   "metadata": [
     {
       "__outstatic": {
@@ -850,24 +850,6 @@
     },
     {
       "__outstatic": {
-        "commit": "a225f9f1dfb5dd0ed65738bdd8fc6e819bb75e2b",
-        "hash": "2405004668",
-        "path": "outstatic/content/blog/will-the-eu-really-be-carbon-neutral-by-2050.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-07T14:53:32.193Z",
-      "slug": "will-the-eu-really-be-carbon-neutral-by-2050",
-      "status": "published",
-      "title": "WILL THE EU REALLY BE CARBON NEUTRAL BY 2050?"
-    },
-    {
-      "__outstatic": {
         "commit": "22f674626a106bab0682569edda38c84f94b6b42",
         "hash": "1262105865",
         "path": "outstatic/content/blog/11.md"
@@ -884,6 +866,25 @@
       "status": "published",
       "tag": "blog",
       "title": "GLOBAL EMPLOYMENT GROWTH IN RENEWABLE INDUSTRY: A BRIGHT FUTURE AHEAD"
+    },
+    {
+      "__outstatic": {
+        "commit": "a261c4c6ed4bed5dad36492d9b281e6d279efb89",
+        "hash": "123683768",
+        "path": "outstatic/content/blog/will-the-eu-really-be-carbon-neutral-by-2050.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T14:53:32.193Z",
+      "slug": "will-the-eu-really-be-carbon-neutral-by-2050",
+      "status": "published",
+      "tag": "news",
+      "title": "WILL THE EU REALLY BE CARBON NEUTRAL BY 2050?"
     }
   ]
 }
