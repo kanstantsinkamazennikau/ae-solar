@@ -1,6 +1,6 @@
 {
-  "commit": "a261c4c6ed4bed5dad36492d9b281e6d279efb89",
-  "generated": "2024-02-29T09:08:39.595Z",
+  "commit": "63db757e4e7d398b7e6ea7bfa3b398868ce57064",
+  "generated": "2024-02-29T09:55:49.685Z",
   "metadata": [
     {
       "__outstatic": {
@@ -832,24 +832,6 @@
     },
     {
       "__outstatic": {
-        "commit": "e5f2e300f9c28e74004d1a44f45fab103e100911",
-        "hash": "2300508726",
-        "path": "outstatic/content/blog/ae-solar-listed-as-tier-1-pv-module-manufacturer-by-bloombergnef.md"
-      },
-      "author": {
-        "name": "Yan Prysovetskyi",
-        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
-      },
-      "collection": "blog",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-02-07T14:49:57.779Z",
-      "slug": "ae-solar-listed-as-tier-1-pv-module-manufacturer-by-bloombergnef",
-      "status": "published",
-      "title": "AE SOLAR LISTED AS TIER 1 PV MODULE MANUFACTURER BY BLOOMBERGNEF"
-    },
-    {
-      "__outstatic": {
         "commit": "22f674626a106bab0682569edda38c84f94b6b42",
         "hash": "1262105865",
         "path": "outstatic/content/blog/11.md"
@@ -885,6 +867,25 @@
       "status": "published",
       "tag": "news",
       "title": "WILL THE EU REALLY BE CARBON NEUTRAL BY 2050?"
+    },
+    {
+      "__outstatic": {
+        "commit": "63db757e4e7d398b7e6ea7bfa3b398868ce57064",
+        "hash": "478242494",
+        "path": "outstatic/content/blog/ae-solar-listed-as-tier-1-pv-module-manufacturer-by-bloombergnef.md"
+      },
+      "author": {
+        "name": "Yan Prysovetskyi",
+        "picture": "https://avatars.githubusercontent.com/u/114078546?v=4"
+      },
+      "collection": "blog",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-02-07T14:49:57.779Z",
+      "slug": "ae-solar-listed-as-tier-1-pv-module-manufacturer-by-bloombergnef",
+      "status": "published",
+      "tag": "news",
+      "title": "AE SOLAR LISTED AS TIER 1 PV MODULE MANUFACTURER BY BLOOMBERGNEF"
     }
   ]
 }

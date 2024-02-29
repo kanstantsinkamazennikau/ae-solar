@@ -7,16 +7,13 @@ author:
 slug: 'ae-solar-listed-as-tier-1-pv-module-manufacturer-by-bloombergnef'
 description: ''
 coverImage: ''
+tag: 'news'
 publishedAt: '2024-02-07T14:49:57.779Z'
 ---
 
 AE Solar has once again been ranked among the Tier 1 PV module manufacturers in BloombergNEF's 2023 Q3 report. As the world's leading PV module manufacturer, this is the 11th consecutive time that AE Solar has been included in the list since Q1 2021.
 
- 
-
 ![](https://ae-solar.com/wp-content/uploads/2023/08/Q-BNEF_1200px-1024x536.jpg)
-
- 
 
 BloombergNEF's ranking system for Tier 1 module manufacturers has always been strict, and in order to be included on the list, the manufacturer must have supplied in-house manufactured PV modules to projects financed on a non-recourse basis by six different banks over the past two years. This selection mechanism provides a strong indication of the fundability of the selected manufacturers and provides a trusted reference for the market.
 
@@ -25,8 +22,6 @@ BloombergNEF's ranking system for Tier 1 module manufacturers has always been st
 'It is the result of our continued commitment to R&D and technological innovation, as well as the continuous improvement of our production processes and quality management. As a PV module manufacturer, we understand the importance of energy transition and sustainable development. Our mission is to contribute to the development of global clean energy and provide customers with efficient and reliable solutions.'
 
 'Being selected in this list, we would also like to thank our many partners and customers for their long-term support and trust in us, and we hope that AE Solar can continue to work hand in hand with everyone in the future to drive the development of the entire PV industry.'
-
- 
 
 **About AE Solar**
 
