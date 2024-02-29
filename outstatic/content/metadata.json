@@ -1,6 +1,6 @@
 {
-  "commit": "5f02bf5d92d9584571d55b1832d4457c69f4dc5b",
-  "generated": "2024-02-07T14:51:50.907Z",
+  "commit": "22f674626a106bab0682569edda38c84f94b6b42",
+  "generated": "2024-02-29T09:08:23.601Z",
   "metadata": [
     {
       "__outstatic": {
@@ -868,8 +868,8 @@
     },
     {
       "__outstatic": {
-        "commit": "5f02bf5d92d9584571d55b1832d4457c69f4dc5b",
-        "hash": "4269208915",
+        "commit": "22f674626a106bab0682569edda38c84f94b6b42",
+        "hash": "1262105865",
         "path": "outstatic/content/blog/11.md"
       },
       "author": {
@@ -882,6 +882,7 @@
       "publishedAt": "2024-02-07T14:57:34.575Z",
       "slug": "11",
       "status": "published",
+      "tag": "blog",
       "title": "GLOBAL EMPLOYMENT GROWTH IN RENEWABLE INDUSTRY: A BRIGHT FUTURE AHEAD"
     }
   ]
