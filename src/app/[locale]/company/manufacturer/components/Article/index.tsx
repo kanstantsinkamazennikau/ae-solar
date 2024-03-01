@@ -24,8 +24,10 @@ const ArticleParagraph = ({ paragraph }: { paragraph: string }) => {
   );
 };
 
-const ImagesSlider = () => {
-  const [index, setIndex] = useState(0);
+const ImagesSlider = ({ images }: { images: string[] }) => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [scrollStarted, setScrollStarted] = useState(false);
+
   const mainOptions: Options = {
     type: "loop",
     perPage: 1,
@@ -38,62 +40,57 @@ const ImagesSlider = () => {
   const mainRef = useRef<Splide>(null);
 
   const handleThumbs = (id: number) => {
-    setIndex(id);
+    setSlideIndex(id);
     if (mainRef.current) {
       mainRef.current.go(id);
     }
   };
 
-  const images = [
-    "Img.png",
-    "Img1.png",
-    "Img2.png",
-    "Img3.png",
-    "Img4.png",
-    "Img5.png",
-    "Img6.png",
-    "Img7.png",
-  ];
+  const handleClickScroll = () => {
+    if (!scrollStarted) return;
+    const element = document.getElementById(images[slideIndex]);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+      });
+    }
+  };
 
   useEffect(() => {
-    console.log(index);
-
-    if (index > images.length - 1) {
-      if (mainRef.current) {
-        mainRef.current.go(0);
-        setIndex(0);
-        return;
-      }
+    handleClickScroll();
+    if (slideIndex > images.length - 1) {
+      mainRef?.current?.go(0);
+      setSlideIndex(0);
+      return;
     }
 
-    if (index < 0) {
-      if (mainRef.current) {
-        mainRef.current.go(images.length - 1);
-        setIndex(images.length - 1);
-        return;
-      }
+    if (slideIndex < 0) {
+      mainRef?.current?.go(images.length - 1);
+      setSlideIndex(images.length - 1);
+      return;
     }
+
     if (mainRef.current) {
-      mainRef.current.go(index);
+      setScrollStarted(true);
+      mainRef?.current?.go(slideIndex);
     }
-  }, [images.length, index]);
+  }, [images.length, slideIndex]);
 
   const nextSlide = () => {
-    setIndex((prevState) => prevState + 1);
+    setScrollStarted(true);
+    setSlideIndex((prevState) => prevState + 1);
   };
 
   const prevSlide = () => {
-    setIndex((prevState) => prevState - 1);
+    setScrollStarted(true);
+    setSlideIndex((prevState) => prevState - 1);
   };
 
   return (
     <div className="flex gap-4 xl:h-[360px] xl:flex-row flex-col max-xl:max-w-[650px]">
-      <Splide
-        options={mainOptions}
-        ref={mainRef}
-        className="max-w-[650px]"
-        key={"test"}
-      >
+      <Splide options={mainOptions} ref={mainRef} className="max-w-[650px]">
         {images.map((image) => (
           <SplideSlide key={image}>
             <Image
@@ -114,52 +111,38 @@ const ImagesSlider = () => {
           quality={100}
           width={16}
           height={16}
-          className="xl:-rotate-90 rotate-180 cursor-pointer"
+          className="xl:-rotate-90 rotate-180 cursor-pointer mb-1 mr-1"
           onClick={prevSlide}
         />
-        <div className="overflow-hidden ">
+        <div className="xl:overflow-y-scroll max-xl:overflow-x-scroll sliderScroll flex ">
           <div
-            className={`transition-all duration-300 max-xl:hidden xl:block [transform:translateY(-${
-              index * 56
-            }px)]`}
-            style={{
-              transform: `translateY(-${index * 56}px)`,
-            }}
+            className={`transition-all duration-300 max-xl:inline-flex max-xl:max-w-[320px] max-xl:w-auto xl:gap-0 gap-4 p-0 flex xl:flex-col flex-row `}
           >
             {images.map((thumbnail, index) => (
-              <div key={index} id={index.toString()}>
-                <button onClick={() => handleThumbs(index)}>
-                  <Image
-                    src={`/images/about/manufacturer/${thumbnail}`}
-                    alt="articleImg1"
-                    quality={100}
-                    width={100}
-                    height={100}
-                  />
-                </button>
-              </div>
-            ))}
-          </div>
-          <div
-            className={`transition-all duration-300 max-xl:flex hidden [transform:translateY(-${
-              index * 56
-            }px)]`}
-            style={{
-              transform: `translateX(-${index * 56}px)`,
-            }}
-          >
-            {images.map((thumbnail, index) => (
-              <div key={index} id={index.toString()}>
-                <button onClick={() => handleThumbs(index)}>
-                  <Image
-                    src={`/images/about/manufacturer/${thumbnail}`}
-                    alt="articleImg1"
-                    quality={100}
-                    width={100}
-                    height={100}
-                  />
-                </button>
-              </div>
+              <button
+                onClick={() => handleThumbs(index)}
+                key={index}
+                id={thumbnail}
+                className={`
+                  max-xl:shrink-0
+                  
+                  shrink-0
+                  mb-[1px]
+                  h-[70px]
+                `}
+              >
+                <Image
+                  src={`/images/about/manufacturer/${thumbnail}`}
+                  alt="articleImg1"
+                  quality={100}
+                  width={100}
+                  height={100}
+                  className={`object-contain rounded-lg h-[55px] opacity-60 ${
+                    index === slideIndex &&
+                    "border border-solid border-[#B30006] object-cover rounded-lg !opacity-100 [box-shadow:0px_4px_12px_0px_rgba(246,1,9,0.60)]"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>
@@ -169,7 +152,7 @@ const ImagesSlider = () => {
           quality={100}
           width={16}
           height={16}
-          className="xl:rotate-90 cursor-pointer"
+          className="xl:rotate-90 cursor-pointer mt-1 ml-1"
           onClick={nextSlide}
         />
       </div>
@@ -179,7 +162,7 @@ const ImagesSlider = () => {
 
 export default function Artcile() {
   return (
-    <div className="flex flex-col gap-[30px] w-full max-[920px]:mx-auto">
+    <div className="flex flex-col gap-[30px] w-full max-[920px]:mx-auto max-xl:max-w-[650px]">
       {MANUFACTURER_ARTICLE.map(({ paragraphHeading, paragraphs }) => (
         <Fragment key={paragraphHeading}>
           <ArtcileHeading heading={paragraphHeading} />
@@ -188,7 +171,8 @@ export default function Artcile() {
               return (
                 <ArticleParagraph paragraph={paragraph.value} key={index} />
               );
-            if (paragraph.type === "image") return <ImagesSlider key={index} />;
+            if (paragraph.type === "image")
+              return <ImagesSlider key={index} images={paragraph.src} />;
           })}
         </Fragment>
       ))}

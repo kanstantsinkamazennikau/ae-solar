@@ -133,6 +133,10 @@ body {
   border-radius: 3px;
 }
 
+.sliderScroll::-webkit-scrollbar {
+  display: none;
+}
+
 .gradient-border-mask::before {
   content: "";
   position: absolute;

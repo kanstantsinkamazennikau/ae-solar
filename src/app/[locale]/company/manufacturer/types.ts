@@ -7,10 +7,10 @@ export interface ManufacturerArticle {
       }
     | {
         type: "image";
-        width: number;
-        height: number;
+        width?: number;
+        height?: number;
         src: string[];
-        style: string;
+        style?: string;
         mobileSrc?: string[];
         mobileStyle?: string;
       }

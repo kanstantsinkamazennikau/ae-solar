@@ -4,49 +4,43 @@ export const MANUFACTURER_MANUFACTURER = "Manufacturer";
 export const MANUFACTURER_QUALITY = "Quality Delivered Everytime";
 export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
   {
-    paragraphHeading: "General Infomation",
+    paragraphHeading: "Exploring Our History: Delve into Our Roots and Values",
     paragraphs: [
       {
         type: "text",
-        value: `Professional and experienced management, the best bill of materials, and the highest quality standards make AE Solar manufacturing brand of what we call German Quality. Being an international company we have inhouse manufacturing facilities, offices, branches around the globe, and at the same time we preserve in the company philosophy of our roots, <strong>family-owned company in Bavaria</strong>—the commitment to the uncompromising quality of our products and services with attention to all details.`,
-      },
-      {
-        type: "text",
-        value: `<strong>We have 2 GW annual capacity</strong>, our manufacturing facilities are equipped with the latest generation automated and robotized production lines located at a total area of 32 000 sq. m. We are proud of our manufacturing standards and are always open for site visits of our customers. To arrange a site visit and manufacturing process training please <a href="/consult" style="color: #F60109">contact us</a> or our distributors.`,
+        value: `In a world where sustainable energy is no longer a luxury but a necessity, AESOLAR stands as a beacon of hope. With our roots firmly planted in the rich heritage of German engineering, we illuminate the path to a future powered by the sun. Our mantra is simple yet powerful— It's time to save the world. And that time is now.`,
       },
       {
         type: "image",
-        width: 655,
-        height: 240,
-        src: ["articleImg1.png", "articleImg2.png", "articleImg3.png"],
-        mobileSrc: ["articleImg1Mobile.png"],
-        mobileStyle: "w-[328px] h-[240px]",
-        style: "md:w-full md:h-full",
+        src: ["Img.png", "Img1.png"],
+      },
+      {
+        type: "text",
+        value: `Since our inception by Dr. Alexander Maier and his visionary brothers in 2003, AESOLAR has been steadfastly working on this mission. Being a TIER1 company, we are dedicated to providing state-of-the-art, top-quality photovoltaic modules that are the paragons of stability, durability, and reliability. Yet, we never rest on our laurels. Our relentless quest for innovation constantly propels us to scale new heights in technology and extend our industry chain.`,
+      },
+      {
+        type: "text",
+        value: `At AESOLAR, we don't just manufacture solar modules; we bring you the promise of a cleaner, brighter future. Our comprehensive solutions and efficient services are designed to maximize your return on investment, lower the Levelized cost of electricity (LCOE), and minimize your carbon footprint.`,
+      },
+      {
+        type: "image",
+        src: [
+          "Img2.png",
+          "Img3.png",
+          "Img4.png",
+          "Img5.png",
+          "Img6.png",
+          "Img7.png",
+        ],
+      },
+      {
+        type: "text",
+        value: `Through our global network, we offer innovative products and solutions suitable for all customer applications. Our projects span the globe, serving as a testament to our commitment to renewable energy. We firmly believe that clean energy should be as ubiquitous and easily accessible as sunlight, illuminating the path towards a sustainable future.`,
+      },
+      {
+        type: "text",
+        value: `Every sunrise brings a new day and new opportunities. At AESOLAR, we're not just witnessing the dawn of a new era in renewable energy; we're leading it. Harness the power of the sun with us and join our mission to save the world. Because every ray of sunlight we capture today leads us one step closer to a sustainable tomorrow.`,
       },
     ],
   },
-  // {
-  //   paragraphHeading: "Quality",
-  //   paragraphs: [
-  //     {
-  //       type: "text",
-  //       value: `Automation helps us to provide precise assembly, avoid defects, and lower down the costs by speeding processes to achieve proper price to quality ratio. All production lines are controlled by centralized software and each robot and machine detects and reports any malfunction online, so our engineers and operators can instantly react. Manufacturing buildings are equipped with full temperature, humidity, and dust control equipment.`,
-  //     },
-  //     {
-  //       type: "text",
-  //       value: `Areas of storage, warehouses, offices, and other facilities are separated and isolated from the manufacturing room to get the best quality performance. Each assembly stage ends up with a quality check to make sure that internal defects like micro-cracks, black spots, mixed cells of different efficiency, processing defects, insufficient soldering, internal foreign materials, cell gaps, corner defects, breakages, scratches, ribbon misalignments will not be passed to the next stage. Our testing stations comply with AAA+ standards and label marking of output after final flash testing and sorting is done only at positive tolerance.`,
-  //     },
-  //     {
-  //       type: "image",
-  //       width: 323,
-  //       height: 240,
-  //       src: ["articleImg2.png", "articleImg3.png"],
-  //       style: "md:max-w-[49%]",
-  //     },
-  //     {
-  //       type: "text",
-  //       value: `All manufacturing facilities, production processes, and products have been revised, tested, certified, and approved by certification bodies to comply with the most strict international standards of quality, management system, safety, and industry standards to consistently provide products and services that meet customer and regulatory requirements.`,
-  //     },
-  //   ],
-  // },
 ];
