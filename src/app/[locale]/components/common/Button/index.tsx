@@ -8,11 +8,11 @@ const buttonStyle = (style: string | undefined) => {
     case "transparent":
       return "border-[3px] border-solid border-[#606060] bg-transparent";
     case "outline":
-      return "border-[3px] border-solid border-base-red bg-transparent";
+      return "border-[3px] border-solid border-base-red bg-transparent hover:bg-[#3E0002]";
     case "secondary":
       return "bg-white text-black";
     case "textOnly":
-      return "bg-transparent";
+      return "!bg-transparent border-none";
     default:
       return "";
   }
@@ -21,7 +21,7 @@ const buttonStyle = (style: string | undefined) => {
 const buttonSize = (size: string) => {
   switch (size) {
     case "regular":
-      return "px-8 py-6 text-lg";
+      return "px-[26px] py-[16px] text-lg";
     case "small":
       return "xl:px-6 xl:py-3 lg:px-4 lg:py-3 px-2 py-3";
     case "extrasmall":
@@ -55,8 +55,13 @@ export default function Button({
         disabled:cursor-not-allowed
         rounded-full
         hover:opacity-90
+        hover:bg-[#3E0002]
         transition
         bg-base-red
+        border-solid
+        border-[3px]
+        disabled:border-[#2D2D2D]
+        border-base-red
         ${buttonSize(size)}
         ${buttonStyle(style)}
         flex

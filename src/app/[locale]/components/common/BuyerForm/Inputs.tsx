@@ -277,8 +277,7 @@ export default function BuyerForm({
       <Button
         onClick={handleSubmit}
         showArrow
-        size="normal"
-        externalStyle="min-[640px]:w-fit w-full"
+        externalStyle="min-[640px]:w-fit w-full !py-[14px] !px-[26px]"
         disabled={!agreement}
       >
         {CHECKOUT_SEND_REQUEST}

@@ -88,7 +88,7 @@ export const SOLUTIONS_JOIN = "Join";
 export const SOLUTIONS_OUR_MISSION = "Our Mission";
 export const SOLUTIONS_OUR_MISSION_TEXT = `With each sunrise, we take another step towards a sustainable future. Every ray of sunlight we harness through our solar modules brings us closer to a cleaner world. 
 It's time to save the world—together, one ray at a time.`;
-export const SOLUTIONS_CONTACTS_US = "Contact us for a Sustainable Future";
+export const SOLUTIONS_CONTACTS_US = "Contact Us for a Sustainable Future";
 
 export const SOLUTIONS_STATS_WITH_DETAILS = [
   { stat: "20+", details: "years of expertise" },

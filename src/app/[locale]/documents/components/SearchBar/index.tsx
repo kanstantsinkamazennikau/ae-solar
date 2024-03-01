@@ -79,7 +79,7 @@ export default function SearchBar() {
             />
           </div>
           <div>
-            <Button size="extrasmall">
+            <Button externalStyle="!py-[8px] !px-[14px]">
               <span className="[font-size:_clamp(12px,1.5vw,16px)] leading-[100%]">
                 {DOCUMENTS_SEARCH}
               </span>

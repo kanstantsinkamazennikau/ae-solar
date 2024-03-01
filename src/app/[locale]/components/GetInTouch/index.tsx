@@ -113,7 +113,7 @@ export default function GetInTouch({
                 className="flex justify-center items-center md:gap-5 gap-1"
               >
                 <button
-                  className={`flex md:py-5 md:px-7 p-4 ${
+                  className={`flex py-[14px] md:px-7 px-5 ${
                     clientType === type
                       ? "get-in-touch-client-border"
                       : "border-1 border border-transparent"

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ABOUT_OUR_DESIGN,
   ABOUT_OUR_DESIGN_HIGHLIGHT,
@@ -5,15 +7,19 @@ import {
   ABOUT_OUR_PORTFOLIO,
 } from "@/app/[locale]/company/constants";
 import Button from "@/app/[locale]/components/common/Button";
+import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import { CONSTRUCTOR_CONFIGURE_YOUR_MODEL } from "@/app/[locale]/utils/constants";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 
 export default function PortfolioBackground() {
+  const { videoRef } = useVideoIntersection();
+
   return (
     <div className="xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[60px] flex justify-center items-start max-w-[1360px] mx-auto">
       <div className="relative flex items-center md:justify-end justify-center overflow-hidden">
         <div className="fade-strip-left max-lg:!w-[100px] md:block hidden" />
         <video
+          ref={videoRef}
           width="1320"
           height="700"
           autoPlay
@@ -93,7 +99,10 @@ export default function PortfolioBackground() {
               )}
             </p>
           </div>
-          <Button size="normal" externalStyle="max-[768px]:!py-4">
+          <Button
+            size="normal"
+            externalStyle="max-[768px]:!py-4 !py-[14px] !px-[26]"
+          >
             <span className="[font-size:_clamp(20px,1.5vw,20px)] font-semibold -tracking-[0.2px]">
               {CONSTRUCTOR_CONFIGURE_YOUR_MODEL}
             </span>

@@ -100,7 +100,7 @@ export default function HeroSection() {
 
           <div className="flex gap-5 md:flex-row flex-col">
             <a href="/documents/presentation.pdf" target="_blank">
-              <Button size="normal" externalStyle="!py-[18px]">
+              <Button size="normal" externalStyle="!py-[12px]">
                 <div className="flex items-center justify-center gap-4">
                   <Image
                     src="/images/downloadFileWhite.svg"
@@ -118,7 +118,7 @@ export default function HeroSection() {
             <Button
               size="normal"
               style="outline"
-              externalStyle="!py-[14px]"
+              externalStyle="!py-[8px]"
               onClick={onVideoOpen}
             >
               <div className="flex items-center justify-center gap-4">

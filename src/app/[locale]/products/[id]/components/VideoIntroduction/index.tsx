@@ -1,42 +1,17 @@
 "use client";
 
+import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import { IntroductionProps } from "@/app/[locale]/products/[id]/components/VideoIntroduction/types";
 import { PRODUCT_INTRODUCTION_DESCRIPTION } from "@/app/[locale]/products/[id]/constants";
 import {
   PRODUCT_INTRO_PANELS,
   PRODUCT_INTRO_PANELS_MAPPING,
 } from "@/app/[locale]/utils/constants";
-import { useEffect, useRef, useState } from "react";
 
 export default function Introduction({ id }: IntroductionProps) {
   const modelStats = PRODUCT_INTRO_PANELS[id].stats;
   const modelStatsKeys = Object.keys(modelStats);
-  const ref = useRef(null);
-  const [isPlayed, setIsPlayed] = useState(false);
-
-  useEffect(() => {
-    if (isPlayed) return;
-    if (ref.current) {
-      const intersectionObserver = new IntersectionObserver(
-        (entries: IntersectionObserverEntry[]) => {
-          if (entries[0].isIntersecting) {
-            setIsPlayed(true);
-            (entries[0].target as HTMLVideoElement).play();
-          } else {
-            (entries[0].target as HTMLVideoElement).currentTime = 0;
-          }
-        }
-      );
-
-      intersectionObserver.observe(ref.current);
-
-      return () => {
-        if (ref.current) {
-          intersectionObserver.unobserve(ref.current);
-        }
-      };
-    }
-  }, [isPlayed]);
+  const { videoRef } = useVideoIntersection();
 
   return (
     <div
@@ -120,7 +95,7 @@ export default function Introduction({ id }: IntroductionProps) {
             </p>
             <video
               muted
-              ref={ref}
+              ref={videoRef}
               className="
                 w-full
                 xl:h-[800px]

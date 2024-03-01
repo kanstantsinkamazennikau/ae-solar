@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/app/[locale]/components/common/Button";
+import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import {
   HEADER_CONFIGURE_YOUR_MODEL,
   TECH_INFO_EXPLORE,
@@ -8,41 +9,15 @@ import {
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 
 const Video = ({ videoLink }: { videoLink: string }) => {
-  const ref = useRef(null);
-  const [isPlayed, setIsPlayed] = useState(false);
-
-  useEffect(() => {
-    if (isPlayed) return;
-    if (ref.current) {
-      const intersectionObserver = new IntersectionObserver(
-        (entries: IntersectionObserverEntry[]) => {
-          if (entries[0].isIntersecting) {
-            setIsPlayed(true);
-            (entries[0].target as HTMLVideoElement).play();
-          } else {
-            (entries[0].target as HTMLVideoElement).currentTime = 0;
-          }
-        }
-      );
-
-      intersectionObserver.observe(ref.current);
-
-      return () => {
-        if (ref.current) {
-          intersectionObserver.unobserve(ref.current);
-        }
-      };
-    }
-  }, [isPlayed]);
+  const { videoRef } = useVideoIntersection();
 
   return (
     <>
       <video
         muted
-        ref={ref}
+        ref={videoRef}
         className="
           w-full
           xl:h-[840px]
@@ -107,7 +82,11 @@ export default function FeaturedProducts() {
             height={60}
             className="w-full absolute rotate-180 translate-y-[calc(50%-1px)]"
           />
-          <Button style="outline" externalStyle="!bg-black" size="thin">
+          <Button
+            style="outline"
+            externalStyle="!bg-black hover:!bg-[#3E0002]"
+            size="thin"
+          >
             <Link href="/calculate">
               <span className="[font-size:_clamp(12px,1.5vw,20px)] -tracking-[0.24px] font-semibold">
                 {HEADER_CONFIGURE_YOUR_MODEL}

@@ -38,7 +38,7 @@ export default function PanelsList() {
           ))}
         </div>
         <Link href={"/calculate"}>
-          <Button externalStyle="!py-5 mx-auto">
+          <Button externalStyle="!py-[14px] mx-auto relative z-10">
             {PRODUCT_INTRO_CALCULATE_YOUR_MODEL}
           </Button>
         </Link>

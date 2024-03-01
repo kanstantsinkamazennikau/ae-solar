@@ -83,7 +83,10 @@ export default function Navigation() {
             <div className="gap-3 min-[920px]:flex hidden">
               {/* <ChangeLocale /> */}
               <Cart />
-              <Button onClick={handleClick} size="small">
+              <Button
+                onClick={handleClick}
+                externalStyle="!py-[10px] !px-[18px]"
+              >
                 <span className="[font-size:_clamp(14px,1.5vw,16px)] whitespace-nowrap">
                   {HEADER_CONTACT_US}
                 </span>

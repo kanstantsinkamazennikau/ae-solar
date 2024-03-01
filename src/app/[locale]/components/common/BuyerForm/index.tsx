@@ -153,7 +153,7 @@ export default function BuyerForm({
               </div>
               <Button
                 style="outline"
-                size="thin"
+                externalStyle="!py-[9px] !px-[26px]"
                 showArrow
                 onClick={handleClick}
               >
