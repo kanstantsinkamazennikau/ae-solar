@@ -1,6 +1,5 @@
 "use client";
 
-import ThumbnailsExample from "@/app/[locale]/company/manufacturer/components/Article/test";
 import { MANUFACTURER_ARTICLE } from "@/app/[locale]/company/manufacturer/constants";
 import { Options } from "@splidejs/react-splide";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -118,11 +117,35 @@ const ImagesSlider = () => {
           className="xl:-rotate-90 rotate-180 cursor-pointer"
           onClick={prevSlide}
         />
-        <div className="overflow-hidden max-xl:flex ">
+        <div className="overflow-hidden ">
           <div
-            className="transition-all duration-300"
+            className={`transition-all duration-300 max-xl:hidden xl:block [transform:translateY(-${
+              index * 56
+            }px)]`}
             style={{
               transform: `translateY(-${index * 56}px)`,
+            }}
+          >
+            {images.map((thumbnail, index) => (
+              <div key={index} id={index.toString()}>
+                <button onClick={() => handleThumbs(index)}>
+                  <Image
+                    src={`/images/about/manufacturer/${thumbnail}`}
+                    alt="articleImg1"
+                    quality={100}
+                    width={100}
+                    height={100}
+                  />
+                </button>
+              </div>
+            ))}
+          </div>
+          <div
+            className={`transition-all duration-300 max-xl:flex hidden [transform:translateY(-${
+              index * 56
+            }px)]`}
+            style={{
+              transform: `translateX(-${index * 56}px)`,
             }}
           >
             {images.map((thumbnail, index) => (
