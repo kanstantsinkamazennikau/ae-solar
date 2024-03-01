@@ -1,8 +1,8 @@
 "use client";
 
 import { MANUFACTURER_ARTICLE } from "@/app/[locale]/company/manufacturer/constants";
-import { Options } from "@splidejs/react-splide";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+//@ts-ignore
+import { Splide, SplideSlide, Options } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import parse from "html-react-parser";
 import Image from "next/image";
