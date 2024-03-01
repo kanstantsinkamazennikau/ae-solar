@@ -39,7 +39,7 @@ export default function HeroSection() {
           xl:h-[700px]
           lg:h-[650px]
           md:h-[600px]
-          h-[735px]
+          h-[660px]
           md:mb-0
           -mb-[40px]
         "
@@ -51,7 +51,16 @@ export default function HeroSection() {
           priority
           width={1920}
           height={800}
-          className="absolute top-[0px] h-full md:block hidden"
+          className="absolute top-[0px] h-full min-[500px]:block hidden object-cover"
+        />
+        <Image
+          src="/images/about/headerBackgroundMobile.png"
+          alt="headerBackground"
+          priority
+          width={768}
+          height={700}
+          quality={100}
+          className="absolute top-[0px] h-full block min-[500px]:hidden object-cover"
         />
         <div
           className="
@@ -71,7 +80,7 @@ export default function HeroSection() {
             mt-[55px]
           "
         >
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 px-5">
             <div
               className="
                 [font-size:_clamp(20px,2vw,36px)]

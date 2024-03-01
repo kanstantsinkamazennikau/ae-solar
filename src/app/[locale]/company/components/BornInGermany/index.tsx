@@ -15,31 +15,30 @@ export default function BornInGermany() {
         flex-col
         justify-center 
         items-center 
-        xl:mt-[160px]
-        lg:mt-[140px]
-        md:mt-[100px]
-        mt-[80px]
+        2xl:mt-[160px]
+        xl:mt-[100px]
+        lg:mt-[80px]
+        md:mt-[60px]
+        mt-[40px]
       "
     >
-      <BasicWidthContainer>
-        {/* DESKTOP */}
+      <BasicWidthContainer styles="max-[560px]:px-0">
         <div
           className="
-            bg-[url('/images/about/bornInGermany.png')]
+            min-[560px]:bg-[url('/images/about/bornInGermany.png')]
+            bg-[url('/images/about/bornInGermanyMobile.png')]
             xl:h-[495px]
             lg:h-[450px]
             md:h-[400px]
             min-[560px]:h-[400px]
-            h-[400px]
+            h-[460px]
             w-full         
             bg-no-repeat
             mb-10
-            min-[560px]:[background-size:100%_100%]
-            bg-contain
+            [background-size:100%_100%]
+            max-[560px]:bg-center
             z-30
             relative
-            min-[560px]:block
-            hidden
             lg:pt-[120px]
             lg:px-[80px]
             lg:pb-[60px]
@@ -47,6 +46,8 @@ export default function BornInGermany() {
             md:px-[80px]
             min-[560px]:py-[30px]
             min-[560px]:px-[40px]
+            pt-[80px]
+            pb-[60px]
           "
         >
           <div
@@ -55,9 +56,10 @@ export default function BornInGermany() {
               w-full
               flex-col
               items-start
-              lg:gap-8
-              gap-5
+              lg:gap-10
+              gap-10
               max-w-[1100px]
+              max-[560px]:px-5
               mx-auto
             "
           >
@@ -68,6 +70,7 @@ export default function BornInGermany() {
                 priority
                 width={160}
                 height={160}
+                className="xl:w-[160px] lg:w-[120px] md:w-[100px] w-[80px]"
               />
               <p
                 className="
@@ -83,55 +86,19 @@ export default function BornInGermany() {
             </div>
 
             <hr className="h-[1px] bg-[#038DF4] border-none w-full" />
-            <div className="flex gap-3">
+            <div className="flex min-[560px]:gap-8 gap-4 min-[560px]:flex-row flex-col">
               {ABOUT_BORN_STORY.split(/\r?\n|\r|\n/g).map((string) => (
                 <div key={string}>
                   {styleMatchingText(
                     string,
                     ABOUT_BORN_STORY_WORDS_TO_HIGHLIGHT,
-                    "font-walsheim font-normal [font-size:_clamp(12px,1.5vw,20px)] md:leading-[150%] leading-[120%]",
+                    "font-walsheim font-normal [font-size:_clamp(16px,1.5vw,20px)] md:leading-[150%] leading-[120%]",
                     "font-bold"
                   )}
                 </div>
               ))}
             </div>
           </div>
-        </div>
-
-        <div
-          className="
-            flex
-            flex-col
-            min-[560px]:hidden
-            mb-16
-          "
-        >
-          <p
-            className="
-              font-walsheim
-              leading-[130%]
-              font-semibold
-              [font-size:_clamp(36px,3.5vw,64px)]
-              mb-4
-            "
-          >
-            {ABOUT_BORN_IN_GERMANY}
-          </p>
-          {ABOUT_BORN_STORY.split(/\r?\n|\r|\n/g).map((string, index) => (
-            <div
-              key={string}
-              className="
-                mb-4
-              "
-            >
-              {styleMatchingText(
-                string,
-                ABOUT_BORN_STORY_WORDS_TO_HIGHLIGHT,
-                "font-walsheim leading-[150%] font-normal [font-size:_clamp(12px,1.5vw,20px)]",
-                "font-bold"
-              )}
-            </div>
-          ))}
         </div>
       </BasicWidthContainer>
     </div>

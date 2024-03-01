@@ -85,8 +85,9 @@ export function MainPageFAQ() {
                 key={item.question}
                 title={item.question}
                 openCloseStyle
+                dropdownIcon="/images/selectorWhite.svg"
               >
-                <p className="leading-[150%] pb-6 [font-size:_clamp(12px,1.5vw,24px)] font-walsheim pl-6">
+                <p className="leading-[150%] pb-6 [font-size:_clamp(14px,1.5vw,24px)] font-walsheim pl-6">
                   {item.answer}
                 </p>
               </AccordionItem>

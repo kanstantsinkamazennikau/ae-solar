@@ -27,7 +27,7 @@ export default function GlobalImpact() {
         <div
           className="
           flex
-          md:flex-row
+          min-[540px]:flex-row
           flex-col
           xl:py-20
           md:py-10
@@ -82,6 +82,8 @@ export default function GlobalImpact() {
               [border-image:linear-gradient(154deg,_#f60109_0%,_rgb(49_9_10_/_73%)_27%,_rgb(49_9_10_/_73%)_51%,_rgb(246_1_9_/_28%)_80%,_#f60109_100%)_1]
               w-[315px]
               h-[315px]
+              max-[540px]:w-full
+              max-[400px]:w-[315px]
               p-8
               justify-between
               items-center
@@ -107,10 +109,17 @@ export default function GlobalImpact() {
               <div
                 key={country}
                 className={`
-                  w-[315px]
-                  md:h-[315px]
+                  min-[720px]:w-[315px]
+                  min-[620px]:w-[270px]
+                  min-[540px]:w-[240px]
+                  min-[540px]:w-[315px]
+                  min-[620px]:h-[315px]
+                  min-[540px]:h-[250px]
                   h-[130px]
+                  min-[400px]:w-full
+                  w-[315px]
                   relative
+                  overflow-hidden
                 `}
               >
                 <Image
@@ -118,7 +127,7 @@ export default function GlobalImpact() {
                   alt={desktopImage}
                   width={315}
                   height={315}
-                  className="md:block hidden"
+                  className="min-[540px]:block hidden h-full"
                 />
                 <Image
                   src={`/images/solutions/${mobileImage}`}
@@ -126,7 +135,7 @@ export default function GlobalImpact() {
                   width={315}
                   height={130}
                   quality={100}
-                  className="md:hidden block"
+                  className="min-[540px]:hidden block min-[400px]:w-full"
                 />
                 <div className="flex flex-col p-8 w-full items-start gap-2 font-bold absolute bottom-0">
                   <div className="[font-size:_clamp(36px,1.5vw,36px)] leading-[100%] -tracking-[1.08px]">

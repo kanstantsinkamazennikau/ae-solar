@@ -34,7 +34,14 @@ export default async function AwardsAndStats() {
           alt="dividerSmall"
           width={30}
           height={30}
-          className="absolute top-0 left-[0px]"
+          className="absolute top-0 left-[0px] md:block hidden"
+        />
+        <Image
+          src="/images/awards/dividerBig.svg"
+          alt="dividerSmall"
+          width={300}
+          height={300}
+          className="absolute top-0 left-[0px] md:hidden block rotate-180"
         />
 
         <Stats />

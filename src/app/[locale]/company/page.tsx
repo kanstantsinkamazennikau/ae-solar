@@ -1,27 +1,23 @@
-import Tier1 from "@/app/[locale]/components/common/Tier1";
 import BornInGermany from "@/app/[locale]/company/components/BornInGermany";
+import BusinessMap from "@/app/[locale]/company/components/BusinessMap";
+import CompanyStats from "@/app/[locale]/company/components/CompanyStats";
+import ExploreOurDifference from "@/app/[locale]/company/components/ExploreOurDifference";
 import HeroSection from "@/app/[locale]/company/components/HeroSection";
 import OurHistory from "@/app/[locale]/company/components/OurHistory";
 import PortfolioBackground from "@/app/[locale]/company/components/PortfolioBackground";
-import SequenceAnimation2 from "@/app/[locale]/company/components/SequenceAnimation2";
-import GetInTouch from "@/app/[locale]/components/GetInTouch";
-import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
-import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import GlobalImpact from "@/app/[locale]/solutions/components/GlobalImpact";
-import JoinOurMission from "@/app/[locale]/solutions/components/JoinOurMission";
 import {
   ABOUT_AS_A_TIER,
   ABOUT_AS_A_TIER_HIGHLIGHT,
   ABOUT_SYNONYMOUS,
   ABOUT_SYNONYMOUS_HIGHLIGHT,
 } from "@/app/[locale]/company/constants";
-import Stats from "@/app/[locale]/components/AwardsAndStats/Stats";
-import Awards from "@/app/[locale]/components/AwardsAndStats/Awards";
-import Image from "next/image";
-import CompanyStats from "@/app/[locale]/company/components/CompanyStats";
-import ExploreOurDifference from "@/app/[locale]/company/components/ExploreOurDifference";
-import BusinessMap from "@/app/[locale]/company/components/BusinessMap";
+import GetInTouch from "@/app/[locale]/components/GetInTouch";
+import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
+import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
+import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import Tier1 from "@/app/[locale]/components/common/Tier1";
+import GlobalImpact from "@/app/[locale]/solutions/components/GlobalImpact";
+import JoinOurMission from "@/app/[locale]/solutions/components/JoinOurMission";
 
 export default function About() {
   return (
@@ -63,10 +59,8 @@ export default function About() {
         </div>
       </BasicWidthContainer>
       <ExploreOurDifference />
-
       <BusinessMap />
       <OurHistory />
-
       <GetInTouch />
       <div className="flex justify-center">
         <MainPageFAQ />

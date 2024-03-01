@@ -29,7 +29,7 @@ export default function Tier1({
           md:flex-row
           flex-col
           justify-between
-          items-center
+          md:items-center
           border-t
           border-solid
           border-[#191919]
@@ -52,7 +52,7 @@ export default function Tier1({
             -tracking-[1.92px]
             max-w-[426px]
             w-full
-            max-md:text-center
+            max-md:text-left
           "
         >
           {styleMatchingText(tier1Text, tier1TextHighlight, "", tier1TextStyle)}
@@ -64,7 +64,7 @@ export default function Tier1({
               [font-size:_clamp(16px,1.5vw,24px)]
               font-walsheim
               max-w-[650px]
-              max-md:text-center
+              max-md:text-left
             "
         >
           {styleMatchingText(

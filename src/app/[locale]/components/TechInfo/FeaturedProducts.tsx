@@ -63,7 +63,7 @@ export default function FeaturedProducts() {
       <div className="flex flex-col items-center lg:gap-[68px] md:gap-[38px] gap-8 w-full md:absolute bottom-0 max-md:-mt-[70px]">
         <div className="text-center font-bold leading-[1.2] -tracking-[0.64] [font-size:_clamp(24px,4vw,64px)] z-10">
           <p>{TECH_INFO_INNOVATIVE}</p>
-          <p className="text-dark-gray-900">{TECH_INFO_EXPLORE}</p>
+          <p className="text-base-red">{TECH_INFO_EXPLORE}</p>
         </div>
         <div className="relative w-full justify-center items-center flex">
           <Image

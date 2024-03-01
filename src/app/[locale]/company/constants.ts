@@ -35,6 +35,8 @@ Engineering`,
 ];
 export const ABOUT_EXPLORE_CENTER = `Explore Our
 Difference`;
+export const ABOUT_EXPLORE_CENTER_MOBILE = `Explore 
+Our Difference`;
 export const ABOUT_EXPLORE_FOOTER = [
   `Power of
 Innovation`,

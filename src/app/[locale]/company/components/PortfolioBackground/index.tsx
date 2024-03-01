@@ -10,13 +10,14 @@ import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import { CONSTRUCTOR_CONFIGURE_YOUR_MODEL } from "@/app/[locale]/utils/constants";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
+import Image from "next/image";
 
 export default function PortfolioBackground() {
   const { videoRef } = useVideoIntersection();
 
   return (
-    <div className="xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[60px] flex justify-center items-start max-w-[1360px] mx-auto">
-      <div className="relative flex items-center md:justify-end justify-center overflow-hidden">
+    <div className="xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[60px] md:flex-row flex-col flex justify-center items-start max-w-[1360px] mx-auto">
+      <div className="relative flex md:flex-row flex-col items-center md:justify-end justify-center overflow-hidden">
         <div className="fade-strip-left max-lg:!w-[100px] md:block hidden" />
         <video
           ref={videoRef}
@@ -24,7 +25,7 @@ export default function PortfolioBackground() {
           height="700"
           autoPlay
           muted
-          className="relative md:-left-[240px] min-h-[430px] object-cover"
+          className="relative md:-left-[240px] min-h-[300px] md:object-cover"
         >
           <source src={`/videos/products/HeaderFlower.mp4`} type="video/mp4" />
         </video>
@@ -36,8 +37,13 @@ export default function PortfolioBackground() {
             items-center
             md:gap-10
             gap-8
-            absolute
+            md:absolute
             px-5
+            relative
+            z-10
+            max-md:-mt-[20%]
+            max-[540px]:-mt-[30%]
+            max-[440px]:-mt-[40%]
           "
         >
           <div
@@ -99,15 +105,30 @@ export default function PortfolioBackground() {
               )}
             </p>
           </div>
-          <Button
-            size="normal"
-            externalStyle="max-[768px]:!py-4 !py-[14px] !px-[26]"
-          >
+          <Button externalStyle="max-[768px]:!py-4 !py-[14px] !px-[26]">
             <span className="[font-size:_clamp(20px,1.5vw,20px)] font-semibold -tracking-[0.2px]">
               {CONSTRUCTOR_CONFIGURE_YOUR_MODEL}
             </span>
           </Button>
         </div>
+      </div>
+      <div className="relative w-full justify-center items-center flex mt-20 mb-5 md:hidden">
+        <Image
+          src={`/images/glowFull.png`}
+          alt="glow"
+          priority
+          width={1320}
+          height={60}
+          className="absolute -translate-y-[calc(50%-1px)]"
+        />
+        <Image
+          src={`/images/glowFull.png`}
+          alt="glow"
+          priority
+          width={1320}
+          height={60}
+          className="w-full absolute rotate-180 translate-y-[calc(50%-1px)]"
+        />
       </div>
     </div>
   );

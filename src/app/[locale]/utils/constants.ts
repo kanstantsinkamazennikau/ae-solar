@@ -1032,7 +1032,7 @@ export const CONSTRUCTOR_CUSTOMIZE = "Customize.";
 export const CONSTRUCTOR_YOUR_MODEL = "Your model";
 export const CONSTRUCTOR_APPLICATIONS = "Applications.";
 export const CONSTRUCTOR_STANDARD = "Standard";
-export const CONSTRUCTOR_CONFIGURE_YOUR_MODEL = "Configure your model";
+export const CONSTRUCTOR_CONFIGURE_YOUR_MODEL = "Configure your module";
 export const CONSTRUCTOR_YOUR_MODEL_IS = "Your model is";
 export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
   Aurora: {
@@ -1945,25 +1945,28 @@ export const ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT = [
   "and services since 2003.",
 ];
 
-export const ABOUT_BUSINESS = "Business";
-export const ABOUT_MAP = "Map";
+export const ABOUT_BUSINESS = "Business Map";
+export const ABOUT_MAP = "Where Is Our Power";
 export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "germany.svg",
     designation: "Headquater",
-    location: "Königsbrunn, Germany",
+    location: ["Königsbrunn,", "Germany"],
   },
   {
     icon: "office.svg",
     designation: "Branch office",
+    location: ["Georgia", "Brasil", "Colombia"],
   },
   {
     icon: "base.svg",
-    designation: "Manufacturing base",
+    designation: "Manufacturing Base",
+    location: ["Turkey", "China"],
   },
   {
     icon: "distributor.svg",
     designation: "Distributor",
+    location: ["All around the World"],
   },
 ];
 export const ABOUT_OUR_HISTORY = "Our History";

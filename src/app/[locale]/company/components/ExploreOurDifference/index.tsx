@@ -1,6 +1,7 @@
 import DifferenceRow from "@/app/[locale]/company/components/ExploreOurDifference/DifferenceRow";
 import {
   ABOUT_EXPLORE_CENTER,
+  ABOUT_EXPLORE_CENTER_MOBILE,
   ABOUT_EXPLORE_FOOTER,
   ABOUT_EXPLORE_HEADER,
 } from "@/app/[locale]/company/constants";
@@ -29,7 +30,9 @@ export default function ExploreOurDifference() {
         mb-[80px]
       "
     >
-      <div className={`absolute top-0 object-cover w-full h-full `}>
+      <div
+        className={`absolute top-0 object-cover w-full h-full md:block hidden`}
+      >
         <Starfield
           starCount={1000}
           starColor={[255, 255, 255]}
@@ -39,7 +42,32 @@ export default function ExploreOurDifference() {
         />
       </div>
       <BasicWidthContainer styles="!px-0">
-        <div className="">
+        <div>
+          <div
+            className="
+                [font-size:_clamp(32px,3vw,40px)]
+                font-extrabold
+                leading-[130%]
+                text-center
+                -tracking-[0.96px]
+                mb-8
+                md:hidden
+              "
+          >
+            {ABOUT_EXPLORE_CENTER_MOBILE.split(/\r?\n|\r|\n/g).map(
+              (string, index) => (
+                <div
+                  key={string}
+                  className={`
+                  ${index === 1 ? "text-[#B30006]" : "text-white"}
+                  
+                `}
+                >
+                  {string}
+                </div>
+              )
+            )}
+          </div>
           <div
             className="
               grid
@@ -53,11 +81,12 @@ export default function ExploreOurDifference() {
               mx-auto
             "
           >
-            {ABOUT_EXPLORE_HEADER.map((header) => (
-              <DifferenceRow key={header} rowText={header} />
+            {ABOUT_EXPLORE_HEADER.map((header, index) => (
+              <DifferenceRow key={header} rowText={header} index={index} />
             ))}
           </div>
-          <div className="relative">
+          <div className="mb-4 md:hidden"></div>
+          <div className="relative md:block hidden">
             <Image
               src="/images/about/differencesBack.svg"
               alt="solar panel"
@@ -108,8 +137,12 @@ export default function ExploreOurDifference() {
               mx-auto
             "
           >
-            {ABOUT_EXPLORE_FOOTER.map((footer) => (
-              <DifferenceRow key={footer} rowText={footer} />
+            {ABOUT_EXPLORE_FOOTER.map((footer, index) => (
+              <DifferenceRow
+                key={footer}
+                rowText={footer}
+                index={ABOUT_EXPLORE_HEADER.length + index}
+              />
             ))}
           </div>
         </div>

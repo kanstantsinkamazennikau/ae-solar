@@ -61,7 +61,6 @@ export default function OurHistory() {
   const [scrollFrame, setScrollFrame] = useState(0);
   // const [timeline, setTimeline] = useState<gsap.core.Timeline | null>(null);
   const [activeStepIndex, setActiveStepIndex] = useState(0);
-  let refs = useRef([]);
 
   const container = useRef(null);
   const renderText = useCallback(() => {
@@ -120,9 +119,9 @@ export default function OurHistory() {
             tierOneHeading={ABOUT_OUR_HISTORY}
             tierTwoHeading={ABOUT_IN_NUMBERS}
             align="left"
-            size="small"
             reverseColor
             marginBottomNone
+            externalStyle="[font-size:_clamp(32px,6vw,96px)!important]"
           />
           <Image
             src={`/images/glowFull.png`}
@@ -135,7 +134,7 @@ export default function OurHistory() {
             ref={container}
             className="relative py-[60px] w-full overflow-hidden"
           >
-            <div className="ourHistoryDivider w-[1px] h-full absolute -top-[3px] left-[32%]" />
+            <div className="ourHistoryDivider w-[1px] h-full absolute -top-[3px] md:left-[32%] left-[20%]" />
             {history.map(({ year, event }, index) => {
               const isActive = activeStepIndex === index;
               const opacityValue = Math.abs(activeStepIndex - index) || 1;
@@ -164,14 +163,16 @@ export default function OurHistory() {
                       rounded-full
                       absolute
                       top-[10px]
-                      left-[calc(32%-3px)]
+                      md:left-[calc(32%-3px)]
+                      left-[calc(20%-3px)]
                       bg-black
                       ${isActive ? "block" : "hidden"}
                     `}
                   />
                   <div
                     className="
-                      w-[32%]
+                      md:w-[32%]
+                      w-[20%]
                       text-end
                       pr-4
                       [font-size:_clamp(14px,2vw,32px)]
@@ -183,16 +184,18 @@ export default function OurHistory() {
 
                   <div
                     className={`
-                    w-[68%]
-                    pl-4
-                    max-w-[450px]
-                    ${
-                      isActive
-                        ? "[font-size:_clamp(20px,2vw,24px)]"
-                        : "[font-size:_clamp(10px,2vw,16px)]"
-                    }
-                    leading-[150%]
-                  `}
+                      md:w-[68%]
+                      w-[80%]
+                      pl-4
+                      max-w-[450px]
+                      
+                      ${
+                        isActive
+                          ? "[font-size:_clamp(20px,2vw,24px)] animate-ourHistoryFadeIn"
+                          : "[font-size:_clamp(10px,2vw,16px)]"
+                      }
+                      leading-[150%]
+                    `}
                   >
                     {event}
                   </div>
