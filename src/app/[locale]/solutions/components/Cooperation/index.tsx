@@ -1,5 +1,6 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
+import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import Logo from "@/app/[locale]/components/common/Logo";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import CooperationStats from "@/app/[locale]/solutions/components/Cooperation/CooperationStats";
@@ -105,17 +106,13 @@ export default function Cooperation() {
                       <div className="flex gap-4 items-baseline">
                         <div className="flex flex-col gap-3">
                           {links.map(({ link, title }) => (
-                            <Link href={link} key={link}>
-                              <Button
-                                style="textOnly"
-                                externalStyle="!p-0 text-base-red"
-                                showRedArrow
-                              >
-                                <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold leading-[100%] -tracking-[0.2px]">
-                                  {title}
-                                </span>
-                              </Button>
-                            </Link>
+                            <LinkWithArrow
+                              key={link}
+                              label={title}
+                              href={link}
+                              externalStyle="[font-size:_clamp(16px,1.5vw,20px)!important] font-semibold leading-[100%] -tracking-[0.2px]"
+                              arrowStyle="w-[14px] h-[14px]"
+                            />
                           ))}
                         </div>
                       </div>

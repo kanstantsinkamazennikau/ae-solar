@@ -6,7 +6,7 @@ import Image from "next/image";
 const buttonStyle = (style: string | undefined) => {
   switch (style) {
     case "transparent":
-      return "border-[3px] border-solid border-[#606060] bg-transparent";
+      return "border-[3px] border-solid !border-[#606060] bg-transparent";
     case "outline":
       return "border-[3px] border-solid border-base-red bg-transparent hover:bg-[#3E0002]";
     case "secondary":

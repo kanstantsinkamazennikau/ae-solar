@@ -21,7 +21,7 @@ export default function PickerInput({
             setActiveValue(value);
             setValue(name, value);
           }}
-          externalStyle="py-[6px] px-[10px]"
+          externalStyle="py-[10px] px-[10px]"
         >
           <span className="[font-size:_clamp(14px,2.5vw,20px)] font-semibold -tracking-[0.2px]">
             {value}

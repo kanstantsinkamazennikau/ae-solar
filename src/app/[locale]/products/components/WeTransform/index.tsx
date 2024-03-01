@@ -95,7 +95,7 @@ export default function WeTransform() {
               className="
                 bg-clip-text
                 text-transparent
-                bg-[linear-gradient(#FFB800,#EBFF00,#42FF00)]
+                bg-[linear-gradient(to_right,#FFB800,#EBFF00,#42FF00)]
               "
             >
               {PRODUCT_WE_TRANSFORM_SUNLIGHT}
@@ -163,7 +163,7 @@ export default function WeTransform() {
               className="
                 bg-clip-text
                 text-transparent
-                bg-[linear-gradient(#FFFFFF,#00A3FF)]
+                bg-[linear-gradient(to_right,#FFFFFF,#00A3FF)]
               "
             >
               {PRODUCT_FOR_PLANET}

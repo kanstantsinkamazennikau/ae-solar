@@ -9,11 +9,12 @@ export default function LinkWithArrow({
   label,
   href,
   externalStyle,
+  arrowStyle,
 }: ButtonWithArrowProps) {
   const locale = useParams()?.locale;
 
   return (
-    <div className="flex justify-center items-center gap-2 cursor-pointer hover:opacity-80">
+    <div className="flex justify-center items-center gap-2 cursor-pointer hover:opacity-80 group">
       <Link
         className={`text-base-red [font-size:_clamp(14px,1vw,16px)] ${externalStyle}`}
         href={`/${locale}/${href}`}
@@ -26,6 +27,7 @@ export default function LinkWithArrow({
         width={8}
         height={8}
         priority
+        className={`group-hover:left-2 left-0 relative group-hover:transition-all group-hover:duration-300 ${arrowStyle}`}
       />
     </div>
   );

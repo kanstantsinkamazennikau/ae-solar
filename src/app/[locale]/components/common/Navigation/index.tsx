@@ -42,7 +42,7 @@ export default function Navigation() {
   };
 
   const handleClick = () => {
-    router.push(`/${params?.locale}/consult`);
+    router.push(`/${params?.locale}/contacts`);
   };
 
   return (

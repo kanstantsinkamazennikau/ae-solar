@@ -29,7 +29,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "dist/types/**/*.ts",
-    "src/app/[locale]/products/[id]/loading.tsxx"
+    "src/app/[locale]/products/[id]/loading.tsxx",
+    "src/app/[locale]/company/manufacturer/components/Article/test.jsx"
   ],
   "exclude": ["node_modules"]
 }

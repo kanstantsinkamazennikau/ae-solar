@@ -16,7 +16,7 @@ export const SOLUTIONS_COOPERATION = [
     picture: "investors.png",
     description:
       "Be a part of our vision. Your investment in AESOLAR supports innovative solar technologies and contributes to a cleaner future. Discover our corporate strategy and how you can benefit.",
-    links: [{ title: "Invest in AESOLAR", link: "/consult?type=investor" }],
+    links: [{ title: "Invest in AESOLAR", link: "/contacts?type=investor" }],
   },
   {
     clientType: `Investor in
@@ -24,7 +24,7 @@ export const SOLUTIONS_COOPERATION = [
     picture: "investorsPark.png",
     description:
       "Invest in the future with us. Our solar parks symbolize sustainability and profitability. Learn more about our projects and how your investment contributes to environmental protection.",
-    links: [{ title: "Invest in AESOLAR", link: "/consult?type=investor" }],
+    links: [{ title: "Invest in AESOLAR", link: "/contacts?type=investor" }],
   },
   {
     clientType: "Installers",

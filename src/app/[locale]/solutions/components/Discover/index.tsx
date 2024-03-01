@@ -1,4 +1,5 @@
 import Button from "@/app/[locale]/components/common/Button";
+import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import {
   SOLUTIONS_DISCOVER_AESOLAR,
   SOLUTIONS_DISCOVER_AESOLAR_WORDS_TO_HIGHLIGHT,
@@ -10,7 +11,7 @@ import Image from "next/image";
 
 export default function Discover() {
   return (
-    <div className="-mt-[80px] overflow-hidden 2xl:-mb-[120px] xl:-mb-[60px] md:-mb-[20px] mb-[100px] flex justify-center">
+    <div className="-mt-[80px] overflow-hidden 2xl:-mb-[120px] xl:-mb-[60px] md:-mb-[20px] mb-[100px] flex md:flex-row flex-col justify-center">
       <Image
         src="/images/solutions/heroSectionBackground.svg"
         alt="heroSectionBackground"
@@ -62,15 +63,11 @@ export default function Discover() {
           <p className="[font-size:_clamp(16px,1vw,16px)] font-walsheim font-medium leading-[150%] md:text-start text-center">
             {SOLUTIONS_LEADING_PROVIDER}
           </p>
-          <Button
-            style="textOnly"
-            showRedArrow
-            externalStyle="items-baseline !p-0"
-          >
-            <span className="text-base-red mr-1 [font-size:_clamp(11px,1vw,14px)]">
-              {SOLUTIONS_LEARN_MORE}
-            </span>
-          </Button>
+          <LinkWithArrow
+            label={SOLUTIONS_LEARN_MORE}
+            href="/company"
+            externalStyle="[font-size:_clamp(11px,1vw,14px)!important]"
+          />
         </div>
       </div>
     </div>
