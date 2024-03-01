@@ -1,7 +1,7 @@
 "use client";
 
 import BuyerForm from "@/app/[locale]/components/common/BuyerForm";
-import { ConsultFormFileds } from "@/app/[locale]/consult/types";
+import { ConsultFormFileds } from "@/app/[locale]/contacts/components/ConsultForm/types";
 import { CONTACTS_WE_ARE_READY } from "@/app/[locale]/contacts/constants";
 import {
   CONSULT_FORM_FIELDS,
