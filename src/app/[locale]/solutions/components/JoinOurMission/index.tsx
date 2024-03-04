@@ -34,6 +34,8 @@ export default function JoinOurMission() {
           w-[800px]
           h-[250px]
           object-cover
+          left-1/2
+          -translate-x-1/2
         "
       />
       {/* <div className="flex justify-center items-center flex-col">

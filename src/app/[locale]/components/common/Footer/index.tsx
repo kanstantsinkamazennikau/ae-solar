@@ -129,7 +129,7 @@ export default function Footer() {
                   links={links}
                 />
               ))}
-              <form
+              {/* <form
                 className="
                   flex
                   p-6
@@ -181,7 +181,7 @@ export default function Footer() {
                     {FOOTER_SUBSCRIBE}
                   </span>
                 </Button>
-              </form>
+              </form> */}
             </div>
             <div className="min-[500px]:hidden gap-8 flex-col flex mt-8">
               <ContactInfo />

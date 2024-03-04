@@ -1,12 +1,19 @@
 import { PanelVideoProps } from "@/app/[locale]/products/components/PanelsList/types";
+import { useEffect, useRef } from "react";
 
 export default function PanelVideo({ onLoaded, panel }: PanelVideoProps) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    ref.current && (ref.current as HTMLVideoElement).play();
+  }, []);
+
   return (
     <>
       <video
+        ref={ref}
         width="650"
         height="340"
-        autoPlay
         loop
         muted
         onPlay={() => {

@@ -85,10 +85,22 @@ const config: Config = {
         },
         partnerTransition: {
           from: {
-            left: "100%",
+            top: "-100px",
+            opacity: "0",
           },
           to: {
-            left: "0px",
+            top: "0px",
+            opacity: "1",
+          },
+        },
+        partnerTransitionRemove: {
+          from: {
+            top: "0px",
+            opacity: "1",
+          },
+          to: {
+            top: "100px",
+            opacity: "0",
           },
         },
       },

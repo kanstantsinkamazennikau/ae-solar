@@ -11,7 +11,17 @@ import {
   GET_IN_TOUCH_OUR_VISION,
 } from "@/app/[locale]/utils/constants";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const matchPartnerTypeWithArticle = {
+  partner: "a partner",
+  investor: "an investor",
+  installer: "an installer",
+};
+
+const partnersTypes = Object.keys(matchPartnerTypeWithArticle) as [
+  keyof typeof matchPartnerTypeWithArticle
+];
 
 export default function GetInTouch({
   children,
@@ -26,11 +36,20 @@ export default function GetInTouch({
     router.push(`/contacts?type=${clientType}`);
   };
 
-  const matchPartnerTypeWithArticle = {
-    partner: "a partner",
-    investor: "an investor",
-    installer: "an installer",
-  };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const currentPartnerTypeIndex = partnersTypes.indexOf(clientType);
+      if (currentPartnerTypeIndex === partnersTypes.length - 1) {
+        setClientType(partnersTypes[0]);
+      } else {
+        setClientType(partnersTypes[currentPartnerTypeIndex + 1]);
+      }
+    }, 4000);
+
+    return () => {
+      clearTimeout(intervalId);
+    };
+  });
 
   return (
     <div
@@ -106,7 +125,7 @@ export default function GetInTouch({
               !children ? "items-center" : "md:self-baseline items-center"
             } md:gap-5 gap-1 get-in-touch-border [&>*:last-child>div:last-child]:hidden relative`}
           >
-            {GET_IN_TOUCH_CLIENT_TYPE.map((type) => (
+            {partnersTypes.map((type) => (
               <div
                 key={type}
                 className="flex justify-center items-center md:gap-5 gap-1"
@@ -140,10 +159,10 @@ export default function GetInTouch({
                 <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
                   {GET_IN_TOUCH_ELEVATE_GROWTH}
                 </div>
-                <div className="[font-size:_clamp(26px,5vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1000px] leading-[120%] overflow-hidden">
+                <div className="[font-size:_clamp(26px,5vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1100px] leading-[120%] overflow-hidden">
                   <span>{GET_IN_TOUCH_JOIN_US}</span>
                   <span
-                    className="relative animate-partnerTransition"
+                    className="relative animate-partnerTransition transition-all"
                     key={clientType}
                   >
                     {matchPartnerTypeWithArticle[clientType]}

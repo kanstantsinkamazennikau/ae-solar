@@ -93,7 +93,7 @@ export default function LightingTheWayVideo() {
           onPlay={onPlay}
           muted
           ref={ref}
-          className={`!w-screen object-cover fixed -translate-y-1/2 top-1/2 ${
+          className={`!w-screen object-cover fixed -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 ${
             isStartAnimation &&
             ` 
               2xl:!-top-32

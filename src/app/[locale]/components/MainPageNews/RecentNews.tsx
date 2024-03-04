@@ -59,9 +59,8 @@ export default async function RecentNews() {
           alt="news"
           width={426}
           height={685}
-          className="min-[920px]:w-auto w-[300px] md:block hidden"
+          className="min-[920px]:w-[45%] w-[300px] md:block hidden"
         />
-
         <div
           className="
             flex
