@@ -44,3 +44,7 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
     ],
   },
 ];
+export const MANUFACTURER_DO_IT_TOGETHER =
+  "Let's do it together, one ray at a time.";
+export const MANUFACTURER_SAVE_THE_WORLD =
+  "AESOLAR — It's time to save the World. ";

@@ -1,9 +1,11 @@
 import Contacts from "@/app/[locale]/company/imprint/components/Contacts";
 import Artcile from "@/app/[locale]/company/manufacturer/components/Article";
+import SaveTheWorld from "@/app/[locale]/company/manufacturer/components/SaveTheWorld";
 import {
   MANUFACTURER_MANUFACTURER,
   MANUFACTURER_QUALITY,
 } from "@/app/[locale]/company/manufacturer/constants";
+import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
 import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
@@ -19,7 +21,18 @@ export default function ManufacturerPage() {
       />
       <div className="flex w-full justify-center flex-col items-center mb-20">
         <BasicWidthContainer>
-          <div className="flex gap-[60px] relative min-[920px]:flex-row flex-col">
+          <div
+            className="
+            flex
+            gap-[60px]
+            relative
+            min-[920px]:flex-row
+            flex-col
+            xl:mb-[60px]
+            lg:mb-[40px]
+            md:mb-[20px]
+          "
+          >
             <div>
               <div
                 className="
@@ -49,6 +62,23 @@ export default function ManufacturerPage() {
               </div>
             </div>
             <Artcile />
+          </div>
+        </BasicWidthContainer>
+        <SaveTheWorld />
+        <BasicWidthContainer styles="mx-auto">
+          <div
+            className="
+            xl:mb-[180px]
+            lg:mb-[140px]
+            md:mb-[100px]
+            mb-[80px]
+            xl:mt-[180px]
+            lg:mt-[140px]
+            md:mt-[100px]
+            mt-[80px]
+          "
+          >
+            <FeaturedProducts />
           </div>
         </BasicWidthContainer>
       </div>
