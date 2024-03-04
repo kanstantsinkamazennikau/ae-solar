@@ -23,15 +23,15 @@ export default function ManufacturerPage() {
         <BasicWidthContainer>
           <div
             className="
-            flex
-            gap-[60px]
-            relative
-            min-[920px]:flex-row
-            flex-col
-            xl:mb-[60px]
-            lg:mb-[40px]
-            md:mb-[20px]
-          "
+              flex
+              gap-[60px]
+              relative
+              min-[920px]:flex-row
+              flex-col
+              xl:mb-[60px]
+              lg:mb-[40px]
+              md:mb-[20px]
+            "
           >
             <div>
               <div

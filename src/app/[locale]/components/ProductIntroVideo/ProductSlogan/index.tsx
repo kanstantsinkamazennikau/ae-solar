@@ -1,43 +1,18 @@
 "use client";
 
 import { ProductSloganProps } from "@/app/[locale]/components/ProductIntroVideo/ProductSlogan/types";
+import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
 import {
   PRODUCT_INTRO_DETAILED_INFO,
   PRODUCT_INTRO_PANELS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const SloganWithIntersection = ({ model }: ProductSloganProps) => {
   const modelAdvantages = PRODUCT_INTRO_PANELS[model].advantages;
-  const ref = useRef(null);
-  const [intersecting, setIntersecting] = useState(false);
   const [stopIntersecting, setStopIntersecting] = useState(false);
-
-  useEffect(() => {
-    if (ref.current) {
-      const intersectionObserver = new IntersectionObserver(
-        (entries) => {
-          if (entries[0].isIntersecting) {
-            setIntersecting(true);
-          } else {
-            setIntersecting(false);
-          }
-        }
-        // {
-        //   threshold: 1,
-        // }
-      );
-
-      intersectionObserver.observe(ref.current);
-
-      return () => {
-        if (ref.current) {
-          intersectionObserver.unobserve(ref.current);
-        }
-      };
-    }
-  }, []);
+  const { ref, intersecting } = useIntersection();
 
   return (
     <div className="overflow-hidden" ref={ref}>
@@ -85,33 +60,6 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
 
 export default function ProductSlogan({ model }: ProductSloganProps) {
   const [showDetails, setShowDetails] = useState(false);
-  // const ref = useRef(null);
-  // const [intersecting, setIntersecting] = useState(false);
-  // useEffect(() => {
-  //   if (ref.current) {
-  //     const intersectionObserver = new IntersectionObserver(
-  //       (entries) => {
-  //         if (entries[0].isIntersecting) {
-  //           setIntersecting(true);
-  //         } else {
-  //           setIntersecting(false);
-  //         }
-  //       }
-  //       // {
-  //       //   threshold: 1,
-  //       // }
-  //     );
-
-  //     intersectionObserver.observe(ref.current);
-
-  //     return () => {
-  //       if (ref.current) {
-  //         intersectionObserver.unobserve(ref.current);
-  //       }
-  //     };
-  //   }
-  // }, []);
-
   const onClose = () => {
     setShowDetails(false);
   };
