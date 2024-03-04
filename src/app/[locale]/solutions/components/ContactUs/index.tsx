@@ -144,13 +144,13 @@ export default function ContactUs() {
             </div>
             <div
               className="
-              [font-size:_clamp(36px,5.5vw,96px)]
-              md:-tracking-[-2.88px]
-              -tracking-[-1.08px]
-              font-extrabold
-              max-w-[1000px]
-              leading-[100%]
-            "
+                [font-size:_clamp(26px,5.5vw,96px)]
+                md:-tracking-[-2.88px]
+                -tracking-[-1.08px]
+                font-extrabold
+                max-w-[1000px]
+                leading-[100%]
+              "
             >
               {SOLUTIONS_CONTACTS_US}
             </div>

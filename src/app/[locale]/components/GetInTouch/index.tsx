@@ -79,7 +79,6 @@ export default function GetInTouch({
             md:py-[80px]
             md:px-[50px]
             py-[40px]
-            px-[30px]
             rounded-[40px]
             max-[540px]:rounded-none
             max-[540px]:border-x-0
@@ -136,12 +135,12 @@ export default function GetInTouch({
           {/* TITLE */}
 
           {!children ? (
-            <div className="flex flex-col xl:gap-[40px] lg:gap-[40px] md:gap-[40px] gap-[20px] items-center text-center self-stretch z-10">
+            <div className="flex flex-col xl:gap-[40px] lg:gap-[30px] md:gap-[20px] gap-[16px] items-center text-center self-stretch z-10">
               <>
                 <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
                   {GET_IN_TOUCH_ELEVATE_GROWTH}
                 </div>
-                <div className="[font-size:_clamp(26px,4vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[900px] leading-[120%] overflow-hidden">
+                <div className="[font-size:_clamp(26px,5vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1000px] leading-[120%] overflow-hidden">
                   <span>{GET_IN_TOUCH_JOIN_US}</span>
                   <span
                     className="relative animate-partnerTransition"
@@ -149,7 +148,7 @@ export default function GetInTouch({
                   >
                     {matchPartnerTypeWithArticle[clientType]}
                   </span>
-                  <span>{GET_IN_TOUCH_OUR_VISION}</span>
+                  <p>{GET_IN_TOUCH_OUR_VISION}</p>
                 </div>
               </>
             </div>

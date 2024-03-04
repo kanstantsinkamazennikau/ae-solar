@@ -1,12 +1,21 @@
+"use client";
+
 import { VideoProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
+import { useEffect, useRef } from "react";
 
 export default function Video({ onLoaded, onEnded, id }: VideoProps) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    ref.current && (ref.current as HTMLVideoElement).play();
+  }, []);
+
   return (
     <>
       <video
+        ref={ref}
         width="1920"
         height="780"
-        autoPlay
         muted
         onPlay={onLoaded}
         onEnded={onEnded}

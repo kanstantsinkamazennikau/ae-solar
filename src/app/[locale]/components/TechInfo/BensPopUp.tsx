@@ -38,7 +38,7 @@ export default function BensPopUp({
             width={1320}
             height={300}
             priority
-            className="min-h-[160px] rounded-xl"
+            className="min-h-[160px] rounded-xl md:mb-8 mb-4"
           />
           <div className="absolute top-[30px] right-[30px]">
             <Button externalStyle="!py-2 !px-3" onClick={onClose}>
@@ -55,7 +55,7 @@ export default function BensPopUp({
             </Button>
           </div>
 
-          <div className="w-full md:p-8 p-4 overflow-y-scroll bensPopUp relative overflow-x-hidden">
+          <div className="w-full md:px-8 md:mb-8 px-4 mb-4 overflow-y-scroll bensPopUp relative overflow-x-hidden">
             <Image
               src={`/images/techInfo/fadeBackground.svg`}
               alt="fadeBackground"

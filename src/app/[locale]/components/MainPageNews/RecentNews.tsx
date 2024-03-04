@@ -72,12 +72,13 @@ export default async function RecentNews() {
             lg:p-12
             px-6
             justify-center
-            rounded-xl
+            rounded-r-xl
             border-solid
             border
             border-[#131313]
             md:-ml-5
             bg-[url('/images/getInTouchBackground.svg')]
+            [&>*:first-child]:border-t-0
           "
         >
           {blogPosts.map(

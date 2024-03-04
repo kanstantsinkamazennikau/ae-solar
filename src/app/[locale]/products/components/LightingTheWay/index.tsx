@@ -6,8 +6,7 @@ import {
   PRODUCTS_WELCOME,
 } from "@/app/[locale]/products/constants";
 import dynamic from "next/dynamic";
-import Image from "next/image";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 const LightingTheWayVideo = dynamic(() => import("./LightingTheWayVideo"), {
   ssr: false,

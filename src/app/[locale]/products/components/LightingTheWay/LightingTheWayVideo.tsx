@@ -13,6 +13,7 @@ export default function LightingTheWayVideo() {
     setIsLongVideoLoadingTime,
   } = useContext(ProductsContext);
   const [isPlaying, setIsPlaying] = useState(false);
+  const ref = useRef(null);
 
   const onPlay = () => {
     setIsPlaying(true);
@@ -35,6 +36,10 @@ export default function LightingTheWayVideo() {
       clearTimeout(timerId);
     };
   }, [isStartAnimation, setIsLongVideoLoadingTime, setIsStartAnimation]);
+
+  useEffect(() => {
+    ref.current && (ref.current as HTMLVideoElement).play();
+  }, []);
 
   return (
     <>
@@ -85,9 +90,9 @@ export default function LightingTheWayVideo() {
         <video
           width="1920"
           height="1080"
-          autoPlay
           onPlay={onPlay}
           muted
+          ref={ref}
           className={`!w-screen object-cover fixed -translate-y-1/2 top-1/2 ${
             isStartAnimation &&
             ` 
