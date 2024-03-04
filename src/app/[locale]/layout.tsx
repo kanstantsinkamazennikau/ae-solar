@@ -14,6 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Cookies from "@/app/[locale]/components/common/CookiesBanner";
 import { headers } from "next/headers";
 import ProductsContextProvider from "@/app/[locale]/context/productsContext";
+import MainPageVideoContextProvider from "@/app/[locale]/context/mainPageVideoContext";
 
 const walsheim = localFont({
   src: [
@@ -151,12 +152,14 @@ export default function RootLayout({
             <ModelProvider>
               <ConstructorProvider>
                 <ProductsContextProvider>
-                  <StickyNavigationProvider>
-                    <Navigation />
-                    {children}
-                    <Footer />
-                    <Cookies />
-                  </StickyNavigationProvider>
+                  <MainPageVideoContextProvider>
+                    <StickyNavigationProvider>
+                      <Navigation />
+                      {children}
+                      <Footer />
+                      <Cookies />
+                    </StickyNavigationProvider>
+                  </MainPageVideoContextProvider>
                 </ProductsContextProvider>
               </ConstructorProvider>
             </ModelProvider>

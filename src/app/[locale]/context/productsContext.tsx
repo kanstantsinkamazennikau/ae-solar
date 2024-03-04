@@ -1,13 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import {
-  Dispatch,
-  SetStateAction,
-  createContext,
-  useEffect,
-  useState,
-} from "react";
+import { Dispatch, SetStateAction, createContext, useState } from "react";
 
 export interface ProductsContext {
   setIsStartAnimation: Dispatch<SetStateAction<boolean>>;
@@ -23,12 +16,8 @@ export default function ProductsContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-  const isProductsPage = pathname === "/products";
   const [isStartAnimation, setIsStartAnimation] = useState(false);
   const [isLongVideoLoadingTime, setIsLongVideoLoadingTime] = useState(false);
-
-  // useEffect(() => {}, []);
 
   return (
     <ProductsContext.Provider

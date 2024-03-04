@@ -1,5 +1,6 @@
 import Contacts from "@/app/[locale]/company/imprint/components/Contacts";
 import Artcile from "@/app/[locale]/company/manufacturer/components/Article";
+import ManufacturerHeader from "@/app/[locale]/company/manufacturer/components/ManufacturerHeader";
 import SaveTheWorld from "@/app/[locale]/company/manufacturer/components/SaveTheWorld";
 import {
   MANUFACTURER_MANUFACTURER,
@@ -13,12 +14,7 @@ import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithB
 export default function ManufacturerPage() {
   return (
     <>
-      <HeadingWithBackground
-        tierOneHeading={MANUFACTURER_MANUFACTURER}
-        tierTwoHeading={MANUFACTURER_QUALITY}
-        backgroundImage="/images/about/manufacturer/manufacturerBackground.png"
-        mobileBackgroundImage="/images/about/manufacturer/manufacturerBackgroundMobile.png"
-      />
+      <ManufacturerHeader />
       <div className="flex w-full justify-center flex-col items-center mb-20">
         <BasicWidthContainer>
           <div

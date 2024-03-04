@@ -41,15 +41,6 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
         max-h-[1000px]
       "
     >
-      {/* <Image
-        src={`/images/products/${id}ProductBackground.png`}
-        alt={`${id}ProductBackground`}
-        priority
-        width={1920}
-        height={780}
-        quality={100}
-        className="object-cover h-[780px] w-full relative -top-[64px] "
-      /> */}
       {!videoLoaded && (
         <div className="absolute z-50 -mt-[136px]">
           <Loader />
@@ -85,14 +76,14 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           items-center         
           absolute
           max-w-[770px]
-          min-[920px]:bottom-[20%]
-          bottom-[30%]
           left-[50%]
           -translate-x-1/2
           z-10
           md:w-fit
           max-[460px]:w-full
           max-md:top-[160px]
+          min-[920px]:bottom-[20%]
+          bottom-[30%]
           transition-all
           duration-[1.5s]
           ease-out

@@ -39,7 +39,7 @@ export default function Benefits({ id }: BenefitsProps) {
             marginBottomNone
             externalStyle={"mb-20"}
           />
-          {benefits.map(
+          {benefits?.map(
             ({ benefitTitle, benefitDescription, benefitPicture }, index) => (
               <Benefit
                 key={benefitTitle}

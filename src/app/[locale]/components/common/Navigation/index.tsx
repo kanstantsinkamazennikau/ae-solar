@@ -8,6 +8,7 @@ import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import MobileNavigation from "@/app/[locale]/components/common/Navigation/MobileNavigation";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
+import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
 import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
@@ -21,12 +22,14 @@ import { useContext } from "react";
 
 export default function Navigation() {
   const { sticky } = useContext(StickyNavigationContext);
-  const { isStartAnimation } = useContext(ProductsContext);
+  const productsContext = useContext(ProductsContext);
+  const mainPageVideoContext = useContext(MainPageVideoContext);
   const params = useParams();
   const router = useRouter();
   const pathname = usePathname();
 
   const isProductsPage = pathname === "/products";
+  const isMainPage = pathname === "/";
 
   const hideSubnavigation = () => {
     return [
@@ -61,7 +64,19 @@ export default function Navigation() {
         duration-1000
         ${
           isProductsPage &&
-          `${isStartAnimation ? "translate-y-0" : "-translate-y-[144px]"}`
+          `${
+            productsContext.isStartAnimation
+              ? "translate-y-0"
+              : "-translate-y-[144px]"
+          }`
+        }
+        ${
+          isMainPage &&
+          `${
+            mainPageVideoContext.isStartAnimation
+              ? "translate-y-0"
+              : "-translate-y-[144px]"
+          }`
         }
       `}
     >

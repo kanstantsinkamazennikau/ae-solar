@@ -62,10 +62,10 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
         `}
       >
         <div className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-bold -tracking-[0.48px] leading-[100%] text-center">
-          {PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS[id].technology}
+          {PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS[id]?.technology}
         </div>
         <div className="text-center [font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim">
-          {PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS[id].description
+          {PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS[id]?.description
             .split(/\r?\n|\r|\n/g)
             .map((string) => (
               <p key={string} className="mb-7 last:mb-0">
