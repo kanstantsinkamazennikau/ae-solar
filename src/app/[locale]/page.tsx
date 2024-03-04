@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center w-full ">
       <HeroSection />
-      <div className="w-full relative overflow-x-hidden overflow-y-[unset]">
+      <div className="w-full relative">
         <div className="absolute w-full h-[40%] flex">
           <div className="fade-strip-top !h-[100px]" />
           <Image

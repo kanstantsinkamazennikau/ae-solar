@@ -67,7 +67,7 @@ export default function HeroSectionVideo() {
           onPlay={onPlay}
           muted
           ref={ref}
-          className={`!w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full `}
+          className={`!w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full`}
         >
           <source src={`/videos/headerOpening.mp4`} type="video/mp4" />
         </video>

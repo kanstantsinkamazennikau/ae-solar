@@ -13,7 +13,7 @@ export default function HeroSection() {
   const { isStartAnimation } = useContext(MainPageVideoContext);
 
   return (
-    <div className="w-full flex justify-center items-center relative -top-[64px] h-screen overflow-x-hidden">
+    <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[60vh] overflow-x-hidden">
       <div className="fade-strip-top" />
       <div className="fade-strip-bottom" />
       <div className="fade-strip-left md:block hidden" />
@@ -39,7 +39,7 @@ export default function HeroSection() {
           ease-[cubic-bezier(0.87, 0, 0.13, 1)]
           ${
             !isStartAnimation
-              ? "opacity-0           top-[50%]"
+              ? "opacity-0 top-[50%]"
               : "opacity-100 md:top-1/4 top-[40%]"
           }
         `}

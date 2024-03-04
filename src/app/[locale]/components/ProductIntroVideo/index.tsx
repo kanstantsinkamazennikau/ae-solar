@@ -75,7 +75,7 @@ export default function ProductIntroVideo() {
   }, [sliderId]);
 
   return (
-    <div className="flex flex-col items-center xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[80px] w-full z-30 relative">
+    <div className="flex flex-col items-center xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[80px] w-full z-30 relative overflow-x-hidden overflow-y-[unset]">
       <div
         className="
           w-full
