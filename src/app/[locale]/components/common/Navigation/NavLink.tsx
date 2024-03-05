@@ -4,6 +4,7 @@ import SubMenuItems from "@/app/[locale]/components/common/Navigation/SubMenuIte
 import { NavLinkProps } from "@/app/[locale]/components/common/Navigation/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
 import highlightNavigationLink from "@/app/[locale]/utils/highlightNavigationLink";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +15,8 @@ export default function NavLink({
   text,
   subMenu,
   onLinkClick,
+  stickyProducts,
+  isProductsPage,
 }: NavLinkProps) {
   const path = usePathname();
   const locale = useParams()?.locale as LocaleTypes;
@@ -89,9 +92,17 @@ export default function NavLink({
               className="min-[920px]:hidden block"
             />
           </Link>
-          <div className="absolute hidden group-hover:min-[920px]:block hover:min-[920px]:block z-10 top-[calc(100%-2px)]">
-            <SubMenuItems subMenuArray={subMenu} />
-          </div>
+          {!stickyProducts ? (
+            <div className="absolute hidden group-hover:min-[920px]:block hover:min-[920px]:block z-20 top-[calc(100%-2px)]">
+              <SubMenuItems subMenuArray={subMenu} />
+            </div>
+          ) : (
+            !isProductsPage && (
+              <div className="w-full fixed hidden group-hover:min-[920px]:block hover:min-[920px]:block pt-[27px] top-[52px] left-1/2 -translate-x-1/2">
+                <SubNavigationProductPanels isShowAllProductsLink />
+              </div>
+            )
+          )}
 
           {/* MOBILE SUBMENU ON HEADING CLICK */}
           <div className="min-[920px]:hidden">

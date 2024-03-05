@@ -38,6 +38,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
   {
     url: "/products",
     text: "Products",
+    stickyProducts: true,
     subMenu: [
       { url: "/products/Aurora", text: "Aurora" },
       { url: "/products/Meteor", text: "Meteor" },
@@ -93,6 +94,7 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "ShadeStar.svg",
   "Neptune.svg",
 ];
+export const HEADER_SUBNAVIGATION_ALL_PRODUCTS = "All products";
 export const HEADER_CONFIGURE_YOUR_MODEL = "Configure your model";
 export const HEADER_CALCULATE = "Calculate";
 export const HEADER_CHOOSE_LANGUAGE = "Choose language";

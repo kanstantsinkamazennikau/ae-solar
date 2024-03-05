@@ -7,9 +7,11 @@ export interface NavLinkProps {
   url: string;
   text: string;
   subMenu?: NavLink[];
+  stickyProducts?: boolean;
   subMenuHeading?: string;
   onSubMenuHeadingClick?: (e: any) => void;
   onLinkClick?: () => void;
+  isProductsPage?: boolean;
 }
 
 export interface SubMenuItemsProps {
