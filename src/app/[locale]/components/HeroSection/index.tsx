@@ -10,7 +10,8 @@ const HeroSectionVideo = dynamic(() => import("./HeroSectionVideo"), {
 });
 
 export default function HeroSection() {
-  const { isStartAnimation } = useContext(MainPageVideoContext);
+  const { isStartAnimation, isLongVideoLoadingTime } =
+    useContext(MainPageVideoContext);
 
   return (
     <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[60vh] overflow-x-hidden">
@@ -33,7 +34,7 @@ export default function HeroSection() {
           items-center
           z-10
           transition-all
-          delay-[4.5s]
+          ${!isLongVideoLoadingTime && "delay-[4.5s]"}
           duration-[1.5s]
           ease-out
           ease-[cubic-bezier(0.87, 0, 0.13, 1)]
@@ -70,7 +71,7 @@ export default function HeroSection() {
           font-semibold
           text-xl
           transition-all
-          delay-[6.5s]
+          ${!isLongVideoLoadingTime && "delay-[6.5s]"}
           duration-[1s]
           ${
             !isStartAnimation

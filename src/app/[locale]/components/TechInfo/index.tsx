@@ -1,3 +1,4 @@
+import SequenceAnimation from "@/app/[locale]/company/components/SequenceAnimation";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Bens from "@/app/[locale]/components/TechInfo/Bens";
 import Divider from "@/app/[locale]/components/TechInfo/Divider";
@@ -52,6 +53,11 @@ export default function TechDescription() {
         <Bens />
         <Divider />
         {/* <Tech /> */}
+        {/* <div className="max-h-[900px] h-[900px] overflow-scroll"> */}
+      </BasicWidthContainer>
+      <SequenceAnimation />
+      {/* </div> */}
+      <BasicWidthContainer styles="relative">
         <FeaturedProducts />
       </BasicWidthContainer>
     </div>

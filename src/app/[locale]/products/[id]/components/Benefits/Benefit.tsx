@@ -99,14 +99,14 @@ export default function Benefit({
       {/* <div className="flex justify-between items-center gap-3"> */}
       <div className="flex flex-col items-start lg:gap-6 md:gap-3 gap-2">
         {/* DESKTOP COUNTER */}
-        <div className="md:flex leading-[100%] font-walsheim font-bold h-5 text-[#505050] hidden">
+        {/* <div className="md:flex leading-[100%] font-walsheim font-bold h-5 text-[#505050] hidden">
           <div className="[font-size:_clamp(10px,1.5vw,20px)] flex items-end h-full">
             {formatNumber(index + 1)}
           </div>
           <div className="[font-size:_clamp(8px,1.2vw,14px)] flex items-start h-full">
             /{formatNumber(benefitsLength)}
           </div>
-        </div>
+        </div> */}
         <p
           className="
             [font-size:_clamp(12px,1.5vw,20px)]

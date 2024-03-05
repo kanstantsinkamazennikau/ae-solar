@@ -194,8 +194,8 @@ export default function Footer() {
             <div className="flex justify-between text-dark-gray-800 mb-5 text-[10px] min-[550px]:flex-row flex-col">
               <div>{FOOTER_COPYRIGHT}</div>
               <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row max-[550px]:gap-4">
-                {POLICY_LINKS.map((link) => (
-                  <PolicyLink key={link} link={link} />
+                {POLICY_LINKS.map(({ text, link }) => (
+                  <PolicyLink key={text} link={link} text={text} />
                 ))}
               </div>
             </div>

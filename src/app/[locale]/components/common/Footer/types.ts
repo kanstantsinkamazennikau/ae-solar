@@ -5,6 +5,7 @@ export interface FooterCategoryProps {
 
 export interface PolicyLinkProps {
   link: string;
+  text: string;
 }
 export interface FooterFormFields {
   email: string;

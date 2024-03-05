@@ -542,7 +542,11 @@ export const FOOTER_COPYRIGHT =
   "Copyright © 2023 AESolar. All rights reserved.";
 export const FOOTER_YOUR_EMAIL = "your e-mail";
 export const FOOTER_SUBSCRIBE = "Subscribe";
-export const POLICY_LINKS = ["Privacy Policy", "Terms of Use", "Legal"];
+export const POLICY_LINKS = [
+  { text: "Privacy Policy", link: "/company/publishers_info" },
+  { text: "Terms of Use", link: "/company/publishers_info" },
+  { text: "Legal", link: "/company/imprint" },
+];
 
 export const CONSTRUCTOR_OPTION_LINES = [
   {
@@ -1019,11 +1023,11 @@ export const SEQUENCE_ANIMATION_TEXT = [
     description:
       "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
   },
-  {
-    title: "Connector",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
+  // {
+  //   title: "Connector",
+  //   description:
+  //     "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+  // },
 ];
 
 export const CONSTRUCTOR_MODEL = "Model.";
