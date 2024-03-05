@@ -134,7 +134,7 @@ export default function ProductIntroVideo() {
               {model}
             </span>
           </div>
-          <div className="font-walsheim text-lg leading-[1.5] font-medium [font-size:_clamp(12px,1.5vw,18px)] xl:max-w-[328px] max-w-[300px] md:text-left text-center">
+          <div className="h-[100px] font-walsheim text-lg leading-[1.5] font-medium [font-size:_clamp(12px,1.5vw,18px)] xl:max-w-[328px] max-w-[300px] md:text-left text-center">
             {modelInfo.text}
           </div>
           <LinkWithArrow

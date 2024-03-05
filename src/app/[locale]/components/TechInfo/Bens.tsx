@@ -21,7 +21,7 @@ export default function Bens() {
           gap-5
           lg:mb-[280px]
           md:mb-[120px]
-          mb-[60px]
+          mb-[100px]
           min-[500px]:grid-cols-2
           min-[500px]:[&>*:nth-child(5)]:col-start-1
           min-[500px]:[&>*:nth-child(5)]:col-end-3  
