@@ -1,8 +1,10 @@
 export const ABOUT_MANUFACTURER = "AESOLAR is German TIER1 Manufacturer";
 export const ABOUT_ILLUMINATING =
   "Illuminating Your Journey Towards a Greener Tomorrow";
-export const ABOUT_DOWNLOAD_PRESENTATION = "Company presentation";
-export const ABOUT_WATCH_VIDEO = "Watch the video of our history";
+export const ABOUT_DOWNLOAD_PRESENTATION = `Company
+Presentation`;
+export const ABOUT_WATCH_VIDEO = `Production 
+Process`;
 export const ABOUT_BORN_IN_GERMANY = "Born in Germany";
 export const ABOUT_BORN_STORY = `In the heart of Bavaria, Germany, a remarkable vision emerged—to harness the limitless power of the sun and convert it into renewable energy. 
 This visionary idea, fueled by the belief that "It's time to save the world", inspired Dr. Alexander Maier and his brothers to establish AESOLAR in 2003. `;

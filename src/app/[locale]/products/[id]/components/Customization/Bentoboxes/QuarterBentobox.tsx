@@ -12,10 +12,14 @@ export default function QuarterBentobox({
   return (
     <div
       className="
-        w-[315px]
-        h-[290px]
-        px-6
-        py-8
+        2xl:w-[315px]
+        2xl:h-[290px]
+        w-[215px]
+        h-[190px]
+        2xl:px-6
+        2xl:py-8
+        px-4
+        py-4
         flex
         flex-col
         justify-end

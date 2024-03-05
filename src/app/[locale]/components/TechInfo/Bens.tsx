@@ -19,9 +19,9 @@ export default function Bens() {
           grid
           md:grid-cols-3
           gap-5
-          lg:mb-[200px]
+          lg:mb-[280px]
           md:mb-[120px]
-          mb-[80px]
+          mb-[60px]
           min-[500px]:grid-cols-2
           min-[500px]:[&>*:nth-child(5)]:col-start-1
           min-[500px]:[&>*:nth-child(5)]:col-end-3  

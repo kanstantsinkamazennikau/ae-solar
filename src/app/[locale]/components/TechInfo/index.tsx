@@ -50,7 +50,6 @@ export default function TechDescription() {
       </div>
       <BasicWidthContainer styles="relative">
         <Bens />
-        <Divider />
       </BasicWidthContainer>
       <SequenceAnimation />
       <BasicWidthContainer styles="relative">

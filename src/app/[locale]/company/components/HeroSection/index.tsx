@@ -109,7 +109,10 @@ export default function HeroSection() {
 
           <div className="flex gap-5 md:flex-row flex-col">
             <a href="/documents/presentation.pdf" target="_blank">
-              <Button size="normal" externalStyle="!py-[12px]">
+              <Button
+                size="normal"
+                externalStyle="!py-[12px] md:w-[260px] w-[220px]"
+              >
                 <div className="flex items-center justify-center gap-4">
                   <Image
                     src="/images/downloadFileWhite.svg"
@@ -119,7 +122,11 @@ export default function HeroSection() {
                     height={24}
                   />
                   <p className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
-                    {ABOUT_DOWNLOAD_PRESENTATION}
+                    {ABOUT_DOWNLOAD_PRESENTATION.split(/\r?\n|\r|\n/g).map(
+                      (string) => (
+                        <div key={string}>{string}</div>
+                      )
+                    )}
                   </p>
                 </div>
               </Button>
@@ -127,7 +134,7 @@ export default function HeroSection() {
             <Button
               size="normal"
               style="outline"
-              externalStyle="!py-[8px]"
+              externalStyle="md:!py-[8px] !py-[12px] md:w-[260px] w-[220px]"
               onClick={onVideoOpen}
             >
               <div className="flex items-center justify-center gap-4">
@@ -138,9 +145,11 @@ export default function HeroSection() {
                   width={24}
                   height={24}
                 />
-                <p className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
-                  {ABOUT_WATCH_VIDEO}
-                </p>
+                <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
+                  {ABOUT_WATCH_VIDEO.split(/\r?\n|\r|\n/g).map((string) => (
+                    <div key={string}>{string}</div>
+                  ))}
+                </div>
               </div>
             </Button>
           </div>

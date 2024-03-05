@@ -10,19 +10,26 @@ export default function HalfBentobox({
   return (
     <div
       className="
-        w-[650px]
-        h-[290px]
+        2xl:w-[650px]
+        2xl:h-[290px]
+        w-[450px]
+        h-[190px]
         bg-[#131313]
         rounded-xl
         border
         border-solid
         border-[#191919]
-        px-6
-        py-8
+        2xl:px-6
+        2xl:py-8
+        px-4
+        py-4
         flex
         flex-col
         justify-end
         items-center
+        bg-contain
+        bg-no-repeat
+        bg-center
       "
       style={{
         backgroundImage: imageUrl,

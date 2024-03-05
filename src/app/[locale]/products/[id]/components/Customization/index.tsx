@@ -10,10 +10,11 @@ import {
 } from "@/app/[locale]/products/[id]/constants";
 import Image from "next/image";
 
-const area = `"a a b b"
-"a a c d"
-"e e f f"
-"e e f f"
+const area = `
+  "a a b b"
+  "a a c d"
+  "e e f f"
+  "e e f f"
 `;
 
 export default function Customization() {
@@ -30,7 +31,10 @@ export default function Customization() {
           />
           <div className="flex justify-center items-start gap-8 self-stretch min-[540px]:flex-row flex-col"></div>
         </div>
-        <div className="grid gap-5" style={{ gridTemplateAreas: area }}>
+        <div
+          className="grid gap-5 grid-cols-2"
+          style={{ gridTemplateAreas: area }}
+        >
           <FullBentobox
             imageUrl="url('/images/products/bentobox/sand.png')"
             shortDescription="Suitable for Extreme Conditions"
@@ -44,15 +48,21 @@ export default function Customization() {
           />
           <QuarterBentobox
             imageUrl={"/images/products/bentobox/weather.svg"}
-            shortDescription="Suitable for Extreme  Conditions"
+            shortDescription="Suitable for Extreme Conditions"
             gridArea="c"
           />
           <WarrantyYears gridArea="d" />
           <FullBentobox
-            imageUrl="url('/images/products/bentobox/sand.png')"
-            shortDescription="Suitable for Extreme Conditions"
+            imageUrl="url('/images/products/bentobox/material.png')"
+            longDescription={{
+              title: `Tailored Material 
+              and Power`,
+              description:
+                "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+            }}
             gridArea="e"
           />
+
           <FullBentobox
             imageUrl="url('/images/products/bentobox/sand.png')"
             shortDescription="Suitable for Extreme Conditions"

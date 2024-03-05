@@ -38,6 +38,8 @@ export const PRODUCT_JOIN =
 
 export const PRODUCT_TIME_TO_CHOOSE = "Time To Choose";
 export const PRODUCT_YOUR_MODULE = "Your Module";
+export const PRODUCT_THE_ADVANTAGES = "The Advantages:";
+export const PRODUCT_ESSENTIAL = "Essential Insights";
 export const PRODUCT_SINCE =
   "Since 2003, AE Solar has been at the forefront of the renewable energy industry. We're not just a Tier 1 solar panel manufacturer, we're a leader and innovator in clean, efficient, and sustainable energy. We stand for quality, durability, and efficiency in harnessing the sun's power.";
 export const PRODUCT_SINCE_HIGHLIGHT = [

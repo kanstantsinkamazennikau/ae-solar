@@ -16,7 +16,16 @@ import Link from "next/link";
 
 export default function PanelsList() {
   return (
-    <div className="flex flex-col items-center">
+    <div
+      className="
+        flex
+        flex-col
+        items-center
+        lg:mb-[180px]
+        md:mb-[120px]
+        mb-[60px]
+      "
+    >
       <TwoTierHeading
         tierOneHeading={PRODUCT_TIME_TO_CHOOSE}
         tierTwoHeading={PRODUCT_YOUR_MODULE}

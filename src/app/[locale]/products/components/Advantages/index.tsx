@@ -1,10 +1,15 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Tier1 from "@/app/[locale]/components/common/Tier1";
+import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import PanelsList from "@/app/[locale]/products/components/PanelsList";
 import Starfield from "@/app/[locale]/products/components/StarField";
 import {
   PRODUCT_ADVANTAGES,
+  PRODUCT_ESSENTIAL,
   PRODUCT_SINCE,
   PRODUCT_SINCE_HIGHLIGHT,
+  PRODUCT_THE_ADVANTAGES,
+  PRODUCT_TIME_TO_CHOOSE,
   PRODUCT_WE_ARE_TIER,
   PRODUCT_WE_ARE_TIER_HIGHLIGHT,
 } from "@/app/[locale]/products/constants";
@@ -15,30 +20,9 @@ export default function Advantages() {
     <div
       className="
         relative
-        xl:mb-[140px]
-        lg:mb-[120px]
-        md:mb-[100px]
-        mb-[80px]
         overflow-hidden
       "
     >
-      {/* <Image
-        src={`/images/products/advantagesBackStars.svg`}
-        alt="AdvantagesBackStars"
-        width={1920}
-        height={1080}
-        priority
-        className={`absolute top-0 h-full object-cover`}
-      /> */}
-      {/* <div className={`relative top-0 h-full object-cover overflow-hidden`}>
-        <Starfield
-          starCount={1000}
-          starColor={[255, 255, 255]}
-          speedFactor={0.02}
-          backgroundColor="black"
-        />
-      </div> */}
-
       <Tier1
         tier1TextStyle="text-[#F60109]"
         tier1Text={PRODUCT_WE_ARE_TIER}
@@ -47,7 +31,14 @@ export default function Advantages() {
         descriptionTextHighlight={PRODUCT_SINCE_HIGHLIGHT}
         externalStyle="border-t-0 -mt-10 md:mt-0 !py-0"
       />
+      <PanelsList />
       <BasicWidthContainer styles="mx-auto -mt-5">
+        <TwoTierHeading
+          tierOneHeading={PRODUCT_THE_ADVANTAGES}
+          tierTwoHeading={PRODUCT_ESSENTIAL}
+          align="center"
+          externalStyle="[font-size:_clamp(40px,6vw,102px)!important] font-semibold mb-[60px]"
+        />
         <div
           className="
             xl:columns-[2]

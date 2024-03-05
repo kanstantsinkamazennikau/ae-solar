@@ -58,7 +58,6 @@ export default function ProductsPage() {
         />
         <div className="overflow-hidden">
           <Advantages />
-          <PanelsList />
           <WeTransform />
         </div>
       </div>
