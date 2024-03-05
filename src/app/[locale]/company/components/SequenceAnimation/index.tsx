@@ -63,7 +63,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     let mm = gsap.matchMedia();
 
-    mm.add("(min-width: 769px)", () => {
+    mm.add("(min-width: 768px)", () => {
       const ctx = gsap.context(() => {
         gsap
           .timeline({
@@ -92,7 +92,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
       });
     });
 
-    mm.add("(max-width: 768px)", () => {
+    mm.add("(max-width: 767px)", () => {
       const ctx = gsap.context(() => {
         gsap
           .timeline({
