@@ -67,7 +67,7 @@ export default function Navigation() {
           `${
             productsContext.isStartAnimation
               ? "translate-y-0"
-              : "-translate-y-[144px]"
+              : "-translate-y-[144px] pointer-events-none"
           }`
         }
         ${
@@ -75,7 +75,7 @@ export default function Navigation() {
           `${
             mainPageVideoContext.isStartAnimation
               ? "translate-y-0"
-              : "-translate-y-[144px]"
+              : "-translate-y-[144px] pointer-events-none"
           }`
         }
       `}

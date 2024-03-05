@@ -14,7 +14,7 @@ export default function SubNavigation({
         ${
           isProductionIntroBlock
             ? "border-none"
-            : "border-b border-solid border-sub-navigation-border"
+            : "border-b border-solid border-sub-navigation-border max-w-[1920px] mx-auto"
         }
         py-2
         ${isProductionIntroBlock ? "flex" : "md:flex hidden"}

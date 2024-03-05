@@ -47,7 +47,7 @@ export default function Ben({
         />
       )}
       <div
-        key={title}
+        onClick={showPopUp}
         className={`
           flex
           lg:p-8
@@ -168,7 +168,7 @@ export default function Ben({
           `}
           >
             <div className="flex justify-center items-center gap-2 cursor-pointer">
-              <Button style="textOnly" externalStyle="!p-0" onClick={showPopUp}>
+              <Button style="textOnly" externalStyle="!p-0">
                 <div
                   className={`text-base-red [font-size:_clamp(14px,1vw,16px)]`}
                 >

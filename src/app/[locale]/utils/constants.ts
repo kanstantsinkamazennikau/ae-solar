@@ -38,15 +38,14 @@ export const HEADER_NAV_LINKS_ARRAY = [
   {
     url: "/products",
     text: "Products",
-    // subMenu: [
-    //   { url: "/products", text: "All Products" },
-    //   { url: "/products/Aurora", text: "Aurora" },
-    //   { url: "/products/Meteor", text: "Meteor" },
-    //   { url: "/products/Comet", text: "Comet" },
-    //   { url: "/products/Terra", text: "Terra" },
-    //   { url: "/products/ShadeStar", text: "ShadeStar" },
-    //   { url: "/products/Neptune", text: "Neptune" },
-    // ],
+    subMenu: [
+      { url: "/products/Aurora", text: "Aurora" },
+      { url: "/products/Meteor", text: "Meteor" },
+      { url: "/products/Comet", text: "Comet" },
+      { url: "/products/Terra", text: "Terra" },
+      { url: "/products/ShadeStar", text: "ShadeStar" },
+      { url: "/products/Neptune", text: "Neptune" },
+    ],
   },
   {
     url: "/company",

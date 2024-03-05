@@ -22,7 +22,7 @@ function getCurrentFrame(index: number) {
   return `/images/sequence/home/Layer-3-2-${index.toString()}.jpg`;
 }
 
-const frameIndex = { frame: 1 };
+const frameIndex = { frame: 0 };
 const numFrames = 120;
 
 export default function SequenceAnimation({ width = 1158, height = 600 }) {
@@ -36,36 +36,29 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
   );
 
   const renderImage = useCallback(() => {
-    const ctx = canvasRef.current!.getContext("2d");
+    if (!canvasRef.current) return;
+    const ctx = canvasRef.current?.getContext("2d");
     setScrollFrame(frameIndex.frame);
-
     ctx!.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
     ctx!.drawImage(images[frameIndex.frame], 0, 0);
   }, [images]);
 
   function preloadImages() {
-    for (let i = 0; i <= numFrames; i++) {
+    for (let i = 1; i <= numFrames; i++) {
       const img = new Image();
       const imgSrc = getCurrentFrame(i);
-
       img.src = imgSrc;
       setImages((prevImages) => [...prevImages, img]);
     }
   }
 
-  const renderCanvas = useCallback(() => {
-    const canvas = canvasRef.current;
-    // canvas!.width = width;
-    // canvas!.height = height;
-  }, [height, width]);
-
   useEffect(() => {
-    renderCanvas();
     preloadImages();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!canvasRef.current || images.length === 0) return;
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     const ctx = gsap.context(() => {
@@ -77,7 +70,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
               setScrollDirection(self.direction);
             },
             trigger: "#canvas",
-            start: "top-=140px",
+            start: "top-=40%",
             pin: true,
             end: "+=600%",
             scrub: 1,
