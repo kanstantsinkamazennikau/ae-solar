@@ -125,8 +125,15 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
   }, [images.length, renderImage]);
 
   useEffect(() => {
-    if (!canvasRef.current || images.length === 0) return;
-    renderImage();
+    // if (!canvasRef.current || images.length === 0) return;
+    // renderImage();
+    if (!canvasRef.current) return;
+    const img = new Image();
+    const imgSrc = `/images/sequence/home/Layer-3-2-1.jpg`;
+    img.src = imgSrc;
+    const ctx = canvasRef.current?.getContext("2d");
+    ctx!.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
+    ctx!.drawImage(img, 0, 0);
   }, [images, renderImage]);
 
   useEffect(() => {
@@ -188,17 +195,17 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                         <div className="flex items-center">
                           <div
                             className={`
-                          w-[7px]
-                          h-[7px]
-                          border
-                          border-solid
-                          border-base-red
-                          rounded-full
-                          absolute
-                          -left-[3px]
-                          bg-black
-                          ${isActive ? "block" : "hidden"}
-                        `}
+                              w-[7px]
+                              h-[7px]
+                              border
+                              border-solid
+                              border-base-red
+                              rounded-full
+                              absolute
+                              -left-[3px]
+                              bg-black
+                              ${isActive ? "block" : "hidden"}
+                            `}
                           />
                           <div
                             style={{ opacity: 1 / opacityValue }}
@@ -234,13 +241,13 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                         </div>
                         <div
                           className={`
-                        ${isActive ? "block" : "hidden"}
-                        font-walsheim
-                        [font-size:_clamp(12px,2vw,16px)]
-                        leading-[150%]
-                        font-medium
-                        text-dark-gray-900
-                      `}
+                            ${isActive ? "block" : "hidden"}
+                            font-walsheim
+                            [font-size:_clamp(12px,2vw,16px)]
+                            leading-[150%]
+                            font-medium
+                            text-dark-gray-900
+                          `}
                         >
                           {description}
                         </div>
