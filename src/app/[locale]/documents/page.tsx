@@ -88,7 +88,7 @@ export default function Documents() {
                 index={index}
                 dropdownIcon="/images/documents/dropDownIcon.svg"
               >
-                <div className="grid grid-cols-3 gap-[6px] pb-10">
+                <div className="grid lg:grid-cols-3 min-[920px]:grid-cols-2 max-[560px]:grid-cols-2 min-[560px]:grid-cols-3 gap-[6px] pb-10">
                   {data.map(({ link, linkTitle, title, image }) => (
                     <Presentation
                       {...{ link, title, linkTitle, image }}

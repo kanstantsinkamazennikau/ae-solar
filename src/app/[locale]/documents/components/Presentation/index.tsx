@@ -39,7 +39,7 @@ export default function Presentation({
         ${isHover ? "border-base-red" : "border-[#191919]"}
         rounded-xl
         bg-option-border
-        min-h-[200px]
+        min-h-[150px]
         overflow-hidden
         relative
       `}
@@ -85,11 +85,12 @@ export default function Presentation({
       <div
         className="
           [font-size:_clamp(12px,1.5vw,16px)]
-          leading-[100%]
+          leading-[130%]
           p-4
           font-bold
           capitalize
-          -tracking-[0.32px]
+          md:-tracking-[0.32px]
+          tracking-[1px]
           flex
           justify-between
           w-full
