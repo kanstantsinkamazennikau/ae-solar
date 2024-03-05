@@ -1,12 +1,9 @@
-import GetInTouch from "@/app/[locale]/components/GetInTouch";
-import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
-import Loader from "@/app/[locale]/components/common/Loader";
 import Benefits from "@/app/[locale]/products/[id]/components/Benefits";
 import Conclusion from "@/app/[locale]/products/[id]/components/Conclusion";
 import Customization from "@/app/[locale]/products/[id]/components/Customization";
-import VideoIntroduction from "@/app/[locale]/products/[id]/components/VideoIntroduction";
 import PanelTechnology from "@/app/[locale]/products/[id]/components/PanelTechnology";
 import ProductsPanel from "@/app/[locale]/products/[id]/components/ProductsPanel";
+import VideoIntroduction from "@/app/[locale]/products/[id]/components/VideoIntroduction";
 import { ProductPageProps } from "@/app/[locale]/products/[id]/types";
 
 export default async function Page({ params: { id } }: ProductPageProps) {

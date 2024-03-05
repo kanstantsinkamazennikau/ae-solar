@@ -31,10 +31,7 @@ export default function Customization() {
           />
           <div className="flex justify-center items-start gap-8 self-stretch min-[540px]:flex-row flex-col"></div>
         </div>
-        <div
-          className="grid gap-5 grid-cols-2"
-          style={{ gridTemplateAreas: area }}
-        >
+        <div className="grid gap-5" style={{ gridTemplateAreas: area }}>
           <FullBentobox
             imageUrl="url('/images/products/bentobox/sand.png')"
             shortDescription="Suitable for Extreme Conditions"
