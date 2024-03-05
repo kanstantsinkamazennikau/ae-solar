@@ -61,33 +61,67 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
   useEffect(() => {
     if (!canvasRef.current || images.length === 0) return;
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    const ctx = gsap.context(() => {
-      gsap
-        .timeline({
-          onUpdate: renderImage,
-          scrollTrigger: {
-            onUpdate: (self) => {
-              setScrollDirection(self.direction);
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 769px)", () => {
+      const ctx = gsap.context(() => {
+        gsap
+          .timeline({
+            onUpdate: renderImage,
+            scrollTrigger: {
+              onUpdate: (self) => {
+                setScrollDirection(self.direction);
+              },
+              trigger: "#canvas",
+              start: "top-=140px",
+              pin: true,
+              end: "+=600%",
+              scrub: 1,
             },
-            trigger: "#canvas",
-            start: "top-=140px",
-            pin: true,
-            end: "+=600%",
-            scrub: 1,
-          },
-        })
-        .to(
-          frameIndex,
-          {
-            frame: numFrames - 1,
-            snap: "frame",
-            ease: "none",
-            duration: 1,
-          },
-          0
-        );
+          })
+          .to(
+            frameIndex,
+            {
+              frame: numFrames - 1,
+              snap: "frame",
+              ease: "none",
+              duration: 1,
+            },
+            0
+          );
+      });
     });
-    return () => ctx.revert();
+
+    mm.add("(max-width: 768px)", () => {
+      const ctx = gsap.context(() => {
+        gsap
+          .timeline({
+            onUpdate: renderImage,
+            scrollTrigger: {
+              onUpdate: (self) => {
+                setScrollDirection(self.direction);
+              },
+              trigger: "#canvas",
+              start: "top-=80px",
+              pin: true,
+              end: "+=600%",
+              scrub: 1,
+            },
+          })
+          .to(
+            frameIndex,
+            {
+              frame: numFrames - 1,
+              snap: "frame",
+              ease: "none",
+              duration: 1,
+            },
+            0
+          );
+      });
+    });
+
+    return () => mm.revert();
   }, [images.length, renderImage]);
 
   useEffect(() => {
@@ -113,6 +147,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
   return (
     <div
       className="
+        overflow-hidden
         flex
         flex-col
         justify-center
@@ -124,13 +159,14 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
       "
     >
       <BasicWidthContainer styles="max-md:!px-0">
-        <div className="flex flex-col items-center md:-mt-20" id="canvas">
+        <div className="flex flex-col items-center" id="canvas">
           <TwoTierHeading
             tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}
             tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
             align="right"
+            externalStyle="z-10"
           />
-          <div className="flex items-center">
+          <div className="flex items-center  lg:-mt-24">
             <div className="flex gap-5 max-w-[33%] relative">
               <div className="sequenceAnimationDivider !w-[1px] basis-[1px] shrink-0" />
               <div className="py-20">
@@ -142,12 +178,12 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                       <div
                         key={title}
                         className={`
-                      ${isActive ? "md:py-8 py-4" : ""}
-                      first:pt-0
-                      last:pb-0
-                      transition-all
-                      duration-500
-                    `}
+                          ${isActive ? "md:py-8 py-4" : ""}
+                          first:pt-0
+                          last:pb-0
+                          transition-all
+                          duration-500
+                        `}
                       >
                         <div className="flex items-center">
                           <div

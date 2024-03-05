@@ -10,6 +10,7 @@ import { useState } from "react";
 
 export default function Awards() {
   const [hideCover, setHideCover] = useState(false);
+
   const options = {
     type: "loop",
     drag: true,
@@ -33,19 +34,17 @@ export default function Awards() {
         onMouseEnter={() => setHideCover(true)}
         onMouseLeave={() => setHideCover(false)}
       >
-        {!hideCover && (
-          <div
-            className="
-              w-full
-              h-full
-              absolute
-              [background:linear-gradient(90deg,#000000e8_0%,#000000e6_5%,#000000e6_10%,#00000000_50%,#000000e6_90%,#000000e6_95%,#000000e8_100%)]
-              z-10
-              pointer-events-none
-            "
-          />
-        )}
-        {/* bg-[linear-gradient(90deg,_rgb(0_0_0_/_20%)_0%,_rgb(0_0_0_/_40%)_20%,_rgb(0_0_0_/_0%)_40%,_rgb(0_0_0_/_0%)_60%,_rgb(0_0_0_/_40%)_80%,_rgb(0_0_0_/_20%)_100%)] */}
+        <div
+          className={`
+            ${hideCover ? "opacity-0" : "opacity-100"}
+            [background:linear-gradient(90deg,#000000e8_0%,#000000e6_5%,#000000e6_10%,#00000000_50%,#000000e6_90%,#000000e6_95%,#000000e8_100%)]
+            w-full
+            h-full
+            absolute
+            z-10
+            pointer-events-none
+          `}
+        />
 
         <Splide
           aria-label="awards"
@@ -61,7 +60,16 @@ export default function Awards() {
                 width={120}
                 height={120}
                 priority
-                className="object-contain md:h-[120px] md:w-[120px] h-20 w-20 md:hover:scale-150 hover:scale-[2] hover:z-10"
+                className={`
+                  object-contain
+                  md:h-[120px]
+                  md:w-[120px]
+                  h-20
+                  w-20
+                  md:hover:scale-125 hover:scale-[1.5] hover:z-10
+                  transition-all
+                  duration-100
+                `}
               />
             </SplideSlide>
           ))}
