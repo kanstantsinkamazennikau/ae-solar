@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/app/[locale]/components/common/Loader";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -14,7 +15,7 @@ export default function HeroSection() {
     useContext(MainPageVideoContext);
 
   return (
-    <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[60vh] overflow-x-hidden">
+    <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[60vh] overflow-x-hidden overflow-hidden">
       <div className="fade-strip-top" />
       <div className="fade-strip-bottom" />
       <div className="fade-strip-left md:block hidden" />

@@ -131,9 +131,11 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
     const img = new Image();
     const imgSrc = `/images/sequence/home/Layer-3-2-1.jpg`;
     img.src = imgSrc;
-    const ctx = canvasRef.current?.getContext("2d");
-    ctx!.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
-    ctx!.drawImage(img, 0, 0);
+    img.onload = () => {
+      const ctx = canvasRef.current?.getContext("2d");
+      ctx!.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
+      ctx!.drawImage(img, 0, 0);
+    };
   }, [images, renderImage]);
 
   useEffect(() => {
