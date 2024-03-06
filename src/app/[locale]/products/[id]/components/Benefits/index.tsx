@@ -47,8 +47,6 @@ export default function Benefits({ id }: BenefitsProps) {
                   benefitTitle,
                   benefitDescription,
                   benefitPicture,
-                  index,
-                  benefitsLength: benefits.length,
                 }}
               />
             )

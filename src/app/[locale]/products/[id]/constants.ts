@@ -300,19 +300,20 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
 export const PRODUCT_CREATE_YOUR = "Create Your";
 export const PRODUCT_OWN_SPACE = "Own Space";
 
-export const PRODUCT_IN_CONCLUSION = "In Conclusion";
+export const PRODUCT_CONCLUSION = "Conclusion";
 export const PRODUCT_CONCLUSION_FOR_PANELS = {
-  Aurora: `At AESOLAR, we are unwavering in our commitment to a sustainable future. 
-  Our PERC solar modules represent more than just a product; they symbolize our devotion to advanced technology, exceptional quality, and a cleaner, greener world. We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC. `,
-  Meteor: `At GreenSolar, we are dedicated to propelling a sustainable future. Our TOPCon solar modules symbolize our commitment to ground-breaking technology, exceptional quality, and the promise of a cleaner, brighter world. 
-  Stand with us in this solar revolution, where we harness the Sun's power with unrivaled efficiency using TOPCon.`,
-  Comet: `At AESOLAR, we are committed to powering a sustainable future. 
-  Our HJT solar modules are not just a product, but an embodiment of our dedication to superior technology, exceptional quality, and the promise of a cleaner, greener world. Join us in this solar revolution, where we capture the sun's power in the most efficient way possible with HJT.`,
-  Terra: `At AESOLAR, we strive for a future where clean, renewable energy is accessible to all. Our agrivoltaic systems, photovoltaic noise barriers, and solar fences represent our commitment to innovative design, superior quality, and sustainable living. Join us in this solar revolution, where we capture the sun's power in the most creative and efficient way possible.`,
-  ShadeStar: `We're pioneering a brighter, more sustainable future. 
-  Our Smart Cell solar modules embody our commitment to cutting-edge technology, superior quality, and sustainable energy solutions. Be a part of this revolution and shine a light on the shadows with our Smart Cell technology. Let's harness the sun's power more intelligently and resiliently, bringing light into every corner of our world.`,
-  Neptune: `We are unwavering in our commitment to a sustainable, energy-efficient future. 
-  Our PVT Hybrid solar modules symbolize not just a product, but our dedication to pioneering technology, superior quality, and the pledge of a cleaner, more sustainable world. Join us in this solar energy transformation, where we unlock the Sun's power in the most comprehensive way possible with PVT Hybrid technology.`,
+  Aurora: `At AESOLAR, we are unwavering in our commitment to a sustainable future. Our PERC solar modules represent more than just a product; they symbolize our devotion to advanced technology, exceptional quality, and a cleaner, greener world. 
+  We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC.`,
+  Meteor: `At GreenSolar, we are dedicated to propelling a sustainable future. Our TOPCon solar modules symbolize our commitment to ground-breaking technology, exceptional quality, and the promise of a cleaner, brighter world. Stand with us in this solar revolution, where we harness the Sun's power with unrivaled efficiency using TOPCon. 
+  We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC.`,
+  Comet: `At AESOLAR, we are committed to powering a sustainable future. Our HJT solar modules are not just a product, but an embodiment of our dedication to superior technology, exceptional quality, and the promise of a cleaner, greener world. Join us in this solar revolution, where we capture the sun's power in the most efficient way possible with HJT. 
+  We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC.`,
+  Terra: `At AESOLAR, we strive for a future where clean, renewable energy is accessible to all. Our agrivoltaic systems, photovoltaic noise barriers, and solar fences represent our commitment to innovative design, superior quality, and sustainable living. Join us in this solar revolution, where we capture the sun's power in the most creative and efficient way possible. 
+  We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC.`,
+  ShadeStar: `We're pioneering a brighter, more sustainable future. Our Smart Cell solar modules embody our commitment to cutting-edge technology, superior quality, and sustainable energy solutions. Be a part of this revolution and shine a light on the shadows with our Smart Cell technology. Let's harness the sun's power more intelligently and resiliently, bringing light into every corner of our world. 
+  We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC.`,
+  Neptune: `We are unwavering in our commitment to a sustainable, energy-efficient future. Our PVT Hybrid solar modules symbolize not just a product, but our dedication to pioneering technology, superior quality, and the pledge of a cleaner, more sustainable world. Join us in this solar energy transformation, where we unlock the Sun's power in the most comprehensive way possible with PVT Hybrid technology. 
+  We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC.`,
 };
 export const PRODUCT_DEFAULT_MODEL_PARAMS = {
   Aurora: {

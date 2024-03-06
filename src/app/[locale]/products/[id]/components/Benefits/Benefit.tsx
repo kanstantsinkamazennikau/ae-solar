@@ -9,14 +9,9 @@ export default function Benefit({
   benefitTitle,
   benefitDescription,
   benefitPicture,
-  index,
-  benefitsLength,
 }: BenefitProps) {
   const [stopIntersecting, setStopIntersecting] = useState(false);
   const { ref, intersecting } = useIntersection(0.35);
-  const formatNumber = (number: number) => {
-    return String(number).padStart(2, "0");
-  };
 
   return (
     <div
@@ -51,8 +46,7 @@ export default function Benefit({
       <div
         className="
           flex
-          md:items-center
-          items-end
+          items-center
           lg:gap-20
           gap-4
           xl:w-[778px]
@@ -84,14 +78,14 @@ export default function Benefit({
             w-full
           "
         >
-          <div className="md:hidden leading-[100%] font-walsheim font-bold h-5 text-[#505050] flex">
+          {/* <div className="md:hidden leading-[100%] font-walsheim font-bold h-5 text-[#505050] flex">
             <div className="[font-size:_clamp(11px,1.5vw,20px)] flex items-start h-full">
               {formatNumber(index + 1)}
             </div>
             <div className="[font-size:_clamp(8px,1.2vw,14px)] flex items-end h-full">
               /{formatNumber(benefitsLength)}
             </div>
-          </div>
+          </div> */}
           {benefitTitle}
         </div>
       </div>

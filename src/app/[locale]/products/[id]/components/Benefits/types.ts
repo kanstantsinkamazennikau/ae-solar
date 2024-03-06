@@ -6,6 +6,4 @@ export interface BenefitProps {
   benefitTitle: string;
   benefitDescription: string;
   benefitPicture: string;
-  index: number;
-  benefitsLength: number;
 }
