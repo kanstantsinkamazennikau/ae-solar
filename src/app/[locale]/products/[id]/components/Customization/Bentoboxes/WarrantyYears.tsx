@@ -8,8 +8,10 @@ export default function WarrantyYears({ gridArea }: { gridArea?: string }) {
       className="
         2xl:w-[315px]
         2xl:h-[290px]
-        w-[215px]
-        h-[190px]
+        lg:w-[215px]
+        lg:h-[190px]
+        w-[165px]
+        h-[165px]
         2xl:px-6
         2xl:py-8
         px-4
@@ -31,7 +33,8 @@ export default function WarrantyYears({ gridArea }: { gridArea?: string }) {
         className="
           w-full
           2xl:text-[184px]
-          text-[114px]
+          lg:text-[114px]
+          text-[104px]
           leading-[100%]
           2xl:-tracking-[34.96px]
           -tracking-[20px]

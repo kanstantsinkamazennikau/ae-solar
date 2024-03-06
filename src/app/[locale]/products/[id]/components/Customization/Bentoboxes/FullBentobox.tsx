@@ -17,8 +17,10 @@ export default function FullBentobox({
       className="
         2xl:w-[650px]
         2xl:h-[600px]
-        w-[450px]
-        h-[400px]
+        lg:w-[450px]
+        lg:h-[400px]
+        w-[350px]
+        h-[350px]
         2xl:px-6
         2xl:py-8
         px-4
@@ -31,6 +33,7 @@ export default function FullBentobox({
         border-solid
         border
         border-[#191919]
+        bg-cover
       "
       style={{
         backgroundImage: imageUrl,

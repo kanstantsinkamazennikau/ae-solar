@@ -12,8 +12,10 @@ export default function HalfBentobox({
       className="
         2xl:w-[650px]
         2xl:h-[290px]
-        w-[450px]
-        h-[190px]
+        lg:w-[450px]
+        lg:h-[190px]
+        w-[350px]
+        h-[165px]
         bg-[#131313]
         rounded-xl
         border

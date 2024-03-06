@@ -8,14 +8,8 @@ import {
   PRODUCT_CREATE_YOUR,
   PRODUCT_OWN_SPACE,
 } from "@/app/[locale]/products/[id]/constants";
-import Image from "next/image";
 
-const area = `
-  "a a b b"
-  "a a c d"
-  "e e f f"
-  "e e f f"
-`;
+const area = `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`;
 
 export default function Customization() {
   return (
@@ -29,9 +23,9 @@ export default function Customization() {
             align="left"
             showDivider
           />
-          <div className="flex justify-center items-start gap-8 self-stretch min-[540px]:flex-row flex-col"></div>
+          <div className="flex justify-center items-start gap-8 self-stretch min-[540px]:flex-row flex-col" />
         </div>
-        <div className="grid gap-5" style={{ gridTemplateAreas: area }}>
+        <div className={`grid gap-5 ${area}`}>
           <FullBentobox
             imageUrl="url('/images/products/bentobox/sand.png')"
             shortDescription="Suitable for Extreme Conditions"

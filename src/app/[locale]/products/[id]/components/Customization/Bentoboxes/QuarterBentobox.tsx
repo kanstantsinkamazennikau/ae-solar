@@ -14,8 +14,10 @@ export default function QuarterBentobox({
       className="
         2xl:w-[315px]
         2xl:h-[290px]
-        w-[215px]
-        h-[190px]
+        lg:w-[215px]
+        lg:h-[190px]
+        w-[165px]
+        h-[165px]
         2xl:px-6
         2xl:py-8
         px-4
