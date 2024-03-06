@@ -75,7 +75,22 @@ export default function ProductIntroVideo() {
   }, [sliderId]);
 
   return (
-    <div className="flex flex-col items-center xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[80px] w-full z-30 relative overflow-x-hidden overflow-y-[unset]">
+    <div
+      className="
+        flex
+        flex-col
+        items-center
+        xl:mb-[180px]
+        lg:mb-[140px]
+        md:mb-[100px]
+        mb-[80px]
+        w-full
+        z-30
+        relative
+        overflow-x-hidden
+        overflow-y-[unset]
+      "
+    >
       <div
         className="
           w-full
@@ -134,7 +149,20 @@ export default function ProductIntroVideo() {
               {model}
             </span>
           </div>
-          <div className="h-[100px] font-walsheim text-lg leading-[1.5] font-medium [font-size:_clamp(12px,1.5vw,18px)] xl:max-w-[328px] max-w-[300px] md:text-left text-center">
+          <div
+            className="
+              min-h-[100px]
+              font-walsheim
+              text-lg
+              leading-[1.5]
+              font-medium
+              [font-size:_clamp(12px,1.5vw,18px)]
+              xl:max-w-[328px]
+              max-w-[300px]
+              md:text-left
+              text-center
+            "
+          >
             {modelInfo.text}
           </div>
           <LinkWithArrow
@@ -285,7 +313,19 @@ export default function ProductIntroVideo() {
                 {model}
               </span>
             </div>
-            <div className="font-walsheim text-lg leading-[1.5] font-medium [font-size:_clamp(12px,1.5vw,18px)] xl:max-w-[328px] max-w-[300px] md:text-left text-center">
+            <div
+              className="
+                font-walsheim
+                text-lg
+                leading-[1.5]
+                font-medium
+                [font-size:_clamp(12px,1.5vw,18px)]
+                xl:max-w-[328px]
+                max-w-[300px]
+                md:text-left
+                text-center
+              "
+            >
               {modelInfo.text}
             </div>
             <LinkWithArrow
@@ -312,11 +352,12 @@ export default function ProductIntroVideo() {
         height={60}
         className="md:hidden rotate-180"
       />
-      {!sticky && (
-        <div className="w-full z-30 bottom-0 left-0 md:hidden">
-          <SubNavigation isProductionIntroBlock />
-        </div>
-      )}
+      {/* {!sticky && ( */}
+      {/* MOBILE NAVIGATION */}
+      <div className="w-full z-30 bottom-0 left-0 md:hidden">
+        <SubNavigation isProductionIntroBlock />
+      </div>
+      {/* )} */}
       <div ref={ref}></div>
       <Button onClick={handleClick}>
         {PRODUCT_INTRO_CALCULATE_YOUR_MODEL}
