@@ -7,7 +7,7 @@ import {
   UseFormRegisterReturn,
 } from "react-hook-form";
 
-export interface InputProps extends InputHTMLAttributes<HTMLTextAreaElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string;
   externalStyle?: string;
   externalContainerStyle?: string;

@@ -1,4 +1,4 @@
-import { InputProps } from "@/app/[locale]/components/common/Input/types";
+import { TextAreaProps } from "@/app/[locale]/components/common/TextArea/types";
 
 export default function TextArea({
   placeholder,
@@ -8,7 +8,7 @@ export default function TextArea({
   error,
   showDot,
   ...props
-}: InputProps) {
+}: TextAreaProps) {
   return (
     <div
       className={`relative min-[640px]:w-auto w-full ${externalContainerStyle} flex`}
