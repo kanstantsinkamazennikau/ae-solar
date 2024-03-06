@@ -18,6 +18,15 @@ import {
 } from "@/app/[locale]/utils/constants";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 
+const scrollTriggerPositionFromResolution = (
+  isDesktop: boolean,
+  isMobile: boolean
+) => {
+  if (isDesktop) return "top-=140px";
+  if (isMobile) return "top-=80px";
+  return "center center";
+};
+
 function getCurrentFrame(index: number) {
   return `/images/sequence/home/Layer-3-2-${index.toString()}.jpg`;
 }
@@ -63,65 +72,48 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     let mm = gsap.matchMedia();
 
-    mm.add("(min-width: 768px)", () => {
-      const ctx = gsap.context(() => {
-        gsap
-          .timeline({
-            onUpdate: renderImage,
-            scrollTrigger: {
-              onUpdate: (self) => {
-                setScrollDirection(self.direction);
+    mm.add(
+      {
+        isWideScreen: "(min-width: 2560px)",
+        isDesktop: "(min-width: 768px) and (max-width: 2559px)",
+        isMobile: "(max-width: 767px)",
+      },
+      (context) => {
+        //@ts-ignore
+        let { isDesktop, isMobile } = context.conditions;
+        gsap.context(() => {
+          gsap
+            .timeline({
+              onUpdate: renderImage,
+              scrollTrigger: {
+                onUpdate: (self) => {
+                  setScrollDirection(self.direction);
+                },
+                trigger: "#canvas",
+                start: scrollTriggerPositionFromResolution(isDesktop, isMobile),
+                pin: true,
+                end: "+=600%",
+                scrub: 1,
               },
-              trigger: "#canvas",
-              start: "top-=140px",
-              pin: true,
-              end: "+=600%",
-              scrub: 1,
-            },
-          })
-          .to(
-            frameIndex,
-            {
-              frame: numFrames - 1,
-              snap: "frame",
-              ease: "none",
-              duration: 1,
-            },
-            0
-          );
-      });
-    });
-
-    mm.add("(max-width: 767px)", () => {
-      const ctx = gsap.context(() => {
-        gsap
-          .timeline({
-            onUpdate: renderImage,
-            scrollTrigger: {
-              onUpdate: (self) => {
-                setScrollDirection(self.direction);
+            })
+            .to(
+              frameIndex,
+              {
+                frame: numFrames - 1,
+                snap: "frame",
+                ease: "none",
+                duration: 1,
               },
-              trigger: "#canvas",
-              start: "top-=80px",
-              pin: true,
-              end: "+=600%",
-              scrub: 1,
-            },
-          })
-          .to(
-            frameIndex,
-            {
-              frame: numFrames - 1,
-              snap: "frame",
-              ease: "none",
-              duration: 1,
-            },
-            0
-          );
-      });
-    });
+              0
+            );
+        });
+      }
+    );
 
-    return () => mm.revert();
+    return () => {
+      ScrollTrigger.refresh();
+      mm.revert();
+    };
   }, [images.length, renderImage]);
 
   useEffect(() => {

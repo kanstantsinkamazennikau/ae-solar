@@ -14,6 +14,7 @@ export const FORM_FIELDS_INPUT_TYPES = {
   phone: "phone",
   picker: "picker",
   dropdown: "dropdown",
+  textarea: "textarea",
 };
 
 export const FORMS_FIELDS = {
@@ -1923,7 +1924,7 @@ export const CONSULT_FORM_FIELDS: FormFileds[] = [
     formTitle: "I have a",
     placeholder: "comment or question, etc.",
     name: "comment",
-    type: "input",
+    type: "textarea",
   },
 ];
 export const DROPDOWN_INPUT_VALUES = {

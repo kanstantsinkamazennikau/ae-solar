@@ -91,7 +91,7 @@ export default function Ben({
         ${
           isFullHeightRow
             ? "top-0 right-0 w-full h-full"
-            : "-top-[50px] -right-[60px] stroke-white stroke-[4px] object-none"
+            : "-top-[50px] -right-[60px] stroke-white stroke-[4px] object-contain"
         }`}
         />
         {isFullHeightRow && (

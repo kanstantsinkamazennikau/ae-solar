@@ -17,6 +17,7 @@ export default function Benefit({
     <div
       ref={ref}
       className={`
+        first:border-none
         flex
         xl:py-[80px]
         lg:py-[50px]

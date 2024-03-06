@@ -52,13 +52,14 @@ export default function LightingTheWay() {
             left-1/2
             transition-all
             duration-[1.5s]
+           
             ${isStartAnimation ? " opacity-100" : "opacity-0"}
           `}
         >
           <p className="text-center text-base-red md:-tracking-[1.2px] -tracking-[0.5px] leading-none [font-size:_clamp(20px,2vw,36px)]">
             {PRODUCTS_WELCOME}
           </p>
-          <p className="text-8xl text-center md:-tracking-[2.88px] -tracking-[0px] leading-none [font-size:_clamp(34px,5vw,102px)] max-w-[1000px] after:p-0">
+          <p className=" textShadow text-center md:-tracking-[2.88px] -tracking-[0px] leading-none [font-size:_clamp(34px,5vw,102px)] max-w-[1000px] after:p-0">
             {PRODUCTS_LIGHTING}
           </p>
         </div>

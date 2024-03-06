@@ -6,6 +6,7 @@ import DropdownInput from "@/app/[locale]/components/common/DropdownInput";
 import Input from "@/app/[locale]/components/common/Input";
 import PhoneNumberInput from "@/app/[locale]/components/common/PhoneNumberInput";
 import PickerInput from "@/app/[locale]/components/common/PickerInput";
+import TextArea from "@/app/[locale]/components/common/TextArea";
 import {
   CHECKOUT_SEND_REQUEST,
   CONSULT_AGREEMENT,
@@ -134,7 +135,7 @@ export default function BuyerForm({
                   {inputField.formTitle}
                 </span>
                 <Input
-                  externalStyle={`font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)] ${inputBorders}`}
+                  externalStyle={`font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)] ${inputBorders} placeholder:text-[#505050]`}
                   externalContainerStyle="!w-full"
                   name={inputField.name}
                   placeholder={inputField.placeholder}
@@ -223,6 +224,39 @@ export default function BuyerForm({
                   setValue={setValue}
                   error={errors?.[inputField.name]}
                   inputBorders={inputBorders}
+                />
+              </div>
+            );
+          if (inputField.type === "textarea")
+            return (
+              <div
+                key={inputField.name}
+                className="
+                  flex
+                  min-[640px]:content-center
+                  items-start
+                  content-start
+                  min-[640px]:gap-3 gap-0
+                  self-stretch
+                  [font-size:_clamp(20px,2.5vw,30px)]
+                  min-[640px]:flex-row
+                  flex-col
+                  flex-nowrap
+                "
+              >
+                <span className="font-semibold leading-[120%] whitespace-nowrap">
+                  {inputField.formTitle}
+                </span>
+                <TextArea
+                  externalStyle={`font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)] ${inputBorders} placeholder:text-[#505050]`}
+                  externalContainerStyle="!w-full"
+                  name={inputField.name}
+                  placeholder={inputField.placeholder}
+                  register={register(
+                    inputField.name,
+                    inputsRules[inputField.name as keyof typeof inputsRules]
+                  )}
+                  error={errors?.[inputField.name]}
                 />
               </div>
             );

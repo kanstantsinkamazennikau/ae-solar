@@ -97,7 +97,7 @@ export default function PhoneNumberInput({
         placeholder={placeholder}
         {...register}
         {...props}
-        className={`bg-transparent outline-none placeholder:[font-size:_clamp(20px,2vw,30px)] border-b-2 border-solid border-base-red ${inputBorders} pr-2 flex w-full`}
+        className={`placeholder:text-[#505050] bg-transparent outline-none placeholder:[font-size:_clamp(20px,2vw,30px)] border-b-2 border-solid border-base-red ${inputBorders} pr-2 flex w-full`}
       />
       {showDot && <p className="[font-size:_clamp(24px,2.25vw,40px)]">.</p>}
       {error && (

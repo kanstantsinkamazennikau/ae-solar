@@ -39,18 +39,30 @@ export default function Benefits({ id }: BenefitsProps) {
             marginBottomNone
             externalStyle={"mb-20"}
           />
-          {benefits?.map(
-            ({ benefitTitle, benefitDescription, benefitPicture }, index) => (
-              <Benefit
-                key={benefitTitle}
-                {...{
-                  benefitTitle,
-                  benefitDescription,
-                  benefitPicture,
-                }}
-              />
-            )
-          )}
+          <div
+            className="
+            min-[920px]:border
+            min-[920px]:border-solid
+            min-[920px]:border-[#131313]
+            lg:px-20
+            min-[920px]:px-14
+            rounded-[20px]
+            min-[920px]:bg-[url('/images/getInTouchBackground.svg')
+          "
+          >
+            {benefits?.map(
+              ({ benefitTitle, benefitDescription, benefitPicture }, index) => (
+                <Benefit
+                  key={benefitTitle}
+                  {...{
+                    benefitTitle,
+                    benefitDescription,
+                    benefitPicture,
+                  }}
+                />
+              )
+            )}
+          </div>
         </div>
       </BasicWidthContainer>
     </div>
