@@ -54,7 +54,7 @@ export default function AccordionItem({
         last:border-none
         ${
           isDocuments
-            ? "min-[920px]:scroll-mt-[200px] scroll-mt-[160px]"
+            ? "min-[920px]:scroll-mt-[200px] scroll-mt-[150px]"
             : "min-[920px]:scroll-mt-[140px] scroll-mt-[160px]"
         }
       `}

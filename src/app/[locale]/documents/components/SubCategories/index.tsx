@@ -22,7 +22,7 @@ export default function SubCategories({
               <div
                 key={category}
                 id={category}
-                className="min-[920px]:scroll-mt-[215px] scroll-mt-[160px]"
+                className="min-[920px]:scroll-mt-[215px] scroll-mt-[140px]"
               >
                 <p className="[font-size:_clamp(16px,1.5vw,24px)] leading-[130%] font-semibold mb-4 ">
                   {category}
@@ -40,7 +40,7 @@ export default function SubCategories({
           }
           return (
             <div
-              className="pb-10 min-[920px]:scroll-mt-[215px] scroll-mt-[160px]"
+              className="pb-10 min-[920px]:scroll-mt-[215px] scroll-mt-[140px]"
               key={category}
               id={category}
             >
