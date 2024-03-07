@@ -1,25 +1,38 @@
-import { Dispatch, SetStateAction } from "react";
-
 export interface DocumentsTypesPresentation {
-  category: "Presentation" | "Datasheets";
+  category: string;
   type: "Presentation";
   data: PresentationProps[];
 }
 
 export interface DocumentsTypesOther {
-  category:
-    | "References"
-    | "Technical Data"
-    | "Certification"
-    | "Warranty"
-    | "Datasheets"
-    | "Videos";
+  category: string;
   type: "Text";
   data: {
     linkTitle: string;
     link: string;
     tags?: string[];
   }[];
+}
+
+export interface DocumentsTypesWithSubCategories {
+  category: string;
+  type: "SubCategories";
+  subCategories: (
+    | {
+        category: string;
+        type: "Text";
+        data: {
+          linkTitle: string;
+          link: string;
+          tags?: string[];
+        }[];
+      }
+    | {
+        category: string;
+        type: "Presentation";
+        data: PresentationProps[];
+      }
+  )[];
 }
 
 export interface DocumentsTypePublisher {

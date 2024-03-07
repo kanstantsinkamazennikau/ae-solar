@@ -2,14 +2,10 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DocumentsHeading from "@/app/[locale]/components/common/DocumentsHeading";
-import DocumentsProvider, {
-  DocumentsContext,
-} from "@/app/[locale]/context/documentsContext";
+import DocumentsProvider from "@/app/[locale]/context/documentsContext";
 import CategoriesWithControl from "@/app/[locale]/documents/components/CategoriesControl";
-import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useContext } from "react";
 
 const mapBackgroundWithCategory = {
   documents: `/images/documents/documents.png`,

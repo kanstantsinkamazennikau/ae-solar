@@ -1,11 +1,15 @@
 "use client";
 
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
+import {
+  DocumentsTypesOther,
+  DocumentsTypesPresentation,
+} from "@/app/[locale]/documents/components/types";
 import { DOCUMENTS_CATEGORIES } from "@/app/[locale]/utils/constants";
 import { romanize } from "@/app/[locale]/utils/romanize";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useEffect, useRef, useState } from "react";
+import { Fragment, useContext, useEffect, useRef, useState } from "react";
 
 export default function Categories() {
   const {
@@ -83,21 +87,23 @@ export default function Categories() {
               min-[920px]:block hidden
             "
           >
-            {documentsFile.map(({ category }, index) => {
-              const isSelectedcategory = selectedCategoryIndex === index;
-              return (
-                <Link
-                  key={index}
-                  href={`#${index}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onCategoryClick(index);
-                    documentsType === "documents" &&
-                      setSelectedCategoryIndex(index);
-                  }}
-                >
-                  <div
-                    className={`
+            {
+              //@ts-ignore
+              documentsFile.map(({ category, subCategories }, index) => {
+                const isSelectedcategory = selectedCategoryIndex === index;
+                return (
+                  <Fragment key={index}>
+                    <Link
+                      href={`#${index}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        onCategoryClick(index);
+                        documentsType === "documents" &&
+                          setSelectedCategoryIndex(index);
+                      }}
+                    >
+                      <div
+                        className={`
                       ${
                         isSelectedcategory ? "text-white" : "text-dark-gray-900"
                       } 
@@ -107,31 +113,76 @@ export default function Categories() {
                       justify-between
                       items-center
                     `}
-                  >
-                    <div className="max-w-[215px]">
-                      {documentsType !== "publishers_info" ? (
-                        category
-                      ) : (
-                        <div className="flex gap-1">
-                          <div className="min-w-[20px]">
-                            {romanize(index + 1)}.
-                          </div>
-                          <div>{category}</div>
+                      >
+                        <div className="max-w-[215px]">
+                          {documentsType !== "publishers_info" ? (
+                            category
+                          ) : (
+                            <div className="flex gap-1">
+                              <div className="min-w-[20px]">
+                                {romanize(index + 1)}.
+                              </div>
+                              <div>{category}</div>
+                            </div>
+                          )}
                         </div>
-                      )}
-                    </div>
-                    {isSelectedcategory && (
-                      <Image
-                        src={`/images/selector.svg`}
-                        alt="folderTop"
-                        width={16}
-                        height={16}
-                      />
+                        {isSelectedcategory && (
+                          <Image
+                            src={`/images/selector.svg`}
+                            alt="folderTop"
+                            width={16}
+                            height={16}
+                          />
+                        )}
+                      </div>
+                    </Link>
+                    {subCategories && (
+                      <div
+                        className={`
+                        pl-4
+                        border-solid
+                        border-l-2
+                        border-[#191919]
+                        pt-2
+                        flex
+                        flex-col
+                        gap-3
+                        mt-2
+                        ${
+                          isSelectedcategory
+                            ? "text-white"
+                            : "text-dark-gray-900"
+                        } 
+                      `}
+                      >
+                        {(
+                          subCategories as (
+                            | DocumentsTypesPresentation
+                            | DocumentsTypesOther
+                          )[]
+                        ).map(({ category }, subCategoryIndex) => (
+                          <Link
+                            href={`#${category}`}
+                            key={category}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              onCategoryClick(
+                                index,
+                                subCategoryIndex !== 0 ? category : ""
+                              );
+                              documentsType === "documents" &&
+                                setSelectedCategoryIndex(index);
+                            }}
+                          >
+                            {category}
+                          </Link>
+                        ))}
+                      </div>
                     )}
-                  </div>
-                </Link>
-              );
-            })}
+                  </Fragment>
+                );
+              })
+            }
           </div>
 
           {/* MOBILE */}
@@ -176,56 +227,106 @@ export default function Categories() {
               className={`transition-all duration-[400ms] ease-in-out overflow-hidden`}
               style={isOpenItem ? { height } : { height: 0 }}
             >
-              {documentsFile.map(({ category }, index) => {
-                const isSelectedcategory = selectedCategoryIndex === index;
-                if (isSelectedcategory) return;
-                return (
-                  <Link
-                    key={index}
-                    href={`#${index}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      onCategoryClick(index);
-                      setIsOpenItem(false);
-                      setSelectedCategoryIndex(index);
-                    }}
-                  >
-                    <div
-                      className={`
-                      ${
-                        isSelectedcategory ? "text-white" : "text-dark-gray-900"
-                      } 
-                      mt-4
-                      flex
-                      gap-4
-                      justify-between
-                      items-center
-                    `}
-                    >
-                      <div className="max-w-[215px]">
-                        {documentsType !== "publishers_info" ? (
-                          category
-                        ) : (
-                          <div className="flex gap-1">
-                            <div className="min-w-[20px]">
-                              {romanize(index + 1)}.
-                            </div>
-                            <div>{category}</div>
+              {
+                //@ts-ignore
+                documentsFile.map(({ category, subCategories }, index) => {
+                  const isSelectedcategory =
+                    selectedCategoryIndex === index && !subCategories;
+                  if (isSelectedcategory) return;
+                  return (
+                    <Fragment key={index}>
+                      <Link
+                        href={`#${index}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          onCategoryClick(index);
+                          setIsOpenItem(false);
+                          setSelectedCategoryIndex(index);
+                        }}
+                      >
+                        <div
+                          className={`
+                          ${
+                            isSelectedcategory
+                              ? "text-white"
+                              : "text-dark-gray-900"
+                          }  
+                            mt-4
+                            flex
+                            gap-4
+                            justify-between
+                            items-center
+                          `}
+                        >
+                          <div className="max-w-[215px]">
+                            {documentsType !== "publishers_info" ? (
+                              category
+                            ) : (
+                              <div className="flex gap-1">
+                                <div className="min-w-[20px]">
+                                  {romanize(index + 1)}.
+                                </div>
+                                <div>{category}</div>
+                              </div>
+                            )}
                           </div>
-                        )}
-                      </div>
-                      {isSelectedcategory && (
-                        <Image
-                          src={`/images/selector.svg`}
-                          alt="selector"
-                          width={16}
-                          height={16}
-                        />
+                          {isSelectedcategory && (
+                            <Image
+                              src={`/images/selector.svg`}
+                              alt="selector"
+                              width={16}
+                              height={16}
+                            />
+                          )}
+                        </div>
+                      </Link>
+                      {subCategories && (
+                        <div
+                          className={`
+                            pl-4
+                            border-solid
+                            border-l-2
+                            border-[#191919]
+                            pt-2
+                            flex
+                            flex-col
+                            gap-3
+                            mt-2
+                            ${
+                              isSelectedcategory
+                                ? "text-white"
+                                : "text-dark-gray-900"
+                            } 
+                          `}
+                        >
+                          {(
+                            subCategories as (
+                              | DocumentsTypesPresentation
+                              | DocumentsTypesOther
+                            )[]
+                          ).map(({ category }, subCategoryIndex) => (
+                            <Link
+                              href={`#${category}`}
+                              key={category}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                onCategoryClick(
+                                  index,
+                                  subCategoryIndex !== 0 ? category : ""
+                                );
+                                documentsType === "documents" &&
+                                  setSelectedCategoryIndex(index);
+                              }}
+                            >
+                              {category}
+                            </Link>
+                          ))}
+                        </div>
                       )}
-                    </div>
-                  </Link>
-                );
-              })}
+                    </Fragment>
+                  );
+                })
+              }
             </div>
           </div>
         </>

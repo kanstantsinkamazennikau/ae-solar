@@ -4,6 +4,7 @@ import {
   DocumentsTypePublisher,
   DocumentsTypesOther,
   DocumentsTypesPresentation,
+  DocumentsTypesWithSubCategories,
   FAQ,
 } from "@/app/[locale]/documents/components/types";
 import {
@@ -23,15 +24,23 @@ export interface DocumentsContext {
   documentsAccordionActiveIndex: number | undefined;
   setSearchInputValue: Dispatch<SetStateAction<string>>;
   searchInputValue: string;
-  onCategoryClick: (index: number) => void;
+  onCategoryClick: (index: number, subCategoryId?: string) => void;
   documentsFile:
-    | (DocumentsTypesPresentation | DocumentsTypesOther)[]
+    | (
+        | DocumentsTypesPresentation
+        | DocumentsTypesOther
+        | DocumentsTypesWithSubCategories
+      )[]
     | FAQ[]
     | DocumentsTypePublisher[]
     | never[];
   setDocumentsFile: (
     doc:
-      | (DocumentsTypesPresentation | DocumentsTypesOther)[]
+      | (
+          | DocumentsTypesPresentation
+          | DocumentsTypesOther
+          | DocumentsTypesWithSubCategories
+        )[]
       | FAQ[]
       | DocumentsTypePublisher[]
       | never[]
@@ -60,21 +69,28 @@ export default function DocumentsProvider({
   const [filterModels, setFilterModels] = useState<string[]>([]);
   const [searchInputValue, setSearchInputValue] = useState("");
   const [documentsFile, setDocumentsFile] = useState<
-    | (DocumentsTypesPresentation | DocumentsTypesOther)[]
+    | (
+        | DocumentsTypesPresentation
+        | DocumentsTypesOther
+        | DocumentsTypesWithSubCategories
+      )[]
     | FAQ[]
     | DocumentsTypePublisher[]
     | never[]
   >([]);
   const [documentsLoading, setDocumentsLoading] = useState(true);
 
-  const onCategoryClick = useCallback((index: number) => {
-    setDocumentsAccordionActiveIndex(index);
-    setTimeout(() => {
-      document
-        .getElementById(index.toString())!
-        .scrollIntoView({ behavior: "smooth" });
-    }, 350);
-  }, []);
+  const onCategoryClick = useCallback(
+    (index: number, subCategoryId?: string) => {
+      setDocumentsAccordionActiveIndex(index);
+      setTimeout(() => {
+        document
+          .getElementById(subCategoryId || index.toString())!
+          .scrollIntoView({ behavior: "smooth", inline: "start" });
+      }, 350);
+    },
+    []
+  );
 
   return (
     <DocumentsContext.Provider

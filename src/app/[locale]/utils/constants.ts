@@ -7,6 +7,7 @@ import { FormFileds } from "@/app/[locale]/components/common/BuyerForm/types";
 import {
   DocumentsTypesOther,
   DocumentsTypesPresentation,
+  DocumentsTypesWithSubCategories,
 } from "@/app/[locale]/documents/components/types";
 
 export const FORM_FIELDS_INPUT_TYPES = {
@@ -2003,66 +2004,52 @@ export const DOCUMENTS_DOCUMENTS_HEADING = "Documents";
 export const DOCUMENTS_YOU_NEED_TO_KNOW = "You Need to Know";
 export const DOCUMENTS_CATEGORIES = "Categories";
 export const DOCUMENTS_SEARCH = "Search";
+export const DOCUMENT_SUBCATEGORIES_SPLITTER = "$";
 export const DOCUMENTS_FILES: (
   | DocumentsTypesPresentation
   | DocumentsTypesOther
+  | DocumentsTypesWithSubCategories
 )[] = [
-  // {
-  //   category: "Presentation",
-  //   type: "Presentation",
-  //   data: [
-  //     {
-  //       title: "Company Profile",
-  //       linkTitle: "Company Profile (EN)",
-  //       link: "link",
-  //     },
-  //     {
-  //       title: "Main Product Catalogue",
-  //       linkTitle: "Main Product Catalogue",
-  //       link: "link",
-  //     },
-  //     {
-  //       title: "ShadeStar Introduction",
-  //       linkTitle: "ShadeStar Introduction",
-  //       image: "Aurora.png",
-  //       link: "link",
-  //       tags: ["ShadeStar"],
-  //     },
-  //     {
-  //       title: "ShadeStar case study",
-  //       linkTitle: "ShadeStar case study",
-  //       image: "Aurora.png",
-  //       link: "link",
-  //       tags: ["ShadeStar"],
-  //     },
-  //     {
-  //       title: "ShadeStar Presentation (EN)",
-  //       linkTitle: "ShadeStar Presentation (EN)",
-  //       image: "Aurora.png",
-  //       link: "link",
-  //       tags: ["ShadeStar"],
-  //     },
-  //     {
-  //       title: "ShadeStar Presentation (PT)",
-  //       linkTitle: "ShadeStar Presentation (PT)",
-  //       image: "Aurora.png",
-  //       link: "link",
-  //     },
-  //     {
-  //       title: "Production Process",
-  //       linkTitle: "Production Process",
-  //       link: "link",
-  //       tags: ["Aurora", "Comet", "Meteor", "Terra", "Neptune", "ShadeStar"],
-  //     },
-  //     {
-  //       title: "Terra",
-  //       linkTitle: "Dr Hamed Hanifi Terra",
-  //       image: "Aurora.png",
-  //       link: "link",
-  //       tags: ["Terra"],
-  //     },
-  //   ],
-  // },
+  {
+    category: "Technical Data",
+    type: "SubCategories",
+    subCategories: [
+      {
+        category: "Datasheets",
+        type: "Text",
+        data: [
+          {
+            linkTitle: "AE ME-132 640W-660W",
+            link: "/documents/solar_panels/Aurora/AE ME-132 640W-660W.pdf",
+          },
+        ],
+      },
+      {
+        category: "Installation Manual",
+        type: "Presentation",
+        data: [
+          {
+            title: "Datasheet",
+            linkTitle: "AE ME-132 640W-660W",
+            link: "/documents/solar_panels/Aurora/AE ME-132 640W-660W.pdf",
+            tags: ["Aurora"],
+          },
+        ],
+      },
+      {
+        category: "NFC-chips",
+        type: "Presentation",
+        data: [
+          {
+            title: "Datasheet",
+            linkTitle: "AE ME-132 640W-660W",
+            link: "/documents/solar_panels/Aurora/AE ME-132 640W-660W.pdf",
+            tags: ["Aurora"],
+          },
+        ],
+      },
+    ],
+  },
   {
     category: "Datasheets",
     type: "Presentation",
