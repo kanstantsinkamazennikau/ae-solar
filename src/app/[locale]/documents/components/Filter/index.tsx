@@ -29,7 +29,7 @@ export default function Filter() {
         backdrop-blur-3xl
       "
     >
-      <SearchBar isDocuments />
+      {/* <SearchBar isDocuments /> */}
       <div
         className="
           flex
