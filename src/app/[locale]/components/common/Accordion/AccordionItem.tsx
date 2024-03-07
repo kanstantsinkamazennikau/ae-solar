@@ -52,13 +52,12 @@ export default function AccordionItem({
         border-solid 
         border-[#131313]
         last:border-none
-        min-[920px]:scroll-mt-[140px] scroll-mt-[160px] 
+        ${
+          isDocuments
+            ? "min-[920px]:scroll-mt-[200px] scroll-mt-[160px]"
+            : "min-[920px]:scroll-mt-[140px] scroll-mt-[160px]"
+        }
       `}
-      // ${
-      //   isDocuments
-      //     ? "min-[920px]:scroll-mt-[200px] scroll-mt-[160px]"
-      //     : "min-[920px]:scroll-mt-[140px] scroll-mt-[160px]"
-      // }
       id={id?.toString()}
     >
       <button

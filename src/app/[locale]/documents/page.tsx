@@ -39,18 +39,31 @@ export default function Documents() {
       | DocumentsTypesOther
       | DocumentsTypesWithSubCategories
     )[];
-    if (!filterModels.length) {
+    if (!filterModels.length && !searchInputValue.length) {
       filteredDocuments = DOCUMENTS_FILES;
     } else {
       filteredDocuments = DOCUMENTS_FILES.map((docFile) => {
         if (docFile.type !== "SubCategories") {
           const { category, type, data } = docFile;
+
           return {
             category,
             type,
-            data: data.filter(({ tags }) =>
-              tags?.some((tag) => filterModels.includes(tag))
-            ),
+            data: data
+              .filter((doc) => {
+                if (filterModels.length) {
+                  return doc.tags?.some((tag) => filterModels.includes(tag));
+                }
+                return doc;
+              })
+              .filter((doc) => {
+                if (searchInputValue.length) {
+                  return doc.linkTitle
+                    ?.toLowerCase()
+                    .includes(searchInputValue.toLowerCase());
+                }
+                return doc;
+              }),
           };
         } else {
           const { category, type, subCategories } = docFile;
@@ -62,9 +75,23 @@ export default function Documents() {
               return {
                 category,
                 type,
-                data: data.filter(({ tags }) =>
-                  tags?.some((tag) => filterModels.includes(tag))
-                ),
+                data: data
+                  .filter((doc) => {
+                    if (filterModels.length) {
+                      return doc.tags?.some((tag) =>
+                        filterModels.includes(tag)
+                      );
+                    }
+                    return doc;
+                  })
+                  .filter((doc) => {
+                    if (searchInputValue.length) {
+                      return doc.linkTitle
+                        ?.toLowerCase()
+                        .includes(searchInputValue.toLowerCase());
+                    }
+                    return doc;
+                  }),
               };
             }),
           };
@@ -93,70 +120,6 @@ export default function Documents() {
     setDocumentsLoading,
     setDocumentsAccordionActiveIndex,
   ]);
-
-  // useEffect(() => {
-  //   setDocumentsLoading(true);
-  //   let filteredDocuments: (
-  //     | DocumentsTypesPresentation
-  //     | DocumentsTypesOther
-  //     | DocumentsTypesWithSubCategories
-  //   )[];
-  //   if (!searchInputValue.length) {
-  //     filteredDocuments = DOCUMENTS_FILES;
-  //   } else {
-  //     filteredDocuments = DOCUMENTS_FILES.map((docFile) => {
-  //       if (docFile.type !== "SubCategories") {
-  //         const { category, type, data } = docFile;
-  //         return {
-  //           category,
-  //           type,
-  //           data: data.filter(({ linkTitle }) =>
-  //             linkTitle?.toLowerCase().includes(searchInputValue.toLowerCase())
-  //           ),
-  //         };
-  //       } else {
-  //         const { category, type, subCategories } = docFile;
-  //         return {
-  //           category,
-  //           type,
-  //           subCategories: subCategories.map((docFile) => {
-  //             const { category, type, data } = docFile;
-  //             return {
-  //               category,
-  //               type,
-  //               data: data.filter(({ linkTitle }) =>
-  //                 linkTitle
-  //                   ?.toLowerCase()
-  //                   .includes(searchInputValue.toLowerCase())
-  //               ),
-  //             };
-  //           }),
-  //         };
-  //       }
-  //     }).filter((docFile) => {
-  //       if (docFile.type !== "SubCategories") {
-  //         return docFile.data.length > 0;
-  //       } else {
-  //         return (
-  //           docFile.subCategories.filter((docFile) => docFile.data.length > 0)
-  //             .length > 0
-  //         );
-  //       }
-  //     }) as typeof DOCUMENTS_FILES;
-  //     setDocumentsAccordionActiveIndex(0);
-  //   }
-
-  //   setTimeout(() => {
-  //     setDocumentsFile(filteredDocuments);
-  //     setDocumentsLoading(false);
-  //   }, 500);
-  // }, [
-  //   filterModels,
-  //   searchInputValue,
-  //   setDocumentsFile,
-  //   setDocumentsLoading,
-  //   setDocumentsAccordionActiveIndex,
-  // ]);
 
   return documentsLoading ? (
     <DocumentsLoader />
