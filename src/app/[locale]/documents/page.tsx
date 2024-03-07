@@ -26,10 +26,12 @@ export default function Documents() {
     setDocumentsFile,
     documentsFile,
     documentsLoading,
+    searchInputValue,
     setDocumentsLoading,
     setDocumentsAccordionActiveIndex,
   } = useContext(DocumentsContext);
 
+  //TODO REFACTOR
   useEffect(() => {
     setDocumentsLoading(true);
     let filteredDocuments: (
@@ -55,7 +57,7 @@ export default function Documents() {
           return {
             category,
             type,
-            subcategories: subCategories.map((docFile) => {
+            subCategories: subCategories.map((docFile) => {
               const { category, type, data } = docFile;
               return {
                 category,
@@ -72,7 +74,71 @@ export default function Documents() {
           return docFile.data.length > 0;
         } else {
           return (
-            docFile.subcategories.filter((docFile) => docFile.data.length > 0)
+            docFile.subCategories.filter((docFile) => docFile.data.length > 0)
+              .length > 0
+          );
+        }
+      }) as typeof DOCUMENTS_FILES;
+      setDocumentsAccordionActiveIndex(0);
+    }
+
+    setTimeout(() => {
+      setDocumentsFile(filteredDocuments);
+      setDocumentsLoading(false);
+    }, 500);
+  }, [
+    searchInputValue,
+    filterModels,
+    setDocumentsFile,
+    setDocumentsLoading,
+    setDocumentsAccordionActiveIndex,
+  ]);
+
+  useEffect(() => {
+    setDocumentsLoading(true);
+    let filteredDocuments: (
+      | DocumentsTypesPresentation
+      | DocumentsTypesOther
+      | DocumentsTypesWithSubCategories
+    )[];
+    if (!searchInputValue.length) {
+      filteredDocuments = DOCUMENTS_FILES;
+    } else {
+      filteredDocuments = DOCUMENTS_FILES.map((docFile) => {
+        if (docFile.type !== "SubCategories") {
+          const { category, type, data } = docFile;
+          return {
+            category,
+            type,
+            data: data.filter(({ linkTitle }) =>
+              linkTitle?.toLowerCase().includes(searchInputValue.toLowerCase())
+            ),
+          };
+        } else {
+          const { category, type, subCategories } = docFile;
+          return {
+            category,
+            type,
+            subCategories: subCategories.map((docFile) => {
+              const { category, type, data } = docFile;
+              return {
+                category,
+                type,
+                data: data.filter(({ linkTitle }) =>
+                  linkTitle
+                    ?.toLowerCase()
+                    .includes(searchInputValue.toLowerCase())
+                ),
+              };
+            }),
+          };
+        }
+      }).filter((docFile) => {
+        if (docFile.type !== "SubCategories") {
+          return docFile.data.length > 0;
+        } else {
+          return (
+            docFile.subCategories.filter((docFile) => docFile.data.length > 0)
               .length > 0
           );
         }
@@ -86,6 +152,7 @@ export default function Documents() {
     }, 500);
   }, [
     filterModels,
+    searchInputValue,
     setDocumentsFile,
     setDocumentsLoading,
     setDocumentsAccordionActiveIndex,

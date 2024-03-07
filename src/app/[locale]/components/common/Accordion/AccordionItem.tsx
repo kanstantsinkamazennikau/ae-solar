@@ -17,6 +17,7 @@ export default function AccordionItem({
   openCloseStyle,
   documentsAccordion,
   dropdownIcon,
+  isDocuments,
 }: AccordionItemProps) {
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(
@@ -46,7 +47,18 @@ export default function AccordionItem({
 
   return (
     <div
-      className="border-b border-solid border-[#131313] last:border-none min-[920px]:scroll-mt-[140px] scroll-mt-[160px]"
+      className={`
+        border-b 
+        border-solid 
+        border-[#131313]
+        last:border-none
+        
+        ${
+          isDocuments
+            ? "min-[920px]:scroll-mt-[200px] scroll-mt-[160px]"
+            : "min-[920px]:scroll-mt-[140px] scroll-mt-[160px]"
+        } 
+      `}
       id={id?.toString()}
     >
       <button
@@ -95,7 +107,7 @@ export default function AccordionItem({
 
       <div
         ref={contentHeight}
-        className={`transition-all duration-[400ms] ease-in-out overflow-hidden`}
+        className={`transition-all duration-[400ms] ease-in-out overflow-clip`}
         style={isOpen || isOpenItem ? { height } : { height: 0 }}
       >
         {children}

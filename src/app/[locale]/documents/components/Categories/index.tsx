@@ -104,15 +104,17 @@ export default function Categories() {
                     >
                       <div
                         className={`
-                      ${
-                        isSelectedcategory ? "text-white" : "text-dark-gray-900"
-                      } 
-                      mt-4
-                      flex
-                      gap-4
-                      justify-between
-                      items-center
-                    `}
+                        ${
+                          isSelectedcategory
+                            ? "text-white"
+                            : "text-dark-gray-900"
+                        } 
+                        mt-4
+                        flex
+                        gap-4
+                        justify-between
+                        items-center
+                      `}
                       >
                         <div className="max-w-[215px]">
                           {documentsType !== "publishers_info" ? (
@@ -160,16 +162,13 @@ export default function Categories() {
                             | DocumentsTypesPresentation
                             | DocumentsTypesOther
                           )[]
-                        ).map(({ category }, subCategoryIndex) => (
+                        ).map(({ category }) => (
                           <Link
                             href={`#${category}`}
                             key={category}
                             onClick={(e) => {
                               e.preventDefault();
-                              onCategoryClick(
-                                index,
-                                subCategoryIndex !== 0 ? category : ""
-                              );
+                              onCategoryClick(index, category);
                               documentsType === "documents" &&
                                 setSelectedCategoryIndex(index);
                             }}
@@ -304,16 +303,13 @@ export default function Categories() {
                               | DocumentsTypesPresentation
                               | DocumentsTypesOther
                             )[]
-                          ).map(({ category }, subCategoryIndex) => (
+                          ).map(({ category }) => (
                             <Link
                               href={`#${category}`}
                               key={category}
                               onClick={(e) => {
                                 e.preventDefault();
-                                onCategoryClick(
-                                  index,
-                                  subCategoryIndex !== 0 ? category : ""
-                                );
+                                onCategoryClick(index, category);
                                 documentsType === "documents" &&
                                   setSelectedCategoryIndex(index);
                               }}

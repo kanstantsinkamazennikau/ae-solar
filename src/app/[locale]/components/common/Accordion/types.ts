@@ -1,6 +1,7 @@
 import { JSXElementConstructor, LegacyRef, ReactElement } from "react";
 
 export interface AccordionItemProps {
+  isDocuments?: boolean;
   title: string | ReactElement;
   isOpen?: boolean;
   onClick?: () => void;

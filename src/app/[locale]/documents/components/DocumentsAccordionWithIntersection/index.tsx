@@ -13,8 +13,9 @@ export default function DocumentsAccordionWithIntersection({
   dropdownIcon,
   ...props
 }: DocumentsAccordionWithIntersectionProps) {
-  const { onCategoryClick, setSelectedCategoryIndex } =
+  const { onCategoryClick, setSelectedCategoryIndex, documentsType } =
     useContext(DocumentsContext);
+  const isDocuments = documentsType === "documents";
 
   const accordionRef = useRef<HTMLDivElement>(null);
 
@@ -48,6 +49,7 @@ export default function DocumentsAccordionWithIntersection({
         id={index}
         openCloseStyle
         dropdownIcon={dropdownIcon}
+        isDocuments={isDocuments}
         {...props}
       >
         {children}

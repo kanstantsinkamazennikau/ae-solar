@@ -2,6 +2,7 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
+import SearchBar from "@/app/[locale]/documents/components/SearchBar";
 import {
   DOCUMENTS_FILTER,
   DOCUMENTS_RESET,
@@ -28,6 +29,7 @@ export default function Filter() {
         backdrop-blur-3xl
       "
     >
+      <SearchBar isDocuments />
       <div
         className="
           flex

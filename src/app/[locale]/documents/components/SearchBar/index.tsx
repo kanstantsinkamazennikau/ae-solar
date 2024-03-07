@@ -5,23 +5,27 @@ import Input from "@/app/[locale]/components/common/Input";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import { DOCUMENTS_SEARCH, FORMS_FIELDS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
-export default function SearchBar() {
-  const { setSearchInputValue, documentsType, documentsLoading } =
-    useContext(DocumentsContext);
-
+export default function SearchBar({ isDocuments }: { isDocuments?: boolean }) {
+  const {
+    setSearchInputValue,
+    documentsType,
+    documentsLoading,
+    searchInputValue,
+  } = useContext(DocumentsContext);
+  const [inputValue, setInputValue] = useState(searchInputValue);
   const defaultValues = {
     [FORMS_FIELDS.searchInputValue]: "",
   };
 
-  const { register, handleSubmit, setValue } = useForm<FieldValues>({
+  const { handleSubmit, setValue } = useForm<FieldValues>({
     defaultValues,
   });
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    setSearchInputValue(data[FORMS_FIELDS.searchInputValue]);
+    setSearchInputValue(inputValue);
   };
 
   useEffect(() => {
@@ -33,7 +37,7 @@ export default function SearchBar() {
   return (
     <>
       <form
-        className="
+        className={`
           min-[920px]:sticky
           min-[920px]:top-[79px]
           top-[63px]
@@ -42,7 +46,7 @@ export default function SearchBar() {
           bg-black
           backdrop-blur-3xl
           pt-1
-        "
+        `}
         onSubmit={handleSubmit(onSubmit)}
       >
         <div
@@ -73,9 +77,8 @@ export default function SearchBar() {
               externalContainerStyle="!w-full"
               name={FORMS_FIELDS.searchInputValue}
               placeholder={"I’m looking for…"}
-              register={register(FORMS_FIELDS.searchInputValue)}
-              type="text"
-              autoComplete="nope"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
             />
           </div>
           <div>
@@ -88,7 +91,9 @@ export default function SearchBar() {
         </div>
       </form>
 
-      <hr className="bg-option-border h-[1px] border-none w-full mt-2" />
+      {!isDocuments && (
+        <hr className="bg-option-border h-[1px] border-none w-full mt-2" />
+      )}
     </>
   );
 }
