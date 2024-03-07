@@ -1,3 +1,6 @@
+import { Model } from "@/app/[locale]/context/constructorContext";
+import { ProductBentofoxes } from "@/app/[locale]/products/[id]/components/Customization/types";
+
 export const PRODUCT_NAVIGATION = [
   {
     title: "Introduction",
@@ -417,5 +420,278 @@ export const PRODUCT_DEFAULT_MODEL_PARAMS = {
       to: "380",
     },
     applications: ["PV-Thermal"],
+  },
+};
+
+export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
+  Aurora: {
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    structure: [
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "a",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Different
+        Frame Colors`,
+        gridArea: "b",
+      },
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "c",
+      },
+      {
+        type: "warranty",
+        gridArea: "d",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/material.png')",
+        longDescription: {
+          title: `Tailored Material 
+              and Power`,
+          description:
+            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+        },
+        gridArea: "e",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "f",
+      },
+    ],
+  },
+  Comet: {
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    structure: [
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "a",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Different
+        Frame Colors`,
+        gridArea: "b",
+      },
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "c",
+      },
+      {
+        type: "warranty",
+        gridArea: "d",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/material.png')",
+        longDescription: {
+          title: `Tailored Material 
+              and Power`,
+          description:
+            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+        },
+        gridArea: "e",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "f",
+      },
+    ],
+  },
+  Meteor: {
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    structure: [
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "a",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Different
+        Frame Colors`,
+        gridArea: "b",
+      },
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "c",
+      },
+      {
+        type: "warranty",
+        gridArea: "d",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/material.png')",
+        longDescription: {
+          title: `Tailored Material 
+              and Power`,
+          description:
+            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+        },
+        gridArea: "e",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "f",
+      },
+    ],
+  },
+  Terra: {
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    structure: [
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "a",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Different
+        Frame Colors`,
+        gridArea: "b",
+      },
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "c",
+      },
+      {
+        type: "warranty",
+        gridArea: "d",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/material.png')",
+        longDescription: {
+          title: `Tailored Material 
+              and Power`,
+          description:
+            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+        },
+        gridArea: "e",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "f",
+      },
+    ],
+  },
+  Neptune: {
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    structure: [
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "a",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Different
+        Frame Colors`,
+        gridArea: "b",
+      },
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "c",
+      },
+      {
+        type: "warranty",
+        gridArea: "d",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/material.png')",
+        longDescription: {
+          title: `Tailored Material 
+              and Power`,
+          description:
+            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+        },
+        gridArea: "e",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "f",
+      },
+    ],
+  },
+  ShadeStar: {
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    structure: [
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "a",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Different
+        Frame Colors`,
+        gridArea: "b",
+      },
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "c",
+      },
+      {
+        type: "warranty",
+        gridArea: "d",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/material.png')",
+        longDescription: {
+          title: `Tailored Material 
+              and Power`,
+          description:
+            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+        },
+        gridArea: "e",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/sand.png')",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "f",
+      },
+    ],
   },
 };

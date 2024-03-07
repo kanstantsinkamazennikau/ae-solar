@@ -3,7 +3,7 @@ export default function HalfBentobox({
   shortDescription,
   gridArea,
 }: {
-  imageUrl: string;
+  imageUrl?: string;
   shortDescription?: string;
   gridArea?: string;
 }) {

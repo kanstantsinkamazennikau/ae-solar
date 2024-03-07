@@ -1,3 +1,5 @@
+import { Model } from "@/app/[locale]/context/constructorContext";
+
 export interface PanelTechnologyProps {
-  id: "Aurora" | "Comet" | "Meteor" | "ShadeStar" | "Neptune" | "Terra";
+  id: Model;
 }

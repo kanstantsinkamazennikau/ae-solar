@@ -4,7 +4,7 @@ export default function FullBentobox({
   gridArea,
   longDescription,
 }: {
-  imageUrl: string;
+  imageUrl?: string;
   shortDescription?: string;
   longDescription?: {
     title: string;

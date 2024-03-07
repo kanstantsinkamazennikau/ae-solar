@@ -1,5 +1,7 @@
+import { Model } from "@/app/[locale]/context/constructorContext";
+
 export interface BenefitsProps {
-  id: "Aurora" | "Comet" | "Meteor" | "ShadeStar" | "Neptune" | "Terra";
+  id: Model;
 }
 
 export interface BenefitProps {

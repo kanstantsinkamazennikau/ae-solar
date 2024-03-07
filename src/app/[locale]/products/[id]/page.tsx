@@ -13,7 +13,7 @@ export default async function Page({ params: { id } }: ProductPageProps) {
       <PanelTechnology id={id} />
       <VideoIntroduction id={id} />
       <Benefits id={id} />
-      <Customization />
+      <Customization id={id} />
       <Conclusion id={id} />
     </div>
   );

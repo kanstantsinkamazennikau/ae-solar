@@ -5,7 +5,7 @@ export default function QuarterBentobox({
   shortDescription,
   gridArea,
 }: {
-  imageUrl: string;
+  imageUrl?: string;
   shortDescription?: string;
   gridArea?: string;
 }) {
@@ -35,7 +35,15 @@ export default function QuarterBentobox({
       "
       style={{ gridArea }}
     >
-      <Image src={imageUrl} alt={imageUrl} priority width={170} height={170} />
+      {imageUrl && (
+        <Image
+          src={imageUrl}
+          alt={imageUrl}
+          priority
+          width={170}
+          height={170}
+        />
+      )}
 
       {shortDescription &&
         shortDescription.split(/\r?\n|\r|\n/g).map((string) => (
