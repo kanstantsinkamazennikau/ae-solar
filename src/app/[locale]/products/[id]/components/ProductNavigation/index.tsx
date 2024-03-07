@@ -2,28 +2,20 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import {
-  ConstructorContext,
-  ConstructorModel,
-} from "@/app/[locale]/context/constructorContext";
 import { ProductNavigationProps } from "@/app/[locale]/products/[id]/components/ProductNavigation/types";
 import {
-  PRODUCT_DEFAULT_MODEL_PARAMS,
   PRODUCT_NAVIGATION,
   PRODUCT_OVERVIEW,
 } from "@/app/[locale]/products/[id]/constants";
 import {
-  CART_LOCALSTORAGE,
-  CART_SUCCESSFULLY_ADDED,
-  CONSTRUCTOR_ADD,
-  CONSTRUCTOR_ADD_TO_BAG,
+  CONSTRUCTOR_CONFIGURE,
+  CONSTRUCTOR_CONFIGURE_MODULE,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useContext, useEffect, useRef, useState } from "react";
-import { toast } from "react-toastify";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 export default function ProductNavigation({ id }: ProductNavigationProps) {
-  const { setModelsInBag } = useContext(ConstructorContext);
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(false);
   const [height, setHeight] = useState<number | undefined>(undefined);
@@ -35,22 +27,6 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
   useEffect(() => {
     setHeight(contentHeight.current?.scrollHeight);
   }, []);
-
-  const addModelToBag = () => {
-    setModelsInBag((prevState) => {
-      let previousElementId = prevState[prevState.length - 1]?.id ?? 0;
-      const modelsInBag = [
-        ...prevState,
-        {
-          id: ++previousElementId,
-          ...(PRODUCT_DEFAULT_MODEL_PARAMS[id] as ConstructorModel),
-        },
-      ];
-      localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
-      return modelsInBag;
-    });
-    toast.success(CART_SUCCESSFULLY_ADDED);
-  };
 
   return (
     <>
@@ -100,7 +76,9 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
                   alt="selectorWhite"
                   width={16}
                   height={16}
-                  className="mr-4 md:hidden block"
+                  className={`mr-4 md:hidden block duration-300 transition-all ${
+                    isOpenItem ? "rotate-180" : ""
+                  } `}
                 />
               </div>
               {/* DESKTOP NAVIGATION */}
@@ -125,30 +103,22 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
                 })}
               </div>
             </div>
-
-            <Button
-              onClick={addModelToBag}
-              size="extrasmall"
-              style="outline"
-              externalStyle="max-md:!py-2"
-            >
-              <div className="flex justify-center items-center gap-[6px] [font-size:_clamp(14px,1vw,14px)]">
-                <Image
-                  src={`/images/cart.svg`}
-                  alt={"cart"}
-                  priority
-                  width={12}
-                  height={12}
-                  className="inline-block md:w-3 md:h-3 w-4 h-4"
-                />
-                <span className="-tracking-[0.14px] font-semibold leading-[100%] md:block hidden">
-                  {CONSTRUCTOR_ADD_TO_BAG}
-                </span>
-                <span className="-tracking-[0.14px] font-semibold leading-[100%]  block md:hidden">
-                  {CONSTRUCTOR_ADD}
-                </span>
-              </div>
-            </Button>
+            <Link href="/calculate">
+              <Button
+                size="extrasmall"
+                style="outline"
+                externalStyle="max-md:!py-2"
+              >
+                <div className="flex justify-center items-center gap-[6px] [font-size:_clamp(14px,1vw,14px)]">
+                  <span className="-tracking-[0.14px] font-semibold leading-[100%] md:block hidden">
+                    {CONSTRUCTOR_CONFIGURE_MODULE}
+                  </span>
+                  <span className="-tracking-[0.14px] font-semibold leading-[100%]  block md:hidden">
+                    {CONSTRUCTOR_CONFIGURE}
+                  </span>
+                </div>
+              </Button>
+            </Link>
           </div>
         </BasicWidthContainer>
         {/* MOBILE NAVIGATION*/}

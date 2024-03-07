@@ -167,7 +167,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
             align="right"
             externalStyle="z-10"
           />
-          <div className="flex items-center  lg:-mt-24">
+          <div className="flex items-center lg:-mt-[56px]">
             <div className="flex gap-5 max-w-[33%] relative">
               <div className="sequenceAnimationDivider !w-[1px] basis-[1px] shrink-0" />
               <div className="py-20">

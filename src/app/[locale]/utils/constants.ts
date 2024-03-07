@@ -1178,6 +1178,8 @@ export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
 export const CONSTRUCTOR_MODELS_SHORT_DETAILS = "Short Details";
 export const CONSTRUCTOR_ADD_TO_BAG = "Add to Bag";
 export const CONSTRUCTOR_ADD = "Add";
+export const CONSTRUCTOR_CONFIGURE = "Configure";
+export const CONSTRUCTOR_CONFIGURE_MODULE = "Configure module";
 export const CONSTRUCTOR_MODELS_ADVANTAGES = {
   Aurora: [
     {

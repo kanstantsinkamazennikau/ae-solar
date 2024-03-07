@@ -15,7 +15,7 @@ export default function HeroSection() {
     useContext(MainPageVideoContext);
 
   return (
-    <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[60vh] overflow-x-hidden overflow-hidden">
+    <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[70vh] overflow-x-hidden overflow-hidden">
       <div className="fade-strip-top" />
       <div className="fade-strip-bottom" />
       <div className="fade-strip-left md:block hidden" />
@@ -50,7 +50,7 @@ export default function HeroSection() {
           {"German TIER1 Manufacturer of "}
         </p>
         <p
-          className="text-8xl text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,102px)] 
+          className=" text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,102px)] 
           textShadow
         "
         >
@@ -70,14 +70,14 @@ export default function HeroSection() {
           text-center
           z-30
           font-semibold
-          text-xl
+          [font-size:_clamp(14px,1.5vw,20px)] 
           transition-all
           ${!isLongVideoLoadingTime && "delay-[6.5s]"}
           duration-[1s]
           ${
             !isStartAnimation
               ? "opacity-0   -bottom-0"
-              : "opacity-100 bottom-[60px]"
+              : "opacity-100 md:bottom-[60px] bottom-[20px]"
           }
         `}
       >
