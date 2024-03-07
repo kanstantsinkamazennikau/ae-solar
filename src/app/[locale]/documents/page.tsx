@@ -16,7 +16,7 @@ import {
   DOCUMENTS_FILES,
   DOCUMENT_SUBCATEGORIES_SPLITTER,
 } from "@/app/[locale]/utils/constants";
-import { useContext, useEffect } from "react";
+import { useCallback, useContext, useEffect } from "react";
 
 export default function Documents() {
   const {
@@ -31,20 +31,22 @@ export default function Documents() {
     setDocumentsAccordionActiveIndex,
   } = useContext(DocumentsContext);
 
-  //TODO REFACTOR
-  useEffect(() => {
-    setDocumentsLoading(true);
-    let filteredDocuments: (
+  const recursivelyFilterItems = useCallback(
+    (
+      files: (
+        | DocumentsTypesPresentation
+        | DocumentsTypesOther
+        | DocumentsTypesWithSubCategories
+      )[]
+    ): (
       | DocumentsTypesPresentation
       | DocumentsTypesOther
       | DocumentsTypesWithSubCategories
-    )[];
-    if (!filterModels.length && !searchInputValue.length) {
-      filteredDocuments = DOCUMENTS_FILES;
-    } else {
-      filteredDocuments = DOCUMENTS_FILES.map((docFile) => {
-        if (docFile.type !== "SubCategories") {
-          const { category, type, data } = docFile;
+    )[] => {
+      return files.map((docFile) => {
+        const { category, type } = docFile;
+        if (type === "Text" || type === "Presentation") {
+          const { data } = docFile;
 
           return {
             category,
@@ -65,47 +67,43 @@ export default function Documents() {
                 return doc;
               }),
           };
-        } else {
-          const { category, type, subCategories } = docFile;
-          return {
-            category,
-            type,
-            subCategories: subCategories.map((docFile) => {
-              const { category, type, data } = docFile;
-              return {
-                category,
-                type,
-                data: data
-                  .filter((doc) => {
-                    if (filterModels.length) {
-                      return doc.tags?.some((tag) =>
-                        filterModels.includes(tag)
-                      );
-                    }
-                    return doc;
-                  })
-                  .filter((doc) => {
-                    if (searchInputValue.length) {
-                      return doc.linkTitle
-                        ?.toLowerCase()
-                        .includes(searchInputValue.toLowerCase());
-                    }
-                    return doc;
-                  }),
+        }
+        return {
+          category,
+          type: "SubCategories",
+          subCategories: recursivelyFilterItems(docFile.subCategories),
+        } as DocumentsTypesWithSubCategories;
+      });
+    },
+    [filterModels, searchInputValue]
+  );
+
+  useEffect(() => {
+    setDocumentsLoading(true);
+    let filteredDocuments: (
+      | DocumentsTypesPresentation
+      | DocumentsTypesOther
+      | DocumentsTypesWithSubCategories
+    )[];
+    if (!filterModels.length && !searchInputValue.length) {
+      filteredDocuments = DOCUMENTS_FILES;
+    } else {
+      filteredDocuments = recursivelyFilterItems(DOCUMENTS_FILES)
+        .filter((docFile) => {
+          return docFile.type !== "SubCategories"
+            ? docFile.data.length > 0
+            : docFile;
+        })
+        .map((docFile) => {
+          return docFile.type !== "SubCategories"
+            ? docFile
+            : {
+                ...docFile,
+                subCategories: docFile.subCategories.filter(
+                  (subCategory) => subCategory.data.length > 0
+                ),
               };
-            }),
-          };
-        }
-      }).filter((docFile) => {
-        if (docFile.type !== "SubCategories") {
-          return docFile.data.length > 0;
-        } else {
-          return (
-            docFile.subCategories.filter((docFile) => docFile.data.length > 0)
-              .length > 0
-          );
-        }
-      }) as typeof DOCUMENTS_FILES;
+        }) as typeof DOCUMENTS_FILES;
       setDocumentsAccordionActiveIndex(0);
     }
 
@@ -119,6 +117,7 @@ export default function Documents() {
     setDocumentsFile,
     setDocumentsLoading,
     setDocumentsAccordionActiveIndex,
+    recursivelyFilterItems,
   ]);
 
   return documentsLoading ? (
