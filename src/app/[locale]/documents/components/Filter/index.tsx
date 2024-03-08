@@ -12,9 +12,7 @@ import Image from "next/image";
 import { useContext } from "react";
 
 export default function Filter() {
-  const { documentsLoading } = useContext(DocumentsContext);
   const { setFilterModels, filterModels } = useContext(DocumentsContext);
-  if (documentsLoading) return;
 
   return (
     <div

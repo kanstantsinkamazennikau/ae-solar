@@ -9,12 +9,8 @@ import { useContext, useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 export default function SearchBar({ isDocuments }: { isDocuments?: boolean }) {
-  const {
-    setSearchInputValue,
-    documentsType,
-    documentsLoading,
-    searchInputValue,
-  } = useContext(DocumentsContext);
+  const { setSearchInputValue, documentsType, searchInputValue } =
+    useContext(DocumentsContext);
   const [inputValue, setInputValue] = useState(searchInputValue);
   const defaultValues = {
     [FORMS_FIELDS.searchInputValue]: "",
@@ -31,8 +27,6 @@ export default function SearchBar({ isDocuments }: { isDocuments?: boolean }) {
   useEffect(() => {
     setValue(FORMS_FIELDS.searchInputValue, "");
   }, [documentsType, setValue]);
-
-  if (documentsLoading) return;
 
   return (
     <>

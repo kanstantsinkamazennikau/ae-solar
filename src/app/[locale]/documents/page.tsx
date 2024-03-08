@@ -91,18 +91,24 @@ export default function Documents() {
       filteredDocuments = recursivelyFilterItems(DOCUMENTS_FILES)
         .filter((docFile) => {
           return docFile.type !== "SubCategories"
-            ? docFile.data.length > 0
+            ? docFile.data.length
             : docFile;
         })
-        .map((docFile) => {
-          return docFile.type !== "SubCategories"
-            ? docFile
-            : {
+        .filter((docFile) => {
+          if (docFile.type !== "SubCategories") {
+            return docFile;
+          } else {
+            const filtered = docFile.subCategories.filter(
+              (subCategory) => subCategory.data.length
+            );
+            if (filtered.length) {
+              return {
                 ...docFile,
-                subCategories: docFile.subCategories.filter(
-                  (subCategory) => subCategory.data.length > 0
-                ),
+                subCategories: filtered,
               };
+            }
+            return;
+          }
         }) as typeof DOCUMENTS_FILES;
       setDocumentsAccordionActiveIndex(0);
     }

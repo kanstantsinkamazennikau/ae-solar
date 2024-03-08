@@ -47,7 +47,7 @@ export default function Categories() {
         max-[920px]:mt-4
       "
     >
-      {!!documentsFile?.length && !documentsLoading && (
+      {!!documentsFile?.length && (
         <>
           <Image
             src={`/images/documents/folderTop.svg`}
@@ -89,7 +89,7 @@ export default function Categories() {
           >
             {
               //@ts-ignore
-              documentsFile.map(({ category, subCategories }, index) => {
+              documentsFile?.map(({ category, subCategories }, index) => {
                 const isSelectedcategory = selectedCategoryIndex === index;
                 return (
                   <Fragment key={index}>

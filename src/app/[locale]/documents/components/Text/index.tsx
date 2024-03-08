@@ -37,9 +37,9 @@ export default function Text({ link, linkTitle }: TextProps) {
           font-bold
           capitalize
           -tracking-[0.32px]
-          flex
           z-20
           items-center
+          inline-flex
         "
       >
         <Image
