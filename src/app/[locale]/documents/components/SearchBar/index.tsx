@@ -45,7 +45,6 @@ export default function SearchBar({ isDocuments }: { isDocuments?: boolean }) {
       >
         <div
           className="
-           
             flex
             pl-2
             pr-[6px]

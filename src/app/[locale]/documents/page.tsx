@@ -88,15 +88,10 @@ export default function Documents() {
     if (!filterModels.length && !searchInputValue.length) {
       filteredDocuments = DOCUMENTS_FILES;
     } else {
-      filteredDocuments = recursivelyFilterItems(DOCUMENTS_FILES)
-        .filter((docFile) => {
-          return docFile.type !== "SubCategories"
-            ? docFile.data.length
-            : docFile;
-        })
-        .filter((docFile) => {
+      filteredDocuments = recursivelyFilterItems(DOCUMENTS_FILES).filter(
+        (docFile) => {
           if (docFile.type !== "SubCategories") {
-            return docFile;
+            return docFile.data.length;
           } else {
             const filtered = docFile.subCategories.filter(
               (subCategory) => subCategory.data.length
@@ -109,7 +104,8 @@ export default function Documents() {
             }
             return;
           }
-        }) as typeof DOCUMENTS_FILES;
+        }
+      ) as typeof DOCUMENTS_FILES;
       setDocumentsAccordionActiveIndex(0);
     }
 
