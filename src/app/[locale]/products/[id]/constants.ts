@@ -618,46 +618,52 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     ],
   },
   Neptune: {
-    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_b_b""c_c_d_d""c_c_e_f"] [grid-template-areas:"a_a""b_b""c_c""d_d""e_f"]`,
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        imageUrl: "url('/images/products/bentobox/cells.png')",
+        shortDescription: `Neptune: The Future of
+        Hybrid Solar Energy`,
         gridArea: "a",
-      },
-      {
-        type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
-        shortDescription: `Different
-        Frame Colors`,
-        gridArea: "b",
-      },
-      {
-        type: "quarter",
-        imageUrl: "/images/products/bentobox/weather.svg",
-        shortDescription: "Suitable for Extreme Conditions",
-        gridArea: "c",
-      },
-      {
-        type: "warranty",
-        gridArea: "d",
       },
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/material.png')",
         longDescription: {
-          title: `Tailored Material 
-              and Power`,
+          title: `Electricity and thermal production`,
           description:
-            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+            "Experience the best of both worlds with our hybrid energy solution, seamlessly integrating electricity and thermal production for comprehensive energy generation.",
         },
-        gridArea: "e",
+        gridArea: "b",
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        imageUrl: "url('/images/products/bentobox/material.png')",
+        longDescription: {
+          title: `About 70%
+          combined Efficiency`,
+          description:
+            "Unlock superior efficiency with our product boasting an impressive combined efficiency of approximately 70%, ensuring optimal performance and energy output.",
+        },
+        gridArea: "c",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Economic Benefit:
+        Long-term low LCOE`,
+        gridArea: "d",
+      },
+      {
+        type: "warranty",
+        gridArea: "e",
+      },
+
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: `Versatile Use: Effective in various climates`,
         gridArea: "f",
       },
     ],
