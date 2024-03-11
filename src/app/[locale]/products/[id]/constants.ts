@@ -663,46 +663,51 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     ],
   },
   ShadeStar: {
-    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_b_b""c_c_d_d""c_c_e_f"] [grid-template-areas:"a_a""b_b""c_c""d_d""e_f"]`,
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        imageUrl: "url('/images/products/bentobox/cells.png')",
+        shortDescription: `Smart Technology:
+        Advanced shade resistance`,
         gridArea: "a",
-      },
-      {
-        type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
-        shortDescription: `Different
-        Frame Colors`,
-        gridArea: "b",
-      },
-      {
-        type: "quarter",
-        imageUrl: "/images/products/bentobox/weather.svg",
-        shortDescription: "Suitable for Extreme Conditions",
-        gridArea: "c",
-      },
-      {
-        type: "warranty",
-        gridArea: "d",
       },
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/material.png')",
         longDescription: {
-          title: `Tailored Material 
-              and Power`,
+          title: `Shade Resilience`,
           description:
-            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+            "Ensure continuous high output even in shaded conditions with our product's resilient design, guaranteeing consistent performance regardless of shading.",
         },
-        gridArea: "e",
+        gridArea: "b",
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        imageUrl: "url('/images/products/bentobox/rooftop.png')",
+        longDescription: {
+          title: `Rooftop Optimization`,
+          description:
+            "Maximize rooftop space with our product's optimized design, ideal for compact areas and ensuring efficient utilization of limited space.",
+        },
+        gridArea: "c",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Sustainable Solution:
+        Eco-friendly design`,
+        gridArea: "d",
+      },
+      {
+        type: "warranty",
+        gridArea: "e",
+      },
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: `Economic Performance:
+        Low LCOE`,
         gridArea: "f",
       },
     ],
