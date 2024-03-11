@@ -82,6 +82,7 @@ export default function NavLink({
                 h-3
                 min-[920px]:block
                 hidden
+                ${isProductsPage && url === "/products" && "!hidden"}
               `}
             />
             <Image

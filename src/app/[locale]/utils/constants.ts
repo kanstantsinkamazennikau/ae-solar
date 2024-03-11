@@ -42,6 +42,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
     text: "Products",
     stickyProducts: true,
     subMenu: [
+      { url: "/products", text: "All Modules" },
       { url: "/products/Aurora", text: "Aurora" },
       { url: "/products/Meteor", text: "Meteor" },
       { url: "/products/Comet", text: "Comet" },
@@ -96,7 +97,7 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "ShadeStar.svg",
   "Neptune.svg",
 ];
-export const HEADER_SUBNAVIGATION_ALL_PRODUCTS = "All products";
+export const HEADER_SUBNAVIGATION_ALL_MODULES = "All Modules";
 export const HEADER_CONFIGURE_YOUR_MODEL = "Configure your model";
 export const HEADER_CALCULATE = "Calculate";
 export const HEADER_CHOOSE_LANGUAGE = "Choose language";
