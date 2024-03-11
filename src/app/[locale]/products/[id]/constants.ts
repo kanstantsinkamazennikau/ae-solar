@@ -427,19 +427,20 @@ export const PRODUCT_DEFAULT_MODEL_PARAMS = {
 
 export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
   Aurora: {
-    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_d_c""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        imageUrl: "url('/images/products/bentobox/houseFog.png')",
+        shortDescription: `Excellent Performance
+        in Diffuse Light`,
         gridArea: "a",
       },
       {
         type: "half",
         imageUrl: "url('/images/products/bentobox/frame.png')",
-        shortDescription: `Different
-        Frame Colors`,
+        shortDescription: `Size Variety: 
+        small, medium, large`,
         gridArea: "b",
       },
       {
@@ -459,14 +460,15 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
           title: `Tailored Material 
               and Power`,
           description:
-            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+            "Customize your energy solution with tailored materials and power options, ensuring precise alignment with your specific needs and preferences.",
         },
         gridArea: "e",
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        imageUrl: "url('/images/products/bentobox/cells.png')",
+        shortDescription: `Advanced Cells:
+        PERC and Topcon technology`,
         gridArea: "f",
       },
     ],

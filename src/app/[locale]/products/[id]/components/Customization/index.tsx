@@ -1,20 +1,15 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import WarrantyYears from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/WarrantyYears";
 import FullBentobox from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/FullBentobox";
 import HalfBentobox from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/HalfBentobox";
 import QuarterBentobox from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/QuarterBentobox";
+import WarrantyYears from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/WarrantyYears";
+import { CustomizationProps } from "@/app/[locale]/products/[id]/components/Customization/types";
 import {
   PRODUCT_BENTOBOXES,
   PRODUCT_CREATE_YOUR,
   PRODUCT_OWN_SPACE,
 } from "@/app/[locale]/products/[id]/constants";
-import {
-  CustomizationProps,
-  ProductBentofoxes,
-} from "@/app/[locale]/products/[id]/components/Customization/types";
-
-const area = `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`;
 
 export default function Customization({ id }: CustomizationProps) {
   const { areaTemplate, structure } = PRODUCT_BENTOBOXES[id];

@@ -2,14 +2,12 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Tier1 from "@/app/[locale]/components/common/Tier1";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import PanelsList from "@/app/[locale]/products/components/PanelsList";
-import Starfield from "@/app/[locale]/products/components/StarField";
 import {
   PRODUCT_ADVANTAGES,
   PRODUCT_ESSENTIAL,
   PRODUCT_SINCE,
   PRODUCT_SINCE_HIGHLIGHT,
   PRODUCT_THE_ADVANTAGES,
-  PRODUCT_TIME_TO_CHOOSE,
   PRODUCT_WE_ARE_TIER,
   PRODUCT_WE_ARE_TIER_HIGHLIGHT,
 } from "@/app/[locale]/products/constants";
