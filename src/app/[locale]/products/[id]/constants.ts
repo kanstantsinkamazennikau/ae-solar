@@ -571,46 +571,48 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     ],
   },
   Terra: {
-    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_b_b""c_c_d_d""c_c_e_f"] [grid-template-areas:"a_a""b_b""c_c""d_d""e_f"]`,
     structure: [
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        shortDescription: `Bifacial Efficiency:
+        Optimal energy capture`,
         gridArea: "a",
       },
       {
-        type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
-        shortDescription: `Different
-        Frame Colors`,
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/cells.png')",
+        shortDescription: `n-Type TOPCon Tech:
+        Cutting-edge efficiency`,
         gridArea: "b",
-      },
-      {
-        type: "quarter",
-        imageUrl: "/images/products/bentobox/weather.svg",
-        shortDescription: "Suitable for Extreme Conditions",
-        gridArea: "c",
-      },
-      {
-        type: "warranty",
-        gridArea: "d",
       },
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/material.png')",
         longDescription: {
-          title: `Tailored Material 
-              and Power`,
+          title: `Long-Term Reliability`,
           description:
-            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+            "Count on consistent performance and lasting durability with minimal degradation, guaranteeing reliable operation for the long haul.",
         },
-        gridArea: "e",
+        gridArea: "c",
       },
       {
-        type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Application Flexibility:
+        Ideal for various installations`,
+        gridArea: "d",
+      },
+      {
+        type: "warranty",
+        gridArea: "e",
+      },
+
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: "Ideal for varied weather conditions",
         gridArea: "f",
       },
     ],
