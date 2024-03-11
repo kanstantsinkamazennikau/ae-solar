@@ -474,47 +474,52 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     ],
   },
   Comet: {
-    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    areaTemplate: `md:[grid-template-areas:"a_b_d_d""c_c_d_d""e_e_f_f""e_e_g_g"] [grid-template-areas:"a_b""c_c""d_d""e_e""f_f""g_g"]`,
     structure: [
       {
-        type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        type: "warranty",
         gridArea: "a",
-      },
-      {
-        type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
-        shortDescription: `Different
-        Frame Colors`,
-        gridArea: "b",
       },
       {
         type: "quarter",
         imageUrl: "/images/products/bentobox/weather.svg",
         shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "b",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Color Diversity:
+        Wide range of choices `,
         gridArea: "c",
       },
       {
-        type: "warranty",
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/cells.png')",
+        shortDescription: `n-Type Heterojunction:
+        Advanced solar technology`,
         gridArea: "d",
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/material.png')",
-        longDescription: {
-          title: `Tailored Material 
-              and Power`,
-          description:
-            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
-        },
+        imageUrl: "url('/images/products/bentobox/snow.png')",
+        shortDescription: `Extreme Climate Suitability:
+        Designed for harsh environments`,
         gridArea: "e",
       },
       {
-        type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/lowLight.png')",
+        shortDescription: `Low-Light Performance:
+        High output in dim conditions`,
         gridArea: "f",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/frame.png')",
+        shortDescription: `Temperature Stability:
+        Very low coefficient`,
+        gridArea: "g",
       },
     ],
   },
@@ -546,7 +551,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       {
         type: "quarter",
         imageUrl: "/images/products/bentobox/weather.svg",
-        shortDescription: "Suitable for Extreme Conditions",
+        shortDescription: "Ideal for varied weather conditions",
         gridArea: "d",
       },
       {
