@@ -519,46 +519,48 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     ],
   },
   Meteor: {
-    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_c_d""e_e_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_b_b""c_d_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        imageUrl: "url('/images/products/bentobox/cells.png')",
+        shortDescription: `TOPCon N-Type:
+        Superior efficiency technology `,
         gridArea: "a",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/material.png')",
+        longDescription: {
+          title: `Broad 
+          Customization`,
+          description:
+            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
+        },
+        gridArea: "b",
+      },
+      {
+        type: "warranty",
+        gridArea: "c",
+      },
+      {
+        type: "quarter",
+        imageUrl: "/images/products/bentobox/weather.svg",
+        shortDescription: "Suitable for Extreme Conditions",
+        gridArea: "d",
       },
       {
         type: "half",
         imageUrl: "url('/images/products/bentobox/frame.png')",
         shortDescription: `Different
         Frame Colors`,
-        gridArea: "b",
-      },
-      {
-        type: "quarter",
-        imageUrl: "/images/products/bentobox/weather.svg",
-        shortDescription: "Suitable for Extreme Conditions",
-        gridArea: "c",
-      },
-      {
-        type: "warranty",
-        gridArea: "d",
-      },
-      {
-        type: "full",
-        imageUrl: "url('/images/products/bentobox/material.png')",
-        longDescription: {
-          title: `Tailored Material 
-              and Power`,
-          description:
-            "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
-        },
         gridArea: "e",
       },
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/sand.png')",
-        shortDescription: "Suitable for Extreme Conditions",
+        shortDescription: `Resilient Performance:
+        Low degradation, high durability`,
         gridArea: "f",
       },
     ],
