@@ -61,7 +61,7 @@ export default function CartModelDetails({ model }: DetailsProps) {
           const modelParameterApplications = model[modelKey];
           component = (
             <>
-              {modelParameterApplications.map((application, index) => (
+              {modelParameterApplications?.map((application, index) => (
                 <span key={application}>
                   {`${index ? ", " : ""}${application}`}
                 </span>

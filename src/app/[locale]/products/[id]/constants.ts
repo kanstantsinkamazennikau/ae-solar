@@ -721,7 +721,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××ME-132",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "640–660",
+        powerRange: "640-660",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -755,7 +755,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-144",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "530–550",
+        powerRange: "530-550",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -789,7 +789,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-132",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "485–505",
+        powerRange: "485-505",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -823,7 +823,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-120",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "440–460",
+        powerRange: "440-460",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -857,7 +857,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-108",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "395–415",
+        powerRange: "395-415",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -891,7 +891,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××ME-132BD",
         cellType: "p type PERC",
         moduleDesign: "Bifacial",
-        powerRange: "640–660",
+        powerRange: "640-660",
         moduleColor: "Transparent",
         frameColor: "Silver",
         moduleDimension: {
@@ -925,7 +925,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-144BD",
         cellType: "p type PERC",
         moduleDesign: "Bifacial",
-        powerRange: "530–550",
+        powerRange: "530-550",
         moduleColor: "Transparent",
         frameColor: "Silver",
         moduleDimension: {
@@ -959,7 +959,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-132BD",
         cellType: "p type PERC",
         moduleDesign: "Bifacial",
-        powerRange: "485–505",
+        powerRange: "485-505",
         moduleColor: "Transparent",
         frameColor: "Silver",
         moduleDimension: {
@@ -993,7 +993,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-120BD",
         cellType: "p type PERC",
         moduleDesign: "Bifacial",
-        powerRange: "440–460",
+        powerRange: "440-460",
         moduleColor: "Transparent",
         frameColor: "Silver",
         moduleDimension: {
@@ -1027,7 +1027,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-108BD",
         cellType: "p type PERC",
         moduleDesign: "Bifacial",
-        powerRange: "395–415",
+        powerRange: "395-415",
         moduleColor: "Transparent",
         frameColor: "Silver",
         moduleDimension: {
@@ -1061,7 +1061,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-132E",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "485–505",
+        powerRange: "485-505",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1095,7 +1095,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-120E",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "440–460",
+        powerRange: "440-460",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1129,7 +1129,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××MD-108E",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "395–415",
+        powerRange: "395-415",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1167,7 +1167,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××TME-132BDS",
         cellType: "N type HJT",
         moduleDesign: "Bifacial",
-        powerRange: "680–700",
+        powerRange: "680-700",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1201,7 +1201,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AExxxTMD-144BDE",
         cellType: "N type HJT",
         moduleDesign: "Bifacial",
-        powerRange: "570–590",
+        powerRange: "570-590",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1235,7 +1235,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AExxxTMD-120BDE",
         cellType: "N type HJT",
         moduleDesign: "Bifacial",
-        powerRange: "480–500",
+        powerRange: "480-500",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1269,7 +1269,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AExxxTMD-108BDE",
         cellType: "N type HJT",
         moduleDesign: "Bifacial",
-        powerRange: "420–440",
+        powerRange: "420-440",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1307,7 +1307,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMD-L132BD",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
-        powerRange: "505–525",
+        powerRange: "505-525",
         moduleColor: "Transparent",
         frameColor: "Silver",
         moduleDimension: {
@@ -1345,7 +1345,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××SMB-60",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "320–335",
+        powerRange: "320-335",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1379,7 +1379,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××SMD-108E",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "395–410",
+        powerRange: "395-410",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1417,7 +1417,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××PV-120",
         cellType: "p type PERC",
         moduleDesign: "Mono-facial",
-        powerRange: "370–380",
+        powerRange: "370-380",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1455,7 +1455,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMD-108BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
-        powerRange: "420–440",
+        powerRange: "420-440",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1489,7 +1489,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMD-120BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
-        powerRange: "465–485",
+        powerRange: "465-485",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1523,7 +1523,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMD-144BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
-        powerRange: "560–580",
+        powerRange: "560-580",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1557,7 +1557,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMD-108BDE",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
-        powerRange: "415–435",
+        powerRange: "415-435",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1591,7 +1591,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMD-108",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
-        powerRange: "420–440",
+        powerRange: "420-440",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1625,7 +1625,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMD-120",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
-        powerRange: "465–485",
+        powerRange: "465-485",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1659,7 +1659,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMD-144",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
-        powerRange: "560–580",
+        powerRange: "560-580",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1693,7 +1693,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMD-108E",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
-        powerRange: "415–435",
+        powerRange: "415-435",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1727,7 +1727,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CME-132",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
-        powerRange: "680–700",
+        powerRange: "680-700",
         moduleColor: "Black",
         frameColor: "Black",
         moduleDimension: {
@@ -1761,7 +1761,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CME-132BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
-        powerRange: "680–700",
+        powerRange: "680-700",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1795,7 +1795,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMER-132BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
-        powerRange: "600–620",
+        powerRange: "600-620",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {
@@ -1829,7 +1829,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         model: "AE×××CMDR-120BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
-        powerRange: "480–500",
+        powerRange: "480-500",
         moduleColor: "White",
         frameColor: "Silver",
         moduleDimension: {

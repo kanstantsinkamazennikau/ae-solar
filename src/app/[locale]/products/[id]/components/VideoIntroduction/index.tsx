@@ -47,9 +47,9 @@ export default function Introduction({ id }: IntroductionProps) {
           max-[460px]:-mt-[120px]        
         `}
       >
-        <div className="fade-strip-top !z-10"></div>
-        <div className="fade-strip-left !z-20 !w-[100px] 2xl:block hidden"></div>
-        <div className="fade-strip-bottom !z-20"></div>
+        <div className="fade-strip-top !z-10" />
+        <div className="fade-strip-left !z-20 !w-[100px] 2xl:block hidden" />
+        <div className="fade-strip-bottom !z-20" />
 
         <div
           className="
@@ -75,6 +75,8 @@ export default function Introduction({ id }: IntroductionProps) {
               max-[540px]:-mt-20
             "
           >
+            <div className="fade-strip-right !z-10 max-xl:hidden" />
+            <div className="fade-strip-left !z-10 hidden xl:block 2xl:hidden" />
             <p
               className="
                 min-[540px]:hidden

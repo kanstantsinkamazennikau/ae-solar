@@ -45,7 +45,7 @@ export interface ConstructorModel {
     from: string;
     to?: string;
   };
-  applications: Applications[];
+  applications?: Applications[];
 }
 interface ConstructorModelWithId extends ConstructorModel {
   id: number;
