@@ -13,7 +13,7 @@ export default function LightBoxYoutubeVideo({
       slides={[
         {
           type: "youtube" as const,
-          src: "https://www.youtube.com/embed/scHvP6eW0lI",
+          src: "https://www.youtube.com/embed/COjP-oYF6t4",
           title:
             "AE Solar 20th Anniversary: Let the sun shine on the next generations!",
           width: 2144,

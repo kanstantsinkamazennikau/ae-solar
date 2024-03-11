@@ -28,15 +28,15 @@ export default function SubNavigationProductPanels({
             <Link
               href={`/products`}
               className={`
-            flex
-            flex-col
-            items-center
-            gap-2
-            cursor-pointer
-            leading-[100%]
-            [font-size:_clamp(12px,1vw,16px)]
-            group/link
-          `}
+                flex
+                flex-col
+                items-center
+                gap-2
+                cursor-pointer
+                leading-[100%]
+                [font-size:_clamp(12px,1vw,16px)]
+                group/link
+              `}
             >
               <Image
                 alt="model"

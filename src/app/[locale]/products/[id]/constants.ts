@@ -304,6 +304,8 @@ export const PRODUCT_CREATE_YOUR = "Create Your";
 export const PRODUCT_OWN_SPACE = "Own Space";
 
 export const PRODUCT_CONCLUSION = "Conclusion";
+export const PRODUCT_CHOOSE_READY_MODULES = `or 
+Choose ready-made Modules`;
 export const PRODUCT_CONCLUSION_FOR_PANELS = {
   Aurora: `At AESOLAR, we are unwavering in our commitment to a sustainable future. Our PERC solar modules represent more than just a product; they symbolize our devotion to advanced technology, exceptional quality, and a cleaner, greener world. 
   We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC.`,
@@ -691,6 +693,1171 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         imageUrl: "url('/images/products/bentobox/sand.png')",
         shortDescription: "Suitable for Extreme Conditions",
         gridArea: "f",
+      },
+    ],
+  },
+};
+export const PRODUCT_CONCLUSION_TABLE_ADD = "Add";
+export const PRODUCT_CONCLUSION_TABLE_HEADERS = [
+  `Module
+  Name`,
+  `Cell 
+  type`,
+  `Module 
+  design`,
+  `Power 
+  range, W`,
+  `Module
+  Color`,
+  `Frame
+  Color`,
+  `Links`,
+  ``,
+];
+export const PRODUCT_CONCLUSION_TABLE_BODY = {
+  Aurora: {
+    modules: [
+      {
+        model: "AE×××ME-132",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "640–660",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2383",
+          width: "1302",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-144",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "530–550",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2278",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-132",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "485–505",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2094",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-120",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "440–460",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1902",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-108",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "395–415",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1721",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××ME-132BD",
+        cellType: "p type PERC",
+        moduleDesign: "Bifacial",
+        powerRange: "640–660",
+        moduleColor: "Transparent",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2383",
+          width: "1302",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-144BD",
+        cellType: "p type PERC",
+        moduleDesign: "Bifacial",
+        powerRange: "530–550",
+        moduleColor: "Transparent",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2278",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-132BD",
+        cellType: "p type PERC",
+        moduleDesign: "Bifacial",
+        powerRange: "485–505",
+        moduleColor: "Transparent",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2094",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-120BD",
+        cellType: "p type PERC",
+        moduleDesign: "Bifacial",
+        powerRange: "440–460",
+        moduleColor: "Transparent",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1902",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-108BD",
+        cellType: "p type PERC",
+        moduleDesign: "Bifacial",
+        powerRange: "395–415",
+        moduleColor: "Transparent",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1721",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-132E",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "485–505",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "2094",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-120E",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "440–460",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "1902",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××MD-108E",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "395–415",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "1721",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+    ],
+  },
+  Comet: {
+    modules: [
+      {
+        model: "AE×××TME-132BDS",
+        cellType: "N type HJT",
+        moduleDesign: "Bifacial",
+        powerRange: "680–700",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2383",
+          width: "1302",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AExxxTMD-144BDE",
+        cellType: "N type HJT",
+        moduleDesign: "Bifacial",
+        powerRange: "570–590",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "2278",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AExxxTMD-120BDE",
+        cellType: "N type HJT",
+        moduleDesign: "Bifacial",
+        powerRange: "480–500",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "1902",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AExxxTMD-108BDE",
+        cellType: "N type HJT",
+        moduleDesign: "Bifacial",
+        powerRange: "420–440",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "1721",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+    ],
+  },
+  Terra: {
+    modules: [
+      {
+        model: "AE×××CMD-L132BD",
+        cellType: "N type TOPCon",
+        moduleDesign: "Bifacial",
+        powerRange: "505–525",
+        moduleColor: "Transparent",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1070",
+          width: "2235",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+    ],
+  },
+  ShadeStar: {
+    modules: [
+      {
+        model: "AE×××SMB-60",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "320–335",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1690",
+          width: "996",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××SMD-108E",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "395–410",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "1721",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+    ],
+  },
+  Neptune: {
+    modules: [
+      {
+        model: "AE×××PV-120",
+        cellType: "p type PERC",
+        moduleDesign: "Mono-facial",
+        powerRange: "370–380",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1755",
+          width: "1038",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+    ],
+  },
+  Meteor: {
+    modules: [
+      {
+        model: "AE×××CMD-108BDS",
+        cellType: "N type TOPCon",
+        moduleDesign: "Bifacial",
+        powerRange: "420–440",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1721",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CMD-120BDS",
+        cellType: "N type TOPCon",
+        moduleDesign: "Bifacial",
+        powerRange: "465–485",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1902",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CMD-144BDS",
+        cellType: "N type TOPCon",
+        moduleDesign: "Bifacial",
+        powerRange: "560–580",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2278",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CMD-108BDE",
+        cellType: "N type TOPCon",
+        moduleDesign: "Bifacial",
+        powerRange: "415–435",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "1721",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CMD-108",
+        cellType: "N type TOPCon",
+        moduleDesign: "Mono-facial",
+        powerRange: "420–440",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1721",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CMD-120",
+        cellType: "N type TOPCon",
+        moduleDesign: "Mono-facial",
+        powerRange: "465–485",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "1902",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CMD-144",
+        cellType: "N type TOPCon",
+        moduleDesign: "Mono-facial",
+        powerRange: "560–580",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2278",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CMD-108E",
+        cellType: "N type TOPCon",
+        moduleDesign: "Mono-facial",
+        powerRange: "415–435",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "1721",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CME-132",
+        cellType: "N type TOPCon",
+        moduleDesign: "Mono-facial",
+        powerRange: "680–700",
+        moduleColor: "Black",
+        frameColor: "Black",
+        moduleDimension: {
+          length: "2383",
+          width: "1302",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CME-132BDS",
+        cellType: "N type TOPCon",
+        moduleDesign: "Bifacial",
+        powerRange: "680–700",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2383",
+          width: "1302",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CMER-132BDS",
+        cellType: "N type TOPCon",
+        moduleDesign: "Bifacial",
+        powerRange: "600–620",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2383",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
+      },
+      {
+        model: "AE×××CMDR-120BDS",
+        cellType: "N type TOPCon",
+        moduleDesign: "Bifacial",
+        powerRange: "480–500",
+        moduleColor: "White",
+        frameColor: "Silver",
+        moduleDimension: {
+          length: "2077",
+          width: "1133",
+        },
+        links: [
+          {
+            tooltip: "documents",
+            link: "",
+            icon: "/images/option/document.svg",
+          },
+          {
+            tooltip: "datasheet",
+            link: "",
+            icon: "/images/option/download.svg",
+          },
+          {
+            tooltip: "certificate",
+            link: "",
+            icon: "/images/option/award.svg",
+          },
+          {
+            tooltip: "warranty",
+            link: "",
+            icon: "/images/option/shield.svg",
+          },
+        ],
       },
     ],
   },

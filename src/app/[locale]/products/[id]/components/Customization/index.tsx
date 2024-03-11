@@ -20,7 +20,7 @@ export default function Customization({ id }: CustomizationProps) {
   const { areaTemplate, structure } = PRODUCT_BENTOBOXES[id];
 
   return (
-    <div className="flex items-center relative flex-col min-[1480px]:w-[1440px] xl:mb-[180px] lg:mb-[100px] md:mb-[50px] mb-[30px]">
+    <div className="flex items-center relative flex-col min-[1536px]:w-[1440px] xl:mb-[180px] lg:mb-[100px] md:mb-[50px] mb-[30px]">
       <BasicWidthContainer styles="relative z-10">
         <div className="w-full flex flex-col gap-[20px] items-center">
           <TwoTierHeading
