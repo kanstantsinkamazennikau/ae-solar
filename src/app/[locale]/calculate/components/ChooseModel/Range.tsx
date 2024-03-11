@@ -35,8 +35,8 @@ export default function Range({
     if (e.target.value === "" || re.test(e.target.value)) {
       setConstructorModel((prevState: ConstructorModel) => ({
         ...prevState,
-        [paramsKey]: {
-          ...prevState[paramsKey],
+        [paramsKey!]: {
+          ...prevState[paramsKey!],
           [name]: value,
         },
       }));
