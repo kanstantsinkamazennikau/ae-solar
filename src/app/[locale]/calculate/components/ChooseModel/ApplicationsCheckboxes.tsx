@@ -32,11 +32,11 @@ export default function ApplicationsCheckboxes({
     if (isChecked) {
       setConstructorModel((prevState: ConstructorModel) => ({
         ...prevState,
-        applications: [...prevState.applications, e.target.name],
+        applications: [...(prevState.applications as []), e.target.name],
       }));
     } else {
-      if (applications.length === 1) return;
-      const filteredApplications = applications.filter(
+      if (applications?.length === 1) return;
+      const filteredApplications = applications?.filter(
         (application) => application !== applicationType
       );
       setConstructorModel((prevState: ConstructorModel) => ({
@@ -72,7 +72,7 @@ export default function ApplicationsCheckboxes({
                   name={type}
                   value={type}
                   id={type}
-                  checked={constructorModel.applications.includes(type)}
+                  checked={constructorModel?.applications?.includes(type)}
                   disabled={isDisabledCheckbox}
                   className={`
                     grid
