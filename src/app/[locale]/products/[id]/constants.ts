@@ -716,6 +716,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
   },
 };
 export const PRODUCT_CONCLUSION_TABLE_ADD = "Add";
+export const PRODUCT_CONCLUSION_TABLE_ADD_MOBILE = "Add To Cart";
 export const PRODUCT_CONCLUSION_TABLE_HEADERS = [
   `Module
   Name`,
@@ -732,12 +733,19 @@ export const PRODUCT_CONCLUSION_TABLE_HEADERS = [
   `Datasheets`,
   ``,
 ];
+
+export const PRODUCT_CONCLUSION_TABLE_MOBILE_CELL_TYPE = "Cell type";
+export const PRODUCT_CONCLUSION_TABLE_MOBILE_MODULE_DESIGN = "Module design";
+export const PRODUCT_CONCLUSION_TABLE_MOBILE_RANGE = "Power range, W";
+export const PRODUCT_CONCLUSION_TABLE_MOBILE_MODULE_COLOR = "Module Color";
+export const PRODUCT_CONCLUSION_TABLE_MOBILE_FRAME_COLOR = "Frame Color";
+
 export const PRODUCT_CONCLUSION_TABLE_BODY = {
   Aurora: {
     modules: [
       {
         model: "AE×××ME-132",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "640-660",
         moduleColor: "White",
@@ -772,7 +780,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-144",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "530-550",
         moduleColor: "White",
@@ -807,7 +815,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-132",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "485-505",
         moduleColor: "White",
@@ -842,7 +850,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-120",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "440-460",
         moduleColor: "White",
@@ -877,7 +885,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-108",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "395-415",
         moduleColor: "White",
@@ -912,7 +920,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××ME-132BD",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Bifacial",
         powerRange: "640-660",
         moduleColor: "Transparent",
@@ -947,7 +955,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-144BD",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Bifacial",
         powerRange: "530-550",
         moduleColor: "Transparent",
@@ -982,7 +990,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-132BD",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Bifacial",
         powerRange: "485-505",
         moduleColor: "Transparent",
@@ -1017,7 +1025,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-120BD",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Bifacial",
         powerRange: "440-460",
         moduleColor: "Transparent",
@@ -1052,7 +1060,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-108BD",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Bifacial",
         powerRange: "395-415",
         moduleColor: "Transparent",
@@ -1087,7 +1095,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-132E",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "485-505",
         moduleColor: "Black",
@@ -1122,7 +1130,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-120E",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "440-460",
         moduleColor: "Black",
@@ -1157,7 +1165,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××MD-108E",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "395-415",
         moduleColor: "Black",
@@ -1379,7 +1387,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
     modules: [
       {
         model: "AE×××SMB-60",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "320-335",
         moduleColor: "White",
@@ -1414,7 +1422,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
       },
       {
         model: "AE×××SMD-108E",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "395-410",
         moduleColor: "Black",
@@ -1453,7 +1461,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
     modules: [
       {
         model: "AE×××PV-120",
-        cellType: "p type PERC",
+        cellType: "P type PERC",
         moduleDesign: "Mono-facial",
         powerRange: "370-380",
         moduleColor: "White",

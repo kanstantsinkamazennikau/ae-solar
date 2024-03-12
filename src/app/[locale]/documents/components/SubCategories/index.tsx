@@ -47,9 +47,11 @@ export default function SubCategories({
               <p className="[font-size:_clamp(16px,1.5vw,24px)] leading-[130%] font-semibold mb-4">
                 {category}
               </p>
-              {data.map(({ linkTitle, link }) => (
-                <Text {...{ linkTitle, link }} key={linkTitle} />
-              ))}
+              <div className=" grid xl:grid-cols-2 grid-cols-1">
+                {data.map(({ linkTitle, link }) => (
+                  <Text {...{ linkTitle, link }} key={linkTitle} />
+                ))}
+              </div>
             </div>
           );
         })}

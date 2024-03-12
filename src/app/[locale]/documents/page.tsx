@@ -184,7 +184,7 @@ export default function Documents() {
               index={index}
               dropdownIcon="/images/documents/dropDownIcon.svg"
             >
-              <div className="pb-10">
+              <div className="pb-10 grid grid-cols-1">
                 {data.map(({ linkTitle, link }) => (
                   <Text {...{ linkTitle, link }} key={linkTitle} />
                 ))}

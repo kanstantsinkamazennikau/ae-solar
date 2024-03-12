@@ -1,20 +1,17 @@
-import Button from "@/app/[locale]/components/common/Button";
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import {
   SOLUTIONS_DISCOVER_AESOLAR,
-  SOLUTIONS_DISCOVER_AESOLAR_WORDS_TO_HIGHLIGHT,
   SOLUTIONS_DISCOVER_YOUR_PARTNER,
   SOLUTIONS_LEADING_PROVIDER,
   SOLUTIONS_LEARN_MORE,
 } from "@/app/[locale]/solutions/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 
 export default function Discover() {
   return (
     <div className="-mt-[80px] overflow-hidden 2xl:-mb-[120px] xl:-mb-[60px] md:-mb-[20px] mb-[100px] flex md:flex-row flex-col justify-center">
       <Image
-        src="/images/solutions/heroSectionBackground.png"
+        src="/images/solutions/heroSectionBackground.svg"
         alt="heroSectionBackground"
         width={1920}
         height={1080}
