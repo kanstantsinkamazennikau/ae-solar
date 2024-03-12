@@ -103,7 +103,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
                 })}
               </div>
             </div>
-            <Link href="/calculate">
+            {/* <Link href="/calculate">
               <Button
                 size="extrasmall"
                 style="outline"
@@ -118,7 +118,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
                   </span>
                 </div>
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </BasicWidthContainer>
         {/* MOBILE NAVIGATION*/}

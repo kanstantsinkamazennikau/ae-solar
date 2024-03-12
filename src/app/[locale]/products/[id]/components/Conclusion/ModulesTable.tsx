@@ -1,3 +1,4 @@
+import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { ConclusionProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
@@ -28,6 +29,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
       length: string;
       width: string;
     },
+    applications: Applications[],
     powerRange: string
   ) => {
     const [from, to] = powerRange.split("-");
@@ -43,6 +45,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
           moduleColor,
           frameColor,
           moduleDimension,
+          applications,
           powerRange: {
             from,
             to,
@@ -59,22 +62,25 @@ export default function ModulesTable({ id }: ConclusionProps) {
   return (
     <div className="mt-[60px] w-full flex flex-col items-center">
       <BasicWidthContainer>
-        {PRODUCT_CHOOSE_READY_MODULES.split(/\r?\n|\r|\n/g).map(
-          (string, index) => (
-            <div
-              key={string}
-              className={`
-                ${index === 0 ? "text-[#B30006]" : ""} 
+        <div className="flex justify-center">
+          {PRODUCT_CHOOSE_READY_MODULES.split(/\r?\n|\r|\n/g).map(
+            (string, index) => (
+              <span
+                key={string}
+                className={`
+                ${index === 1 ? "text-[#B30006]" : ""} 
                 text-center
                 [font-size:_clamp(24px,2.5vw,32px)]
                 font-semibold
                 leading-[130%]
               `}
-            >
-              {string}
-            </div>
-          )
-        )}
+              >
+                {string}
+              </span>
+            )
+          )}
+        </div>
+
         <table
           className="
             mt-6
@@ -140,6 +146,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                 moduleDesign,
                 powerRange,
                 moduleDimension,
+                applications,
               }) => (
                 <tr
                   key={model}
@@ -158,16 +165,6 @@ export default function ModulesTable({ id }: ConclusionProps) {
                     [&>td]:last:border-none
                     [&>td]:hover:bg-[#191919]
                   "
-                  onClick={() =>
-                    addModelToBag(
-                      cellType,
-                      moduleDesign,
-                      moduleColor,
-                      frameColor,
-                      moduleDimension,
-                      powerRange
-                    )
-                  }
                 >
                   <td
                     className="
@@ -212,7 +209,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                   </td>
                   <td>
                     <div className="flex gap-2 relative">
-                      {links.map(({ icon, link, tooltip }) => (
+                      {links?.map(({ icon, link, tooltip }) => (
                         <a
                           key={icon}
                           href={link}
@@ -229,14 +226,14 @@ export default function ModulesTable({ id }: ConclusionProps) {
                           />
                           <span
                             className="
-                                absolute
-                                -top-full
-                                hidden
-                                group-hover:block p-1 
-                                bg-[#131313]
-                                [font-size:_clamp(8px,1vw,10px)]
-                                capitalize
-                              "
+                              absolute
+                              -top-full
+                              hidden
+                              group-hover:block p-1 
+                              bg-[#131313]
+                              [font-size:_clamp(8px,1vw,10px)]
+                              capitalize
+                            "
                           >
                             {tooltip}
                           </span>
@@ -244,20 +241,33 @@ export default function ModulesTable({ id }: ConclusionProps) {
                       ))}
                     </div>
                   </td>
-                  <td className="cursor-pointer relative">
+                  <td
+                    className="cursor-pointer relative"
+                    onClick={() =>
+                      addModelToBag(
+                        cellType,
+                        moduleDesign,
+                        moduleColor,
+                        frameColor,
+                        moduleDimension,
+                        applications as Applications[],
+                        powerRange
+                      )
+                    }
+                  >
                     <div
                       className="
-                          absolute
-                          mr-5 
-                          flex
-                          items-center
-                          max-w-[24px] 
-                          group-hover/add:max-w-[150px] 
-                          overflow-hidden
-                          transition-all
-                          duration-200
-                          gap-[2px]
-                        "
+                        absolute
+                        mr-5 
+                        flex
+                        items-center
+                        max-w-[24px] 
+                        group-hover/add:max-w-[150px] 
+                        overflow-hidden
+                        transition-all
+                        duration-200
+                        gap-[2px]
+                      "
                     >
                       <Image
                         src={`/images/cart.svg`}

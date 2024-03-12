@@ -44,11 +44,11 @@ export default function ProductIntroVideo() {
     resetProgress: false,
     arrows: false,
     drag: false,
-    interval: 4000,
+    interval: 3000,
   };
 
   const handleClick = () => {
-    router.push(`/${locale}/calculate`);
+    router.push(`/products`);
   };
 
   const handleScroll = useCallback(() => {

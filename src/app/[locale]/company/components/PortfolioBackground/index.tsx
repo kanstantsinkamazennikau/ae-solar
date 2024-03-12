@@ -8,9 +8,13 @@ import {
 } from "@/app/[locale]/company/constants";
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
-import { CONSTRUCTOR_CONFIGURE_YOUR_MODEL } from "@/app/[locale]/utils/constants";
+import {
+  CONSTRUCTOR_CONFIGURE_YOUR_MODEL,
+  HEADER_CONFIGURE_YOUR_MODEL,
+} from "@/app/[locale]/utils/constants";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PortfolioBackground() {
   const { videoRef } = useVideoIntersection();
@@ -105,11 +109,13 @@ export default function PortfolioBackground() {
               )}
             </p>
           </div>
-          <Button externalStyle="max-[768px]:!py-4 !py-[14px] !px-[26]">
-            <span className="[font-size:_clamp(20px,1.5vw,20px)] font-semibold -tracking-[0.2px]">
-              {CONSTRUCTOR_CONFIGURE_YOUR_MODEL}
-            </span>
-          </Button>
+          <Link href="/products">
+            <Button externalStyle="max-[768px]:!py-4 !py-[14px] !px-[26]">
+              <span className="[font-size:_clamp(20px,1.5vw,20px)] font-semibold -tracking-[0.2px]">
+                {HEADER_CONFIGURE_YOUR_MODEL}
+              </span>
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="relative w-full justify-center items-center flex mt-20 mb-5 md:hidden">

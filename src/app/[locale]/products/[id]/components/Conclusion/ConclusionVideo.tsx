@@ -120,7 +120,7 @@ export default function ConclusionVideo({ id }: ConclusionProps) {
                   </p>
                 ))}
             </div>
-            <Link href={"/calculate"}>
+            {/* <Link href={"/calculate"}>
               <Button externalStyle="!px-[26px] !py-[16px]">
                 <div className="flex justify-center items-center px-2">
                   <Image
@@ -136,7 +136,7 @@ export default function ConclusionVideo({ id }: ConclusionProps) {
                   </span>
                 </div>
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

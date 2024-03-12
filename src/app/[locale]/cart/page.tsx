@@ -22,7 +22,7 @@ export default function Cart() {
       <BasicWidthContainer>
         <CheckOut />
         <ModelsInCart />
-        <AddMorePanels />
+        {/* <AddMorePanels /> */}
         <Image
           src={`/images/glowFull.png`}
           alt="glow"

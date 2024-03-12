@@ -20,9 +20,9 @@ export async function POST(request: NextRequest) {
   });
 
   const mailOptions: Mail.Options = {
-    from: process.env.APP_EMAIL,
-    to: process.env.APP_EMAIL,
-    subject: `Get a Quote Request`,
+    from: process.env.SMTP_USER,
+    to: process.env.SOLAR_RECEPIENT_EMAIL,
+    subject: `SHOP:  ${body.name}`,
     html: `<p><strong>Client information</strong></p>
     <p><strong>Name: </strong> ${body.name}</p>
     <p><strong>Email: </strong> ${body.email}</p>

@@ -30,7 +30,7 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
       "
     >
       <Image
-        src={`/images/products/${id}StarPath.svg`}
+        src={`/images/products/${id}StarPath.png`}
         alt="starPath"
         width={1320}
         height={1320}

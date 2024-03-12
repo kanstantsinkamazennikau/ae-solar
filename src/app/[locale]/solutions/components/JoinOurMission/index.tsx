@@ -1,4 +1,5 @@
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import Starfield from "@/app/[locale]/products/components/StarField";
 import {
   SOLUTIONS_JOIN,
   SOLUTIONS_OUR_MISSION,
@@ -20,6 +21,13 @@ export default function JoinOurMission() {
         mb-[80px]
       "
     >
+      <Starfield
+        starCount={1000}
+        starColor={[255, 255, 255]}
+        speedFactor={0.02}
+        backgroundColor="black"
+        style="absolute h-full"
+      />
       <div className="fade-strip-top md:!h-[125px] !h-[50px]" />
       <Image
         src={`/images/solutions/joinOurMission.svg`}

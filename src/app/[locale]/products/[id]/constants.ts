@@ -304,8 +304,8 @@ export const PRODUCT_CREATE_YOUR = "Create Your";
 export const PRODUCT_OWN_SPACE = "Own Space";
 
 export const PRODUCT_CONCLUSION = "Conclusion";
-export const PRODUCT_CHOOSE_READY_MODULES = `or 
-Choose ready-made Modules`;
+export const PRODUCT_CHOOSE_READY_MODULES = `Choose 
+ Your Ideal Product`;
 export const PRODUCT_CONCLUSION_FOR_PANELS = {
   Aurora: `At AESOLAR, we are unwavering in our commitment to a sustainable future. Our PERC solar modules represent more than just a product; they symbolize our devotion to advanced technology, exceptional quality, and a cleaner, greener world. 
   We invite you to be part of this solar revolution, harnessing the power of the sun in the most efficient way possible with PERC.`,
@@ -729,7 +729,7 @@ export const PRODUCT_CONCLUSION_TABLE_HEADERS = [
   Color`,
   `Frame
   Color`,
-  `Links`,
+  `Datasheets`,
   ``,
 ];
 export const PRODUCT_CONCLUSION_TABLE_BODY = {
@@ -742,31 +742,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "640-660",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2383",
           width: "1302",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_ME-132_640W-660W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -776,31 +777,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "530-550",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2278",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-144_530W-550W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -810,31 +812,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "485-505",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2094",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
-          {
-            tooltip: "datasheet",
-            link: "",
-            icon: "/images/option/download.svg",
-          },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
+          // {
+          //   tooltip: "datasheet",
+          //   link: "",
+          //   icon: "/images/option/download.svg",
+          // },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -844,31 +847,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "440-460",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1902",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-120_440W-460W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -878,31 +882,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "395-415",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1721",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-108_395W-415W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -912,31 +917,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "640-660",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2383",
           width: "1302",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_ME-132BD_640W-660W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -946,31 +952,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "530-550",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2278",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-144BD_530W-550W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -980,31 +987,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "485-505",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2094",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-132BD_485W-505W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1014,31 +1022,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "440-460",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1902",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-120BD_440W-460W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1048,31 +1057,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "395-415",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1721",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-108BD_395W-415W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1082,31 +1092,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "485-505",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2094",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-132E_485W-505W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1116,31 +1127,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "440-460",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1902",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-120E_440W-460W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1150,31 +1162,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "395-415",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1721",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Aurora/AE_MD-108E_395W-415W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
     ],
@@ -1188,31 +1201,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "680-700",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2383",
           width: "1302",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Comet/AE_TME-132BDS_680W-700W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1222,31 +1236,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "570-590",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2278",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
-          {
-            tooltip: "datasheet",
-            link: "",
-            icon: "/images/option/download.svg",
-          },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
+          // {
+          //   tooltip: "datasheet",
+          //   link: "",
+          //   icon: "/images/option/download.svg",
+          // },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1256,31 +1271,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "480-500",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1902",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
-          {
-            tooltip: "datasheet",
-            link: "",
-            icon: "/images/option/download.svg",
-          },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
+          // {
+          //   tooltip: "datasheet",
+          //   link: "",
+          //   icon: "/images/option/download.svg",
+          // },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1290,31 +1306,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "420-440",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1721",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
-          {
-            tooltip: "datasheet",
-            link: "",
-            icon: "/images/option/download.svg",
-          },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
+          // {
+          //   tooltip: "datasheet",
+          //   link: "",
+          //   icon: "/images/option/download.svg",
+          // },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
     ],
@@ -1328,31 +1345,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "505-525",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1070",
           width: "2235",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Terra/AE_CMD-L132BD_505W-525W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
     ],
@@ -1366,31 +1384,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "320-335",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Shade Resistant"],
         moduleDimension: {
           length: "1690",
           width: "996",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/ShadeStar/AE_SMB-60_320W-335W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1400,31 +1419,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "395-410",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Shade Resistant"],
         moduleDimension: {
           length: "1721",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/ShadeStar/AE_SMD-108E_395W-410W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
     ],
@@ -1438,31 +1458,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "370-380",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["PV-Thermal"],
         moduleDimension: {
           length: "1755",
           width: "1038",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Neptune/AE_PV-380WtAYThermal-964W-5.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
     ],
@@ -1476,31 +1497,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "420-440",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Carport"],
         moduleDimension: {
           length: "1721",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CMD-108BDS_420W-440W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1510,31 +1532,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "465-485",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Carport"],
         moduleDimension: {
           length: "1902",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CMD-120BDS_465W-485W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1544,31 +1567,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "560-580",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Carport"],
         moduleDimension: {
           length: "2278",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CMD-144BDS_560W-580W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1578,31 +1602,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "415-435",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Carport"],
         moduleDimension: {
           length: "1721",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CMD-108BDE_415W-435W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1612,31 +1637,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "420-440",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Carport"],
         moduleDimension: {
           length: "1721",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CMD-108_420W-440W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1646,31 +1672,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "465-485",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Carport"],
         moduleDimension: {
           length: "1902",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CMD-120_465W-485W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1680,31 +1707,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "560-580",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Carport"],
         moduleDimension: {
           length: "2278",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CMD-144_560W-580W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1714,31 +1742,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "415-435",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Carport"],
         moduleDimension: {
           length: "1721",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CMD-108E_415W-435W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1748,31 +1777,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "680-700",
         moduleColor: "Black",
         frameColor: "Black",
+        applications: ["Carport"],
         moduleDimension: {
           length: "2383",
           width: "1302",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CME-132_680W-700W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1782,31 +1812,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "680-700",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Carport"],
         moduleDimension: {
           length: "2383",
           width: "1302",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
-            link: "",
+            link: "/documents/solar_panels/Meteor/AE_CME-132BDS_680W-700W_Ver24.1.1.pdf",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1816,31 +1847,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "600-620",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Carport"],
         moduleDimension: {
           length: "2383",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
             link: "",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
       {
@@ -1850,31 +1882,32 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "480-500",
         moduleColor: "White",
         frameColor: "Silver",
+        applications: ["Carport"],
         moduleDimension: {
           length: "2077",
           width: "1133",
         },
         links: [
-          {
-            tooltip: "documents",
-            link: "",
-            icon: "/images/option/document.svg",
-          },
+          // {
+          //   tooltip: "documents",
+          //   link: "",
+          //   icon: "/images/option/document.svg",
+          // },
           {
             tooltip: "datasheet",
             link: "",
             icon: "/images/option/download.svg",
           },
-          {
-            tooltip: "certificate",
-            link: "",
-            icon: "/images/option/award.svg",
-          },
-          {
-            tooltip: "warranty",
-            link: "",
-            icon: "/images/option/shield.svg",
-          },
+          // {
+          //   tooltip: "certificate",
+          //   link: "",
+          //   icon: "/images/option/award.svg",
+          // },
+          // {
+          //   tooltip: "warranty",
+          //   link: "",
+          //   icon: "/images/option/shield.svg",
+          // },
         ],
       },
     ],

@@ -18,6 +18,9 @@ export const FORM_FIELDS_INPUT_TYPES = {
   textarea: "textarea",
 };
 
+export const HEADER_TIER1 = "German TIER1 Manufacturer of ";
+export const HEADER_TIER1_QUALITY = "High-Quality Solar Panels";
+
 export const FORMS_FIELDS = {
   name: "name",
   email: "email",
@@ -37,6 +40,16 @@ export const HEADER_NAV_LINKS_ARRAY = [
   //   url: "/",
   //   text: "Home",
   // },
+
+  {
+    url: "/company",
+    text: "Company",
+    subMenu: [
+      { url: "/company/manufacturer", text: "Manufacturer" },
+      { url: "/company/news", text: "News" },
+      { url: "/company/faq", text: "FAQ" },
+    ],
+  },
   {
     url: "/products",
     text: "Products",
@@ -49,15 +62,6 @@ export const HEADER_NAV_LINKS_ARRAY = [
       { url: "/products/Terra", text: "Terra" },
       { url: "/products/ShadeStar", text: "ShadeStar" },
       { url: "/products/Neptune", text: "Neptune" },
-    ],
-  },
-  {
-    url: "/company",
-    text: "Company",
-    subMenu: [
-      { url: "/company/manufacturer", text: "Manufacturer" },
-      { url: "/company/news", text: "News" },
-      { url: "/company/faq", text: "FAQ" },
     ],
   },
   // {
@@ -98,7 +102,7 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Neptune.svg",
 ];
 export const HEADER_SUBNAVIGATION_ALL_MODULES = "All Modules";
-export const HEADER_CONFIGURE_YOUR_MODEL = "Configure your model";
+export const HEADER_CONFIGURE_YOUR_MODEL = "Choose your module";
 export const HEADER_CALCULATE = "Calculate";
 export const HEADER_CHOOSE_LANGUAGE = "Choose language";
 
@@ -337,7 +341,7 @@ export const PRODUCT_INTRO_PANELS = {
   },
 };
 export const PRODUCT_INTRO_LEARN_MORE = "Learn more";
-export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "Configure your model";
+export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "Choose your module";
 
 export const FEATURED_PRODUCTS_HIGH_QUALITY = "High-Quality";
 
@@ -1885,7 +1889,7 @@ export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
     formTitle: "I have a",
     placeholder: "comment or question, etc.",
     name: "comment",
-    type: "input",
+    type: "textarea",
   },
 ];
 export const CHECKOUT_SEND_REQUEST = "Send Request";
@@ -2020,8 +2024,139 @@ export const DOCUMENTS_FILES: (
         type: "Text",
         data: [
           {
-            linkTitle: "AE ME-132 640W-660W",
-            link: "/documents/solar_panels/Aurora/AE ME-132 640W-660W.pdf",
+            linkTitle: "AE ME-132 640W-660W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_ME-132_640W-660W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-144 530W-550W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-144_530W-550W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-120 440W-460W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-120_440W-460W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-108 395W-415W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-108_395W-415W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE ME-132BD 640W-660W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_ME-132BD_640W-660W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-144BD 530W-550W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-144BD_530W-550W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-132BD 485W-505W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-132BD_485W-505W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-120BD 440W-460W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-120BD_440W-460W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-108BD 395W-415W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-108BD_395W-415W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-132E 485W-505W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-132E_485W-505W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-120E 440W-460W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-120E_440W-460W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE MD-108E 395W-415W Ver24.1.1",
+            link: "/documents/solar_panels/Aurora/AE_MD-108E_395W-415W_Ver24.1.1.pdf",
+            tags: ["Aurora"],
+          },
+          {
+            linkTitle: "AE TME-132BDS 680W-700W Ver24.1.1",
+            link: "/documents/solar_panels/Comet/AE_TME-132BDS_680W-700W_Ver24.1.1.pdf",
+            tags: ["Comet"],
+          },
+          {
+            linkTitle: "AE CMD-108BDS 420W-440W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CMD-108BDS_420W-440W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CMD-120BDS 465W-485W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CMD-120BDS_465W-485W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CMD-144BDS 560W-580W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CMD-144BDS_560W-580W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CMD-108BDE 415W-435W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CMD-108BDE_415W-435W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CMD-108 420W-440W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CMD-108_420W-440W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CMD-120 465W-485W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CMD-120_465W-485W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CMD-144 560W-580W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CMD-144_560W-580W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CMD-108E 415W-435W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CMD-108E_415W-435W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CME-132 680W-700W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CME-132_680W-700W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CME-132BDS 680W-700W Ver24.1.1",
+            link: "/documents/solar_panels/Meteor/AE_CME-132BDS_680W-700W_Ver24.1.1.pdf",
+            tags: ["Meteor"],
+          },
+          {
+            linkTitle: "AE CMD-L132BD 505W-525W Ver24.1.1",
+            link: "/documents/solar_panels/Terra/AE_CMD-L132BD_505W-525W_Ver24.1.1.pdf",
+            tags: ["Terra"],
+          },
+          {
+            linkTitle: "AE PV-380WtAYThermal-964W-5",
+            link: "/documents/solar_panels/Neptune/AE_PV-380WtAYThermal-964W-5.pdf",
+            tags: ["Neptune"],
+          },
+          {
+            linkTitle: "AE SMB-60 320W-335W Ver24.1.1",
+            link: "/documents/solar_panels/ShadeStar/AE_SMB-60_320W-335W_Ver24.1.1.pdf",
+            tags: ["ShadeStar"],
+          },
+          {
+            linkTitle: "AE SMD-108E 395W-410W Ver24.1.1",
+            link: "/documents/solar_panels/ShadeStar/AE_SMD-108E_395W-410W_Ver24.1.1.pdf",
+            tags: ["ShadeStar"],
           },
         ],
       },
@@ -2048,210 +2183,6 @@ export const DOCUMENTS_FILES: (
             tags: ["Aurora"],
           },
         ],
-      },
-    ],
-  },
-  {
-    category: "Datasheets",
-    type: "Presentation",
-    data: [
-      {
-        title: "Datasheet",
-        linkTitle: "AE ME-132 640W-660W",
-        link: "/documents/solar_panels/Aurora/AE ME-132 640W-660W.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-108BD 395W-415W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-108BD_395W-415W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-108E 395W-415W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-108E_395W-415W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-108 395W-415W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-108_395W-415W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-120BD 440W-460W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-120BD_440W-460W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-120E 440W-460W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-120E_440W-460W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-120 440W-460W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-120_440W-460W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-132BD 485W-505W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-132BD_485W-505W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-132E 485W-505W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-132E_485W-505W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-144BD 530W-550W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-144BD_530W-550W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-144 530W-550W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_MD-144_530W-550W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE ME-132BD 640W-660W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_ME-132BD_640W-660W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE ME-132 640W-660W Ver24.1.1",
-        link: "/documents/solar_panels/Aurora/AE_ME-132_640W-660W_Ver24.1.1.pdf",
-        tags: ["Aurora"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE TMC-120BDS 380W-400W 202309-1",
-        link: "/documents/solar_panels/Comet/AE_TMC-120BDS_380W-400W_202309-1.pdf",
-        tags: ["Comet"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE TMC-144BDS 460W-480W 202309-1",
-        link: "/documents/solar_panels/Comet/AE_TMC-144BDS_460W-480W_202309-1.pdf",
-        tags: ["Comet"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE TME-110BDS 560W-580W Ver24.1.1",
-        link: "/documents/solar_panels/Comet/AE_TME-110BDS_560W-580W_Ver24.1.1.pdf",
-        tags: ["Comet"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE TME-120BDS 615W-635W Ver24.1.1",
-        link: "/documents/solar_panels/Comet/AE_TME-120BDS_615W-635W_Ver24.1.1.pdf",
-        tags: ["Comet"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE TME-132BDS 680W-700W Ver24.1.1",
-        link: "/documents/solar_panels/Comet/AE_TME-132BDS_680W-700W_Ver24.1.1.pdf",
-        tags: ["Comet"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CMD-108BDE 415W-435W Ver24.1.1",
-        link: "/documents/solar_panels/Meteor/AE_CMD-108BDE_415W-435W_Ver24.1.1.pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CMD-108BDS 420W-440W Ver24.1.1",
-        link: "/documents/solar_panels/Meteor/AE_CMD-108BDS_420W-440W_Ver24.1.1.pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CMD-108E 415W-435W Ver24.1.1",
-        link: "/documents/solar_panels/Meteor/AE_CMD-108E_415W-435W_Ver24.1.1.pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CMD-108 420W-440W Ver24.1.1 (1)",
-        link: "/documents/solar_panels/Meteor/AE_CMD-108_420W-440W_Ver24.1.1 (1).pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CMD-120BDS 465W-485W Ver24.1.1",
-        link: "/documents/solar_panels/Meteor/AE_CMD-120BDS_465W-485W_Ver24.1.1.pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CMD-120 465W-485W Ver24.1.1",
-        link: "/documents/solar_panels/Meteor/AE_CMD-120_465W-485W_Ver24.1.1.pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CMD-144BDS 560W-580W Ver24.1.1",
-        link: "/documents/solar_panels/Meteor/AE_CMD-144BDS_560W-580W_Ver24.1.1.pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CMD-144 560W-580W Ver24.1.1",
-        link: "/documents/solar_panels/Meteor/AE_CMD-144_560W-580W_Ver24.1.1.pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CME-132BDS 680W-700W Ver24.1.1",
-        link: "/documents/solar_panels/Meteor/AE_CME-132BDS_680W-700W_Ver24.1.1.pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CME-132 680W-700W Ver24.1.1",
-        link: "/documents/solar_panels/Meteor/AE_CME-132_680W-700W_Ver24.1.1.pdf",
-        tags: ["Meteor"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE CMD-L132BD 505W-525W Ver24.1.1",
-        link: "/documents/solar_panels/Terra/AE_CMD-L132BD_505W-525W_Ver24.1.1.pdf",
-        tags: ["Terra"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE MD-L132BD 495W-505W Ver24.1.1",
-        link: "/documents/solar_panels/Terra/AE_MD-L132BD_495W-505W_Ver24.1.1.pdf",
-        tags: ["Terra"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE PV-380WtAYThermal-964W-5",
-        link: "/documents/solar_panels/Neptune/AE_PV-380WtAYThermal-964W-5.pdf",
-        tags: ["Neptune"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE SMB-60 320W-335W Ver24.1.1",
-        link: "/documents/solar_panels/ShadeStar/AE_SMB-60_320W-335W_Ver24.1.1.pdf",
-        tags: ["ShadeStar"],
-      },
-      {
-        title: "Datasheet",
-        linkTitle: "AE SMD-108E 395W-410W Ver24.1.1",
-        link: "/documents/solar_panels/ShadeStar/AE_SMD-108E_395W-410W_Ver24.1.1.pdf",
-        tags: ["ShadeStar"],
       },
     ],
   },

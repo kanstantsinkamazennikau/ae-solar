@@ -46,11 +46,11 @@ export default function PanelsList() {
             <Panel panel={panel as Model} key={panel} />
           ))}
         </div>
-        <Link href={"/calculate"}>
+        {/* <Link href={"/calculate"}>
           <Button externalStyle="!py-[14px] mx-auto relative z-10">
             {PRODUCT_INTRO_CALCULATE_YOUR_MODEL}
           </Button>
-        </Link>
+        </Link> */}
       </BasicWidthContainer>
     </div>
   );

@@ -28,7 +28,7 @@ const scrollTriggerPositionFromResolution = (
 };
 
 function getCurrentFrame(index: number) {
-  return `/images/sequence/home/Layer-3-2-${index.toString()}.jpg`;
+  return `/images/sequence/home/Layer-2-4-${index.toString()}.jpg`;
 }
 
 const frameIndex = { frame: 0 };

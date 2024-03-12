@@ -2,6 +2,10 @@
 
 import Loader from "@/app/[locale]/components/common/Loader";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
+import {
+  HEADER_TIER1,
+  HEADER_TIER1_QUALITY,
+} from "@/app/[locale]/utils/constants";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useContext } from "react";
@@ -47,14 +51,14 @@ export default function HeroSection() {
         `}
       >
         <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,4vw,40px)]">
-          {"German TIER1 Manufacturer of "}
+          {HEADER_TIER1}
         </p>
         <p
           className=" text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,102px)] 
           textShadow
         "
         >
-          {"High-Quality Solar Panels"}
+          {HEADER_TIER1_QUALITY}
         </p>
       </div>
 

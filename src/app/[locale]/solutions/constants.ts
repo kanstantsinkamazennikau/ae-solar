@@ -1,5 +1,6 @@
-export const SOLUTIONS_DISCOVER_AESOLAR =
-  "Discover AESOLAR–Your Partner for a Sustainable Future";
+export const SOLUTIONS_DISCOVER_AESOLAR = "Discover AESOLAR";
+export const SOLUTIONS_DISCOVER_YOUR_PARTNER =
+  "Your Partner for a Sustainable Future";
 export const SOLUTIONS_DISCOVER_AESOLAR_WORDS_TO_HIGHLIGHT = [
   "Discover",
   "Sustainable",

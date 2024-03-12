@@ -52,7 +52,7 @@ export default function HeroSectionVideo() {
       )}
       {isLongVideoLoadingTime && (
         <Image
-          src="/images/heroSectionBackground.svg"
+          src="/images/heroSectionBackground.png"
           alt="solar panel"
           priority
           width={1920}

@@ -7,9 +7,9 @@ export async function POST(request: NextRequest) {
     await request.json();
 
   const mailOptions: Mail.Options = {
-    from: process.env.APP_EMAIL,
-    to: process.env.APP_EMAIL,
-    subject: `Contact Me Request`,
+    from: process.env.SMTP_USER,
+    to: process.env.SOLAR_RECEPIENT_EMAIL,
+    subject: `CONTACT: ${name}`,
     html: `<p><strong>Client information</strong></p>
     <p><strong>Name: </strong> ${name}</p>
     <p><strong>Email: </strong> ${email}</p>

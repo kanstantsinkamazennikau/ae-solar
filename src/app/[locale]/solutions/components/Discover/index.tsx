@@ -3,6 +3,7 @@ import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import {
   SOLUTIONS_DISCOVER_AESOLAR,
   SOLUTIONS_DISCOVER_AESOLAR_WORDS_TO_HIGHLIGHT,
+  SOLUTIONS_DISCOVER_YOUR_PARTNER,
   SOLUTIONS_LEADING_PROVIDER,
   SOLUTIONS_LEARN_MORE,
 } from "@/app/[locale]/solutions/constants";
@@ -13,16 +14,15 @@ export default function Discover() {
   return (
     <div className="-mt-[80px] overflow-hidden 2xl:-mb-[120px] xl:-mb-[60px] md:-mb-[20px] mb-[100px] flex md:flex-row flex-col justify-center">
       <Image
-        src="/images/solutions/heroSectionBackground.svg"
+        src="/images/solutions/heroSectionBackground.png"
         alt="heroSectionBackground"
         width={1920}
         height={1080}
         priority
         className="
-          lg:scale-100
-          md:scale-150
-          scale-[3]
-          min-h-[500px]
+          md:min-h-[400px]
+          min-h-[300px]
+          mt-10
         "
       />
       <div
@@ -30,9 +30,9 @@ export default function Discover() {
           flex
           flex-col
           max-w-[1100px]
-          lg:gap-[60px]
-          gap-[30px]
-          md:items-end
+          lg:gap-[40px]
+          md:gap-[20px]
+          gap-[10px]
           items-center
           justify-center
           min-[2560px]:top-[10%]
@@ -51,22 +51,23 @@ export default function Discover() {
           px-5
         "
       >
-        <div className="xl:max-w-[1100px] lg:max-w-[800px] min-[400px]:max-w-[600px] max-w-[240px] md:self-start md:text-left text-center">
-          {styleMatchingText(
-            SOLUTIONS_DISCOVER_AESOLAR,
-            SOLUTIONS_DISCOVER_AESOLAR_WORDS_TO_HIGHLIGHT,
-            "[font-size:_clamp(30px,5vw,96px)] font-extrabold leading-[110%] -tracking-[1.2px]",
-            "text-base-red"
-          )}
+        <div className="flex flex-col gap-4 xl:max-w-[1100px] lg:max-w-[800px] min-[400px]:max-w-[600px] max-w-[240px] text-center">
+          <div className=" text-base-red md:-tracking-[1.2px] leading-[120%] [font-size:_clamp(20px,3vw,36px)] font-medium">
+            {SOLUTIONS_DISCOVER_AESOLAR}
+          </div>
+          <div className="[font-size:_clamp(30px,5.5vw,96px)] leading-[100%] font-semibold">
+            {SOLUTIONS_DISCOVER_YOUR_PARTNER}
+          </div>
         </div>
-        <div className="max-w-[538px] flex flex-col md:items-start items-center lg:gap-8 gap-4 md:pr-11">
-          <p className="[font-size:_clamp(16px,1vw,16px)] font-walsheim font-medium leading-[150%] md:text-start text-center">
+
+        <div className="max-w-[538px] flex flex-col items-center lg:gap-6 gap-4">
+          <p className="[font-size:_clamp(16px,1.5vw,20px)] font-walsheim font-medium leading-[150%] text-center">
             {SOLUTIONS_LEADING_PROVIDER}
           </p>
           <LinkWithArrow
             label={SOLUTIONS_LEARN_MORE}
             href="/company"
-            externalStyle="[font-size:_clamp(11px,1vw,14px)!important]"
+            externalStyle="[font-size:_clamp(16px,1vw,20px)!important] font-medium"
           />
         </div>
       </div>

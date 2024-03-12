@@ -23,7 +23,7 @@ export default function Models({
   const { setModel, model } = useContext(ModelContext);
 
   const handleClick = () => {
-    router.push(`/${locale}/calculate`);
+    router.push(`/products`);
   };
 
   return (
