@@ -182,7 +182,7 @@ export default function Documents() {
               key={category}
               category={category}
               index={index}
-              dropdownIcon="/images/documents/dropdownIcon.svg"
+              dropdownIcon="/images/documents/dropDownIcon.svg"
             >
               <div className="pb-10">
                 {data.map(({ linkTitle, link }) => (
@@ -198,7 +198,7 @@ export default function Documents() {
             key={docFile.category}
             category={docFile.category}
             index={index}
-            dropdownIcon="/images/documents/dropdownIcon.svg"
+            dropdownIcon="/images/documents/dropDownIcon.svg"
           >
             <SubCategories key={index} documents={docFile} />
           </DocumentsAccordionWithIntersection>
