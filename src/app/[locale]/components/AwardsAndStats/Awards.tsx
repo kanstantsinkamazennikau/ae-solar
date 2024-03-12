@@ -60,6 +60,7 @@ export default function Awards() {
                 width={120}
                 height={120}
                 priority
+                quality={100}
                 className={`
                   object-contain
                   md:h-[120px]

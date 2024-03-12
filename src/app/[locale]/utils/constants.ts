@@ -125,13 +125,18 @@ export const AWARDS_AND_STATS_GERMAN_ENGINEERING = "German Engineering";
 export const AWARDS_AND_STATS_PRODUCTION_PLANTS =
   "Production Plants in Europe and Asia";
 export const AWARDS_AND_STATS_AWARDS_IMAGES = [
-  "eupd.png",
-  "ae.png",
-  "inter.png",
-  "pv.png",
-  "snec.png",
-  "future.png",
-  "rewardable.png",
+  "badge1.png",
+  "badge2.png",
+  "badge3.png",
+  "badge4.png",
+  "badge5.png",
+  "badge6.png",
+  "badge7.png",
+  "badge8.png",
+  "badge9.png",
+  "badge10.png",
+  "badge11.png",
+  "badge12.png",
 ];
 export const AWARDS_AND_STATS_SEE_ALL_AWARDS = "See all awards";
 
