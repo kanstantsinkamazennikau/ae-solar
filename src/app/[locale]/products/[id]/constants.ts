@@ -438,7 +438,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
+        imageUrl: "url('/images/products/bentobox/sizes.png')",
         shortDescription: `Size Variety: 
         small, medium, large`,
         gridArea: "b",
@@ -455,12 +455,10 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/material.png')",
+        imageUrl: "url('/images/products/bentobox/point.png')",
         longDescription: {
           title: `Tailored Material 
               and Power`,
-          description:
-            "Customize your energy solution with tailored materials and power options, ensuring precise alignment with your specific needs and preferences.",
         },
         gridArea: "e",
       },
@@ -535,14 +533,14 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/material.png')",
+        imageUrl: "url('/images/products/bentobox/panels.png')",
         longDescription: {
           title: `Broad 
           Customization`,
           description:
             "Find the perfect color combination to complement your content with interchangeable backdrops and frames.",
         },
-        gridArea: "b",
+        gridArea: "f",
       },
       {
         type: "warranty",
@@ -563,45 +561,45 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
+        imageUrl: "url('/images/products/bentobox/performance.png')",
         shortDescription: `Resilient Performance:
         Low degradation, high durability`,
-        gridArea: "f",
+        gridArea: "b",
       },
     ],
   },
   Terra: {
-    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_b_b""c_c_d_d""c_c_e_f"] [grid-template-areas:"a_a""b_b""c_c""d_d""e_f"]`,
+    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_b_b""c_c_d_d""e_f_d_d"] [grid-template-areas:"a_a""b_b""c_c""d_d""e_f"]`,
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/sand.png')",
+        imageUrl: "url('/images/products/bentobox/efficiency.png')",
         shortDescription: `Bifacial Efficiency:
         Optimal energy capture`,
         gridArea: "a",
+      },
+      {
+        type: "half",
+        imageUrl: "url('/images/products/bentobox/flexibility.png')",
+        shortDescription: `Application Flexibility:
+        Ideal for various installations`,
+        gridArea: "c",
+      },
+      {
+        type: "full",
+        imageUrl: "url('/images/products/bentobox/reliability.png')",
+        longDescription: {
+          title: `Long-Term Reliability`,
+          description:
+            "Count on consistent performance and lasting durability with minimal degradation, guaranteeing reliable operation for the long haul.",
+        },
+        gridArea: "b",
       },
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/cells.png')",
         shortDescription: `n-Type TOPCon Tech:
         Cutting-edge efficiency`,
-        gridArea: "b",
-      },
-      {
-        type: "full",
-        imageUrl: "url('/images/products/bentobox/material.png')",
-        longDescription: {
-          title: `Long-Term Reliability`,
-          description:
-            "Count on consistent performance and lasting durability with minimal degradation, guaranteeing reliable operation for the long haul.",
-        },
-        gridArea: "c",
-      },
-      {
-        type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
-        shortDescription: `Application Flexibility:
-        Ideal for various installations`,
         gridArea: "d",
       },
       {
@@ -629,11 +627,9 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/material.png')",
+        imageUrl: "url('/images/products/bentobox/electricity.png')",
         longDescription: {
           title: `Electricity and thermal production`,
-          description:
-            "Experience the best of both worlds with our hybrid energy solution, seamlessly integrating electricity and thermal production for comprehensive energy generation.",
         },
         gridArea: "b",
       },
@@ -680,7 +676,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/material.png')",
+        imageUrl: "url('/images/products/bentobox/resilent.png')",
         longDescription: {
           title: `Shade Resilience`,
           description:

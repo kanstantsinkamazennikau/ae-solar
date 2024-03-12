@@ -42,13 +42,14 @@ export default function QuarterBentobox({
           priority
           width={170}
           height={170}
+          className="2xl:h-[170px] 2xl:w-[170px] lg:h-[100px] lg:w-[100px] w-[80px] h-[80px]"
         />
       )}
 
       {shortDescription &&
         shortDescription.split(/\r?\n|\r|\n/g).map((string) => (
           <div
-            className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%]"
+            className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%] capitalize"
             key={string}
           >
             {string}

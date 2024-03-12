@@ -43,7 +43,7 @@ export default function Ben({
         <BensPopUp
           onClose={hidePopUp}
           title={title}
-          fullDescription={fullDescription}
+          fullDescription={description}
         />
       )}
       <div

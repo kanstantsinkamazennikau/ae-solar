@@ -28,6 +28,10 @@ export default function SearchBar({ isDocuments }: { isDocuments?: boolean }) {
     setValue(FORMS_FIELDS.searchInputValue, "");
   }, [documentsType, setValue]);
 
+  useEffect(() => {
+    !inputValue && setSearchInputValue("");
+  }, [inputValue, setSearchInputValue]);
+
   return (
     <>
       <form

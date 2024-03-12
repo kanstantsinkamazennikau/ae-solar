@@ -55,7 +55,7 @@ export default function BensPopUp({
             </Button>
           </div>
 
-          <div className="w-full md:px-8 md:mb-8 px-4 mb-4 overflow-y-scroll bensPopUp relative overflow-x-hidden">
+          <div className="w-full md:px-8 md:mb-8 px-4 mb-4 overflow-y-auto bensPopUp relative overflow-x-hidden">
             <Image
               src={`/images/techInfo/fadeBackground.svg`}
               alt="fadeBackground"

@@ -12,7 +12,7 @@ export type ProductBentofoxes = {
       imageUrl?: string;
       longDescription?: {
         title: string;
-        description: string;
+        description?: string;
       };
       gridArea: string;
       shortDescription?: string;

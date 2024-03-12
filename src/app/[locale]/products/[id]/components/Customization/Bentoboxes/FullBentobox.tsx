@@ -8,7 +8,7 @@ export default function FullBentobox({
   shortDescription?: string;
   longDescription?: {
     title: string;
-    description: string;
+    description?: string;
   };
   gridArea?: string;
 }) {
@@ -41,11 +41,11 @@ export default function FullBentobox({
       }}
     >
       {longDescription && (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 self-start">
           <div>
             {longDescription.title.split(/\r?\n|\r|\n/g).map((string) => (
               <div
-                className="[font-size:_clamp(24px,2.5vw,48px)] font-semibold md:-tracking-[1.44px] leading-[110%]"
+                className="[font-size:_clamp(24px,2.5vw,48px)] font-semibold md:-tracking-[1.44px] leading-[110%] capitalize"
                 key={string}
               >
                 {string}
@@ -53,21 +53,23 @@ export default function FullBentobox({
             ))}
           </div>
           <div>
-            {longDescription.description.split(/\r?\n|\r|\n/g).map((string) => (
-              <div
-                className="[font-size:_clamp(14px,1.5vw,20px)] font-normal font-walsheim leading-[150%] text-dark-gray-900"
-                key={string}
-              >
-                {string}
-              </div>
-            ))}
+            {longDescription.description
+              ?.split(/\r?\n|\r|\n/g)
+              .map((string) => (
+                <div
+                  className="[font-size:_clamp(14px,1.5vw,20px)] font-normal font-walsheim leading-[150%] text-dark-gray-900"
+                  key={string}
+                >
+                  {string}
+                </div>
+              ))}
           </div>
         </div>
       )}
       {shortDescription &&
         shortDescription.split(/\r?\n|\r|\n/g).map((string) => (
           <div
-            className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px]"
+            className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] capitalize"
             key={string}
           >
             {string}

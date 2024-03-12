@@ -366,9 +366,9 @@ export const TECH_INFO_BEST_AT_THIS = "Best at This";
 export const TECH_INFO_CLOSE = "Close";
 export const TECH_INFO_BENS = [
   {
-    title: `Unmatched Precision in Solar Engineering`,
+    title: `Leading Solar Technology`,
     description:
-      "AESOLAR stands as a paragon of German precision, leading the charge in the solar module manufacturing sector. Our Tier 1 status is a testament to our relentless pursuit of innovation and excellence.",
+      "AESOLAR, a top-tier German solar module maker, stands for precision and dependability in engineering. We’re at the forefront, using advanced technology to shape solar energy's future. Our commitment to innovation is paving the way for exciting developments in solar power.",
     image: "automation.svg",
     fullDescription: `On February 19, 2024, Bloomberg New Energy Finance (BNEF) released the 1Q 2024 Global PV Market Outlook. AESOLAR has once again secured its position in the tier 1 list of PV module manufacturers, marking the 13th consecutive time since Q1 2021. As a leading solar brand, this recognition underscores AESOLAR's consistent quality, brand credibility, and strong bankability.
     BNEF's methodology for tier 1 PV module manufacturers is stringent, requiring manufacturers to have received non-recourse finance from 6 different commercial banks over the past 2 years. This selection process demonstrates the bankability of the chosen brands and provides a reliable reference for the market.
@@ -377,27 +377,27 @@ export const TECH_INFO_BENS = [
     Furthermore, AESOLAR received a '*' in the list, indicating that their investigation report can be obtained from PV Evolution Labs (PVEL). The Aurora series PV module from AESOLAR has passed testing conducted by PVEL and was among the 'Best Performers' in 2023. This is a result of AESOLAR's continuous focus on research and development, technological innovation, and enhancement of production processes and quality management.`,
   },
   {
-    title: "Crafting a Sustainable Tomorrow",
+    title: "Building a Greener Future",
     description:
-      "At AESOLAR, we merge advanced technology with unwavering quality and sustainability, forging ahead in our quest for excellence. We’re not just creating solar modules; we’re sculpting a greener future.",
+      "AESOLAR isn’t just making solar modules; we’re building a more sustainable future. By combining the latest technology with high quality and our dedication to the environment, we’re not just creating products – we’re inspiring a vision of a renewable energy-driven world.",
     image: "manufacturer.png",
   },
   {
-    title: "Quality Without Compromise",
+    title: "Quality Manufacturing",
     description:
-      "Adherence to AAA+ standards and meticulous quality checks are the cornerstones of our process, reflecting our dedication to outstanding quality and customer satisfaction.",
+      "Our high-tech factories use smart automation for precise and efficient assembly, minimizing errors. Quality is key at AESOLAR. We make sure each solar module is top-notch in efficiency, durability, and performance. Our thorough checks at every step show our dedication to quality and making our customers happy.",
     image: "technologies.svg",
   },
   {
-    title: "Excellence in Manufacturing",
+    title: "Setting New Efficiency Standards",
     description:
-      "Our cutting-edge facilities boast smart automation, ensuring every solar module is a product of precision and cost-efficiency. Rigorous quality controls are integral to our manufacturing ethos, guaranteeing superior efficiency, resilience, and functionality in every product.",
+      "We at AESOLAR are all about raising the bar in the solar industry. We focus on making our manufacturing more energy-efficient, which cuts costs and reduces our environmental footprint. This helps our customers in the long run, too. And we back up our commitment to quality with a strong product warranty.",
     image: "efficiency.svg",
   },
   {
-    title: "Setting Industry Benchmarks",
+    title: "Committed to Sustainability",
     description:
-      "AESOLAR is driven to elevate industry standards by enhancing energy efficiency. This not only reduces manufacturing expenses and ecological footprints but also provides our customers with the best total cost of ownership.",
+      "Sustainability is central to what we do at AESOLAR. We power our facilities with our solar panels and other green energy sources. This commitment reflects our belief in the clean energy movement. We’re mindful of our products' life cycles, using recyclable materials and cutting down on energy use. We follow strict German standards for sustainable and responsible production.",
     image: "materials.svg",
   },
 ];
