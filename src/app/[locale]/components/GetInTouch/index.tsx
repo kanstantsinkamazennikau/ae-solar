@@ -26,6 +26,8 @@ const partnersTypes = Object.keys(matchPartnerTypeWithArticle) as [
 export default function GetInTouch({
   children,
   containerStyle,
+  bgContainer,
+  contentContainer,
 }: GetInTuchProps) {
   const [clientType, setClientType] =
     useState<keyof typeof matchPartnerTypeWithArticle>("partner");
@@ -53,7 +55,8 @@ export default function GetInTouch({
 
   return (
     <div
-      className="
+      className={`
+        ${bgContainer}
         flex
         justify-center
         items-center
@@ -74,7 +77,7 @@ export default function GetInTouch({
         md:[background-size:1120px]
         min-[540px]:[background-size:1100px]
         [background-size:780px]
-      "
+      `}
     >
       <BasicWidthContainer
         styles={`mx-auto w-full max-[540px]:!px-0 ${containerStyle} ${
@@ -108,6 +111,7 @@ export default function GetInTouch({
             overflow-hidden
             bg-[#111]
             -top-[60px]
+            ${contentContainer}
           `}
         >
           <div

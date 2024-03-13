@@ -1,5 +1,6 @@
 "use client";
 
+import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import Advantages from "@/app/[locale]/products/components/Advantages";
@@ -64,6 +65,11 @@ export default function ProductsPage() {
         <div className="flex justify-center z-10 relative">
           <MainPageFAQ />
         </div>
+        <GetInTouch
+          containerStyle="max-w-none !p-0"
+          bgContainer="bg-none !h-auto top-0 mb-0"
+          contentContainer="rounded-none border-x-0 top-0"
+        />
       </div>
     </>
   );
