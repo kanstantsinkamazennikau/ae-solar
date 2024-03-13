@@ -431,7 +431,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/houseFog.png')",
+        imageUrl: "url('/images/products/bentobox/diffuse.png')",
         shortDescription: `Excellent Performance
         in Diffuse Light`,
         gridArea: "a",
@@ -459,12 +459,14 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         longDescription: {
           title: `Tailored Material 
               and Power`,
+          description:
+            "Customize your energy solution with tailored materials and power options, ensuring precise alignment with your specific needs and preferences.",
         },
         gridArea: "e",
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/cells.png')",
+        imageUrl: "url('/images/products/bentobox/cells2.png')",
         shortDescription: `Advanced Cells:
         PERC and Topcon technology`,
         gridArea: "f",
@@ -486,14 +488,14 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
+        imageUrl: "url('/images/products/bentobox/sizes2.png')",
         shortDescription: `Color Diversity:
         Wide range of choices `,
         gridArea: "c",
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/cells.png')",
+        imageUrl: "url('/images/products/bentobox/nType.png')",
         shortDescription: `n-Type Heterojunction:
         Advanced solar technology`,
         gridArea: "d",
@@ -514,7 +516,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
+        imageUrl: "url('/images/products/bentobox/temperature.png')",
         shortDescription: `Temperature Stability:
         Very low coefficient`,
         gridArea: "g",
@@ -522,18 +524,18 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     ],
   },
   Meteor: {
-    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_b_b""c_d_f_f""e_e_f_f"] [grid-template-areas:"a_a""b_b""c_d""e_e""f_f"]`,
+    areaTemplate: `md:[grid-template-areas:"b_b_f_f""b_b_f_f""a_a_c_d""a_a_e_e"] [grid-template-areas:"b_b""f_f""a_a""e_e""c_d"]`,
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/cells.png')",
+        imageUrl: "url('/images/products/bentobox/topCon.png')",
         shortDescription: `TOPCon N-Type:
         Superior efficiency technology `,
         gridArea: "a",
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/panels.png')",
+        imageUrl: "url('/images/products/bentobox/panels2.png')",
         longDescription: {
           title: `Broad 
           Customization`,
@@ -573,7 +575,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/efficiency.png')",
+        imageUrl: "url('/images/products/bentobox/capture.png')",
         shortDescription: `Bifacial Efficiency:
         Optimal energy capture`,
         gridArea: "a",
@@ -597,7 +599,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/cells.png')",
+        imageUrl: "url('/images/products/bentobox/edgeEfficiency1.png')",
         shortDescription: `n-Type TOPCon Tech:
         Cutting-edge efficiency`,
         gridArea: "d",
@@ -616,11 +618,11 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     ],
   },
   Neptune: {
-    areaTemplate: `md:[grid-template-areas:"a_a_b_b""a_a_b_b""c_c_d_d""c_c_e_f"] [grid-template-areas:"a_a""b_b""c_c""d_d""e_f"]`,
+    areaTemplate: `md:[grid-template-areas:"c_c_a_a""c_c_a_a""e_f_b_b""d_d_b_b"] [grid-template-areas:"c_c""a_a""e_f""b_b""d_d"]`,
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/cells.png')",
+        imageUrl: "url('/images/products/bentobox/neptuneFuture.png')",
         shortDescription: `Neptune: The Future of
         Hybrid Solar Energy`,
         gridArea: "a",
@@ -635,7 +637,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/material.png')",
+        imageUrl: "url('/images/products/bentobox/edgeEfficiency.png')",
         longDescription: {
           title: `About 70%
           combined Efficiency`,
@@ -646,7 +648,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
+        imageUrl: "url('/images/products/bentobox/benefit.png')",
         shortDescription: `Economic Benefit:
         Long-term low LCOE`,
         gridArea: "d",
@@ -669,14 +671,14 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     structure: [
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/cells.png')",
+        imageUrl: "url('/images/products/bentobox/smartTech.png')",
         shortDescription: `Smart Technology:
         Advanced shade resistance`,
         gridArea: "a",
       },
       {
         type: "full",
-        imageUrl: "url('/images/products/bentobox/resilent.png')",
+        imageUrl: "url('/images/products/bentobox/resilence.png')",
         longDescription: {
           title: `Shade Resilience`,
           description:
@@ -696,7 +698,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       },
       {
         type: "half",
-        imageUrl: "url('/images/products/bentobox/frame.png')",
+        imageUrl: "url('/images/products/bentobox/sustainable.png')",
         shortDescription: `Sustainable Solution:
         Eco-friendly design`,
         gridArea: "d",
