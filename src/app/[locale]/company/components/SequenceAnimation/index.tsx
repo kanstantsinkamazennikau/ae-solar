@@ -28,7 +28,7 @@ const scrollTriggerPositionFromResolution = (
 };
 
 function getCurrentFrame(index: number) {
-  return `/images/sequence/home/Layer-2-4-${index.toString()}.jpg`;
+  return `/images/sequence/home/Layer-2-5-${index.toString()}.jpg`;
 }
 
 const frameIndex = { frame: 0 };
@@ -53,7 +53,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
   }, [images]);
 
   function preloadImages() {
-    for (let i = 1; i <= numFrames; i++) {
+    for (let i = 1; i <= numFrames - 1; i++) {
       const img = new Image();
       const imgSrc = getCurrentFrame(i);
       img.src = imgSrc;
@@ -121,7 +121,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
     // renderImage();
     if (!canvasRef.current) return;
     const img = new Image();
-    const imgSrc = `/images/sequence/home/Layer-3-2-1.jpg`;
+    const imgSrc = `/images/sequence/home/Layer-2-5-1.jpg`;
     img.src = imgSrc;
     img.onload = () => {
       const ctx = canvasRef.current?.getContext("2d");
