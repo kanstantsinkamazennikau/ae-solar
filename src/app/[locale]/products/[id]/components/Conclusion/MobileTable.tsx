@@ -23,6 +23,7 @@ export default function MobileTable({
   powerRange,
   moduleDimension,
   applications,
+  backCover,
   addModelToBag,
   removeModel,
 }: DestopTableRowProps) {
@@ -48,7 +49,8 @@ export default function MobileTable({
                 frameColor,
                 moduleDimension,
                 applications as Applications[],
-                powerRange
+                powerRange,
+                backCover
               )
             : removeModel(model);
         }}

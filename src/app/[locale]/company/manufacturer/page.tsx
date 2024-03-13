@@ -1,3 +1,4 @@
+import OurHistory from "@/app/[locale]/company/components/OurHistory";
 import Contacts from "@/app/[locale]/company/imprint/components/Contacts";
 import Artcile from "@/app/[locale]/company/manufacturer/components/Article";
 import ManufacturerHeader from "@/app/[locale]/company/manufacturer/components/ManufacturerHeader";
@@ -24,9 +25,10 @@ export default function ManufacturerPage() {
               relative
               min-[920px]:flex-row
               flex-col
-              xl:mb-[60px]
-              lg:mb-[40px]
-              md:mb-[20px]
+              xl:mb-[100px]
+              lg:mb-[60px]
+              md:mb-[40px]
+              mb-[40px]
             "
           >
             <div>
@@ -60,6 +62,7 @@ export default function ManufacturerPage() {
             <Artcile />
           </div>
         </BasicWidthContainer>
+        <OurHistory />
         <SaveTheWorld />
         <BasicWidthContainer styles="mx-auto">
           <div

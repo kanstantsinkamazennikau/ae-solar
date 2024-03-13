@@ -31,7 +31,8 @@ export default function ModulesTable({ id }: ConclusionProps) {
       width: string;
     },
     applications: Applications[],
-    powerRange: string
+    powerRange: string,
+    backCover: string
   ) => {
     const [from, to] = powerRange.split("-");
     setModelsInBag((prevState) => {
@@ -50,7 +51,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
             from,
             to,
           },
-          backCover: "Glass",
+          backCover,
         },
       ];
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
@@ -154,6 +155,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                   powerRange,
                   moduleDimension,
                   applications,
+                  backCover,
                 }) => (
                   <DesktopTableRow
                     key={model}
@@ -167,6 +169,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                       powerRange,
                       moduleDimension,
                       applications,
+                      backCover,
                       addModelToBag,
                       removeModel,
                     }}
@@ -190,6 +193,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
               powerRange,
               moduleDimension,
               applications,
+              backCover,
             }) => (
               <MobileTable
                 key={model}
@@ -203,6 +207,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                   powerRange,
                   moduleDimension,
                   applications,
+                  backCover,
                   addModelToBag,
                   removeModel,
                 }}

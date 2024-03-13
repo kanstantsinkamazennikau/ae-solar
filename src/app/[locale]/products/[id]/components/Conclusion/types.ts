@@ -13,6 +13,7 @@ export interface DestopTableRowProps {
   moduleColor: string;
   frameColor: string;
   applications: string[];
+  backCover: string;
   moduleDimension: {
     length: string;
     width: string;
@@ -33,7 +34,8 @@ export interface DestopTableRowProps {
       width: string;
     },
     applications: Applications[],
-    powerRange: string
+    powerRange: string,
+    backCover: string
   ) => void;
   removeModel: (model: string) => void;
 }

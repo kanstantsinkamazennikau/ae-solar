@@ -750,6 +750,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "640-660",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2383",
@@ -785,6 +786,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "530-550",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2278",
@@ -820,6 +822,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "485-505",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2094",
@@ -855,6 +858,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "440-460",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1902",
@@ -890,6 +894,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "395-415",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1721",
@@ -925,6 +930,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "640-660",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2383",
@@ -960,6 +966,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "530-550",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2278",
@@ -995,6 +1002,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "485-505",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2094",
@@ -1030,6 +1038,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "440-460",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1902",
@@ -1065,6 +1074,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "395-415",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1721",
@@ -1100,6 +1110,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "485-505",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Foil",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2094",
@@ -1135,6 +1146,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "440-460",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Foil",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1902",
@@ -1170,6 +1182,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "395-415",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Foil",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1721",
@@ -1209,6 +1222,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "680-700",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2383",
@@ -1244,6 +1258,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "570-590",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "2278",
@@ -1279,6 +1294,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "480-500",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1902",
@@ -1314,6 +1330,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "420-440",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1721",
@@ -1353,6 +1370,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "505-525",
         moduleColor: "Transparent",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Agri-Voltaics"],
         moduleDimension: {
           length: "1070",
@@ -1392,6 +1410,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "320-335",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["Shade Resistant"],
         moduleDimension: {
           length: "1690",
@@ -1427,6 +1446,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "395-410",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Foil",
         applications: ["Shade Resistant"],
         moduleDimension: {
           length: "1721",
@@ -1466,6 +1486,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "370-380",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["PV-Thermal"],
         moduleDimension: {
           length: "1755",
@@ -1505,6 +1526,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "420-440",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Carport"],
         moduleDimension: {
           length: "1721",
@@ -1540,6 +1562,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "465-485",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Carport"],
         moduleDimension: {
           length: "1902",
@@ -1575,6 +1598,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "560-580",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Carport"],
         moduleDimension: {
           length: "2278",
@@ -1610,6 +1634,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "415-435",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Double Glass",
         applications: ["Carport"],
         moduleDimension: {
           length: "1721",
@@ -1645,6 +1670,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "420-440",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["Carport"],
         moduleDimension: {
           length: "1721",
@@ -1680,6 +1706,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "465-485",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["Carport"],
         moduleDimension: {
           length: "1902",
@@ -1715,6 +1742,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "560-580",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Foil",
         applications: ["Carport"],
         moduleDimension: {
           length: "2278",
@@ -1750,6 +1778,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "415-435",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Foil",
         applications: ["Carport"],
         moduleDimension: {
           length: "1721",
@@ -1785,6 +1814,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "680-700",
         moduleColor: "Black",
         frameColor: "Black",
+        backCover: "Foil",
         applications: ["Carport"],
         moduleDimension: {
           length: "2383",
@@ -1820,6 +1850,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "680-700",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Carport"],
         moduleDimension: {
           length: "2383",
@@ -1855,6 +1886,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "600-620",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Carport"],
         moduleDimension: {
           length: "2383",
@@ -1890,6 +1922,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         powerRange: "480-500",
         moduleColor: "White",
         frameColor: "Silver",
+        backCover: "Double Glass",
         applications: ["Carport"],
         moduleDimension: {
           length: "2077",

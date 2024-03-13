@@ -19,6 +19,7 @@ export default function DesktopTableRow({
   powerRange,
   moduleDimension,
   applications,
+  backCover,
   addModelToBag,
   removeModel,
 }: DestopTableRowProps) {
@@ -132,7 +133,8 @@ export default function DesktopTableRow({
               frameColor,
               moduleDimension,
               applications as Applications[],
-              powerRange
+              powerRange,
+              backCover
             )
           }
         >
