@@ -2021,6 +2021,51 @@ export const DOCUMENTS_FILES: (
   | DocumentsTypesWithSubCategories
 )[] = [
   {
+    category: "Presentation",
+    type: "Text",
+    data: [
+      {
+        linkTitle: "Company Profile 2024",
+        link: "/documents/presentations/Company_Profile_EN_2024_JAN_v1.pdf",
+      },
+      {
+        linkTitle: "AESOLAR HSF Presentation",
+        link: "/documents/presentations/AE-Solar-HSF-Introduction-light.pdf",
+      },
+
+      {
+        linkTitle: "Dr.Hamed Hanifi AESOLAR TERRA",
+        link: "/documents/presentations/Dr-Hamed-Hanifi_AESOLAR_TERRA_.pdf",
+      },
+
+      {
+        linkTitle: "Fraunhofer HSF Presentation",
+        link: "/documents/presentations/Fraunhofer_HSF_Report_Presentation_2018.pdf",
+      },
+
+      {
+        linkTitle: "Hot-Spot Fee case study",
+        link: "/documents/presentations/Hot-Spot-Fee-case-study-2.pdf",
+      },
+      {
+        linkTitle: "AESOLAR Smart Hot-Spot Free Presentation (EN)",
+        link: "/documents/presentations/HSF-Presentation_04-1.pdf",
+      },
+      {
+        linkTitle: "AESOLAR Smart Hot-Spot Free Presentation (PT)",
+        link: "/documents/presentations/HSF_Portuguese-1.pdf",
+      },
+      {
+        linkTitle: "Product Catalogue",
+        link: "/documents/presentations/PRODUCT-CATALOGUE_OCT.pdf",
+      },
+      {
+        linkTitle: "Production Process",
+        link: "/documents/presentations/Production-process.pdf",
+      },
+    ],
+  },
+  {
     category: "Technical Data",
     type: "SubCategories",
     subCategories: [
@@ -2167,27 +2212,133 @@ export const DOCUMENTS_FILES: (
       },
       {
         category: "Installation Manual",
-        type: "Presentation",
+        type: "Text",
         data: [
           {
-            title: "Datasheet",
-            linkTitle: "AE ME-132 640W-660W",
-            link: "/documents/solar_panels/Aurora/AE ME-132 640W-660W.pdf",
-            tags: ["Aurora"],
+            linkTitle: "Installation Manual (EN)",
+            link: "/documents/installation_manual/MANUAL-REV-2023.1-2.pdf",
+          },
+          {
+            linkTitle: "Betriebshandbuch (DE)",
+            link: "/documents/installation_manual/MANUAL-REV-2023.1.DE.pdf",
           },
         ],
       },
       {
         category: "NFC-chips",
-        type: "Presentation",
+        type: "Text",
         data: [
           {
-            title: "Datasheet",
-            linkTitle: "AE ME-132 640W-660W",
-            link: "/documents/solar_panels/Aurora/AE ME-132 640W-660W.pdf",
-            tags: ["Aurora"],
+            linkTitle:
+              "NFC-chips integrated solar panels and AE Solar APP (EN)",
+            link: "/documents/NFC_chips/AE-Solar-APP-Unique-solution-against-piracy.pdf",
+          },
+          {
+            linkTitle:
+              "NFC-chips integrated solar panels and AE Solar APP (BRA)",
+            link: "/documents/NFC_chips/Chips_NFC_integrados_aos_painéis_solares_e_APP_AE_Solar.pdf",
           },
         ],
+      },
+    ],
+  },
+  {
+    category: "Certificates",
+    type: "Text",
+    data: [
+      {
+        linkTitle: "CB certificate IEC61215 Aurora Monofacial",
+        link: "/documents/certificates/CB certificate IEC61215 Aurora Monofacial.pdf",
+      },
+      {
+        linkTitle: "CB certificate IEC61730 Aurora Monofacial",
+        link: "/documents/certificates/CB certificate IEC61730 Aurora Monofacial.pdf",
+      },
+      {
+        linkTitle: "CE Mark Compliance Certificate",
+        link: "/documents/certificates/CE Mark Compliance Certificate.pdf",
+      },
+      {
+        linkTitle: "IEC 61215_61730",
+        link: "/documents/certificates/IEC 61215_61730.pdf",
+      },
+      {
+        linkTitle: "IEC 62716 Ammonia Resistance",
+        link: "/documents/certificates/IEC 62716 Ammonia Resistance.pdf",
+      },
+      {
+        linkTitle: "IEC Cert_TUV NORD TUNDER&ECLIPSE",
+        link: "/documents/certificates/IEC Cert_TUV NORD TUNDER&ECLIPSE.pdf",
+      },
+      {
+        linkTitle: "IEC Cert_TUV SUD COMET",
+        link: "/documents/certificates/IEC Cert_TUV SUD COMET.pdf",
+      },
+      {
+        linkTitle:
+          "IEC Cert_TÜV Rheinland IEC 60068 Dust and Sand Aurora Bifacial",
+        link: "/documents/certificates/IEC Cert_TÜV Rheinland IEC 60068 Dust and Sand Aurora Bifacial.pdf",
+      },
+      {
+        linkTitle: "IEC Cert_TÜV Rheinland IEC 61215&61730 Aurora Bifacial",
+        link: "/documents/certificates/IEC Cert_TÜV Rheinland IEC 61215&61730 Aurora Bifacial.pdf",
+      },
+      {
+        linkTitle: "IEC Cert_TÜV Rheinland IEC 61215&61730 Aurora BS",
+        link: "/documents/certificates/IEC Cert_TÜV Rheinland IEC 61215&61730 Aurora BS.pdf",
+      },
+      {
+        linkTitle:
+          "IEC Cert_TÜV Rheinland IEC 61701 Salt Mist Corrosion Resistance Aurora Bifacial",
+        link: "/documents/certificates/IEC Cert_TÜV Rheinland IEC 61701 Salt Mist Corrosion Resistance Aurora Bifacial.pdf",
+      },
+      {
+        linkTitle:
+          "IEC Cert_TÜV Rheinland IEC 62716 Ammonia Resistance Aurora Bifacial",
+        link: "/documents/certificates/IEC Cert_TÜV Rheinland IEC 62716 Ammonia Resistance Aurora Bifacial.pdf",
+      },
+      {
+        linkTitle: "IEC Cert_TÜV Rheinland IEC 62804 PID Aurora Bifacial",
+        link: "/documents/certificates/IEC Cert_TÜV Rheinland IEC 62804 PID Aurora Bifacial.pdf",
+      },
+      {
+        linkTitle: "IEC Cert_TÜV Rheinland IEC 60068 Dust and Sand",
+        link: "/documents/certificates/IEC Cert_TÜV Rheinland IEC 60068 Dust and Sand.pdf",
+      },
+      {
+        linkTitle: "IEC Cert_TÜV Rheinland IEC 62804 PID",
+        link: "/documents/certificates/IEC Cert_TÜV Rheinland IEC 62804 PID.pdf",
+      },
+      {
+        linkTitle:
+          "IEC Cert_TÜV Rheinland IEC-61701 Salt Mist Corrosion Resistance",
+        link: "/documents/certificates/IEC Cert_TÜV Rheinland IEC-61701 Salt Mist Corrosion Resistance.pdf",
+      },
+      {
+        linkTitle: "IEC-Cert_TÜV-Rheinland IEC 60068 Dust and Sand Aurora BS",
+        link: "/documents/certificates/IEC-Cert_TÜV-Rheinland IEC 60068 Dust and Sand Aurora BS.pdf",
+      },
+      {
+        linkTitle:
+          "IEC-Cert_TÜV-Rheinland IEC 61701 Salt Mist Resistance Aurora BS",
+        link: "/documents/certificates/IEC-Cert_TÜV-Rheinland IEC 61701 Salt Mist Resistance Aurora BS.pdf",
+      },
+      {
+        linkTitle:
+          "IEC-Cert_TÜV-Rheinland IEC 62716 Ammonia Resistance Aurora BS",
+        link: "/documents/certificates/IEC-Cert_TÜV-Rheinland IEC 62716 Ammonia Resistance Aurora BS.pdf",
+      },
+      {
+        linkTitle: "IEC-Cert_TÜV-Rheinland IEC 62804 PID Aurora BS",
+        link: "/documents/certificates/IEC-Cert_TÜV-Rheinland IEC 62804 PID Aurora BS.pdf",
+      },
+      {
+        linkTitle: "Management System Certificate",
+        link: "/documents/certificates/Management System Certificate.pdf",
+      },
+      {
+        linkTitle: "PVEL 2023 Top Performer",
+        link: "/documents/certificates/PVEL 2023 Top Performer.pdf",
       },
     ],
   },
@@ -2196,31 +2347,26 @@ export const DOCUMENTS_FILES: (
     type: "Text",
     data: [
       {
-        linkTitle: "Warranty-EN",
+        linkTitle: "Warranty (EN)",
         link: "/documents/warranty/Warranty-EN.pdf",
       },
       {
-        linkTitle: "Warranty-DE",
+        linkTitle: "Warranty (DE)",
         link: "/documents/warranty/Warranty-DE.pdf",
       },
       {
-        linkTitle: "Garantía-SPA",
+        linkTitle: "Garantía (SPA)",
         link: "/documents/warranty/Garantía-SPA.pdf",
       },
       {
-        linkTitle: "Garantia-BRA",
+        linkTitle: "Garantia (BRA)",
         link: "/documents/warranty/Garantia-BRA.pdf",
       },
       {
-        linkTitle: "限定保証-JP",
+        linkTitle: "限定保証 (JP)",
         link: "/documents/warranty/限定保証-JP.pdf",
       },
     ],
-  },
-  {
-    category: "References",
-    type: "Text",
-    data: [{ linkTitle: "Company Profile", link: "/documents/references.pdf" }],
   },
   // {
   //   category: "Technical Data",

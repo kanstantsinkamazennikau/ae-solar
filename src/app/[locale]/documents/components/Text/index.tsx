@@ -32,8 +32,8 @@ export default function Text({ link, linkTitle }: TextProps) {
         onMouseLeave={onMouseLeave}
         className="
           [font-size:_clamp(12px,1.5vw,16px)]
-          leading-[100%]
-          p-4
+          leading-[130%]
+          p-3
           font-bold
           capitalize
           -tracking-[0.32px]
