@@ -62,9 +62,6 @@ export default function About() {
       <BusinessMap />
       <OurHistory />
       <GetInTouch />
-      <div className="flex justify-center">
-        <MainPageFAQ />
-      </div>
 
       {/* <SequenceAnimation /> */}
       {/* <SequenceAnimation2 /> */}

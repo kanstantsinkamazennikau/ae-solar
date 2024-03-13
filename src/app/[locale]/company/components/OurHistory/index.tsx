@@ -22,6 +22,7 @@ import Image from "next/image";
 import parse from "html-react-parser";
 import Button from "@/app/[locale]/components/common/Button";
 import { ABOUT_HISTORY } from "@/app/[locale]/company/constants";
+import Starfield from "@/app/[locale]/products/components/StarField";
 
 // const frameIndex = { frame: 0 };
 
@@ -114,7 +115,14 @@ export default function OurHistory() {
   // }, [activeStepIndex, scrollDirection, scrollFrame]);
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center relative">
+      <Starfield
+        starCount={1000}
+        starColor={[255, 255, 255]}
+        speedFactor={0.02}
+        backgroundColor="black"
+        style="absolute h-full"
+      />
       <BasicWidthContainer>
         <div id="history">
           <TwoTierHeading

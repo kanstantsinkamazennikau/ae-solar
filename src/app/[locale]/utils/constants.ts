@@ -1009,33 +1009,27 @@ export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
 export const SEQUENCE_ANIMATION_TEXT = [
   {
     title: "Front cover",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+    description: "Protects panel from external elements",
   },
   {
     title: "Front encapsulation",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+    description: "Shields solar cells, seals panel",
   },
   {
     title: "Solar cells",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+    description: "Converts sunlight into electricity",
   },
   {
     title: "Rear encapsulation",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+    description: "Provides insulation and protection",
   },
   {
     title: "Back cover",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+    description: "Protects rear side of panel",
   },
   {
     title: "Frame",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+    description: "Structural support for solar panel",
   },
 ];
 

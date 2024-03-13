@@ -1954,3 +1954,8 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
     ],
   },
 };
+
+export const PRODUCTS_SEQUENCE_ANIMATION_TEXT_NEPTUNE = {
+  title: "Thermal Tubes",
+  description: "Tubes for collecting solar energy",
+};

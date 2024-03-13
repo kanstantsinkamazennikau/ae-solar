@@ -1,5 +1,6 @@
 "use client";
 
+import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import Advantages from "@/app/[locale]/products/components/Advantages";
 import LightingTheWay from "@/app/[locale]/products/components/LightingTheWay";
@@ -59,6 +60,9 @@ export default function ProductsPage() {
         <div className="overflow-hidden">
           <Advantages />
           <WeTransform />
+        </div>
+        <div className="flex justify-center z-10 relative">
+          <MainPageFAQ />
         </div>
       </div>
     </>

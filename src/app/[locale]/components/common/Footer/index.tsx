@@ -65,7 +65,7 @@ export default function Footer() {
   }, [pathname]);
 
   return (
-    <div className="flex flex-col justify-center items-center relative max-w-[1920px] mx-auto">
+    <div className="flex flex-col justify-center items-center relative max-w-[1920px] mx-auto bg-black">
       <BasicWidthContainer styles="bg-black">
         <footer className="text-sm bg-black bg-clip-content overflow-hidden">
           <Image

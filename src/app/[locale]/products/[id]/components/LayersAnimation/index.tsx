@@ -1,246 +1,193 @@
 "use client";
 
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { gsap } from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
+import { ProductsPanelProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
+import { PRODUCTS_SEQUENCE_ANIMATION_TEXT_NEPTUNE } from "@/app/[locale]/products/[id]/constants";
 import {
   SEQUENCE_ANIMATION_TEXT,
   TECH_INFO_A_CLOSE_LOOK_AT,
   TECH_INFO_THE_HIDDEN_LAYERS,
 } from "@/app/[locale]/utils/constants";
-import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { Model } from "@/app/[locale]/context/constructorContext";
-import { ProductsPanelProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
-
-const scrollTriggerPositionFromResolution = (
-  isDesktop: boolean,
-  isMobile: boolean
-) => {
-  if (isDesktop) return "top-=140px";
-  if (isMobile) return "top-=80px";
-  return "center center";
-};
-
-function getCurrentFrame(panel: Model, index: number) {
-  return `/images/sequence/${panel}/Layer-2-5-${index.toString()}.jpg`;
-}
-
-const frameIndex = { frame: 0 };
-const numFrames = 120;
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function LayersAnimation({ id }: ProductsPanelProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [images, setImages] = useState<HTMLImageElement[]>([]);
-  const [activeStepIndex, setActiveStepIndex] = useState(0);
-  const [scrollFrame, setScrollFrame] = useState(1);
-  const [scrollDirection, setScrollDirection] = useState(1);
-  const framesPerSection = Math.ceil(
-    numFrames / SEQUENCE_ANIMATION_TEXT.length
-  );
-
-  const renderImage = useCallback(() => {
-    if (!canvasRef.current) return;
-    const ctx = canvasRef.current?.getContext("2d");
-    setScrollFrame(frameIndex.frame);
-    ctx!.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
-    ctx!.drawImage(images[frameIndex.frame], 0, 0);
-  }, [images]);
-
-  function preloadImages() {
-    for (let i = 1; i <= numFrames; i++) {
-      const img = new Image();
-      const imgSrc = getCurrentFrame(id, i);
-      img.src = imgSrc;
-      setImages((prevImages) => [...prevImages, img]);
-    }
-  }
+  const [textArray, setTextArray] = useState(SEQUENCE_ANIMATION_TEXT);
+  const [stopIntersecting, setStopIntersecting] = useState(false);
+  const [startAnimation, setStartAnimation] = useState(false);
+  const { intersecting, ref } = useIntersection(0.3);
 
   useEffect(() => {
-    preloadImages();
+    if (id === "Neptune")
+      setTextArray((prevState) => [
+        PRODUCTS_SEQUENCE_ANIMATION_TEXT_NEPTUNE,
+        ...prevState,
+      ]);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (!canvasRef.current || images.length === 0) return;
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    let mm = gsap.matchMedia();
-
-    mm.add(
-      {
-        isWideScreen: "(min-width: 2560px)",
-        isDesktop: "(min-width: 768px) and (max-width: 2559px)",
-        isMobile: "(max-width: 767px)",
-      },
-      (context) => {
-        //@ts-ignore
-        let { isDesktop, isMobile } = context.conditions;
-        gsap.context(() => {
-          gsap
-            .timeline({
-              onUpdate: renderImage,
-              scrollTrigger: {
-                onUpdate: (self) => {
-                  setScrollDirection(self.direction);
-                },
-                trigger: "#canvas",
-                start: scrollTriggerPositionFromResolution(isDesktop, isMobile),
-                pin: true,
-                end: "+=600%",
-                scrub: 1,
-              },
-            })
-            .to(
-              frameIndex,
-              {
-                frame: numFrames - 1,
-                snap: "frame",
-                ease: "none",
-                duration: 1,
-              },
-              0
-            );
-        });
-      }
-    );
-
-    return () => {
-      ScrollTrigger.refresh();
-      mm.revert();
-    };
-  }, [images.length, renderImage]);
+    return () => setTextArray(SEQUENCE_ANIMATION_TEXT);
+  }, [id]);
 
   useEffect(() => {
-    // if (!canvasRef.current || images.length === 0) return;
-    // renderImage();
-    if (!canvasRef.current) return;
-    const img = new Image();
-    const imgSrc = `/images/sequence/${id}/Layer-2-5-1.jpg`;
-    img.src = imgSrc;
-    img.onload = () => {
-      const ctx = canvasRef.current?.getContext("2d");
-      ctx!.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
-      ctx!.drawImage(img, 0, 0);
-    };
-  }, [images, renderImage, id]);
-
-  useEffect(() => {
-    if (scrollDirection === 1) {
-      if (scrollFrame > framesPerSection + framesPerSection * activeStepIndex) {
-        setActiveStepIndex(activeStepIndex + 1);
-      }
-    } else {
-      if (
-        scrollFrame < framesPerSection * activeStepIndex &&
-        activeStepIndex !== 0
-      ) {
-        setActiveStepIndex(activeStepIndex - 1);
-      }
-    }
-  }, [activeStepIndex, framesPerSection, scrollDirection, scrollFrame]);
+    intersecting && setStartAnimation(true);
+  }, [intersecting]);
 
   return (
-    <div
-      className="
-        overflow-hidden
-        flex
-        flex-col
-        justify-center
-        items-center
-        lg:mb-[100px]
-        md:mb-[60px]
-        mb-[20px]
-        px-5
-      "
-    >
-      <BasicWidthContainer styles="max-md:!px-0">
-        <div className="flex flex-col items-center" id="canvas">
-          <TwoTierHeading
-            tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}
-            tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
-            align="right"
-            externalStyle="z-10"
-          />
-          <div className="flex items-center lg:-mt-[56px]">
-            <div className="flex gap-5 max-w-[33%] relative">
-              <div className="sequenceAnimationDivider !w-[1px] basis-[1px] shrink-0" />
-              <div className="py-20">
-                {SEQUENCE_ANIMATION_TEXT.map(
-                  ({ title, description }, index) => {
-                    const isActive = activeStepIndex === index;
-                    const opacityValue = Math.abs(activeStepIndex - index) || 1;
-                    return (
-                      <div
-                        key={title}
-                        className={`
-                          ${isActive ? "md:py-8 py-4" : ""}
-                          first:pt-0
-                          last:pb-0
-                          transition-all
-                          duration-500
-                        `}
-                      >
-                        <div className="flex items-center">
-                          <div
-                            className={`
-                              w-[7px]
-                              h-[7px]
-                              border
-                              border-solid
-                              border-base-red
-                              rounded-full
-                              absolute
-                              -left-[3px]
-                              bg-black
-                              ${isActive ? "block" : "hidden"}
-                            `}
-                          />
-                          <div
-                            style={{ opacity: 1 / opacityValue }}
-                            className={`
-                              ${isActive ? "text-white" : "text-dark-gray-900"}
-                              font-walsheim
-                              [font-size:_clamp(18px,2vw,32px)]
-                              leading-[120%]
-                              font-medium
-                            `}
-                          >
-                            {title}
-                          </div>
-                        </div>
-                        <div
-                          className={`
-                            ${isActive ? "block" : "hidden"}
-                            font-walsheim
-                            [font-size:_clamp(12px,2vw,16px)]
-                            leading-[150%]
-                            font-medium
-                            text-dark-gray-900
-                          `}
-                        >
-                          {description}
-                        </div>
-                      </div>
-                    );
-                  }
-                )}
+    <div id="construction" className="scroll-mt-[140px] mb-20">
+      <BasicWidthContainer>
+        <TwoTierHeading
+          tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}
+          tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
+          align="right"
+          externalStyle="z-10"
+        />
+        <div className="flex justify-center items-center min-[600px]:flex-row flex-col-reverse">
+          <div className="min-[600px]:flex flex-col gap-2 grid min-[480px]:grid-cols-2 grid-cols-1 max-[600px]:mt-10">
+            {textArray.map(({ title, description }) => (
+              <div
+                key={title}
+                className={`
+                  first:pt-0
+                  last:pb-0
+                  transition-all
+                  duration-500
+                  xl:w-[430px]
+                  min-[920px]:w-[330px]
+                  w-[230px]
+                `}
+              >
+                <div className="flex items-center">
+                  <div
+                    className={`
+                      font-walsheim
+                      [font-size:_clamp(18px,2vw,32px)]
+                      leading-[120%]
+                      font-medium
+                    `}
+                  >
+                    {title}
+                  </div>
+                </div>
+                <div
+                  className={`
+                    font-walsheim
+                    [font-size:_clamp(12px,2vw,16px)]
+                    leading-[150%]
+                    font-medium
+                    text-dark-gray-900
+                  `}
+                >
+                  {description}
+                </div>
               </div>
+            ))}
+          </div>
+          <div className="relative overflow-hidden">
+            {new Array(textArray.length).fill(null).map((_, index) => {
+              if (index === 0) {
+                return (
+                  <div ref={ref} key={index}>
+                    <Image
+                      src={`/images/sequence/${id}/${index}.png`}
+                      alt={index.toString()}
+                      width={1222}
+                      height={854}
+                      priority
+                      className={`
+                        relative ${
+                          !startAnimation && !stopIntersecting
+                            ? "translate-y-full opacity-50"
+                            : "translate-y-0 opacity-100"
+                        }
+                        transition-all
+                        duration-[2s]
+                        z-10
+                      `}
+                    />
+                  </div>
+                );
+              }
+              return (
+                <Image
+                  key={index}
+                  src={`/images/sequence/${id}/${index}.png`}
+                  alt={index.toString()}
+                  width={1222}
+                  height={854}
+                  priority
+                  className={`
+                    absolute
+                    ${
+                      !startAnimation && !stopIntersecting
+                        ? "-bottom-full opacity-50"
+                        : "bottom-0 opacity-100"
+                    }
+                    transition-all
+                    duration-[2s]
+                  `}
+                  style={{ transitionDelay: `${index * 100}ms`, zIndex: index }}
+                />
+              );
+            })}
+            {/* <div ref={ref}>
+              <Image
+                src={`/images/sequence/${id}/frame.png`}
+                alt="frame"
+                width={920}
+                height={640}
+                priority
+                className={`
+                  relative ${
+                    !startAnimation && !stopIntersecting
+                      ? "translate-y-full opacity-50"
+                      : "translate-y-0 opacity-100"
+                  }
+                  transition-all
+                  duration-[2s]
+                `}
+              />
             </div>
 
-            <canvas
-              className="object-contain max-w-[66%] relative max-[510px]:-right-1/3 max-[510px]:scale-150"
-              ref={canvasRef}
-              width={800}
-              height={600}
+            <Image
+              src={`/images/sequence/${id}/backsheet.png`}
+              alt="backsheet"
+              width={920}
+              height={640}
+              priority
+              className={`
+                absolute
+                ${
+                  !startAnimation && !stopIntersecting
+                    ? "-bottom-full opacity-50"
+                    : "bottom-0 opacity-100"
+                }
+                transition-all
+                duration-[2s]
+                delay-300
+              `}
             />
+            <Image
+              src={`/images/sequence/${id}/front.png`}
+              alt="front"
+              width={920}
+              height={640}
+              priority
+              onTransitionEnd={() => setStopIntersecting(true)}
+              className={`
+                absolute
+                ${
+                  !startAnimation && !stopIntersecting
+                    ? "-bottom-full opacity-50"
+                    : "bottom-0 opacity-100"
+                }
+                transition-all
+                duration-[2s]
+                delay-700
+              `}
+            />
+            <div className="fade-strip-bottom max-lg:!h-[200px] max-md:!h-[100px]" /> */}
+            <div className="fade-strip-bottom max-lg:!h-[200px] max-md:!h-[100px]" />
           </div>
         </div>
       </BasicWidthContainer>

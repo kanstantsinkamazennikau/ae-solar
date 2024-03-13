@@ -21,10 +21,7 @@ export default function GeneratedModel() {
   const addModelToBag = () => {
     setModelsInBag((prevState) => {
       let previousElementId = prevState[prevState.length - 1]?.id ?? 0;
-      const modelsInBag = [
-        ...prevState,
-        { id: ++previousElementId, ...constructorModel },
-      ];
+      const modelsInBag = [...prevState, { id: "TODO", ...constructorModel }];
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
       return modelsInBag;
     });
