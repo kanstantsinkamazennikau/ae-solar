@@ -9,7 +9,7 @@ import { useContext } from "react";
 
 export default function ModelsInCart() {
   const { modelsInBag, setModelsInBag } = useContext(ConstructorContext);
-  const removeModel = (modelId: number) => {
+  const removeModel = (modelId: number | string) => {
     const remainingModels = modelsInBag.filter(({ id }) => id !== modelId);
     setModelsInBag(remainingModels);
     localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(remainingModels));
