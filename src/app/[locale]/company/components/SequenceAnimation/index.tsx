@@ -204,12 +204,12 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                           <div
                             style={{ opacity: 1 / opacityValue }}
                             className={`
-                          ${isActive ? "text-white" : "text-dark-gray-900"}
-                          font-walsheim
-                          [font-size:_clamp(18px,2vw,32px)]
-                          leading-[120%]
-                          font-medium
-                        `}
+                              ${isActive ? "text-white" : "text-dark-gray-900"}
+                              font-walsheim
+                              [font-size:_clamp(18px,2vw,32px)]
+                              leading-[120%]
+                              font-medium
+                            `}
                             // onClick={() => {
                             //   setActiveStepIndex(index);
                             //   const { start, end } = timeline!.scrollTrigger;

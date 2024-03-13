@@ -50,7 +50,7 @@ export default function HeroSection() {
           }
         `}
       >
-        <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,4vw,40px)]">
+        <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,4vw,40px)] textShadow">
           {HEADER_TIER1}
         </p>
         <p

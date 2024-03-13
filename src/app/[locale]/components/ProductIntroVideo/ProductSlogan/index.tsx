@@ -24,6 +24,7 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
             gap-2
             transition-all
             duration-100
+            mb-3
             ${
               !intersecting && !stopIntersecting
                 ? "translate-x-[calc(100%+50px)]"
@@ -47,7 +48,7 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
             <div className="leading-[130%] font-semibold [font-size:_clamp(16px,1.5vw,20px)]">
               {title}
             </div>
-            <div className="text-lg leading-[170%] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,16px)]">
+            <div className="text-lg leading-[120%] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,16px)]">
               {description}
             </div>
             {/* <div className="bg-white opacity-20 h-0.5 mt-3 md:hidden block" /> */}
