@@ -1,6 +1,7 @@
 import Benefits from "@/app/[locale]/products/[id]/components/Benefits";
 import Conclusion from "@/app/[locale]/products/[id]/components/Conclusion";
 import Customization from "@/app/[locale]/products/[id]/components/Customization";
+import LayersAnimation from "@/app/[locale]/products/[id]/components/LayersAnimation";
 import PanelTechnology from "@/app/[locale]/products/[id]/components/PanelTechnology";
 import ProductsPanel from "@/app/[locale]/products/[id]/components/ProductsPanel";
 import VideoIntroduction from "@/app/[locale]/products/[id]/components/VideoIntroduction";
@@ -13,6 +14,7 @@ export default async function Page({ params: { id } }: ProductPageProps) {
       <PanelTechnology id={id} />
       <VideoIntroduction id={id} />
       <Benefits id={id} />
+      <LayersAnimation id={id} />
       <Customization id={id} />
       <Conclusion id={id} />
     </div>

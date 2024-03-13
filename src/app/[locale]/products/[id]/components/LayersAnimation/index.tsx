@@ -30,7 +30,7 @@ const scrollTriggerPositionFromResolution = (
 };
 
 function getCurrentFrame(panel: Model, index: number) {
-  return `/images/sequence/${panel}/${panel}-Layers-${index.toString()}.jpg`;
+  return `/images/sequence/${panel}/Layer-2-5-${index.toString()}.jpg`;
 }
 
 const frameIndex = { frame: 0 };
@@ -123,7 +123,7 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
     // renderImage();
     if (!canvasRef.current) return;
     const img = new Image();
-    const imgSrc = `/images/sequence/${id}/${id}-Layers-1.jpg`;
+    const imgSrc = `/images/sequence/${id}/Layer-2-5-1.jpg`;
     img.src = imgSrc;
     img.onload = () => {
       const ctx = canvasRef.current?.getContext("2d");
@@ -238,8 +238,8 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
             <canvas
               className="object-contain max-w-[66%] relative max-[510px]:-right-1/3 max-[510px]:scale-150"
               ref={canvasRef}
-              width={1920}
-              height={1080}
+              width={800}
+              height={600}
             />
           </div>
         </div>

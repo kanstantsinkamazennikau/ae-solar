@@ -3,8 +3,8 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import {
-  ABOUT_IN_NUMBERS,
   ABOUT_OUR_HISTORY,
+  ABOUT_THROUGH,
   HISTORY_READ_FULL_STORY,
   TECH_INFO_READ_MORE,
 } from "@/app/[locale]/utils/constants";
@@ -119,11 +119,15 @@ export default function OurHistory() {
         <div id="history">
           <TwoTierHeading
             tierOneHeading={ABOUT_OUR_HISTORY}
-            tierTwoHeading={ABOUT_IN_NUMBERS}
-            align="left"
+            tierTwoHeading={ABOUT_THROUGH}
+            align="center"
             reverseColor
             marginBottomNone
-            externalStyle="[font-size:_clamp(32px,6vw,96px)!important] "
+            externalStyle="
+              [font-size:_clamp(32px,6vw,96px)]
+              [&>*:last-child]:[font-size:_clamp(30px,4vw,64px)]
+              [&>*:last-child]:font-medium
+            "
           />
           <Image
             src={`/images/glowFull.png`}
@@ -138,8 +142,8 @@ export default function OurHistory() {
           >
             <div className="ourHistoryDivider w-[1px] h-[calc(100%+100px)] absolute -top-[7px] md:left-[32%] left-[20%]" />
             {ABOUT_HISTORY.map(({ year, event }, index) => {
-              const isActive = activeStepIndex === index;
-              const opacityValue = Math.abs(activeStepIndex - index) || 1;
+              // const isActive = activeStepIndex === index;
+              // const opacityValue = Math.abs(activeStepIndex - index) || 1;
 
               return (
                 <div
@@ -148,14 +152,12 @@ export default function OurHistory() {
                       flex
                       mb-6
                       w-full
-                      transition-[color]
-                      duration-300
                       relative
                       text-white
                     `}
                   // style={{ opacity: 1 / opacityValue }}
                 >
-                  {/* <div
+                  <div
                     className={`
                       w-[7px]
                       h-[7px]
@@ -168,9 +170,9 @@ export default function OurHistory() {
                       md:left-[calc(32%-3px)]
                       left-[calc(20%-3px)]
                       bg-black
-                      ${isActive ? "block" : "hidden"}
+                  
                     `}
-                  /> */}
+                  />
                   <div
                     className="
                       md:w-[32%]
@@ -200,7 +202,7 @@ export default function OurHistory() {
               );
             })
               .reverse()
-              .slice(0, isOpenItem ? 100 : 3)}
+              .slice(0, isOpenItem ? 100 : 4)}
             {!isOpenItem && (
               <Button
                 style="textOnly"
@@ -210,7 +212,7 @@ export default function OurHistory() {
                 <div
                   className={`text-base-red [font-size:_clamp(14px,1vw,16px)]`}
                 >
-                  {TECH_INFO_READ_MORE}
+                  {HISTORY_READ_FULL_STORY}
                 </div>
                 <Image
                   src="/images/techInfo/expand.svg"

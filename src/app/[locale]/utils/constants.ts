@@ -346,7 +346,7 @@ export const PRODUCT_INTRO_PANELS = {
   },
 };
 export const PRODUCT_INTRO_LEARN_MORE = "Learn more";
-export const HISTORY_READ_FULL_STORY = "Read Full History";
+export const HISTORY_READ_FULL_STORY = "Read Full of History";
 export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "All Products";
 
 export const FEATURED_PRODUCTS_HIGH_QUALITY = "High-Quality";
@@ -1037,11 +1037,6 @@ export const SEQUENCE_ANIMATION_TEXT = [
     description:
       "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
   },
-  // {
-  //   title: "Connector",
-  //   description:
-  //     "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  // },
 ];
 
 export const CONSTRUCTOR_MODEL = "Model.";
@@ -1990,7 +1985,7 @@ export const ABOUT_MAP_DESIGNATIONS = [
   },
 ];
 export const ABOUT_OUR_HISTORY = "Our History";
-export const ABOUT_IN_NUMBERS = "in Numbers";
+export const ABOUT_THROUGH = "Through the Years";
 
 export const COOKIES_AESOLAR = "Cookies on AESolar";
 export const COOKIES_WE_USE_COOKIES =
