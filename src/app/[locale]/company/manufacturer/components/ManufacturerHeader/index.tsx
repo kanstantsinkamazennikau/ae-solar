@@ -15,7 +15,7 @@ export default function ManufacturerHeader() {
           flex
           justify-center
           xl:mb-[80px]
-          lg:mb-[600px]
+          lg:mb-[60px]
           md:mb-[40px]
           mb-[20px]
         "

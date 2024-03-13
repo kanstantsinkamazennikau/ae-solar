@@ -5,6 +5,8 @@ import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import {
   ABOUT_IN_NUMBERS,
   ABOUT_OUR_HISTORY,
+  HISTORY_READ_FULL_STORY,
+  TECH_INFO_READ_MORE,
 } from "@/app/[locale]/utils/constants";
 import {
   useCallback,
@@ -18,68 +20,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Image from "next/image";
 import parse from "html-react-parser";
+import Button from "@/app/[locale]/components/common/Button";
+import { ABOUT_HISTORY } from "@/app/[locale]/company/constants";
 
-const frameIndex = { frame: 0 };
-const history = [
-  {
-    year: 2003,
-    event:
-      "AE Solar was founded in Königsbrunn, Germany as a family-owned PV systems installation company.",
-  },
-  {
-    year: 2009,
-    event:
-      "50MW/year manual assembly mono/poly PV modules manufacturing was established",
-  },
-  {
-    year: 2012,
-    event: "Double glass and Bi-Facial PV modules manufacturing started",
-  },
-  {
-    year: 2013,
-    event:
-      "150 MW/year semi-automated PV modules manufacturing line was installed",
-  },
-  {
-    year: 2014,
-    event: "Automated PV modules stringer soldering was implemented",
-  },
-  {
-    year: 2016,
-    event:
-      "250 MW/year automated PV modules manufacturing line was installed;<br/> Shading Resistant Hot-spot free PV modules invented",
-  },
-  {
-    year: 2017,
-    event:
-      "SNEC 2017 PV Power Expo Top 10 Highlights award;<br/> Shading Resistant Hot-spot free PV modules serial manufacturing started;<br/> 525 MW/year robotized full automated PV modules manufacturing line was installed",
-  },
-  {
-    year: 2018,
-    event: "PV magazine 2018 Top innovation award",
-  },
-  {
-    year: 2019,
-    event:
-      "Inter Solar 2019 Photovoltaics award finalist;<br/> 1.5 GW/year PV modules manufacturing total capacity reached with 500 MW/year second fully automated and the biggest in Europe under one roof manufacturing established;<br/> AE Solar became member of United Nations Global Compact",
-  },
-  {
-    year: 2020,
-    event:
-      "AE Solar presence and distributorship network reached more than 100+ countries",
-  },
-  {
-    year: 2021,
-    event:
-      "Top pv brand award in Vietnam;<br/> Solar Future Awards 2021 Company of the Year;<br/> AE Solar has become the winner of the UN Global Compact Partnership for Sustainability Award 2021 - in Planet Category",
-  },
-  {
-    year: 2022,
-    event:
-      "Top Renewable Energy;<br/> SMART TECHNOLOGY INNOVATION OF THE YEAR Solar Energy Innovation Excellence Awards",
-  },
-];
-const numFrames = history.length;
+// const frameIndex = { frame: 0 };
+
+// const numFrames = history.length;
 
 const scrollTriggerPositionFromResolution = (
   isDesktop: boolean,
@@ -96,9 +42,15 @@ export default function OurHistory() {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
 
   const container = useRef(null);
-  const renderText = useCallback(() => {
-    setScrollFrame(frameIndex.frame);
-  }, []);
+  // const renderText = useCallback(() => {
+  //   setScrollFrame(frameIndex.frame);
+  // }, []);
+
+  const [isOpenItem, setIsOpenItem] = useState(false);
+
+  const onClick = () => {
+    setIsOpenItem(true);
+  };
 
   // useEffect(() => {
   //   if (!container.current) return;
@@ -185,15 +137,14 @@ export default function OurHistory() {
             className="relative py-[60px] w-full overflow-hidden"
           >
             <div className="ourHistoryDivider w-[1px] h-[calc(100%+100px)] absolute -top-[7px] md:left-[32%] left-[20%]" />
-            {history
-              .map(({ year, event }, index) => {
-                const isActive = activeStepIndex === index;
-                const opacityValue = Math.abs(activeStepIndex - index) || 1;
+            {ABOUT_HISTORY.map(({ year, event }, index) => {
+              const isActive = activeStepIndex === index;
+              const opacityValue = Math.abs(activeStepIndex - index) || 1;
 
-                return (
-                  <div
-                    key={year}
-                    className={`
+              return (
+                <div
+                  key={year}
+                  className={`
                       flex
                       mb-6
                       w-full
@@ -202,9 +153,9 @@ export default function OurHistory() {
                       relative
                       text-white
                     `}
-                    // style={{ opacity: 1 / opacityValue }}
-                  >
-                    {/* <div
+                  // style={{ opacity: 1 / opacityValue }}
+                >
+                  {/* <div
                     className={`
                       w-[7px]
                       h-[7px]
@@ -220,8 +171,8 @@ export default function OurHistory() {
                       ${isActive ? "block" : "hidden"}
                     `}
                   /> */}
-                    <div
-                      className="
+                  <div
+                    className="
                       md:w-[32%]
                       w-[20%]
                       text-end
@@ -229,12 +180,12 @@ export default function OurHistory() {
                       [font-size:_clamp(14px,2vw,32px)]
                       leading-[120%]
                     "
-                    >
-                      {year}
-                    </div>
+                  >
+                    {year}
+                  </div>
 
-                    <div
-                      className={`
+                  <div
+                    className={`
                       md:w-[68%]
                       w-[80%]
                       pl-4
@@ -242,13 +193,34 @@ export default function OurHistory() {
                       [font-size:_clamp(12px,2vw,16px)]
                       leading-[150%]
                     `}
-                    >
-                      {parse(event)}
-                    </div>
+                  >
+                    {parse(event)}
                   </div>
-                );
-              })
-              .reverse()}
+                </div>
+              );
+            })
+              .reverse()
+              .slice(0, isOpenItem ? 100 : 3)}
+            {!isOpenItem && (
+              <Button
+                style="textOnly"
+                externalStyle="!p-0 mx-auto mt-10"
+                onClick={onClick}
+              >
+                <div
+                  className={`text-base-red [font-size:_clamp(14px,1vw,16px)]`}
+                >
+                  {TECH_INFO_READ_MORE}
+                </div>
+                <Image
+                  src="/images/techInfo/expand.svg"
+                  alt="arrow"
+                  width={20}
+                  height={20}
+                  priority
+                />
+              </Button>
+            )}
           </div>
         </div>
       </BasicWidthContainer>

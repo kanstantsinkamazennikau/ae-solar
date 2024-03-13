@@ -49,3 +49,63 @@ Elegant Design
   `Our Commitment
 to You`,
 ];
+
+export const ABOUT_HISTORY = [
+  {
+    year: 2003,
+    event:
+      "AE Solar was founded in Königsbrunn, Germany as a family-owned PV systems installation company.",
+  },
+  {
+    year: 2009,
+    event:
+      "50MW/year manual assembly mono/poly PV modules manufacturing was established",
+  },
+  {
+    year: 2012,
+    event: "Double glass and Bi-Facial PV modules manufacturing started",
+  },
+  {
+    year: 2013,
+    event:
+      "150 MW/year semi-automated PV modules manufacturing line was installed",
+  },
+  {
+    year: 2014,
+    event: "Automated PV modules stringer soldering was implemented",
+  },
+  {
+    year: 2016,
+    event:
+      "250 MW/year automated PV modules manufacturing line was installed;<br/> Shading Resistant Hot-spot free PV modules invented",
+  },
+  {
+    year: 2017,
+    event:
+      "SNEC 2017 PV Power Expo Top 10 Highlights award;<br/> Shading Resistant Hot-spot free PV modules serial manufacturing started;<br/> 525 MW/year robotized full automated PV modules manufacturing line was installed",
+  },
+  {
+    year: 2018,
+    event: "PV magazine 2018 Top innovation award",
+  },
+  {
+    year: 2019,
+    event:
+      "Inter Solar 2019 Photovoltaics award finalist;<br/> 1.5 GW/year PV modules manufacturing total capacity reached with 500 MW/year second fully automated and the biggest in Europe under one roof manufacturing established;<br/> AE Solar became member of United Nations Global Compact",
+  },
+  {
+    year: 2020,
+    event:
+      "AE Solar presence and distributorship network reached more than 100+ countries",
+  },
+  {
+    year: 2021,
+    event:
+      "Top pv brand award in Vietnam;<br/> Solar Future Awards 2021 Company of the Year;<br/> AE Solar has become the winner of the UN Global Compact Partnership for Sustainability Award 2021 - in Planet Category",
+  },
+  {
+    year: 2022,
+    event:
+      "Top Renewable Energy;<br/> SMART TECHNOLOGY INNOVATION OF THE YEAR Solar Energy Innovation Excellence Awards",
+  },
+];

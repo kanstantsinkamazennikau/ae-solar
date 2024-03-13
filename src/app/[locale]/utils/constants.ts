@@ -102,7 +102,7 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Neptune.svg",
 ];
 export const HEADER_SUBNAVIGATION_ALL_MODULES = "All Modules";
-export const HEADER_CONFIGURE_YOUR_MODEL = "Choose your module";
+export const HEADER_CONFIGURE_YOUR_MODEL = "All Products";
 export const HEADER_CALCULATE = "Calculate";
 export const HEADER_CHOOSE_LANGUAGE = "Choose language";
 
@@ -346,7 +346,8 @@ export const PRODUCT_INTRO_PANELS = {
   },
 };
 export const PRODUCT_INTRO_LEARN_MORE = "Learn more";
-export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "Choose your module";
+export const HISTORY_READ_FULL_STORY = "Read Full History";
+export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "All Products";
 
 export const FEATURED_PRODUCTS_HIGH_QUALITY = "High-Quality";
 
@@ -852,7 +853,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
     },
   },
   ShadeStar: {
-    panelTechnology: "Shede Resident Technology",
+    panelTechnology: "Shade Resistant Technology",
     params: {
       solarCellTechnology: {
         type: "slider",
