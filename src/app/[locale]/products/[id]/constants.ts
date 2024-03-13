@@ -20,7 +20,7 @@ export const PRODUCT_NAVIGATION = [
   {
     title: "Conclusion",
     link: "conclusion",
-    position: "center",
+    position: "start",
   },
 ];
 export const PRODUCT_OVERVIEW = "Overview:";

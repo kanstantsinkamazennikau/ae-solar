@@ -7,7 +7,7 @@ import { ConclusionProps } from "@/app/[locale]/products/[id]/components/Conclus
 export default function Conclusion({ id }: ConclusionProps) {
   return (
     <div
-      className="flex justify-center items-center xl:mb-[150px] lg:mb-[120px] md:mb-[100px] mb-[80px] mt-20 w-full flex-col"
+      className="flex justify-center items-center xl:mb-[150px] lg:mb-[120px] md:mb-[100px] mb-[80px] mt-20 w-full flex-col scroll-mt-[140px]"
       id="conclusion"
     >
       <ConclusionVideo id={id} />

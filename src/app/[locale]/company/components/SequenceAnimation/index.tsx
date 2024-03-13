@@ -159,7 +159,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
         px-5
       "
     >
-      <BasicWidthContainer styles="max-md:!px-0">
+      <BasicWidthContainer styles="!px-0">
         <div className="flex flex-col items-center" id="canvas">
           <TwoTierHeading
             tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}

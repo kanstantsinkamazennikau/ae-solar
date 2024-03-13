@@ -17,7 +17,7 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
   const [textArray, setTextArray] = useState(SEQUENCE_ANIMATION_TEXT);
   const [stopIntersecting, setStopIntersecting] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
-  const { intersecting, ref } = useIntersection(0.3);
+  const { intersecting, ref } = useIntersection(0.2);
 
   useEffect(() => {
     if (id === "Neptune")
@@ -41,6 +41,7 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
           tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
           align="right"
           externalStyle="z-10"
+          size="default"
         />
         <div className="flex justify-center items-center min-[600px]:flex-row flex-col-reverse">
           <div className="min-[600px]:flex flex-col gap-2 grid min-[480px]:grid-cols-2 grid-cols-1 max-[600px]:mt-10">
@@ -54,7 +55,7 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                   duration-500
                   xl:w-[430px]
                   min-[920px]:w-[330px]
-                  w-[230px]
+                  min-[600px]:w-[230px]
                 `}
               >
                 <div className="flex items-center">
@@ -91,9 +92,10 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                     <Image
                       src={`/images/sequence/${id}/${index}.png`}
                       alt={index.toString()}
-                      width={1222}
-                      height={854}
+                      width={1920}
+                      height={1080}
                       priority
+                      onTransitionEnd={() => setStopIntersecting(true)}
                       className={`
                         relative ${
                           !startAnimation && !stopIntersecting
@@ -101,8 +103,8 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                             : "translate-y-0 opacity-100"
                         }
                         transition-all
-                        duration-[2s]
-                        z-10
+                        duration-[1s]
+                        scale-[1.35]
                       `}
                     />
                   </div>
@@ -113,8 +115,8 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                   key={index}
                   src={`/images/sequence/${id}/${index}.png`}
                   alt={index.toString()}
-                  width={1222}
-                  height={854}
+                  width={1920}
+                  height={1080}
                   priority
                   className={`
                     absolute
@@ -125,8 +127,9 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                     }
                     transition-all
                     duration-[2s]
+                    scale-[1.35]
                   `}
-                  style={{ transitionDelay: `${index * 100}ms`, zIndex: index }}
+                  style={{ transitionDelay: `${index * 200}ms`, zIndex: index }}
                 />
               );
             })}
@@ -187,7 +190,7 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
               `}
             />
             <div className="fade-strip-bottom max-lg:!h-[200px] max-md:!h-[100px]" /> */}
-            <div className="fade-strip-bottom max-lg:!h-[200px] max-md:!h-[100px]" />
+            <div className="fade-strip-bottom !h-[150px]" />
           </div>
         </div>
       </BasicWidthContainer>
