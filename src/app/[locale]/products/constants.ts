@@ -1,5 +1,7 @@
-export const PRODUCTS_WELCOME = "Willkommen bei AESOLAR – deutscher Hersteller der TIER1-Kategorie";
-export const PRODUCTS_LIGHTING = "Den Weg zu einer nachhaltigen Zukunft erleuchten";
+export const PRODUCTS_WELCOME =
+  "Willkommen bei AESOLAR – deutscher Hersteller der TIER1-Kategorie";
+export const PRODUCTS_LIGHTING =
+  "Den Weg zu einer nachhaltigen Zukunft erleuchten";
 export const PRODUCT_DESCRIPTIONS = {
   Aurora: `Aurora (PERC) Unsere Passivated Emitter and Rear Cell (PERC)-Technologie, passend benannt Aurora, bringt eine neue Ära hoch effizienter und reduzierter Leistungsverluste bei Solarmodulen. Es ist eine umweltfreundlichere Wahl für Landschaften und erzeugt die gleiche Leistung wie herkömmliche Module, benötigt jedoch weniger Platz.`,
   Comet: `Comet (HJT): Tauchen Sie ein in die Zukunft der Solarenergie mit unserer Heterojunction-Technologie (HJT), benannt nach dem schnellen Himmelsphänomen - dem Kometen. Erleben Sie hohe Effizienz und überragende Leistung, selbst unter schattigen oder hochtemperaturigen Bedingungen.`,
@@ -45,8 +47,12 @@ export const PRODUCT_SINCE_HIGHLIGHT = [
   "Seit 2003 ist AE Solar",
   "ein führender Innovator",
 ];
-export const PRODUCT_WE_ARE_TIER = "Wir sind ein Unternehmen der TIER-1-Kategorie.";
-export const PRODUCT_WE_ARE_TIER_HIGHLIGHT = ["Unternehmen der TIER-1-Kategorie"];
+
+export const PRODUCT_WE_ARE_TIER =
+  "Wir sind ein Unternehmen der TIER-1-Kategorie.";
+export const PRODUCT_WE_ARE_TIER_HIGHLIGHT = [
+  "Unternehmen der TIER-1-Kategorie",
+];
 export const PRODUCT_ADVANTAGES = [
   {
     image: "solutions.svg",
