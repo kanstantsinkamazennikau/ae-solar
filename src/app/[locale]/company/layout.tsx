@@ -5,24 +5,24 @@ import { headers } from "next/headers";
 const mapTitleWithDocumentsCategory = {
   faq: { title: "FAQ", description: "Have a Question? We Have Solutions" },
   publishers_info: {
-    title: "Publishers Info",
-    description: "Publisher's Information",
+    title: "Herausgeberinformationen",
+    description: "Publisher-Informationen",
   },
   imprint: {
-    title: "Imprint Info",
-    description: "Imprint Information",
+    title: "Impressumsinformationen",
+    description: "Impressumsinformationen",
   },
   manufacturer: {
-    title: ` Manufacturer`,
-    description: `Quality Delivered Everytime`,
+    title: ` Hersteller`,
+    description: `Qualität, die jedes Mal geliefert wird.`,
   },
   blog: {
     title: `Blog`,
-    description: `Read Our Thoughts On the Blog`,
+    description: `Lesen Sie unsere Gedanken im Blog`,
   },
   company: {
-    title: `Company`,
-    description: `lluminating Your Journey towards a Greener Tomorrow`,
+    title: `Unternehmen`,
+    description: `Illuminieren Sie Ihre Reise hin zu einer grüneren Zukunft.`,
   },
 };
 

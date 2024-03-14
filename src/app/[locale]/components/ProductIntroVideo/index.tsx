@@ -217,7 +217,7 @@ export default function ProductIntroVideo() {
                   height={20}
                   className="inline relative -top-[1px]"
                 />
-                Play Slider
+                Slider abspielen
               </span>
               <span className="splide__toggle__pause flex items-center gap-[2px]">
                 <Image
@@ -228,7 +228,7 @@ export default function ProductIntroVideo() {
                   height={20}
                   className="inline relative -top-[1px]"
                 />
-                Pause Slider
+                Slider pausieren
               </span>
             </button>
             {/* </button> */}

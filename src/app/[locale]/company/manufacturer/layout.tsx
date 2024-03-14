@@ -1,6 +1,6 @@
 export async function generateMetadata() {
-  const title = `AE-Solar | Manufacturer`;
-  const description = `AE-Solar | Manufacturer Quality Delivered Everytime`;
+  const title = `AE-Solar | Hersteller`;
+  const description = `AE-Solar | Qualität, die jedes Mal geliefert wird.`;
 
   return {
     title,

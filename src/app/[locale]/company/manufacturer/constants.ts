@@ -1,14 +1,14 @@
 import { ManufacturerArticle } from "@/app/[locale]/company/manufacturer/types";
 
-export const MANUFACTURER_MANUFACTURER = "Manufacturer";
-export const MANUFACTURER_QUALITY = "Quality Delivered Everytime";
+export const MANUFACTURER_MANUFACTURER = "Hersteller";
+export const MANUFACTURER_QUALITY = "Qualität, die jedes Mal geliefert wird";
 export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
   {
-    paragraphHeading: "Exploring Our History: Delve into Our Roots and Values",
+    paragraphHeading: "Unsere Geschichte erkunden: Tauchen Sie in unsere Wurzeln und Werte ein",
     paragraphs: [
       {
         type: "text",
-        value: `In a world where sustainable energy is no longer a luxury but a necessity, AESOLAR stands as a beacon of hope. With our roots firmly planted in the rich heritage of German engineering, we illuminate the path to a future powered by the sun. Our mantra is simple yet powerful— It's time to save the world. And that time is now.`,
+        value: `In einer Welt, in der nachhaltige Energie nicht länger ein Luxus, sondern eine Notwendigkeit ist, steht AESOLAR als Hoffnungsschimmer. Mit unseren Wurzeln fest in der reichen Tradition deutscher Ingenieurskunst verankert, erhellen wir den Weg zu einer Zukunft, die von der Sonne angetrieben wird. Unser Mantra ist einfach, aber kraftvoll: Es ist Zeit, die Welt zu retten. Und diese Zeit ist jetzt.`,
       },
       {
         type: "image",
@@ -27,11 +27,11 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
       },
       {
         type: "text",
-        value: `Since our inception by Dr. Alexander Maier and his visionary brothers in 2003, AESOLAR has been steadfastly working on this mission. Being a TIER1 company, we are dedicated to providing state-of-the-art, top-quality photovoltaic modules that are the paragons of stability, durability, and reliability. Yet, we never rest on our laurels. Our relentless quest for innovation constantly propels us to scale new heights in technology and extend our industry chain.`,
+        value: `Seit unserer Gründung durch Dr. Alexander Maier und seine visionären Brüder im Jahr 2003 arbeitet AESOLAR unerschütterlich an dieser Mission. Als TIER1-Unternehmen sind wir bestrebt, hochmoderne, qualitativ hochwertige Photovoltaikmodule anzubieten, die die Maßstäbe für Stabilität, Langlebigkeit und Zuverlässigkeit setzen. Doch ruhen wir uns nie auf unseren Lorbeeren aus. Unser unermüdliches Streben nach Innovation treibt uns ständig dazu an, neue Höhen in der Technologie zu erreichen und unsere Industriekette zu erweitern.`,
       },
       {
         type: "text",
-        value: `At AESOLAR, we don't just manufacture solar modules; we bring you the promise of a cleaner, brighter future. Our comprehensive solutions and efficient services are designed to maximize your return on investment, lower the Levelized cost of electricity (LCOE), and minimize your carbon footprint.`,
+        value: `Bei AESOLAR stellen wir nicht nur Solarmodule her; wir bringen Ihnen das Versprechen einer saubereren, helleren Zukunft. Unsere umfassenden Lösungen und effizienten Dienstleistungen sind darauf ausgerichtet, Ihre Investitionsrendite zu maximieren, die Nettostromgestehungskosten (LCOE) zu senken und Ihren CO2-Fußabdruck zu minimieren.`,
       },
       {
         type: "image",
@@ -50,18 +50,18 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
       },
       {
         type: "text",
-        value: `Through our global network, we offer innovative products and solutions suitable for all customer applications. Our projects span the globe, serving as a testament to our commitment to renewable energy. We firmly believe that clean energy should be as ubiquitous and easily accessible as sunlight, illuminating the path towards a sustainable future.`,
+        value: `Durch unser globales Netzwerk bieten wir innovative Produkte und Lösungen, die für alle Kundenanwendungen geeignet sind. Unsere Projekte erstrecken sich über den gesamten Globus und sind ein Beweis für unser Engagement für erneuerbare Energien. Wir sind fest davon überzeugt, dass saubere Energie ebenso allgegenwärtig und leicht zugänglich sein sollte wie Sonnenlicht und den Weg zu einer nachhaltigen Zukunft erhellt.`,
       },
       {
         type: "text",
-        value: `Every sunrise brings a new day and new opportunities. At AESOLAR, we're not just witnessing the dawn of a new era in renewable energy; we're leading it. Harness the power of the sun with us and join our mission to save the world. Because every ray of sunlight we capture today leads us one step closer to a sustainable tomorrow.`,
+        value: `Jeder Sonnenaufgang bringt einen neuen Tag und neue Möglichkeiten mit sich. Bei AESOLAR erleben wir nicht nur den Beginn einer neuen Ära in der erneuerbaren Energie; wir führen sie an. Nutzen Sie die Kraft der Sonne mit uns und schließen Sie sich unserer Mission an, die Welt zu retten. Denn jeder Sonnenstrahl, den wir heute einfangen, bringt uns einen Schritt näher zu einer nachhaltigen Zukunft.`,
       },
     ],
   },
 ];
 export const MANUFACTURER_DO_IT_TOGETHER =
-  "Let's do it together, one ray at a time.";
+  "Lass uns gemeinsam, Strahl für Strahl, tun.";
 export const MANUFACTURER_SAVE_THE_WORLD =
-  "AESOLAR — It's time to save the World. ";
-export const MANUFACTURER_WELCOME = "Welcome to AESolar";
-export const MANUFACTURER_HARNESS = "Harness the Sun, Empower the World.";
+  "AESOLAR – Es ist Zeit, die Welt zu retten.";
+export const MANUFACTURER_WELCOME = "Willkommen bei AESolar.";
+export const MANUFACTURER_HARNESS = "Nutzen Sie die Sonne, stärken Sie die Welt.";

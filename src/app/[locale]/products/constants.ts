@@ -1,81 +1,80 @@
-export const PRODUCTS_WELCOME = "Welcome to AESOLAR—German TIER1 Manufacturer";
-export const PRODUCTS_LIGHTING = "Lighting The Way To A Sustainable Future";
+export const PRODUCTS_WELCOME = "Willkommen bei AESOLAR – deutscher Hersteller der TIER1-Kategorie";
+export const PRODUCTS_LIGHTING = "Den Weg zu einer nachhaltigen Zukunft erleuchten";
 export const PRODUCT_DESCRIPTIONS = {
-  Aurora: `Aurora (PERC) Our Passivated Emitter and Rear Cell (PERC) technology, aptly named Aurora, brings a new dawn of highly efficient and reduced power loss solar modules. It's a greener choice for landscapes, generating the same power as conventional modules, but in less space`,
-  Comet: `Comet (HJT) Leap into the future of solar energy with our Heterojunction Technology (HJT) named after the swift celestial phenomenon - Comet. Experience high efficiency and superior performance, even under shaded or high-temperature conditions`,
-  Terra: `Terra (Agricultural Photovoltaic, Noise Barrier and Solar Fence Applications) The Terra module, our symbol of solar versatility, integrates different distinct applications of solar technology: agricultural photovoltaic, noise barriers, and solar fencing, carports aso.`,
-  ShadeStar: `ShadeStar(Smart Cell) Meet our innovative Smart Cell technology, ShadeStar, designed to withstand the challenges of partial shading. It's a leap forward in sustainable energy, providing increased energy output and installation capacity.`,
-  Neptune: `Neptune (PVT Hybrid) - Maximize solar efficiency with PVT Hybrid tech. Comprehensive for electricity and thermal, consistent in all climates.`,
-  Meteor: `Meteor (TOPCon) Our Tunnel Oxide Passivated Contact (TOPCon) technology - named Meteor - minimizes power loss and shines brightly, even in low light conditions. Its robust design and energy-efficient manufacturing process make it a game-changer in solar technology.`,
+  Aurora: `Aurora (PERC) Unsere Passivated Emitter and Rear Cell (PERC)-Technologie, passend benannt Aurora, bringt eine neue Ära hoch effizienter und reduzierter Leistungsverluste bei Solarmodulen. Es ist eine umweltfreundlichere Wahl für Landschaften und erzeugt die gleiche Leistung wie herkömmliche Module, benötigt jedoch weniger Platz.`,
+  Comet: `Comet (HJT): Tauchen Sie ein in die Zukunft der Solarenergie mit unserer Heterojunction-Technologie (HJT), benannt nach dem schnellen Himmelsphänomen - dem Kometen. Erleben Sie hohe Effizienz und überragende Leistung, selbst unter schattigen oder hochtemperaturigen Bedingungen.`,
+  Terra: `Terra (Agrarphotovoltaik, Lärmschutzwände und Solarzaunanwendungen): Das Terra-Modul, unser Symbol für die Vielseitigkeit der Solartechnologie, integriert verschiedene einzigartige Anwendungen der Solartechnik: agrarische Photovoltaik, Lärmschutzwände und Solarzäune, Carports usw.`,
+  ShadeStar: `ShadeStar (Smart Cell): Lernen Sie unsere innovative Smart-Cell-Technologie, ShadeStar, kennen, die entwickelt wurde, um den Herausforderungen von teilweiser Beschattung standzuhalten. Es ist ein Sprung nach vorne in der nachhaltigen Energie, bietet eine erhöhte Energieausbeute und Installationskapazität.`,
+  Neptune: `Neptune (PVT-Hybrid): Maximieren Sie die Solareffizienz mit der PVT-Hybridtechnologie. Umfassend für Strom und Wärme, gleichbleibend in allen Klimazonen.`,
+  Meteor: `Meteor (TOPCon): Unsere Tunneloxid passivierte Kontakt (TOPCon) Technologie - genannt Meteor - minimiert den Leistungsverlust und strahlt auch bei schlechten Lichtverhältnissen hell. Ihr robustes Design und der energieeffiziente Herstellungsprozess machen sie zu einem Game-Changer in der Solartechnologie.`,
 };
 
 export const PRODUCT_SLOGAN = {
-  Aurora: `Illuminate Your World with Aurora's Diversity`,
-  Comet: `Elevate Your Energy with Comet`,
-  Terra: `Versatile and Robust Solar Power`,
-  ShadeStar: `Light Where You Need It`,
-  Neptune: `Dual Power, Maximum Efficiency`,
-  Meteor: `Harness Stellar Power with Meteor`,
+  Aurora: `Erleuchten Sie Ihre Welt mit der Vielfalt von Aurora`,
+  Comet: `Steigern Sie Ihre Energie mit Comet`,
+  Terra: `Vielseitige und robuste Solarenergie`,
+  ShadeStar: `Licht, wo Sie es brauchen`,
+  Neptune: `Doppelte Kraft, maximale Effizienz`,
+  Meteor: `Nutzen Sie die Sternenkraft mit Meteor`,
 };
 
-export const PRODUCT_WE_TRANSFORM = "We Transform";
-export const PRODUCT_WE_TRANSFORM_SUNLIGHT = "Sunlight Into Power";
-export const PRODUCT_FOR_YOU = "for You and";
-export const PRODUCT_FOR_PLANET = "for The Planet";
-export const PRODUCT_WE_TRANSFORM_RANGE = `Our range of advanced solar technologies is designed to harness the abundant energy of the sun, providing renewable, clean, and highly efficient solutions. 
-Each of our innovative products draws inspiration from the universe, embodying our belief in the vast potential of renewable energy.`;
+export const PRODUCT_WE_TRANSFORM = "Wir verwandeln";
+export const PRODUCT_WE_TRANSFORM_SUNLIGHT = "Sonnenlicht in Energie";
+export const PRODUCT_FOR_YOU = "Für dich und ";
+export const PRODUCT_FOR_PLANET = "für den Planeten";
+export const PRODUCT_WE_TRANSFORM_RANGE = `Unsere Palette fortschrittlicher Solartechnologien ist darauf ausgelegt, die reichliche Energie der Sonne zu nutzen und erneuerbare, saubere und äußerst effiziente Lösungen bereitzustellen. Jedes unserer innovativen Produkte schöpft Inspiration aus dem Universum und verkörpert unseren Glauben an das immense Potenzial erneuerbarer Energie.`;
 export const PRODUCT_WE_TRANSFORM_HIGHLIGHT = [
-  "designed to harness the abundant energy of the sun",
-  "draws inspiration from the universe",
+  "entworfen, um die reichliche Energie der Sonne zu nutzen",
+  "zieht Inspiration aus dem Universum",
 ];
 
 export const PRODUCT_ADVANCED_TECHNOLOGY =
-  "Our range of advanced solar technologies is designed to harness the abundant energy of the sun, providing renewable, clean, and highly efficient solutions.";
+  "Unsere Palette fortschrittlicher Solartechnologien ist darauf ausgelegt, die reichliche Energie der Sonne zu nutzen und erneuerbare, saubere und äußerst effiziente Lösungen bereitzustellen.";
 export const PRODUCT_INNOVATIVE_PRODUCTS =
-  "Each of our innovative products draws inspiration from the universe, embodying our belief in the vast potential of renewable energy.";
+  "Jedes unserer innovativen Produkte schöpft Inspiration aus dem Universum und verkörpert unseren Glauben an das immense Potenzial erneuerbarer Energie.";
 export const PRODUCT_JOIN =
-  "Join us in harnessing the power of the sun and driving the evolution of solar technology.";
+  "Schließen Sie sich uns an, um die Kraft der Sonne zu nutzen und die Evolution der Solartechnologie voranzutreiben.";
 
-export const PRODUCT_TIME_TO_CHOOSE = "Time To Choose";
-export const PRODUCT_YOUR_MODULE = "Your Module";
-export const PRODUCT_THE_ADVANTAGES = "The Advantages:";
-export const PRODUCT_ESSENTIAL = "Essential Insights";
+export const PRODUCT_TIME_TO_CHOOSE = "Zeit zu wählen";
+export const PRODUCT_YOUR_MODULE = "Ihr Modul";
+export const PRODUCT_THE_ADVANTAGES = "Die Vorteile:";
+export const PRODUCT_ESSENTIAL = "Wesentliche Erkenntnisse";
 export const PRODUCT_SINCE =
-  "Since 2003, AE Solar has been at the forefront of the renewable energy industry. We're not just a Tier 1 solar panel manufacturer, we're a leader and innovator in clean, efficient, and sustainable energy. We stand for quality, durability, and efficiency in harnessing the sun's power.";
+  "Seit 2003 ist AE Solar an der Spitze der erneuerbaren Energien. Wir sind nicht nur ein Hersteller von Solarmodulen der Klasse 1, sondern auch ein Vorreiter und Innovator in der sauberen, effizienten und nachhaltigen Energie. Wir stehen für Qualität, Langlebigkeit und Effizienz bei der Nutzung der Kraft der Sonne.";
 export const PRODUCT_SINCE_HIGHLIGHT = [
-  "Since 2003, AE Solar",
-  "we're a leader and innovator",
+  "Seit 2003 ist AE Solar",
+  "ein führender Innovator",
 ];
-export const PRODUCT_WE_ARE_TIER = "We’re TIER 1 Company";
-export const PRODUCT_WE_ARE_TIER_HIGHLIGHT = ["TIER 1 Company"];
+export const PRODUCT_WE_ARE_TIER = "Wir sind ein Unternehmen der TIER-1-Kategorie.";
+export const PRODUCT_WE_ARE_TIER_HIGHLIGHT = ["Unternehmen der TIER-1-Kategorie"];
 export const PRODUCT_ADVANTAGES = [
   {
     image: "solutions.svg",
-    title: `Flexible Solar Solutions 
-    for All Energy Needs`,
+    title: `Flexible Solarenergielösungen
+    für alle Energiebedürfnisse`,
     description:
-      "Our comprehensive solar panel portfolio is designed to maximize flexibility and efficiency. Whether you're aiming to power your home or looking to energize large commercial buildings and expansive solar farms, AE Solar's products are up to the task. With us, powering your world with the sun's energy is simpler and more efficient than ever.",
+      "Unser umfassendes Portfolio an Solarmodulen ist darauf ausgelegt, Flexibilität und Effizienz zu maximieren. Egal, ob Sie Ihr Zuhause mit Strom versorgen möchten oder große gewerbliche Gebäude und ausgedehnte Solarfarmen mit Energie versorgen möchten, die Produkte von AE Solar sind dafür geeignet. Mit uns ist es einfacher und effizienter als je zuvor, Ihre Welt mit der Energie der Sonne zu versorgen.",
   },
   {
     image: "quality.svg",
-    title: `German Engineering 
-    at Its Finest `,
+    title: `Deutsche Ingenieurskunst
+    in ihrer besten Form`,
     description:
-      "Two decades in the business have shaped us and the solar world. Our commitment to German engineering excellence has led to the creation of next-generation solar modules - powerful, elegant, and innovative. We have the ideal solar solution tailored to your needs. With AESOLAR, gain independence and experience the exceptional performance of our modules.",
+      "Zwei Jahrzehnte im Geschäft haben uns und die Welt der Solarenergie geprägt. Unser Engagement für deutsche Ingenieurskunst hat zur Entwicklung von Solarmodulen der nächsten Generation geführt - leistungsstark, elegant und innovativ. Wir haben die ideale Solarenergielösung, die auf Ihre Bedürfnisse zugeschnitten ist. Mit AESOLAR erlangen Sie Unabhängigkeit und erleben die außergewöhnliche Leistung unserer Module.",
   },
   {
     image: "engineering.svg",
-    title: `Quality and 
+    title: `Qualität und 
     Innovation`,
     description:
-      "Years of experience and innovation have made our solar modules synonymous with top-tier design and technology. We take pride in our rigorous quality control procedures, ensuring that our products always meet and surpass your expectations.",
+      "Jahrelange Erfahrung und Innovation haben unsere Solarmodule zu Synonymen für erstklassiges Design und Technologie gemacht. Wir sind stolz auf unsere strengen Qualitätskontrollverfahren, die sicherstellen, dass unsere Produkte stets Ihre Erwartungen erfüllen und übertreffen.",
   },
 
   {
     image: "profit.svg",
-    title: `Profitable and 
-    Durable Solar Modules`,
+    title: `Rentable und 
+    langlebige Solarmodule`,
     description:
-      "Our solar modules are more than just energy-efficient - they're a profitable investment. Each one surpasses its stated output while boasting exceptional robustness. Thanks to our years of experience in Photovoltaic (PV) module production, stringent material selection, and consistent quality checks, our products are built to last, ensuring you long-term efficiency and minimal worries. Choose AE Solar and invest in a brighter, cleaner future.",
+      "Unsere Solarmodule sind mehr als nur energieeffizient - sie sind eine rentable Investition. Jedes übertrifft seine angegebene Leistung und zeichnet sich durch außergewöhnliche Robustheit aus. Dank unserer langjährigen Erfahrung in der Produktion von Photovoltaik(PV)-Modulen, strenger Materialauswahl und konsequenten Qualitätskontrollen sind unsere Produkte langlebig und gewährleisten Ihnen langfristige Effizienz und minimale Sorgen. Wählen Sie AE Solar und investieren Sie in eine hellere, sauberere Zukunft.",
   },
 ];

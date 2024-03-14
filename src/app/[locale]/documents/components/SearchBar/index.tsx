@@ -73,7 +73,7 @@ export default function SearchBar({ isDocuments }: { isDocuments?: boolean }) {
               externalStyle="border-none"
               externalContainerStyle="!w-full"
               name={FORMS_FIELDS.searchInputValue}
-              placeholder={"I’m looking for…"}
+              placeholder={"Ich suche nach..."}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />

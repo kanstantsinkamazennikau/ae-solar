@@ -140,7 +140,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           z-10
         `}
       >
-        <span>{"Scroll to the future"}</span>
+        <span>{"In die Zukunft blättern"}</span>
         <Image
           src="/images/arrowFuture.svg"
           alt="arrow"

@@ -18,8 +18,8 @@ export const FORM_FIELDS_INPUT_TYPES = {
   textarea: "textarea",
 };
 
-export const HEADER_TIER1 = "German TIER1 Manufacturer of ";
-export const HEADER_TIER1_QUALITY = "High-Quality Solar Panels";
+export const HEADER_TIER1 = "Wir sind TIER1 Hersteller von ";
+export const HEADER_TIER1_QUALITY = "hochqualitativen Solarmodulen";
 
 export const FORMS_FIELDS = {
   name: "name",
@@ -43,19 +43,19 @@ export const HEADER_NAV_LINKS_ARRAY = [
 
   {
     url: "/company",
-    text: "Company",
+    text: "Unternehmen",
     subMenu: [
-      { url: "/company/manufacturer", text: "Manufacturer" },
-      { url: "/company/news", text: "News" },
+      { url: "/company/manufacturer", text: "Hersteller" },
+      { url: "/company/news", text: "Nachrichten" },
       { url: "/company/faq", text: "FAQ" },
     ],
   },
   {
     url: "/products",
-    text: "Products",
+    text: "Produkte",
     stickyProducts: true,
     subMenu: [
-      { url: "/products", text: "All Modules" },
+      { url: "/products", text: "Alle Module" },
       { url: "/products/Aurora", text: "Aurora" },
       { url: "/products/Meteor", text: "Meteor" },
       { url: "/products/Comet", text: "Comet" },
@@ -74,25 +74,25 @@ export const HEADER_NAV_LINKS_ARRAY = [
   //     },
   //     {
   //       url: "/info/publishers_info",
-  //       text: "Publisher's Info",
+  //       text: "Herausgebers",
   //     },
   //     {
   //       url: "/info/imprint",
-  //       text: "Imprint Info",
+  //       text: "Impressum",
   //     },
   //   ],
   // },
   {
     url: "/documents",
-    text: "Documents",
+    text: "Dokumente",
   },
   {
     url: "/solutions",
-    text: "B2B Solutions",
+    text: "B2B Lösungen",
   },
 ];
-export const HEADER_CONTACT_US = "Contact Us";
-export const HEADER_LANGUAGE = "Language";
+export const HEADER_CONTACT_US = "Kontaktieren Sie uns";
+export const HEADER_LANGUAGE = "Sprache";
 export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Aurora.svg",
   "Meteor.svg",
@@ -101,29 +101,29 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "ShadeStar.svg",
   "Neptune.svg",
 ];
-export const HEADER_SUBNAVIGATION_ALL_MODULES = "All Modules";
-export const HEADER_CONFIGURE_YOUR_MODEL = "All Products";
-export const HEADER_CALCULATE = "Calculate";
-export const HEADER_CHOOSE_LANGUAGE = "Choose language";
+export const HEADER_SUBNAVIGATION_ALL_MODULES = "Alle Module";
+export const HEADER_CONFIGURE_YOUR_MODEL = "All Produkte";
+export const HEADER_CALCULATE = "Berechnen";
+export const HEADER_CHOOSE_LANGUAGE = "Wählen Sie die Sprache";
 
 //MAIN PAGE
 export const HERO_SECTION_SLOGAN =
-  "We are TIER1 Manufacturer of High-Quality Solar Panels";
-export const HERO_SECTION_SCROLL_TO_THE_FUTURE = "Scroll to the future";
+  "Wir sind ein TIER1 Hersteller von hochwertigen Solarmodulen";
+export const HERO_SECTION_SCROLL_TO_THE_FUTURE = "Scrollen Sie in die Zukunft";
 
 export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
-  { stat: "2003", details: "experience since", initialValue: "2023" },
+  { stat: "2003", details: "Erfahrung seit", initialValue: "2023" },
   {
     stat: "3200",
-    details: "successful PV installations",
+    details: "erfolgreiche PV-Installationen",
     initialValue: "3100",
     sign: "+",
   },
-  { stat: "100", details: "countries", initialValue: "50", sign: "+" },
+  { stat: "100", details: "Länder", initialValue: "50", sign: "+" },
 ];
-export const AWARDS_AND_STATS_GERMAN_ENGINEERING = "German Engineering";
+export const AWARDS_AND_STATS_GERMAN_ENGINEERING = "Deutsche Ingenieurskunst";
 export const AWARDS_AND_STATS_PRODUCTION_PLANTS =
-  "Production Plants in Europe and Asia";
+  "Produktionsanlagen in Europa und Asien";
 export const AWARDS_AND_STATS_AWARDS_IMAGES = [
   "badge1.png",
   "badge2.png",
@@ -138,15 +138,15 @@ export const AWARDS_AND_STATS_AWARDS_IMAGES = [
   "badge11.png",
   "badge12.png",
 ];
-export const AWARDS_AND_STATS_SEE_ALL_AWARDS = "See all awards";
+export const AWARDS_AND_STATS_SEE_ALL_AWARDS = "Alle Auszeichnungen ansehen";
 
-export const PRODUCT_INTRO_THE_NEXT_LEVEL_OF = "The Next Level of";
-export const PRODUCT_INTRO_MODULES = "Modules";
-export const PRODUCT_INTRO_HIGH_QUALITY_SP = "High-Quality Solar Panels";
+export const PRODUCT_INTRO_THE_NEXT_LEVEL_OF = "Die nächste Ebene der";
+export const PRODUCT_INTRO_MODULES = "Module";
+export const PRODUCT_INTRO_HIGH_QUALITY_SP = "Hochwertige Solarmodule";
 export const PRODUCT_INTRO_PANELS_MAPPING = {
-  power: "Max. Power (up to)",
-  efficiency: "Max. Effienciency (up to)",
-  voltage: "Max. System Voltage",
+  power: "Max. Leistung (bis zu)",
+  efficiency: "Max. Wirkungsgrad (bis zu)",
+  voltage: "Max. Systemspannung",
 };
 export const PRODUCT_INTRO_PANELS_IMAGES = [
   "Aurora",
@@ -156,7 +156,7 @@ export const PRODUCT_INTRO_PANELS_IMAGES = [
   "ShadeStar",
   "Neptune",
 ];
-export const PRODUCT_INTRO_DETAILED_INFO = "Detailed Info";
+export const PRODUCT_INTRO_DETAILED_INFO = "Detaillierte Informationen";
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
     stats: {
@@ -166,26 +166,22 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Comet.svg",
-      text: "Comet (HJT). Highlight Comet's unparalleled all-weather performance and cutting-edge technology, drawing a parallel with the relentless journey of a comet.",
+      text: "Comet (HJT). Unterstreichen Sie die unvergleichliche Allwetterleistung und Spitzentechnologie von Comet, indem Sie eine Parallele zu der unaufhaltsamen Reise eines Kometen ziehen.",
     },
     advantages: [
       {
-        title: "n-Type Heterojunction",
-        description: "Advanced solar technology",
+        title: "n-Typ-Heteroübergang",
+        description: "Fortgeschrittene Solartechnologie",
       },
-      { title: "Reliability", description: "Exceptionally low degradation" },
-      { title: "Temperature Stability", description: "Very low coefficient" },
+      { title: "Zuverlässigkeit", description: "Außergewöhnlich geringe Degradation" },
+      { title: "Temperaturstabilität", description: "Sehr niedriger Koeffizient" },
       {
-        title: "Low-Light Performance",
-        description: "High output in dim conditions",
-      },
-      {
-        title: "Extreme Climate Suitability",
-        description: "Designed for harsh environments",
+        title: "Leistung bei schwachem Licht",
+        description: "Hohe Leistung bei schwachen Lichtverhältnissen",
       },
       {
-        title: "Closing Statement",
-        description: `"Comet: Leading Efficiency, Whatever the Weather"`,
+        title: "Extreme Klimatauglichkeit",
+        description: "Entwickelt für raue Umgebungen",
       },
     ],
   },
@@ -197,20 +193,20 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Aurora.svg",
-      text: "Aurora (PERC). Redesigned with the Theme of Aurora Borealis. Reinvent Aurora as a solar module inspired by the dynamic and vibrant colors of the Northern Lights. Emphasize its versatility and aesthetic appeal, mirroring the ever-changing colors of auroras",
+      text: "Aurora (PERC). Neu gestaltet mit dem Thema Aurora Borealis. Erfinden Sie Aurora als Solarmodul neu, inspiriert von den dynamischen und lebendigen Farben des Nordlichts. Betonen Sie seine Vielseitigkeit und ästhetische Anziehungskraft, die die sich ständig verändernden Farben der Aurora widerspiegeln.",
     },
     advantages: [
-      { title: "Advanced Cells", description: "PERC and Topcon technology" },
-      { title: "Size Variety", description: "small, medium, large modules" },
-      { title: "Design Option", description: "Mono/Bifacial, color choices" },
-      { title: "Custom Features", description: "Tailored material and power" },
+      { title: "Fortschrittliche Zellen", description: "PERC- und Topcon-Technologie" },
+      { title: "Größenvielfalt", description: "kleine, mittlere, große Module" },
+      { title: "Designoptionen", description: "Mono/Bifacial, Farbauswahl" },
+      { title: "Individuelle Funktionen", description: "Maßgeschneidertes Material und Leistung" },
       {
-        title: "Climate Adaptability",
-        description: "Suitable for extreme conditions",
+        title: "Klimaanpassungsfähigkeit",
+        description: "Geeignet für extreme Bedingungen",
       },
       {
-        title: "Closing Statement",
-        description: `"Aurora: Diverse and Dynamic Solar Solutions"`,
+        title: "Abschlussstatement",
+        description: `"Aurora: Vielfältige und dynamische Solarlösungen"`,
       },
     ],
   },
@@ -222,26 +218,22 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Meteor.svg",
-      text: "Meteor (TOPCon). Focus on Meteor's ability to shine bright in low-light conditions, just like a meteor streaking across the night sky",
+      text: "Meteor (TOPCon). Konzentrieren Sie sich auf die Fähigkeit des Meteor, auch bei schwachem Licht hell zu leuchten, genau wie ein Meteor, der über den Nachthimmel zieht.",
     },
     advantages: [
-      { title: "TOPCon N-Type", description: "Superior efficiency technology" },
+      { title: "TOPCon N-Typ", description: "Technologie mit überragender Effizienz" },
       {
-        title: "Broad Customization",
-        description: "Materials, power, dimensions",
+        title: "Umfassende Anpassungsmöglichkeiten",
+        description: "Materialien, Leistung, Abmessungen",
       },
-      { title: "Color Diversity", description: "Wide range of choices" },
+      { title: "Farbenvielfalt", description: "Breites Spektrum an Auswahlmöglichkeiten" },
       {
-        title: "Resilient Performance",
-        description: "Low degradation, high durability",
-      },
-      {
-        title: "Climate Versatility",
-        description: "Ideal for varied weather conditions",
+        title: "Robuste Leistung",
+        description: "Geringe Degradation, hohe Haltbarkeit",
       },
       {
-        title: "Closing Statement",
-        description: `"Meteor: Efficiency and Durability in Harmony"`,
+        title: "Klimavielseitigkeit",
+        description: "Ideal für unterschiedliche Wetterbedingungen",
       },
     ],
   },
@@ -253,26 +245,26 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Terra.svg",
-      text: "Versatile and Robust Solar Power. Terra (Agricultural Photovoltaic, Noise Barrier, and Solar Fence Applications) Showcase Terra's multifunctional applications, emphasizing its role in harmonizing with the Earth's needs.",
+      text: "Vielseitige und robuste Solarenergie. Terra (Anwendungen in der Landwirtschaft, Lärmschutzwänden und Solargittern) Zeigen Sie die multifunktionalen Anwendungen von Terra und betonen Sie seine Rolle bei der Harmonisierung mit den Bedürfnissen der Erde.",
     },
     advantages: [
-      { title: "n-Type TOPCon Tech", description: "Cutting-edge efficiency" },
+      { title: "n-Type TOPCon Tech", description: "Modernste Effizienz" },
       {
-        title: "Application Flexibility",
-        description: "Ideal for various installations",
+        title: "Anwendungsflexibilität",
+        description: "Ideal für verschiedene Installationen",
       },
       {
-        title: "Design Strength",
-        description: "High wind and snow resistance",
+        title: "Designstärke",
+        description: "Hohe Wind- und Schneewiderstandsfähigkeit",
       },
-      { title: "Long-Term Reliability", description: "Minimal degradation" },
+      { title: "Langfristige Zuverlässigkeit", description: "Minimale Degradation" },
       {
-        title: "Bifacial Efficiency",
-        description: "Optimal energy capture",
+        title: "Bifaziale Effizienz",
+        description: "Optimale Energieerfassung",
       },
       {
-        title: "Closing Statement",
-        description: `"Terra: Adaptable Power for Every Environment"`,
+        title: "Abschlussstatement",
+        description: `"Terra: Anpassbare Energie für jede Umgebung"`,
       },
     ],
   },
@@ -284,29 +276,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Neptune.svg",
-      text: "Neptune: Dual Power, Maximum Efficiency",
+      text: "Neptune: Doppelte Leistung, maximale Effizienz",
     },
     advantages: [
       {
         title: "Hybrid Energy",
-        description: "Electricity and thermal production",
+        description: "Strom- und Wärmeerzeugung",
       },
       {
-        title: "High Efficiency",
-        description: "About 70% combined Efficiency",
+        title: "Hohe Effizienz",
+        description: "Etwa 70% kombinierte Effizienz",
       },
       {
-        title: "Economic Benefit",
-        description: "Long-term low LCOE",
+        title: "Wirtschaftlicher Nutzen",
+        description: "Langfristig niedrige LCOE",
       },
-      { title: "Versatile Use", description: "Effective in various climates" },
+      { title: "Vielseitige Nutzung", description: "Effektiv in verschiedenen Klimazonen" },
       {
-        title: "Sustainable Design",
-        description: "Eco-conscious technology",
+        title: "Nachhaltiges Design",
+        description: "Umweltbewusste Technologie",
       },
       {
-        title: "Closing Statement",
-        description: `"Neptune: The Future of Hybrid Solar Energy"`,
+        title: "Abschlussstatement",
+        description: `"Neptune: Die Zukunft der hybriden Solarenergie"`,
       },
     ],
   },
@@ -318,166 +310,166 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "ShadeStar.svg",
-      text: `"ShadeStar: Light Where You Need It" (Smart Cell) Focus on ShadeStar resilience to partial shading, akin to a guardian in the cosmos`,
+      text: `"ShadeStar: Licht, wo Sie es brauchen" (Smart Cell). Konzentrieren Sie sich auf die Widerstandsfähigkeit von ShadeStar gegen teilweisen Schatten, vergleichbar mit einem Wächter im Kosmos`,
     },
     advantages: [
       {
-        title: "Shade Resilience",
-        description: "Maintains high output in shade",
+        title: "Schattenresistenz",
+        description: "Hohe Leistung auch im Schatten",
       },
       {
-        title: "Rooftop Optimization",
-        description: "Ideal for limited space",
+        title: "Optimierung für Dächer",
+        description: "Ideal für begrenzten Platz",
       },
       {
-        title: "Economic Performance",
-        description: "Low LCOE",
+        title: "Wirtschaftliche Leistung",
+        description: "Niedrige LCOE",
       },
-      { title: "Smart Technology", description: "Advanced shade resistance" },
+      { title: "Intelligente Technologie", description: "Fortgeschrittene Schattenresistenz" },
       {
-        title: "Sustainable Solution",
-        description: "Eco-friendly design",
+        title: "Nachhaltige Lösung",
+        description: "Umweltfreundliches Design",
       },
       {
-        title: "Closing Statement",
-        description: `"ShadeStar: Smart Energy for Every Roof"`,
+        title: "Abschlussstatement",
+        description: `"ShadeStar: Intelligente Energie für jedes Dach"`,
       },
     ],
   },
 };
-export const PRODUCT_INTRO_LEARN_MORE = "Learn more";
-export const HISTORY_READ_FULL_STORY = "Read Full of History";
-export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "All Products";
+export const PRODUCT_INTRO_LEARN_MORE = "Erfahren Sie mehr";
+export const HISTORY_READ_FULL_STORY = "Voll von Geschichte lesen";
+export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "All Produkte";
 
-export const FEATURED_PRODUCTS_HIGH_QUALITY = "High-Quality";
+export const FEATURED_PRODUCTS_HIGH_QUALITY = "Hochwertig";
 
-export const TECH_INFO_THE_HIDDEN_LAYERS = "The Hidden Layers";
-export const TECH_INFO_A_CLOSE_LOOK_AT = "A Close Look at";
+export const TECH_INFO_THE_HIDDEN_LAYERS = "Die verborgenen Schichten";
+export const TECH_INFO_A_CLOSE_LOOK_AT = "Eine genaue Betrachtung von";
 export const TECH_INFO_PANELS_DETAILS = [
   {
-    title: "Photovoltaic Cells",
+    title: "Photovoltaikzellen",
     description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
+      "Halbleiter-Photovoltaikzellen wandeln Sonnenlicht in Elektrizität um, was für Solarpaneele entscheidend ist.",
   },
   {
-    title: "Solar Panel Encapsulation",
+    title: "Solarpanel-Ummantelung",
     description:
-      "Solar panels endure diverse conditions, shielded by encapsulation for longevity and efficiency.",
+      "Solarpaneele ertragen verschiedene Bedingungen und werden durch Ummantelung geschützt, um Langlebigkeit und Effizienz zu gewährleisten.",
   },
   {
-    title: "Frame and Backsheet",
+    title: "Rahmen und Rückseitenbeschichtung",
     description:
-      "Frame offers support; backsheet shields from elements, ensuring solar panel durability.",
+      "Der Rahmen bietet Unterstützung, während die Rückseitenbeschichtung vor den Elementen schützt und die Langlebigkeit des Solarpanels gewährleistet.",
   },
 ];
 export const TECH_INFO_PANELS = ["structure.png", "frame.png", "panel.png"];
-export const TECH_INFO_WHY_WE_ARE = "Why We are";
-export const TECH_INFO_BEST_AT_THIS = "Best at This";
-export const TECH_INFO_CLOSE = "Close";
+export const TECH_INFO_WHY_WE_ARE = "Warum wir darin";
+export const TECH_INFO_BEST_AT_THIS = "am besten sind";
+export const TECH_INFO_CLOSE = "Schließen";
 export const TECH_INFO_BENS = [
   {
-    title: `Leading Solar Technology`,
+    title: `Führende Solartechnologie`,
     description:
-      "AESOLAR, a top-tier German solar module maker, stands for precision and dependability in engineering. We’re at the forefront, using advanced technology to shape solar energy's future. Our commitment to innovation is paving the way for exciting developments in solar power.",
+      "AESOLAR, ein erstklassiger deutscher Hersteller von Solarmodulen, steht für Präzision und Zuverlässigkeit in der Technik. Wir sind an vorderster Front und nutzen fortschrittliche Technologie, um die Zukunft der Solarenergie zu gestalten. Unser Engagement für Innovation ebnet den Weg für spannende Entwicklungen in der Solartechnik.",
     image: "automation.svg",
-    fullDescription: `On February 19, 2024, Bloomberg New Energy Finance (BNEF) released the 1Q 2024 Global PV Market Outlook. AESOLAR has once again secured its position in the tier 1 list of PV module manufacturers, marking the 13th consecutive time since Q1 2021. As a leading solar brand, this recognition underscores AESOLAR's consistent quality, brand credibility, and strong bankability.
-    BNEF's methodology for tier 1 PV module manufacturers is stringent, requiring manufacturers to have received non-recourse finance from 6 different commercial banks over the past 2 years. This selection process demonstrates the bankability of the chosen brands and provides a reliable reference for the market.
-    Notably, starting from the 2024 Q1, BNEF has raised the project threshold from the previous 1.5MW to 5MW. This change has led to a decrease in the number of companies included in the Tier 1 list compared to the previous quarter (45 companies in Q4 2023 to 26 companies in Q1 2024). Despite this change, AESOLAR maintains its position, showcasing the company's strength and outstanding credibility once again.
-    Commenting on this change, BNEF stated, 'This is due to the increasing size of the solar industry, where 5MW is no longer a particularly large project, and projects below 5MW are extremely difficult to crosscheck with independent data sources when claimed by module manufacturers. The change unsurprisingly reduces the number of companies on the tier 1 list, but total capacity is still 783GW/year, far more than global installation expected in2024.'
-    Furthermore, AESOLAR received a '*' in the list, indicating that their investigation report can be obtained from PV Evolution Labs (PVEL). The Aurora series PV module from AESOLAR has passed testing conducted by PVEL and was among the 'Best Performers' in 2023. This is a result of AESOLAR's continuous focus on research and development, technological innovation, and enhancement of production processes and quality management.`,
+    fullDescription: `Am 19. Februar 2024 veröffentlichte Bloomberg New Energy Finance (BNEF) den Ausblick auf den globalen PV-Markt für das 1. Quartal 2024. AESOLAR hat erneut seine Position in der Liste der Tier-1-Hersteller von PV-Modulen gesichert, und zwar zum 13. Mal in Folge seit dem 1. Quartal 2021. Als führende Solarmarke unterstreicht diese Anerkennung die gleichbleibende Qualität, die Glaubwürdigkeit der Marke und die hohe Bankfähigkeit von AESOLAR.
+    Die Methodik von BNEF für Tier-1-PV-Modulhersteller ist streng und erfordert, dass die Hersteller in den letzten 2 Jahren Finanzierungen ohne Rückgriff von 6 verschiedenen kommerziellen Banken erhalten haben. Dieser Auswahlprozess zeigt die Bankfähigkeit der ausgewählten Marken und bietet einen zuverlässigen Referenzpunkt für den Markt.
+    Besonders erwähnenswert ist, dass BNEF ab dem 1. Quartal 2024 die Projektschwelle von zuvor 1,5 MW auf 5 MW angehoben hat. Diese Änderung hat zu einer Verringerung der Anzahl der Unternehmen in der Tier-1-Liste im Vergleich zum vorherigen Quartal geführt (45 Unternehmen im 4. Quartal 2023 auf 26 Unternehmen im 1. Quartal 2024). Trotz dieser Änderung behält AESOLAR seine Position bei und zeigt erneut die Stärke und herausragende Glaubwürdigkeit des Unternehmens.
+    BNEF kommentierte diese Änderung wie folgt: "Dies ist auf die zunehmende Größe der Solarindustrie zurückzuführen, bei der 5 MW kein besonders großes Projekt mehr sind, und Projekte unter 5 MW äußerst schwer mit unabhängigen Datenquellen zu überprüfen sind, wenn sie von Modulherstellern behauptet werden. Die Änderung reduziert erwartungsgemäß die Anzahl der Unternehmen in der Tier-1-Liste, aber die Gesamtkapazität beträgt immer noch 783 GW/Jahr, weit mehr als die weltweit erwartete Installation im Jahr 2024."
+    Darüber hinaus erhielt AESOLAR ein '*' in der Liste, was bedeutet, dass ihr Untersuchungsbericht von PV Evolution Labs (PVEL) eingesehen werden kann. Das PV-Modul der Aurora-Serie von AESOLAR hat die von PVEL durchgeführten Tests bestanden und war 2023 unter den "Best Performers". Dies ist das Ergebnis des kontinuierlichen Fokus von AESOLAR auf Forschung und Entwicklung, technologische Innovation sowie die Verbesserung der Produktionsprozesse und der Qualitätsmanagement.`,
   },
   {
-    title: "Building a Greener Future",
+    title: "Den Aufbau einer grüneren Zukunft",
     description:
-      "AESOLAR isn’t just making solar modules; we’re building a more sustainable future. By combining the latest technology with high quality and our dedication to the environment, we’re not just creating products – we’re inspiring a vision of a renewable energy-driven world.",
+      "AESOLAR fertigt nicht nur Solarmodule; wir bauen eine nachhaltigere Zukunft auf. Durch die Kombination neuester Technologie mit hoher Qualität und unserer Hingabe zur Umwelt schaffen wir nicht nur Produkte - wir inspirieren eine Vision einer von erneuerbaren Energien angetriebenen Welt.",
     image: "manufacturer.png",
   },
   {
-    title: "Quality Manufacturing",
+    title: "Qualitätsfertigung",
     description:
-      "Our high-tech factories use smart automation for precise and efficient assembly, minimizing errors. Quality is key at AESOLAR. We make sure each solar module is top-notch in efficiency, durability, and performance. Our thorough checks at every step show our dedication to quality and making our customers happy.",
+      "Unsere High-Tech-Fabriken nutzen intelligente Automatisierung für präzise und effiziente Montage, um Fehler zu minimieren. Qualität ist bei AESOLAR entscheidend. Wir stellen sicher, dass jedes Solarmodul in Effizienz, Haltbarkeit und Leistung erstklassig ist. Unsere gründlichen Kontrollen bei jedem Schritt zeigen unsere Hingabe zur Qualität und machen unsere Kunden zufrieden.",
     image: "technologies.svg",
   },
   {
-    title: "Setting New Efficiency Standards",
+    title: "Neue Effizienzstandards setzen",
     description:
-      "We at AESOLAR are all about raising the bar in the solar industry. We focus on making our manufacturing more energy-efficient, which cuts costs and reduces our environmental footprint. This helps our customers in the long run, too. And we back up our commitment to quality with a strong product warranty.",
+      "Wir bei AESOLAR setzen uns dafür ein, die Messlatte in der Solarindustrie höher zu legen. Wir konzentrieren uns darauf, unsere Fertigung energieeffizienter zu gestalten, was Kosten senkt und unseren ökologischen Fußabdruck reduziert. Dies kommt auch unseren Kunden langfristig zugute. Und wir untermauern unser Qualitätsversprechen mit einer starken Produktgarantie.",
     image: "efficiency.svg",
   },
   {
-    title: "Committed to Sustainability",
+    title: "Engagement für Nachhaltigkeit",
     description:
-      "Sustainability is central to what we do at AESOLAR. We power our facilities with our solar panels and other green energy sources. This commitment reflects our belief in the clean energy movement. We’re mindful of our products' life cycles, using recyclable materials and cutting down on energy use. We follow strict German standards for sustainable and responsible production.",
+      "Nachhaltigkeit steht im Mittelpunkt unserer Aktivitäten bei AESOLAR. Wir versorgen unsere Einrichtungen mit unseren Solarmodulen und anderen grünen Energiequellen. Dieses Engagement spiegelt unseren Glauben an die saubere Energiebewegung wider. Wir achten auf die Lebenszyklen unserer Produkte, verwenden recycelbare Materialien und reduzieren den Energieverbrauch. Wir halten uns an strenge deutsche Standards für eine nachhaltige und verantwortungsvolle Produktion.",
     image: "materials.svg",
   },
 ];
-export const TECH_INFO_READ_MORE = "Read More";
-export const TECH_INFO_INNOVATIVE = "Innovative. Stylish. Essential:";
-export const TECH_INFO_EXPLORE = "Explore Our Product Range";
+export const TECH_INFO_READ_MORE = "Mehr lesen";
+export const TECH_INFO_INNOVATIVE = "Innovativ. Stilvoll. Unverzichtbar:";
+export const TECH_INFO_EXPLORE = "Entdecken Sie unser Produktsortiment.";
 
-export const REVIEWS_RAVE_REVIEWS = "Rave Reviews";
-export const REVIEWS_SEE_WHY_WE_SHINE = "See Why We Shine";
+export const REVIEWS_RAVE_REVIEWS = "Rave Bewertungen";
+export const REVIEWS_SEE_WHY_WE_SHINE = "Sehen Sie, warum wir glänzen";
 export const REVIEWS_QUOTES_WITH_AUTHORS = [
   {
     quote:
-      "Why do I like working with the company AE Solar...🤔. Quite simply because it's awesome. Great team, great products, great service. All-round carefree package. There are no problems with the employees, there are only solutions and that for every customer of ours. Just German quality.",
+      "Warum arbeite ich gerne mit der Firma AE Solar...🤔. Ganz einfach, weil sie großartig ist. Tolle Team, großartige Produkte, großartiger Service. Rundum sorglos Paket. Es gibt keine Probleme mit den Mitarbeitern, es gibt nur Lösungen und das für jeden unserer Kunden. Einfach deutsche Qualität.",
     author: "Thomas Schneider",
-    organisation: "Purchasing, sales, consulting at the company SVM Solar",
+    organisation: "Einkauf, Vertrieb, Beratung bei der Firma SVM Solar.",
   },
   {
     quote:
-      "2Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
-    author: "Emily Johnson2",
-    organisation: "Quantum Dynamics2",
+      "Begeistert von meinen neuen Solarmodulen von AESolar! Die Effizienz und Haltbarkeit haben meine Erwartungen übertroffen. Genieße Einsparungen und Umweltauswirkungen. Sehr zu empfehlen!",
+    author: "Emily Johnson",
+    organisation: "Quantum Dynamics",
   },
   {
     quote:
-      "3Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
-    author: "Emily Johnson3",
-    organisation: "Quantum Dynamics3",
+      "Begeistert von meinen neuen Solarmodulen von AESolar! Die Effizienz und Haltbarkeit haben meine Erwartungen übertroffen. Genieße Einsparungen und Umweltauswirkungen. Sehr zu empfehlen!",
+    author: "Emily Johnson",
+    organisation: "Quantum Dynamics",
   },
 ];
 
-export const MAIN_PAGE_NEWS_INSIGHTS = "News and Insights";
-export const MAIN_PAGE_COMPANY = "of Our Company ";
-export const MAIN_PAGE_NEWS_READ_ALL = "Read all the news";
+export const MAIN_PAGE_NEWS_INSIGHTS = "Nachrichten und Einblicke";
+export const MAIN_PAGE_COMPANY = "unseres Unternehmens ";
+export const MAIN_PAGE_NEWS_READ_ALL = "Alle Nachrichten";
 
-export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installer"];
-export const GET_IN_TOUCH_ELEVATE_GROWTH = "Elevate growth together";
-export const GET_IN_TOUCH_JOIN_US = "Join as ";
-export const GET_IN_TOUCH_OUR_VISION = " in our solar vision";
-export const GET_IN_TOUCH_BECOME_A = "Become ";
+export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installateur"];
+export const GET_IN_TOUCH_ELEVATE_GROWTH = "Gemeinsames Wachstum fördern";
+export const GET_IN_TOUCH_JOIN_US = "Schließen Sie sich ";
+export const GET_IN_TOUCH_OUR_VISION = " unserer Vision für Solarenergie an";
+export const GET_IN_TOUCH_BECOME_A = "Werden Sie ";
 
 export const FAQ_ACCORDION_DATA = [
   {
-    question: "How do solar panels work?",
+    question: "Wie funktionieren Solarpaneele?",
     answer:
-      "Solar panels work by converting sunlight into electricity through a process called the photovoltaic effect. The solar cells within the panels absorb sunlight, and the energy from the absorbed light creates an electric current.",
+      "Solarpaneele funktionieren, indem sie Sonnenlicht durch einen Prozess namens photovoltaischer Effekt in Elektrizität umwandeln. Die Solarzellen in den Paneelen absorbieren Sonnenlicht, und die Energie aus dem absorbierten Licht erzeugt einen elektrischen Strom.",
   },
   {
-    question: "What factors affect the efficiency of a solar system?",
+    question: "Welche Faktoren beeinflussen die Effizienz einer Solaranlage?",
     answer:
-      "The efficiency of a solar system is influenced by sunlight exposure, shading, panel orientation, and temperature. Choosing high-quality panels and proper installation also impact overall performance.",
+      "Die Effizienz einer Solaranlage wird durch Sonneneinstrahlung, Schattierung, Ausrichtung der Paneele und Temperatur beeinflusst. Die Auswahl hochwertiger Paneele und eine ordnungsgemäße Installation beeinflussen ebenfalls die Gesamtleistung.",
   },
   {
-    question: "What is usual estimated time of delivery?",
+    question: "Was ist die übliche geschätzte Lieferzeit?",
     answer:
-      "You can purchase directly from stocks of our local distributor at your country . Or you can place order for manufacturing and ETA will depend on destination, quantity and other order details.Usually by order ETA is from 30 to 60 days.",
+    "Sie können direkt aus dem Lagerbestand unseres lokalen Vertriebspartners in Ihrem Land kaufen. Alternativ können Sie eine Bestellung zur Fertigung aufgeben, wobei die voraussichtliche Ankunftszeit (ETA) vom Zielort, der Menge und anderen Bestelldetails abhängt. In der Regel beträgt die ETA für Bestellungen 30 bis 60 Tage.",
   },
   {
-    question: "How to become your distributor?",
+    question: "Wie werde ich Ihr Vertriebspartner?",
     answer:
-      "Please contact our sales office, send us your company presentation and get Distributorship terms and conditions from dedicated to your country Regional Manager.",
+    "Bitte kontaktieren Sie unser Vertriebsbüro, senden Sie uns Ihre Unternehmenspräsentation und erhalten Sie die Vertriebsbedingungen vom für Ihr Land zuständigen Regionalmanager.",
   },
 ];
-export const FAQ_QUESTION = "Have a Question?";
-export const FAQ_SOLUTIONS = "We have solutions";
-export const FAQ_MORE_SOLUTIONS = "More solutions";
+export const FAQ_QUESTION = "Haben Sie eine Frage?";
+export const FAQ_SOLUTIONS = "Wir haben Lösungen.";
+export const FAQ_MORE_SOLUTIONS = "Mehr Lösungen.";
 
 //FOOTER
 export const FOOTER_LINKS_ARRAY = [
   {
-    category: { title: "Products", link: "/products" },
+    category: { title: "Produkte", link: "/products" },
     links: [
       { title: "Aurora", link: "/products/Aurora" },
       { title: "Meteor", link: "/products/Meteor" },
@@ -488,40 +480,40 @@ export const FOOTER_LINKS_ARRAY = [
     ],
   },
   {
-    category: { title: "About Us", link: "/company" },
+    category: { title: "Über uns", link: "/company" },
     links: [
-      { title: "Company", link: "/company" },
-      { title: "Manufacturer", link: "/company/manufacturer" },
-      { title: "B2B Solutions", link: "/solutions" },
-      { title: "Contacts", link: "/contacts" },
-      { title: "News", link: "/company/news" },
+      { title: "Unternehmen", link: "/company" },
+      { title: "Hersteller", link: "/company/manufacturer" },
+      { title: "B2B Lösungen", link: "/solutions" },
+      { title: "Kontakte", link: "/contacts" },
+      { title: "Nachrichten", link: "/company/news" },
       { title: "FAQ", link: "/company/faq" },
     ],
   },
   {
-    category: { title: "Legal Info", link: "/company/imprint" },
+    category: { title: "Rechtliche Informationen.", link: "/company/imprint" },
     links: [
-      { title: "Imprint", link: "/company/imprint" },
-      { title: "Publisher's", link: "/company/publishers_info" },
+      { title: "Impressum", link: "/company/imprint" },
+      { title: "Herausgeber", link: "/company/publishers_info" },
     ],
   },
   {
-    category: { title: "Documents", link: "/documents" },
+    category: { title: "Dokumente", link: "/documents" },
     links: [
-      { title: "Datasheet", link: "/documents" },
-      { title: "Warranty", link: "/documents" },
-      // { title: "Certifications", link: "/documents" },
-      // { title: "Manual", link: "/documents" },
+      { title: "Datenblatt", link: "/documents" },
+      { title: "Garantie", link: "/documents" },
+      // { title: "Zertifizierungen", link: "/documents" },
+      // { title: "Handbuch", link: "/documents" },
 
-      // { title: "Presentations", link: "/documents" },
+      // { title: "Präsentationen", link: "/documents" },
       // { title: "FAQ", link: "/info/faq" },
     ],
   },
 ];
 export const FOOTER_GERMAN_BRAND =
-  "German brand in the renewable energy industry, providing high-quality products and services since 2003.";
-export const FOOTER_GERMAN_BRAND_WORDS_TO_BOLD = ["German brand", "since 2003"];
-export const FOOTER_WE_ARE_SOCIAL = "We are social";
+  "Deutsche Marke in der erneuerbaren Energiebranche, die seit 2003 hochwertige Produkte und Dienstleistungen anbietet.";
+export const FOOTER_GERMAN_BRAND_WORDS_TO_BOLD = ["Deutsche Marke", "seit 2003"];
+export const FOOTER_WE_ARE_SOCIAL = "Wir sind in den sozialen Medien";
 export const FOOTER_SOCIAL = [
   { icon: "facebook.svg", link: "https://www.facebook.com/aesolarenergy/" },
   { icon: "linkedin.svg", link: "https://www.linkedin.com/company/ae-solar/" },
@@ -529,7 +521,7 @@ export const FOOTER_SOCIAL = [
   { icon: "twitter.svg", link: "https://twitter.com/aesolar_energy/" },
   { icon: "youtube.svg", link: "https://www.youtube.com/@AESOLAR/featured/" },
 ];
-export const FOOTER_SAVE_THE_WORLD = "It's time to save the world!";
+export const FOOTER_SAVE_THE_WORLD = "Es ist Zeit, die Welt zu retten!";
 export const FOOTER_CONTACT_INFO = [
   {
     icon: "location.svg",
@@ -551,15 +543,15 @@ export const FOOTER_CONTACT_INFO = [
     linkTo: "mailto:sales@ae-solar.com",
   },
 ];
-export const FOOTER_SUBSCRIBE_NEWSLETTER = "Subscribe to Our Newsletter";
+export const FOOTER_SUBSCRIBE_NEWSLETTER = "Abonnieren Sie unseren Newsletter.";
 export const FOOTER_COPYRIGHT =
-  "Copyright © 2023 AESolar. All rights reserved.";
-export const FOOTER_YOUR_EMAIL = "your e-mail";
-export const FOOTER_SUBSCRIBE = "Subscribe";
+  "Urheberrecht © 2023 AESolar. Alle Rechte vorbehalten.";
+export const FOOTER_YOUR_EMAIL = "Ihre E-Mail";
+export const FOOTER_SUBSCRIBE = "Abonnieren";
 export const POLICY_LINKS = [
-  { text: "Privacy Policy", link: "/company/publishers_info" },
-  { text: "Terms of Use", link: "/company/publishers_info" },
-  { text: "Legal", link: "/company/imprint" },
+  { text: "Datenschutzbestimmungen", link: "/company/publishers_info" },
+  { text: "Nutzungsbedingungen", link: "/company/publishers_info" },
+  { text: "Rechtliches", link: "/company/imprint" },
 ];
 
 export const CONSTRUCTOR_OPTION_LINES = [
@@ -591,43 +583,43 @@ export const CONSTRUCTOR_OPTION_LINES = [
 
 export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
   Aurora: {
-    panelTechnology: "PERc Technology",
+    panelTechnology: "PERc Technologie",
     params: {
       solarCellTechnology: {
         type: "slider",
-        text: "Solar Cell Technology",
+        text: "Solarzelle Technologie",
         values: ["Mono C-Si", "P type PERC"],
       },
       moduleSpecification: {
         type: "slider",
-        text: "Module Specifation",
+        text: "Spezifikationen des Moduls.",
         values: ["Mono-Facial", "Bi-Facial"],
       },
       backCover: {
         type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet", "Double-Glass"],
+        text: "Rückseite",
+        values: ["Glas", "Rückseite", "Doppelglas"],
       },
       moduleColor: {
         type: "color",
-        text: "Module Color",
+        text: "Modulfarbe",
         values: [
           { color: "Transparent", icon: "transparent.svg" },
-          { color: "Black", icon: "black.svg" },
-          { color: "White", icon: "white.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Weiß", icon: "white.svg" },
         ],
       },
       frameColor: {
         type: "color",
-        text: "Frame Color",
+        text: "Rahmenfarbe",
         values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "silver.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Silber", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
         type: "range/dimension",
-        text: "Module Dimension.",
+        text: "Modulabmessungen",
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
@@ -640,10 +632,10 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       powerRange: {
         type: "range/power",
-        text: "Power Range (W)",
+        text: "Leistungsbereich (W)",
         values: {
-          measure1: "from",
-          measure2: "to",
+          measure1: "ab",
+          measure2: "bis",
           lowerLimit: "1",
           name1: "from",
           name2: "to",
@@ -651,7 +643,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       applications: {
         type: "applications",
-        text: "Applications.",
+        text: "Anwendungen.",
         clarification: "Standard",
         values: ["Shade Resistant", "Carport", "PV-Thermal", "Agri-Voltaics"],
       },
@@ -662,38 +654,38 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
     params: {
       solarCellTechnology: {
         type: "slider",
-        text: "Solar Cell Technology",
+        text: "Solarzelle Technologie",
         values: ["Mono C-Si", "N type TOPCon"],
       },
       moduleSpecification: {
         type: "slider",
-        text: "Module Specifation",
+        text: "Modulspezifikation",
         values: ["Mono-Facial", "Bi-Facial"],
       },
       backCover: {
         type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet", "Double-Glass"],
+        text: "Rückseite",
+        values: ["Glas", "Rückseite", "Doppelglas"],
       },
       moduleColor: {
         type: "color",
-        text: "Module Color",
+        text: "Modulfarbe",
         values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "White", icon: "white.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Weiß", icon: "white.svg" },
         ],
       },
       frameColor: {
         type: "color",
-        text: "Frame Color",
+        text: "Rahmenfarbe",
         values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "silver.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Silber", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
         type: "range/dimension",
-        text: "Module Dimension.",
+        text: "Modulabmessungen.",
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
@@ -706,10 +698,10 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       powerRange: {
         type: "range/power",
-        text: "Power Range (W)",
+        text: "Leistungsbereich (W)",
         values: {
-          measure1: "from",
-          measure2: "to",
+          measure1: "ab",
+          measure2: "bis",
           lowerLimit: "1",
           name1: "from",
           name2: "to",
@@ -717,49 +709,49 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       applications: {
         type: "applications",
-        text: "Applications.",
+        text: "Anwendungen.",
         clarification: "Standard",
         values: ["Shade Resistant", "Carport", "PV-Thermal", "Agri-Voltaics"],
       },
     },
   },
   Comet: {
-    panelTechnology: "HJT Technology",
+    panelTechnology: "HJT Technologie",
     params: {
       solarCellTechnology: {
         type: "slider",
-        text: "Solar Cell Technology",
+        text: "Solarzelle Technologie",
         values: ["Mono C-Si", "N type HJT"],
       },
       moduleSpecification: {
         type: "slider",
-        text: "Module Specifation",
+        text: "Modulspezifikation",
         values: ["Bi-Facial"],
       },
       backCover: {
         type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet", "Double-Glass"],
+        text: "Rückseite",
+        values: ["Glas", "Rückseite", "Doppelglas"],
       },
       moduleColor: {
         type: "color",
-        text: "Module Color",
+        text: "Modulfarbe",
         values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "White", icon: "white.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Weiß", icon: "white.svg" },
         ],
       },
       frameColor: {
         type: "color",
-        text: "Frame Color",
+        text: "Rahmenfarbe",
         values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "silver.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Silber", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
         type: "range/dimension",
-        text: "Module Dimension.",
+        text: "Modulabmessungen.",
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
@@ -772,10 +764,10 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       powerRange: {
         type: "range/power",
-        text: "Power Range (W)",
+        text: "Leistungsbereich (W)",
         values: {
-          measure1: "from",
-          measure2: "to",
+          measure1: "ab",
+          measure2: "bis",
           lowerLimit: "1",
           name1: "from",
           name2: "to",
@@ -783,46 +775,46 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       applications: {
         type: "applications",
-        text: "Applications.",
+        text: "Anwendungen.",
         clarification: "Standard",
         values: ["Shade Resistant", "Carport", "PV-Thermal", "Agri-Voltaics"],
       },
     },
   },
   Terra: {
-    panelTechnology: "Wind/Snow Resistant Technology",
+    panelTechnology: "Wind-/Schneeresistente Technologie",
     params: {
       solarCellTechnology: {
         type: "slider",
-        text: "Solar Cell Technology",
+        text: "Solarzelle Technologie",
         values: ["Mono C-Si", "N type TOPCon"],
       },
       moduleSpecification: {
         type: "slider",
-        text: "Module Specifation",
+        text: "Modulspezifikation",
         values: ["Bi-Facial"],
       },
       backCover: {
         type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet", "Double-Glass"],
+        text: "Rückseite",
+        values: ["Glas", "Rückseite", "Doppelglas"],
       },
       moduleColor: {
         type: "color",
-        text: "Module Color",
+        text: "Modulfarbe",
         values: [{ color: "Transparent", icon: "transparent.svg" }],
       },
       frameColor: {
         type: "color",
-        text: "Frame Color",
+        text: "Rahmenfarbe",
         values: [
           { color: "Silver", icon: "silver.svg" },
-          { color: "Without Frame", icon: "transparent.svg" },
+          { color: "Ohne Rahmen", icon: "transparent.svg" },
         ],
       },
       moduleDimension: {
         type: "range/dimension",
-        text: "Module Dimension.",
+        text: "Modulabmessungen.",
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
@@ -835,10 +827,10 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       powerRange: {
         type: "range/power",
-        text: "Power Range (W)",
+        text: "Leistungsbereich (W)",
         values: {
-          measure1: "from",
-          measure2: "to",
+          measure1: "ab",
+          measure2: "bis",
           lowerLimit: "1",
           name1: "from",
           name2: "to",
@@ -846,49 +838,49 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       applications: {
         type: "applications",
-        text: "Applications.",
+        text: "Anwendungen.",
         clarification: "Standard",
         values: ["Agri-Voltaics"],
       },
     },
   },
   ShadeStar: {
-    panelTechnology: "Shade Resistant Technology",
+    panelTechnology: "Schattenresistent Technologie",
     params: {
       solarCellTechnology: {
         type: "slider",
-        text: "Solar Cell Technology",
+        text: "Solarzelle Technologie",
         values: ["Mono C-Si", "P type PERC"],
       },
       moduleSpecification: {
         type: "slider",
-        text: "Module Specifation",
+        text: "Modulspezifikation",
         values: ["Mono-Facial"],
       },
       backCover: {
         type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet", "Double-Glass"],
+        text: "Rückseite",
+        values: ["Glas", "Rückseite", "Doppelglas"],
       },
       moduleColor: {
         type: "color",
-        text: "Module Color",
+        text: "Modulfarbe",
         values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "White", icon: "white.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Weiß", icon: "white.svg" },
         ],
       },
       frameColor: {
         type: "color",
-        text: "Frame Color",
+        text: "Rahmenfarbe",
         values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "silver.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Silber", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
         type: "range/dimension",
-        text: "Module Dimension.",
+        text: "Modulabmessungen.",
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
@@ -901,10 +893,10 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       powerRange: {
         type: "range/power",
-        text: "Power Range (W)",
+        text: "Leistungsbereich (W)",
         values: {
-          measure1: "from",
-          measure2: "to",
+          measure1: "ab",
+          measure2: "bis",
           lowerLimit: "1",
           name1: "from",
           name2: "to",
@@ -912,50 +904,50 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       applications: {
         type: "applications",
-        text: "Applications.",
+        text: "Anwendungen.",
         clarification: "Standard",
         values: ["Shade Resistant", "Carport", "PV-Thermal", "Agri-Voltaics"],
       },
     },
   },
   Neptune: {
-    panelTechnology: "PV-Thermal Technology",
+    panelTechnology: "PV-Thermal Technologie",
     params: {
       solarCellTechnology: {
         type: "slider",
-        text: "Solar Cell Technology",
+        text: "Solarzelle Technologie",
         values: ["PERc", "TOPCon", "HJT"],
       },
       moduleSpecification: {
         type: "slider",
-        text: "Module Specifation",
+        text: "Modulspezifikation",
         values: ["Mono-Facial", "Bi-Facial"],
       },
       backCover: {
         type: "slider",
-        text: "Back Cover",
-        values: ["Glass", "Backsheet"],
+        text: "Rückseite",
+        values: ["Glas", "Rückseite"],
       },
       moduleColor: {
         type: "color",
-        text: "Module Color",
+        text: "Modulfarbe",
         values: [
           { color: "Transparent", icon: "transparent.svg" },
-          { color: "Black", icon: "black.svg" },
-          { color: "White", icon: "white.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Weiß", icon: "white.svg" },
         ],
       },
       frameColor: {
         type: "color",
-        text: "Frame Color",
+        text: "Rahmenfarbe",
         values: [
-          { color: "Black", icon: "black.svg" },
-          { color: "Silver", icon: "silver.svg" },
+          { color: "Schwarz", icon: "black.svg" },
+          { color: "Silber", icon: "silver.svg" },
         ],
       },
       moduleDimension: {
         type: "range/dimension",
-        text: "Module Dimension.",
+        text: "Modulabmessungen.",
         clarification: "L (mm) x W (mm)",
         values: {
           measure1: "L(mm)",
@@ -968,10 +960,10 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       powerRange: {
         type: "range/power",
-        text: "Power Range (W)",
+        text: "Leistungsbereich (W)",
         values: {
-          measure1: "from",
-          measure2: "to",
+          measure1: "ab",
+          measure2: "bis",
           lowerLimit: "1",
           name1: "from",
           name2: "to",
@@ -979,7 +971,7 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
       },
       applications: {
         type: "applications",
-        text: "Applications.",
+        text: "Anwendungen.",
         clarification: "Standard",
         values: ["PV-Thermal"],
       },
@@ -990,210 +982,215 @@ export const CONSTRUCTOR_MODELS_SPEC: PanelParams = {
 export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
   {
     type: "Shade Resistant",
-    clarification: `"Shade resistant" for solar panels means the ability to operate efficiently in shaded conditions, ensuring electricity generation even with partial shading`,
+    clarification: `"Schattenresistent" für Solarpaneele bedeutet die Fähigkeit, auch unter schattigen Bedingungen effizient zu arbeiten und eine Stromerzeugung auch bei teilweisem Schatten zu gewährleisten.`,
   },
   {
     type: "Carport",
-    clarification: `"Carport" for solar panels is a structure resembling a canopy or veranda positioned over a parking area`,
+    clarification: `"Carport" für Solarpaneele ist eine Struktur, die einem Überdach oder einer Veranda ähnelt und über einem Parkplatz positioniert ist.`,
   },
   {
     type: "PV-Thermal",
     clarification:
-      "Solar energy combines photovoltaics and heat to generate electricity and provide heating with one system",
+      "Solarenergie kombiniert Photovoltaik und Wärme, um Strom zu erzeugen und Heizung mit einem System zu liefern.",
   },
   {
     type: "Agri-Voltaics",
-    clarification: `"Agri Voltaics" is the use of solar panels on agricultural lands to simultaneously provide energy and protect crops`,
+    clarification: `"Agri-Voltaik" bezeichnet die Verwendung von Solarpanelen auf landwirtschaftlichen Flächen, um gleichzeitig Energie zu erzeugen und die Ernte zu schützen.`,
   },
 ];
 export const SEQUENCE_ANIMATION_TEXT = [
   {
-    title: "Front cover",
-    description: "Protects panel from external elements",
+    title: "Vorderseite",
+    description:
+      "Schützt das Panel vor äußeren Einflüssen.",
   },
   {
-    title: "Front encapsulation",
-    description: "Shields solar cells, seals panel",
+    title: "Vorderseitenverkapselung",
+    description:
+      "Schützt die Solarzellen, versiegelt das Panel.",
   },
   {
-    title: "Solar cells",
-    description: "Converts sunlight into electricity",
+    title: "Solarzellen",
+    description:
+      "Wandelt Sonnenlicht in Strom um.",
   },
   {
-    title: "Rear encapsulation",
-    description: "Provides insulation and protection",
+    title: "Rückseitenverkapselung",
+    description:
+      "Bietet Isolierung und Schutz.",
   },
   {
-    title: "Back cover",
-    description: "Protects rear side of panel",
+    title: "Rückseite",
+    description:
+      "Schützt die Rückseite des Panels.",
   },
   {
-    title: "Frame",
-    description: "Structural support for solar panel",
+    title: "Rahmen",
+    description: "Strukturelle Unterstützung für das Solarmodul.",
   },
 ];
 
-export const CONSTRUCTOR_MODEL = "Model.";
-export const CONSTRUCTOR_WHICH_IS_BEST = "Which is best for you?";
-export const CONSTRUCTOR_CUSTOMIZE = "Customize.";
-export const CONSTRUCTOR_YOUR_MODEL = "Your model";
-export const CONSTRUCTOR_APPLICATIONS = "Applications.";
+export const CONSTRUCTOR_MODEL = "Modell.";
+export const CONSTRUCTOR_WHICH_IS_BEST = "Welches ist am besten für Sie?";
+export const CONSTRUCTOR_CUSTOMIZE = "Anpassen.";
+export const CONSTRUCTOR_YOUR_MODEL = "Ihr Modell";
+export const CONSTRUCTOR_APPLICATIONS = "Anwendungen.";
 export const CONSTRUCTOR_STANDARD = "Standard";
-export const CONSTRUCTOR_CONFIGURE_YOUR_MODEL = "Configure your module";
-export const CONSTRUCTOR_YOUR_MODEL_IS = "Your model is";
+export const CONSTRUCTOR_CONFIGURE_YOUR_MODEL = "Konfigurieren Sie Ihr Modul.";
+export const CONSTRUCTOR_YOUR_MODEL_IS = "Ihr Modell ist";
 export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
   Aurora: {
     powerRange: {
-      parameter: "Power range",
+      parameter: "Leistungsbereich",
       value: "495W—505W",
     },
     efficiencyRange: {
-      parameter: "Efficiency range",
+      parameter: "Effizienzbereich",
       value: "21.70%—22.47%",
     },
     aximumSystemVoltage: {
-      parameter: "Maximum system voltage",
+      parameter: "Maximale Systemspannung",
       value: "1500 (V)",
     },
     performanceGuarantee: {
-      parameter: "Performance Guarantee",
+      parameter: "Leistungsgarantie",
       value: "30 years",
     },
     productWarranty: {
-      parameter: "Product Warranty",
+      parameter: "Produktgarantie",
       value: "12 years",
     },
   },
   Comet: {
     powerRange: {
-      parameter: "Power range",
+      parameter: "Leistungsbereich",
       value: "190W—200W",
     },
     efficiencyRange: {
-      parameter: "Efficiency range",
+      parameter: "Effizienzbereich",
       value: "18.26%—19.22%",
     },
     aximumSystemVoltage: {
-      parameter: "Maximum system voltage",
+      parameter: "Maximale Systemspannung",
       value: "1000 (V)",
     },
     performanceGuarantee: {
-      parameter: "Performance Guarantee",
+      parameter: "Leistungsgarantie",
       value: "30 years",
     },
     productWarranty: {
-      parameter: "Product Warranty",
+      parameter: "Produktgarantie",
       value: "15 years",
     },
   },
   Meteor: {
     powerRange: {
-      parameter: "Power range",
+      parameter: "Leistungsbereich",
       value: "560W—580W",
     },
     efficiencyRange: {
-      parameter: "Efficiency range",
+      parameter: "Effizienzbereich",
       value: "21.70%—22.47%",
     },
     aximumSystemVoltage: {
-      parameter: "Maximum system voltage",
+      parameter: "Maximale Systemspannung",
       value: "1500 (V)",
     },
     performanceGuarantee: {
-      parameter: "Performance Guarantee",
+      parameter: "Leistungsgarantie",
       value: "30 years",
     },
     productWarranty: {
-      parameter: "Product Warranty",
+      parameter: "Produktgarantie",
       value: "15 years",
     },
   },
   Terra: {
     powerRange: {
-      parameter: "Power range",
+      parameter: "Leistungsbereich",
       value: "505W—525W",
     },
     efficiencyRange: {
-      parameter: "Efficiency range",
+      parameter: "Effizienzbereich",
       value: "21.12%—21.95%",
     },
     aximumSystemVoltage: {
-      parameter: "Maximum system voltage",
+      parameter: "Maximale Systemspannung",
       value: "1500 (V)",
     },
     performanceGuarantee: {
-      parameter: "Performance Guarantee",
+      parameter: "Leistungsgarantie",
       value: "30 years",
     },
     productWarranty: {
-      parameter: "Product Warranty",
+      parameter: "Produktgarantie",
       value: "15 years",
     },
   },
   Neptune: {
     powerRange: {
-      parameter: "Power range",
+      parameter: "Leistungsbereich",
       value: "370W—380W",
     },
     efficiencyRange: {
-      parameter: "Efficiency range",
+      parameter: "Effizienzbereich",
       value: "20.31%—20.86%",
     },
     aximumSystemVoltage: {
-      parameter: "Maximum system voltage",
+      parameter: "Maximale Systemspannung",
       value: "1500 (V)",
     },
     performanceGuarantee: {
-      parameter: "Performance Guarantee",
+      parameter: "Leistungsgarantie",
       value: "30 years",
     },
     productWarranty: {
-      parameter: "Product Warranty",
+      parameter: "Produktgarantie",
       value: "15 years",
     },
   },
   ShadeStar: {
     powerRange: {
-      parameter: "Power range",
+      parameter: "Leistungsbereich",
       value: "190W—200W",
     },
     efficiencyRange: {
-      parameter: "Efficiency range",
+      parameter: "Effizienzbereich",
       value: "18.26%—19.22%",
     },
     aximumSystemVoltage: {
-      parameter: "Maximum system voltage",
+      parameter: "Maximale Systemspannung",
       value: "1000 (V)",
     },
     performanceGuarantee: {
-      parameter: "Performance Guarantee",
+      parameter: "Leistungsgarantie",
       value: "30 years",
     },
     productWarranty: {
-      parameter: "Product Warranty",
+      parameter: "Produktgarantie",
       value: "15 years",
     },
   },
 };
 
-export const CONSTRUCTOR_MODELS_SHORT_DETAILS = "Short Details";
-export const CONSTRUCTOR_ADD_TO_BAG = "Add to Bag";
-export const CONSTRUCTOR_ADD = "Add";
-export const CONSTRUCTOR_CONFIGURE = "Configure";
-export const CONSTRUCTOR_CONFIGURE_MODULE = "Configure module";
+export const CONSTRUCTOR_MODELS_SHORT_DETAILS = "Kurze Details";
+export const CONSTRUCTOR_ADD_TO_BAG = "In den Warenkorb legen";
+export const CONSTRUCTOR_ADD = "Hinzufügen";
+export const CONSTRUCTOR_CONFIGURE = "Konfigurieren";
+export const CONSTRUCTOR_CONFIGURE_MODULE = "Modul konfigurieren";
 export const CONSTRUCTOR_MODELS_ADVANTAGES = {
   Aurora: [
     {
-      advantageCategory: "Benefit",
+      advantageCategory: "Nutzen",
       advantageDescription: [
-        "PERC Technology",
-        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
-        "Colors",
-        "Variants for extreme climates of high durability ",
+        "PERC-Technologie",
+        "Breites Spektrum an Auswahlmöglichkeiten für: Stückliste, Leistung, Abmessungen, hohe Haltbarkeit",
+        "Farben",
+        "Varianten für extreme Klimazonen mit hoher Haltbarkeit",
       ],
     },
     {
-      advantageCategory: "Documentation (pdf)",
+      advantageCategory: "Dokumentation (pdf)",
       advantageDescription: [
         {
           datasheet: "AE ME-132 640W-660W",
@@ -1252,16 +1249,16 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
   ],
   Comet: [
     {
-      advantageCategory: "Benefit",
+      advantageCategory: "Nutzen",
       advantageDescription: [
-        "PERC Technology",
-        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
-        "Colors",
-        "Variants for extreme climates of high durability ",
+        "PERC-Technologie",
+        "Breites Spektrum an Auswahlmöglichkeiten für: Stückliste, Leistung, Abmessungen, hohe Haltbarkeit",
+        "Farben",
+        "Varianten für extreme Klimazonen mit hoher Haltbarkeit",
       ],
     },
     {
-      advantageCategory: "Documentation (pdf)",
+      advantageCategory: "Dokumentation (pdf)",
       advantageDescription: [
         {
           datasheet: "AE TMC-120BDS 380W-400W 202309-1",
@@ -1288,16 +1285,16 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
   ],
   Meteor: [
     {
-      advantageCategory: "Benefit",
+      advantageCategory: "Nutzen",
       advantageDescription: [
-        "PERC Technology",
-        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
-        "Colors",
-        "Variants for extreme climates of high durability ",
+        "PERC-Technologie",
+        "Breites Spektrum an Auswahlmöglichkeiten für: Stückliste, Leistung, Abmessungen, hohe Haltbarkeit",
+        "Farben",
+        "Varianten für extreme Klimazonen mit hoher Haltbarkeit",
       ],
     },
     {
-      advantageCategory: "Documentation (pdf)",
+      advantageCategory: "Dokumentation (pdf)",
       advantageDescription: [
         {
           datasheet: "AE CMD-108BDE 415W-435W Ver24.1.1",
@@ -1344,16 +1341,16 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
   ],
   Terra: [
     {
-      advantageCategory: "Benefit",
+      advantageCategory: "Nutzen",
       advantageDescription: [
-        "PERC Technology",
-        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
-        "Colors",
-        "Variants for extreme climates of high durability ",
+        "PERC-Technologie",
+        "Breites Spektrum an Auswahlmöglichkeiten für: Stückliste, Leistung, Abmessungen, hohe Haltbarkeit",
+        "Farben",
+        "Varianten für extreme Klimazonen mit hoher Haltbarkeit",
       ],
     },
     {
-      advantageCategory: "Documentation (pdf)",
+      advantageCategory: "Dokumentation (pdf)",
       advantageDescription: [
         {
           datasheet: "AE CMD-L132BD 505W-525W Ver24.1.1",
@@ -1368,16 +1365,16 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
   ],
   Neptune: [
     {
-      advantageCategory: "Benefit",
+      advantageCategory: "Nutzen",
       advantageDescription: [
-        "PERC Technology",
-        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
-        "Colors",
-        "Variants for extreme climates of high durability ",
+        "PERC-Technologie",
+        "Breites Spektrum an Auswahlmöglichkeiten für: Stückliste, Leistung, Abmessungen, hohe Haltbarkeit",
+        "Farben",
+        "Varianten für extreme Klimazonen mit hoher Haltbarkeit",
       ],
     },
     {
-      advantageCategory: "Documentation (pdf)",
+      advantageCategory: "Dokumentation (pdf)",
       advantageDescription: [
         {
           datasheet: "AE PV-380WtAYThermal-964W-5",
@@ -1388,16 +1385,16 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
   ],
   ShadeStar: [
     {
-      advantageCategory: "Benefit",
+      advantageCategory: "Nutzen",
       advantageDescription: [
-        "PERC Technology",
-        "Wide range of choices for: Bill of matorrals, Power, Dimensinns, High durability",
-        "Colors",
-        "Variants for extreme climates of high durability ",
+        "PERC-Technologie",
+        "Breites Spektrum an Auswahlmöglichkeiten für: Stückliste, Leistung, Abmessungen, hohe Haltbarkeit",
+        "Farben",
+        "Varianten für extreme Klimazonen mit hoher Haltbarkeit",
       ],
     },
     {
-      advantageCategory: "Documentation (pdf)",
+      advantageCategory: "Dokumentation (pdf)",
       advantageDescription: [
         {
           datasheet: "AE SMB-60 320W-335W Ver24.1.1",
@@ -1416,48 +1413,48 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   Aurora: {
     materialCharacteristics: {
       cellType: {
-        characteristic: "Cell type",
+        characteristic: "Zellentyp",
         value: "Gallium-doped Mono c-Si PERC, Half-cut cells, 182 mm",
       },
       noOfCells: {
-        characteristic: "No. of cells",
+        characteristic: "Anzahl der Zellen",
         value: "120",
       },
       dimensions: {
-        characteristic: "Dimensions",
+        characteristic: "Abmessungen",
         value: "1902 mm x 1133 mm x 30 mm",
       },
       weight: {
-        characteristic: "Weight",
+        characteristic: "Gewicht",
         value: "22.5 kg",
       },
       junctionBox: {
-        characteristic: "Junction box",
+        characteristic: "Anschlussdose",
         value: "IP68 rated, 3 Bypass Diodes",
       },
       outputCable: {
-        characteristic: "Output cable",
+        characteristic: "Ausgangskabel",
         value: "1 x 4 mm², 350 mm length or customized",
       },
       connectorType: {
-        characteristic: "Connector type",
+        characteristic: "Steckertyp",
         value: "MC 4 / MC 4 compatible",
       },
       hailResistance: {
-        characteristic: "Hail resistance",
+        characteristic: "Hagelbeständigkeit",
         value: "Max. ⌀ 25 mm at 23 m/s",
       },
       windLoad: {
-        characteristic: "Wind load",
+        characteristic: "Wind Belastung",
         value: "2400 Pa / 244 kg/m2",
       },
       mechanicalLoad: {
-        characteristic: "Mechanical load",
+        characteristic: "Mechanische Belastung",
         value: "5400 Pa / 550 kg/m2",
       },
     },
     packagingInformation:
-      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+      " Diese neue Technologie verhindert sofortige Leistungseinbußen im Modul, was den Leistungsverhältnis um bis zu 30 % erhöht und die Rendite für alle Arten von Installationen steigert.",
     dimensionsImage: "AuroraDimensions.png",
     certificates: [
       {
@@ -1486,48 +1483,48 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   Comet: {
     materialCharacteristics: {
       cellType: {
-        characteristic: "Cell type",
+        characteristic: "Zellentyp",
         value: "Silicon Heterojunction Technology, Half-cut cells, 210 mm",
       },
       noOfCells: {
-        characteristic: "No. of cells",
+        characteristic: "Anzahl der Zellen",
         value: "110",
       },
       dimensions: {
-        characteristic: "Dimensions",
+        characteristic: "Abmessungen",
         value: "2383 mm x 1095 mm x 35 mm",
       },
       weight: {
-        characteristic: "Weight",
+        characteristic: "Gewicht",
         value: "32.5 kg",
       },
       junctionBox: {
-        characteristic: "Junction box",
+        characteristic: "Anschlussdose",
         value: "IP68 rated, 3 Bypass Diodes",
       },
       outputCable: {
-        characteristic: "Output cable",
+        characteristic: "Ausgangskabel",
         value: "1 x 4.0mm2, 350mm length or customised",
       },
       connectorType: {
-        characteristic: "Connector type",
+        characteristic: "Steckertyp",
         value: "MC 4 / MC 4 compatible",
       },
       hailResistance: {
-        characteristic: "Hail resistance",
+        characteristic: "Hagelbeständigkeit",
         value: "Max. ⌀ 25 mm, at 23 m/s",
       },
       windLoad: {
-        characteristic: "Wind load",
+        characteristic: "Wind Belastung",
         value: "2400 Pa / 244 kg/m2",
       },
       mechanicalLoad: {
-        characteristic: "Mechanical load",
+        characteristic: "Mechanische Belastung",
         value: "5400 Pa / 550 kg/m2",
       },
     },
     packagingInformation:
-      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+      " Diese neue Technologie verhindert sofortige Leistungseinbußen im Modul, was den Leistungsverhältnis um bis zu 30 % erhöht und die Rendite für alle Arten von Installationen steigert.",
     dimensionsImage: "CometDimensions.png",
     certificates: [
       {
@@ -1556,48 +1553,48 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   Meteor: {
     materialCharacteristics: {
       cellType: {
-        characteristic: "Cell type",
+        characteristic: "Zellentyp",
         value: "Mono c-Si PERC, Full cells, 158.75 mm",
       },
       noOfCells: {
-        characteristic: "No. of cells",
+        characteristic: "Anzahl der Zellen",
         value: "60",
       },
       dimensions: {
-        characteristic: "Dimensions",
+        characteristic: "Abmessungen",
         value: "2278 mm x 1133 mm x 30 mm",
       },
       weight: {
-        characteristic: "Weight",
+        characteristic: "Gewicht",
         value: "26.5 kg",
       },
       junctionBox: {
-        characteristic: "Junction box",
+        characteristic: "Anschlussdose",
         value: "IP68 rated, 3 Bypass Diodes",
       },
       outputCable: {
-        characteristic: "Output cable",
+        characteristic: "Ausgangskabel",
         value: "1 x 4.0mm2, 350mm length or customised",
       },
       connectorType: {
-        characteristic: "Connector type",
+        characteristic: "Steckertyp",
         value: "MC 4 / MC 4 compatible",
       },
       hailResistance: {
-        characteristic: "Hail resistance",
+        characteristic: "Hagelbeständigkeit",
         value: "Max. ⌀ 25 mm, at 23 m/s",
       },
       windLoad: {
-        characteristic: "Wind load",
+        characteristic: "Wind Belastung",
         value: "2400 Pa / 244 kg/m2",
       },
       mechanicalLoad: {
-        characteristic: "Mechanical load",
+        characteristic: "Mechanische Belastung",
         value: "5400 Pa / 550 kg/m2",
       },
     },
     packagingInformation:
-      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+      " Diese neue Technologie verhindert sofortige Leistungseinbußen im Modul, was den Leistungsverhältnis um bis zu 30 % erhöht und die Rendite für alle Arten von Installationen steigert.",
     dimensionsImage: "MeteorDimensions.png",
     certificates: [
       {
@@ -1626,48 +1623,48 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   Terra: {
     materialCharacteristics: {
       cellType: {
-        characteristic: "Cell type",
+        characteristic: "Zellentyp",
         value: "Gallium-doped Mono c-Si PERC, Half-cut cells, 182 mm",
       },
       noOfCells: {
-        characteristic: "No. of cells",
+        characteristic: "Anzahl der Zellen",
         value: "132",
       },
       dimensions: {
-        characteristic: "Dimensions",
+        characteristic: "Abmessungen",
         value: "1070 mm x 2235 mm x 30 mm",
       },
       weight: {
-        characteristic: "Weight",
+        characteristic: "Gewicht",
         value: "30.5 kg",
       },
       junctionBox: {
-        characteristic: "Junction box",
+        characteristic: "Anschlussdose",
         value: "IP68 rated, 3 Bypass Diodes",
       },
       outputCable: {
-        characteristic: "Output cable",
+        characteristic: "Ausgangskabel",
         value: "1 x 4.0mm2, 350mm length or customised",
       },
       connectorType: {
-        characteristic: "Connector type",
+        characteristic: "Steckertyp",
         value: "MC 4 / MC 4 compatible",
       },
       hailResistance: {
-        characteristic: "Hail resistance",
+        characteristic: "Hagelbeständigkeit",
         value: "Max. ⌀ 25 mm, at 23 m/s",
       },
       windLoad: {
-        characteristic: "Wind load",
+        characteristic: "Wind Belastung",
         value: "2400 Pa / 244 kg/m2",
       },
       mechanicalLoad: {
-        characteristic: "Mechanical load",
+        characteristic: "Mechanische Belastung",
         value: "5400 Pa / 550 kg/m2",
       },
     },
     packagingInformation:
-      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+      " Diese neue Technologie verhindert sofortige Leistungseinbußen im Modul, was den Leistungsverhältnis um bis zu 30 % erhöht und die Rendite für alle Arten von Installationen steigert.",
     dimensionsImage: "TerraDimensions.png",
     certificates: [
       {
@@ -1696,48 +1693,48 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   Neptune: {
     materialCharacteristics: {
       cellType: {
-        characteristic: "Cell type",
+        characteristic: "Zellentyp",
         value: "Gallium-doped Mono c-Si PERC, Half-cut cells, 166 mm",
       },
       noOfCells: {
-        characteristic: "No. of cells",
+        characteristic: "Anzahl der Zellen",
         value: "120",
       },
       dimensions: {
-        characteristic: "Dimensions",
+        characteristic: "Abmessungen",
         value: "1755 mm x 1038 mm x 35 mm",
       },
       weight: {
-        characteristic: "Weight",
+        characteristic: "Gewicht",
         value: "33 kg",
       },
       junctionBox: {
-        characteristic: "Junction box",
+        characteristic: "Anschlussdose",
         value: "IP 68 rated",
       },
       outputCable: {
-        characteristic: "Output cable",
+        characteristic: "Ausgangskabel",
         value: "1 x 4.0mm2, 350mm length or customised",
       },
       connectorType: {
-        characteristic: "Connector type",
+        characteristic: "Steckertyp",
         value: "MC 4 / MC 4 compatible",
       },
       hailResistance: {
-        characteristic: "Hail resistance",
+        characteristic: "Hagelbeständigkeit",
         value: "Max. ⌀ 25 mm, at 23 m/s",
       },
       windLoad: {
-        characteristic: "Wind load",
+        characteristic: "Wind Belastung",
         value: "2400 Pa / 244 kg/m2",
       },
       mechanicalLoad: {
-        characteristic: "Mechanical load",
+        characteristic: "Mechanische Belastung",
         value: "5400 Pa / 550 kg/m2",
       },
     },
     packagingInformation:
-      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+      " Diese neue Technologie verhindert sofortige Leistungseinbußen im Modul, was den Leistungsverhältnis um bis zu 30 % erhöht und die Rendite für alle Arten von Installationen steigert.",
     dimensionsImage: "NeptuneDimensions.png",
     certificates: [
       {
@@ -1766,48 +1763,48 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   ShadeStar: {
     materialCharacteristics: {
       cellType: {
-        characteristic: "Cell type",
+        characteristic: "Zellentyp",
         value: "Mono c-Si PERC, Full cells, 158.75 mm",
       },
       noOfCells: {
-        characteristic: "No. of cells",
+        characteristic: "Anzahl der Zellen",
         value: "36",
       },
       dimensions: {
-        characteristic: "Dimensions",
+        characteristic: "Abmessungen",
         value: "1530 mm x 680 mm x 30 mm",
       },
       weight: {
-        characteristic: "Weight",
+        characteristic: "Gewicht",
         value: "10.8 kg",
       },
       junctionBox: {
-        characteristic: "Junction box",
+        characteristic: "Anschlussdose",
         value: "IP68 rated, 2 Bypass Diodes",
       },
       outputCable: {
-        characteristic: "Output cable",
+        characteristic: "Ausgangskabel",
         value: "1 x 4.0mm2, 900mm length or customised",
       },
       connectorType: {
-        characteristic: "Connector type",
+        characteristic: "Steckertyp",
         value: "MC 4 / MC 4 compatible",
       },
       hailResistance: {
-        characteristic: "Hail resistance",
+        characteristic: "Hagelbeständigkeit",
         value: "Max. ⌀ 25 mm, at 23 m/s",
       },
       windLoad: {
-        characteristic: "Wind load",
+        characteristic: "Wind Belastung",
         value: "2400 Pa / 244 kg/m2",
       },
       mechanicalLoad: {
-        characteristic: "Mechanical load",
+        characteristic: "Mechanische Belastung",
         value: "5400 Pa / 550 kg/m2",
       },
     },
     packagingInformation:
-      " This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations. This new technology prevents instant falls in the module output, thus increasing the performance ratio up to 30% and return for all types of installations.",
+      " Diese neue Technologie verhindert sofortige Leistungseinbußen im Modul, was den Leistungsverhältnis um bis zu 30 % erhöht und die Rendite für alle Arten von Installationen steigert.",
     dimensionsImage: "ShadeStarDimensions.png",
     certificates: [
       {
@@ -1835,97 +1832,97 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   },
 };
 
-export const CART_MODELS_ARE_READY = "Your modules";
+export const CART_MODELS_ARE_READY = "Ihre Module";
 export const CART_PLEASE_CHECKOUT =
-  "Please check out your order and we will finalize it.";
-export const CART_GET_A_QUOTE = "Get a quote";
-export const CART_REMOVE = "Remove";
+  "Bitte überprüfen Sie Ihre Bestellung, und wir werden sie abschließend bearbeiten.";
+export const CART_GET_A_QUOTE = "Erhalten Sie ein Angebot";
+export const CART_REMOVE = "Entfernen";
 export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
-  solarCellTechnology: "Solar Cell Technology",
-  moduleSpecification: "Module Specifation",
-  moduleColor: "Module Color",
-  backCover: "Back Cover",
-  frameColor: "Frame Color",
-  moduleDimension: "Module Dimension",
-  powerRange: "Power Range",
-  applications: "Applications",
+  solarCellTechnology: "Solarzelle Technologie",
+  moduleSpecification: "Modulspezifikation",
+  moduleColor: "Modulfarbe",
+  backCover: "Hinterer Deckel",
+  frameColor: "Rahmenfarbe",
+  moduleDimension: "Modulabmessung",
+  powerRange: "Leistungsbereich",
+  applications: "Anwendungen",
 };
-export const CART_ADD_ONE_MORE_PANEL = "Add one more panel";
-export const CART_BAG_IS_EMPTY = "Bag is empty";
-export const CART_SUCCESSFULLY_ADDED = "Successfully added to bag";
-export const CART_LOCALSTORAGE = "cart";
+export const CART_ADD_ONE_MORE_PANEL = "Fügen Sie ein weiteres Panel hinzu.";
+export const CART_BAG_IS_EMPTY = "Der Warenkorb ist leer.";
+export const CART_SUCCESSFULLY_ADDED = "Erfolgreich zum Warenkorb hinzugefügt";
+export const CART_LOCALSTORAGE = "Warenkorb";
 
-export const CHECKOUT_FILL_OUT = `Fill out Your
-Order Information`;
-export const CHECKOUT_THANK_YOU = `Thank You
-We are Contact 
-You Soon`;
-export const CHECKOUT_GO_TO_HOME_PAGE = "Go to Homepage";
+export const CHECKOUT_FILL_OUT = `Füllen Sie Ihre
+Bestellinformationen aus`;
+export const CHECKOUT_THANK_YOU = `Danke Ihnen.
+Wir werden Sie 
+bald kontaktieren`;
+export const CHECKOUT_GO_TO_HOME_PAGE = "Zur Startseite";
 export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
   {
-    formTitle: "My name is",
-    placeholder: "first and last",
+    formTitle: "Mein Name ist",
+    placeholder: "Vor- und Nachname",
     name: "name",
     type: "input",
   },
   {
-    formTitle: "Please, contact me at",
-    placeholder: "your e-mail",
+    formTitle: "Bitte kontaktieren Sie mich unter",
+    placeholder: "Meine E-Mail-Adresse",
     name: "email",
     type: "input",
   },
   {
-    formTitle: "My phone number",
-    placeholder: "phone number",
+    formTitle: "Meine Telefonnummer",
+    placeholder: "Telefonnummer",
     name: "phone",
     type: "phone",
   },
   {
-    formTitle: "I have a",
-    placeholder: "comment or question, etc.",
+    formTitle: "Ich habe",
+    placeholder: "einen Kommentar oder eine Frage, usw.",
     name: "comment",
     type: "textarea",
   },
 ];
-export const CHECKOUT_SEND_REQUEST = "Send Request";
+export const CHECKOUT_SEND_REQUEST = "Anfrage senden";
 
-export const CONSULT_READY_TO_CONSULT = `Hey! We are Ready
-to Consult You`;
-export const CONSULT_AGREEMENT = "I agree to the processing of personal data";
+export const CONSULT_READY_TO_CONSULT = `Hallo! Wir sind bereit,
+Sie zu beraten.`;
+export const CONSULT_AGREEMENT = "Ich stimme der Verarbeitung personenbezogener Daten zu.";
 
 export const CONSULT_FORM_FIELDS: FormFileds[] = [
   {
-    formTitle: "My name is",
-    placeholder: "first and last",
+    formTitle: "Mein Name ist",
+    placeholder: "Vor- und Nachname",
     name: "name",
     type: "input",
   },
   {
-    formTitle: "I’m interested in",
+    formTitle: "Ich bin interessiert an",
     name: "interest",
     type: "picker",
   },
   {
-    formTitle: "Capacity",
+    formTitle: "Kapazität",
     placeholder: "kW",
     name: "capacity",
     type: "input",
   },
   {
-    formTitle: "Please, contact me at",
-    placeholder: "your e-mail",
+    formTitle: "Bitte kontaktieren Sie mich unter",
+    placeholder: "Meine E-Mail-Adresse",
     name: "email",
     type: "input",
   },
   {
-    formTitle: "My phone number",
-    placeholder: "phone number",
+    formTitle: "Meine Telefonnummer",
+    placeholder: "Telefonnummer",
     name: "phone",
     type: "phone",
   },
   {
-    formTitle: "I have a",
-    placeholder: "comment or question, etc.",
+    formTitle: "Ich habe",
+    placeholder: "einen Kommentar oder eine Frage, usw.",
     name: "comment",
     type: "textarea",
   },
@@ -1943,67 +1940,67 @@ export const PICKER_INPUT_VALUES = {
   [FORMS_FIELDS.interest]: ["installing", "partnership", "investing"],
 };
 
-export const ABOUT_SUSTAINABLE = `Sustainable
-Since 2003`;
+export const ABOUT_SUSTAINABLE = `Nachhaltig
+Seit 2003`;
 export const ABOUT_COMPANY_FOUNDATION =
-  "AE Solar TIER1 Company was founded by Dr. Alexander Maier and his brothers in Königsbrunn, Germany. AE Solar is one of the award-winning leading brands in the renewable energy industry, providing high-quality new renewable energy products and services since 2003.";
+  "Die AE Solar TIER1 Company wurde von Dr. Alexander Maier und seinen Brüdern in Königsbrunn, Deutschland, gegründet. AE Solar ist eine preisgekrönte führende Marke in der erneuerbaren Energiewirtschaft und bietet seit 2003 hochwertige neue Produkte und Dienstleistungen im Bereich erneuerbarer Energien an.";
 export const ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT = [
-  "was",
-  "AE Solar is one of",
-  "leading brands in the renewable energy industry, providing",
-  "and services since 2003.",
+  "wurde",
+  "AE Solar ist eine",
+  "preisgekrönte führende Marke in der erneuerbaren Energiewirtschaft",
+  "und bietet seit 2003",
 ];
 
-export const ABOUT_BUSINESS = "Business Map";
-export const ABOUT_MAP = "Where Is Our Power";
+export const ABOUT_BUSINESS = "Geschäftskarte";
+export const ABOUT_MAP = "Wo ist unsere Energie";
 export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "germany.svg",
-    designation: "Headquater",
-    location: ["Königsbrunn,", "Germany"],
+    designation: "Hauptquartier",
+    location: ["Königsbrunn,", "Deutschland"],
   },
   {
     icon: "office.svg",
-    designation: "Branch office",
+    designation: "Niederlassung",
     location: ["Georgia", "Brasil", "Colombia"],
   },
   {
     icon: "base.svg",
-    designation: "Manufacturing Base",
+    designation: "Fertigungsstandort",
     location: ["Turkey", "China"],
   },
   {
     icon: "distributor.svg",
-    designation: "Distributor",
-    location: ["All around the World"],
+    designation: "Verteiler",
+    location: ["Rund um die Welt"],
   },
 ];
-export const ABOUT_OUR_HISTORY = "Our History";
-export const ABOUT_THROUGH = "Through the Years";
+export const ABOUT_OUR_HISTORY = "Unsere Geschichte";
+export const ABOUT_THROUGH = "Durch die Jahre";
 
-export const COOKIES_AESOLAR = "Cookies on AESolar";
+export const COOKIES_AESOLAR = "Cookies auf AESolar";
 export const COOKIES_WE_USE_COOKIES =
-  "We use cookies and other tracking technologies to improve your browsing experience on our site, show personalized content and targeted ads, analyze site traffic, and understand where our audiences come from. To learn more or opt-out, read our Cookie Policy. Please also read our Privacy Notice and Terms of Use, which became effective December 20, 2019.";
+  "Wir verwenden Cookies und andere Tracking-Technologien, um Ihr Surferlebnis auf unserer Website zu verbessern, personalisierte Inhalte und zielgerichtete Anzeigen anzuzeigen, den Website-Verkehr zu analysieren und zu verstehen, woher unsere Zielgruppen kommen. Um mehr zu erfahren oder sich abzumelden, lesen Sie unsere Cookie-Richtlinie. Bitte lesen Sie auch unsere Datenschutzerklärung und Nutzungsbedingungen, die ab dem 20. Dezember 2019 in Kraft getreten sind.";
 export const COOKIES_LINKS = [
-  "Cookie Policy",
-  "Privacy Notice",
-  "Terms of Use",
+  "Cookie-Richtlinie",
+  "Datenschutzerklärung",
+  "Nutzungsbedingungen",
 ];
 export const COOKIES_MATCH_TEXT_WITH_LINK = {
-  "Cookie Policy": "policy",
-  "Privacy Notice": "privacy",
-  "Terms of Use": "terms",
+  "Cookie-Richtlinie": "policy",
+  "Datenschutzerklärung": "privacy",
+  "Nutzungsbedingungen": "terms",
 };
 export const COOKIES_BY_CHOOSING =
-  "By choosing “I Accept”, you consent to our use of cookies and other tracking technologies.";
-export const COOKIES_I_ACCEPT = "I accept";
-export const COOKIES_I_DO_NOT_ACCEPT = "I do not accept";
+  "Durch die Auswahl von 'Ich akzeptiere' stimmen Sie unserer Verwendung von Cookies und anderen Tracking-Technologien zu.";
+export const COOKIES_I_ACCEPT = "Ich akzeptiere";
+export const COOKIES_I_DO_NOT_ACCEPT = "Ich akzeptiere nicht";
 export const COOKIES_USER_CONSENT_FLAG = "cookieConsentIsTrue";
 
-export const DOCUMENTS_DOCUMENTS_HEADING = "Documents";
-export const DOCUMENTS_YOU_NEED_TO_KNOW = "You Need to Know";
-export const DOCUMENTS_CATEGORIES = "Categories";
-export const DOCUMENTS_SEARCH = "Search";
+export const DOCUMENTS_DOCUMENTS_HEADING = "Dokumente";
+export const DOCUMENTS_YOU_NEED_TO_KNOW = "Sie müssen wissen";
+export const DOCUMENTS_CATEGORIES = "Kategorien";
+export const DOCUMENTS_SEARCH = "Suche";
 export const DOCUMENT_SUBCATEGORIES_SPLITTER = "$";
 export const DOCUMENTS_FILES: (
   | DocumentsTypesPresentation
@@ -2015,11 +2012,11 @@ export const DOCUMENTS_FILES: (
     type: "Text",
     data: [
       {
-        linkTitle: "Company Profile 2024",
+        linkTitle: "Firmenprofil 2024",
         link: "/documents/presentations/Company_Profile_EN_2024_JAN_v1.pdf",
       },
       {
-        linkTitle: "AESOLAR HSF Presentation",
+        linkTitle: "AESOLAR HSF Präsentation",
         link: "/documents/presentations/AE-Solar-HSF-Introduction-light.pdf",
       },
 
@@ -2029,38 +2026,38 @@ export const DOCUMENTS_FILES: (
       },
 
       {
-        linkTitle: "Fraunhofer HSF Presentation",
+        linkTitle: "Fraunhofer HSF Präsentation",
         link: "/documents/presentations/Fraunhofer_HSF_Report_Presentation_2018.pdf",
       },
 
       {
-        linkTitle: "Hot-Spot Fee case study",
+        linkTitle: "Fallstudie zur Hot-Spot-Gebühr",
         link: "/documents/presentations/Hot-Spot-Fee-case-study-2.pdf",
       },
       {
-        linkTitle: "AESOLAR Smart Hot-Spot Free Presentation (EN)",
+        linkTitle: "AESOLAR Smart Hot-Spot Free Präsentation (EN)",
         link: "/documents/presentations/HSF-Presentation_04-1.pdf",
       },
       {
-        linkTitle: "AESOLAR Smart Hot-Spot Free Presentation (PT)",
+        linkTitle: "AESOLAR Smart Hot-Spot Free Präsentation (PT)",
         link: "/documents/presentations/HSF_Portuguese-1.pdf",
       },
       {
-        linkTitle: "Product Catalogue",
+        linkTitle: "Produktkatalog",
         link: "/documents/presentations/PRODUCT-CATALOGUE_OCT.pdf",
       },
       {
-        linkTitle: "Production Process",
+        linkTitle: "Herstellungsprozess",
         link: "/documents/presentations/Production-process.pdf",
       },
     ],
   },
   {
-    category: "Technical Data",
+    category: "Technische Daten",
     type: "SubCategories",
     subCategories: [
       {
-        category: "Datasheets",
+        category: "Datenblätter",
         type: "Text",
         data: [
           {
@@ -2201,7 +2198,7 @@ export const DOCUMENTS_FILES: (
         ],
       },
       {
-        category: "Installation Manual",
+        category: "Installationsanleitung",
         type: "Text",
         data: [
           {
@@ -2359,7 +2356,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   // {
-  //   category: "Technical Data",
+  //   category: "Technische Daten",
   //   type: "Text",
   //   data: [
   //     { linkTitle: "Technical Data1", link: "link" },
@@ -2383,7 +2380,7 @@ export const DOCUMENTS_FILES: (
   //   ],
   // },
   // {
-  //   category: "Warranty",
+  //   category: "Garantie",
   //   type: "Text",
   //   data: [
   //     { linkTitle: "Warranty1", link: "link" },
@@ -2414,184 +2411,184 @@ export const DOCUMENTS_FILES: (
   // },
 ];
 
-export const DOCUMENTS_FAQ_HAVE_A_QUESTION = "Have a Question?";
-export const DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS = "We Have Solutions";
+export const DOCUMENTS_FAQ_HAVE_A_QUESTION = "Eine Frage?";
+export const DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS = "Wir haben Lösungen";
 export const DOCUMENTS_FAQ_FILES = [
   {
-    category: "AESOLAR Company and Product Overview",
+    category: "AESOLAR Unternehmens- und Produktübersicht",
     data: [
       {
-        question: "What does TIER 1 mean?",
+        question: "Was bedeutet TIER 1?",
         answer:
-          "The Bloomberg New Energy Finance (BNEF) ranking allows for a transparent differentiation among the numerous PV manufacturers in the market. The title Tier-1 manufacturer is one of the highest distinctions in the industry.",
+          "Die Rangliste von Bloomberg New Energy Finance (BNEF) ermöglicht eine transparente Unterscheidung zwischen den zahlreichen PV-Herstellern auf dem Markt. Der Titel 'Tier-1-Hersteller' ist eine der höchsten Auszeichnungen in der Branche.",
       },
       {
-        question: "Is AESOLAR listed as TIER 1?",
-        answer: "Yes",
+        question: "Ist AESOLAR als TIER 1 gelistet?",
+        answer: "Ja",
       },
       {
-        question: "What modules does AESOLAR produce?",
+        question: "Welche Module produziert AESOLAR?",
         answer:
-          "AESOLAR offers a wide range of solar modules, including monocrystalline, polycrystalline, PERC, TOPCon, and HJT modules.",
+          "AESOLAR bietet eine breite Palette von Solarmodulen an, darunter monokristalline, polykristalline, PERC-, TOPCon- und HJT-Module.",
       },
       {
-        question: "What is the production capacity of AESOLAR?",
+        question: "Was ist die Produktionskapazität von AESOLAR?",
         answer:
-          "Our annual production capacity is 2 gigawatts, with expansion plans for the future",
+          "Unsere jährliche Produktionskapazität beträgt 2 Gigawatt, mit Expansionsplänen für die Zukunft.",
       },
       {
-        question: "Where does AESOLAR produce?",
+        question: "Wo produziert AESOLAR?",
         answer:
-          "Our production facilities are located in China and Turkey, supplemented by planned production facilities in Germany.",
+          "Unsere Produktionsstätten befinden sich in China und der Türkei, ergänzt durch geplante Produktionsstätten in Deutschland.",
       },
       {
-        question: "Why buy AESOLAR modules?",
+        question: "Warum AESOLAR-Module kaufen?",
         answer:
-          "AESOLAR modules are characterized by high quality, efficiency, reliability, excellent warranty terms, and outstanding customer service.",
+          "AESOLAR-Module zeichnen sich durch hohe Qualität, Effizienz, Zuverlässigkeit, ausgezeichnete Garantiebedingungen und herausragenden Kundenservice aus.",
       },
       {
         question:
-          "How does AESOLAR's quality differ from other TIER 1 manufacturers?",
+          "Wie unterscheidet sich die Qualität von AESOLAR von anderen Herstellern der TIER-1-Kategorie?",
         answer:
-          "AESOLAR stands out from other TIER 1 manufacturers due to our advanced technology, rigorous quality controls, and innovation. This justifies the higher price of our products, reflecting superior performance and durability.",
+          "AESOLAR unterscheidet sich von anderen Herstellern der TIER-1-Kategorie durch unsere fortschrittliche Technologie, strenge Qualitätskontrollen und Innovation. Dies rechtfertigt den höheren Preis unserer Produkte, der eine überlegene Leistung und Haltbarkeit widerspiegelt.",
       },
       {
-        question: "Does AESOLAR produce cells?",
+        question: "Produziert AESOLAR Zellen?",
         answer:
-          "No, AESOLAR does not produce solar cells itself. However, we exclusively offer a wide range of solar cells of all technologies, from which our latest and most advanced modules result.",
+          "Nein, AESOLAR produziert keine Solarzellen selbst. Wir bieten jedoch ausschließlich eine breite Palette von Solarzellen aller Technologien an, aus denen unsere neuesten und fortschrittlichsten Module resultieren.",
       },
       {
-        question: "Why do you have a polar bear as a mascot?",
+        question: "Warum haben Sie einen Eisbären als Maskottchen?",
         answer:
-          "The polar bear symbolizes our commitment to environmental protection and the fight against climate change. It represents our dedication to sustainability and renewable energies.",
-      },
-    ],
-  },
-  {
-    category: "Product Specifications and Technologies",
-    data: [
-      {
-        question: "What is PERC?",
-        answer:
-          "Passivated Emitter and Rear Cell is a technology designed to enhance the efficiency of solar cells.",
-      },
-      {
-        question: "What is TOPCon?",
-        answer:
-          "Tunnel Oxide Passivated Contact - is an advanced technology aimed at improving the efficiency and lifespan of solar cells",
-      },
-      {
-        question: "What is HJT??",
-        answer:
-          "Heterojunction Technology combines monocrystalline and amorphous silicon to increase efficiency",
-      },
-      {
-        question: "What is BIPV?",
-        answer:
-          "Building Integrated Photovoltaics refers to the integration of solar technology into building structures.",
-      },
-      {
-        question: "What does PVT mean?",
-        answer:
-          "Photovoltaic Thermal denotes the combination of photovoltaic and thermal energy generation, as seen in our Neptune series..",
-      },
-      {
-        question: "Are there colored modules?",
-        answer: "Yes, we offer colored modules to meet aesthetic requirements.",
-      },
-      {
-        question: "What does Weak Light and Low-Temperature Performance mean?",
-        answer:
-          "These terms describe the performance of solar modules under conditions of low sunlight and at low temperatures. AESOLAR modules are designed to operate efficiently even under such conditions.",
+          "Der Eisbär symbolisiert unser Engagement für den Umweltschutz und den Kampf gegen den Klimawandel. Er steht für unsere Hingabe zur Nachhaltigkeit und erneuerbaren Energien.",
       },
     ],
   },
   {
-    category: "Purchase and Availability",
+    category: "Produktspezifikationen und Technologien",
     data: [
       {
-        question: "Where can I buy AESOLAR modules?",
+        question: "Was ist PERC?",
         answer:
-          "Our modules are available through a network of distributors and dealers. Please contact us directly for more information.",
+          "Passivated Emitter and Rear Cell ist eine Technologie, die entwickelt wurde, um die Effizienz von Solarzellen zu verbessern.",
+      },
+      {
+        question: "Was ist TOPCon?",
+        answer:
+          "Tunneloxid passivierter Kontakt (TOPCon) ist eine fortschrittliche Technologie, die darauf abzielt, die Effizienz und Lebensdauer von Solarzellen zu verbessern.",
+      },
+      {
+        question: "Was ist HJT??",
+        answer:
+          "Die Heterojunction-Technologie kombiniert monokristallines und amorphes Silizium, um die Effizienz zu steigern.",
+      },
+      {
+        question: "Was ist BIPV?",
+        answer:
+          "Gebäudeintegrierte Photovoltaik bezieht sich auf die Integration von Solartechnologie in Gebäudestrukturen.",
+      },
+      {
+        question: "Was bedeutet PVT?",
+        answer:
+          "Photovoltaisch thermisch bezeichnet die Kombination von photovoltaischer und thermischer Energieerzeugung, wie sie in unserer Neptun-Serie zu sehen ist.",
+      },
+      {
+        question: "Gibt es farbige Module?",
+        answer: "Ja, wir bieten farbige Module an, um ästhetische Anforderungen zu erfüllen.",
+      },
+      {
+        question: "Was bedeutet schwache Licht- und Niedertemperaturleistung?",
+        answer:
+          "Diese Begriffe beschreiben die Leistung von Solarmodulen unter Bedingungen mit wenig Sonnenlicht und bei niedrigen Temperaturen. AESOLAR-Module sind so konzipiert, dass sie auch unter solchen Bedingungen effizient arbeiten können.",
       },
     ],
   },
   {
-    category: "Market Strategy and Partnerships",
+    category: "Kauf und Verfügbarkeit",
     data: [
       {
-        question: "What is your market strategy?",
+        question: "Wo kann ich AESOLAR-Module kaufen?",
         answer:
-          "Our strategy focuses on providing high-quality solar modules, building strong partnerships, and concentrating on innovation and customer service.",
+          "Unsere Module sind über ein Netzwerk von Distributoren und Händlern erhältlich. Bitte kontaktieren Sie uns direkt für weitere Informationen.",
+      },
+    ],
+  },
+  {
+    category: "Marktstrategie und Partnerschaften",
+    data: [
+      {
+        question: "Was ist Ihre Marktstrategie?",
+        answer:
+          "Unsere Strategie konzentriert sich darauf, hochwertige Solarmodule anzubieten, starke Partnerschaften aufzubauen und sich auf Innovation und Kundenservice zu konzentrieren.",
       },
       {
-        question: "How many distribution partners do you have per country?",
+        question: "Wie viele Vertriebspartner haben Sie pro Land?",
         answer:
-          "The number of distribution partners varies depending on the market size and dynamics.",
+          "Die Anzahl der Vertriebspartner variiert je nach Marktvolumen und Dynamik.",
       },
       {
         question:
-          "How can we protect our market share if we become your distribution partner?",
+          "Wie können wir unseren Marktanteil schützen, wenn wir Ihr Vertriebspartner werden?",
         answer:
-          "Through exclusive distribution territories, marketing support, and product training, we offer our partners the opportunity to effectively protect and expand their market share.",
+          "Durch exklusive Vertriebsgebiete, Marketingunterstützung und Produktschulungen bieten wir unseren Partnern die Möglichkeit, ihren Marktanteil effektiv zu schützen und auszubauen.",
       },
     ],
   },
   {
-    category: "General information about solar panels",
+    category: "Allgemeine Informationen über Solarmodule",
     data: [
       {
-        question: "What is a solar panel and how does it work?",
+        question: "Was ist ein Solarmodul und wie funktioniert es?",
         answer:
-          "A solar panel converts sunlight into electricity based on the photovoltaic effect.",
+          "Ein Solarmodul wandelt Sonnenlicht mithilfe des photovoltaischen Effekts in Elektrizität um.",
       },
       {
-        question: "How long do solar panels last?",
+        question: "Wie lange halten Solarmodule?",
         answer:
-          "Typically, 25 to 30 years, with a slight decrease in efficiency over time.",
+          "Typischerweise 25 bis 30 Jahre, wobei die Effizienz im Laufe der Zeit leicht abnimmt.",
       },
       {
-        question: "How much do solar panels cost?",
-        answer: "Costs vary depending on size, type, and manufacturer.",
+        question: "Wie viel kosten Solarmodule?",
+        answer: "Die Kosten variieren je nach Größe, Typ und Hersteller.",
       },
       {
-        question: "Can solar panels generate energy in any weather?",
+        question: "Können Solarmodule bei jedem Wetter Energie erzeugen?",
         answer:
-          "Yes, even in cloudy weather, although efficiency is higher in direct sunlight.",
+          "Ja, auch bei bewölktem Wetter können Solarmodule Energie erzeugen, obwohl die Effizienz bei direktem Sonnenlicht höher ist.",
       },
       {
-        question: "Do I need a permit to install solar panels?",
-        answer: "Often, a permit is required depending on local regulations.",
+        question: "Brauche ich eine Genehmigung, um Solarmodule zu installieren?",
+        answer: "Oft ist eine Genehmigung erforderlich, je nach den örtlichen Vorschriften.",
       },
       {
         question:
-          "How does the installation of solar panels affect the value of my home?",
+          "Wie wirkt sich die Installation von Solarmodulen auf den Wert meines Hauses aus?",
         answer:
-          "The installation can increase the value of a home, especially through improved energy efficiency.",
+          "Die Installation kann den Wert eines Hauses erhöhen, insbesondere durch verbesserte Energieeffizienz.",
       },
       {
-        question: "How environmentally friendly are solar panels?",
+        question: "Wie umweltfreundlich sind Solarmodule?",
         answer:
-          "Solar panels are highly environmentally friendly, as they utilize renewable energy and produce no greenhouse gases.",
+          "Solarmodule sind äußerst umweltfreundlich, da sie erneuerbare Energie nutzen und keine Treibhausgase produzieren.",
       },
       {
-        question: "Can I install solar panels myself?",
+        question: "Kann ich Solarmodule selbst installieren?",
         answer:
-          "Installation is possible, but professional installation is recommended.",
+          "Die Installation ist möglich, aber eine professionelle Installation wird empfohlen.",
       },
       {
-        question: "How maintenance-intensive are solar panels?",
+        question: "Wie wartungsintensiv sind Solarmodule?",
         answer:
-          "Solar panels require little maintenance, making them a practical solution for sustainable energy.",
+          "Solarmodule erfordern nur geringen Wartungsaufwand, was sie zu einer praktischen Lösung für nachhaltige Energie macht.",
       },
     ],
   },
 ];
 export const DOCUMENTS_FILTER = "Filter";
-export const DOCUMENTS_NO_RESULT = "No result for: ";
-export const DOCUMENTS_RESET = "Reset";
+export const DOCUMENTS_NO_RESULT = "Kein Ergebnis für: ";
+export const DOCUMENTS_RESET = "Zurücksetzen";
 
-export const DOCUMENTS_IMPRINT_INFO_IMPRINT = "Imprint";
+export const DOCUMENTS_IMPRINT_INFO_IMPRINT = "Impressum";
 export const DOCUMENTS_IMPRINT_INFO_INFORMATION = "Information";
 export const DOCUMENTS_IMPRINT_INFO_LEGAL = {
   title: "Legal",
@@ -2611,4 +2608,4 @@ export const DOCUMENTS_IMPRINT_INFO_LEGAL = {
     `Germany`,
   ],
 };
-export const DOCUMENTS_IMPRINT_INFO_CONTACTS = "Contacts";
+export const DOCUMENTS_IMPRINT_INFO_CONTACTS = "Kontakte";

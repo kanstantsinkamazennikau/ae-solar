@@ -85,7 +85,7 @@ export default function HeroSection() {
           }
         `}
       >
-        <span>{"Scroll to the future"}</span>
+        <span>{"In die Zukunft blättern"}</span>
         <Image
           src="/images/arrowFuture.svg"
           alt="arrow"

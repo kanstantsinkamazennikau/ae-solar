@@ -1,11 +1,11 @@
-export const CONTACTS_CONTACT_US = "Contact Us";
-export const CONTACTS_INFORMATION = "Information";
-export const CONTACTS_WE_ARE_READY = `We’re Ready to 
-Consult You`;
-export const CONTACTS_DOWNLOAD_PRESENTATION = "Download Presentation";
+export const CONTACTS_CONTACT_US = "Kontaktieren Sie uns";
+export const CONTACTS_INFORMATION = "Informationen";
+export const CONTACTS_WE_ARE_READY = `Wir sind bereit,
+Sie zu beraten`;
+export const CONTACTS_DOWNLOAD_PRESENTATION = "Präsentation herunterladen";
 export const CONTACTS_OFFICES = [
   {
-    office: "Head Office",
+    office: "Hauptgeschäftsstelle",
     contacts: [
       {
         title: "Tel.",
@@ -26,7 +26,7 @@ export const CONTACTS_OFFICES = [
         linkTo: "mailto:sales@ae-solar.com",
       },
       {
-        title: "Address",
+        title: "Adresse",
         icon: "location.svg",
         info: "AE Alternative Energy GMBH Messerschmittring 54, D-86343, Königsbrunn, Germany",
       },
@@ -48,7 +48,7 @@ export const CONTACTS_OFFICES = [
         linkTo: "mailto:georgia@ae-solar.com",
       },
       {
-        title: "Address",
+        title: "Adresse",
         icon: "location.svg",
         info: "AE Solar LLC Lvovi str.,2nd Close №13, Tbilisi, Georgia",
       },
@@ -82,7 +82,7 @@ export const CONTACTS_OFFICES = [
         linkTo: "mailto:contato@ae-solar.com",
       },
       {
-        title: "Address",
+        title: "Adresse",
         icon: "location.svg",
         info: "Rua Serra de Bragança, 1492 Jd. Anália Franco - São Paulo / SP",
       },
@@ -104,7 +104,7 @@ export const CONTACTS_OFFICES = [
         linkTo: "mailto:sales@ae-solar.com.cn",
       },
       {
-        title: "Address",
+        title: "Adresse",
         icon: "location.svg",
         info: "Jingyi Road 26, Hongze District, Huai'an, Jiangsu Province, China",
       },
@@ -130,7 +130,7 @@ export const CONTACTS_OFFICES = [
         info: "0081689331",
       },
       {
-        title: "Address",
+        title: "Adresse",
         icon: "location.svg",
         info: "AE Solar Elektrik SAN. TİC. A.Ş. Mimarsinan Organize Sanayi Bölgesi 15.cad No.8 Melikgazi/Kayseri/Turkey",
       },

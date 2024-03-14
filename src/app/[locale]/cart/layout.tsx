@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 const title = "AE-Solar | Cart";
 const description =
-  "Your models are ready for the next step. Please check out your order and we will finalize it.";
+  "Ihre Modelle sind bereit für den nächsten Schritt. Bitte überprüfen Sie Ihre Bestellung und wir werden sie abschließen.";
 
 export const metadata: Metadata = {
   title,

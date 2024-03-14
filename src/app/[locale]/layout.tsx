@@ -115,7 +115,7 @@ const criteria = localFont({
 
 export const metadata: Metadata = {
   title: "AE-Solar",
-  description: "German TIER1 Manufacturer of High-Quality Solar Panels",
+  description: "Wir sind TIER1 Hersteller von hochqualitativen Solarmodulen",
   keywords: [],
   metadataBase: new URL(
     `${
@@ -126,7 +126,7 @@ export const metadata: Metadata = {
   ),
   openGraph: {
     title: "AE-Solar",
-    description: "German TIER1 Manufacturer of High-Quality Solar Panels",
+    description: "Wir sind TIER1 Hersteller von hochqualitativen Solarmodulen",
     type: "website",
   },
 };
