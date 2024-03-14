@@ -88,7 +88,6 @@ export default function LightingTheWayVideo() {
       )}
       {!isLongVideoLoadingTime && (
         <video
-          playsInline
           width="1920"
           height="1080"
           onPlay={onPlay}

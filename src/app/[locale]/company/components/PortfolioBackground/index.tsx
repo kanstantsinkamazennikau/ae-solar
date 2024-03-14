@@ -29,7 +29,6 @@ export default function PortfolioBackground() {
           height="700"
           autoPlay
           muted
-          playsInline
           className="relative md:-left-[240px] min-h-[300px] md:object-cover"
         >
           <source src={`/videos/products/HeaderFlower.mp4`} type="video/mp4" />

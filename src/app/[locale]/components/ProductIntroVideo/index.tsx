@@ -22,7 +22,13 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { Video } from "@splidejs/splide-extension-video";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useCallback, useContext, useEffect, useRef } from "react";
+import {
+  useCallback,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+} from "react";
 
 export default function ProductIntroVideo() {
   const { model, setModel } = useContext(ModelContext);
@@ -33,6 +39,25 @@ export default function ProductIntroVideo() {
   const router = useRouter();
   const sliderRef = useRef<Splide>(null);
   const sliderId = PRODUCT_INTRO_PANELS_IMAGES.indexOf(model);
+
+  function fullscreenchanged(event) {
+    // document.fullscreenElement will point to the element that
+    // is in fullscreen mode if there is one. If not, the value
+    // of the property is null.
+    if (document.fullscreenElement) {
+      // exitFullscreen is only available on the Document object.
+      document.exitFullscreen();
+    }
+  }
+
+  useLayoutEffect(() => {
+    const videos = document.getElementsByTagName("video");
+    (videos as HTMLVideoElement[]).forEach((video) => {
+      ["", "webkit", "moz", "ms"].forEach((prefix) =>
+        video.addEventListener(prefix + "fullscreenchange", fullscreenchanged)
+      );
+    });
+  }, []);
 
   const options = {
     type: "loop",
@@ -244,7 +269,6 @@ export default function ProductIntroVideo() {
                     muted
                     autoPlay
                     key={model}
-                    playsInline
                     className="
                       w-[1920px]
                       2xl:h-[800px]

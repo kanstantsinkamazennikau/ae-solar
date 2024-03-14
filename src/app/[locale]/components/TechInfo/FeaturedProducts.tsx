@@ -16,7 +16,6 @@ const Video = ({ videoLink }: { videoLink: string }) => {
   return (
     <>
       <video
-        playsInline
         muted
         ref={videoRef}
         className="
