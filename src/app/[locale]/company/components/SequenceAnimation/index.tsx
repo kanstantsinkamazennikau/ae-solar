@@ -53,7 +53,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
   }, [images]);
 
   function preloadImages() {
-    for (let i = 1; i <= numFrames - 1; i++) {
+    for (let i = 1; i <= numFrames; i++) {
       const img = new Image();
       const imgSrc = getCurrentFrame(i);
       img.src = imgSrc;
