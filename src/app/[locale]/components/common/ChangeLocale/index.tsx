@@ -18,7 +18,9 @@ export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
 
   const handleSelection = (code: string) => {
     const newLocale = code.toLowerCase();
-    router.push(`/${newLocale}/${urlSegments.join("/")}`);
+    newLocale === "de"
+      ? router.push(`https://de.ae-solar.com`)
+      : router.push(`https://staging.ae-solar.com`);
   };
 
   return (
@@ -35,7 +37,7 @@ export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
             ref={dropdownRef}
             className="
               max-h-[200px]
-              overflow-y-scroll
+              overflow-y-auto
               absolute
               codeDropdown
               p-2

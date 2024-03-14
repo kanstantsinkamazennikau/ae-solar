@@ -244,6 +244,7 @@ export default function ProductIntroVideo() {
                     muted
                     autoPlay
                     key={model}
+                    playsInline
                     className="
                       w-[1920px]
                       2xl:h-[800px]
