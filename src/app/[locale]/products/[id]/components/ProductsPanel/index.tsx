@@ -69,7 +69,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           <VideoPlayer onLoaded={onLoaded} onEnded={onEnded} id={id} />
         ) : (
           <Image
-            src={`/videos/products/${id}HeaderStatic.png`}
+            src={`/videos/products/${id}HeaderStatic.jpg`}
             alt={id}
             priority
             width={1920}

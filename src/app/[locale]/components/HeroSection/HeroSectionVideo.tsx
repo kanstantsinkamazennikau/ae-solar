@@ -23,7 +23,7 @@ export default function HeroSectionVideo() {
     setIsPlaying(true);
     setTimeout(() => {
       setIsStartAnimation(true);
-    }, 1500);
+    }, 300);
   };
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function HeroSectionVideo() {
         setIsLongVideoLoadingTime(true);
         setIsStartAnimation(true);
       },
-      isIOSDevice ? 1000 : 6000
+      isIOSDevice ? 300 : 6000
     );
 
     if (isStartAnimation) {
