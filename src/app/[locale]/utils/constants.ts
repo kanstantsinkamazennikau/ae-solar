@@ -208,10 +208,6 @@ export const PRODUCT_INTRO_PANELS = {
         title: "Climate Adaptability",
         description: "Suitable for extreme conditions",
       },
-      {
-        title: "Closing Statement",
-        description: `"Aurora: Diverse and Dynamic Solar Solutions"`,
-      },
     ],
   },
   Meteor: {
@@ -238,10 +234,6 @@ export const PRODUCT_INTRO_PANELS = {
       {
         title: "Climate Versatility",
         description: "Ideal for varied weather conditions",
-      },
-      {
-        title: "Closing Statement",
-        description: `"Meteor: Efficiency and Durability in Harmony"`,
       },
     ],
   },
