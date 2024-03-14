@@ -99,7 +99,7 @@ export default function Navigation() {
               ))}
             </ul>
             <div className="gap-3 min-[920px]:flex hidden">
-              <ChangeLocale />
+              {/* <ChangeLocale /> */}
               <Cart />
               <Button
                 onClick={handleClick}
