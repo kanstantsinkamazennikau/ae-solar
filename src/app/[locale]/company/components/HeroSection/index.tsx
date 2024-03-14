@@ -121,13 +121,13 @@ export default function HeroSection() {
                     width={24}
                     height={24}
                   />
-                  <p className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
+                  <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
                     {ABOUT_DOWNLOAD_PRESENTATION.split(/\r?\n|\r|\n/g).map(
                       (string) => (
-                        <div key={string}>{string}</div>
+                        <p key={string}>{string}</p>
                       )
                     )}
-                  </p>
+                  </div>
                 </div>
               </Button>
             </a>

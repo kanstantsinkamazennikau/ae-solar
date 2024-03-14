@@ -12,12 +12,15 @@ import {
   CONSTRUCTOR_CONFIGURE_YOUR_MODEL,
   HEADER_CONFIGURE_YOUR_MODEL,
 } from "@/app/[locale]/utils/constants";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function PortfolioBackground() {
   const { videoRef } = useVideoIntersection();
+  const isIOSDevice = isIOS();
+  console.log(isIOSDevice);
 
   return (
     <div className="xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[60px] md:flex-row flex-col flex justify-center items-start max-w-[1360px] mx-auto">
