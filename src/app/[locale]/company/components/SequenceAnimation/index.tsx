@@ -99,7 +99,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
             .to(
               frameIndex,
               {
-                frame: numFrames - 1,
+                frame: numFrames,
                 snap: "frame",
                 ease: "none",
                 duration: 1,
