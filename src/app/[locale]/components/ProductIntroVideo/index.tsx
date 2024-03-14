@@ -51,7 +51,8 @@ export default function ProductIntroVideo() {
   }
 
   useLayoutEffect(() => {
-    const videos = document.getElementsByTagName("video");
+    const videos = [...document.getElementsByTagName("video")];
+
     (videos as HTMLVideoElement[]).forEach((video) => {
       ["", "webkit", "moz", "ms"].forEach((prefix) =>
         video.addEventListener(prefix + "fullscreenchange", fullscreenchanged)
