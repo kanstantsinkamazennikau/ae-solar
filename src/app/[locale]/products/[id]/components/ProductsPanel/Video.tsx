@@ -13,6 +13,7 @@ export default function Video({ onLoaded, onEnded, id }: VideoProps) {
   return (
     <>
       <video
+        playsInline
         ref={ref}
         width="1920"
         height="780"

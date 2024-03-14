@@ -11,6 +11,7 @@ export default function PanelVideo({ onLoaded, panel }: PanelVideoProps) {
   return (
     <>
       <video
+        playsInline
         ref={ref}
         width="650"
         height="340"

@@ -96,6 +96,7 @@ export default function Introduction({ id }: IntroductionProps) {
               {PRODUCT_INTRODUCTION_DESCRIPTION[id].title}
             </p>
             <video
+              playsInline
               muted
               ref={videoRef}
               className="

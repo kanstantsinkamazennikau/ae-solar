@@ -18,6 +18,7 @@ export default function ConclusionVideo({ id }: ConclusionProps) {
     <div className="relative flex justify-center items-center flex-col">
       <div className="relative">
         <video
+          playsInline
           muted
           ref={videoRef}
           className="
