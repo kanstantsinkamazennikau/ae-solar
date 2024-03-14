@@ -7,29 +7,55 @@ import {
   TECH_INFO_EXPLORE,
   TECH_INFO_INNOVATIVE,
 } from "@/app/[locale]/utils/constants";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import Link from "next/link";
+import { useLayoutEffect, useState } from "react";
 
 const Video = ({ videoLink }: { videoLink: string }) => {
   const { videoRef } = useVideoIntersection();
+  const [isIOSDevice, setIsIOSDevice] = useState(false);
+
+  useLayoutEffect(() => {
+    setIsIOSDevice(isIOS());
+  }, []);
 
   return (
     <>
-      <video
-        muted
-        ref={videoRef}
-        className="
-          w-full
-          xl:h-[840px]
-          lg:h-[700px]
-          md:h-[500px]
-          md:object-cover
-          md:pb-0
-          pb-10
-        "
-      >
-        <source src={videoLink} type="video/mp4" />
-      </video>
+      {!isIOSDevice ? (
+        <video
+          muted
+          ref={videoRef}
+          className="
+            w-full
+            xl:h-[840px]
+            lg:h-[700px]
+            md:h-[500px]
+            md:object-cover
+            md:pb-0
+            pb-10
+          "
+        >
+          <source src={videoLink} type="video/mp4" />
+        </video>
+      ) : (
+        <Image
+          src={"/videos/productRangeMobileStatic.png"}
+          alt="productRangeMobile"
+          priority
+          width={1320}
+          height={60}
+          className="
+            w-full
+            xl:h-[840px]
+            lg:h-[700px]
+            md:h-[500px]
+            md:object-cover
+            md:pb-0
+            pb-10
+          "
+        />
+      )}
     </>
   );
 };

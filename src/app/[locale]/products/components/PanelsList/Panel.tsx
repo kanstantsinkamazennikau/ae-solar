@@ -1,3 +1,5 @@
+"use client";
+
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import { PanelProps } from "@/app/[locale]/products/components/PanelsList/types";
 import {
@@ -5,9 +7,10 @@ import {
   PRODUCT_SLOGAN,
 } from "@/app/[locale]/products/constants";
 import { PRODUCT_INTRO_LEARN_MORE } from "@/app/[locale]/utils/constants";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 const PanelVideo = dynamic(() => import("./PanelVideo"), {
   ssr: false,
 });
@@ -15,6 +18,11 @@ const PanelVideo = dynamic(() => import("./PanelVideo"), {
 export default function Panel({ panel }: PanelProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isIOSDevice, setIsIOSDevice] = useState(false);
+
+  useLayoutEffect(() => {
+    setIsIOSDevice(isIOS());
+  }, []);
 
   const onLoaded = () => {
     setVideoLoaded(true);
@@ -55,7 +63,7 @@ export default function Panel({ panel }: PanelProps) {
           z-[12]
         "
       />
-      {imageLoaded && (
+      {imageLoaded && !isIOSDevice && (
         <div
           className={`${
             videoLoaded

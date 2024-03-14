@@ -2,6 +2,7 @@
 
 import Loader from "@/app/[locale]/components/common/Loader";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import { useContext, useEffect, useRef, useState } from "react";
 
@@ -13,7 +14,10 @@ export default function LightingTheWayVideo() {
     setIsLongVideoLoadingTime,
   } = useContext(ProductsContext);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [startFadeIn, setStartFadeIn] = useState(false);
   const ref = useRef(null);
+
+  const isIOSDevice = isIOS();
 
   const onPlay = () => {
     setIsPlaying(true);
@@ -23,10 +27,13 @@ export default function LightingTheWayVideo() {
   };
 
   useEffect(() => {
-    const timerId = setTimeout(() => {
-      setIsLongVideoLoadingTime(true);
-      setIsStartAnimation(true);
-    }, 6000);
+    const timerId = setTimeout(
+      () => {
+        setIsLongVideoLoadingTime(true);
+        setIsStartAnimation(true);
+      },
+      isIOSDevice ? 200 : 6000
+    );
 
     if (isStartAnimation) {
       clearTimeout(timerId);
@@ -35,7 +42,12 @@ export default function LightingTheWayVideo() {
     return () => {
       clearTimeout(timerId);
     };
-  }, [isStartAnimation, setIsLongVideoLoadingTime, setIsStartAnimation]);
+  }, [
+    isStartAnimation,
+    setIsLongVideoLoadingTime,
+    setIsStartAnimation,
+    isIOSDevice,
+  ]);
 
   useEffect(() => {
     ref.current && (ref.current as HTMLVideoElement).play();
@@ -43,7 +55,7 @@ export default function LightingTheWayVideo() {
 
   return (
     <>
-      {!isPlaying && !isLongVideoLoadingTime && (
+      {!isPlaying && !isLongVideoLoadingTime && !isIOSDevice && (
         <div
           className={`z-20 fixed -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 ${
             isStartAnimation &&
@@ -64,13 +76,14 @@ export default function LightingTheWayVideo() {
           <Loader externalStyle="!h-screen" />
         </div>
       )}
-      {isLongVideoLoadingTime && (
+      {(isLongVideoLoadingTime || isIOSDevice) && (
         <Image
           src={`/images/products/productsFlower.png`}
           alt="productsFlower"
           priority
           width={1920}
           height={1080}
+          onLoad={() => setStartFadeIn(true)}
           className={`!w-screen object-cover fixed
             2xl:!-top-32
             xl:!-top-20
@@ -83,10 +96,11 @@ export default function LightingTheWayVideo() {
             transition-all
             duration-[1.5s]
             !translate-y-0
+            ${startFadeIn ? "animate-[fadeIn_0.5s_ease-in-out]" : "opacity-0"}
          `}
         />
       )}
-      {!isLongVideoLoadingTime && (
+      {!isLongVideoLoadingTime && !isIOSDevice && (
         <video
           width="1920"
           height="1080"
