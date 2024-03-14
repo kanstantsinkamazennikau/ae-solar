@@ -160,13 +160,13 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
       "
     >
       <BasicWidthContainer styles="max-md:!px-0">
+        <TwoTierHeading
+          tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}
+          tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
+          align="right"
+          externalStyle="z-10"
+        />
         <div className="flex flex-col items-center" id="canvas">
-          <TwoTierHeading
-            tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}
-            tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
-            align="right"
-            externalStyle="z-10"
-          />
           <div className="flex items-center lg:-mt-[56px]">
             <div className="flex gap-5 max-w-[33%] relative">
               <div className="sequenceAnimationDivider !w-[1px] basis-[1px] shrink-0" />

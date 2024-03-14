@@ -214,7 +214,7 @@ export default function OurHistory() {
             {!isOpenItem && (
               <Button
                 style="textOnly"
-                externalStyle="!p-0 mx-auto mt-10"
+                externalStyle="!p-0 mx-auto mt-10 z-20"
                 onClick={onClick}
               >
                 <div

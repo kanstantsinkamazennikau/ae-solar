@@ -8,19 +8,46 @@ import {
   PRODUCT_CONCLUSION_FOR_PANELS,
 } from "@/app/[locale]/products/[id]/constants";
 import { CONSTRUCTOR_CONFIGURE_YOUR_MODEL } from "@/app/[locale]/utils/constants";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import Link from "next/link";
+import { useLayoutEffect, useState } from "react";
 
 export default function ConclusionVideo({ id }: ConclusionProps) {
   const { videoRef } = useVideoIntersection();
+  const [isIOSDevice, setIsIOSDevice] = useState(false);
+
+  useLayoutEffect(() => {
+    setIsIOSDevice(isIOS());
+  }, []);
 
   return (
     <div className="relative flex justify-center items-center flex-col">
       <div className="relative">
-        <video
-          muted
-          ref={videoRef}
-          className="
+        {isIOSDevice ? (
+          <Image
+            src={`/videos/packshot/Packshot${id}Static.jpg`}
+            alt="glow"
+            priority
+            width={1920}
+            height={1080}
+            className="
+              w-full
+              xl:h-[740px]
+              lg:h-[700px]
+              md:h-[500px]
+              min-[540px]:h-[400px]
+              h-[350px]
+              object-cover
+              md:pb-0
+              pb-10
+            "
+          />
+        ) : (
+          <video
+            muted
+            ref={videoRef}
+            className="
             w-full
             xl:h-[740px]
             lg:h-[700px]
@@ -31,9 +58,13 @@ export default function ConclusionVideo({ id }: ConclusionProps) {
             md:pb-0
             pb-10
           "
-        >
-          <source src={`/videos/packshot/Packshot${id}.mp4`} type="video/mp4" />
-        </video>
+          >
+            <source
+              src={`/videos/packshot/Packshot${id}.mp4`}
+              type="video/mp4"
+            />
+          </video>
+        )}
         <div className="fade-strip-bottom !z-10" />
       </div>
 

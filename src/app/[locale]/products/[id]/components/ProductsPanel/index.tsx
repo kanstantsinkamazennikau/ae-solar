@@ -3,10 +3,11 @@
 import { ProductsPanelProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
 import { PRODUCT_PANEL_TITLES } from "@/app/[locale]/products/[id]/constants";
 import Image from "next/image";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 import dynamic from "next/dynamic";
 import Loader from "@/app/[locale]/components/common/Loader";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 const VideoPlayer = dynamic(() => import("./Video"), {
   ssr: false,
 });
@@ -15,6 +16,13 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoEnded, setVideoEnded] = useState(false);
   const [startTextTransition, setStartTextTransition] = useState(false);
+  const [isIOSDevice, setIsIOSDevice] = useState(true);
+  const [startFadeIn, setStartFadeIn] = useState(false);
+
+  useLayoutEffect(() => {
+    setIsIOSDevice(isIOS());
+  }, []);
+
   const onLoaded = () => {
     setVideoLoaded(true);
     setTimeout(() => {
@@ -41,7 +49,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
         max-h-[1000px]
       "
     >
-      {!videoLoaded && (
+      {!videoLoaded && !isIOSDevice && (
         <div className="absolute z-50 -mt-[136px]">
           <Loader />
         </div>
@@ -57,7 +65,39 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           h-[630px]
         "
       >
-        <VideoPlayer onLoaded={onLoaded} onEnded={onEnded} id={id} />
+        {!isIOSDevice ? (
+          <VideoPlayer onLoaded={onLoaded} onEnded={onEnded} id={id} />
+        ) : (
+          <Image
+            src={`/videos/products/${id}HeaderStatic.jpg`}
+            alt={id}
+            priority
+            width={1920}
+            height={780}
+            onLoad={() => {
+              setTimeout(() => {
+                setStartTextTransition(true);
+              }, 200);
+              setStartFadeIn(true);
+            }}
+            className={`
+              z-10
+              relative
+              md:scale-100
+              min-[540px]:scale-[1.25]
+              scale-[1.5]
+              max-md:min-h-[630px]
+              min-h-[700px]
+              2xl:h-[1000px]
+              min-[1360px]:h-[900px]
+              xl:h-[850px]
+              lg:h-[700px]
+              h-[630px]
+              object-contain
+              ${startFadeIn ? "animate-[fadeIn_0.5s_ease-in-out]" : "opacity-0"}
+            `}
+          />
+        )}
       </div>
       {/* PANEL DESCRIPTION */}
       <div

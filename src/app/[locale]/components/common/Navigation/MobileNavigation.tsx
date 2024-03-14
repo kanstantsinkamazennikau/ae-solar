@@ -73,7 +73,7 @@ export default function MobileNavigation() {
           min-[920px]:hidden 
           bg-black 
           fixed
-          top-[64px]
+          top-[63px]
           z-30
           w-full 
           h-screen
@@ -91,7 +91,7 @@ export default function MobileNavigation() {
           priority
           width={1320}
           height={30}
-          className="top-[35px] fixed h-[30px]"
+          className="top-[35px] fixed h-[30px] z-20 w-full left-0"
         />
         <ul className="list-none">
           {HEADER_NAV_LINKS_ARRAY.map((navLink) => (

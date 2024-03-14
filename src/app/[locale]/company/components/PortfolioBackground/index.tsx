@@ -12,27 +12,43 @@ import {
   CONSTRUCTOR_CONFIGURE_YOUR_MODEL,
   HEADER_CONFIGURE_YOUR_MODEL,
 } from "@/app/[locale]/utils/constants";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function PortfolioBackground() {
   const { videoRef } = useVideoIntersection();
+  const isIOSDevice = isIOS();
 
   return (
     <div className="xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[60px] md:flex-row flex-col flex justify-center items-start max-w-[1360px] mx-auto">
       <div className="relative flex md:flex-row flex-col items-center md:justify-end justify-center overflow-hidden">
         <div className="fade-strip-left max-lg:!w-[100px] md:block hidden" />
-        <video
-          ref={videoRef}
-          width="1320"
-          height="700"
-          autoPlay
-          muted
-          className="relative md:-left-[240px] min-h-[300px] md:object-cover"
-        >
-          <source src={`/videos/products/HeaderFlower.mp4`} type="video/mp4" />
-        </video>
+        {isIOSDevice ? (
+          <Image
+            src={`/videos/products/PortfolioBackground.png`}
+            alt="glow"
+            priority
+            width={1320}
+            height={700}
+            className="max-md:translate-x-[18%] min-h-[250px]"
+          />
+        ) : (
+          <video
+            ref={videoRef}
+            width="1320"
+            height="700"
+            autoPlay
+            muted
+            className="relative md:-left-[240px] min-h-[300px] md:object-cover"
+          >
+            <source
+              src={`/videos/products/HeaderFlower.mp4`}
+              type="video/mp4"
+            />
+          </video>
+        )}
         <div
           className="
             flex

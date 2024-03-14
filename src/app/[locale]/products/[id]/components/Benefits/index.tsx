@@ -48,6 +48,8 @@ export default function Benefits({ id }: BenefitsProps) {
             min-[920px]:px-14
             rounded-[20px]
             min-[920px]:bg-[url('/images/getInTouchBackground.svg')]
+            bg-no-repeat
+            bg-cover
           "
           >
             {benefits?.map(

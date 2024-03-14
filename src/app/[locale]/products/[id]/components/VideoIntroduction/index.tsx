@@ -7,11 +7,19 @@ import {
   PRODUCT_INTRO_PANELS,
   PRODUCT_INTRO_PANELS_MAPPING,
 } from "@/app/[locale]/utils/constants";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
+import Image from "next/image";
+import { useLayoutEffect, useState } from "react";
 
 export default function Introduction({ id }: IntroductionProps) {
   const modelStats = PRODUCT_INTRO_PANELS[id].stats;
   const modelStatsKeys = Object.keys(modelStats);
+  const [isIOSDevice, setIsIOSDevice] = useState(false);
   const { videoRef } = useVideoIntersection();
+
+  useLayoutEffect(() => {
+    setIsIOSDevice(isIOS());
+  }, []);
 
   return (
     <div
@@ -95,10 +103,30 @@ export default function Introduction({ id }: IntroductionProps) {
             >
               {PRODUCT_INTRODUCTION_DESCRIPTION[id].title}
             </p>
-            <video
-              muted
-              ref={videoRef}
-              className="
+            {isIOSDevice ? (
+              <Image
+                alt={id}
+                src={`/videos/slider/${id}Static.png`}
+                width={1320}
+                height={800}
+                className="
+                  w-full
+                  xl:h-[800px]
+                  lg:h-[700px]
+                  md:h-[590px]
+                  min-[540px]:h-[490px]
+                  h-[360px]
+                  object-cover
+                  md:pb-0
+                  pb-10
+                  mt-4
+                "
+              />
+            ) : (
+              <video
+                muted
+                ref={videoRef}
+                className="
                 w-full
                 xl:h-[800px]
                 lg:h-[700px]
@@ -110,9 +138,10 @@ export default function Introduction({ id }: IntroductionProps) {
                 pb-10
                 mt-4
               "
-            >
-              <source src={`/videos/slider/${id}.mp4`} type="video/mp4" />
-            </video>
+              >
+                <source src={`/videos/slider/${id}.mp4`} type="video/mp4" />
+              </video>
+            )}
           </div>
 
           {/* DESKTOP DESCRIPTION */}

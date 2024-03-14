@@ -173,8 +173,14 @@ export const PRODUCT_INTRO_PANELS = {
         title: "n-Typ-Heteroübergang",
         description: "Fortgeschrittene Solartechnologie",
       },
-      { title: "Zuverlässigkeit", description: "Außergewöhnlich geringe Degradation" },
-      { title: "Temperaturstabilität", description: "Sehr niedriger Koeffizient" },
+      {
+        title: "Zuverlässigkeit",
+        description: "Außergewöhnlich geringe Degradation",
+      },
+      {
+        title: "Temperaturstabilität",
+        description: "Sehr niedriger Koeffizient",
+      },
       {
         title: "Leistung bei schwachem Licht",
         description: "Hohe Leistung bei schwachen Lichtverhältnissen",
@@ -196,10 +202,19 @@ export const PRODUCT_INTRO_PANELS = {
       text: "Aurora (PERC). Neu gestaltet mit dem Thema Aurora Borealis. Erfinden Sie Aurora als Solarmodul neu, inspiriert von den dynamischen und lebendigen Farben des Nordlichts. Betonen Sie seine Vielseitigkeit und ästhetische Anziehungskraft, die die sich ständig verändernden Farben der Aurora widerspiegeln.",
     },
     advantages: [
-      { title: "Fortschrittliche Zellen", description: "PERC- und Topcon-Technologie" },
-      { title: "Größenvielfalt", description: "kleine, mittlere, große Module" },
+      {
+        title: "Fortschrittliche Zellen",
+        description: "PERC- und Topcon-Technologie",
+      },
+      {
+        title: "Größenvielfalt",
+        description: "kleine, mittlere, große Module",
+      },
       { title: "Designoptionen", description: "Mono/Bifacial, Farbauswahl" },
-      { title: "Individuelle Funktionen", description: "Maßgeschneidertes Material und Leistung" },
+      {
+        title: "Individuelle Funktionen",
+        description: "Maßgeschneidertes Material und Leistung",
+      },
       {
         title: "Klimaanpassungsfähigkeit",
         description: "Geeignet für extreme Bedingungen",
@@ -221,12 +236,18 @@ export const PRODUCT_INTRO_PANELS = {
       text: "Meteor (TOPCon). Konzentrieren Sie sich auf die Fähigkeit des Meteor, auch bei schwachem Licht hell zu leuchten, genau wie ein Meteor, der über den Nachthimmel zieht.",
     },
     advantages: [
-      { title: "TOPCon N-Typ", description: "Technologie mit überragender Effizienz" },
+      {
+        title: "TOPCon N-Typ",
+        description: "Technologie mit überragender Effizienz",
+      },
       {
         title: "Umfassende Anpassungsmöglichkeiten",
         description: "Materialien, Leistung, Abmessungen",
       },
-      { title: "Farbenvielfalt", description: "Breites Spektrum an Auswahlmöglichkeiten" },
+      {
+        title: "Farbenvielfalt",
+        description: "Breites Spektrum an Auswahlmöglichkeiten",
+      },
       {
         title: "Robuste Leistung",
         description: "Geringe Degradation, hohe Haltbarkeit",
@@ -257,7 +278,10 @@ export const PRODUCT_INTRO_PANELS = {
         title: "Designstärke",
         description: "Hohe Wind- und Schneewiderstandsfähigkeit",
       },
-      { title: "Langfristige Zuverlässigkeit", description: "Minimale Degradation" },
+      {
+        title: "Langfristige Zuverlässigkeit",
+        description: "Minimale Degradation",
+      },
       {
         title: "Bifaziale Effizienz",
         description: "Optimale Energieerfassung",
@@ -291,7 +315,10 @@ export const PRODUCT_INTRO_PANELS = {
         title: "Wirtschaftlicher Nutzen",
         description: "Langfristig niedrige LCOE",
       },
-      { title: "Vielseitige Nutzung", description: "Effektiv in verschiedenen Klimazonen" },
+      {
+        title: "Vielseitige Nutzung",
+        description: "Effektiv in verschiedenen Klimazonen",
+      },
       {
         title: "Nachhaltiges Design",
         description: "Umweltbewusste Technologie",
@@ -325,7 +352,10 @@ export const PRODUCT_INTRO_PANELS = {
         title: "Wirtschaftliche Leistung",
         description: "Niedrige LCOE",
       },
-      { title: "Intelligente Technologie", description: "Fortgeschrittene Schattenresistenz" },
+      {
+        title: "Intelligente Technologie",
+        description: "Fortgeschrittene Schattenresistenz",
+      },
       {
         title: "Nachhaltige Lösung",
         description: "Umweltfreundliches Design",
@@ -454,12 +484,12 @@ export const FAQ_ACCORDION_DATA = [
   {
     question: "Was ist die übliche geschätzte Lieferzeit?",
     answer:
-    "Sie können direkt aus dem Lagerbestand unseres lokalen Vertriebspartners in Ihrem Land kaufen. Alternativ können Sie eine Bestellung zur Fertigung aufgeben, wobei die voraussichtliche Ankunftszeit (ETA) vom Zielort, der Menge und anderen Bestelldetails abhängt. In der Regel beträgt die ETA für Bestellungen 30 bis 60 Tage.",
+      "Sie können direkt aus dem Lagerbestand unseres lokalen Vertriebspartners in Ihrem Land kaufen. Alternativ können Sie eine Bestellung zur Fertigung aufgeben, wobei die voraussichtliche Ankunftszeit (ETA) vom Zielort, der Menge und anderen Bestelldetails abhängt. In der Regel beträgt die ETA für Bestellungen 30 bis 60 Tage.",
   },
   {
     question: "Wie werde ich Ihr Vertriebspartner?",
     answer:
-    "Bitte kontaktieren Sie unser Vertriebsbüro, senden Sie uns Ihre Unternehmenspräsentation und erhalten Sie die Vertriebsbedingungen vom für Ihr Land zuständigen Regionalmanager.",
+      "Bitte kontaktieren Sie unser Vertriebsbüro, senden Sie uns Ihre Unternehmenspräsentation und erhalten Sie die Vertriebsbedingungen vom für Ihr Land zuständigen Regionalmanager.",
   },
 ];
 export const FAQ_QUESTION = "Haben Sie eine Frage?";
@@ -512,7 +542,10 @@ export const FOOTER_LINKS_ARRAY = [
 ];
 export const FOOTER_GERMAN_BRAND =
   "Deutsche Marke in der erneuerbaren Energiebranche, die seit 2003 hochwertige Produkte und Dienstleistungen anbietet.";
-export const FOOTER_GERMAN_BRAND_WORDS_TO_BOLD = ["Deutsche Marke", "seit 2003"];
+export const FOOTER_GERMAN_BRAND_WORDS_TO_BOLD = [
+  "Deutsche Marke",
+  "seit 2003",
+];
 export const FOOTER_WE_ARE_SOCIAL = "Wir sind in den sozialen Medien";
 export const FOOTER_SOCIAL = [
   { icon: "facebook.svg", link: "https://www.facebook.com/aesolarenergy/" },
@@ -1001,28 +1034,23 @@ export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
 export const SEQUENCE_ANIMATION_TEXT = [
   {
     title: "Vorderseite",
-    description:
-      "Schützt das Panel vor äußeren Einflüssen.",
+    description: "Schützt das Panel vor äußeren Einflüssen.",
   },
   {
     title: "Vorderseitenverkapselung",
-    description:
-      "Schützt die Solarzellen, versiegelt das Panel.",
+    description: "Schützt die Solarzellen, versiegelt das Panel.",
   },
   {
     title: "Solarzellen",
-    description:
-      "Wandelt Sonnenlicht in Strom um.",
+    description: "Wandelt Sonnenlicht in Strom um.",
   },
   {
     title: "Rückseitenverkapselung",
-    description:
-      "Bietet Isolierung und Schutz.",
+    description: "Bietet Isolierung und Schutz.",
   },
   {
     title: "Rückseite",
-    description:
-      "Schützt die Rückseite des Panels.",
+    description: "Schützt die Rückseite des Panels.",
   },
   {
     title: "Rahmen",
@@ -1888,7 +1916,8 @@ export const CHECKOUT_SEND_REQUEST = "Anfrage senden";
 
 export const CONSULT_READY_TO_CONSULT = `Hallo! Wir sind bereit,
 Sie zu beraten.`;
-export const CONSULT_AGREEMENT = "Ich stimme der Verarbeitung personenbezogener Daten zu.";
+export const CONSULT_AGREEMENT =
+  "Ich stimme der Verarbeitung personenbezogener Daten zu.";
 
 export const CONSULT_FORM_FIELDS: FormFileds[] = [
   {
@@ -1988,8 +2017,8 @@ export const COOKIES_LINKS = [
 ];
 export const COOKIES_MATCH_TEXT_WITH_LINK = {
   "Cookie-Richtlinie": "policy",
-  "Datenschutzerklärung": "privacy",
-  "Nutzungsbedingungen": "terms",
+  Datenschutzerklärung: "privacy",
+  Nutzungsbedingungen: "terms",
 };
 export const COOKIES_BY_CHOOSING =
   "Durch die Auswahl von 'Ich akzeptiere' stimmen Sie unserer Verwendung von Cookies und anderen Tracking-Technologien zu.";
@@ -2494,7 +2523,8 @@ export const DOCUMENTS_FAQ_FILES = [
       },
       {
         question: "Gibt es farbige Module?",
-        answer: "Ja, wir bieten farbige Module an, um ästhetische Anforderungen zu erfüllen.",
+        answer:
+          "Ja, wir bieten farbige Module an, um ästhetische Anforderungen zu erfüllen.",
       },
       {
         question: "Was bedeutet schwache Licht- und Niedertemperaturleistung?",
@@ -2557,8 +2587,10 @@ export const DOCUMENTS_FAQ_FILES = [
           "Ja, auch bei bewölktem Wetter können Solarmodule Energie erzeugen, obwohl die Effizienz bei direktem Sonnenlicht höher ist.",
       },
       {
-        question: "Brauche ich eine Genehmigung, um Solarmodule zu installieren?",
-        answer: "Oft ist eine Genehmigung erforderlich, je nach den örtlichen Vorschriften.",
+        question:
+          "Brauche ich eine Genehmigung, um Solarmodule zu installieren?",
+        answer:
+          "Oft ist eine Genehmigung erforderlich, je nach den örtlichen Vorschriften.",
       },
       {
         question:

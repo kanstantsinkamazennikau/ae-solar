@@ -9,6 +9,7 @@ import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
+import dynamic from "next/dynamic";
 import {
   PRODUCT_INTRO_CALCULATE_YOUR_MODEL,
   PRODUCT_INTRO_HIGH_QUALITY_SP,
@@ -17,22 +18,35 @@ import {
   PRODUCT_INTRO_PANELS_IMAGES,
   PRODUCT_INTRO_THE_NEXT_LEVEL_OF,
 } from "@/app/[locale]/utils/constants";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 //@ts-ignore
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { Video } from "@splidejs/splide-extension-video";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useCallback, useContext, useEffect, useRef } from "react";
+import {
+  useCallback,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 
 export default function ProductIntroVideo() {
   const { model, setModel } = useContext(ModelContext);
   const { sticky, setSticky } = useContext(StickyNavigationContext);
+  const [isIOSDevice, setIsIOSDevice] = useState(false);
   const modelInfo = PRODUCT_INTRO_PANELS[model].info;
   const ref = useRef<HTMLDivElement | null>(null);
   const locale = useParams()?.locale;
   const router = useRouter();
   const sliderRef = useRef<Splide>(null);
   const sliderId = PRODUCT_INTRO_PANELS_IMAGES.indexOf(model);
+
+  useLayoutEffect(() => {
+    setIsIOSDevice(isIOS());
+  }, []);
 
   const options = {
     type: "loop",
@@ -238,26 +252,43 @@ export default function ProductIntroVideo() {
             <SplideTrack>
               {PRODUCT_INTRO_PANELS_IMAGES.map((video) => (
                 <SplideSlide key={video} className="flex justify-center">
-                  <video
-                    width="1320"
-                    height="800"
-                    muted
-                    autoPlay
-                    key={model}
-                    className="
-                      w-[1920px]
-                      2xl:h-[800px]
-                      xl:h-[650px]
-                      md:h-[500px]
-                      h-[300px]
-                      object-cover
-                    "
-                  >
-                    <source
-                      src={`/videos/slider/${video}.mp4`}
-                      type="video/mp4"
+                  {isIOSDevice ? (
+                    <Image
+                      alt={model}
+                      src={`/videos/slider/${video}Static.png`}
+                      width={1320}
+                      height={800}
+                      className="
+                        w-[1920px]
+                        2xl:h-[800px]
+                        xl:h-[650px]
+                        md:h-[500px]
+                        h-[300px]
+                        object-cover
+                      "
                     />
-                  </video>
+                  ) : (
+                    <video
+                      width="1320"
+                      height="800"
+                      muted
+                      autoPlay
+                      key={model}
+                      className="
+                        w-[1920px]
+                        2xl:h-[800px]
+                        xl:h-[650px]
+                        md:h-[500px]
+                        h-[300px]
+                        object-cover
+                      "
+                    >
+                      <source
+                        src={`/videos/slider/${video}.mp4`}
+                        type="video/mp4"
+                      />
+                    </video>
+                  )}
                 </SplideSlide>
               ))}
             </SplideTrack>
