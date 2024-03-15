@@ -100,7 +100,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
               border-solid
               border-[#191919]
               rounded-xl
-              grid-cols-[minmax(210px,3.33fr)_minmax(130px,1.67fr)_minmax(130px,1.67fr)_minmax(120px,1.67fr)_minmax(60px,1fr)_minmax(60px,1fr)_minmax(100px,2fr)_minmax(150px,3.33fr)]
+              grid-cols-[minmax(210px,3.33fr)_minmax(130px,1.67fr)_minmax(130px,1.67fr)_minmax(120px,1.67fr)_minmax(60px,1fr)_minmax(70px,1fr)_minmax(100px,2fr)_minmax(150px,3.33fr)]
             "
           >
             {/* HEADERS */}
