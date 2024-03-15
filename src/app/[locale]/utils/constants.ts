@@ -1966,7 +1966,7 @@ export const DROPDOWN_INPUT_VALUES = {
 
 export const PICKER_INPUT_VALUES = {
   [FORMS_FIELDS.budget]: ["$1…5k", "$5…10k", "$10…20k", "$20…50k", "> $50k"],
-  [FORMS_FIELDS.interest]: ["installing", "partnership", "investing"],
+  [FORMS_FIELDS.interest]: ["installation", "partnerschaft", "investitionen"],
 };
 
 export const ABOUT_SUSTAINABLE = `Nachhaltig

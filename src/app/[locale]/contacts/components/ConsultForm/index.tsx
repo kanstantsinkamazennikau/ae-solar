@@ -27,9 +27,9 @@ async function sendContactUsEmail(data: FieldValues) {
 }
 
 const patnerTypeMapping = {
-  partner: "partnership",
-  investor: "investing",
-  installer: "installing",
+  partner: "installation",
+  investor: "partnerschaft",
+  installer: "investitionen",
 };
 
 export default function ConsultForm() {
