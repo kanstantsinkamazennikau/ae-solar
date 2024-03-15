@@ -31,7 +31,7 @@ export default function ChangeLocale({
     <div className={`flex relative min-[640px]:w-auto w-full`}>
       <div className="bg-transparent outline-none flex w-full">
         <SelectedLanguage
-          locale={host && host[0] === "DE" ? "DE" : "EN"}
+          locale={host && host[0] === "de" ? "DE" : "EN"}
           setIsSelection={setIsSelection}
           dropdownRef={dropdownRef}
           mobileNavigation={mobileNavigation}
