@@ -48,11 +48,11 @@ export default function Benefit({
         className="
           flex
           items-center
-          lg:gap-20
+          lg:gap-10
           gap-4
           xl:w-[778px]
           lg:w-[578px]
-          md:w-[340px]
+          md:w-[480px]
           justify-between
           w-auto
         "
@@ -67,9 +67,9 @@ export default function Benefit({
         />
         <div
           className="
-            xl:max-w-[538px]
+            xl:max-w-[638px]
             lg:max-w-[338px]
-            md:max-w-[200px]
+            md:max-w-[370px]
             max-w-full
             [font-size:_clamp(24px,2.5vw,48px)]
             font-extrabold
