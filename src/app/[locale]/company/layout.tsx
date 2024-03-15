@@ -3,7 +3,7 @@ import { url } from "inspector";
 import { headers } from "next/headers";
 
 const mapTitleWithDocumentsCategory = {
-  faq: { title: "FAQ", description: "Have a Question? We Have Solutions" },
+  faq: { title: "FAQ", description: "Got a Question? We Have Solutions" },
   publishers_info: {
     title: "Publishers Info",
     description: "Publisher's Information",

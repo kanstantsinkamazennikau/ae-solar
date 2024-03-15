@@ -19,7 +19,7 @@ export const FORM_FIELDS_INPUT_TYPES = {
 };
 
 export const HEADER_TIER1 = "German TIER1 Manufacturer of ";
-export const HEADER_TIER1_QUALITY = "High-Quality Solar Panels";
+export const HEADER_TIER1_QUALITY = "High Quality Solar Panels";
 
 export const FORMS_FIELDS = {
   name: "name",
@@ -123,7 +123,7 @@ export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
 ];
 export const AWARDS_AND_STATS_GERMAN_ENGINEERING = "German Engineering";
 export const AWARDS_AND_STATS_PRODUCTION_PLANTS =
-  "Production Plants in Europe and Asia";
+  "Production facilities in Europe and Asia";
 export const AWARDS_AND_STATS_AWARDS_IMAGES = [
   "badge1.png",
   "badge2.png",
@@ -166,26 +166,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Comet.svg",
-      text: "Comet (HJT). Highlight Comet's unparalleled all-weather performance and cutting-edge technology, drawing a parallel with the relentless journey of a comet.",
+      text: "Comet (HJT). Highlight Comet's unparalleled all-weather performance and cutting-edge technology and draw a parallel with the relentless journey of a comet.",
     },
     advantages: [
       {
-        title: "n-Type Heterojunction",
+        title: "N-Type heterojunction",
         description: "Advanced solar technology",
       },
-      { title: "Reliability", description: "Exceptionally low degradation" },
+      {
+        title: "High reliability",
+        description: "Exceptionally low degradation",
+      },
       { title: "Temperature Stability", description: "Very low coefficient" },
       {
-        title: "Low-Light Performance",
-        description: "High output in dim conditions",
+        title: "Low light performance",
+        description: "High performance in low light",
       },
       {
-        title: "Extreme Climate Suitability",
+        title: "Extreme climate suitability",
         description: "Designed for harsh environments",
       },
       {
-        title: "Closing Statement",
-        description: `"Comet: Leading Efficiency, Whatever the Weather"`,
+        title: "Final statement",
+        description: `"Comet: Leading efficiency, whatever the weather"`,
       },
     ],
   },
@@ -197,16 +200,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Aurora.svg",
-      text: "Aurora (PERC). Redesigned with the Theme of Aurora Borealis. Reinvent Aurora as a solar module inspired by the dynamic and vibrant colors of the Northern Lights. Emphasize its versatility and aesthetic appeal, mirroring the ever-changing colors of auroras",
+      text: "Aurora (PERC). Redesigned with the theme of the Aurora Borealis. Reinvent Aurora as a solar panel inspired by the dynamic and vibrant colors of the Northern Lights. Emphasizes its versatility and aesthetic appeal, reflecting the ever-changing colors of the Northern Lights",
     },
     advantages: [
-      { title: "Advanced Cells", description: "PERC and Topcon technology" },
-      { title: "Size Variety", description: "small, medium, large modules" },
-      { title: "Design Option", description: "Mono/Bifacial, color choices" },
-      { title: "Custom Features", description: "Tailored material and power" },
+      { title: "Advanced cells", description: "PERC technology" },
       {
-        title: "Climate Adaptability",
-        description: "Suitable for extreme conditions",
+        title: "Variety of sizes",
+        description: "Small, medium, large modules",
+      },
+      {
+        title: "Design option",
+        description: "Mono/Bifacial, choice of colors",
+      },
+      {
+        title: "Custom features",
+        description: "Tailored material and performance",
+      },
+      {
+        title: "Climate adaptability",
+        description: "Designed for extreme conditions",
+      },
+      {
+        title: "Final statement",
+        description: `"Aurora: Diverse and dynamic solar solutions"`,
       },
     ],
   },
@@ -218,22 +234,26 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Meteor.svg",
-      text: "Meteor (TOPCon). Focus on Meteor's ability to shine bright in low-light conditions, just like a meteor streaking across the night sky",
+      text: "Meteor (TOPCon). Focus on Meteor's ability to shine brightly in low light conditions, just like a meteor streaking across the night sky",
     },
     advantages: [
       { title: "TOPCon N-Type", description: "Superior efficiency technology" },
       {
-        title: "Broad Customization",
-        description: "Materials, power, dimensions",
+        title: "Wide range of customization",
+        description: "Materials, performance, dimensions",
       },
-      { title: "Color Diversity", description: "Wide range of choices" },
+      { title: "Color diversity", description: "Wide choice" },
       {
-        title: "Resilient Performance",
+        title: "Resilient performance",
         description: "Low degradation, high durability",
       },
       {
-        title: "Climate Versatility",
-        description: "Ideal for varied weather conditions",
+        title: "Climate versatility",
+        description: "Ideal for changing weather conditions",
+      },
+      {
+        title: "Final statement",
+        description: `"Meteor: efficiency and durability in harmony"`,
       },
     ],
   },
@@ -245,26 +265,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Terra.svg",
-      text: "Versatile and Robust Solar Power. Terra (Agricultural Photovoltaic, Noise Barrier, and Solar Fence Applications) Showcase Terra's multifunctional applications, emphasizing its role in harmonizing with the Earth's needs.",
+      text: "Versatile and robust solar power. Terra (Agrivoltaic, Noise Barrier, Solar Fence and Utility Applications) showcases Terra's multifunctional applications, emphasizing its role in harmonizing with the needs of the earth.",
     },
     advantages: [
-      { title: "n-Type TOPCon Tech", description: "Cutting-edge efficiency" },
       {
-        title: "Application Flexibility",
-        description: "Ideal for various installations",
+        title: "N-Type TOPCon Technology",
+        description: "State of the art efficiency",
       },
       {
-        title: "Design Strength",
-        description: "High wind and snow resistance",
-      },
-      { title: "Long-Term Reliability", description: "Minimal degradation" },
-      {
-        title: "Bifacial Efficiency",
-        description: "Optimal energy capture",
+        title: "Application flexibility",
+        description: "Ideal for different installations",
       },
       {
-        title: "Closing Statement",
-        description: `"Terra: Adaptable Power for Every Environment"`,
+        title: "Design strength",
+        description: "High resistance to wind and snow",
+      },
+      { title: "Long term eeliability", description: "Minimal degradation" },
+      {
+        title: "Bifacial efficiency",
+        description: "Optimum energy capture",
+      },
+      {
+        title: "Final statement",
+        description: `"Terra: Adaptable energy for any environment"`,
       },
     ],
   },
@@ -276,29 +299,32 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Neptune.svg",
-      text: "Neptune: Dual Power, Maximum Efficiency",
+      text: "Neptune: Double power, maximum efficiency",
     },
     advantages: [
       {
-        title: "Hybrid Energy",
-        description: "Electricity and thermal production",
+        title: "Hybrid energy",
+        description: "Electricity and heat generation",
       },
       {
-        title: "High Efficiency",
-        description: "About 70% combined Efficiency",
+        title: "High efficiency",
+        description: "Around 70% combined efficiency",
       },
       {
-        title: "Economic Benefit",
-        description: "Long-term low LCOE",
+        title: "Economic benefit",
+        description: "Low long-term LCOE",
       },
-      { title: "Versatile Use", description: "Effective in various climates" },
       {
-        title: "Sustainable Design",
+        title: "Versatile use",
+        description: "Effective in different climates",
+      },
+      {
+        title: "Sustainable design",
         description: "Eco-conscious technology",
       },
       {
-        title: "Closing Statement",
-        description: `"Neptune: The Future of Hybrid Solar Energy"`,
+        title: "Final statement",
+        description: `"Neptune: The future of hybrid solar power"`,
       },
     ],
   },
@@ -310,41 +336,44 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "ShadeStar.svg",
-      text: `"ShadeStar: Light Where You Need It" (Smart Cell) Focus on ShadeStar resilience to partial shading, akin to a guardian in the cosmos`,
+      text: `"ShadeStar: Light where you need it" (Smart Cell) Focus on ShadeStar's resistance to partial shading, like a guardian in the cosmos`,
     },
     advantages: [
       {
-        title: "Shade Resilience",
+        title: "Shade resilience",
         description: "Maintains high output in shade",
       },
       {
-        title: "Rooftop Optimization",
+        title: "Rooftop optimization",
         description: "Ideal for limited space",
       },
       {
-        title: "Economic Performance",
+        title: "Economic performance",
         description: "Low LCOE",
       },
-      { title: "Smart Technology", description: "Advanced shade resistance" },
       {
-        title: "Sustainable Solution",
-        description: "Eco-friendly design",
+        title: "Intelligent technology",
+        description: "Advanced shade resistance",
       },
       {
-        title: "Closing Statement",
+        title: "Sustainable solution",
+        description: "Environmentally friendly design",
+      },
+      {
+        title: "Final statement",
         description: `"ShadeStar: Smart Energy for Every Roof"`,
       },
     ],
   },
 };
 export const PRODUCT_INTRO_LEARN_MORE = "Learn more";
-export const HISTORY_READ_FULL_STORY = "Read Full of History";
+export const HISTORY_READ_FULL_STORY = "Read Full History";
 export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "All Products";
 
 export const FEATURED_PRODUCTS_HIGH_QUALITY = "High-Quality";
 
 export const TECH_INFO_THE_HIDDEN_LAYERS = "The Hidden Layers";
-export const TECH_INFO_A_CLOSE_LOOK_AT = "A Close Look at";
+export const TECH_INFO_A_CLOSE_LOOK_AT = "A Closer Look at";
 export const TECH_INFO_PANELS_DETAILS = [
   {
     title: "Photovoltaic Cells",
@@ -370,36 +399,31 @@ export const TECH_INFO_BENS = [
   {
     title: `Leading Solar Technology`,
     description:
-      "AESOLAR, a top-tier German solar module maker, stands for precision and dependability in engineering. We’re at the forefront, using advanced technology to shape solar energy's future. Our commitment to innovation is paving the way for exciting developments in solar power.",
+      "AESOLAR, a leading German solar module manufacturer, stands for precision and reliability in engineering. We're at the forefront, using advanced technology to shape the future of solar energy. Our commitment to innovation paves the way for exciting developments in solar power.",
     image: "automation.svg",
-    fullDescription: `On February 19, 2024, Bloomberg New Energy Finance (BNEF) released the 1Q 2024 Global PV Market Outlook. AESOLAR has once again secured its position in the tier 1 list of PV module manufacturers, marking the 13th consecutive time since Q1 2021. As a leading solar brand, this recognition underscores AESOLAR's consistent quality, brand credibility, and strong bankability.
-    BNEF's methodology for tier 1 PV module manufacturers is stringent, requiring manufacturers to have received non-recourse finance from 6 different commercial banks over the past 2 years. This selection process demonstrates the bankability of the chosen brands and provides a reliable reference for the market.
-    Notably, starting from the 2024 Q1, BNEF has raised the project threshold from the previous 1.5MW to 5MW. This change has led to a decrease in the number of companies included in the Tier 1 list compared to the previous quarter (45 companies in Q4 2023 to 26 companies in Q1 2024). Despite this change, AESOLAR maintains its position, showcasing the company's strength and outstanding credibility once again.
-    Commenting on this change, BNEF stated, 'This is due to the increasing size of the solar industry, where 5MW is no longer a particularly large project, and projects below 5MW are extremely difficult to crosscheck with independent data sources when claimed by module manufacturers. The change unsurprisingly reduces the number of companies on the tier 1 list, but total capacity is still 783GW/year, far more than global installation expected in2024.'
-    Furthermore, AESOLAR received a '*' in the list, indicating that their investigation report can be obtained from PV Evolution Labs (PVEL). The Aurora series PV module from AESOLAR has passed testing conducted by PVEL and was among the 'Best Performers' in 2023. This is a result of AESOLAR's continuous focus on research and development, technological innovation, and enhancement of production processes and quality management.`,
   },
   {
     title: "Building a Greener Future",
     description:
-      "AESOLAR isn’t just making solar modules; we’re building a more sustainable future. By combining the latest technology with high quality and our dedication to the environment, we’re not just creating products – we’re inspiring a vision of a renewable energy-driven world.",
+      "AESOLAR doesn't just make solar panels, we're building a more sustainable future. By combining the latest technology with high quality and our commitment to the environment, we're not just creating products - we're inspiring a vision of a world powered by renewable energy.",
     image: "manufacturer.png",
   },
   {
     title: "Quality Manufacturing",
     description:
-      "Our high-tech factories use smart automation for precise and efficient assembly, minimizing errors. Quality is key at AESOLAR. We make sure each solar module is top-notch in efficiency, durability, and performance. Our thorough checks at every step show our dedication to quality and making our customers happy.",
+      "Our high-tech factories use intelligent automation for precise and efficient assembly, minimizing errors. Quality is key at AESOLAR. We ensure that every solar panel is first class in terms of efficiency, durability and performance. Our thorough checks at every stage demonstrate our commitment to quality and customer satisfaction.",
     image: "technologies.svg",
   },
   {
     title: "Setting New Efficiency Standards",
     description:
-      "We at AESOLAR are all about raising the bar in the solar industry. We focus on making our manufacturing more energy-efficient, which cuts costs and reduces our environmental footprint. This helps our customers in the long run, too. And we back up our commitment to quality with a strong product warranty.",
+      "At AESOLAR, we are all about raising the bar in the solar industry. We focus on making our manufacturing more energy efficient, which reduces costs and our environmental footprint. This helps our customers in the long run. And we back up our commitment to quality with a strong product warranty.",
     image: "efficiency.svg",
   },
   {
     title: "Committed to Sustainability",
     description:
-      "Sustainability is central to what we do at AESOLAR. We power our facilities with our solar panels and other green energy sources. This commitment reflects our belief in the clean energy movement. We’re mindful of our products' life cycles, using recyclable materials and cutting down on energy use. We follow strict German standards for sustainable and responsible production.",
+      "Sustainability is at the heart of everything we do at AESOLAR. We power our facilities with our solar panels and other green energy sources. This commitment reflects our belief in the clean energy movement. We're mindful of the lifecycle of our products, using recyclable materials and reducing energy consumption. We follow strict German standards for sustainable and responsible manufacturing.",
     image: "materials.svg",
   },
 ];
@@ -431,12 +455,12 @@ export const REVIEWS_QUOTES_WITH_AUTHORS = [
 ];
 
 export const MAIN_PAGE_NEWS_INSIGHTS = "News and Insights";
-export const MAIN_PAGE_COMPANY = "of Our Company ";
+export const MAIN_PAGE_COMPANY = "from Our Company";
 export const MAIN_PAGE_NEWS_READ_ALL = "Read all the news";
 
 export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installer"];
-export const GET_IN_TOUCH_ELEVATE_GROWTH = "Elevate growth together";
-export const GET_IN_TOUCH_JOIN_US = "Join as ";
+export const GET_IN_TOUCH_ELEVATE_GROWTH = "Fueling growth together";
+export const GET_IN_TOUCH_JOIN_US = "Become ";
 export const GET_IN_TOUCH_OUR_VISION = " in our solar vision";
 export const GET_IN_TOUCH_BECOME_A = "Become ";
 
@@ -462,7 +486,7 @@ export const FAQ_ACCORDION_DATA = [
       "Please contact our sales office, send us your company presentation and get Distributorship terms and conditions from dedicated to your country Regional Manager.",
   },
 ];
-export const FAQ_QUESTION = "Have a Question?";
+export const FAQ_QUESTION = "Got a Question?";
 export const FAQ_SOLUTIONS = "We have solutions";
 export const FAQ_MORE_SOLUTIONS = "More solutions";
 
@@ -1001,7 +1025,7 @@ export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
 export const SEQUENCE_ANIMATION_TEXT = [
   {
     title: "Front cover",
-    description: "Protects panel from external elements",
+    description: "Protects the panel from external elements",
   },
   {
     title: "Front encapsulation",
@@ -1017,7 +1041,7 @@ export const SEQUENCE_ANIMATION_TEXT = [
   },
   {
     title: "Back cover",
-    description: "Protects rear side of panel",
+    description: "Protects the back of the panel",
   },
   {
     title: "Frame",
@@ -1947,7 +1971,7 @@ export const ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT = [
 ];
 
 export const ABOUT_BUSINESS = "Business Map";
-export const ABOUT_MAP = "Where Is Our Power";
+export const ABOUT_MAP = "Where Our Power Is";
 export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "germany.svg",
@@ -1961,12 +1985,12 @@ export const ABOUT_MAP_DESIGNATIONS = [
   },
   {
     icon: "base.svg",
-    designation: "Manufacturing Base",
+    designation: "Production site",
     location: ["Turkey", "China"],
   },
   {
     icon: "distributor.svg",
-    designation: "Distributor",
+    designation: "Distributors",
     location: ["All around the World"],
   },
 ];
@@ -2406,7 +2430,7 @@ export const DOCUMENTS_FILES: (
   // },
 ];
 
-export const DOCUMENTS_FAQ_HAVE_A_QUESTION = "Have a Question?";
+export const DOCUMENTS_FAQ_HAVE_A_QUESTION = "Got a Question?";
 export const DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS = "We Have Solutions";
 export const DOCUMENTS_FAQ_FILES = [
   {

@@ -8,7 +8,7 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
     paragraphs: [
       {
         type: "text",
-        value: `In a world where sustainable energy is no longer a luxury but a necessity, AESOLAR stands as a beacon of hope. With our roots firmly planted in the rich heritage of German engineering, we illuminate the path to a future powered by the sun. Our mantra is simple yet powerful— It's time to save the world. And that time is now.`,
+        value: `At AESOLAR, we believe in making sustainable energy accessible to everyone. Our foundation is built on the excellence of German engineering, which drives us to lead the way in solar energy. We began our journey in 2003, inspired by Dr Alexander Maier and his visionary brothers, with a clear mission: to use solar energy to power our future.`,
       },
       {
         type: "image",
@@ -27,11 +27,11 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
       },
       {
         type: "text",
-        value: `Since our inception by Dr. Alexander Maier and his visionary brothers in 2003, AESOLAR has been steadfastly working on this mission. Being a TIER1 company, we are dedicated to providing state-of-the-art, top-quality photovoltaic modules that are the paragons of stability, durability, and reliability. Yet, we never rest on our laurels. Our relentless quest for innovation constantly propels us to scale new heights in technology and extend our industry chain.`,
+        value: `As a Tier 1 Manufacturer, we provide high quality photovoltaic modules renowned for their stability, durability and reliability. Innovation is at the heart of everything we do. We are constantly pushing the boundaries of technology to provide better solutions and expand our reach in the solar energy industry.`,
       },
       {
         type: "text",
-        value: `At AESOLAR, we don't just manufacture solar modules; we bring you the promise of a cleaner, brighter future. Our comprehensive solutions and efficient services are designed to maximize your return on investment, lower the Levelized cost of electricity (LCOE), and minimize your carbon footprint.`,
+        value: `Our goal is to do more than just sell solar panels. We want to create a brighter, cleaner future through comprehensive solutions that offer great value, reduce electricity costs and cut carbon emissions. Our global network ensures that our innovative products and solutions meet the diverse needs of our customers everywhere, lighting the way to a sustainable world.`,
       },
       {
         type: "image",
@@ -50,11 +50,11 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
       },
       {
         type: "text",
-        value: `Through our global network, we offer innovative products and solutions suitable for all customer applications. Our projects span the globe, serving as a testament to our commitment to renewable energy. We firmly believe that clean energy should be as ubiquitous and easily accessible as sunlight, illuminating the path towards a sustainable future.`,
+        value: `With every sunrise, we see an opportunity to lead the renewable energy revolution. Join us at AESOLAR in our mission to make a difference. Every step we take together towards solar energy brings us closer to a sustainable future.`,
       },
       {
         type: "text",
-        value: `Every sunrise brings a new day and new opportunities. At AESOLAR, we're not just witnessing the dawn of a new era in renewable energy; we're leading it. Harness the power of the sun with us and join our mission to save the world. Because every ray of sunlight we capture today leads us one step closer to a sustainable tomorrow.`,
+        value: `AESOLAR - Together we can save the world!`,
       },
     ],
   },
@@ -64,4 +64,4 @@ export const MANUFACTURER_DO_IT_TOGETHER =
 export const MANUFACTURER_SAVE_THE_WORLD =
   "AESOLAR — It's time to save the World. ";
 export const MANUFACTURER_WELCOME = "Welcome to AESolar";
-export const MANUFACTURER_HARNESS = "Harness the Sun, Empower the World.";
+export const MANUFACTURER_HARNESS = "Harnessing the Sun, Empowering the World";

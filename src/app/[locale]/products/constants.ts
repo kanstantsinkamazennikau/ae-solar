@@ -1,4 +1,5 @@
-export const PRODUCTS_WELCOME = "Welcome to AESOLAR—German TIER1 Manufacturer";
+export const PRODUCTS_WELCOME =
+  "Welcome to AE Solar — Pioneering Renewable Energy ";
 export const PRODUCTS_LIGHTING = "Lighting The Way To A Sustainable Future";
 export const PRODUCT_DESCRIPTIONS = {
   Aurora: `Aurora (PERC) Our Passivated Emitter and Rear Cell (PERC) technology, aptly named Aurora, brings a new dawn of highly efficient and reduced power loss solar modules. It's a greener choice for landscapes, generating the same power as conventional modules, but in less space`,
@@ -38,8 +39,8 @@ export const PRODUCT_JOIN =
 
 export const PRODUCT_TIME_TO_CHOOSE = "Time To Choose";
 export const PRODUCT_YOUR_MODULE = "Your Module";
-export const PRODUCT_THE_ADVANTAGES = "The Advantages:";
-export const PRODUCT_ESSENTIAL = "Essential Insights";
+export const PRODUCT_THE_ADVANTAGES = "The Benefits:";
+export const PRODUCT_ESSENTIAL = "Key Insights";
 export const PRODUCT_SINCE =
   "Since 2003, AE Solar has been at the forefront of the renewable energy industry. We're not just a Tier 1 solar panel manufacturer, we're a leader and innovator in clean, efficient, and sustainable energy. We stand for quality, durability, and efficiency in harnessing the sun's power.";
 export const PRODUCT_SINCE_HIGHLIGHT = [
@@ -54,21 +55,21 @@ export const PRODUCT_ADVANTAGES = [
     title: `Flexible Solar Solutions 
     for All Energy Needs`,
     description:
-      "Our comprehensive solar panel portfolio is designed to maximize flexibility and efficiency. Whether you're aiming to power your home or looking to energize large commercial buildings and expansive solar farms, AE Solar's products are up to the task. With us, powering your world with the sun's energy is simpler and more efficient than ever.",
+      "Our comprehensive portfolio of solar panels is designed to maximise flexibility and efficiency. Whether you're looking to power your home or power large commercial buildings and sprawling solar farms, AE Solar's products are up to the task. With us, powering your world with the sun's energy has never been easier or more efficient.",
   },
   {
     image: "quality.svg",
     title: `German Engineering 
     at Its Finest `,
     description:
-      "Two decades in the business have shaped us and the solar world. Our commitment to German engineering excellence has led to the creation of next-generation solar modules - powerful, elegant, and innovative. We have the ideal solar solution tailored to your needs. With AESOLAR, gain independence and experience the exceptional performance of our modules.",
+      "Two decades in business have shaped us and the solar world. Our commitment to German engineering excellence has led to the creation of the next generation of solar modules - powerful, elegant and innovative. We have the ideal solar solution for your needs. Gain independence with AESOLAR and experience the exceptional performance of our modules.",
   },
   {
     image: "engineering.svg",
     title: `Quality and 
     Innovation`,
     description:
-      "Years of experience and innovation have made our solar modules synonymous with top-tier design and technology. We take pride in our rigorous quality control procedures, ensuring that our products always meet and surpass your expectations.",
+      "Years of experience and innovation have made our solar modules synonymous with superior design and technology. We pride ourselves on our rigorous quality control procedures, ensuring that our products always meet and exceed your expectations.",
   },
 
   {
@@ -76,6 +77,6 @@ export const PRODUCT_ADVANTAGES = [
     title: `Profitable and 
     Durable Solar Modules`,
     description:
-      "Our solar modules are more than just energy-efficient - they're a profitable investment. Each one surpasses its stated output while boasting exceptional robustness. Thanks to our years of experience in Photovoltaic (PV) module production, stringent material selection, and consistent quality checks, our products are built to last, ensuring you long-term efficiency and minimal worries. Choose AE Solar and invest in a brighter, cleaner future.",
+      "Our solar panels are more than just energy efficient - they're a profitable investment. Each one exceeds its rated output and is exceptionally durable. Thanks to our years of experience in photovoltaic (PV) module manufacturing, rigorous material selection and consistent quality control, our products are built to last, giving you long-term efficiency and minimal worry. Choose AE Solar and invest in a brighter, cleaner future.",
   },
 ];

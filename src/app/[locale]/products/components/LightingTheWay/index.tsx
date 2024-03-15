@@ -38,7 +38,7 @@ export default function LightingTheWay() {
             absolute
             inline-flex
             flex-col
-            md:gap-[30px]
+            md:gap-[10px]
             gap-4
             font-medium
             min-[920px]:max-w-[1100px]
@@ -56,11 +56,11 @@ export default function LightingTheWay() {
             ${isStartAnimation ? " opacity-100" : "opacity-0"}
           `}
         >
-          <p className="text-center text-base-red md:-tracking-[1.2px] -tracking-[0.5px] leading-none [font-size:_clamp(20px,2vw,36px)]">
-            {PRODUCTS_WELCOME}
-          </p>
-          <p className=" textShadow text-center md:-tracking-[2.88px] -tracking-[0px] leading-none [font-size:_clamp(34px,5vw,102px)] max-w-[1000px] after:p-0">
+          <p className="uppercase textShadow text-center md:-tracking-[2.7px] -tracking-[0px] leading-none [font-size:_clamp(34px,4vw,69px)] max-w-[1000px] after:p-0">
             {PRODUCTS_LIGHTING}
+          </p>
+          <p className="text-center text-base-red md:-tracking-[0.4px] -tracking-[0.5px] leading-none [font-size:_clamp(10px,1.5vw,15px)] uppercase">
+            {PRODUCTS_WELCOME}
           </p>
         </div>
       </div>

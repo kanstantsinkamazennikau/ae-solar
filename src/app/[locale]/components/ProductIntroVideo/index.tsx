@@ -165,7 +165,7 @@ export default function ProductIntroVideo() {
           </div>
           <div
             className="
-              min-h-[100px]
+              h-[110px]
               font-walsheim
               text-lg
               leading-[1.5]
