@@ -24,7 +24,7 @@ export default function ChangeLocale({
     const newLocale = code.toLowerCase();
     newLocale === "de"
       ? router.push(`https://de.ae-solar.com${pathname}`)
-      : router.push(`https://staging.ae-solar.com${pathname}`);
+      : router.push(`https://ae-solar.com${pathname}`);
   };
 
   return (
