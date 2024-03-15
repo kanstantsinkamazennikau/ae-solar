@@ -4,30 +4,34 @@ import { ChangeLocaleProps } from "@/app/[locale]/components/common/ChangeLocale
 import Image from "next/image";
 import {
   useParams,
+  usePathname,
   useRouter,
   useSelectedLayoutSegments,
 } from "next/navigation";
 import { useRef, useState } from "react";
 
-export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
+export default function ChangeLocale({
+  mobileNavigation,
+  host,
+}: ChangeLocaleProps) {
   const router = useRouter();
+  const pathname = usePathname();
   const params = useParams();
-  const urlSegments = useSelectedLayoutSegments();
   const [isSelection, setIsSelection] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleSelection = (code: string) => {
     const newLocale = code.toLowerCase();
     newLocale === "de"
-      ? router.push(`https://de.ae-solar.com`)
-      : router.push(`https://staging.ae-solar.com`);
+      ? router.push(`https://de.ae-solar.com${pathname}`)
+      : router.push(`https://staging.ae-solar.com${pathname}`);
   };
 
   return (
     <div className={`flex relative min-[640px]:w-auto w-full`}>
       <div className="bg-transparent outline-none flex w-full">
         <SelectedLanguage
-          locale={(params.locale as string).toUpperCase()}
+          locale={host && host[0] === "DE" ? "DE" : "EN"}
           setIsSelection={setIsSelection}
           dropdownRef={dropdownRef}
           mobileNavigation={mobileNavigation}
