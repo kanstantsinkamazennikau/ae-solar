@@ -1,6 +1,5 @@
-export const PRODUCTS_WELCOME =
-  "Welcome to AE Solar — Pioneering Renewable Energy ";
-export const PRODUCTS_LIGHTING = "Lighting The Way To A Sustainable Future";
+export const PRODUCTS_WELCOME = "Goes Beyond Standard Products";
+export const PRODUCTS_LIGHTING = "Our Portfolio";
 export const PRODUCT_DESCRIPTIONS = {
   Aurora: `Aurora (PERC) Our Passivated Emitter and Rear Cell (PERC) technology, aptly named Aurora, brings a new dawn of highly efficient and reduced power loss solar modules. It's a greener choice for landscapes, generating the same power as conventional modules, but in less space`,
   Comet: `Comet (HJT) Leap into the future of solar energy with our Heterojunction Technology (HJT) named after the swift celestial phenomenon - Comet. Experience high efficiency and superior performance, even under shaded or high-temperature conditions`,
@@ -42,13 +41,13 @@ export const PRODUCT_YOUR_MODULE = "Your Module";
 export const PRODUCT_THE_ADVANTAGES = "The Benefits:";
 export const PRODUCT_ESSENTIAL = "Key Insights";
 export const PRODUCT_SINCE =
-  "Since 2003, AE Solar has been at the forefront of the renewable energy industry. We're not just a Tier 1 solar panel manufacturer, we're a leader and innovator in clean, efficient, and sustainable energy. We stand for quality, durability, and efficiency in harnessing the sun's power.";
+  "Where we transform sunlight into power - for you and for the planet. Our range of advanced solar technologies is designed to harness the abundant energy of the sun, providing renewable, clean, and highly efficient solutions. Each of our innovative products draws inspiration from the universe, embodying our belief in the vast potential of renewable energy.";
 export const PRODUCT_SINCE_HIGHLIGHT = [
-  "Since 2003, AE Solar",
-  "we're a leader and innovator",
+  "sunlight into power",
+  "renewable, clean, and highly efficient solutions",
 ];
-export const PRODUCT_WE_ARE_TIER = "We’re TIER 1 Company";
-export const PRODUCT_WE_ARE_TIER_HIGHLIGHT = ["TIER 1 Company"];
+export const PRODUCT_WE_ARE_TIER = "Welcome to AESOLAR";
+export const PRODUCT_WE_ARE_TIER_HIGHLIGHT = ["AESOLAR"];
 export const PRODUCT_ADVANTAGES = [
   {
     image: "solutions.svg",

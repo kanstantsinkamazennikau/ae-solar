@@ -27,7 +27,7 @@ export default function Advantages() {
         tier1TextHighlight={PRODUCT_WE_ARE_TIER_HIGHLIGHT}
         descriptionText={PRODUCT_SINCE}
         descriptionTextHighlight={PRODUCT_SINCE_HIGHLIGHT}
-        externalStyle="border-t-0 -mt-10 md:mt-0 !py-0"
+        externalStyle="border-t-0 md:mt-0 !py-0"
       />
       <PanelsList />
       <BasicWidthContainer styles="mx-auto -mt-5">
