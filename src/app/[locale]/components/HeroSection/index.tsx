@@ -50,12 +50,12 @@ export default function HeroSection() {
           }
         `}
       >
-        <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,4vw,40px)] textShadow">
+        <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,4vw,40px)] mainPageTextShadow">
           {HEADER_TIER1}
         </p>
         <p
           className=" text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,102px)] 
-          textShadow
+          mainPageTextShadow
         "
         >
           {HEADER_TIER1_QUALITY}
