@@ -20,7 +20,6 @@ export const FORM_FIELDS_INPUT_TYPES = {
 
 export const HEADER_TIER1 = "Deutsche Ingenieurskunst Produktionsstätten in";
 export const HEADER_TIER1_QUALITY = "Europa und Asien";
-
 export const FORMS_FIELDS = {
   name: "name",
   email: "email",
@@ -214,9 +213,10 @@ export const PRODUCT_INTRO_PANELS = {
         title: "Verschiedene Größen",
         description: "Kleine, mittlere, große Module",
       },
-      { 
-        title: "Designoption", 
-        description: "Mono-/bifacial, Auswahl an Farben" },
+      {
+        title: "Designoption",
+        description: "Mono-/bifacial, Auswahl an Farben",
+      },
       {
         title: "Individuelle Funktionen",
         description: "Maßgeschneidertes Material und Leistung",
