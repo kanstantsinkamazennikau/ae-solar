@@ -1,7 +1,7 @@
 export const PRODUCTS_WELCOME =
-  "Willkommen bei AESOLAR – deutscher Hersteller der TIER1-Kategorie";
+  "Geht über Standardprodukte hinaus";
 export const PRODUCTS_LIGHTING =
-  "Den Weg zu einer nachhaltigen Zukunft erleuchten";
+  "Unser Portfolio";
 export const PRODUCT_DESCRIPTIONS = {
   Aurora: `Aurora (PERC) Unsere Passivated Emitter and Rear Cell (PERC)-Technologie, passend benannt Aurora, bringt eine neue Ära hoch effizienter und reduzierter Leistungsverluste bei Solarmodulen. Es ist eine umweltfreundlichere Wahl für Landschaften und erzeugt die gleiche Leistung wie herkömmliche Module, benötigt jedoch weniger Platz.`,
   Comet: `Comet (HJT): Tauchen Sie ein in die Zukunft der Solarenergie mit unserer Heterojunction-Technologie (HJT), benannt nach dem schnellen Himmelsphänomen - dem Kometen. Erleben Sie hohe Effizienz und überragende Leistung, selbst unter schattigen oder hochtemperaturigen Bedingungen.`,
@@ -21,10 +21,10 @@ export const PRODUCT_SLOGAN = {
 };
 
 export const PRODUCT_WE_TRANSFORM = "Wir verwandeln";
-export const PRODUCT_WE_TRANSFORM_SUNLIGHT = "Sonnenlicht in Energie";
-export const PRODUCT_FOR_YOU = "Für dich und ";
+export const PRODUCT_WE_TRANSFORM_SUNLIGHT = "Sonnenschein in Energie";
+export const PRODUCT_FOR_YOU = "Für Sie und ";
 export const PRODUCT_FOR_PLANET = "für den Planeten";
-export const PRODUCT_WE_TRANSFORM_RANGE = `Unsere Palette fortschrittlicher Solartechnologien ist darauf ausgelegt, die reichliche Energie der Sonne zu nutzen und erneuerbare, saubere und äußerst effiziente Lösungen bereitzustellen. Jedes unserer innovativen Produkte schöpft Inspiration aus dem Universum und verkörpert unseren Glauben an das immense Potenzial erneuerbarer Energie.`;
+export const PRODUCT_WE_TRANSFORM_RANGE = `Unsere Palette fortschrittlicher Solartechnologien ist darauf ausgelegt, die reichliche Energie der Sonne zu nutzen und erneuerbare, saubere und äußerst effiziente Lösungen zu bieten. Jedes unserer innovativen Produkte ist vom Universum inspiriert und verkörpert unseren Glauben an das immense Potenzial erneuerbarer Energien.`;
 export const PRODUCT_WE_TRANSFORM_HIGHLIGHT = [
   "entworfen, um die reichliche Energie der Sonne zu nutzen",
   "zieht Inspiration aus dem Universum",
@@ -40,47 +40,47 @@ export const PRODUCT_JOIN =
 export const PRODUCT_TIME_TO_CHOOSE = "Zeit zu wählen";
 export const PRODUCT_YOUR_MODULE = "Ihr Modul";
 export const PRODUCT_THE_ADVANTAGES = "Die Vorteile:";
-export const PRODUCT_ESSENTIAL = "Wesentliche Erkenntnisse";
+export const PRODUCT_ESSENTIAL = "Haupterkenntnisse";
 export const PRODUCT_SINCE =
-  "Seit 2003 ist AE Solar an der Spitze der erneuerbaren Energien. Wir sind nicht nur ein Hersteller von Solarmodulen der Klasse 1, sondern auch ein Vorreiter und Innovator in der sauberen, effizienten und nachhaltigen Energie. Wir stehen für Qualität, Langlebigkeit und Effizienz bei der Nutzung der Kraft der Sonne.";
+  "wo wir Sonnenlicht in Energie umwandeln - für Sie und für den Planeten. Unsere Palette fortschrittlicher Solartechnologien ist darauf ausgelegt, die reichlich vorhandene Energie der Sonne zu nutzen und nachhaltige, saubere und äußerst effiziente Lösungen bereitzustellen. Jedes unserer innovativen Produkte schöpft Inspiration aus dem Universum und verkörpert unseren Glauben an das enorme Potenzial erneuerbarer Energien.";
 export const PRODUCT_SINCE_HIGHLIGHT = [
-  "Seit 2003 ist AE Solar",
-  "ein führender Innovator",
+  "Sonnenlicht in Energie",
+  "nachhaltige, saubere und äußerst effiziente Lösungen",
 ];
 
 export const PRODUCT_WE_ARE_TIER =
-  "Wir sind ein Unternehmen der TIER-1-Kategorie.";
+  "Willkommen bei AESOLAR";
 export const PRODUCT_WE_ARE_TIER_HIGHLIGHT = [
-  "Unternehmen der TIER-1-Kategorie",
+  "AESOLAR",
 ];
 export const PRODUCT_ADVANTAGES = [
   {
     image: "solutions.svg",
-    title: `Flexible Solarenergielösungen
+    title: `Flexible Solarlösungen
     für alle Energiebedürfnisse`,
     description:
-      "Unser umfassendes Portfolio an Solarmodulen ist darauf ausgelegt, Flexibilität und Effizienz zu maximieren. Egal, ob Sie Ihr Zuhause mit Strom versorgen möchten oder große gewerbliche Gebäude und ausgedehnte Solarfarmen mit Energie versorgen möchten, die Produkte von AE Solar sind dafür geeignet. Mit uns ist es einfacher und effizienter als je zuvor, Ihre Welt mit der Energie der Sonne zu versorgen.",
+      "Unser umfassendes Portfolio an Solarmodulen ist darauf ausgelegt, Flexibilität und Effizienz zu maximieren. Ob Sie Ihr Zuhause mit Strom versorgen möchten oder große Gewerbegebäude und ausgedehnte Solarfarmen betreiben, die Produkte von AE Solar sind für jede Aufgabe gerüstet. Mit uns war es noch nie einfacher oder effizienter, Ihre Welt mit der Energie der Sonne zu versorgen.",
   },
   {
     image: "quality.svg",
     title: `Deutsche Ingenieurskunst
-    in ihrer besten Form`,
+    in Perfektion`,
     description:
-      "Zwei Jahrzehnte im Geschäft haben uns und die Welt der Solarenergie geprägt. Unser Engagement für deutsche Ingenieurskunst hat zur Entwicklung von Solarmodulen der nächsten Generation geführt - leistungsstark, elegant und innovativ. Wir haben die ideale Solarenergielösung, die auf Ihre Bedürfnisse zugeschnitten ist. Mit AESOLAR erlangen Sie Unabhängigkeit und erleben die außergewöhnliche Leistung unserer Module.",
+      "Zwei Jahrzehnte Geschäftstätigkeit haben uns und die Welt der Solarenergie geprägt. Unser Engagement für deutsche Ingenieurskunst hat zur Entwicklung der nächsten Generation von Solarmodulen geführt – leistungsstark, elegant und innovativ. Wir haben die ideale Solarlösung für Ihre Bedürfnisse. Gewinnen Sie Unabhängigkeit mit AESOLAR und erleben Sie die außergewöhnliche Leistung unserer Module.",
   },
   {
     image: "engineering.svg",
     title: `Qualität und 
     Innovation`,
     description:
-      "Jahrelange Erfahrung und Innovation haben unsere Solarmodule zu Synonymen für erstklassiges Design und Technologie gemacht. Wir sind stolz auf unsere strengen Qualitätskontrollverfahren, die sicherstellen, dass unsere Produkte stets Ihre Erwartungen erfüllen und übertreffen.",
+      "Jahrelange Erfahrung und Innovation haben unsere Solarmodule zu Synonymen für überlegenes Design und Technologie gemacht. Wir sind stolz auf unsere strengen Qualitätskontrollverfahren, die sicherstellen, dass unsere Produkte Ihre Erwartungen stets erfüllen und übertreffen.",
   },
 
   {
     image: "profit.svg",
-    title: `Rentable und 
+    title: `Rentable und
     langlebige Solarmodule`,
     description:
-      "Unsere Solarmodule sind mehr als nur energieeffizient - sie sind eine rentable Investition. Jedes übertrifft seine angegebene Leistung und zeichnet sich durch außergewöhnliche Robustheit aus. Dank unserer langjährigen Erfahrung in der Produktion von Photovoltaik(PV)-Modulen, strenger Materialauswahl und konsequenten Qualitätskontrollen sind unsere Produkte langlebig und gewährleisten Ihnen langfristige Effizienz und minimale Sorgen. Wählen Sie AE Solar und investieren Sie in eine hellere, sauberere Zukunft.",
+      "Unsere Solarmodule sind nicht nur energieeffizient, sondern auch eine profitable Investition. Jedes Modul übertrifft seine bewertete Leistung und ist außergewöhnlich langlebig. Dank unserer langjährigen Erfahrung in der Herstellung von Photovoltaikmodulen, der rigorosen Auswahl von Materialien und der konsequenten Qualitätskontrolle sind unsere Produkte für eine lange Lebensdauer gebaut, was Ihnen langfristige Effizienz und minimale Sorgen garantiert. Wählen Sie AE Solar und investieren Sie in eine hellere, sauberere Zukunft.",
   },
 ];

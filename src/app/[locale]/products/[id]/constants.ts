@@ -26,80 +26,79 @@ export const PRODUCT_NAVIGATION = [
 export const PRODUCT_OVERVIEW = "Überblick:";
 export const PRODUCT_PANEL_TITLES = {
   Aurora:
-    "Das Licht der Sonne umarmen: Passivierte Emitter- und Rückseitenzellentechnologie (PERC) für überlegene Solarmodule",
+    "Das Licht der Sonne umarmen: Passivierte Emitter- und Rückseitenzellen (PERC) Technologie für überlegene Solarmodule",
   Comet:
     "Die Kraft der Sonne nutzen: Heterojunction-Technologie (HJT) für fortschrittliche Solarmodule",
   Meteor:
-    "Das Potenzial der Sonne entfesseln: Tunneloxid-passivierter Kontakt (TOPCon) -Technologie für Hochleistungs-Solarmodule",
+    "Bei GreenSolar widmen wir uns der Förderung einer nachhaltigen Zukunft. Unsere TOPCon-Solarmodule symbolisieren unser Engagement für bahnbrechende Technologie, außergewöhnliche Qualität und das Versprechen einer saubereren, helleren Welt. Schließen Sie sich uns in dieser Solarevolution an, in der TOPCon die Kraft der Sonne mit unerreichter Effizienz nutzt. Wir laden Sie ein, Teil dieser Solarevolution zu sein, indem Sie die Kraft der Sonne auf effizienteste Weise mit PERC nutzen.",
   Terra:
-    "Die Kraft der Sonne nutzen: Innovative Solaranwendungen für Landwirtschaft, Lärmschutzwände und Zäune",
+    "Die Kraft der Sonne nutzen: Solare Lösungen für alle",
   Neptune:
-    "Maximierung der Effizienz von Solarenergie: Nutzung der Photovoltaik-Thermal (PVT) Hybridtechnologie für verbesserte Solarmodule",
+    "Maximierung der Effizienz von Solarenergie: Nutzung der Photovoltaik-Thermal (PVT) Hybrid-Technologie für verbesserte Solarmodule",
   ShadeStar:
-    "Schatten bewältigen: Smart-Cell-Technologie für innovative Solarmodule",
+    "Kampf gegen Schatten: Smart-Cell-Technologie für innovative Solarmodule",
 };
 export const PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS = {
   Aurora: {
-    technology: `PERC: Die Vorreiter der Solartechnologie`,
-    description: `PERC ist eine innovative Evolution in der Photovoltaik-Technologie, die die Leistung und Effizienz herkömmlicher Solarzellen erhöht. Sie führt eine zusätzliche Schicht auf der Rückseite einer traditionellen Solarzelle ein, eine Passivierungsschicht, die die Energieumwandlung verbessert, indem sie Licht einfängt, das sonst verloren gehen würde. 
-    Diese geniale Struktur optimiert die Leistung der Zelle und bietet eine hohe Umwandlungseffizienz, die über herkömmlichen Solarzellen liegt.`,
+    technology: `PERC: Führende Solartechnologie`,
+    description: `PERC ist eine wegweisende Entwicklung in der Photovoltaik-Technologie, die die Leistung und Effizienz herkömmlicher Solarzellen verbessert. Sie führt eine zusätzliche Schicht auf der Rückseite einer herkömmlichen Solarzelle ein, eine Passivierungsschicht, die die Energieumwandlung verbessert, indem sie Licht einfängt, das sonst verloren gehen würde.
+    Diese geniale Struktur optimiert die Leistung der Zelle und liefert hohe Umwandlungseffizienzen, die über herkömmlichen Solarzellen liegen.`,
   },
   Meteor: {
-    technology: `Die Entfaltung von TOPCon`,
-    description: `TOPCon ist ein innovativer Durchbruch in der Photovoltaik, der die Kluft zwischen den Grenzen herkömmlicher Solarzellen und dem energiereichen Potenzial der Sonne überbrückt.
-    Diese Technologie verwendet eine dünn aufgetragene Schicht passivierenden Materials, wie Siliziumdioxid oder Aluminiumoxid, auf dem kristallinen Silizium (c-Si) Wafer, gefolgt von einer stark dotierten polykristallinen Siliziumschicht. Diese geniale Konfiguration verbessert erheblich die Leistung und Effizienz der Solarzelle.`,
+    technology: `Entfaltung von TOPCon`,
+    description: `TOPCon ist ein innovativer Schritt nach vorne in der Photovoltaik, der die Kluft zwischen den Grenzen herkömmlicher Solarzellen und dem energiereichen Potenzial der Sonne überbrückt.
+    Bei dieser Technologie wird eine dünne Schicht passivierenden Materials wie Siliziumdioxid oder Aluminiumoxid auf den kristallinen Silizium (c-Si)-Wafer aufgebracht, gefolgt von einer stark dotierten polykristallinen Siliziumschicht. Diese geniale Anordnung verbessert erheblich die Leistung und Effizienz der Solarzelle.`,
   },
   Comet: {
-    technology: `Die Entfaltung von TOPCon`,
-    description: `Die abundanteste, erneuerbarste und kostenlose Energiequelle der Erde liegt in unserem eigenen Stern - der Sonne. Solarenergie ist sauber, grün und umweltfreundlich. Aber wie können wir diese reichhaltige Ressource am besten nutzen? Die Antwort liegt in fortschrittlichen Solartechnologien. Eine solche innovative Technologie ist die Heterojunction-Technologie (HJT).`,
+    technology: `Entfaltung von TOPCon`,
+    description: `Die am häufigsten vorkommende, erneuerbare und kostenlose Energiequelle unseres Planeten liegt in unserem eigenen Stern - der Sonne. Solarenergie ist sauber, grün und umweltfreundlich. Aber wie erfassen wir am besten diese reichhaltige Ressource? Die Antwort liegt in fortschrittlichen Solartechnologien. Eine solche fortgeschrittene Technologie ist die Heterojunction-Technologie (HJT).`,
   },
   ShadeStar: {
-    technology: `Smart Cell: Licht ins Dunkel bringen`,
-    description: `Smart Cell ist eine innovative Lösung im Bereich der Photovoltaik-Technologie, die auf gleichbleibende Leistung und Robustheit unter teilweise beschatteten Bedingungen setzt. 
-    Durch die Integration eines Bypass-Dioden für jede einzelne Solarzelle und drei zusätzliche Bypass-Dioden in der Anschlussdose sind Smart-Cell-Module darauf ausgelegt, teilweisen Schatten ohne wesentlichen Leistungsverlust zu überstehen.`,
+    technology: `Smart Cell: Licht im Dunkeln`,
+    description: `Smart Cells sind eine innovative Lösung in der Photovoltaik-Technologie, die auf eine gleichbleibende Leistung und Widerstandsfähigkeit unter teilweise beschatteten Bedingungen Wert legt.
+    Durch die Integration einer Bypass-Diode für jede einzelne Solarzelle und drei zusätzliche Bypass-Dioden im Anschlusskasten sind Smart Cell-Module darauf ausgelegt, teilweise Beschattung ohne signifikanten Leistungsverlust zu überstehen.`,
   },
   Neptune: {
-    technology: `PVT-Hybridtechnologie: Doppelte Effizienz entfesseln`,
-    description: `Die Genialität der PVT-Hybridtechnologie liegt in ihrem Zwei-Funktions-Ansatz, der photovoltaische (PV) und thermische Elemente in einem einzigen Modul kombiniert. Diese geniale Technologie nutzt Sonnenlicht zur Stromerzeugung und verwendet die Restwärme für thermische Anwendungen wie Raumheizung oder Wassererwärmung.
-    Es bedeutet einen neuen Aufbruch im Bereich der Solarenergie und bietet eine überlegene Leistung, die herkömmliche Solarmodule bei weitem übertrifft.`,
+    technology: `PVT-Hybridtechnologie: Entfesselung von Doppelleistung`,
+    description: `Die Brillanz der PVT-Hybridtechnologie liegt in ihrem dualen Ansatz, der photovoltaische (PV) und thermische Elemente in einem einzigen Modul kombiniert. Diese geniale Technologie nutzt Sonnenlicht, um Strom zu erzeugen, und verwendet Restwärme für thermische Anwendungen wie Raumheizung oder Warmwasser.
+    Sie stellt eine neue Ära in der Solarenergie dar und bietet eine überragende Leistung, die weit über die herkömmlicher Solarmodule hinausgeht.`,
   },
   Terra: {
     technology: `Agrivoltaik – Energie kultivieren`,
-    description: `Agrivoltaik, eine Fusion von Landwirtschaft und Photovoltaik, ist eine bahnbrechende Lösung, die es ermöglicht, sowohl Landwirtschaft als auch Stromerzeugung harmonisch zu kombinieren.
-    Unser innovatives Agrivoltaik-Design erhöht nicht nur die Effizienz der Landnutzung, sondern bietet auch neue Einnahmemöglichkeiten für Landwirte und Grundstücksbesitzer, indem es die Lebensmittelproduktion mit der sauberen Energieerzeugung verbindet.`,
+    description: `Wir bringen Solarenergie auf aufregende Weise in den Alltag, so dass sie für Bauernhöfe, Städte und sogar um unsere Häuser herum funktioniert. Unsere intelligenten Designs helfen dabei, das Land besser zu nutzen und können Geld verdienen, indem sie beispielsweise den Anbau von Pflanzen mit der Nutzung von Sonnenlicht zur Energieerzeugung kombinieren.`,
   },
 };
 export const PRODUCT_INTRODUCTION = "Einführung";
 export const PRODUCT_INTRODUCTION_DESCRIPTION = {
   Aurora: {
-    title: "Vielfältige und dynamische Solarkonzepte",
+    title: "Vielfältige und dynamische Solarenergielösungen",
     description:
-      "Während wir uns unaufhaltsam einer Zukunft nähern, in der nachhaltige Energie entscheidend ist, richten wir unseren Blick auf die unermessliche, erneuerbare Energiequelle in unserem Kosmos - die Sonne. Die Nutzung von Solarenergie ist eine saubere, umweltfreundliche und nachhaltige Lösung. Der Schlüssel, um das Beste aus dieser unerschöpflichen Energiequelle zu machen, liegt in der Nutzung innovativer Solartechnologien. Eine solche bahnbrechende Technologie ist die Passivierte Emitter- und Rückseitenzelle (PERC).",
+      "Wenn wir uns auf eine Zukunft zubewegen, in der nachhaltige Energie entscheidend ist, wenden wir uns der riesigen, erneuerbaren Energiequelle in unserem Kosmos zu - der Sonne. Die Nutzung von Solarenergie ist eine saubere, umweltfreundliche und nachhaltige Lösung. Der Schlüssel zur Nutzung dieser unerschöpflichen Energie liegt in der Verwendung innovativer Solartechnologien. Eine solche bahnbrechende Technologie ist PERC (passivierte Emitter- und Rückseitenzelle).",
   },
   Comet: {
-    title: "Führende Effizienz, egal bei welchem Wetter",
+    title: "Führende Effizienz, bei jedem Wetter",
     description:
-      "Unsere Erde verfügt über die abundanteste, erneuerbarste und kostenlose Energiequelle in unserem eigenen Stern - der Sonne. Solarenergie ist sauber, grün und umweltfreundlich. Aber wie können wir diese reichhaltige Ressource am besten nutzen? Die Antwort liegt in fortschrittlichen Solartechnologien. Eine solche innovative Technologie ist die Heterojunction-Technologie (HJT).",
+      "Die reichlichste, erneuerbare und kostenlose Energiequelle auf der Erde ist unser eigener Stern - die Sonne. Solarenergie ist sauber, grün und umweltfreundlich. Aber wie nutzen wir diese reichhaltige Ressource am besten? Die Antwort liegt in fortschrittlichen Solartechnologien. Eine solche fortschrittliche Technologie ist die Heterojunction-Technologie (HJT).",
   },
   Meteor: {
-    title: "Effizienz und Langlebigkeit im Einklang",
+    title: "Effizienz und Langlebigkeit in Harmonie",
     description:
-      "Die Sonne - eine unerschöpfliche, reichhaltige und kostenlose Energiequelle, die unseren Planeten kontinuierlich mit ihren potentiellen Strahlen versorgt. Die Kunst, diese reiche Energiequelle auf umweltfreundliche und effiziente Weise zu nutzen, liegt in den Fortschritten der Solartechnologie. Eine solche bahnbrechende Technologie, die immer mehr an Bedeutung gewinnt, ist die Tunneloxid-passivierte Kontakt (TOPCon) Technologie.",
+      "Die Sonne - eine unerschöpfliche, reichlich vorhandene und kostenlose Energiequelle - beschenkt unseren Planeten ständig mit ihren kraftvollen Strahlen. Die Kunst, diese reichhaltige Energiequelle auf umweltfreundliche und effiziente Weise zu nutzen, liegt in den Fortschritten der Solartechnologie. Eine solche bahnbrechende Technologie, die an Bedeutung gewinnt, ist die Tunneloxid passivierte Kontakt (TOPCon) Technologie.",
   },
   ShadeStar: {
     title: "Intelligente Energie für jedes Dach",
     description:
-      "Die immense, endlose Energie unserer Sonne bietet eine beispiellose erneuerbare Energiequelle. Sie ist sauber, grün und vor allem nachhaltig. Doch die Nutzung dieser unendlichen Energie ist nicht ohne Herausforderungen. Eine solche Herausforderung ist die Auswirkung von Verschattung. Wie überwinden wir dieses Hindernis? Der Schlüssel liegt in einer innovativen Technologie namens Smart Cell Technology.",
+      "Die immense, endlose Energie unserer Sonne bietet eine unvergleichliche erneuerbare Energiequelle. Sie ist sauber, grün und vor allem nachhaltig. Doch die Nutzung dieser unendlichen Energie ist nicht ohne Herausforderungen. Eine solche Herausforderung ist der Einfluss von Beschattung. Wie überwinden wir dieses Hindernis? Der Schlüssel liegt in einer neuen Technologie namens Smart-Cell-Technologie.",
   },
   Neptune: {
-    title: "Die Zukunft der Hybrid-Solarenergie",
+    title: "Die Zukunft der hybriden Solarenergie",
     description:
-      "Die Sonne, unser mächtiger himmlischer Fackelträger, ist eine unermessliche Energiequelle. Sie schenkt uns einen immensen Reichtum an erneuerbarer, umweltfreundlicher Energie. Um dieses immense Potenzial zu erschließen, ist die Verwendung innovativer Solartechnologien erforderlich. Und an vorderster Front dieser bahnbrechenden Lösungen steht die Photovoltaik-Thermal (PVT) Hybridtechnologie.",
+      "Die Sonne, unser mächtiger himmlischer Fackelträger, ist eine unermessliche Energiequelle. Sie versorgt uns mit einem immensen Reichtum an erneuerbarer, umweltfreundlicher Energie. Die Nutzung dieses riesigen Potenzials erfordert den Einsatz innovativer Solartechnologien. Und an vorderster Front dieser bahnbrechenden Lösungen steht die Photovoltaik-Thermal (PVT) Hybridtechnologie.",
   },
   Terra: {
-    title: "Anpassbare Energie für jede Umgebung",
+    title: "Solarenergie für alle Anwendungen",
     description:
-      "Die Sonne, eine riesige Kugel aus heißem Plasma, ist die reichlichste und zuverlässigste Energiequelle für unseren Planeten. Mit ihrer Fähigkeit, saubere, nachhaltige und umweltfreundliche Energie bereitzustellen, ist Solarenergie die Zukunft des globalen Energiebedarfs. Aber wie optimieren wir die Gewinnung dieser reichhaltigen Ressource? Die Antwort liegt in der Innovation von Solaranwendungen. Wir präsentieren drei bahnbrechende Solartechnologien: Agrivoltaik, Photovoltaik-Lärmschutzwände (PVNBs) und Solargitterzäune.",
+      "Die Sonne ist ein riesiger Energieball, der niemals versiegt und uns saubere Energie liefert, die gut für den Planeten ist. Wir nutzen diese Energie auf fünf coole Arten: Landwirtschaft mit Solarmodulen (Agrivoltaik), Anbringung von Solarmodulen an städtischen Lärmschutzwänden (PVNBs), Nutzung von Solarenergie für Zäune, Bau großer Solaprojekte zur Versorgung vieler Haushalte und Schaffung von Parkplätzen, die Autos schützen und Solarenergie sammeln (Solare Carports). Jede Idee zeigt, wie Solarenergie in verschiedene Bereiche unseres Lebens integriert werden kann und hilft dabei, eine Zukunft aufzubauen, die sich ganz um erneuerbare Energien dreht.",
   },
 };
 export const PRODUCT_BENEFITS = "Vorteile";
@@ -111,31 +110,31 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
     {
       benefitTitle: "Hohe Effizienz",
       benefitDescription:
-        "Mit einem überlegenen Temperaturkoeffizienten bieten PERC-Solarzellen eine verbesserte Stromerzeugung selbst in Regionen mit hohen Umgebungstemperaturen und sind damit eine energieeffiziente Lösung.",
+        "Dank eines überlegenen Temperaturkoeffizienten bieten PERC-Solarzellen eine verbesserte Stromerzeugung auch in Regionen mit hohen Umgebungstemperaturen, was sie zu einer energieeffizienten Lösung macht.",
       benefitPicture: "lightning.svg",
     },
     {
-      benefitTitle: "Hervorragende Leistung bei diffusem Licht",
+      benefitTitle: "Ausgezeichnete Leistung bei diffuser Beleuchtung",
       benefitDescription:
-        "PERC-Solarmodule sind darauf ausgelegt, auch bei diffusem Licht hervorragende Leistungen zu erbringen und die Energieausbeute selbst an bewölkten Tagen oder bei niedrigem Sonnenstand zu maximieren.",
+        "PERC-Solarmodule sind darauf ausgelegt, auch bei diffuser Lichtbedingungen hervorragende Leistungen zu erbringen und so die Energieausbeute selbst an bewölkten oder bei geringer Sonneneinstrahlung zu maximieren.",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Geringere Lichtinduzierte Degradation (LID)",
+      benefitTitle: "Niedrigere Lichtinduzierte Degradation (LID)",
       benefitDescription:
-        "Im Gegensatz zu herkömmlichen PV-Zellen weisen PERC-Module eine deutlich geringere Lichtinduzierte Degradation (LID) auf, was eine verlängerte Lebensdauer bei Spitzenleistung und bessere Erträge im Laufe der Zeit gewährleistet.",
+        "Im Gegensatz zu konventionellen PV-Zellen weisen PERC-Module eine signifikant geringere LID auf, was eine längere Spitzenleistung und bessere Erträge im Laufe der Zeit gewährleistet.",
       benefitPicture: "lightning2.svg",
     },
     {
       benefitTitle: "Verringerte Leistungsverluste",
       benefitDescription:
-        "Die einzigartige Passivierungsschicht in PERC-Zellen minimiert die Rekombination von Elektronen, verringert den Leistungsverlust und verbessert die Gesamtwirkungsgrad der Zelle.",
+        "Die einzigartige Passivierungsschicht in PERC-Zellen minimiert die Rekombination von Elektronen, was zu geringeren Leistungsverlusten und einer insgesamt höheren Zelleneffizienz führt.",
       benefitPicture: "shield.svg",
     },
     {
       benefitTitle: "Umweltfreundlich",
       benefitDescription:
-        "Aufgrund ihrer hohen Effizienz benötigen PERC-Module weniger Platz, um die gleiche Menge an Energie wie traditionelle Module zu erzeugen. Dies trägt zu einer nachhaltigeren und umweltfreundlicheren Umgebung bei.",
+        "Dank ihrer hohen Effizienz benötigen PERC-Module weniger Platz, um die gleiche Menge an Elektrizität wie konventionelle Module zu erzeugen, was zu einer nachhaltigeren und umweltfreundlicheren Umgebung beiträgt.",
       benefitPicture: "leaf.svg",
     },
   ],
@@ -143,23 +142,23 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
     {
       benefitTitle: "Hohe Effizienz",
       benefitDescription:
-        "HJT-Solarzellen zeichnen sich durch ihre herausragende Effizienz aus. Sie bieten einen hervorragenden Temperaturkoeffizienten, der sie für Regionen mit hohen Umgebungstemperaturen geeignet macht. Dies bedeutet eine höhere Stromerzeugung, auch an heißen sonnigen Tagen.",
+        "HJT-Solarzellen zeichnen sich durch ihre herausragende Effizienz aus. Sie haben einen ausgezeichneten Temperaturkoeffizienten, der sie für Regionen mit hohen Umgebungstemperaturen geeignet macht. Dies bedeutet eine höhere Stromerzeugung selbst an heißen sonnigen Tagen.",
       benefitPicture: "power.svg",
     },
     {
-      benefitTitle: "Überragende Leistung bei schattigen Bedingungen",
+      benefitTitle: "Überlegene Leistung in schattigen Bereichen",
       benefitDescription:
-        "HJT-Solarmodule zeigen eine außergewöhnliche Leistung bei schattigen Bedingungen. Dank ihrer überragenden Zweiflächigkeit können sie Sonnenlicht von beiden Seiten absorbieren und so die Energieausbeute maximieren.",
+        "HJT-Solarmodule zeigen außergewöhnliche Leistungen unter schattigen Bedingungen. Ihre überlegene Bifokalität ermöglicht es ihnen, Sonnenlicht von beiden Seiten aufzunehmen und so die Energieausbeute zu maximieren.",
       benefitPicture: "performance.svg",
     },
     {
       benefitTitle: "Leistung bei schwachem Licht",
       benefitDescription:
-        "Im Gegensatz zu herkömmlichen PV-Zellen bleiben HJT-Module auch bei schwachem Licht optimal leistungsfähig. Ob es sich also um einen bewölkten Tag oder den Morgendämmerungs-/Abenddämmerungszeitpunkt handelt, Ihre Solarenergieerzeugung muss nicht pausieren.",
+        "Im Gegensatz zu konventionellen PV-Zellen erzielen HJT-Module auch bei schwachen Lichtverhältnissen weiterhin optimale Leistungen. Ob bedeckter Tag, Dämmerung oder Morgendämmerung - Ihre Solarstromerzeugung muss nicht pausieren.",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Langzeitstabilität",
+      benefitTitle: "Langfristige Stabilität",
       benefitDescription:
         "Die Verschmelzung von kristallinem und amorphem Silizium verleiht HJT-Modulen eine langfristige Stabilität und macht sie zu einer Investition, die den Test der Zeit besteht.",
       benefitPicture: "longTerm.svg",
@@ -167,39 +166,39 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
     {
       benefitTitle: "Umweltfreundlich",
       benefitDescription:
-        "HJT-Module benötigen für die Herstellung weniger Energie als herkömmliche Solarzellen, was sie zu einer umweltfreundlicheren Alternative macht.",
+        "HJT-Module benötigen weniger Energie zur Herstellung als konventionelle Solarzellen, was sie zu einer umweltfreundlicheren Alternative macht.",
       benefitPicture: "leaf.svg",
     },
   ],
   Meteor: [
     {
-      benefitTitle: "Herausragende Effizienz",
+      benefitTitle: "Hervorragende Effizienz",
       benefitDescription:
-        "TOPCon-Solarzellen zeichnen sich durch ihre überragende Effizienz aus. Sie sind darauf ausgelegt, Leistungsverluste zu minimieren, was zu einer hohen Umwandlungseffizienz führt, die herkömmliche Solarzellen übertrifft.",
+        "TOPCon-Solarzellen werden für ihre herausragende Effizienz anerkannt. Sie sind so konzipiert, dass Leistungsverluste minimiert werden, was zu hohen Umwandlungseffizienzen führt, die konventionelle Solarzellen übertreffen.",
       benefitPicture: "lightning.svg",
     },
     {
-      benefitTitle: "Hervorragende Leistung bei schwachem Licht",
+      benefitTitle: "Ausgezeichnete Leistung bei schwachem Licht",
       benefitDescription:
-        "Mit TOPCon-Modulen bedeutet ein bewölkter Tag nicht das Ende der Stromerzeugung. Sie funktionieren auch bei suboptimalen Lichtverhältnissen weiterhin effizient, was sie zu einer zuverlässigen Wahl bei wechselhaftem Wetter macht.",
+        "Mit TOPCon-Modulen bedeutet ein bewölkter Tag nicht das Ende der Stromerzeugung. Sie arbeiten auch in suboptimalen Lichtverhältnissen weiterhin effizient, was sie zu einer zuverlässigen Wahl bei wechselnden Wetterbedingungen macht.",
       benefitPicture: "brightness.svg",
     },
     {
       benefitTitle: "Robuster Temperaturkoeffizient",
       benefitDescription:
-        "TOPCon-Module bieten einen beeindruckenden Temperaturkoeffizienten und halten auch in Gebieten mit hohen Temperaturen eine hohe Effizienz aufrecht. Dadurch bleibt Ihre Solarenergieerzeugung selbst an schwülen Tagen optimal.",
+        "TOPCon-Module bieten einen beeindruckenden Temperaturkoeffizienten und behalten auch in Gebieten mit hohen Temperaturen eine hohe Effizienz bei. Dies bedeutet, dass Ihre Solarstromerzeugung auch an den heißesten Tagen optimal bleibt.",
       benefitPicture: "temperature.svg",
     },
     {
       benefitTitle: "Verbesserte Haltbarkeit",
       benefitDescription:
-        "Die passivierte Kontaktschicht in TOPCon-Modulen gewährleistet ein robustes Design und eine verbesserte Haltbarkeit. Diese Technologie zeichnet sich durch eine hohe Beständigkeit gegen Degradation aus und gewährleistet, dass Ihre Investition zukunftssicher ist.",
+        "Die passivierte Kontaktierungsschicht in TOPCon-Modulen gewährleistet ein robustes Design und eine verbesserte Haltbarkeit. Diese Technologie ist äußerst beständig gegen Degradation und sorgt dafür, dass Ihre Investition zukunftssicher ist.",
       benefitPicture: "shield2.svg",
     },
     {
       benefitTitle: "Umweltfreundlich",
       benefitDescription:
-        "Der Herstellungsprozess von TOPCon-Modulen ist energieeffizient und trägt im Vergleich zu herkömmlichen Solarzellen zu einem geringeren CO2-Fußabdruck bei.",
+        "Der Herstellungsprozess von TOPCon-Modulen ist energieeffizient und trägt zu einem kleineren CO2-Fußabdruck im Vergleich zu konventionellen Solarzellen bei.",
       benefitPicture: "leaf.svg",
     },
   ],
@@ -207,55 +206,55 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
     {
       benefitTitle: "Hohe Effizienz",
       benefitDescription:
-        "Mit einem überlegenen Temperaturkoeffizienten bieten PERC-Solarzellen eine verbesserte Stromerzeugung, auch in Regionen mit hohen Umgebungstemperaturen, was sie zu einer stromsparenden Lösung macht.",
+        "Mit einem überlegenen Temperaturkoeffizienten bieten TOPCon-Solarzellen eine verbesserte Stromerzeugung, selbst in Regionen mit hohen Umgebungstemperaturen, was sie zu einer energieeffizienten Lösung macht.",
       benefitPicture: "power.svg",
     },
     {
-      benefitTitle: "Ausgezeichnete Leistung bei diffusem Licht",
+      benefitTitle: "Hervorragende Leistung bei diffusen Lichtverhältnissen",
       benefitDescription:
-        "PERC-Solarmodule sind darauf ausgelegt, auch bei diffusen Lichtverhältnissen außergewöhnlich gut zu funktionieren und die Energieausbeute selbst an bewölkten Tagen oder bei niedrigem Sonnenstand zu maximieren.",
+        "TOPCon-Solarmodule sind darauf ausgelegt, auch bei diffusen Lichtverhältnissen außergewöhnlich gut zu funktionieren und die Energieausbeute selbst an bewölkten Tagen oder bei niedrigem Sonnenstand zu maximieren.",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Verringerte Licht-induzierte Degradation (LID)",
+      benefitTitle: "Niedrige Lichtinduzierte Degradation (LID)",
       benefitDescription:
-        "Im Gegensatz zu konventionellen PV-Zellen weisen PERC-Module eine deutlich geringere Licht-induzierte Degradation (LID) auf, was eine verlängerte Lebensdauer bei Spitzenleistung und bessere Erträge im Laufe der Zeit gewährleistet.",
+        "Im Gegensatz zu konventionellen PV-Zellen zeigen PERC-Module eine deutlich geringere LID, was eine längere Spitzenleistung und bessere Renditen im Laufe der Zeit gewährleistet.",
       benefitPicture: "lightning2.svg",
     },
     {
       benefitTitle: "Verringerte Leistungsverluste",
       benefitDescription:
-        "Die einzigartige Passivierungsschicht in PERC-Zellen minimiert die Rekombination von Elektronen, verringert den Leistungsverlust und verbessert die Gesamtwirkungsgrad der Zelle.",
+        "Die einzigartige Passivierungsschicht in TOPCon-Zellen minimiert die Rekombination von Elektronen, was zu geringeren Leistungsverlusten und einer insgesamt höheren Zelleneffizienz führt.",
       benefitPicture: "shield.svg",
     },
     {
       benefitTitle: "Umweltfreundlich",
       benefitDescription:
-        "Dank ihrer hohen Effizienz benötigen PERC-Module weniger Platz, um die gleiche Menge an Strom wie herkömmliche Module zu erzeugen. Dies trägt zu einer nachhaltigeren und grüneren Umwelt bei.",
+        "Aufgrund ihrer hohen Effizienz benötigen TOPCon-Module weniger Platz, um die gleiche Menge Strom zu erzeugen wie konventionelle Module, was zu einer nachhaltigeren und grüneren Umwelt beiträgt.",
       benefitPicture: "leaf.svg",
     },
   ],
   Neptune: [
     {
-      benefitTitle: "Doppelte Aufgabe, doppelter Gewinn",
+      benefitTitle: "Doppelfunktion, dreifacher Gewinn",
       benefitDescription:
-        "Das PVT-System ist eine Zwei-in-Eins-Lösung, das Sonnenlicht in Elektrizität umwandelt und gleichzeitig Wärme einfängt. Diese doppelte Wirkung maximiert den Energieertrag und fördert die Effizienz.",
+        "Das PVT-System ist eine Zwei-in-Eins-Lösung, die Sonnenlicht gleichzeitig in Strom umwandelt und Wärme einfängt. Diese doppelte Wirkung maximiert den Energieertrag und fördert die Effizienz.",
       benefitPicture: "double.svg",
     },
     {
-      benefitTitle: "Optimale Nutzung von Wärme",
+      benefitTitle: "Das Beste aus der Wärme herausholen",
       benefitDescription:
-        "Im Gegensatz zu herkömmlichen PV-Zellen, die an Effizienz verlieren, wenn sie sich erwärmen, nutzen PVT-Module diese Wärme produktiv und wandeln einen möglichen Nachteil in einen starken Vorteil um.",
+        "Im Gegensatz zu Standard-PV-Zellen, die an Effizienz verlieren, wenn sie sich erwärmen, nutzen PVT-Module diese Wärme produktiv und verwandeln einen potenziellen Nachteil in einen starken Vorteil.",
       benefitPicture: "heat.svg",
     },
     {
       benefitTitle: "Hohe Effizienz in verschiedenen Klimazonen",
       benefitDescription:
-        "Unabhängig davon, ob es sich um einen kalten Wintertag oder einen schwülheißen Sommermittag handelt, liefern PVT-Module dank ihrer einzigartigen Fähigkeit, sowohl Sonnen- als auch thermische Energie zu nutzen, eine gleichbleibende Leistung.",
+        "Ob an einem kühlen Frühlingstag oder an einem heißen Sommernachmittag, PVT-Module liefern dank ihrer einzigartigen Fähigkeit, sowohl Sonnen- als auch thermische Energie zu nutzen, eine gleichbleibende Leistung.",
       benefitPicture: "temperature.svg",
     },
     {
-      benefitTitle: "Langlebigkeit und Haltbarkeit",
+      benefitTitle: "Langlebigkeit und Robustheit",
       benefitDescription:
         "Der kühlende Effekt des thermischen Systems auf die PV-Zellen in einem PVT-Modul erhöht die Lebensdauer und Leistung des Systems, was es zu einer zuverlässigen und langfristigen Investition macht.",
       benefitPicture: "shield2.svg",
@@ -263,39 +262,39 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
     {
       benefitTitle: "Umweltbewusst",
       benefitDescription:
-        "Mit einem effizienten Design, das Abwärme reduziert und die Solarenergie vollständig nutzt, verkörpern PVT-Module die Prinzipien nachhaltiger und grüner Energie.",
+        "Mit einem effizienten Design, das Abwärme reduziert und Sonnenenergie vollständig nutzt, verkörpern PVT-Module die Prinzipien nachhaltiger und grüner Energie.",
       benefitPicture: "leaf.svg",
     },
   ],
   ShadeStar: [
     {
-      benefitTitle: "Beeindruckende Schattenresistenz",
+      benefitTitle: "Beeindruckende Schattenbeständigkeit",
       benefitDescription:
-        "Smart-Cell-Solarmodule bieten außergewöhnliche Widerstandsfähigkeit gegen teilweisen Schatten. Selbst wenn nur 5 % des Moduls beschattet sind, verhindern Smart-Cell-Module den Leistungsverlust, der bei anderen PV-Systemen häufig auftritt.",
+        "Smart Cell Solar Module bieten außergewöhnliche Beständigkeit gegen teilweisen Schatten. Selbst wenn nur 50% des Moduls beschattet sind, verhindern Smart Cell Module den Leistungsverlust, der bei anderen PV-Systemen üblich ist.",
       benefitPicture: "performance.svg",
     },
     {
       benefitTitle: "Überragende Energieausbeute",
       benefitDescription:
-        "Smart-Cell-Module zeichnen sich durch ihre Fähigkeit aus, auch unter anspruchsvollen Bedingungen eine hohe Leistung zu liefern. Sie können unter teilweisem Beschatten bis zu 80 % höhere Stromproduktion erreichen.",
+        "Smart Cell Module zeichnen sich durch ihre Fähigkeit aus, auch unter anspruchsvollen Bedingungen eine hohe Leistung zu erbringen. Sie können unter teilweisen Schattenbedingungen eine um bis zu 80% höhere Energieproduktion erreichen.",
       benefitPicture: "power.svg",
     },
     {
       benefitTitle: "Erhöhte Installationskapazität",
       benefitDescription:
-        "Dank der Smart-Cell-Technologie können Sie mehr Module auf begrenzten Dachflächen installieren. Dadurch erhalten Sie eine höhere Energieausbeute unter teilweisem Beschatten.",
+        "Die Smart Cell-Technologie ermöglicht es Ihnen, mehr Module auf begrenzter Dachfläche zu installieren. Dies bedeutet, dass Sie unter teilweisen Schattenbedingungen eine höhere Energieausbeute erzielen.",
       benefitPicture: "capacity.svg",
     },
     {
-      benefitTitle: "Niedrigerer Niveau-Energiekosten (LCOE)",
+      benefitTitle: "Niedrigere Niveauebene der Energiekosten (LCOE)",
       benefitDescription:
-        "Durch die Steigerung des Energieertrags pro Gesamtfläche maximieren Smart-Cell-Module nicht nur Ihre Energieproduktion, sondern reduzieren auch signifikant die Niveau-Energiekosten.",
+        "Durch die Erhöhung der Energieausbeute pro Gesamtfläche maximieren Smart Cell Module nicht nur Ihre Energieproduktion, sondern reduzieren auch signifikant die Niveauebene der Energiekosten.",
       benefitPicture: "costEnergy.svg",
     },
     {
-      benefitTitle: "Unübertroffene Haltbarkeit",
+      benefitTitle: "Unvergleichliche Haltbarkeit",
       benefitDescription:
-        "Durch umfangreiche Tests haben Smart-Cell-Module auch nach 10.000 Zyklen des negativen/positiven Bias-Schaltens keinen Leistungsverlust gezeigt.",
+        "Durch umfangreiche Tests haben Smart Cell Module gezeigt, dass sie selbst nach 10.000 Zyklen des Umschaltens von negativer/positiver Vorspannung keinen Leistungsverlust aufweisen.",
       benefitPicture: "shield2.svg",
     },
   ],
@@ -457,10 +456,10 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         type: "full",
         imageUrl: "url('/images/products/bentobox/point.png')",
         longDescription: {
-          title: `Maßgeschneidertes Material
-              und Leistung`,
+          title: `Maßgeschneidertes 
+            Material und Leistung`,
           description:
-            "Passen Sie Ihre Energielösung mit maßgeschneiderten Materialien und Leistungsoptionen an, um eine präzise Ausrichtung auf Ihre spezifischen Anforderungen und Präferenzen sicherzustellen.",
+            "Passen Sie Ihre Energielösung mit maßgeschneiderten Materialien und Leistungsoptionen an, um eine präzise Ausrichtung auf Ihre spezifischen Anforderungen und Präferenzen zu gewährleisten.",
         },
         gridArea: "e",
       },
@@ -468,7 +467,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         type: "full",
         imageUrl: "url('/images/products/bentobox/cells2.png')",
         shortDescription: `Fortgeschrittene Zellen:
-        PERC- und TOPCon-Technologie`,
+        PERC-Technologie`,
         gridArea: "f",
       },
     ],
@@ -490,20 +489,20 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         type: "half",
         imageUrl: "url('/images/products/bentobox/sizes2.png')",
         shortDescription: `Farbvielfalt:
-        Breite Auswahl an Optionen`,
+        Breites Spektrum an Auswahlmöglichkeiten`,
         gridArea: "c",
       },
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/nType.png')",
-        shortDescription: `n-Typ-Heterojunction:
+        shortDescription: `N-Typ-Heterojunction:
         Fortgeschrittene Solartechnologie`,
         gridArea: "d",
       },
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/snow.png')",
-        shortDescription: `Geeignetheit für extreme Klimabedingungen:
+        shortDescription: `Klimatauglichkeit:
         Entwickelt für raue Umgebungen`,
         gridArea: "e",
       },
@@ -511,7 +510,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         type: "half",
         imageUrl: "url('/images/products/bentobox/lowLight.png')",
         shortDescription: `Leistung bei schwachem Licht:
-        Hohe Leistung bei gedämpften Lichtverhältnissen`,
+        Hoher Ertrag bei gedämpften Bedingungen`,
         gridArea: "f",
       },
       {
@@ -583,7 +582,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       {
         type: "half",
         imageUrl: "url('/images/products/bentobox/flexibility.png')",
-        shortDescription: `Flexibilität der Anwendung:
+        shortDescription: `Anwendungsflexibilität:
         Ideal für verschiedene Installationen`,
         gridArea: "c",
       },
@@ -591,16 +590,16 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         type: "full",
         imageUrl: "url('/images/products/bentobox/reliability.png')",
         longDescription: {
-          title: `Langzeitzuverlässigkeit`,
+          title: `Langfristige Zuverlässigkeit:`,
           description:
-            "Verlassen Sie sich auf eine konsistente Leistung und lang anhaltende Haltbarkeit mit minimaler Degradation, die einen zuverlässigen Betrieb auf lange Sicht garantiert.",
+            "Verlassen Sie sich auf eine konstante Leistung und Haltbarkeit mit minimaler Degradation, die einen zuverlässigen Betrieb über die Zeit gewährleistet.",
         },
         gridArea: "b",
       },
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/edgeEfficiency1.png')",
-        shortDescription: `n-Typ TOPCon-Technologie:
+        shortDescription: `N-Typ TOPCon Technologie:
         Modernste Effizienz`,
         gridArea: "d",
       },
@@ -612,7 +611,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       {
         type: "quarter",
         imageUrl: "/images/products/bentobox/weather.svg",
-        shortDescription: "Ideal für verschiedene Wetterbedingungen",
+        shortDescription: "Ideal für unterschiedliche Wetterbedingungen",
         gridArea: "f",
       },
     ],
@@ -624,7 +623,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         type: "full",
         imageUrl: "url('/images/products/bentobox/neptuneFuture.png')",
         shortDescription: `Neptune: Die Zukunft 
-        der hybriden Solarenergie`,
+        der Hybrid-Solarenergie`,
         gridArea: "a",
       },
       {
@@ -639,18 +638,18 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         type: "full",
         imageUrl: "url('/images/products/bentobox/edgeEfficiency.png')",
         longDescription: {
-          title: `Etwa 70 %
+          title: `Etwa 70% 
           kombinierte Effizienz`,
           description:
-            "Entsperren Sie eine überlegene Effizienz mit unserem Produkt, das eine beeindruckende kombinierte Effizienz von etwa 70 % aufweist, was eine optimale Leistung und Energieerzeugung gewährleistet.",
+            "Entdecken Sie überlegene Effizienz mit unserem Produkt, das eine beeindruckende kombinierte Effizienz von etwa 70% bietet und so eine optimale Leistung und Energieausbeute gewährleistet.",
         },
         gridArea: "c",
       },
       {
         type: "half",
         imageUrl: "url('/images/products/bentobox/benefit.png')",
-        shortDescription: `Wirtschaftlicher Nutzen:
-        Langfristig niedrige LCOE`,
+        shortDescription: `Wirtschaftlicher Nutzen: 
+        Niedrige Langzeit-LCOE`,
         gridArea: "d",
       },
       {
@@ -661,7 +660,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       {
         type: "quarter",
         imageUrl: "/images/products/bentobox/weather.svg",
-        shortDescription: `Vielseitige Nutzung: Effektiv in verschiedenen Klimazonen`,
+        shortDescription: `Vielseitige Nutzung: Effektiv in mehreren Anwendungen`,
         gridArea: "f",
       },
     ],
@@ -672,17 +671,17 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/smartTech.png')",
-        shortDescription: `Intelligente Technologie:
-        Fortgeschrittene Schattenresistenz`,
+        shortDescription: `Smarte Technologie: 
+        Fortschrittliche Schattenresistenz`,
         gridArea: "a",
       },
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/resilence.png')",
         longDescription: {
-          title: `Schattentoleranz`,
+          title: `Schattenresistenz`,
           description:
-            "Stellen Sie auch bei schattigen Bedingungen eine kontinuierlich hohe Leistung sicher, dank dem robusten Design unseres Produkts, das eine gleichbleibende Leistung unabhängig vom Schatten gewährleistet.",
+            "Gewährleisten Sie auch bei beschatteten Bedingungen eine gleichbleibend hohe Leistung mit dem widerstandsfähigen Design unseres Produkts, das eine konstante Effizienz unabhängig vom Schatten sicherstellt.",
         },
         gridArea: "b",
       },
@@ -690,9 +689,9 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         type: "full",
         imageUrl: "url('/images/products/bentobox/rooftop.png')",
         longDescription: {
-          title: `Optimierung von Dachanlagen`,
+          title: `Dachoptimierung`,
           description:
-            "Maximieren Sie den Platz auf dem Dach mit dem optimierten Design unseres Produkts, das sich ideal für kompakte Bereiche eignet und eine effiziente Nutzung begrenzter Flächen sicherstellt.",
+            "Maximieren Sie den Platz auf Ihrem Dach mit dem optimierten Design unseres Produkts, das ideal für kompakte Bereiche ist und eine effiziente Nutzung begrenzten Raums gewährleistet.",
         },
         gridArea: "c",
       },
@@ -710,7 +709,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       {
         type: "quarter",
         imageUrl: "/images/products/bentobox/weather.svg",
-        shortDescription: `Wirtschaftliche Leistung:
+        shortDescription: `Wirtschaftliche Leistung: 
         Niedrige LCOE`,
         gridArea: "f",
       },

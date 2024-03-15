@@ -28,8 +28,8 @@ async function sendContactUsEmail(data: FieldValues) {
 
 const patnerTypeMapping = {
   partner: "installation",
-  investor: "partnerschaft",
-  installer: "investitionen",
+  investor: "partnership",
+  installer: "investition",
 };
 
 export default function ConsultForm() {

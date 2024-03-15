@@ -1,35 +1,34 @@
 export const ABOUT_MANUFACTURER = "AESOLAR ist ein deutscher Hersteller der TIER1 Kategorie.";
 export const ABOUT_ILLUMINATING =
-  "Ihre Reise in eine grünere Zukunft erleuchten";
+  "Ihr führender deutscher TIER1-Hersteller für eine grünere Zukunft";
 export const ABOUT_DOWNLOAD_PRESENTATION = `Firmenpräsentation`;
 export const ABOUT_WATCH_VIDEO = `Produktionsprozess`;
-export const ABOUT_BORN_IN_GERMANY = "In Deutschland geboren";
-export const ABOUT_BORN_STORY = `Im Herzen Bayerns, Deutschland, entstand eine bemerkenswerte Vision - die unermessliche Kraft der Sonne zu nutzen und in erneuerbare Energie umzuwandeln. 
-Diese visionäre Idee, genährt von dem Glauben, dass "Es Zeit ist, die Welt zu retten", inspirierte Dr. Alexander Maier und seine Brüder dazu, AESOLAR im Jahr 2003 zu gründen.`;
+export const ABOUT_BORN_IN_GERMANY = "Deutschland geboren";
+export const ABOUT_BORN_STORY = `Im Herzen Bayerns, Deutschland, wurde eine bemerkenswerte Vision geboren - die unerschöpfliche Kraft der Sonne zu nutzen und in erneuerbare Energie umzuwandeln.
+Diese visionäre Idee, genährt vom Glauben, dass "es Zeit ist, die Welt zu retten", inspirierte Dr. Alexander Maier und seine Brüder zur Gründung von AESOLAR im Jahr 2003.`;
 export const ABOUT_BORN_STORY_WORDS_TO_HIGHLIGHT = [
   "Im Herzen Bayerns",
   `"Es ist Zeit, die Welt zu retten."`,
 ];
-export const ABOUT_AS_A_TIER = "Als Unternehmen der TIER 1";
-export const ABOUT_AS_A_TIER_HIGHLIGHT = ["Unternehmen der TIER 1"];
+export const ABOUT_AS_A_TIER = "Unternehmen der TIER-1 Klasse";
+export const ABOUT_AS_A_TIER_HIGHLIGHT = ["TIER-1-Klasse"];
 export const ABOUT_SYNONYMOUS =
-  "Wir sind zu einem Synonym für Qualität, Nachhaltigkeit und technologischen Fortschritt in der erneuerbaren Energiewirtschaft geworden und setzen kontinuierlich Maßstäbe durch unsere mehrfach preisgekrönte Marke.";
+  "Wir stehen für Qualität, Nachhaltigkeit und technologischen Fortschritt in der erneuerbaren Energiewirtschaft und setzen mit unserer mehrfach preisgekrönten Marke weiterhin Standards.";
 export const ABOUT_SYNONYMOUS_HIGHLIGHT = [
   "Qualität, Nachhaltigkeit und technologischen Fortschritt",
-  "mehrfach preisgekrönte Marke",
+  "Marke weiterhin Standards",
 ];
 
 export const ABOUT_OUR_PORTFOLIO = "Unser Portfolio";
 export const ABOUT_OUR_GOES_BEYOND = "Geht über Standardprodukte hinaus";
 export const ABOUT_OUR_DESIGN =
-  "Wir entwerfen fortschrittliche Solarmodule und bahnbrechende Energiespeicherlösungen, die eine umweltbewusste Zukunft fördern und gleichzeitig Ihre Investitionsrendite maximieren.";
-export const ABOUT_OUR_DESIGN_HIGHLIGHT = ["Wir entwerfen fortschrittliche Solarmodule"];
+  "Wir entwickeln innovative Solarmodule und revolutionäre Energielösungen, die den Weg für eine umweltbewusste Zukunft ebnen und gleichzeitig Ihre Investitionsrendite maximieren.";
+export const ABOUT_OUR_DESIGN_HIGHLIGHT = ["Wir entwickeln innovative Solarmodule"];
 
 export const ABOUT_EXPLORE_HEADER = [
-  `Solare Lösungen
-für Jedermann`,
-  `AE Solar
-Qualitätsversprechen`,
+  `Solarlösungen
+für jeden`,
+  `Qualitätsversprechen`,
   `Deutsche 
 Ingenieurskunst`,
 ];
@@ -41,11 +40,11 @@ export const ABOUT_EXPLORE_FOOTER = [
   `Kraft 
 der Innovation`,
   `Unvergleichliche 
-Haltbarkeit trifft 
-auf elegantes Design
+Haltbarkeit, 
+elegantes Design
 `,
   `Unser Engagement 
-Ihnen gegenüber`,
+für Sie`,
 ];
 
 export const ABOUT_HISTORY = [
@@ -89,21 +88,21 @@ export const ABOUT_HISTORY = [
   {
     year: 2019,
     event:
-      "Finalist für den Photovoltaik-Preis von Inter Solar 2019;<br/> Die Gesamtkapazität der PV-Modulherstellung erreichte 1,5 GW pro Jahr, wobei eine zweite vollautomatisierte Fertigungslinie mit einer Kapazität von 500 MW pro Jahr errichtet wurde, die größte in Europa unter einem Dach.;<br/> AE Solar wurde Mitglied des United Nations Global Compact",
+      "Finalist des Inter Solar 2019 Photovoltaik-Awards;<br/> Jährliche Gesamtproduktionskapazität von 1,5 GW für PV-Module erreicht, wobei 500 MW/jährlich die zweite vollautomatisierte und größte in Europa unter einem Dach errichtete Produktionsstätte darstellen;<br/>AE Solar wurde Mitglied des United Nations Global Compact",
   },
   {
     year: 2020,
     event:
-      "Die Präsenz und das Vertriebsnetz von AE Solar erreichten mehr als 100 Länder.",
+      "Die Präsenz und das Vertriebsnetz von AE Solar erstrecken sich über mehr als 100 Länder.",
   },
   {
     year: 2021,
     event:
-      "Auszeichnung als Top-PV-Marke in Vietnam;<br/> Unternehmen des Jahres bei den Solar Future Awards 2021;<br/> AE Solar wurde zum Gewinner des UN Global Compact Partnership for Sustainability Award 2021 in der Kategorie 'Planet' ernannt",
+      "Top-PV-Markenpreis in Vietnam;<br/> Solar Future Awards 2021 Unternehmen des Jahres;<br/>AE Solar gewinnt UN Global Compact Partnership for Sustainability Award 2021 - in der Kategorie Planet",
   },
   {
     year: 2022,
     event:
-      "Top erneuerbare Energie;<br/> SMART TECHNOLOGY INNOVATION OF THE YEAR Auszeichnungen für Exzellenz in der Solarinnovation",
+      "Spitzenrenewable Energie;<br/> SMART TECHNOLOGY INNOVATION OF THE YEAR Solar Energy Innovation Excellence Awards",
   },
 ];

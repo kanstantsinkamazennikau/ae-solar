@@ -8,7 +8,7 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
     paragraphs: [
       {
         type: "text",
-        value: `In einer Welt, in der nachhaltige Energie nicht länger ein Luxus, sondern eine Notwendigkeit ist, steht AESOLAR als Hoffnungsschimmer. Mit unseren Wurzeln fest in der reichen Tradition deutscher Ingenieurskunst verankert, erhellen wir den Weg zu einer Zukunft, die von der Sonne angetrieben wird. Unser Mantra ist einfach, aber kraftvoll: Es ist Zeit, die Welt zu retten. Und diese Zeit ist jetzt.`,
+        value: `Bei AESOLAR glauben wir daran, nachhaltige Energie für jeden zugänglich zu machen. Unsere Grundlage beruht auf der Exzellenz der deutschen Ingenieurskunst, die uns antreibt, in der Solarenergie den Weg zu weisen. Unsere Reise begann im Jahr 2003, inspiriert von Dr. Alexander Maier und seinen visionären Brüdern, mit einer klaren Mission: die Sonnenenergie zu nutzen, um unsere Zukunft anzutreiben.`,
       },
       {
         type: "image",
@@ -27,11 +27,11 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
       },
       {
         type: "text",
-        value: `Seit unserer Gründung durch Dr. Alexander Maier und seine visionären Brüder im Jahr 2003 arbeitet AESOLAR unerschütterlich an dieser Mission. Als TIER1-Unternehmen sind wir bestrebt, hochmoderne, qualitativ hochwertige Photovoltaikmodule anzubieten, die die Maßstäbe für Stabilität, Langlebigkeit und Zuverlässigkeit setzen. Doch ruhen wir uns nie auf unseren Lorbeeren aus. Unser unermüdliches Streben nach Innovation treibt uns ständig dazu an, neue Höhen in der Technologie zu erreichen und unsere Industriekette zu erweitern.`,
+        value: `Als Hersteller der TIER-1-Klasse bieten wir hochwertige Photovoltaikmodule, die für ihre Stabilität, Langlebigkeit und Zuverlässigkeit bekannt sind. Innovation steht im Mittelpunkt unserer Arbeit. Wir überschreiten ständig die Grenzen der Technologie, um bessere Lösungen anzubieten und unseren Einfluss in der Solarenergiebranche auszudehnen.`,
       },
       {
         type: "text",
-        value: `Bei AESOLAR stellen wir nicht nur Solarmodule her; wir bringen Ihnen das Versprechen einer saubereren, helleren Zukunft. Unsere umfassenden Lösungen und effizienten Dienstleistungen sind darauf ausgerichtet, Ihre Investitionsrendite zu maximieren, die Nettostromgestehungskosten (LCOE) zu senken und Ihren CO2-Fußabdruck zu minimieren.`,
+        value: `Unser Ziel ist es, mehr als nur Solarmodule zu verkaufen. Wir möchten eine hellere, sauberere Zukunft durch umfassende Lösungen schaffen, die einen großen Mehrwert bieten, die Stromkosten senken und den Kohlenstoffausstoß reduzieren. Unser globales Netzwerk gewährleistet, dass unsere innovativen Produkte und Lösungen die vielfältigen Bedürfnisse unserer Kunden weltweit erfüllen und den Weg zu einer nachhaltigen Welt ebnen.`,
       },
       {
         type: "image",
@@ -50,11 +50,11 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
       },
       {
         type: "text",
-        value: `Durch unser globales Netzwerk bieten wir innovative Produkte und Lösungen, die für alle Kundenanwendungen geeignet sind. Unsere Projekte erstrecken sich über den gesamten Globus und sind ein Beweis für unser Engagement für erneuerbare Energien. Wir sind fest davon überzeugt, dass saubere Energie ebenso allgegenwärtig und leicht zugänglich sein sollte wie Sonnenlicht und den Weg zu einer nachhaltigen Zukunft erhellt.`,
+        value: `Mit jedem Sonnenaufgang sehen wir eine Möglichkeit, die Revolution der erneuerbaren Energien anzuführen. Schließen Sie sich uns bei AESOLAR in unserer Mission an, einen Unterschied zu machen. Jeder Schritt, den wir gemeinsam in Richtung Solarenergie unternehmen, bringt uns näher zu einer nachhaltigen Zukunft.`,
       },
       {
         type: "text",
-        value: `Jeder Sonnenaufgang bringt einen neuen Tag und neue Möglichkeiten mit sich. Bei AESOLAR erleben wir nicht nur den Beginn einer neuen Ära in der erneuerbaren Energie; wir führen sie an. Nutzen Sie die Kraft der Sonne mit uns und schließen Sie sich unserer Mission an, die Welt zu retten. Denn jeder Sonnenstrahl, den wir heute einfangen, bringt uns einen Schritt näher zu einer nachhaltigen Zukunft.`,
+        value: `AESOLAR - Gemeinsam können wir die Welt retten!`,
       },
     ],
   },
@@ -63,5 +63,5 @@ export const MANUFACTURER_DO_IT_TOGETHER =
   "Lass uns gemeinsam, Strahl für Strahl, tun.";
 export const MANUFACTURER_SAVE_THE_WORLD =
   "AESOLAR – Es ist Zeit, die Welt zu retten.";
-export const MANUFACTURER_WELCOME = "Willkommen bei AESolar.";
-export const MANUFACTURER_HARNESS = "Nutzen Sie die Sonne, stärken Sie die Welt.";
+export const MANUFACTURER_WELCOME = "Willkommen bei AESOLAR:";
+export const MANUFACTURER_HARNESS = "Die Sonne nutzen, die Welt stärken";

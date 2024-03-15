@@ -18,8 +18,8 @@ export const FORM_FIELDS_INPUT_TYPES = {
   textarea: "textarea",
 };
 
-export const HEADER_TIER1 = "Wir sind TIER1 Hersteller von ";
-export const HEADER_TIER1_QUALITY = "hochqualitativen Solarmodulen";
+export const HEADER_TIER1 = "Deutsche Ingenieurskunst Produktionsstätten in";
+export const HEADER_TIER1_QUALITY = "Europa und Asien";
 
 export const FORMS_FIELDS = {
   name: "name",
@@ -88,7 +88,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
   },
   {
     url: "/solutions",
-    text: "B2B Lösungen",
+    text: "B2B-Lösungen",
   },
 ];
 export const HEADER_CONTACT_US = "Kontaktieren Sie uns";
@@ -166,15 +166,15 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Comet.svg",
-      text: "Comet (HJT). Unterstreichen Sie die unvergleichliche Allwetterleistung und Spitzentechnologie von Comet, indem Sie eine Parallele zu der unaufhaltsamen Reise eines Kometen ziehen.",
+      text: "Comet (HJT). Betonen Sie die unübertroffene Allwetterleistung des Kometen und die modernste Technologie und ziehen Sie eine Parallele zur unerbittlichen Reise eines Kometen.",
     },
     advantages: [
       {
-        title: "n-Typ-Heteroübergang",
+        title: "N-Typ-Heteroübergang",
         description: "Fortgeschrittene Solartechnologie",
       },
       {
-        title: "Zuverlässigkeit",
+        title: "Hohe Zuverlässigkeit",
         description: "Außergewöhnlich geringe Degradation",
       },
       {
@@ -182,12 +182,16 @@ export const PRODUCT_INTRO_PANELS = {
         description: "Sehr niedriger Koeffizient",
       },
       {
-        title: "Leistung bei schwachem Licht",
-        description: "Hohe Leistung bei schwachen Lichtverhältnissen",
+        title: "Schlechte Lichtleistung",
+        description: "Hohe Leistung bei schwachem Licht",
       },
       {
-        title: "Extreme Klimatauglichkeit",
+        title: "Extrem wetterfest",
         description: "Entwickelt für raue Umgebungen",
+      },
+      {
+        title: "Abschlussstatement",
+        description: '"Comet: Führende Effizienz, egal bei welchem Wetter"',
       },
     ],
   },
@@ -199,29 +203,31 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Aurora.svg",
-      text: "Aurora (PERC). Neu gestaltet mit dem Thema Aurora Borealis. Erfinden Sie Aurora als Solarmodul neu, inspiriert von den dynamischen und lebendigen Farben des Nordlichts. Betonen Sie seine Vielseitigkeit und ästhetische Anziehungskraft, die die sich ständig verändernden Farben der Aurora widerspiegeln.",
+      text: "Aurora (PERC). Neugestaltet unter dem Thema der Nordlichter. Gestalten Sie Aurora neu als Solarpanel, inspiriert von den dynamischen und lebendigen Farben des Polarlichts. Betonen Sie seine Vielseitigkeit und ästhetische Anziehungskraft, die die ständig wechselnden Farben der Nordlichter widerspiegeln.",
     },
     advantages: [
       {
-        title: "Fortschrittliche Zellen",
-        description: "PERC- und Topcon-Technologie",
+        title: "Fortgeschrittene Zellen",
+        description: "PERC-Technologie",
       },
       {
-        title: "Größenvielfalt",
-        description: "kleine, mittlere, große Module",
+        title: "Verschiedene Größen",
+        description: "Kleine, mittlere, große Module",
       },
-      { title: "Designoptionen", description: "Mono/Bifacial, Farbauswahl" },
+      { 
+        title: "Designoption", 
+        description: "Mono-/bifacial, Auswahl an Farben" },
       {
         title: "Individuelle Funktionen",
         description: "Maßgeschneidertes Material und Leistung",
       },
       {
         title: "Klimaanpassungsfähigkeit",
-        description: "Geeignet für extreme Bedingungen",
+        description: "Entwickelt für extreme Bedingungen",
       },
       {
         title: "Abschlussstatement",
-        description: `"Aurora: Vielfältige und dynamische Solarlösungen"`,
+        description: `"Aurora: Dynamische Solarkomplettlösungen"`,
       },
     ],
   },
@@ -233,28 +239,32 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Meteor.svg",
-      text: "Meteor (TOPCon). Konzentrieren Sie sich auf die Fähigkeit des Meteor, auch bei schwachem Licht hell zu leuchten, genau wie ein Meteor, der über den Nachthimmel zieht.",
+      text: "Meteor (TOPCon). Fokus auf der Fähigkeit des Meteors, auch bei schwachem Licht hell zu leuchten, ganz wie ein Meteor, der über den Nachthimmel zieht.",
     },
     advantages: [
       {
         title: "TOPCon N-Typ",
-        description: "Technologie mit überragender Effizienz",
+        description: "Überlegene Effizienztechnologie",
       },
       {
-        title: "Umfassende Anpassungsmöglichkeiten",
+        title: "Breites Spektrum an Anpassungsmöglichkeiten",
         description: "Materialien, Leistung, Abmessungen",
       },
       {
         title: "Farbenvielfalt",
-        description: "Breites Spektrum an Auswahlmöglichkeiten",
+        description: "Große Auswahl",
       },
       {
         title: "Robuste Leistung",
         description: "Geringe Degradation, hohe Haltbarkeit",
       },
       {
-        title: "Klimavielseitigkeit",
-        description: "Ideal für unterschiedliche Wetterbedingungen",
+        title: "Klima-Vielseitigkeit",
+        description: "Ideal für wechselnde Wetterbedingungen",
+      },
+      {
+        title: "Abschlussstatement",
+        description: '"Meteor: Effizienz und Langlebigkeit im Einklang".',
       },
     ],
   },
@@ -309,11 +319,11 @@ export const PRODUCT_INTRO_PANELS = {
       },
       {
         title: "Hohe Effizienz",
-        description: "Etwa 70% kombinierte Effizienz",
+        description: "Ca. 70 % kombinierte Effizienz",
       },
       {
         title: "Wirtschaftlicher Nutzen",
-        description: "Langfristig niedrige LCOE",
+        description: "Niedrige Langzeit-LCOE",
       },
       {
         title: "Vielseitige Nutzung",
@@ -337,15 +347,15 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "ShadeStar.svg",
-      text: `"ShadeStar: Licht, wo Sie es brauchen" (Smart Cell). Konzentrieren Sie sich auf die Widerstandsfähigkeit von ShadeStar gegen teilweisen Schatten, vergleichbar mit einem Wächter im Kosmos`,
+      text: `"ShadeStar: Licht, wo Sie es brauchen" (Smart Cell) - Konzentrieren Sie sich auf die Widerstandsfähigkeit von ShadeStar gegen teilweisen Schatten, wie ein Beschützer im Kosmos.`,
     },
     advantages: [
       {
-        title: "Schattenresistenz",
-        description: "Hohe Leistung auch im Schatten",
+        title: "Schattenverträglichkeit",
+        description: "Hohe Leistung bei Schatten",
       },
       {
-        title: "Optimierung für Dächer",
+        title: "Dachoptimierung",
         description: "Ideal für begrenzten Platz",
       },
       {
@@ -373,8 +383,8 @@ export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "All Produkte";
 
 export const FEATURED_PRODUCTS_HIGH_QUALITY = "Hochwertig";
 
-export const TECH_INFO_THE_HIDDEN_LAYERS = "Die verborgenen Schichten";
-export const TECH_INFO_A_CLOSE_LOOK_AT = "Eine genaue Betrachtung von";
+export const TECH_INFO_THE_HIDDEN_LAYERS = "Verborgene Schichten";
+export const TECH_INFO_A_CLOSE_LOOK_AT = "Ein genauerer Blick";
 export const TECH_INFO_PANELS_DETAILS = [
   {
     title: "Photovoltaikzellen",
@@ -400,7 +410,7 @@ export const TECH_INFO_BENS = [
   {
     title: `Führende Solartechnologie`,
     description:
-      "AESOLAR, ein erstklassiger deutscher Hersteller von Solarmodulen, steht für Präzision und Zuverlässigkeit in der Technik. Wir sind an vorderster Front und nutzen fortschrittliche Technologie, um die Zukunft der Solarenergie zu gestalten. Unser Engagement für Innovation ebnet den Weg für spannende Entwicklungen in der Solartechnik.",
+      "AESOLAR, ein führender deutscher Hersteller von Solarmodulen, steht für Präzision und Zuverlässigkeit im Ingenieurwesen. Wir sind an der Spitze und nutzen fortschrittliche Technologie, um die Zukunft der Solarenergie zu gestalten. Unser Engagement für Innovation ebnet den Weg für spannende Entwicklungen in der Solartechnik.",
     image: "automation.svg",
     fullDescription: `Am 19. Februar 2024 veröffentlichte Bloomberg New Energy Finance (BNEF) den Ausblick auf den globalen PV-Markt für das 1. Quartal 2024. AESOLAR hat erneut seine Position in der Liste der Tier-1-Hersteller von PV-Modulen gesichert, und zwar zum 13. Mal in Folge seit dem 1. Quartal 2021. Als führende Solarmarke unterstreicht diese Anerkennung die gleichbleibende Qualität, die Glaubwürdigkeit der Marke und die hohe Bankfähigkeit von AESOLAR.
     Die Methodik von BNEF für Tier-1-PV-Modulhersteller ist streng und erfordert, dass die Hersteller in den letzten 2 Jahren Finanzierungen ohne Rückgriff von 6 verschiedenen kommerziellen Banken erhalten haben. Dieser Auswahlprozess zeigt die Bankfähigkeit der ausgewählten Marken und bietet einen zuverlässigen Referenzpunkt für den Markt.
@@ -409,27 +419,27 @@ export const TECH_INFO_BENS = [
     Darüber hinaus erhielt AESOLAR ein '*' in der Liste, was bedeutet, dass ihr Untersuchungsbericht von PV Evolution Labs (PVEL) eingesehen werden kann. Das PV-Modul der Aurora-Serie von AESOLAR hat die von PVEL durchgeführten Tests bestanden und war 2023 unter den "Best Performers". Dies ist das Ergebnis des kontinuierlichen Fokus von AESOLAR auf Forschung und Entwicklung, technologische Innovation sowie die Verbesserung der Produktionsprozesse und der Qualitätsmanagement.`,
   },
   {
-    title: "Den Aufbau einer grüneren Zukunft",
+    title: "Den Bau einer grüneren Zukunft vorantreiben",
     description:
-      "AESOLAR fertigt nicht nur Solarmodule; wir bauen eine nachhaltigere Zukunft auf. Durch die Kombination neuester Technologie mit hoher Qualität und unserer Hingabe zur Umwelt schaffen wir nicht nur Produkte - wir inspirieren eine Vision einer von erneuerbaren Energien angetriebenen Welt.",
+      "Bei AESOLAR geht es nicht nur darum, Solarpaneele herzustellen, sondern wir bauen an einer nachhaltigeren Zukunft. Durch die Kombination neuester Technologien mit hoher Qualität und unserem Engagement für die Umwelt schaffen wir nicht nur Produkte - wir inspirieren eine Vision einer Welt, die von erneuerbarer Energie angetrieben wird.",
     image: "manufacturer.png",
   },
   {
     title: "Qualitätsfertigung",
     description:
-      "Unsere High-Tech-Fabriken nutzen intelligente Automatisierung für präzise und effiziente Montage, um Fehler zu minimieren. Qualität ist bei AESOLAR entscheidend. Wir stellen sicher, dass jedes Solarmodul in Effizienz, Haltbarkeit und Leistung erstklassig ist. Unsere gründlichen Kontrollen bei jedem Schritt zeigen unsere Hingabe zur Qualität und machen unsere Kunden zufrieden.",
+      "Unsere hochmodernen Fabriken nutzen intelligente Automatisierung für präzise und effiziente Montage, um Fehler zu minimieren. Qualität steht bei AESOLAR an erster Stelle. Wir stellen sicher, dass jedes Solarpanel hinsichtlich Effizienz, Langlebigkeit und Leistung erstklassig ist. Unsere gründlichen Überprüfungen in jedem Stadium zeigen unser Engagement für Qualität und Kundenzufriedenheit.",
     image: "technologies.svg",
   },
   {
     title: "Neue Effizienzstandards setzen",
     description:
-      "Wir bei AESOLAR setzen uns dafür ein, die Messlatte in der Solarindustrie höher zu legen. Wir konzentrieren uns darauf, unsere Fertigung energieeffizienter zu gestalten, was Kosten senkt und unseren ökologischen Fußabdruck reduziert. Dies kommt auch unseren Kunden langfristig zugute. Und wir untermauern unser Qualitätsversprechen mit einer starken Produktgarantie.",
+      "Bei AESOLAR geht es darum, die Messlatte in der Solarindustrie höher zu legen. Wir konzentrieren uns darauf, unsere Fertigung energieeffizienter zu gestalten, was Kosten senkt und unseren ökologischen Fußabdruck verringert. Dies kommt langfristig unseren Kunden zugute. Und wir untermauern unser Qualitätsversprechen mit einer starken Produktgarantie.",
     image: "efficiency.svg",
   },
   {
-    title: "Engagement für Nachhaltigkeit",
+    title: "Verpflichtet zur Nachhaltigkeit",
     description:
-      "Nachhaltigkeit steht im Mittelpunkt unserer Aktivitäten bei AESOLAR. Wir versorgen unsere Einrichtungen mit unseren Solarmodulen und anderen grünen Energiequellen. Dieses Engagement spiegelt unseren Glauben an die saubere Energiebewegung wider. Wir achten auf die Lebenszyklen unserer Produkte, verwenden recycelbare Materialien und reduzieren den Energieverbrauch. Wir halten uns an strenge deutsche Standards für eine nachhaltige und verantwortungsvolle Produktion.",
+      "Nachhaltigkeit steht im Mittelpunkt unserer Arbeit bei AESOLAR. Wir versorgen unsere Einrichtungen mit unseren Solarmodulen und anderen grünen Energiequellen. Diese Verpflichtung spiegelt unseren Glauben an die saubere Energiebewegung wider. Wir achten auf den Lebenszyklus unserer Produkte, verwenden recycelbare Materialien und reduzieren den Energieverbrauch. Wir halten uns an strenge deutsche Standards für nachhaltige und verantwortungsbewusste Fertigung.",
     image: "materials.svg",
   },
 ];
@@ -461,13 +471,13 @@ export const REVIEWS_QUOTES_WITH_AUTHORS = [
 ];
 
 export const MAIN_PAGE_NEWS_INSIGHTS = "Nachrichten und Einblicke";
-export const MAIN_PAGE_COMPANY = "unseres Unternehmens ";
+export const MAIN_PAGE_COMPANY = "unserem Unternehmen";
 export const MAIN_PAGE_NEWS_READ_ALL = "Alle Nachrichten";
 
-export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installateur"];
-export const GET_IN_TOUCH_ELEVATE_GROWTH = "Gemeinsames Wachstum fördern";
-export const GET_IN_TOUCH_JOIN_US = "Schließen Sie sich ";
-export const GET_IN_TOUCH_OUR_VISION = " unserer Vision für Solarenergie an";
+export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installer"];
+export const GET_IN_TOUCH_ELEVATE_GROWTH = "Wachsen Sie gemeinsam mit uns";
+export const GET_IN_TOUCH_JOIN_US = "Treten Sie als ";
+export const GET_IN_TOUCH_OUR_VISION = " in unserer solaren Vision";
 export const GET_IN_TOUCH_BECOME_A = "Werden Sie ";
 
 export const FAQ_ACCORDION_DATA = [
@@ -514,7 +524,7 @@ export const FOOTER_LINKS_ARRAY = [
     links: [
       { title: "Unternehmen", link: "/company" },
       { title: "Hersteller", link: "/company/manufacturer" },
-      { title: "B2B Lösungen", link: "/solutions" },
+      { title: "B2B-Lösungen", link: "/solutions" },
       { title: "Kontakte", link: "/contacts" },
       { title: "Nachrichten", link: "/company/news" },
       { title: "FAQ", link: "/company/faq" },
@@ -1034,27 +1044,27 @@ export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
 export const SEQUENCE_ANIMATION_TEXT = [
   {
     title: "Vorderseite",
-    description: "Schützt das Panel vor äußeren Einflüssen.",
+    description: "schützt das Panel vor externen Elementen",
   },
   {
-    title: "Vorderseitenverkapselung",
-    description: "Schützt die Solarzellen, versiegelt das Panel.",
+    title: "Vordere Kapselung",
+    description: "schirmt Solarzellen ab, versiegelt das Panel",
   },
   {
     title: "Solarzellen",
-    description: "Wandelt Sonnenlicht in Strom um.",
+    description: "wandeln Sonnenlicht in Strom um",
   },
   {
-    title: "Rückseitenverkapselung",
-    description: "Bietet Isolierung und Schutz.",
+    title: "Hintere Kapselung",
+    description: "bietet Isolierung und Schutz",
   },
   {
-    title: "Rückseite",
-    description: "Schützt die Rückseite des Panels.",
+    title: "Rückseitenabdeckung",
+    description: "schützt die Rückseite des Panels",
   },
   {
     title: "Rahmen",
-    description: "Strukturelle Unterstützung für das Solarmodul.",
+    description: "strukturelle Unterstützung für Solarmodul",
   },
 ];
 
@@ -1966,7 +1976,7 @@ export const DROPDOWN_INPUT_VALUES = {
 
 export const PICKER_INPUT_VALUES = {
   [FORMS_FIELDS.budget]: ["$1…5k", "$5…10k", "$10…20k", "$20…50k", "> $50k"],
-  [FORMS_FIELDS.interest]: ["installation", "partnerschaft", "investitionen"],
+  [FORMS_FIELDS.interest]: ["installation", "partnership", "investition"],
 };
 
 export const ABOUT_SUSTAINABLE = `Nachhaltig
@@ -1981,11 +1991,11 @@ export const ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT = [
 ];
 
 export const ABOUT_BUSINESS = "Geschäftskarte";
-export const ABOUT_MAP = "Wo ist unsere Energie";
+export const ABOUT_MAP = "Wo unsere Stärke liegt";
 export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "germany.svg",
-    designation: "Hauptquartier",
+    designation: "Headquarter",
     location: ["Königsbrunn,", "Deutschland"],
   },
   {
