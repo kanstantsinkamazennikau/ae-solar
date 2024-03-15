@@ -18,8 +18,8 @@ export const FORM_FIELDS_INPUT_TYPES = {
   textarea: "textarea",
 };
 
-export const HEADER_TIER1 = "Deutsche Ingenieurskunst Produktionsstätten in";
-export const HEADER_TIER1_QUALITY = "Europa und Asien";
+export const HEADER_TIER1 = "Deutscher TIER1 Hersteller";
+export const HEADER_TIER1_QUALITY = "für hochwertige Solarmodule";
 
 export const FORMS_FIELDS = {
   name: "name",
