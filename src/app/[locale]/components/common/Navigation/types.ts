@@ -28,3 +28,7 @@ export interface ModelsProps {
   isLink?: boolean;
   isProductionIntroBlock?: boolean;
 }
+
+export interface NavigationProps {
+  host?: string[];
+}

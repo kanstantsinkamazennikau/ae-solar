@@ -8,6 +8,7 @@ import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import MobileNavigation from "@/app/[locale]/components/common/Navigation/MobileNavigation";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
+import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
@@ -20,7 +21,7 @@ import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
 
-export default function Navigation() {
+export default function Navigation({ host }: NavigationProps) {
   const { sticky } = useContext(StickyNavigationContext);
   const productsContext = useContext(ProductsContext);
   const mainPageVideoContext = useContext(MainPageVideoContext);
@@ -99,7 +100,7 @@ export default function Navigation() {
               ))}
             </ul>
             <div className="gap-3 min-[920px]:flex hidden">
-              {/* <ChangeLocale /> */}
+              <ChangeLocale host={host} />
               <Cart />
               <Button
                 onClick={handleClick}
@@ -112,7 +113,7 @@ export default function Navigation() {
             </div>
 
             {/* MOBILE NAV */}
-            <MobileNavigation />
+            <MobileNavigation host={host} />
           </nav>
         </BasicWidthContainer>
       </div>

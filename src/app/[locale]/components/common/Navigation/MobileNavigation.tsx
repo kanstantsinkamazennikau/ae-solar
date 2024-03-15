@@ -3,6 +3,7 @@
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
+import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import {
   FOOTER_CONTACT_INFO,
   HEADER_CONTACT_US,
@@ -14,7 +15,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function MobileNavigation() {
+export default function MobileNavigation({ host }: NavigationProps) {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
   const params = useParams();
   const router = useRouter();
@@ -99,7 +100,7 @@ export default function MobileNavigation() {
           ))}
         </ul>
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
-        {/* <ChangeLocale mobileNavigation /> */}
+        <ChangeLocale mobileNavigation host={host} />
         {/* <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" /> */}
         <Link
           href={`/${params?.locale}/consult`}
