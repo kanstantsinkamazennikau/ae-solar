@@ -144,9 +144,9 @@ export const PRODUCT_INTRO_THE_NEXT_LEVEL_OF = "The Next Level of";
 export const PRODUCT_INTRO_MODULES = "Modules";
 export const PRODUCT_INTRO_HIGH_QUALITY_SP = "High-Quality Solar Panels";
 export const PRODUCT_INTRO_PANELS_MAPPING = {
-  power: "Max. Power (up to)",
-  efficiency: "Max. Effienciency (up to)",
-  voltage: "Max. System Voltage",
+  power: "Power (up to)",
+  efficiency: "Effienciency (up to)",
+  voltage: "System Voltage",
 };
 export const PRODUCT_INTRO_PANELS_IMAGES = [
   "Aurora",
@@ -160,9 +160,9 @@ export const PRODUCT_INTRO_DETAILED_INFO = "Detailed Info";
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
     stats: {
-      power: "200W",
-      efficiency: "19.22%",
-      voltage: "1000",
+      power: "700W",
+      efficiency: "22.56%",
+      voltage: "1500",
     },
     info: {
       icon: "Comet.svg",
@@ -194,8 +194,8 @@ export const PRODUCT_INTRO_PANELS = {
   },
   Aurora: {
     stats: {
-      power: "505W",
-      efficiency: "22.47%",
+      power: "660W",
+      efficiency: "21.27%",
       voltage: "1500",
     },
     info: {
@@ -228,8 +228,8 @@ export const PRODUCT_INTRO_PANELS = {
   },
   Meteor: {
     stats: {
-      power: "580W",
-      efficiency: "22.47%",
+      power: "700W",
+      efficiency: "22.57%",
       voltage: "1500",
     },
     info: {
@@ -294,7 +294,7 @@ export const PRODUCT_INTRO_PANELS = {
   Neptune: {
     stats: {
       power: "380W",
-      efficiency: "20.86%",
+      efficiency: "75%",
       voltage: "1500",
     },
     info: {
@@ -330,9 +330,9 @@ export const PRODUCT_INTRO_PANELS = {
   },
   ShadeStar: {
     stats: {
-      power: "200W",
-      efficiency: "19.22%",
-      voltage: "1000",
+      power: "410W",
+      efficiency: "21.03%",
+      voltage: "1500",
     },
     info: {
       icon: "ShadeStar.svg",
