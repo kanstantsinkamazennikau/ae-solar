@@ -30,9 +30,8 @@ export const PRODUCT_PANEL_TITLES = {
   Comet:
     "Die Kraft der Sonne nutzen: Heterojunction-Technologie (HJT) für fortschrittliche Solarmodule",
   Meteor:
-    "Bei GreenSolar widmen wir uns der Förderung einer nachhaltigen Zukunft. Unsere TOPCon-Solarmodule symbolisieren unser Engagement für bahnbrechende Technologie, außergewöhnliche Qualität und das Versprechen einer saubereren, helleren Welt. Schließen Sie sich uns in dieser Solarevolution an, in der TOPCon die Kraft der Sonne mit unerreichter Effizienz nutzt. Wir laden Sie ein, Teil dieser Solarevolution zu sein, indem Sie die Kraft der Sonne auf effizienteste Weise mit PERC nutzen.",
-  Terra:
-    "Die Kraft der Sonne nutzen: Solare Lösungen für alle",
+    "Entfesseln Sie das Potenzial der Sonne: Tunnel Oxide Passivated Contact (TOPCon) Technologie für Hochleistungs-Solarmodule",
+  Terra: "Die Kraft der Sonne nutzen: Solare Lösungen für alle",
   Neptune:
     "Maximierung der Effizienz von Solarenergie: Nutzung der Photovoltaik-Thermal (PVT) Hybrid-Technologie für verbesserte Solarmodule",
   ShadeStar:
