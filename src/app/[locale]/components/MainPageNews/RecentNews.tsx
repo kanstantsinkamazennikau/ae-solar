@@ -88,7 +88,7 @@ export default async function RecentNews() {
               />
             )
           )}
-          <Link href="company/news" className="mt-10 mx-auto">
+          <Link href="company/news" className="mt-10 mx-auto max-md:mb-10">
             <Button style="outline" showArrow>
               <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">
                 {MAIN_PAGE_NEWS_READ_ALL}

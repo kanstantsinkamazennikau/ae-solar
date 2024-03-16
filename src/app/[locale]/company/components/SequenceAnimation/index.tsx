@@ -167,7 +167,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
           externalStyle="z-10"
         />
         <div className="flex flex-col items-center" id="canvas">
-          <div className="flex items-center lg:-mt-[56px]">
+          <div className="flex items-center lg:-mt-[56px] w-full">
             <div className="flex gap-5 max-w-[33%] relative">
               <div className="sequenceAnimationDivider !w-[1px] basis-[1px] shrink-0" />
               <div className="py-20">
@@ -253,7 +253,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
             </div>
 
             <canvas
-              className="object-contain max-w-[66%] relative max-[510px]:-right-1/3 max-[510px]:scale-150"
+              className="object-contain w-[66%] relative max-[510px]:-right-1/3 max-[510px]:scale-150"
               ref={canvasRef}
               width={800}
               height={600}
