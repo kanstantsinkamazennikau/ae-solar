@@ -20,7 +20,7 @@ export default function NavLink({
 }: NavLinkProps) {
   const path = usePathname();
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "navigation");
+  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <li className="group min-[920px]:flex justify-center relative">

@@ -17,6 +17,9 @@ import {
   TECH_INFO_THE_HIDDEN_LAYERS,
 } from "@/app/[locale]/utils/constants";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useParams } from "next/navigation";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 
 const scrollTriggerPositionFromResolution = (
   isDesktop: boolean,
@@ -35,6 +38,8 @@ const frameIndex = { frame: 0 };
 const numFrames = 120;
 
 export default function SequenceAnimation({ width = 1158, height = 600 }) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [activeStepIndex, setActiveStepIndex] = useState(0);
@@ -161,8 +166,8 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
     >
       <BasicWidthContainer styles="max-md:!px-0">
         <TwoTierHeading
-          tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}
-          tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
+          tierOneHeading={t("The Hidden Layers")}
+          tierTwoHeading={t("A Closer Look at")}
           align="right"
           externalStyle="z-10"
         />
@@ -230,7 +235,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                             //   });
                             // }}
                           >
-                            {title}
+                            {t(title)}
                           </div>
                         </div>
                         <div
@@ -243,7 +248,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                             text-dark-gray-900
                           `}
                         >
-                          {description}
+                          {t(description)}
                         </div>
                       </div>
                     );

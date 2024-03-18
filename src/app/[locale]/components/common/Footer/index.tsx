@@ -9,6 +9,8 @@ import Social from "@/app/[locale]/components/common/Footer/Social";
 import { FooterFormFields } from "@/app/[locale]/components/common/Footer/types";
 import Input from "@/app/[locale]/components/common/Input";
 import Logo from "@/app/[locale]/components/common/Logo";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   FOOTER_COPYRIGHT,
   FOOTER_GERMAN_BRAND,
@@ -23,7 +25,7 @@ import {
 } from "@/app/[locale]/utils/constants";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { useEffect } from "react";
 import {
   FieldValues,
@@ -31,9 +33,13 @@ import {
   SubmitHandler,
   useForm,
 } from "react-hook-form";
+import { Trans } from "react-i18next";
 
 export default function Footer() {
   const pathname = usePathname();
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   const inputsRules: { [key in keyof FooterFormFields]: RegisterOptions } = {
     email: {
       required: "Email is required",
@@ -104,16 +110,25 @@ export default function Footer() {
               <div className="flex flex-col w-fit">
                 <Logo />
                 <p className="text-base-red text-[10px] text-right">
-                  {FOOTER_SAVE_THE_WORLD}
+                  {t("Save the World")}
                 </p>
               </div>
-              <div>
-                {styleMatchingText(
-                  FOOTER_GERMAN_BRAND,
-                  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-                  "text-sm font-normal leading-[130%] font-walsheim text-[#747474]",
-                  "text-dark-gray-900 font-bold"
-                )}
+              <div
+                className="
+                  text-sm
+                  font-normal
+                  leading-[130%]
+                  font-walsheim
+                  text-[#747474]
+                "
+              >
+                <Trans
+                  components={{
+                    bold: <span className="text-dark-gray-900 font-bold" />,
+                  }}
+                >
+                  {t("German Brand")}
+                </Trans>
               </div>
               <div className="min-[500px]:flex gap-8 flex-col hidden">
                 <ContactInfo />
@@ -121,7 +136,7 @@ export default function Footer() {
               </div>
             </div>
             {/* LINKS */}
-            <div className="min-[500px]:justify-between min-w-0 lg:min-w-[720px] grid min-[500px]:grid-cols-4 grid-cols-1 w-full">
+            <div className="min-[500px]:justify-between min-w-0 lg:min-w-[720px] grid min-[500px]:grid-cols-4 grid-cols-1 w-full max-w-[900px] gap-[10px]">
               {FOOTER_LINKS_ARRAY.map(({ category, links }) => (
                 <FooterCategory
                   key={category.title}
@@ -192,8 +207,8 @@ export default function Footer() {
           <div className="relative z-10">
             <hr className="bg-dark-gray-800 h-[1px] border-none mb-3" />
             <div className="flex justify-between text-dark-gray-800 mb-5 text-[10px] min-[550px]:flex-row flex-col">
-              <div>{FOOTER_COPYRIGHT}</div>
-              <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row max-[550px]:gap-4">
+              <div>{t("Copyright")}</div>
+              <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row max-[550px]:gap-x-4 flex-wrap">
                 {POLICY_LINKS.map(({ text, link }) => (
                   <PolicyLink key={text} link={link} text={text} />
                 ))}

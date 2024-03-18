@@ -21,7 +21,7 @@ export default function MobileNavigation() {
 
   const { t } = useClientTranslation(
     params?.locale as LocaleTypes,
-    "navigation"
+    "translation"
   );
 
   const onLinkClick = () => {

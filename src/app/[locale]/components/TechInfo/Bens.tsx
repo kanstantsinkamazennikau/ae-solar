@@ -1,17 +1,22 @@
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import Ben from "@/app/[locale]/components/TechInfo/Ben";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import {
   TECH_INFO_BENS,
   TECH_INFO_BEST_AT_THIS,
   TECH_INFO_WHY_WE_ARE,
 } from "@/app/[locale]/utils/constants";
+import getLocale from "@/app/[locale]/utils/getLocale";
 
-export default function Bens() {
+export default async function Bens() {
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
+
   return (
     <>
       <TwoTierHeading
-        tierOneHeading={TECH_INFO_WHY_WE_ARE}
-        tierTwoHeading={TECH_INFO_BEST_AT_THIS}
+        tierOneHeading={t("Why We are")}
+        tierTwoHeading={t("Best at This")}
         align="left"
       />
       <div

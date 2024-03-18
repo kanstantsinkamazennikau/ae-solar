@@ -17,7 +17,7 @@ export default function FlagsList({
   mobileNavigation,
 }: FlagsListProps) {
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "navigation");
+  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <>

@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useParams } from "next/navigation";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 
 export default function StatWithAnimationCounter({
   stat,
@@ -11,6 +14,8 @@ export default function StatWithAnimationCounter({
   sign,
   index,
 }: StatWithAnimationCounterProps) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const [count, setCount] = useState(initialValue);
   const isChangeLayoutStructure = index === 2;
 
@@ -52,7 +57,7 @@ export default function StatWithAnimationCounter({
             {count}
           </p>
           <p className="[font-size:_clamp(10px,2vw,22px)] text-dark-gray-800 md:whitespace-nowrap whitespace-normal">
-            {details}
+            {t(details)}
           </p>
         </div>
       </div>

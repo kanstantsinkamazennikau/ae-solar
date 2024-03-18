@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 
 const getLocale = () => {
   const headersList = headers();
-  const locale = headersList.get("x-url")?.split("/")[3] as LocaleTypes;
+  const locale = headersList.get("x-url")?.split("/")[1] as LocaleTypes;
   return locale;
 };
 

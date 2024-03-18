@@ -3,6 +3,8 @@
 import { GetInTuchProps } from "@/app/[locale]/components/GetInTouch/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   GET_IN_TOUCH_BECOME_A,
   GET_IN_TOUCH_CLIENT_TYPE,
@@ -10,7 +12,7 @@ import {
   GET_IN_TOUCH_JOIN_US,
   GET_IN_TOUCH_OUR_VISION,
 } from "@/app/[locale]/utils/constants";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const matchPartnerTypeWithArticle = {
@@ -29,6 +31,9 @@ export default function GetInTouch({
   bgContainer,
   contentContainer,
 }: GetInTuchProps) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   const [clientType, setClientType] =
     useState<keyof typeof matchPartnerTypeWithArticle>("partner");
   const router = useRouter();
@@ -147,10 +152,10 @@ export default function GetInTouch({
                   }
                 >
                   <span className="[font-size:_clamp(10px,2vw,24px)] leading-[0.9] capitalize">
-                    {type}
+                    {t(type)}
                   </span>
                 </button>
-                <div className="w-1 h-5 bg-base-red"></div>
+                <div className="w-1 h-5 bg-base-red" />
               </div>
             ))}
           </div>
@@ -161,17 +166,17 @@ export default function GetInTouch({
             <div className="flex flex-col xl:gap-[40px] lg:gap-[30px] md:gap-[20px] gap-[16px] items-center text-center self-stretch z-10">
               <>
                 <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
-                  {GET_IN_TOUCH_ELEVATE_GROWTH}
+                  {t("Fueling growth together")}
                 </div>
                 <div className="[font-size:_clamp(26px,5vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1100px] leading-[120%] overflow-hidden">
-                  <span>{GET_IN_TOUCH_JOIN_US}</span>
+                  <span>{t("Become")}</span>
                   <span
                     className="relative animate-partnerTransition transition-all"
                     key={clientType}
                   >
-                    {matchPartnerTypeWithArticle[clientType]}
+                    {t(clientType + "WithArticle")}
                   </span>
-                  <p>{GET_IN_TOUCH_OUR_VISION}</p>
+                  <p>{t("In our solar vision")}</p>
                 </div>
               </>
             </div>
@@ -189,7 +194,7 @@ export default function GetInTouch({
           >
             <span className="overflow-hidden">
               <span className="[font-size:_clamp(12px,1.5vw,16px)]">
-                {GET_IN_TOUCH_BECOME_A}
+                {t("Become")}
               </span>
               <span
                 className={`
@@ -198,7 +203,7 @@ export default function GetInTouch({
                   ${children ? "animate-partnerTransition" : ""}`}
                 key={clientType}
               >
-                {matchPartnerTypeWithArticle[clientType]}
+                {t(clientType + "WithArticle")}
               </span>
             </span>
           </Button>

@@ -166,29 +166,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Comet.svg",
-      text: "Comet (HJT). Highlight Comet's unparalleled all-weather performance and cutting-edge technology and draw a parallel with the relentless journey of a comet.",
+      text: "CometDescription",
     },
     advantages: [
       {
-        title: "N-Type heterojunction",
-        description: "Advanced solar technology",
+        title: "CometAdvantage1",
+        description: "CometAdvantageDescription1",
       },
       {
-        title: "High reliability",
-        description: "Exceptionally low degradation",
+        title: "CometAdvantage2",
+        description: "CometAdvantageDescription2",
       },
-      { title: "Temperature Stability", description: "Very low coefficient" },
+      { title: "CometAdvantage3", description: "CometAdvantageDescription3" },
       {
-        title: "Low light performance",
-        description: "High performance in low light",
-      },
-      {
-        title: "Extreme climate suitability",
-        description: "Designed for harsh environments",
+        title: "CometAdvantage4",
+        description: "CometAdvantageDescription4",
       },
       {
-        title: "Final statement",
-        description: `"Comet: Leading efficiency, whatever the weather"`,
+        title: "CometAdvantage5",
+        description: "CometAdvantageDescription5",
+      },
+      {
+        title: "CometAdvantage6",
+        description: "CometAdvantageDescription6",
       },
     ],
   },
@@ -200,29 +200,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Aurora.svg",
-      text: "Aurora (PERC). Redesigned with the theme of the Aurora Borealis. Reinvent Aurora as a solar panel inspired by the dynamic and vibrant colors of the Northern Lights. Emphasizes its versatility and aesthetic appeal, reflecting the ever-changing colors of the Northern Lights",
+      text: "AuroraDescription",
     },
     advantages: [
-      { title: "Advanced cells", description: "PERC technology" },
       {
-        title: "Variety of sizes",
-        description: "Small, medium, large modules",
+        title: "AuroraAdvantage1",
+        description: "AuroraAdvantageDescription1",
       },
       {
-        title: "Design option",
-        description: "Mono/Bifacial, choice of colors",
+        title: "AuroraAdvantage2",
+        description: "AuroraAdvantageDescription2",
+      },
+      { title: "AuroraAdvantage3", description: "AuroraAdvantageDescription3" },
+      {
+        title: "AuroraAdvantage4",
+        description: "AuroraAdvantageDescription4",
       },
       {
-        title: "Custom features",
-        description: "Tailored material and performance",
+        title: "AuroraAdvantage5",
+        description: "AuroraAdvantageDescription5",
       },
       {
-        title: "Climate adaptability",
-        description: "Designed for extreme conditions",
-      },
-      {
-        title: "Final statement",
-        description: `"Aurora: Diverse and dynamic solar solutions"`,
+        title: "AuroraAdvantage6",
+        description: "AuroraAdvantageDescription6",
       },
     ],
   },
@@ -234,26 +234,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Meteor.svg",
-      text: "Meteor (TOPCon). Focus on Meteor's ability to shine brightly in low light conditions, just like a meteor streaking across the night sky",
+      text: "MeteorDescription",
     },
     advantages: [
-      { title: "TOPCon N-Type", description: "Superior efficiency technology" },
       {
-        title: "Wide range of customization",
-        description: "Materials, performance, dimensions",
-      },
-      { title: "Color diversity", description: "Wide choice" },
-      {
-        title: "Resilient performance",
-        description: "Low degradation, high durability",
+        title: "MeteorAdvantage1",
+        description: "MeteorAdvantageDescription1",
       },
       {
-        title: "Climate versatility",
-        description: "Ideal for changing weather conditions",
+        title: "MeteorAdvantage2",
+        description: "MeteorAdvantageDescription2",
+      },
+      { title: "MeteorAdvantage3", description: "MeteorAdvantageDescription3" },
+      {
+        title: "MeteorAdvantage4",
+        description: "MeteorAdvantageDescription4",
       },
       {
-        title: "Final statement",
-        description: `"Meteor: efficiency and durability in harmony"`,
+        title: "MeteorAdvantage5",
+        description: "MeteorAdvantageDescription5",
+      },
+      {
+        title: "MeteorAdvantage6",
+        description: "MeteorAdvantageDescription6",
       },
     ],
   },
@@ -265,29 +268,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Terra.svg",
-      text: "Versatile and robust solar power. Terra (Agrivoltaic, Noise Barrier, Solar Fence and Utility Applications) showcases Terra's multifunctional applications, emphasizing its role in harmonizing with the needs of the earth.",
+      text: "TerraDescription",
     },
     advantages: [
       {
-        title: "N-Type TOPCon Technology",
-        description: "State of the art efficiency",
+        title: "TerraAdvantage1",
+        description: "TerraAdvantageDescription1",
       },
       {
-        title: "Application flexibility",
-        description: "Ideal for different installations",
+        title: "TerraAdvantage2",
+        description: "TerraAdvantageDescription2",
+      },
+      { title: "TerraAdvantage3", description: "TerraAdvantageDescription3" },
+      {
+        title: "TerraAdvantage4",
+        description: "TerraAdvantageDescription4",
       },
       {
-        title: "Design strength",
-        description: "High resistance to wind and snow",
-      },
-      { title: "Long term eeliability", description: "Minimal degradation" },
-      {
-        title: "Bifacial efficiency",
-        description: "Optimum energy capture",
+        title: "TerraAdvantage5",
+        description: "TerraAdvantageDescription5",
       },
       {
-        title: "Final statement",
-        description: `"Terra: Adaptable energy for any environment"`,
+        title: "TerraAdvantage6",
+        description: "TerraAdvantageDescription6",
       },
     ],
   },
@@ -299,32 +302,32 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Neptune.svg",
-      text: "Neptune: Double power, maximum efficiency",
+      text: "NeptuneDescription",
     },
     advantages: [
       {
-        title: "Hybrid energy",
-        description: "Electricity and heat generation",
+        title: "NeptuneAdvantage1",
+        description: "NeptuneAdvantageDescription1",
       },
       {
-        title: "High efficiency",
-        description: "Around 70% combined efficiency",
+        title: "NeptuneAdvantage2",
+        description: "NeptuneAdvantageDescription2",
       },
       {
-        title: "Economic benefit",
-        description: "Low long-term LCOE",
+        title: "NeptuneAdvantage3",
+        description: "NeptuneAdvantageDescription3",
       },
       {
-        title: "Versatile use",
-        description: "Effective in different climates",
+        title: "NeptuneAdvantage4",
+        description: "NeptuneAdvantageDescription4",
       },
       {
-        title: "Sustainable design",
-        description: "Eco-conscious technology",
+        title: "NeptuneAdvantage5",
+        description: "NeptuneAdvantageDescription5",
       },
       {
-        title: "Final statement",
-        description: `"Neptune: The future of hybrid solar power"`,
+        title: "NeptuneAdvantage6",
+        description: "NeptuneAdvantageDescription6",
       },
     ],
   },
@@ -336,32 +339,32 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "ShadeStar.svg",
-      text: `"ShadeStar: Light where you need it" (Smart Cell) Focus on ShadeStar's resistance to partial shading, like a guardian in the cosmos`,
+      text: `ShadeStarDescription`,
     },
     advantages: [
       {
-        title: "Shade resilience",
-        description: "Maintains high output in shade",
+        title: "ShadeStarAdvantage1",
+        description: "ShadeStarAdvantageDescription1",
       },
       {
-        title: "Rooftop optimization",
-        description: "Ideal for limited space",
+        title: "ShadeStarAdvantage2",
+        description: "ShadeStarAdvantageDescription2",
       },
       {
-        title: "Economic performance",
-        description: "Low LCOE",
+        title: "ShadeStarAdvantage3",
+        description: "ShadeStarAdvantageDescription3",
       },
       {
-        title: "Intelligent technology",
-        description: "Advanced shade resistance",
+        title: "ShadeStarAdvantage4",
+        description: "ShadeStarAdvantageDescription4",
       },
       {
-        title: "Sustainable solution",
-        description: "Environmentally friendly design",
+        title: "ShadeStarAdvantage5",
+        description: "ShadeStarAdvantageDescription5",
       },
       {
-        title: "Final statement",
-        description: `"ShadeStar: Smart Energy for Every Roof"`,
+        title: "ShadeStarAdvantage6",
+        description: "ShadeStarAdvantageDescription6",
       },
     ],
   },
@@ -397,33 +400,28 @@ export const TECH_INFO_BEST_AT_THIS = "Best at This";
 export const TECH_INFO_CLOSE = "Close";
 export const TECH_INFO_BENS = [
   {
-    title: `Leading Solar Technology`,
-    description:
-      "AESOLAR, a leading German solar module manufacturer, stands for precision and reliability in engineering. We're at the forefront, using advanced technology to shape the future of solar energy. Our commitment to innovation paves the way for exciting developments in solar power.",
+    title: "BensTitle1",
+    description: "BensDescription1",
     image: "automation.svg",
   },
   {
-    title: "Building a Greener Future",
-    description:
-      "AESOLAR doesn't just make solar panels, we're building a more sustainable future. By combining the latest technology with high quality and our commitment to the environment, we're not just creating products - we're inspiring a vision of a world powered by renewable energy.",
+    title: "BensTitle2",
+    description: "BensDescription2",
     image: "manufacturer.png",
   },
   {
-    title: "Quality Manufacturing",
-    description:
-      "Our high-tech factories use intelligent automation for precise and efficient assembly, minimizing errors. Quality is key at AESOLAR. We ensure that every solar panel is first class in terms of efficiency, durability and performance. Our thorough checks at every stage demonstrate our commitment to quality and customer satisfaction.",
+    title: "BensTitle3",
+    description: "BensDescription3",
     image: "technologies.svg",
   },
   {
-    title: "Setting New Efficiency Standards",
-    description:
-      "At AESOLAR, we are all about raising the bar in the solar industry. We focus on making our manufacturing more energy efficient, which reduces costs and our environmental footprint. This helps our customers in the long run. And we back up our commitment to quality with a strong product warranty.",
+    title: "BensTitle4",
+    description: "BensDescription4",
     image: "efficiency.svg",
   },
   {
-    title: "Committed to Sustainability",
-    description:
-      "Sustainability is at the heart of everything we do at AESOLAR. We power our facilities with our solar panels and other green energy sources. This commitment reflects our belief in the clean energy movement. We're mindful of the lifecycle of our products, using recyclable materials and reducing energy consumption. We follow strict German standards for sustainable and responsible manufacturing.",
+    title: "BensTitle5",
+    description: "BensDescription5",
     image: "materials.svg",
   },
 ];
@@ -466,24 +464,20 @@ export const GET_IN_TOUCH_BECOME_A = "Become ";
 
 export const FAQ_ACCORDION_DATA = [
   {
-    question: "How do solar panels work?",
-    answer:
-      "Solar panels work by converting sunlight into electricity through a process called the photovoltaic effect. The solar cells within the panels absorb sunlight, and the energy from the absorbed light creates an electric current.",
+    question: "FAQQuestion1",
+    answer: "FAQAnswer1",
   },
   {
-    question: "What factors affect the efficiency of a solar system?",
-    answer:
-      "The efficiency of a solar system is influenced by sunlight exposure, shading, panel orientation, and temperature. Choosing high-quality panels and proper installation also impact overall performance.",
+    question: "FAQQuestion2",
+    answer: "FAQAnswer2",
   },
   {
-    question: "What is usual estimated time of delivery?",
-    answer:
-      "You can purchase directly from stocks of our local distributor at your country . Or you can place order for manufacturing and ETA will depend on destination, quantity and other order details.Usually by order ETA is from 30 to 60 days.",
+    question: "FAQQuestion3",
+    answer: "FAQAnswer3",
   },
   {
-    question: "How to become your distributor?",
-    answer:
-      "Please contact our sales office, send us your company presentation and get Distributorship terms and conditions from dedicated to your country Regional Manager.",
+    question: "FAQQuestion4",
+    answer: "FAQAnswer4",
   },
 ];
 export const FAQ_QUESTION = "Got a Question?";
@@ -573,9 +567,9 @@ export const FOOTER_COPYRIGHT =
 export const FOOTER_YOUR_EMAIL = "your e-mail";
 export const FOOTER_SUBSCRIBE = "Subscribe";
 export const POLICY_LINKS = [
-  { text: "Privacy Policy", link: "/company/publishers_info" },
-  { text: "Terms of Use", link: "/company/publishers_info" },
-  { text: "Legal", link: "/company/imprint" },
+  { text: "PolicyLink1", link: "/company/publishers_info" },
+  { text: "PolicyLink2", link: "/company/publishers_info" },
+  { text: "PolicyLink3", link: "/company/imprint" },
 ];
 
 export const CONSTRUCTOR_OPTION_LINES = [
@@ -1024,28 +1018,28 @@ export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
 ];
 export const SEQUENCE_ANIMATION_TEXT = [
   {
-    title: "Front cover",
-    description: "Protects the panel from external elements",
+    title: "SequenceAnimationTitle1",
+    description: "SequenceAnimationDescription1",
   },
   {
-    title: "Front encapsulation",
-    description: "Shields solar cells, seals panel",
+    title: "SequenceAnimationTitle2",
+    description: "SequenceAnimationDescription2",
   },
   {
-    title: "Solar cells",
-    description: "Converts sunlight into electricity",
+    title: "SequenceAnimationTitle3",
+    description: "SequenceAnimationDescription3",
   },
   {
-    title: "Rear encapsulation",
-    description: "Provides insulation and protection",
+    title: "SequenceAnimationTitle4",
+    description: "SequenceAnimationDescription4",
   },
   {
-    title: "Back cover",
-    description: "Protects the back of the panel",
+    title: "SequenceAnimationTitle5",
+    description: "SequenceAnimationDescription5",
   },
   {
-    title: "Frame",
-    description: "Structural support for solar panel",
+    title: "SequenceAnimationTitle6",
+    description: "SequenceAnimationDescription6",
   },
 ];
 

@@ -3,6 +3,8 @@
 import Button from "@/app/[locale]/components/common/Button";
 import { ModelsProps } from "@/app/[locale]/components/common/Navigation/types";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   HEADER_CALCULATE,
   HEADER_CONFIGURE_YOUR_MODEL,
@@ -18,9 +20,10 @@ export default function Models({
   isLink,
   isProductionIntroBlock = false,
 }: ModelsProps) {
-  const locale = useParams()?.locale;
+  const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
   const { setModel, model } = useContext(ModelContext);
+  const { t } = useClientTranslation(locale, "translation");
 
   const handleClick = () => {
     router.push(`/products`);
@@ -34,7 +37,7 @@ export default function Models({
     >
       {isProductionIntroBlock && (
         <div className="font-normal [font-size:_clamp(12px,1vw,14px)] leading-normal text-dark-gray-600 -tracking-[0.14px]">
-          {PRODUCT_INTRO_MODULES}
+          {t("Modules")}
         </div>
       )}
       <div className="flex justify-center items-center gap-2 xl:gap-11 md:gap-5">
@@ -96,7 +99,7 @@ export default function Models({
       {isLink && (
         <Button onClick={handleClick} size="extrasmall" style="outline">
           <span className="leading-[10px] font-semibold text-sm">
-            {HEADER_CONFIGURE_YOUR_MODEL}
+            {t("All Products")}
           </span>
         </Button>
       )}

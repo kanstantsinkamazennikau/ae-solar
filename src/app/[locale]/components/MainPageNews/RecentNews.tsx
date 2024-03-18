@@ -7,8 +7,10 @@ import {
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
 import { MAIN_PAGE_NEWS_READ_ALL } from "@/app/[locale]/utils/constants";
+import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 import Link from "next/link";
 import { getDocumentSlugs, load } from "outstatic/server";
@@ -42,6 +44,8 @@ const getBlogPosts = async () => {
 
 export default async function RecentNews() {
   const blogPosts = await getBlogPosts();
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
 
   return (
     <div className="flex md:flex-row flex-col">
@@ -91,7 +95,7 @@ export default async function RecentNews() {
           <Link href="company/news" className="mt-10 mx-auto">
             <Button style="outline" showArrow>
               <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">
-                {MAIN_PAGE_NEWS_READ_ALL}
+                {t("Read all the news")}
               </span>
             </Button>
           </Link>

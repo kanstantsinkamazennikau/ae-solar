@@ -13,7 +13,7 @@ export default function SelectedLanguage({
   dropdownRef,
   mobileNavigation,
 }: SelectedLanguageProps) {
-  const { t } = useClientTranslation(locale, "navigation");
+  const { t } = useClientTranslation(locale.toLowerCase(), "translation");
   const countryWithCode = LOCALIZATION_COUNTRIES_LIST.find(
     (country) => country.abbr === locale
   );
@@ -41,10 +41,7 @@ export default function SelectedLanguage({
       ref={outsideClickRef}
     >
       {mobileNavigation && (
-        <div
-          className="flex py-2 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-[inherit] justify-between cursor-pointer"
-          suppressHydrationWarning={true}
-        >
+        <div className="flex py-2 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-[inherit] justify-between cursor-pointer">
           {t("Language")}
         </div>
       )}

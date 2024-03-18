@@ -20,7 +20,7 @@ const HeroSectionVideo = dynamic(() => import("./HeroSectionVideo"), {
 
 export default function HeroSection() {
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "home");
+  const { t } = useClientTranslation(locale, "translation");
 
   const { isStartAnimation, isLongVideoLoadingTime } =
     useContext(MainPageVideoContext);

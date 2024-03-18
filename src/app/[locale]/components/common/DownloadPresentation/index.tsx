@@ -1,11 +1,19 @@
+"use client";
+
 import { DownloadPresentationProps } from "@/app/[locale]/components/common/DownloadPresentation/types";
 import { CONTACTS_DOWNLOAD_PRESENTATION } from "@/app/[locale]/contacts/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 
 export default function DownloadPresentation({
   link,
   title = "PROJECT REFERENCE",
 }: DownloadPresentationProps) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -45,7 +53,7 @@ export default function DownloadPresentation({
         />
 
         <div className="min-[920px]:text-2xl text-[13px] font-semibold min-[920px]:leading-[120%] leading-[100%]">
-          {CONTACTS_DOWNLOAD_PRESENTATION}
+          {t("Download Presentation")}
         </div>
         <Image
           src="/images/arrowFutureRed.svg"

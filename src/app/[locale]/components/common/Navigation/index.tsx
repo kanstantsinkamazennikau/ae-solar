@@ -24,7 +24,7 @@ import { useContext } from "react";
 
 export default function Navigation() {
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "navigation");
+  const { t } = useClientTranslation(locale, "translation");
   const { sticky } = useContext(StickyNavigationContext);
   const productsContext = useContext(ProductsContext);
   const mainPageVideoContext = useContext(MainPageVideoContext);
@@ -94,7 +94,7 @@ export default function Navigation() {
             </Link>
 
             {/* DESKTOP NAV */}
-            <ul className="gap-8 min-[920px]:flex hidden">
+            <ul className="xl:gap-8 gap-4 min-[920px]:flex hidden">
               {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
                 <NavLink
                   key={navLink.url}

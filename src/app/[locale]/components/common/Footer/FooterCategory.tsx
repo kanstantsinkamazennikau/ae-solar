@@ -1,12 +1,16 @@
 "use client";
 
 import { FooterCategoryProps } from "@/app/[locale]/components/common/Footer/types";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 export function FooterCategory({ category, links }: FooterCategoryProps) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(false);
   const [height, setHeight] = useState<number | undefined>(undefined);
@@ -24,7 +28,7 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
       {/* DESKTOP */}
       <div className="md:block hidden">
         <div className="text-dark-gray-900 mb-6 font-medium [font-size:_clamp(14px,2vw,24px)]">
-          <span className="md:block hidden">{category.title}</span>
+          <span className="md:block hidden">{t(category.title)}</span>
           <Link
             href={category.link}
             className="
@@ -34,7 +38,7 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
             block
           "
           >
-            {category.title}
+            {t(category.title)}
           </Link>
         </div>
         {links.map(({ title, link }) => (
@@ -51,7 +55,7 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
           "
             key={title}
           >
-            {title}
+            {t(title)}
           </Link>
         ))}
       </div>
@@ -67,7 +71,7 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
               isOpenItem ? "min-[500px]:text-white" : "text-dark-gray-900"
             }`}
           >
-            {category.title}
+            {t(category.title)}
           </p>
           <Image
             className={`
@@ -104,7 +108,7 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
               "
               key={title}
             >
-              {title}
+              {t(title)}
             </Link>
           ))}
         </div>
