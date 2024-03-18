@@ -298,8 +298,8 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
     },
   ],
 };
-export const PRODUCT_CREATE_YOUR = "Schaffe deinen";
-export const PRODUCT_OWN_SPACE = "eigenen Raum";
+export const PRODUCT_CREATE_YOUR = "Schaffen Sie";
+export const PRODUCT_OWN_SPACE = "Ihren eigenen Raum";
 
 export const PRODUCT_CONCLUSION = "Schlussfolgerung";
 export const PRODUCT_CHOOSE_READY_MODULES = `Wählen Sie 
@@ -430,8 +430,8 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
       {
         type: "full",
         imageUrl: "url('/images/products/bentobox/diffuse.png')",
-        shortDescription: `Hervorragende Leistung
-        in diffusen Lichtverhältnissen`,
+        shortDescription: `Hervoragende Leistungen
+        In diffusen Lichtverhältnissen`,
         gridArea: "a",
       },
       {
@@ -456,7 +456,7 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
         imageUrl: "url('/images/products/bentobox/point.png')",
         longDescription: {
           title: `Maßgeschneidertes 
-            Material und Leistung`,
+          Material und Leistungen`,
           description:
             "Passen Sie Ihre Energielösung mit maßgeschneiderten Materialien und Leistungsoptionen an, um eine präzise Ausrichtung auf Ihre spezifischen Anforderungen und Präferenzen zu gewährleisten.",
         },

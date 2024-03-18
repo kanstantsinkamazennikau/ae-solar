@@ -24,9 +24,9 @@ export default function ContactUs() {
   };
 
   const matchPartnerTypeWithArticle = {
-    partner: "partner",
-    investor: "investor",
-    installer: "installateur",
+    partner: "Partner",
+    investor: "Investor",
+    installer: "Installateur",
   };
 
   return (

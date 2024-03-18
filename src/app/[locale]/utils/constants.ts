@@ -19,7 +19,7 @@ export const FORM_FIELDS_INPUT_TYPES = {
 };
 
 export const HEADER_TIER1 = "Deutscher TIER1 Hersteller";
-export const HEADER_TIER1_QUALITY = "für hochwertige Solarmodule";
+export const HEADER_TIER1_QUALITY = "Für hochwertige Solarmodule";
 
 export const FORMS_FIELDS = {
   name: "name",
@@ -140,9 +140,9 @@ export const AWARDS_AND_STATS_AWARDS_IMAGES = [
 ];
 export const AWARDS_AND_STATS_SEE_ALL_AWARDS = "Alle Auszeichnungen ansehen";
 
-export const PRODUCT_INTRO_THE_NEXT_LEVEL_OF = "Die nächste Ebene der";
+export const PRODUCT_INTRO_THE_NEXT_LEVEL_OF = "Die nächste Ebene von";
 export const PRODUCT_INTRO_MODULES = "Module";
-export const PRODUCT_INTRO_HIGH_QUALITY_SP = "Hochwertige Solarmodule";
+export const PRODUCT_INTRO_HIGH_QUALITY_SP = "hochwertigen Solarmodulen ";
 export const PRODUCT_INTRO_PANELS_MAPPING = {
   power: "Leistung (bis zu)",
   efficiency: "Effizienz (bis zu)",
@@ -471,14 +471,14 @@ export const REVIEWS_QUOTES_WITH_AUTHORS = [
   },
 ];
 
-export const MAIN_PAGE_NEWS_INSIGHTS = "Nachrichten und Einblicke";
-export const MAIN_PAGE_COMPANY = "unserem Unternehmen";
+export const MAIN_PAGE_NEWS_INSIGHTS = "Neuigkeiten und Einblicke";
+export const MAIN_PAGE_COMPANY = "in unser Unternehmen.";
 export const MAIN_PAGE_NEWS_READ_ALL = "Alle Nachrichten";
 
 export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installer"];
 export const GET_IN_TOUCH_ELEVATE_GROWTH = "Wachsen Sie gemeinsam mit uns";
 export const GET_IN_TOUCH_JOIN_US = "Treten Sie als ";
-export const GET_IN_TOUCH_OUR_VISION = " in unserer solaren Vision";
+export const GET_IN_TOUCH_OUR_VISION = " in unsere Solarvision";
 export const GET_IN_TOUCH_BECOME_A = "Werden Sie ";
 
 export const FAQ_ACCORDION_DATA = [
@@ -503,8 +503,8 @@ export const FAQ_ACCORDION_DATA = [
       "Bitte kontaktieren Sie unser Vertriebsbüro, senden Sie uns Ihre Unternehmenspräsentation und erhalten Sie die Vertriebsbedingungen vom für Ihr Land zuständigen Regionalmanager.",
   },
 ];
-export const FAQ_QUESTION = "Haben Sie eine Frage?";
-export const FAQ_SOLUTIONS = "Wir haben Lösungen.";
+export const FAQ_QUESTION = "Sie haben Fragen?";
+export const FAQ_SOLUTIONS = "Wir haben Antworten.";
 export const FAQ_MORE_SOLUTIONS = "Mehr Lösungen.";
 
 //FOOTER
@@ -1991,8 +1991,8 @@ export const ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT = [
   "und bietet seit 2003",
 ];
 
-export const ABOUT_BUSINESS = "Geschäftskarte";
-export const ABOUT_MAP = "Wo unsere Stärke liegt";
+export const ABOUT_BUSINESS = "Standorte";
+export const ABOUT_MAP = "Wo unsere Stärken liegen";
 export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "germany.svg",
@@ -2016,7 +2016,7 @@ export const ABOUT_MAP_DESIGNATIONS = [
   },
 ];
 export const ABOUT_OUR_HISTORY = "Unsere Geschichte";
-export const ABOUT_THROUGH = "Durch die Jahre";
+export const ABOUT_THROUGH = "durch die Jahre";
 
 export const COOKIES_AESOLAR = "Cookies auf AESolar";
 export const COOKIES_WE_USE_COOKIES =
@@ -2037,8 +2037,8 @@ export const COOKIES_I_ACCEPT = "Ich akzeptiere";
 export const COOKIES_I_DO_NOT_ACCEPT = "Ich akzeptiere nicht";
 export const COOKIES_USER_CONSENT_FLAG = "cookieConsentIsTrue";
 
-export const DOCUMENTS_DOCUMENTS_HEADING = "Dokumente";
-export const DOCUMENTS_YOU_NEED_TO_KNOW = "Sie müssen wissen";
+export const DOCUMENTS_DOCUMENTS_HEADING = "Dokumente,";
+export const DOCUMENTS_YOU_NEED_TO_KNOW = "die Sie kennen sollten";
 export const DOCUMENTS_CATEGORIES = "Kategorien";
 export const DOCUMENTS_SEARCH = "Suche";
 export const DOCUMENT_SUBCATEGORIES_SPLITTER = "$";

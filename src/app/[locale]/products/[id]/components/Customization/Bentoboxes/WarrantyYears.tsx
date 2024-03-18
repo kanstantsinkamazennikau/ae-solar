@@ -1,5 +1,5 @@
 import Image from "next/image";
-const warrantyText = `Garantiejahre`;
+const warrantyText = `Jahre Garantie`;
 
 export default function WarrantyYears({ gridArea }: { gridArea?: string }) {
   return (

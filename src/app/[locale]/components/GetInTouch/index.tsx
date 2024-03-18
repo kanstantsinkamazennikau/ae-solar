@@ -14,9 +14,9 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const matchPartnerTypeWithArticle = {
-  partner: "partner",
-  investor: "investor",
-  installer: "installateur",
+  partner: "Partner",
+  investor: "Investor",
+  installer: "Installateur",
 };
 
 const partnersTypes = Object.keys(matchPartnerTypeWithArticle) as [

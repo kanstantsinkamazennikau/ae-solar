@@ -21,10 +21,10 @@ export const PRODUCT_SLOGAN = {
 };
 
 export const PRODUCT_WE_TRANSFORM = "Wir verwandeln";
-export const PRODUCT_WE_TRANSFORM_SUNLIGHT = "Sonnenschein in Energie";
+export const PRODUCT_WE_TRANSFORM_SUNLIGHT = "Sonnenlicht in Energy";
 export const PRODUCT_FOR_YOU = "Für Sie und ";
 export const PRODUCT_FOR_PLANET = "für den Planeten";
-export const PRODUCT_WE_TRANSFORM_RANGE = `Unsere Palette fortschrittlicher Solartechnologien ist darauf ausgelegt, die reichliche Energie der Sonne zu nutzen und erneuerbare, saubere und äußerst effiziente Lösungen zu bieten. Jedes unserer innovativen Produkte ist vom Universum inspiriert und verkörpert unseren Glauben an das immense Potenzial erneuerbarer Energien.`;
+export const PRODUCT_WE_TRANSFORM_RANGE = `Wir sind nicht nur ein TIER1 Solarmodulhersteller, sondern auch ein führender und innovativer Anbieter von sauberer, effizienter und nachhaltiger Energy. Wir stehen für Qualität, Langlebigkeit und Effizienz bei der Nutzung der Kraft der Sonne.`;
 export const PRODUCT_WE_TRANSFORM_HIGHLIGHT = [
   "entworfen, um die reichliche Energie der Sonne zu nutzen",
   "zieht Inspiration aus dem Universum",

@@ -1,9 +1,9 @@
-export const ABOUT_MANUFACTURER = "AESOLAR ist ein deutscher Hersteller der TIER1 Kategorie.";
+export const ABOUT_MANUFACTURER = "Willkommen bei AESOLAR!";
 export const ABOUT_ILLUMINATING =
-  "Ihr führender deutscher TIER1-Hersteller für eine grünere Zukunft";
+  "für eine nachhaltige Zukunft mit deutscher Ingenieurskunst";
 export const ABOUT_DOWNLOAD_PRESENTATION = `Firmenpräsentation`;
 export const ABOUT_WATCH_VIDEO = `Produktionsprozess`;
-export const ABOUT_BORN_IN_GERMANY = "Deutschland geboren";
+export const ABOUT_BORN_IN_GERMANY = "In Deutschland geboren";
 export const ABOUT_BORN_STORY = `Im Herzen Bayerns, Deutschland, wurde eine bemerkenswerte Vision geboren - die unerschöpfliche Kraft der Sonne zu nutzen und in erneuerbare Energie umzuwandeln.
 Diese visionäre Idee, genährt vom Glauben, dass "es Zeit ist, die Welt zu retten", inspirierte Dr. Alexander Maier und seine Brüder zur Gründung von AESOLAR im Jahr 2003.`;
 export const ABOUT_BORN_STORY_WORDS_TO_HIGHLIGHT = [
@@ -88,7 +88,7 @@ export const ABOUT_HISTORY = [
   {
     year: 2019,
     event:
-      "Finalist des Inter Solar 2019 Photovoltaik-Awards;<br/> Jährliche Gesamtproduktionskapazität von 1,5 GW für PV-Module erreicht, wobei 500 MW/jährlich die zweite vollautomatisierte und größte in Europa unter einem Dach errichtete Produktionsstätte darstellen;<br/>AE Solar wurde Mitglied des United Nations Global Compact",
+      "Finalist des InterSolar 2019 Photovoltaik-Awards;<br/> Jährliche Gesamtproduktionskapazität von 1,5 GW für PV-Module erreicht, wobei 500 MW/jährlich die zweite vollautomatisierte und größte in Europa unter einem Dach errichtete Produktionsstätte darstellen;<br/>AE Solar wurde Mitglied des United Nations Global Compact",
   },
   {
     year: 2020,
@@ -103,6 +103,6 @@ export const ABOUT_HISTORY = [
   {
     year: 2022,
     event:
-      "Spitzenrenewable Energie;<br/> SMART TECHNOLOGY INNOVATION OF THE YEAR Solar Energy Innovation Excellence Awards",
+      "Top Renewable Energy;<br/> SMART TECHNOLOGY INNOVATION OF THE YEAR Solar Energy Innovation Excellence Awards",
   },
 ];
