@@ -36,11 +36,6 @@ export const FORMS_FIELDS = {
 
 // NAVIGATION
 export const HEADER_NAV_LINKS_ARRAY = [
-  // {
-  //   url: "/",
-  //   text: "Home",
-  // },
-
   {
     url: "/company",
     text: "Company",
