@@ -1,8 +1,11 @@
 "use client";
 
 import { FlagsListProps } from "@/app/[locale]/components/common/ChangeLocale/types";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { HEADER_CHOOSE_LANGUAGE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 
 export const LOCALIZATION_COUNTRIES_LIST = [
   { flagIcon: "Deutsche.svg", abbr: "DE", language: "Deutsche" },
@@ -13,6 +16,9 @@ export default function FlagsList({
   handleSelection,
   mobileNavigation,
 }: FlagsListProps) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "navigation");
+
   return (
     <>
       {mobileNavigation && (
@@ -25,7 +31,7 @@ export default function FlagsList({
             priority
             className="rotate-180"
           />
-          {HEADER_CHOOSE_LANGUAGE}
+          {t("Choose language")}
         </div>
       )}
       {LOCALIZATION_COUNTRIES_LIST.map(({ flagIcon, abbr }) => (

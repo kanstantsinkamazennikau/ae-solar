@@ -1,11 +1,19 @@
 {
-  "Home": "Home",
-  "Products": "Products",
+  "Company": "Company",
+  "Manufacturer": "Manufacturer",
   "News": "News",
-  "About us": "About us",
+  "FAQ": "FAQ",
+  "Products": "Products",
+  "All Modules": "All Modules",
+  "Aurora": "Aurora",
+  "Meteor": "Meteor",
+  "Comet": "Comet",
+  "Terra": "Terra",
+  "ShadeStar": "ShadeStar",
+  "Neptune": "Neptune",
   "Documents": "Documents",
-  "Solutions1": "Solutions1",
-  "Solutions2": "Solutions2",
-  "Solutions3": "Solutions3",
-  "Join us": "Join us"
+  "B2B Solutions": "B2B Solutions",
+  "Contact Us": "Contact Us",
+  "Language": "Language",
+  "Choose language": "Choose language"
 }

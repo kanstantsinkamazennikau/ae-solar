@@ -140,7 +140,6 @@ export default function RootLayout({
 }) {
   if (!locales.includes(locale as any)) notFound();
   const url = headers().get("x-url")!.split("/");
-  const host = headers().get("X-Forwarded-Host")?.split(".");
 
   return (
     <html lang={locale}>
@@ -155,7 +154,7 @@ export default function RootLayout({
                 <ProductsContextProvider>
                   <MainPageVideoContextProvider>
                     <StickyNavigationProvider>
-                      <Navigation host={host} />
+                      <Navigation />
                       {children}
                       <Footer />
                       <Cookies />

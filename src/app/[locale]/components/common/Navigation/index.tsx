@@ -8,10 +8,11 @@ import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import MobileNavigation from "@/app/[locale]/components/common/Navigation/MobileNavigation";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
-import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
 import {
   HEADER_CONTACT_US,
@@ -21,7 +22,9 @@ import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
 
-export default function Navigation({ host }: NavigationProps) {
+export default function Navigation() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "navigation");
   const { sticky } = useContext(StickyNavigationContext);
   const productsContext = useContext(ProductsContext);
   const mainPageVideoContext = useContext(MainPageVideoContext);
@@ -100,20 +103,20 @@ export default function Navigation({ host }: NavigationProps) {
               ))}
             </ul>
             <div className="gap-3 min-[920px]:flex hidden">
-              <ChangeLocale host={host} />
+              <ChangeLocale />
               <Cart />
               <Button
                 onClick={handleClick}
                 externalStyle="!py-[10px] !px-[18px]"
               >
                 <span className="[font-size:_clamp(14px,1.5vw,16px)] whitespace-nowrap">
-                  {HEADER_CONTACT_US}
+                  {t("Contact Us")}
                 </span>
               </Button>
             </div>
 
             {/* MOBILE NAV */}
-            <MobileNavigation host={host} />
+            <MobileNavigation />
           </nav>
         </BasicWidthContainer>
       </div>

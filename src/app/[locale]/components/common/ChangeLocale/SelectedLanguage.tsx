@@ -2,7 +2,7 @@
 
 import { LOCALIZATION_COUNTRIES_LIST } from "@/app/[locale]/components/common/ChangeLocale/FlagsList";
 import { SelectedLanguageProps } from "@/app/[locale]/components/common/ChangeLocale/types";
-import { HEADER_LANGUAGE } from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
@@ -13,6 +13,7 @@ export default function SelectedLanguage({
   dropdownRef,
   mobileNavigation,
 }: SelectedLanguageProps) {
+  const { t } = useClientTranslation(locale, "navigation");
   const countryWithCode = LOCALIZATION_COUNTRIES_LIST.find(
     (country) => country.abbr === locale
   );
@@ -40,8 +41,11 @@ export default function SelectedLanguage({
       ref={outsideClickRef}
     >
       {mobileNavigation && (
-        <div className="flex py-2 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-[inherit] justify-between cursor-pointer">
-          {HEADER_LANGUAGE}
+        <div
+          className="flex py-2 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-[inherit] justify-between cursor-pointer"
+          suppressHydrationWarning={true}
+        >
+          {t("Language")}
         </div>
       )}
       <div className="inline-flex justify-center items-center gap-1 cursor-pointer flex-shrink-0">
