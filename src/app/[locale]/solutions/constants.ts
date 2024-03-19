@@ -49,9 +49,13 @@ export const SOLUTIONS_GLOBAL_IMPACT_DESCRIPTION =
   "Our diverse product range and services embody the promise of a cleaner, brighter tomorrow, seamlessly adapting to your unique energy needs. Each project we undertake, spanning the globe, reflects our commitment to renewable energy and carbon footprint reduction.";
 export const SOLUTIONS_SEE_DETAILED_PRESENTATION = "View PDF-Presentation";
 export const SOLUTIONS_GLOBAL_IMPACT_STATS = [
-  { value: "108,600 sqm", measure: "Total Area" },
-  { value: "62,000 sqm", measure: "Manufacturing Area" },
-  { value: "2GW/year", measure: "Capacity" },
+  { value: "108,600", units: "Measure Units Sqm", measure: "Total Area" },
+  {
+    value: "62,000",
+    units: "Measure Units Sqm",
+    measure: "Manufacturing Area",
+  },
+  { value: "2", units: "Measure Units GW/year", measure: "Capacity" },
 ];
 export const SOLUTIONS_GLOBAL_IMPACT_STATS_WITH_IMAGES = [
   {

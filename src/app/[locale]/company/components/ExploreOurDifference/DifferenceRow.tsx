@@ -3,8 +3,16 @@ import {
   ABOUT_EXPLORE_FOOTER,
   ABOUT_EXPLORE_HEADER,
 } from "@/app/[locale]/company/constants";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import getLocale from "@/app/[locale]/utils/getLocale";
 
-export default function DifferenceRow({ rowText, index }: DifferenceRowProps) {
+export default async function DifferenceRow({
+  rowText,
+  index,
+}: DifferenceRowProps) {
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
+
   const formatNumber = (number: number) => {
     return String(number).padStart(2, "0");
   };
@@ -73,11 +81,7 @@ export default function DifferenceRow({ rowText, index }: DifferenceRowProps) {
           leading-[120%]
         "
       >
-        {rowText.split(/\r?\n|\r|\n/g).map((string, index) => (
-          <div key={string} className="md:block hidden">
-            {string}
-          </div>
-        ))}
+        <div className="md:block hidden">{t(rowText)}</div>
 
         {/* MOBILE */}
         <div className="md:hidden leading-[100%] font-walsheim font-bold h-5 text-dark-gray-900 flex">
@@ -91,7 +95,7 @@ export default function DifferenceRow({ rowText, index }: DifferenceRowProps) {
             )}
           </div>
         </div>
-        <p className="md:hidden block">{rowText}</p>
+        <p className="md:hidden block">{t(rowText)}</p>
       </div>
     </div>
   );

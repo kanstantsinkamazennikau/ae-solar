@@ -51,59 +51,50 @@ to You`,
 export const ABOUT_HISTORY = [
   {
     year: 2003,
-    event:
-      "AE Solar was founded in Königsbrunn, Germany as a family-owned PV systems installation company.",
+    event: "OurHistory2003",
   },
   {
     year: 2009,
-    event:
-      "50MW/year manual assembly mono/poly PV modules manufacturing was established",
+    event: "OurHistory2009",
   },
   {
     year: 2012,
-    event: "Double glass and Bi-Facial PV modules manufacturing started",
+    event: "OurHistory2012",
   },
   {
     year: 2013,
-    event:
-      "150 MW/year semi-automated PV modules manufacturing line was installed",
+    event: "OurHistory2013",
   },
   {
     year: 2014,
-    event: "Automated PV modules stringer soldering was implemented",
+    event: "OurHistory2014",
   },
   {
     year: 2016,
-    event:
-      "250 MW/year automated PV modules manufacturing line was installed;<br/> Shading Resistant Hot-spot free PV modules invented",
+    event: "OurHistory2016",
   },
   {
     year: 2017,
-    event:
-      "SNEC 2017 PV Power Expo Top 10 Highlights award;<br/> Shading Resistant Hot-spot free PV modules serial manufacturing started;<br/> 525 MW/year robotized full automated PV modules manufacturing line was installed",
+    event: "OurHistory2017",
   },
   {
     year: 2018,
-    event: "PV magazine 2018 Top innovation award",
+    event: "OurHistory2018",
   },
   {
     year: 2019,
-    event:
-      "Finalist of Inter Solar 2019 Photovoltaic Award;<br/> 1.5 GW/year total PV module manufacturing capacity reached with 500 MW/year second fully automated and largest in Europe under one roof manufacturing established;<br/> AE Solar became a member of the United Nations Global Compact",
+    event: "OurHistory2019",
   },
   {
     year: 2020,
-    event:
-      "AE Solar's presence and distribution network reaches more than 100+ countries",
+    event: "OurHistory2020",
   },
   {
     year: 2021,
-    event:
-      "Top PV Brand Award in Vietnam;<br/> Solar Future Awards 2021 Company of the Year;<br/> AE Solar Wins UN Global Compact Partnership for Sustainability Award 2021 - in Planet Category",
+    event: "OurHistory2021",
   },
   {
     year: 2022,
-    event:
-      "Top Renewable Energy;<br/> SMART TECHNOLOGY INNOVATION OF THE YEAR Solar Energy Innovation Excellence Awards",
+    event: "OurHistory2022",
   },
 ];

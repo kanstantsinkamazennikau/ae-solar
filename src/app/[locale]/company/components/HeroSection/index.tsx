@@ -8,10 +8,17 @@ import {
 } from "@/app/[locale]/company/constants";
 import Button from "@/app/[locale]/components/common/Button";
 import LightBoxYoutubeVideo from "@/app/[locale]/components/common/LightBoxYoutubeVideo";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useState } from "react";
+import parse from "html-react-parser";
+import { Trans } from "react-i18next";
 
 export default function HeroSection() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const [showVideo, setShowVideo] = useState(false);
 
   const onVideoClose = () => {
@@ -91,7 +98,7 @@ export default function HeroSection() {
                 text-center
               "
             >
-              {ABOUT_MANUFACTURER}
+              {t("Company Welcome")}
             </div>
             <div
               className="
@@ -103,7 +110,7 @@ export default function HeroSection() {
               -tracking-[1.58px]
             "
             >
-              {ABOUT_ILLUMINATING}
+              {t("Company Illuminating")}
             </div>
           </div>
 
@@ -122,11 +129,7 @@ export default function HeroSection() {
                     height={24}
                   />
                   <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
-                    {ABOUT_DOWNLOAD_PRESENTATION.split(/\r?\n|\r|\n/g).map(
-                      (string) => (
-                        <p key={string}>{string}</p>
-                      )
-                    )}
+                    <Trans>{t("Company Presentation")}</Trans>
                   </div>
                 </div>
               </Button>
@@ -146,9 +149,7 @@ export default function HeroSection() {
                   height={24}
                 />
                 <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
-                  {ABOUT_WATCH_VIDEO.split(/\r?\n|\r|\n/g).map((string) => (
-                    <div key={string}>{string}</div>
-                  ))}
+                  <Trans>{t("Production Process")}</Trans>
                 </div>
               </div>
             </Button>

@@ -15,36 +15,15 @@ import {
 import Image from "next/image";
 import { MouseEvent, useEffect, useState } from "react";
 import Cookies from "js-cookie";
-
-const styleLink = (text: string, linkToMatch: string[]) => {
-  const matchRegex = RegExp(linkToMatch.join("|"), "ig");
-  const matches = [...text.matchAll(matchRegex)];
-
-  return text.split(matchRegex).map((nonLinkText, index) => (
-    <span
-      key={nonLinkText}
-      className="[font-size:_clamp(10px,1.5vw,14px)] font-walsheim font-medium"
-    >
-      {nonLinkText}
-      {
-        <a
-          href={
-            COOKIES_MATCH_TEXT_WITH_LINK[
-              matches[
-                index
-              ] as unknown as keyof typeof COOKIES_MATCH_TEXT_WITH_LINK
-            ]
-          }
-          className="underline"
-        >
-          {matches[index]}
-        </a>
-      }
-    </span>
-  ));
-};
+import { useParams } from "next/navigation";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { Trans } from "react-i18next";
 
 export default function CookiesBanner() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   const [cookieConsentIsTrue, setCookieConsentIsTrue] = useState(true);
 
   useEffect(() => {
@@ -92,17 +71,29 @@ export default function CookiesBanner() {
           />
           <div className="flex [font-size:_clamp(10px,1.5vw,14px)] font-walsheim flex-col text-dark-gray-900">
             <p className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold font-sans mb-2 text-white">
-              {COOKIES_AESOLAR}
+              {t("Cookies on AESolar")}
             </p>
-            <p className="mb-2">
-              {styleLink(COOKIES_WE_USE_COOKIES, COOKIES_LINKS)}
+            <p className="mb-2 [font-size:_clamp(10px,1.5vw,14px)] font-walsheim font-medium">
+              <Trans
+                components={{
+                  linkPolicy: (
+                    <a
+                      className="underline"
+                      href={`${locale}/company/publishers_info`}
+                      target="_blank"
+                    />
+                  ),
+                }}
+              >
+                {t("We Use Cookies")}
+              </Trans>
             </p>
-            <p>{COOKIES_BY_CHOOSING}</p>
+            <p>{t("Cookies Choosing")}</p>
           </div>
           <div className="flex md:flex-col flex-row font-semibold gap-6">
             <Button onClick={onAcceptClick} externalStyle="py-[9px] px-[26px]">
               <span className="whitespace-nowrap [font-size:_clamp(14px,1.5vw,20px)]">
-                {COOKIES_I_ACCEPT}
+                {t("I accept")}
               </span>
             </Button>
             <Button
@@ -111,7 +102,7 @@ export default function CookiesBanner() {
               externalStyle="!px-0 !py-0"
             >
               <span className="whitespace-nowrap text-base-red [font-size:_clamp(14px,1.5vw,20px)]">
-                {COOKIES_I_DO_NOT_ACCEPT}
+                {t("I do not accept")}
               </span>
             </Button>
           </div>

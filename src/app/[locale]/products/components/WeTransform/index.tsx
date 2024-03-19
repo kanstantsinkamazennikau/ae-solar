@@ -79,7 +79,6 @@ export default function WeTransform() {
             className="
               [font-size:_clamp(36px,6vw,96px)]
               font-extrabold
-              capitalize
               -tracking-[0.96px]
               relative
               z-10

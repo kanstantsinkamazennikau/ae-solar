@@ -1,6 +1,7 @@
 import BornInGermany from "@/app/[locale]/company/components/BornInGermany";
 import BusinessMap from "@/app/[locale]/company/components/BusinessMap";
 import CompanyStats from "@/app/[locale]/company/components/CompanyStats";
+import CompanyTier1 from "@/app/[locale]/company/components/CompanyTier1";
 import ExploreOurDifference from "@/app/[locale]/company/components/ExploreOurDifference";
 import HeroSection from "@/app/[locale]/company/components/HeroSection";
 import OurHistory from "@/app/[locale]/company/components/OurHistory";
@@ -24,20 +25,7 @@ export default function About() {
     <>
       <HeroSection />
       <BornInGermany />
-      <Tier1
-        externalStyle="
-          md:!py-20
-          !py-14
-          xl:!mb-[160px]
-          lg:!mb-[100px]
-          md:!mb-[60px]
-          !mb-[0px]
-        "
-        tier1Text={ABOUT_AS_A_TIER}
-        tier1TextHighlight={ABOUT_AS_A_TIER_HIGHLIGHT}
-        descriptionText={ABOUT_SYNONYMOUS}
-        descriptionTextHighlight={ABOUT_SYNONYMOUS_HIGHLIGHT}
-      />
+      <CompanyTier1 />
       <PortfolioBackground />
       <GlobalImpact />
       <CompanyStats />
@@ -62,9 +50,6 @@ export default function About() {
       <BusinessMap />
       <OurHistory />
       <GetInTouch />
-
-      {/* <SequenceAnimation /> */}
-      {/* <SequenceAnimation2 /> */}
     </>
   );
 }

@@ -1,13 +1,24 @@
+"use client";
+
 import {
   ABOUT_BORN_IN_GERMANY,
   ABOUT_BORN_STORY,
   ABOUT_BORN_STORY_WORDS_TO_HIGHLIGHT,
 } from "@/app/[locale]/company/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import getLocale from "@/app/[locale]/utils/getLocale";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import { Trans, TransWithoutContext } from "react-i18next";
 
 export default function BornInGermany() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -81,22 +92,30 @@ export default function BornInGermany() {
                 max-w-[306px]
               "
               >
-                {ABOUT_BORN_IN_GERMANY}
+                {t("Born in Germany")}
               </p>
             </div>
 
             <hr className="h-[1px] bg-[#038DF4] border-none w-full" />
-            <div className="flex min-[560px]:gap-8 gap-4 min-[560px]:flex-row flex-col">
-              {ABOUT_BORN_STORY.split(/\r?\n|\r|\n/g).map((string) => (
-                <div key={string}>
-                  {styleMatchingText(
-                    string,
-                    ABOUT_BORN_STORY_WORDS_TO_HIGHLIGHT,
-                    "font-walsheim font-normal [font-size:_clamp(16px,1.5vw,20px)] md:leading-[150%] leading-[120%]",
-                    "font-bold"
-                  )}
-                </div>
-              ))}
+            <div className="flex min-[560px]:gap-8 gap-4 min-[560px]:flex-row flex-col font-walsheim font-normal [font-size:_clamp(16px,1.5vw,20px)] md:leading-[150%] leading-[120%]">
+              <div>
+                <Trans
+                  components={{
+                    bold: <span className="font-bold" />,
+                  }}
+                >
+                  {t("In the heart")}
+                </Trans>
+              </div>
+              <div>
+                <Trans
+                  components={{
+                    bold: <span className="font-bold" />,
+                  }}
+                >
+                  {t("Visionary idea")}
+                </Trans>
+              </div>
             </div>
           </div>
         </div>

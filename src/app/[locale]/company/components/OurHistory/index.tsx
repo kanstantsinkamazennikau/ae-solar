@@ -15,104 +15,30 @@ import {
   useRef,
   useState,
 } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
 import Image from "next/image";
 import parse from "html-react-parser";
 import Button from "@/app/[locale]/components/common/Button";
 import { ABOUT_HISTORY } from "@/app/[locale]/company/constants";
 import Starfield from "@/app/[locale]/products/components/StarField";
-
-// const frameIndex = { frame: 0 };
-
-// const numFrames = history.length;
-
-const scrollTriggerPositionFromResolution = (
-  isDesktop: boolean,
-  isMobile: boolean
-) => {
-  if (isDesktop) return "top-=80px";
-  if (isMobile) return "top-=80px";
-  return "center center";
-};
+import { useParams } from "next/navigation";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { Trans } from "react-i18next";
 
 export default function OurHistory() {
   const [scrollDirection, setScrollDirection] = useState(1);
   const [scrollFrame, setScrollFrame] = useState(0);
   const [activeStepIndex, setActiveStepIndex] = useState(0);
-
   const container = useRef(null);
-  // const renderText = useCallback(() => {
-  //   setScrollFrame(frameIndex.frame);
-  // }, []);
-
   const [isOpenItem, setIsOpenItem] = useState(false);
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   const onClick = () => {
     setIsOpenItem(true);
   };
-
-  // useEffect(() => {
-  //   if (!container.current) return;
-  //   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  //   let mm = gsap.matchMedia();
-
-  //   mm.add(
-  //     {
-  //       isWideScreen: "(min-width: 2560px)",
-  //       isDesktop: "(min-width: 768px) and (max-width: 2559px)",
-  //       isMobile: "(max-width: 767px)",
-  //     },
-  //     (context) => {
-  //       //@ts-ignore
-  //       let { isDesktop, isMobile } = context.conditions;
-  //       gsap.context(() => {
-  //         gsap
-  //           .timeline({
-  //             onUpdate: renderText,
-  //             scrollTrigger: {
-  //               onUpdate: (self) => {
-  //                 setScrollDirection(self.direction);
-  //               },
-  //               trigger: "#history",
-  //               start: scrollTriggerPositionFromResolution(isDesktop, isMobile),
-  //               pin: true,
-  //               end: "+=600%",
-  //               scrub: 1,
-  //             },
-  //           })
-  //           .to(
-  //             frameIndex,
-  //             {
-  //               frame: numFrames - 1,
-  //               snap: "frame",
-  //               ease: "none",
-  //               duration: 1,
-  //             },
-  //             0
-  //           );
-  //       });
-  //     }
-  //   );
-
-  //   return () => {
-  //     ScrollTrigger.refresh();
-  //     mm.revert();
-  //   };
-  // }, [renderText]);
-
-  // useEffect(() => {
-  //   if (scrollDirection === 1) {
-  //     if (scrollFrame > activeStepIndex) {
-  //       setActiveStepIndex(activeStepIndex + 1);
-  //     }
-  //   } else {
-  //     if (scrollFrame < activeStepIndex && activeStepIndex !== 0) {
-  //       setActiveStepIndex(activeStepIndex - 1);
-  //     }
-  //   }
-  // }, [activeStepIndex, scrollDirection, scrollFrame]);
 
   return (
     <div className="flex flex-col justify-center items-center relative">
@@ -149,10 +75,7 @@ export default function OurHistory() {
             className="relative py-[60px] w-full overflow-hidden"
           >
             <div className="ourHistoryDivider w-[1px] h-[calc(100%+100px)] absolute -top-[7px] md:left-[32%] left-[20%]" />
-            {ABOUT_HISTORY.map(({ year, event }, index) => {
-              // const isActive = activeStepIndex === index;
-              // const opacityValue = Math.abs(activeStepIndex - index) || 1;
-
+            {ABOUT_HISTORY.map(({ year, event }) => {
               return (
                 <div
                   key={year}
@@ -163,7 +86,6 @@ export default function OurHistory() {
                       relative
                       text-white
                     `}
-                  // style={{ opacity: 1 / opacityValue }}
                 >
                   <div
                     className={`
@@ -204,7 +126,7 @@ export default function OurHistory() {
                       leading-[150%]
                     `}
                   >
-                    {parse(event)}
+                    <Trans>{t(event)}</Trans>
                   </div>
                 </div>
               );

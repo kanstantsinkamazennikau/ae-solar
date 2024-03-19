@@ -8,6 +8,8 @@ import {
 } from "@/app/[locale]/company/constants";
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   CONSTRUCTOR_CONFIGURE_YOUR_MODEL,
   HEADER_CONFIGURE_YOUR_MODEL,
@@ -16,10 +18,19 @@ import { isIOS } from "@/app/[locale]/utils/isIOS";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useLayoutEffect, useState } from "react";
+import { Trans } from "react-i18next";
 
 export default function PortfolioBackground() {
   const { videoRef } = useVideoIntersection();
-  const isIOSDevice = isIOS();
+  const [isIOSDevice, setIsIOSDevice] = useState(false);
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
+  useLayoutEffect(() => {
+    setIsIOSDevice(isIOS());
+  }, []);
 
   return (
     <div className="xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[60px] md:flex-row flex-col flex justify-center items-start max-w-[1360px] mx-auto">
@@ -92,7 +103,7 @@ export default function PortfolioBackground() {
                   text-base-red
                 "
               >
-                {ABOUT_OUR_PORTFOLIO}
+                {t("Our portfolio")}
               </p>
               <p
                 className="
@@ -105,7 +116,7 @@ export default function PortfolioBackground() {
                   -tracking-[1.08px]
                 "
               >
-                {ABOUT_OUR_GOES_BEYOND}
+                {t("Goes beyond")}
               </p>
             </div>
 
@@ -115,20 +126,23 @@ export default function PortfolioBackground() {
                   leading-[150%]
                   [font-size:_clamp(16px,1.5vw,24px)]
                   max-md:text-center
+                  text-dark-gray-900
+                  font-normal
                 "
             >
-              {styleMatchingText(
-                ABOUT_OUR_DESIGN,
-                ABOUT_OUR_DESIGN_HIGHLIGHT,
-                "text-dark-gray-900 font-normal",
-                "text-white font-bold"
-              )}
+              <Trans
+                components={{
+                  white: <span className="text-white font-bold" />,
+                }}
+              >
+                {t("We innovate")}
+              </Trans>
             </p>
           </div>
           <Link href="/products">
             <Button externalStyle="max-[768px]:!py-4 !py-[14px] !px-[26]">
               <span className="[font-size:_clamp(20px,1.5vw,20px)] font-semibold -tracking-[0.2px]">
-                {HEADER_CONFIGURE_YOUR_MODEL}
+                {t("All Products")}
               </span>
             </Button>
           </Link>
