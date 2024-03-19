@@ -1,4 +1,7 @@
 {
+  "MetadataDescriptionPublishers": "Informationen für den Herausgeber",
+  "MetadataDescriptionImprint": "Impressum Information",
+  "MetadataDescriptionHome": "Deutscher TIER1 Hersteller Für hochwertige Solarmodule",
   "Company": "Unternehmen",
   "Manufacturer": "Hersteller",
   "News": "Nachrichten",
@@ -258,7 +261,7 @@
   "Recent Posts": "Neueste Beiträge",
   "Documents You Need to Know": "Dokumente, <red>die Sie kennen sollten</red>",
   "Got a Question We have solutions": "Sie haben Fragen? <red>Wir haben Antworten.</red>",
-  "Publisher's Information": "Publisher's <red>Information</red>",
+  "Publisher's Information": "Informationen für den <red>Herausgeber</red>",
   "Imprint Information": "Impressum <red>Information</red>",
   "Categories": "Kategorien",
   "FAQCategory1": "AESOLAR Unternehmens- und Produktübersicht",

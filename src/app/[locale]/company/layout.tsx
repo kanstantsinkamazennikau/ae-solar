@@ -1,40 +1,49 @@
 import ClientLayout from "@/app/[locale]/documents/components/ClientLayout";
-import { url } from "inspector";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { headers } from "next/headers";
+import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 
 const mapTitleWithDocumentsCategory = {
-  faq: { title: "FAQ", description: "Got a Question? We Have Solutions" },
+  faq: { title: "FAQ", description: "We have solutions" },
   publishers_info: {
-    title: "Publishers Info",
-    description: "Publisher's Information",
+    title: "Publisher's",
+    description: "MetadataDescriptionPublishers",
   },
   imprint: {
-    title: "Imprint Info",
-    description: "Imprint Information",
+    title: "Imprint",
+    description: "MetadataDescriptionImprint",
   },
   manufacturer: {
-    title: ` Manufacturer`,
-    description: `Quality Delivered Everytime`,
+    title: "Manufacturer",
+    description: "Harnessing the Sun, Empowering the World",
   },
   blog: {
-    title: `Blog`,
-    description: `Read Our Thoughts On the Blog`,
+    title: "News",
+    description: "Read About Us",
   },
   company: {
-    title: `Company`,
-    description: `lluminating Your Journey towards a Greener Tomorrow`,
+    title: "Company",
+    description: "Company Illuminating",
   },
 };
 
-export async function generateMetadata() {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: LocaleTypes };
+}) {
   const url = headers().get("x-url")!.split("/");
-
+  const { t } = await serverTranslation(locale, "translation");
   const documentsCategory = url[
     url.length - 1
   ] as keyof typeof mapTitleWithDocumentsCategory;
 
-  const title = `AE-Solar | ${mapTitleWithDocumentsCategory[documentsCategory]?.title}`;
-  const description = `AE-Solar | ${mapTitleWithDocumentsCategory[documentsCategory]?.description}`;
+  const title = `AE-Solar | ${t(
+    mapTitleWithDocumentsCategory[documentsCategory]?.title
+  )}`;
+  const description = `AE-Solar | ${t(
+    mapTitleWithDocumentsCategory[documentsCategory]?.description
+  )}`;
 
   return {
     title,
