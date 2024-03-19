@@ -52,8 +52,8 @@ export default function OurHistory() {
       <BasicWidthContainer>
         <div id="history">
           <TwoTierHeading
-            tierOneHeading={ABOUT_OUR_HISTORY}
-            tierTwoHeading={ABOUT_THROUGH}
+            tierOneHeading={t("Our History")}
+            tierTwoHeading={t("Through the Years")}
             align="center"
             reverseColor
             marginBottomNone
@@ -142,7 +142,7 @@ export default function OurHistory() {
                 <div
                   className={`text-base-red [font-size:_clamp(14px,1vw,16px)]`}
                 >
-                  {HISTORY_READ_FULL_STORY}
+                  {t("Read Full History")}
                 </div>
                 <Image
                   src="/images/techInfo/expand.svg"
