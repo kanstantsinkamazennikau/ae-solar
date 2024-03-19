@@ -12,6 +12,8 @@ import {
   BLOG_READ_THOUGHTS,
 } from "@/app/[locale]/company/news/constants";
 import TagsFilter from "@/app/[locale]/company/news/components/TagsFilter";
+import getLocale from "@/app/[locale]/utils/getLocale";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
 
 async function getOutstaticDirectory() {
   return path.join(process.cwd(), "outstatic");
@@ -80,17 +82,20 @@ export default async function Blog({
   const blogPostsAmount = await getBlogPostsAmount(searchParamsTags);
   const tags = await getBlogTags();
 
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
+
   if (!blogPostsAmount)
     return (
       <>
         <HeadingWithBackground
           backgroundImage="/images/about/blog/blogBackground.png"
-          tierOneHeading={BLOG_READ_THOUGHTS}
-          tierTwoHeading={BLOG_ON_THE_BLOG}
+          tierOneHeading={t("Read About Us")}
+          tierTwoHeading={t("On the Media")}
           mobileBackgroundImage="/images/about/blog/blogMobileBackground.png"
         />
         <div className="text-center [font-size:_clamp(20px,2vw,32px)]">
-          No posts
+          {t("No posts")}
         </div>
       </>
     );
@@ -99,8 +104,8 @@ export default async function Blog({
     <>
       <HeadingWithBackground
         backgroundImage="/images/about/blog/blogBackground.png"
-        tierOneHeading={BLOG_READ_THOUGHTS}
-        tierTwoHeading={BLOG_ON_THE_BLOG}
+        tierOneHeading={t("Read About Us")}
+        tierTwoHeading={t("On the Media")}
         mobileBackgroundImage="/images/about/blog/blogMobileBackground.png"
       />
       <div className="flex w-full justify-center flex-col items-center md:mt-0 -mt-[60px] pb-20">
