@@ -2428,171 +2428,143 @@ export const DOCUMENTS_FAQ_HAVE_A_QUESTION = "Got a Question?";
 export const DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS = "We Have Solutions";
 export const DOCUMENTS_FAQ_FILES = [
   {
-    category: "AESOLAR Company and Product Overview",
+    category: "FAQCategory1",
     data: [
       {
-        question: "What does TIER 1 mean?",
-        answer:
-          "The Bloomberg New Energy Finance (BNEF) ranking allows for a transparent differentiation among the numerous PV manufacturers in the market. The title Tier-1 manufacturer is one of the highest distinctions in the industry.",
+        question: "FAQCategory1Question1",
+        answer: "FAQCategory1Answer1",
       },
       {
-        question: "Is AESOLAR listed as TIER 1?",
-        answer: "Yes",
+        question: "FAQCategory1Question2",
+        answer: "FAQCategory1Answer2",
       },
       {
-        question: "What modules does AESOLAR produce?",
-        answer:
-          "AESOLAR offers a wide range of solar modules, including monocrystalline, polycrystalline, PERC, TOPCon, and HJT modules.",
+        question: "FAQCategory1Question3",
+        answer: "FAQCategory1Answer3",
       },
       {
-        question: "What is the production capacity of AESOLAR?",
-        answer:
-          "Our annual production capacity is 2 gigawatts, with expansion plans for the future",
+        question: "FAQCategory1Question4",
+        answer: "FAQCategory1Answer4",
       },
       {
-        question: "Where does AESOLAR produce?",
-        answer:
-          "Our production facilities are located in China and Turkey, supplemented by planned production facilities in Germany.",
+        question: "FAQCategory1Question5",
+        answer: "FAQCategory1Answer5",
       },
       {
-        question: "Why buy AESOLAR modules?",
-        answer:
-          "AESOLAR modules are characterized by high quality, efficiency, reliability, excellent warranty terms, and outstanding customer service.",
+        question: "FAQCategory1Question6",
+        answer: "FAQCategory1Answer6",
       },
       {
-        question:
-          "How does AESOLAR's quality differ from other TIER 1 manufacturers?",
-        answer:
-          "AESOLAR stands out from other TIER 1 manufacturers due to our advanced technology, rigorous quality controls, and innovation. This justifies the higher price of our products, reflecting superior performance and durability.",
+        question: "FAQCategory1Question7",
+        answer: "FAQCategory1Answer7",
       },
       {
-        question: "Does AESOLAR produce cells?",
-        answer:
-          "No, AESOLAR does not produce solar cells itself. However, we exclusively offer a wide range of solar cells of all technologies, from which our latest and most advanced modules result.",
+        question: "FAQCategory1Question8",
+        answer: "FAQCategory1Answer8",
       },
       {
-        question: "Why do you have a polar bear as a mascot?",
-        answer:
-          "The polar bear symbolizes our commitment to environmental protection and the fight against climate change. It represents our dedication to sustainability and renewable energies.",
+        question: "FAQCategory1Question9",
+        answer: "FAQCategory1Answer9",
       },
     ],
   },
   {
-    category: "Product Specifications and Technologies",
+    category: "FAQCategory2",
     data: [
       {
-        question: "What is PERC?",
-        answer:
-          "Passivated Emitter and Rear Cell is a technology designed to enhance the efficiency of solar cells.",
+        question: "FAQCategory2Question1",
+        answer: "FAQCategory2Answer1",
       },
       {
-        question: "What is TOPCon?",
-        answer:
-          "Tunnel Oxide Passivated Contact - is an advanced technology aimed at improving the efficiency and lifespan of solar cells",
+        question: "FAQCategory2Question2",
+        answer: "FAQCategory2Answer2",
       },
       {
-        question: "What is HJT??",
-        answer:
-          "Heterojunction Technology combines monocrystalline and amorphous silicon to increase efficiency",
+        question: "FAQCategory2Question3",
+        answer: "FAQCategory2Answer3",
       },
       {
-        question: "What is BIPV?",
-        answer:
-          "Building Integrated Photovoltaics refers to the integration of solar technology into building structures.",
+        question: "FAQCategory2Question4",
+        answer: "FAQCategory2Answer4",
       },
       {
-        question: "What does PVT mean?",
-        answer:
-          "Photovoltaic Thermal denotes the combination of photovoltaic and thermal energy generation, as seen in our Neptune series..",
+        question: "FAQCategory2Question5",
+        answer: "FAQCategory2Answer5",
       },
       {
-        question: "Are there colored modules?",
-        answer: "Yes, we offer colored modules to meet aesthetic requirements.",
+        question: "FAQCategory2Question6",
+        answer: "FAQCategory2Answer6",
       },
       {
-        question: "What does Weak Light and Low-Temperature Performance mean?",
-        answer:
-          "These terms describe the performance of solar modules under conditions of low sunlight and at low temperatures. AESOLAR modules are designed to operate efficiently even under such conditions.",
+        question: "FAQCategory2Question7",
+        answer: "FAQCategory2Answer7",
       },
     ],
   },
   {
-    category: "Purchase and Availability",
+    category: "FAQCategory3",
     data: [
       {
-        question: "Where can I buy AESOLAR modules?",
-        answer:
-          "Our modules are available through a network of distributors and dealers. Please contact us directly for more information.",
+        question: "FAQCategory3Question1",
+        answer: "FAQCategory3Answer1",
       },
     ],
   },
   {
-    category: "Market Strategy and Partnerships",
+    category: "FAQCategory4",
     data: [
       {
-        question: "What is your market strategy?",
-        answer:
-          "Our strategy focuses on providing high-quality solar modules, building strong partnerships, and concentrating on innovation and customer service.",
+        question: "FAQCategory4Question1",
+        answer: "FAQCategory4Answer1",
       },
       {
-        question: "How many distribution partners do you have per country?",
-        answer:
-          "The number of distribution partners varies depending on the market size and dynamics.",
+        question: "FAQCategory4Question2",
+        answer: "FAQCategory4Answer2",
       },
       {
-        question:
-          "How can we protect our market share if we become your distribution partner?",
-        answer:
-          "Through exclusive distribution territories, marketing support, and product training, we offer our partners the opportunity to effectively protect and expand their market share.",
+        question: "FAQCategory4Question3",
+        answer: "FAQCategory4Answer3",
       },
     ],
   },
   {
-    category: "General information about solar panels",
+    category: "FAQCategory5",
     data: [
       {
-        question: "What is a solar panel and how does it work?",
-        answer:
-          "A solar panel converts sunlight into electricity based on the photovoltaic effect.",
+        question: "FAQCategory5Question1",
+        answer: "FAQCategory5Answer1",
       },
       {
-        question: "How long do solar panels last?",
-        answer:
-          "Typically, 25 to 30 years, with a slight decrease in efficiency over time.",
+        question: "FAQCategory5Question2",
+        answer: "FAQCategory5Answer2",
       },
       {
-        question: "How much do solar panels cost?",
-        answer: "Costs vary depending on size, type, and manufacturer.",
+        question: "FAQCategory5Question3",
+        answer: "FAQCategory5Answer3",
       },
       {
-        question: "Can solar panels generate energy in any weather?",
-        answer:
-          "Yes, even in cloudy weather, although efficiency is higher in direct sunlight.",
+        question: "FAQCategory5Question4",
+        answer: "FAQCategory5Answer4",
       },
       {
-        question: "Do I need a permit to install solar panels?",
-        answer: "Often, a permit is required depending on local regulations.",
+        question: "FAQCategory5Question5",
+        answer: "FAQCategory5Answer5",
       },
       {
-        question:
-          "How does the installation of solar panels affect the value of my home?",
-        answer:
-          "The installation can increase the value of a home, especially through improved energy efficiency.",
+        question: "FAQCategory5Question6",
+        answer: "FAQCategory5Answer6",
       },
       {
-        question: "How environmentally friendly are solar panels?",
-        answer:
-          "Solar panels are highly environmentally friendly, as they utilize renewable energy and produce no greenhouse gases.",
+        question: "FAQCategory5Question7",
+        answer: "FAQCategory5Answer7",
       },
       {
-        question: "Can I install solar panels myself?",
-        answer:
-          "Installation is possible, but professional installation is recommended.",
+        question: "FAQCategory5Question8",
+        answer: "FAQCategory5Answer8",
       },
       {
-        question: "How maintenance-intensive are solar panels?",
-        answer:
-          "Solar panels require little maintenance, making them a practical solution for sustainable energy.",
+        question: "FAQCategory5Question9",
+        answer: "FAQCategory5Answer9",
       },
     ],
   },

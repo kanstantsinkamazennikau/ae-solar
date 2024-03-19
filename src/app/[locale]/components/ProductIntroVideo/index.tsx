@@ -392,7 +392,7 @@ export default function ProductIntroVideo() {
         <SubNavigation isProductionIntroBlock />
       </div>
       {/* )} */}
-      <div ref={ref}></div>
+      <div ref={ref} />
       <Button onClick={handleClick}>{t("All Products")}</Button>
     </div>
   );
