@@ -12,13 +12,19 @@ import {
   DocumentsTypesPresentation,
   DocumentsTypesWithSubCategories,
 } from "@/app/[locale]/documents/components/types";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   DOCUMENTS_FILES,
   DOCUMENT_SUBCATEGORIES_SPLITTER,
 } from "@/app/[locale]/utils/constants";
+import { useParams } from "next/navigation";
 import { useCallback, useContext, useEffect } from "react";
 
 export default function Documents() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   const {
     selectedCategoryIndex,
     documentsAccordionActiveIndex,
@@ -141,7 +147,7 @@ export default function Documents() {
                   : "text-dark-gray-900"
               } `}
           >
-            {docFile.category.split(DOCUMENT_SUBCATEGORIES_SPLITTER)[0]}
+            {t(docFile.category)}
             <p className="text-[#505050] font-semibold leading-[130%] [font-size:_clamp(12px,1.5vw,26px)] ml-2 mb-4">
               {docFile.type !== "SubCategories"
                 ? docFile.data.length

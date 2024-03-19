@@ -280,7 +280,6 @@
   "FAQCategory1Answer8": "Nein, AESOLAR produziert keine Solarzellen selbst. Wir bieten jedoch ausschließlich eine breite Palette von Solarzellen aller Technologien an, aus denen unsere neuesten und fortschrittlichsten Module resultieren.",
   "FAQCategory1Question9": "Warum haben Sie einen Eisbären als Maskottchen?",
   "FAQCategory1Answer9": "Der Eisbär symbolisiert unser Engagement für den Umweltschutz und den Kampf gegen den Klimawandel. Er steht für unsere Hingabe zur Nachhaltigkeit und erneuerbaren Energien.",
-
   "FAQCategory2": "Produktspezifikationen und Technologien",
   "FAQCategory2Question1": "Was ist PERC?",
   "FAQCategory2Answer1": "Passivated Emitter and Rear Cell ist eine Technologie, die entwickelt wurde, um die Effizienz von Solarzellen zu verbessern.",
@@ -296,11 +295,9 @@
   "FAQCategory2Answer6": "Ja, wir bieten farbige Module an, um ästhetische Anforderungen zu erfüllen.",
   "FAQCategory2Question7": "Was bedeutet schwache Licht- und Niedertemperaturleistung?",
   "FAQCategory2Answer7": "Diese Begriffe beschreiben die Leistung von Solarmodulen unter Bedingungen mit wenig Sonnenlicht und bei niedrigen Temperaturen. AESOLAR-Module sind so konzipiert, dass sie auch unter solchen Bedingungen effizient arbeiten können.",
-
   "FAQCategory3": "Kauf und Verfügbarkeit",
   "FAQCategory3Question1": "Wo kann ich AESOLAR-Module kaufen?",
   "FAQCategory3Answer1": "Unsere Module sind über ein Netzwerk von Distributoren und Händlern erhältlich. Bitte kontaktieren Sie uns direkt für weitere Informationen.",
-
   "FAQCategory4": "Market Strategy and Partnerships",
   "FAQCategory4Question1": "Was ist Ihre Marktstrategie?",
   "FAQCategory4Answer1": "Unsere Strategie konzentriert sich darauf, hochwertige Solarmodule anzubieten, starke Partnerschaften aufzubauen und sich auf Innovation und Kundenservice zu konzentrieren.",
@@ -308,7 +305,6 @@
   "FAQCategory4Answer2": "Die Anzahl der Vertriebspartner variiert je nach Marktvolumen und Dynamik.",
   "FAQCategory4Question3": "Wie können wir unseren Marktanteil schützen, wenn wir Ihr Vertriebspartner werden?",
   "FAQCategory4Answer3": "Durch exklusive Vertriebsgebiete, Marketingunterstützung und Produktschulungen bieten wir unseren Partnern die Möglichkeit, ihren Marktanteil effektiv zu schützen und auszubauen.",
-
   "FAQCategory5": "Allgemeine Informationen über Solarmodule",
   "FAQCategory5Question1": "Was ist ein Solarmodul und wie funktioniert es?",
   "FAQCategory5Answer1": "Ein Solarmodul wandelt Sonnenlicht mithilfe des photovoltaischen Effekts in Elektrizität um.",
@@ -333,5 +329,11 @@
   "No result for": "Kein Ergebnis für: ",
   "Legal": "Impressum",
   "Filter": "Filter",
-  "Reset": "Zurücksetzen"
+  "Reset": "Zurücksetzen",
+  "Presentation": "Präsentation",
+  "Technical Data": "Technische Daten",
+  "Datasheets": "Datenblätter",
+  "Installation Manual": "Installationsanleitung",
+  "NFC-chips": "NFC-chips",
+  "Certificates": "Certificates"
 }

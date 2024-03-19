@@ -2,6 +2,9 @@ import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import Presentation from "@/app/[locale]/documents/components/Presentation";
 import Text from "@/app/[locale]/documents/components/Text";
 import { DocumentsTypesWithSubCategories } from "@/app/[locale]/documents/components/types";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useParams } from "next/navigation";
 import { useContext } from "react";
 
 export default function SubCategories({
@@ -9,8 +12,8 @@ export default function SubCategories({
 }: {
   documents: DocumentsTypesWithSubCategories;
 }) {
-  const { selectedCategoryIndex, documentsAccordionActiveIndex } =
-    useContext(DocumentsContext);
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <div>
@@ -25,7 +28,7 @@ export default function SubCategories({
                 className="min-[920px]:scroll-mt-[215px] scroll-mt-[140px]"
               >
                 <p className="[font-size:_clamp(16px,1.5vw,24px)] leading-[130%] font-semibold mb-4 ">
-                  {category}
+                  {t(category)}
                 </p>
                 <div className="grid lg:grid-cols-3 min-[920px]:grid-cols-2 max-[560px]:grid-cols-2 min-[560px]:grid-cols-3 gap-[6px] pb-10">
                   {data.map(({ link, linkTitle, title, image }) => (
@@ -45,7 +48,7 @@ export default function SubCategories({
               id={category}
             >
               <p className="[font-size:_clamp(16px,1.5vw,24px)] leading-[130%] font-semibold mb-4">
-                {category}
+                {t(category)}
               </p>
               <div className=" grid xl:grid-cols-2 grid-cols-1">
                 {data.map(({ linkTitle, link }) => (

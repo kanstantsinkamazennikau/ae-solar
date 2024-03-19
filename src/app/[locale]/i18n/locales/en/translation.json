@@ -329,5 +329,11 @@
   "No result for": "No result for: ",
   "Legal": "Legal",
   "Filter": "Filter",
-  "Reset": "Reset"
+  "Reset": "Reset",
+  "Presentation": "Presentation",
+  "Technical Data": "Technical Data",
+  "Datasheets": "Datasheets",
+  "Installation Manual": "Installation Manual",
+  "NFC-chips": "NFC-chips",
+  "Certificates": "Certificates"
 }
