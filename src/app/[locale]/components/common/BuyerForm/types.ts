@@ -2,6 +2,7 @@ import {
   FORMS_FIELDS,
   FORM_FIELDS_INPUT_TYPES,
 } from "@/app/[locale]/utils/constants";
+import { ReactElement } from "react";
 import {
   FieldErrors,
   FieldValues,
@@ -23,7 +24,7 @@ export interface FormFileds {
 
 export interface BuyerFormProps {
   submitFunction: (data: FieldValues) => Promise<void>;
-  formHeader: string;
+  formHeader: string | ReactElement<any, any>;
   formFields: FormFileds[];
   defaultValues: {
     [key: string]: string;
@@ -42,7 +43,7 @@ export interface BuyerFormProps {
 }
 
 export interface InputsProps {
-  formHeader: string;
+  formHeader: string | ReactElement<any, any>;
   formFields: FormFileds[];
   register: UseFormRegister<FieldValues>;
   inputsRules: RegisterOptions;

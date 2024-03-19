@@ -4,16 +4,21 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
 import ConsultForm from "@/app/[locale]/contacts/components/ConsultForm";
 import { CONTACTS_OFFICES } from "@/app/[locale]/contacts/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   FOOTER_GERMAN_BRAND,
   FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
 } from "@/app/[locale]/utils/constants";
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export default function ContactsList() {
+  const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
+  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <BasicWidthContainer>
@@ -24,6 +29,11 @@ export default function ContactsList() {
             <div
               className="
                 p-7
+                text-sm
+                font-normal
+                leading-[150%]
+                font-walsheim
+                text-[#747474]
                 min-[920px]:pt-0
                 max-[920px]:border
                 max-[920px]:border-solid
@@ -35,12 +45,13 @@ export default function ContactsList() {
                 z-10
               "
             >
-              {styleMatchingText(
-                FOOTER_GERMAN_BRAND,
-                FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-                "text-sm font-normal leading-[130%] font-walsheim text-[#747474]",
-                "text-dark-gray-900 font-bold"
-              )}
+              <Trans
+                components={{
+                  bold: <span className="text-dark-gray-900 font-bold" />,
+                }}
+              >
+                {t("German Brand")}
+              </Trans>
               <hr className="mt-6 border-[#131313] min-[920px]:hidden" />
             </div>
           </div>
@@ -50,9 +61,9 @@ export default function ContactsList() {
           {CONTACTS_OFFICES.map(({ office, contacts }) => (
             <div key={office} className="w-full mb-[40px]">
               <hr className="bg-[#131313] h-[1px] border-none mb-[60px]" />
-              <div className="min-[560px]:grid grid-cols-[clamp(100px,20%,280px)_auto] gap-4 w-full max-[920px]:justify-center flex flex-col">
+              <div className="min-[560px]:grid grid-cols-[clamp(35%,20%,280px)_auto] gap-4 w-full max-[920px]:justify-center flex flex-col">
                 <div className="[font-size:_clamp(20px,2.5vw,40px)] min-[560px]:[word-spacing:1000px] break-words">
-                  {office}
+                  {t(office)}
                 </div>
                 <div className="flex flex-col">
                   {contacts.map(({ title, icon, info, linkTo }) => (
@@ -60,7 +71,7 @@ export default function ContactsList() {
                       key={info}
                       className="
                         min-[560px]:grid
-                        grid-cols-[clamp(100px,20%,160px)_auto]
+                        grid-cols-[clamp(35%,20%,160px)_auto]
                         justify-start
                         min-[560px]:items-center
                         min-[560px]:gap-4
@@ -79,7 +90,7 @@ export default function ContactsList() {
                           priority
                         />
                         <div className="[font-size:_clamp(11px,1.5vw,20px)] font-semibold">
-                          {title}
+                          {t(title)}
                         </div>
                       </div>
                       <div

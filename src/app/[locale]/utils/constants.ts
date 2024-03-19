@@ -1922,7 +1922,7 @@ export const CONSULT_FORM_FIELDS: FormFileds[] = [
     type: "input",
   },
   {
-    formTitle: "Please, contact me at",
+    formTitle: "Contact me at",
     placeholder: "your e-mail",
     name: "email",
     type: "input",
