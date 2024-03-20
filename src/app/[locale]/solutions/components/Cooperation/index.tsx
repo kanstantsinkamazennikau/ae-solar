@@ -1,8 +1,12 @@
+"use client";
+
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import Logo from "@/app/[locale]/components/common/Logo";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import CooperationStats from "@/app/[locale]/solutions/components/Cooperation/CooperationStats";
 import {
   SOLUTIONS_COOPERATION,
@@ -20,9 +24,14 @@ import {
 import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Fragment } from "react";
+import { Trans } from "react-i18next";
 
 export default function Cooperation() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -35,8 +44,15 @@ export default function Cooperation() {
       <div className="flex flex-col items-center">
         <BasicWidthContainer>
           <TwoTierHeading
-            tierOneHeading={SOLUTIONS_WE_ARE_OPEN}
-            tierTwoHeading={SOLUTIONS_TO_COOPERATION}
+            tierOneHeading={
+              <Trans
+                components={{
+                  red: <p className="text-[#B30006]" />,
+                }}
+              >
+                {t("We Are Open To cooperation")}
+              </Trans>
+            }
             align="left"
             size="small"
             externalStyle="[font-size:_clamp(40px,6vw,96px)!important] [&>*:last-child]:[font-size:_clamp(40px,6vw,96px)!important]"
@@ -88,9 +104,11 @@ export default function Cooperation() {
                     >
                       <div className="flex gap-6 items-start [font-size:_clamp(30px,3.5vw,64px)] leading-[100%] ">
                         <span className="font-semibold -tracking-[1.08px]">
-                          {clientType.split(/\r?\n|\r|\n/g).map((string) => (
-                            <div key={string}>{string}</div>
-                          ))}
+                          {t(clientType)
+                            .split(/\r?\n|\r|\n/g)
+                            .map((string) => (
+                              <div key={string}>{string}</div>
+                            ))}
                         </span>
                       </div>
                       <p
@@ -101,14 +119,14 @@ export default function Cooperation() {
                         font-walsheim
                       "
                       >
-                        {description}
+                        {t(description)}
                       </p>
                       <div className="flex gap-4 items-baseline">
                         <div className="flex flex-col gap-3">
                           {links.map(({ link, title }) => (
                             <LinkWithArrow
                               key={link}
-                              label={title}
+                              label={t(title)}
                               href={link}
                               externalStyle="[font-size:_clamp(16px,1.5vw,20px)!important] font-semibold leading-[100%] -tracking-[0.2px]"
                               arrowStyle="w-[14px] h-[14px]"

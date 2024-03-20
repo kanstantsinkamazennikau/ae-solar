@@ -12,34 +12,27 @@ export const SOLUTIONS_WE_ARE_OPEN = "We Are Open";
 export const SOLUTIONS_TO_COOPERATION = "To cooperation";
 export const SOLUTIONS_COOPERATION = [
   {
-    clientType: `Invest in
-    Our Company`,
+    clientType: `Invest in Our Company`,
     picture: "investors.png",
-    description:
-      "Be a part of our vision. Your investment in AESOLAR supports innovative solar technologies and contributes to a cleaner future. Discover our corporate strategy and how you can benefit.",
+    description: "Be a part of vision",
     links: [{ title: "Invest in AESOLAR", link: "/contacts?type=investor" }],
   },
   {
-    clientType: `Invest in
-    Solar Farms`,
+    clientType: `Invest in Solar Farms`,
     picture: "investorsPark.png",
-    description:
-      "Join us in investing in the future. Our solar farms symbolize sustainability and profitability. Find out more about our projects and how your investment can help protect the environment.",
+    description: "Join in investing",
     links: [{ title: "Invest in AESOLAR", link: "/contacts?type=investor" }],
   },
   {
     clientType: "Installers",
     picture: "installers.png",
-    description:
-      "Expand your portfolio with AESOLAR. Our high-quality solar modules, shaped by German engineering, offer diversity and top-tier quality. Join our network and rely on innovative solar technology.",
+    description: "Expand portfolio",
     links: [{ title: "Discover Our Products", link: "/products" }],
   },
   {
-    clientType: `End Consumer
-    and Homeowners`,
+    clientType: `End Consumer and Homeowners`,
     picture: "consumer.png",
-    description:
-      "Learn how AESOLAR can empower your independence. Our solar modules offer an efficient, eco-friendly energy solution for your home. Discover our products and start your sustainable journey.",
+    description: "Learn AESOLAR",
     links: [{ title: "Discover Our Products", link: "/products" }],
   },
 ];

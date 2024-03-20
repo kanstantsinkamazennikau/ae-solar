@@ -1,13 +1,18 @@
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import {
   SOLUTIONS_DISCOVER_AESOLAR,
   SOLUTIONS_DISCOVER_YOUR_PARTNER,
   SOLUTIONS_LEADING_PROVIDER,
   SOLUTIONS_LEARN_MORE,
 } from "@/app/[locale]/solutions/constants";
+import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 
-export default function Discover() {
+export default async function Discover() {
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
+
   return (
     <div className="-mt-[80px] overflow-hidden 2xl:-mb-[120px] xl:-mb-[60px] md:-mb-[20px] mb-[100px] flex md:flex-row flex-col justify-center">
       <Image
@@ -49,20 +54,21 @@ export default function Discover() {
         "
       >
         <div className="flex flex-col gap-4 xl:max-w-[1100px] lg:max-w-[800px] min-[400px]:max-w-[600px] max-w-[240px] text-center">
+          t{}
           <div className=" text-base-red md:-tracking-[1.2px] leading-[120%] [font-size:_clamp(20px,3vw,36px)] font-medium">
-            {SOLUTIONS_DISCOVER_AESOLAR}
+            {t("Discover AESOLAR")}
           </div>
           <div className="[font-size:_clamp(30px,5.5vw,96px)] leading-[100%] font-semibold">
-            {SOLUTIONS_DISCOVER_YOUR_PARTNER}
+            {t("Your Partner in a Sustainable Future")}
           </div>
         </div>
 
         <div className="max-w-[538px] flex flex-col items-center lg:gap-6 gap-4">
           <p className="[font-size:_clamp(16px,1.5vw,20px)] font-walsheim font-medium leading-[150%] text-center">
-            {SOLUTIONS_LEADING_PROVIDER}
+            {t("Leading Provider")}
           </p>
           <LinkWithArrow
-            label={SOLUTIONS_LEARN_MORE}
+            label={t("Learn more About Us")}
             href="/company"
             externalStyle="[font-size:_clamp(16px,1vw,20px)!important] font-medium"
           />

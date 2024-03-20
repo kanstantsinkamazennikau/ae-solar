@@ -111,7 +111,7 @@ export default function BusinessMap() {
               {ABOUT_MAP_DESIGNATIONS.map(({ icon, designation, location }) => (
                 <div
                   key={designation}
-                  className={`flex md:gap-2 gap-1 break-all ${
+                  className={`flex md:gap-2 gap-1 hyphens-auto ${
                     location ? "items-start" : "items-center"
                   }`}
                 >

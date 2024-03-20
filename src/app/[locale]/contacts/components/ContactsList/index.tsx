@@ -62,7 +62,7 @@ export default function ContactsList() {
             <div key={office} className="w-full mb-[40px]">
               <hr className="bg-[#131313] h-[1px] border-none mb-[60px]" />
               <div className="min-[560px]:grid grid-cols-[clamp(35%,20%,280px)_auto] gap-4 w-full max-[920px]:justify-center flex flex-col">
-                <div className="[font-size:_clamp(20px,2.5vw,40px)] min-[560px]:[word-spacing:1000px] break-words">
+                <div className="[font-size:_clamp(20px,2.5vw,40px)] min-[560px]:[word-spacing:1000px] hyphens-auto">
                   {t(office)}
                 </div>
                 <div className="flex flex-col">
@@ -89,7 +89,7 @@ export default function ContactsList() {
                           height={16}
                           priority
                         />
-                        <div className="[font-size:_clamp(11px,1.5vw,20px)] font-semibold">
+                        <div className="[font-size:_clamp(11px,1.5vw,20px)] font-semibold hyphens-auto">
                           {t(title)}
                         </div>
                       </div>
