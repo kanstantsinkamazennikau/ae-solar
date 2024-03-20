@@ -38,7 +38,6 @@ export default function GetInTouch({
     useState<keyof typeof matchPartnerTypeWithArticle>("partner");
   const router = useRouter();
 
-  //TODO fill form with partner type value for "intrested in" dropdown
   const handleClick = () => {
     router.push(`/contacts?type=${clientType}`);
   };
@@ -168,14 +167,16 @@ export default function GetInTouch({
                 <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
                   {t("Fueling growth together")}
                 </div>
-                <div className="[font-size:_clamp(26px,5vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1100px] leading-[120%] overflow-hidden">
-                  <span>{t("Become")}</span>
-                  <span
-                    className="relative animate-partnerTransition transition-all"
-                    key={clientType}
-                  >
-                    {t(clientType + "WithArticle")}
-                  </span>
+                <div className="flex flex-col justify-center items-center [font-size:_clamp(26px,5vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1100px] leading-[120%]">
+                  <div className="md:whitespace-nowrap overflow-y-hidden">
+                    <span>{t("Become")}</span>
+                    <span
+                      className="relative animate-partnerTransition transition-all"
+                      key={clientType}
+                    >
+                      {t(clientType + "WithArticle")}
+                    </span>
+                  </div>
                   <p>{t("In our solar vision")}</p>
                 </div>
               </>

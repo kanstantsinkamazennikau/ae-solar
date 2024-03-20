@@ -1,7 +1,11 @@
+"use client";
+
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { Model } from "@/app/[locale]/context/constructorContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Panel from "@/app/[locale]/products/components/PanelsList/Panel";
 import {
   PRODUCT_TIME_TO_CHOOSE,
@@ -13,8 +17,13 @@ import {
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export default function PanelsList() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -27,9 +36,17 @@ export default function PanelsList() {
       "
     >
       <TwoTierHeading
-        tierOneHeading={PRODUCT_TIME_TO_CHOOSE}
-        tierTwoHeading={PRODUCT_YOUR_MODULE}
+        tierOneHeading={
+          <Trans
+            components={{
+              red: <p className="text-[#B30006]" />,
+            }}
+          >
+            {t("Time To Choose")}
+          </Trans>
+        }
         align="center"
+        reverseColor
         externalStyle="[font-size:_clamp(40px,6vw,102px)!important] font-semibold mb-[60px]"
       />
       <BasicWidthContainer>

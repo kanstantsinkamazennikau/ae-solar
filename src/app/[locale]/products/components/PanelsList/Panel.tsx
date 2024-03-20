@@ -1,6 +1,8 @@
 "use client";
 
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { PanelProps } from "@/app/[locale]/products/components/PanelsList/types";
 import {
   PRODUCT_DESCRIPTIONS,
@@ -10,6 +12,7 @@ import { PRODUCT_INTRO_LEARN_MORE } from "@/app/[locale]/utils/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useLayoutEffect, useState } from "react";
 const PanelVideo = dynamic(() => import("./PanelVideo"), {
   ssr: false,
@@ -19,6 +22,9 @@ export default function Panel({ panel }: PanelProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isIOSDevice, setIsIOSDevice] = useState(false);
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
@@ -135,10 +141,10 @@ export default function Panel({ panel }: PanelProps) {
               text-center
             "
           >
-            {PRODUCT_SLOGAN[panel]}
+            {t(PRODUCT_SLOGAN[panel])}
           </p>
           <div
-            dynamic-description={PRODUCT_DESCRIPTIONS[panel]}
+            dynamic-description={t(PRODUCT_DESCRIPTIONS[panel])}
             className={`
               group-hover:after:content-[attr(dynamic-description)]
               [font-size:_clamp(12px,1.5vw,16px)]
@@ -153,10 +159,7 @@ export default function Panel({ panel }: PanelProps) {
             `}
           />
         </div>
-        <LinkWithArrow
-          label={PRODUCT_INTRO_LEARN_MORE}
-          href={`/products/${panel}`}
-        />
+        <LinkWithArrow label={t("Learn more")} href={`/products/${panel}`} />
       </div>
     </div>
   );
