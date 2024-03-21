@@ -3,10 +3,11 @@
 import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { DestopTableRowProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
-import { PRODUCT_CONCLUSION_TABLE_ADD } from "@/app/[locale]/products/[id]/constants";
-import { CART_REMOVE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 export default function DesktopTableRow({
@@ -27,6 +28,9 @@ export default function DesktopTableRow({
   const [isAlreadyInBag, setIsAlreadyInBag] = useState(
     modelsInBag.some(({ id }) => id === model)
   );
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   useEffect(() => {
     setIsAlreadyInBag(modelsInBag.some(({ id }) => id === model));
@@ -104,7 +108,7 @@ export default function DesktopTableRow({
                 height={16}
                 className="inline-flex"
               />
-              <span
+              {/* <span
                 className="
                   absolute
                   -top-full
@@ -112,11 +116,11 @@ export default function DesktopTableRow({
                   group-hover:block p-1 
                   bg-[#131313]
                   [font-size:_clamp(8px,1vw,10px)]
-                  capitalize
+                  capitalize whitespace-nowrap
                 "
               >
-                {tooltip}
-              </span>
+                {t(tooltip)}
+              </span> */}
             </a>
           ))}
         </div>
@@ -171,7 +175,7 @@ export default function DesktopTableRow({
               font-bold
             "
             >
-              {PRODUCT_CONCLUSION_TABLE_ADD}
+              {t("Add")}
             </p>
           </div>
         </td>
@@ -179,7 +183,7 @@ export default function DesktopTableRow({
         <td>
           <button onClick={() => removeModel(model)} className="pr-6">
             <span className="font-semibold [font-size:_clamp(12px,1.5vw,14px)] -tracking-[0.16px] text-base-red">
-              {CART_REMOVE}
+              {t("Remove")}
             </span>
           </button>
         </td>

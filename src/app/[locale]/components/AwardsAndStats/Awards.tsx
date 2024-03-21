@@ -74,18 +74,6 @@ export default function Awards() {
               />
             </SplideSlide>
           ))}
-          {/* {AWARDS_AND_STATS_AWARDS_IMAGES.map((image) => (
-            <Image
-              src={`/images/awards/${image}`}
-              alt={image}
-              width={120}
-              height={120}
-              priority
-              key={image}
-              className="object-contain md:h-[120px] md:w-[120px] h-20 w-20 hover:scale-[2] z-10"
-              // onMouseEnter={(e) => console.log(e.target.style)}
-            />
-          ))} */}
         </Splide>
       </div>
     </div>

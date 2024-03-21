@@ -70,7 +70,7 @@ export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
             overflow-y-auto 
             bottom-0 
             px-4 
-            py-[34px]
+            py-[28px]
             duration-500 
             z-10
             cursor-default

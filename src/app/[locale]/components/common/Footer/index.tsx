@@ -1,29 +1,19 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import Button from "@/app/[locale]/components/common/Button";
 import ContactInfo from "@/app/[locale]/components/common/Footer/ContactInfo";
 import { FooterCategory } from "@/app/[locale]/components/common/Footer/FooterCategory";
 import PolicyLink from "@/app/[locale]/components/common/Footer/PolicyLink";
 import Social from "@/app/[locale]/components/common/Footer/Social";
 import { FooterFormFields } from "@/app/[locale]/components/common/Footer/types";
-import Input from "@/app/[locale]/components/common/Input";
 import Logo from "@/app/[locale]/components/common/Logo";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
-  FOOTER_COPYRIGHT,
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
   FOOTER_LINKS_ARRAY,
-  FOOTER_SAVE_THE_WORLD,
-  FOOTER_SUBSCRIBE,
-  FOOTER_SUBSCRIBE_NEWSLETTER,
-  FOOTER_YOUR_EMAIL,
   FORMS_FIELDS,
   POLICY_LINKS,
 } from "@/app/[locale]/utils/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 import { useParams, usePathname } from "next/navigation";
 import { useEffect } from "react";
@@ -48,22 +38,6 @@ export default function Footer() {
         message: "Invalid email address",
       },
     },
-  };
-
-  const defaultValues = {
-    [FORMS_FIELDS.email]: "",
-  };
-
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm<FieldValues>({
-    defaultValues,
-  });
-
-  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    console.log(data);
   };
 
   useEffect(() => {
@@ -144,59 +118,6 @@ export default function Footer() {
                   links={links}
                 />
               ))}
-              {/* <form
-                className="
-                  flex
-                  p-6
-                  min-[500px]:flex-row
-                  flex-col
-                  gap-4
-                  bg-[#0D0D0D]
-                  border
-                  border-solid
-                  border-[#191919]
-                  rounded-xl
-                  w-full
-                  min-[500px]:items-end
-                  min-[500px]:col-start-1
-                  min-[500px]:col-end-5
-                  z-10
-                  static
-                  max-[500px]:items-center
-                "
-              >
-                <span
-                  className="
-                  leading-[120%]
-                  text-white
-                  min-[500px]:[font-size:_clamp(12px,1vw,16px)]
-                  min-[500px]:max-w-[140px]
-                  text-2xl
-                  max-[500px]:text-center
-                  max-w-[200px]
-                "
-                >
-                  {FOOTER_SUBSCRIBE_NEWSLETTER}
-                </span>
-                <Input
-                  placeholder={FOOTER_YOUR_EMAIL}
-                  externalContainerStyle="!w-full"
-                  externalStyle="placeholder:[font-size:_clamp(11px,1vw,16px)] max-[500px]:placeholder:text-center"
-                  error={errors?.email}
-                  name="email"
-                  register={register("email", inputsRules.email)}
-                />
-                <Button
-                  onClick={handleSubmit(onSubmit)}
-                  style="outline"
-                  size="extrasmall"
-                  externalStyle="py-3 px-6 max-[500px]:w-full"
-                >
-                  <span className="leading-none [font-size:_clamp(12px,1vw,14px)]">
-                    {FOOTER_SUBSCRIBE}
-                  </span>
-                </Button>
-              </form> */}
             </div>
             <div className="min-[500px]:hidden gap-8 flex-col flex mt-8">
               <ContactInfo />

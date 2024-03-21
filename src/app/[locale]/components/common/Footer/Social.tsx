@@ -2,10 +2,7 @@
 
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  FOOTER_SOCIAL,
-  FOOTER_WE_ARE_SOCIAL,
-} from "@/app/[locale]/utils/constants";
+import { FOOTER_SOCIAL } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 

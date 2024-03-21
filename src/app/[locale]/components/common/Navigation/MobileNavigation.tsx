@@ -3,6 +3,7 @@
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
+import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
@@ -12,10 +13,12 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export default function MobileNavigation() {
-  const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+  const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useContext(
+    MobileSideMenuContext
+  );
   const params = useParams();
   const router = useRouter();
 

@@ -3,7 +3,6 @@
 import { FlagsListProps } from "@/app/[locale]/components/common/ChangeLocale/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { HEADER_CHOOSE_LANGUAGE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 

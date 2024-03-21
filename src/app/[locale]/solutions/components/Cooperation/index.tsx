@@ -1,31 +1,14 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import Button from "@/app/[locale]/components/common/Button";
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
-import Logo from "@/app/[locale]/components/common/Logo";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import CooperationStats from "@/app/[locale]/solutions/components/Cooperation/CooperationStats";
-import {
-  SOLUTIONS_COOPERATION,
-  SOLUTIONS_EXPLORE_OUR,
-  SOLUTIONS_STATS_WITH_DETAILS,
-  SOLUTIONS_TIER_1,
-  SOLUTIONS_TO_COOPERATION,
-  SOLUTIONS_WE_ARE_OPEN,
-} from "@/app/[locale]/solutions/constants";
-import {
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-  FOOTER_SAVE_THE_WORLD,
-} from "@/app/[locale]/utils/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
+import { SOLUTIONS_COOPERATION } from "@/app/[locale]/solutions/constants";
 import Image from "next/image";
-import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Fragment } from "react";
 import { Trans } from "react-i18next";
 
 export default function Cooperation() {

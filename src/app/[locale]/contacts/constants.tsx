@@ -1,8 +1,5 @@
 export const CONTACTS_CONTACT_US = "Contact Us";
 export const CONTACTS_INFORMATION = "Information";
-export const CONTACTS_WE_ARE_READY = `We’re Ready to 
-Consult You`;
-export const CONTACTS_DOWNLOAD_PRESENTATION = "Download Presentation";
 export const CONTACTS_OFFICES = [
   {
     office: "Head Office",

@@ -2,11 +2,7 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import {
-  ABOUT_BUSINESS,
-  ABOUT_MAP,
-  ABOUT_MAP_DESIGNATIONS,
-} from "@/app/[locale]/utils/constants";
+import { ABOUT_MAP_DESIGNATIONS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";

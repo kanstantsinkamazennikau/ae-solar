@@ -19,7 +19,7 @@ export default async function Image({
 }) {
   const { t } = await useServerTranslation(locale, "translation");
   const interSemiBold = fetch(
-    new URL("../fonts/Criteria CF/Criteria CF Medium.otf", import.meta.url)
+    new URL("../../fonts/Criteria CF/Criteria CF Medium.otf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
@@ -36,7 +36,7 @@ export default async function Image({
           justifyContent: "center",
         }}
       >
-        AE Solar | {t("Contacts")}
+        AE Solar | {t("MetadataDescriptionImprint")}
       </div>
     ),
     {

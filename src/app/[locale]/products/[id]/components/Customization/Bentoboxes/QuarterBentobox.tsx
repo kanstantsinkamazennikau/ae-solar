@@ -42,7 +42,7 @@ export default function QuarterBentobox({
           priority
           width={170}
           height={170}
-          className="2xl:h-[170px] 2xl:w-[170px] lg:h-[100px] lg:w-[100px] w-[80px] h-[80px]"
+          className="2xl:h-[170px] 2xl:w-[170px] lg:h-[90px] lg:w-[90px] w-[80px] h-[80px]"
         />
       )}
 

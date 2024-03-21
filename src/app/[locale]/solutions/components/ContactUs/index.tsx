@@ -4,14 +4,7 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { SOLUTIONS_CONTACTS_US } from "@/app/[locale]/solutions/constants";
-import {
-  GET_IN_TOUCH_CLIENT_TYPE,
-  GET_IN_TOUCH_ELEVATE_GROWTH,
-  HEADER_CONTACT_US,
-} from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -19,11 +12,10 @@ export default function ContactUs() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
-  const [clientType, setClientType] =
+  const [clientType, _] =
     useState<keyof typeof matchPartnerTypeWithArticle>("partner");
   const router = useRouter();
 
-  //TODO fill form with partner type value for "intrested in" dropdown
   const handleClick = () => {
     router.push(`/contacts?type=${clientType}`);
   };
@@ -160,13 +152,11 @@ export default function ContactUs() {
               {t("Contact Us for a Sustainable Future")}
             </div>
           </div>
-          {/* <Link href={`/consult`}> */}
           <Button externalStyle="!py-[14px] !px-[26px]" onClick={handleClick}>
             <span className="[font-size:_clamp(16px,1.5vw,20px)] leading-[100%] whitespace-nowrap">
               {t("Contact Us")}
             </span>
           </Button>
-          {/* </Link> */}
         </div>
       </div>
     </BasicWidthContainer>

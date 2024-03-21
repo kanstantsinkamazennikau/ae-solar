@@ -1,7 +1,3 @@
-import {
-  MANUFACTURER_DO_IT_TOGETHER,
-  MANUFACTURER_SAVE_THE_WORLD,
-} from "@/app/[locale]/company/manufacturer/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import getLocale from "@/app/[locale]/utils/getLocale";

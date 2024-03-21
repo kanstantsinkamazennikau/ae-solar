@@ -1,7 +1,5 @@
 import { DocumentsTypePublisher } from "@/app/[locale]/documents/components/types";
 
-export const DOCUMENTS_PUBLISHERS_INFO_PUBLISHERS = "Publisher's";
-export const DOCUMENTS_PUBLISHERS_INFO_INFORMATION = " Information";
 export const DOCUMENTS_PUBLISHERS_INFO_FILES: DocumentsTypePublisher[] = [
   {
     category: "Rechtlicher Rahmen, zuständige Stelle, Definitionen",

@@ -1,15 +1,18 @@
-import {
-  HEADER_SUBNAVIGATION_ALL_MODULES,
-  HEADER_SUBNAVIGATION_PANELS_MODELS,
-} from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export default function SubNavigationProductPanels({
   isShowAllProductsLink,
 }: {
   isShowAllProductsLink?: boolean;
 }) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className={`
@@ -46,7 +49,7 @@ export default function SubNavigationProductPanels({
                 className="md:w-6 md:h-6 w-5 h-5"
               />
               <span className="font-normal group-hover/link:text-base-red transition-all duration-200">
-                {HEADER_SUBNAVIGATION_ALL_MODULES}
+                {t("All Modules")}
               </span>
             </Link>
             <div className="w-[1px] h-[90%] bg-[#2D2D2D]"></div>

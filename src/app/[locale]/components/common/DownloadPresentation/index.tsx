@@ -1,7 +1,6 @@
 "use client";
 
 import { DownloadPresentationProps } from "@/app/[locale]/components/common/DownloadPresentation/types";
-import { CONTACTS_DOWNLOAD_PRESENTATION } from "@/app/[locale]/contacts/constants";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";

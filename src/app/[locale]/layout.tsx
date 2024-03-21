@@ -16,6 +16,7 @@ import { headers } from "next/headers";
 import ProductsContextProvider from "@/app/[locale]/context/productsContext";
 import MainPageVideoContextProvider from "@/app/[locale]/context/mainPageVideoContext";
 import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
+import MobileSideMenuProvider from "@/app/[locale]/context/mobileSideMenuContext";
 
 const walsheim = localFont({
   src: [
@@ -114,24 +115,6 @@ const criteria = localFont({
   variable: "--font-criteria",
 });
 
-// export const metadata: Metadata = {
-//   title: "AE-Solar",
-//   description: "German TIER1 Manufacturer of High-Quality Solar Panels",
-//   keywords: [],
-//   metadataBase: new URL(
-//     `${
-//       process.env.NODE_ENV === "development"
-//         ? `http://${process.env.VERCEL_URL}`
-//         : `https://${process.env.VERCEL_URL}`
-//     }`
-//   ),
-//   openGraph: {
-//     title: "AE-Solar",
-//     description: "German TIER1 Manufacturer of High-Quality Solar Panels",
-//     type: "website",
-//   },
-// };
-
 export async function generateMetadata({
   params: { locale },
 }: {
@@ -177,18 +160,20 @@ export default function RootLayout({
           <>
             <ToastContainerProvider />
             <ModelProvider>
-              <ConstructorProvider>
-                <ProductsContextProvider>
-                  <MainPageVideoContextProvider>
-                    <StickyNavigationProvider>
-                      <Navigation />
-                      {children}
-                      <Footer />
-                      <Cookies />
-                    </StickyNavigationProvider>
-                  </MainPageVideoContextProvider>
-                </ProductsContextProvider>
-              </ConstructorProvider>
+              <MobileSideMenuProvider>
+                <ConstructorProvider>
+                  <ProductsContextProvider>
+                    <MainPageVideoContextProvider>
+                      <StickyNavigationProvider>
+                        <Navigation />
+                        {children}
+                        <Footer />
+                        <Cookies />
+                      </StickyNavigationProvider>
+                    </MainPageVideoContextProvider>
+                  </ProductsContextProvider>
+                </ConstructorProvider>
+              </MobileSideMenuProvider>
             </ModelProvider>
           </>
         )}

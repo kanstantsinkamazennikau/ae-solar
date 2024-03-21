@@ -18,9 +18,6 @@ export const FORM_FIELDS_INPUT_TYPES = {
   textarea: "textarea",
 };
 
-export const HEADER_TIER1 = "German TIER1 Manufacturer of ";
-export const HEADER_TIER1_QUALITY = "High Quality Solar Panels";
-
 export const FORMS_FIELDS = {
   name: "name",
   email: "email",
@@ -36,11 +33,6 @@ export const FORMS_FIELDS = {
 
 // NAVIGATION
 export const HEADER_NAV_LINKS_ARRAY = [
-  // {
-  //   url: "/",
-  //   text: "Home",
-  // },
-
   {
     url: "/company",
     text: "Company",
@@ -64,24 +56,6 @@ export const HEADER_NAV_LINKS_ARRAY = [
       { url: "/products/Neptune", text: "Neptune" },
     ],
   },
-  // {
-  //   url: "/info",
-  //   text: "Info",
-  //   subMenu: [
-  //     {
-  //       url: "/info/faq",
-  //       text: "FAQ",
-  //     },
-  //     {
-  //       url: "/info/publishers_info",
-  //       text: "Publisher's Info",
-  //     },
-  //     {
-  //       url: "/info/imprint",
-  //       text: "Imprint Info",
-  //     },
-  //   ],
-  // },
   {
     url: "/documents",
     text: "Documents",
@@ -91,7 +65,6 @@ export const HEADER_NAV_LINKS_ARRAY = [
     text: "B2B Solutions",
   },
 ];
-export const HEADER_CONTACT_US = "Contact Us";
 export const HEADER_LANGUAGE = "Language";
 export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Aurora.svg",
@@ -101,16 +74,9 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "ShadeStar.svg",
   "Neptune.svg",
 ];
-export const HEADER_SUBNAVIGATION_ALL_MODULES = "All Modules";
-export const HEADER_CONFIGURE_YOUR_MODEL = "All Products";
 export const HEADER_CALCULATE = "Calculate";
-export const HEADER_CHOOSE_LANGUAGE = "Choose language";
 
 //MAIN PAGE
-export const HERO_SECTION_SLOGAN =
-  "We are TIER1 Manufacturer of High-Quality Solar Panels";
-export const HERO_SECTION_SCROLL_TO_THE_FUTURE = "Scroll to the future";
-
 export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
   { stat: "2003", details: "experience since", initialValue: "2023" },
   {
@@ -121,9 +87,6 @@ export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
   },
   { stat: "100", details: "countries", initialValue: "50", sign: "+" },
 ];
-export const AWARDS_AND_STATS_GERMAN_ENGINEERING = "German Engineering";
-export const AWARDS_AND_STATS_PRODUCTION_PLANTS =
-  "Production facilities in Europe and Asia";
 export const AWARDS_AND_STATS_AWARDS_IMAGES = [
   "badge1.png",
   "badge2.png",
@@ -138,11 +101,7 @@ export const AWARDS_AND_STATS_AWARDS_IMAGES = [
   "badge11.png",
   "badge12.png",
 ];
-export const AWARDS_AND_STATS_SEE_ALL_AWARDS = "See all awards";
 
-export const PRODUCT_INTRO_THE_NEXT_LEVEL_OF = "The Next Level of";
-export const PRODUCT_INTRO_MODULES = "Modules";
-export const PRODUCT_INTRO_HIGH_QUALITY_SP = "High-Quality Solar Panels";
 export const PRODUCT_INTRO_PANELS_MAPPING = {
   power: "Power (up to)",
   efficiency: "Effienciency (up to)",
@@ -156,7 +115,6 @@ export const PRODUCT_INTRO_PANELS_IMAGES = [
   "ShadeStar",
   "Neptune",
 ];
-export const PRODUCT_INTRO_DETAILED_INFO = "Detailed Info";
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
     stats: {
@@ -369,35 +327,7 @@ export const PRODUCT_INTRO_PANELS = {
     ],
   },
 };
-export const PRODUCT_INTRO_LEARN_MORE = "Learn more";
-export const HISTORY_READ_FULL_STORY = "Read Full History";
-export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "All Products";
 
-export const FEATURED_PRODUCTS_HIGH_QUALITY = "High-Quality";
-
-export const TECH_INFO_THE_HIDDEN_LAYERS = "The Hidden Layers";
-export const TECH_INFO_A_CLOSE_LOOK_AT = "A Closer Look at";
-export const TECH_INFO_PANELS_DETAILS = [
-  {
-    title: "Photovoltaic Cells",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
-  {
-    title: "Solar Panel Encapsulation",
-    description:
-      "Solar panels endure diverse conditions, shielded by encapsulation for longevity and efficiency.",
-  },
-  {
-    title: "Frame and Backsheet",
-    description:
-      "Frame offers support; backsheet shields from elements, ensuring solar panel durability.",
-  },
-];
-export const TECH_INFO_PANELS = ["structure.png", "frame.png", "panel.png"];
-export const TECH_INFO_WHY_WE_ARE = "Why We are";
-export const TECH_INFO_BEST_AT_THIS = "Best at This";
-export const TECH_INFO_CLOSE = "Close";
 export const TECH_INFO_BENS = [
   {
     title: "BensTitle1",
@@ -425,42 +355,6 @@ export const TECH_INFO_BENS = [
     image: "materials.svg",
   },
 ];
-export const TECH_INFO_READ_MORE = "Read More";
-export const TECH_INFO_INNOVATIVE = "Innovative. Stylish. Essential:";
-export const TECH_INFO_EXPLORE = "Explore Our Product Range";
-
-export const REVIEWS_RAVE_REVIEWS = "Rave Reviews";
-export const REVIEWS_SEE_WHY_WE_SHINE = "See Why We Shine";
-export const REVIEWS_QUOTES_WITH_AUTHORS = [
-  {
-    quote:
-      "Why do I like working with the company AE Solar...🤔. Quite simply because it's awesome. Great team, great products, great service. All-round carefree package. There are no problems with the employees, there are only solutions and that for every customer of ours. Just German quality.",
-    author: "Thomas Schneider",
-    organisation: "Purchasing, sales, consulting at the company SVM Solar",
-  },
-  {
-    quote:
-      "2Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
-    author: "Emily Johnson2",
-    organisation: "Quantum Dynamics2",
-  },
-  {
-    quote:
-      "3Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
-    author: "Emily Johnson3",
-    organisation: "Quantum Dynamics3",
-  },
-];
-
-export const MAIN_PAGE_NEWS_INSIGHTS = "News and Insights";
-export const MAIN_PAGE_COMPANY = "from Our Company";
-export const MAIN_PAGE_NEWS_READ_ALL = "Read all the news";
-
-export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installer"];
-export const GET_IN_TOUCH_ELEVATE_GROWTH = "Fueling growth together";
-export const GET_IN_TOUCH_JOIN_US = "Become ";
-export const GET_IN_TOUCH_OUR_VISION = " in our solar vision";
-export const GET_IN_TOUCH_BECOME_A = "Become ";
 
 export const FAQ_ACCORDION_DATA = [
   {
@@ -480,9 +374,6 @@ export const FAQ_ACCORDION_DATA = [
     answer: "FAQAnswer4",
   },
 ];
-export const FAQ_QUESTION = "Got a Question?";
-export const FAQ_SOLUTIONS = "We have solutions";
-export const FAQ_MORE_SOLUTIONS = "More solutions";
 
 //FOOTER
 export const FOOTER_LINKS_ARRAY = [
@@ -520,18 +411,10 @@ export const FOOTER_LINKS_ARRAY = [
     links: [
       { title: "Datasheet", link: "/documents" },
       { title: "Warranty", link: "/documents" },
-      // { title: "Certifications", link: "/documents" },
-      // { title: "Manual", link: "/documents" },
-
-      // { title: "Presentations", link: "/documents" },
-      // { title: "FAQ", link: "/info/faq" },
     ],
   },
 ];
-export const FOOTER_GERMAN_BRAND =
-  "German brand in the renewable energy industry, providing high-quality products and services since 2003.";
-export const FOOTER_GERMAN_BRAND_WORDS_TO_BOLD = ["German brand", "since 2003"];
-export const FOOTER_WE_ARE_SOCIAL = "We are social";
+
 export const FOOTER_SOCIAL = [
   { icon: "facebook.svg", link: "https://www.facebook.com/aesolarenergy/" },
   { icon: "linkedin.svg", link: "https://www.linkedin.com/company/ae-solar/" },
@@ -539,7 +422,6 @@ export const FOOTER_SOCIAL = [
   { icon: "twitter.svg", link: "https://twitter.com/aesolar_energy/" },
   { icon: "youtube.svg", link: "https://www.youtube.com/@AESOLAR/featured/" },
 ];
-export const FOOTER_SAVE_THE_WORLD = "It's time to save the world!";
 export const FOOTER_CONTACT_INFO = [
   {
     icon: "location.svg",
@@ -561,11 +443,6 @@ export const FOOTER_CONTACT_INFO = [
     linkTo: "mailto:sales@ae-solar.com",
   },
 ];
-export const FOOTER_SUBSCRIBE_NEWSLETTER = "Subscribe to Our Newsletter";
-export const FOOTER_COPYRIGHT =
-  "Copyright © 2023 AESolar. All rights reserved.";
-export const FOOTER_YOUR_EMAIL = "your e-mail";
-export const FOOTER_SUBSCRIBE = "Subscribe";
 export const POLICY_LINKS = [
   { text: "PolicyLink1", link: "/company/publishers_info" },
   { text: "PolicyLink2", link: "/company/publishers_info" },
@@ -1049,7 +926,6 @@ export const CONSTRUCTOR_CUSTOMIZE = "Customize.";
 export const CONSTRUCTOR_YOUR_MODEL = "Your model";
 export const CONSTRUCTOR_APPLICATIONS = "Applications.";
 export const CONSTRUCTOR_STANDARD = "Standard";
-export const CONSTRUCTOR_CONFIGURE_YOUR_MODEL = "Configure your module";
 export const CONSTRUCTOR_YOUR_MODEL_IS = "Your model is";
 export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
   Aurora: {
@@ -1845,11 +1721,6 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   },
 };
 
-export const CART_MODELS_ARE_READY = "Your modules";
-export const CART_PLEASE_CHECKOUT =
-  "Please check out your order and we will finalize it.";
-export const CART_GET_A_QUOTE = "Get a quote";
-export const CART_REMOVE = "Remove";
 export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
   solarCellTechnology: "Solar Cell Technology",
   moduleSpecification: "Module Specifation",
@@ -1861,16 +1732,8 @@ export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
   applications: "Applications",
 };
 export const CART_ADD_ONE_MORE_PANEL = "Add one more panel";
-export const CART_BAG_IS_EMPTY = "Bag is empty";
-export const CART_SUCCESSFULLY_ADDED = "Successfully added to bag";
 export const CART_LOCALSTORAGE = "cart";
 
-export const CHECKOUT_FILL_OUT = `Fill out Your
-Order Information`;
-export const CHECKOUT_THANK_YOU = `Thank You
-We are Contact 
-You Soon`;
-export const CHECKOUT_GO_TO_HOME_PAGE = "Go to Homepage";
 export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
   {
     formTitle: "My name is",
@@ -1897,11 +1760,6 @@ export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
     type: "textarea",
   },
 ];
-export const CHECKOUT_SEND_REQUEST = "Send Request";
-
-export const CONSULT_READY_TO_CONSULT = `Hey! We are Ready
-to Consult You`;
-export const CONSULT_AGREEMENT = "I agree to the processing of personal data";
 
 export const CONSULT_FORM_FIELDS: FormFileds[] = [
   {
@@ -1949,23 +1807,9 @@ export const DROPDOWN_INPUT_VALUES = {
 };
 
 export const PICKER_INPUT_VALUES = {
-  [FORMS_FIELDS.budget]: ["$1…5k", "$5…10k", "$10…20k", "$20…50k", "> $50k"],
   [FORMS_FIELDS.interest]: ["installing", "partnership", "investing"],
 };
 
-export const ABOUT_SUSTAINABLE = `Sustainable
-Since 2003`;
-export const ABOUT_COMPANY_FOUNDATION =
-  "AE Solar TIER1 Company was founded by Dr. Alexander Maier and his brothers in Königsbrunn, Germany. AE Solar is one of the award-winning leading brands in the renewable energy industry, providing high-quality new renewable energy products and services since 2003.";
-export const ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT = [
-  "was",
-  "AE Solar is one of",
-  "leading brands in the renewable energy industry, providing",
-  "and services since 2003.",
-];
-
-export const ABOUT_BUSINESS = "Business Map";
-export const ABOUT_MAP = "Where Our Power Is";
 export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "germany.svg",
@@ -1988,33 +1832,9 @@ export const ABOUT_MAP_DESIGNATIONS = [
     location: ["All around the World"],
   },
 ];
-export const ABOUT_OUR_HISTORY = "Our History";
-export const ABOUT_THROUGH = "Through the Years";
 
-export const COOKIES_AESOLAR = "Cookies on AESolar";
-export const COOKIES_WE_USE_COOKIES =
-  "We use cookies and other tracking technologies to improve your browsing experience on our site, show personalized content and targeted ads, analyze site traffic, and understand where our audiences come from. To learn more or opt-out, read our Cookie Policy. Please also read our Privacy Notice and Terms of Use, which became effective December 20, 2019.";
-export const COOKIES_LINKS = [
-  "Cookie Policy",
-  "Privacy Notice",
-  "Terms of Use",
-];
-export const COOKIES_MATCH_TEXT_WITH_LINK = {
-  "Cookie Policy": "policy",
-  "Privacy Notice": "privacy",
-  "Terms of Use": "terms",
-};
-export const COOKIES_BY_CHOOSING =
-  "By choosing “I Accept”, you consent to our use of cookies and other tracking technologies.";
-export const COOKIES_I_ACCEPT = "I accept";
-export const COOKIES_I_DO_NOT_ACCEPT = "I do not accept";
 export const COOKIES_USER_CONSENT_FLAG = "cookieConsentIsTrue";
 
-export const DOCUMENTS_DOCUMENTS_HEADING = "Documents";
-export const DOCUMENTS_YOU_NEED_TO_KNOW = "You Need to Know";
-export const DOCUMENTS_CATEGORIES = "Categories";
-export const DOCUMENTS_SEARCH = "Search";
-export const DOCUMENT_SUBCATEGORIES_SPLITTER = "$";
 export const DOCUMENTS_FILES: (
   | DocumentsTypesPresentation
   | DocumentsTypesOther
@@ -2368,64 +2188,8 @@ export const DOCUMENTS_FILES: (
       },
     ],
   },
-  // {
-  //   category: "Technical Data",
-  //   type: "Text",
-  //   data: [
-  //     { linkTitle: "Technical Data1", link: "link" },
-  //     { linkTitle: "Technical Data2", link: "link" },
-  //     { linkTitle: "Technical Data3", link: "link" },
-  //     { linkTitle: "Technical Data4", link: "link" },
-  //     { linkTitle: "Technical Data5", link: "link" },
-  //     { linkTitle: "Technical Data6", link: "link" },
-  //   ],
-  // },
-  // {
-  //   category: "Certification",
-  //   type: "Text",
-  //   data: [
-  //     { linkTitle: "Certification1", link: "link" },
-  //     { linkTitle: "Certification2", link: "link" },
-  //     { linkTitle: "Certification3", link: "link" },
-  //     { linkTitle: "Certification4", link: "link" },
-  //     { linkTitle: "Certification5", link: "link" },
-  //     { linkTitle: "Certification6", link: "link" },
-  //   ],
-  // },
-  // {
-  //   category: "Warranty",
-  //   type: "Text",
-  //   data: [
-  //     { linkTitle: "Warranty1", link: "link" },
-  //     { linkTitle: "Warranty2", link: "link" },
-  //     { linkTitle: "Warranty3", link: "link" },
-  //     { linkTitle: "Warranty4", link: "link" },
-  //     { linkTitle: "Warranty5", link: "link" },
-  //     { linkTitle: "Warranty6", link: "link" },
-  //   ],
-  // },
-  // {
-  //   category: "Videos",
-  //   type: "Text",
-  //   data: [
-  //     { linkTitle: "Videos1", link: "link" },
-  //     { linkTitle: "Videos2", link: "link" },
-  //     { linkTitle: "Videos3", link: "link" },
-  //     { linkTitle: "Videos4", link: "link" },
-  //     { linkTitle: "Videos5", link: "link" },
-  //     { linkTitle: "Videos6", link: "link" },
-  //     { linkTitle: "Videos7", link: "link" },
-  //     { linkTitle: "Videos8", link: "link" },
-  //     { linkTitle: "Videos9", link: "link" },
-  //     { linkTitle: "Videos10", link: "link" },
-  //     { linkTitle: "Videos11", link: "link" },
-  //     { linkTitle: "Videos12", link: "link" },
-  //   ],
-  // },
 ];
 
-export const DOCUMENTS_FAQ_HAVE_A_QUESTION = "Got a Question?";
-export const DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS = "We Have Solutions";
 export const DOCUMENTS_FAQ_FILES = [
   {
     category: "FAQCategory1",
@@ -2569,12 +2333,7 @@ export const DOCUMENTS_FAQ_FILES = [
     ],
   },
 ];
-export const DOCUMENTS_FILTER = "Filter";
-export const DOCUMENTS_NO_RESULT = "No result for: ";
-export const DOCUMENTS_RESET = "Reset";
 
-export const DOCUMENTS_IMPRINT_INFO_IMPRINT = "Imprint";
-export const DOCUMENTS_IMPRINT_INFO_INFORMATION = "Information";
 export const DOCUMENTS_IMPRINT_INFO_LEGAL = {
   title: "Legal",
   registration: [
@@ -2593,4 +2352,3 @@ export const DOCUMENTS_IMPRINT_INFO_LEGAL = {
     `Germany`,
   ],
 };
-export const DOCUMENTS_IMPRINT_INFO_CONTACTS = "Contacts";

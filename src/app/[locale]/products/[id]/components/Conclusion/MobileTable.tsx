@@ -1,16 +1,10 @@
 import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { DestopTableRowProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
-import {
-  PRODUCT_CONCLUSION_TABLE_ADD_MOBILE,
-  PRODUCT_CONCLUSION_TABLE_MOBILE_CELL_TYPE,
-  PRODUCT_CONCLUSION_TABLE_MOBILE_FRAME_COLOR,
-  PRODUCT_CONCLUSION_TABLE_MOBILE_MODULE_COLOR,
-  PRODUCT_CONCLUSION_TABLE_MOBILE_MODULE_DESIGN,
-  PRODUCT_CONCLUSION_TABLE_MOBILE_RANGE,
-} from "@/app/[locale]/products/[id]/constants";
-import { CART_REMOVE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 export default function MobileTable({
@@ -27,6 +21,8 @@ export default function MobileTable({
   addModelToBag,
   removeModel,
 }: DestopTableRowProps) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const { modelsInBag } = useContext(ConstructorContext);
   const [isAlreadyInBag, setIsAlreadyInBag] = useState(
     modelsInBag.some(({ id }) => id === model)
@@ -105,43 +101,42 @@ export default function MobileTable({
                   font-bold
                 "
               >
-                {PRODUCT_CONCLUSION_TABLE_ADD_MOBILE}
+                {t("Add To Cart")}
               </p>
             </>
           ) : (
             <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] -tracking-[0.16px] text-[#B30006]">
-              {CART_REMOVE}
+              {t("Remove")}
             </span>
           )}
         </div>
       </button>
       <div className="bg-black rounded-xl w-full">
         <div className="px-4 pt-3 grid grid-cols-2 gap-x-8 pb-3 w-full items-center gap-y-3">
-          {/* <div> */}
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {PRODUCT_CONCLUSION_TABLE_MOBILE_CELL_TYPE}
+            {t("Cell type")}
           </p>
           <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
             {cellType}
           </p>
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {PRODUCT_CONCLUSION_TABLE_MOBILE_MODULE_DESIGN}
+            {t("Module design")}
           </p>
           <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
             {moduleDesign}
           </p>
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {PRODUCT_CONCLUSION_TABLE_MOBILE_RANGE}
+            {t("Power range, W")}
           </p>
           <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
             {powerRange}
           </p>
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {PRODUCT_CONCLUSION_TABLE_MOBILE_MODULE_COLOR}
+            {t("Module color")}
           </p>
           <div className="flex items-center gap-1">
             <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
-              {moduleColor}
+              {t(moduleColor)}
             </p>
             <Image
               src={`/images/option/${moduleColor.toLowerCase()}.svg`}
@@ -152,11 +147,11 @@ export default function MobileTable({
             />
           </div>
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {PRODUCT_CONCLUSION_TABLE_MOBILE_FRAME_COLOR}
+            {t("Frame color")}
           </p>
           <div className="flex items-center gap-1">
             <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
-              {frameColor}
+              {t(frameColor)}
             </p>
             <Image
               src={`/images/option/${frameColor.toLowerCase()}.svg`}
@@ -166,7 +161,6 @@ export default function MobileTable({
               height={16}
             />
           </div>
-          {/* </div> */}
         </div>
         <div className="w-full px-4">
           <hr className="bg-[#131313] w-full h-[1px] border-none " />
@@ -194,7 +188,7 @@ export default function MobileTable({
                   capitalize
                 "
               >
-                {tooltip}
+                {t(tooltip)}
               </span>
             </a>
           ))}

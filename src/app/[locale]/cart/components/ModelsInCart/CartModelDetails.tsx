@@ -2,10 +2,16 @@ import {
   Details,
   DetailsProps,
 } from "@/app/[locale]/cart/components/ModelsInCart/types";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 
 export default function CartModelDetails({ model }: DetailsProps) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   const modelDetailsKeys = Object.keys(
     CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING
   ) as Array<keyof Details>;
@@ -36,7 +42,7 @@ export default function CartModelDetails({ model }: DetailsProps) {
                 />
               )}
               <span className="text-sm font-semibold leading-[0.9] -tracking-[0.42px]">
-                {modelParameterValue}
+                {t(modelParameterValue)}
               </span>
             </div>
           );
@@ -75,7 +81,7 @@ export default function CartModelDetails({ model }: DetailsProps) {
           modelKey === "moduleSpecification"
         ) {
           const modelParameterValue = model[modelKey];
-          component = <span>{modelParameterValue}</span>;
+          component = <span>{t(modelParameterValue)}</span>;
         }
 
         return (
@@ -84,7 +90,7 @@ export default function CartModelDetails({ model }: DetailsProps) {
             className="grid py-1 gap-5 border-b border-dashed border-[#ffffff26] items-center justify-between grid-cols-2 leading-[normal] md:leading-[inherit]"
           >
             <div className="font-walsheim [font-size:_clamp(11px,5vw,16px)] capitalize font-medium text-[#606060] -tracking-[0.32px]">
-              {modelParameterText}
+              {t(modelParameterText)}
             </div>
             <div
               className="

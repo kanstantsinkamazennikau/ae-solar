@@ -5,12 +5,7 @@ import { ModelsProps } from "@/app/[locale]/components/common/Navigation/types";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  HEADER_CALCULATE,
-  HEADER_CONFIGURE_YOUR_MODEL,
-  HEADER_SUBNAVIGATION_PANELS_MODELS,
-  PRODUCT_INTRO_MODULES,
-} from "@/app/[locale]/utils/constants";
+import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";

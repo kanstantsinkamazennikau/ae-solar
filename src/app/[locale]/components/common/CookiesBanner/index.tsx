@@ -2,16 +2,7 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import {
-  COOKIES_AESOLAR,
-  COOKIES_BY_CHOOSING,
-  COOKIES_I_ACCEPT,
-  COOKIES_I_DO_NOT_ACCEPT,
-  COOKIES_LINKS,
-  COOKIES_MATCH_TEXT_WITH_LINK,
-  COOKIES_USER_CONSENT_FLAG,
-  COOKIES_WE_USE_COOKIES,
-} from "@/app/[locale]/utils/constants";
+import { COOKIES_USER_CONSENT_FLAG } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { MouseEvent, useEffect, useState } from "react";
 import Cookies from "js-cookie";

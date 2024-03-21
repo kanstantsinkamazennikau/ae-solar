@@ -5,11 +5,7 @@ import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import SearchBar from "@/app/[locale]/documents/components/SearchBar";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  DOCUMENTS_FILTER,
-  DOCUMENTS_RESET,
-  HEADER_SUBNAVIGATION_PANELS_MODELS,
-} from "@/app/[locale]/utils/constants";
+import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useContext } from "react";

@@ -3,14 +3,9 @@ import Contacts from "@/app/[locale]/company/imprint/components/Contacts";
 import Artcile from "@/app/[locale]/company/manufacturer/components/Article";
 import ManufacturerHeader from "@/app/[locale]/company/manufacturer/components/ManufacturerHeader";
 import SaveTheWorld from "@/app/[locale]/company/manufacturer/components/SaveTheWorld";
-import {
-  MANUFACTURER_MANUFACTURER,
-  MANUFACTURER_QUALITY,
-} from "@/app/[locale]/company/manufacturer/constants";
 import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
-import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
 
 export default function ManufacturerPage() {
   return (

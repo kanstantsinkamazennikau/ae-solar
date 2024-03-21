@@ -3,15 +3,6 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  PRODUCT_FOR_PLANET,
-  PRODUCT_FOR_YOU,
-  PRODUCT_WE_TRANSFORM,
-  PRODUCT_WE_TRANSFORM_HIGHLIGHT,
-  PRODUCT_WE_TRANSFORM_RANGE,
-  PRODUCT_WE_TRANSFORM_SUNLIGHT,
-} from "@/app/[locale]/products/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { Trans } from "react-i18next";
@@ -126,6 +117,7 @@ export default function WeTransform() {
               self-end
               flex-col
               gap-4
+              mb-4
             "
           >
             <p>

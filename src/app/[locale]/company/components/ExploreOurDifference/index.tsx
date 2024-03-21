@@ -1,14 +1,10 @@
 import DifferenceCenter from "@/app/[locale]/company/components/ExploreOurDifference/DifferenceCenter";
 import DifferenceRow from "@/app/[locale]/company/components/ExploreOurDifference/DifferenceRow";
 import {
-  ABOUT_EXPLORE_CENTER,
-  ABOUT_EXPLORE_CENTER_MOBILE,
   ABOUT_EXPLORE_FOOTER,
   ABOUT_EXPLORE_HEADER,
 } from "@/app/[locale]/company/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Starfield from "@/app/[locale]/products/components/StarField";
 import Image from "next/image";
 

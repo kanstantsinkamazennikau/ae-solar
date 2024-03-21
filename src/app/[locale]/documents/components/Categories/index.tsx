@@ -7,7 +7,6 @@ import {
 } from "@/app/[locale]/documents/components/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { DOCUMENTS_CATEGORIES } from "@/app/[locale]/utils/constants";
 import { romanize } from "@/app/[locale]/utils/romanize";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +18,6 @@ export default function Categories() {
     selectedCategoryIndex,
     onCategoryClick,
     documentsFile,
-    documentsLoading,
     documentsType,
     setSelectedCategoryIndex,
   } = useContext(DocumentsContext);

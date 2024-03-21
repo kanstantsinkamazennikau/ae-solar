@@ -1,7 +1,6 @@
 import SequenceAnimation from "@/app/[locale]/company/components/SequenceAnimation";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Bens from "@/app/[locale]/components/TechInfo/Bens";
-import Divider from "@/app/[locale]/components/TechInfo/Divider";
 import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
 
 export default function TechDescription() {

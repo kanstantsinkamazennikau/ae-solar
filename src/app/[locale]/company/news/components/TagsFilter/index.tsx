@@ -4,10 +4,6 @@ import { TagsFilterProps } from "@/app/[locale]/company/news/types";
 import Button from "@/app/[locale]/components/common/Button";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  DOCUMENTS_FILTER,
-  DOCUMENTS_RESET,
-} from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import {
   useParams,

@@ -1,19 +1,10 @@
 "use client";
 
 import Contacts from "@/app/[locale]/company/imprint/components/Contacts";
-import ContactInfo from "@/app/[locale]/components/common/Footer/ContactInfo";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  DOCUMENTS_IMPRINT_INFO_CONTACTS,
-  DOCUMENTS_IMPRINT_INFO_LEGAL,
-  FOOTER_CONTACT_INFO,
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-} from "@/app/[locale]/utils/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
-import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { DOCUMENTS_IMPRINT_INFO_LEGAL } from "@/app/[locale]/utils/constants";
+import { useParams } from "next/navigation";
 
 export default function Imprint() {
   const locale = useParams()?.locale as LocaleTypes;

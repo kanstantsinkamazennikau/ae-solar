@@ -1,19 +1,13 @@
 import BlogPostsList from "@/app/[locale]/company/news/components/BlogPostsList";
 import BlogPostPagination from "@/app/[locale]/company/news/components/BlogPostsPagination";
 import RecentPosts from "@/app/[locale]/company/news/components/RecentPosts";
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import Loader from "@/app/[locale]/components/common/Loader";
-import { getDocumentSlugs, load } from "outstatic/server";
-import { Suspense } from "react";
-import path from "path";
-import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
-import {
-  BLOG_ON_THE_BLOG,
-  BLOG_READ_THOUGHTS,
-} from "@/app/[locale]/company/news/constants";
 import TagsFilter from "@/app/[locale]/company/news/components/TagsFilter";
-import getLocale from "@/app/[locale]/utils/getLocale";
+import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import getLocale from "@/app/[locale]/utils/getLocale";
+import { load } from "outstatic/server";
+import path from "path";
 
 async function getOutstaticDirectory() {
   return path.join(process.cwd(), "outstatic");

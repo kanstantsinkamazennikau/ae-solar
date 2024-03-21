@@ -2,15 +2,11 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import {
-  SOLUTIONS_GLOBAL_IMPACT,
-  SOLUTIONS_GLOBAL_IMPACT_DESCRIPTION,
   SOLUTIONS_GLOBAL_IMPACT_STATS,
   SOLUTIONS_GLOBAL_IMPACT_STATS_WITH_IMAGES,
-  SOLUTIONS_SEE_DETAILED_PRESENTATION,
 } from "@/app/[locale]/solutions/constants";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
-import Link from "next/link";
 
 export default async function GlobalImpact() {
   const locale = getLocale();

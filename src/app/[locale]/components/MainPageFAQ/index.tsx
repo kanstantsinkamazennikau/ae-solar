@@ -8,15 +8,7 @@ import DownloadPresentation from "@/app/[locale]/components/common/DownloadPrese
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  FAQ_ACCORDION_DATA,
-  FAQ_MORE_SOLUTIONS,
-  FAQ_QUESTION,
-  FAQ_SOLUTIONS,
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-} from "@/app/[locale]/utils/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
+import { FAQ_ACCORDION_DATA } from "@/app/[locale]/utils/constants";
 import { useParams, useRouter } from "next/navigation";
 import { Trans } from "react-i18next";
 

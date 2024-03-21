@@ -1,11 +1,5 @@
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import {
-  SOLUTIONS_DISCOVER_AESOLAR,
-  SOLUTIONS_DISCOVER_YOUR_PARTNER,
-  SOLUTIONS_LEADING_PROVIDER,
-  SOLUTIONS_LEARN_MORE,
-} from "@/app/[locale]/solutions/constants";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 
@@ -54,7 +48,6 @@ export default async function Discover() {
         "
       >
         <div className="flex flex-col gap-4 xl:max-w-[1100px] lg:max-w-[800px] min-[400px]:max-w-[600px] max-w-[240px] text-center">
-          t{}
           <div className=" text-base-red md:-tracking-[1.2px] leading-[120%] [font-size:_clamp(20px,3vw,36px)] font-medium">
             {t("Discover AESOLAR")}
           </div>

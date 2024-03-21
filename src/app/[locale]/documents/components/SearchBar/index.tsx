@@ -5,7 +5,7 @@ import Input from "@/app/[locale]/components/common/Input";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { DOCUMENTS_SEARCH, FORMS_FIELDS } from "@/app/[locale]/utils/constants";
+import { FORMS_FIELDS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";

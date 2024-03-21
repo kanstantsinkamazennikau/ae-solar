@@ -2,12 +2,10 @@
 
 import BuyerForm from "@/app/[locale]/components/common/BuyerForm";
 import { ConsultFormFileds } from "@/app/[locale]/contacts/components/ConsultForm/types";
-import { CONTACTS_WE_ARE_READY } from "@/app/[locale]/contacts/constants";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   CONSULT_FORM_FIELDS,
-  CONSULT_READY_TO_CONSULT,
   FORMS_FIELDS,
   PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";

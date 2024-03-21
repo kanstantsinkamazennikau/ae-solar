@@ -3,14 +3,13 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { ProductsPanelProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
 import { PRODUCTS_SEQUENCE_ANIMATION_TEXT_NEPTUNE } from "@/app/[locale]/products/[id]/constants";
-import {
-  SEQUENCE_ANIMATION_TEXT,
-  TECH_INFO_A_CLOSE_LOOK_AT,
-  TECH_INFO_THE_HIDDEN_LAYERS,
-} from "@/app/[locale]/utils/constants";
+import { SEQUENCE_ANIMATION_TEXT } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function LayersAnimation({ id }: ProductsPanelProps) {
@@ -18,6 +17,9 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
   const [stopIntersecting, setStopIntersecting] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
   const { intersecting, ref } = useIntersection(0.2);
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   useEffect(() => {
     if (id === "Neptune")
@@ -38,8 +40,8 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
     <div id="construction" className="scroll-mt-[140px] mb-20">
       <BasicWidthContainer>
         <TwoTierHeading
-          tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}
-          tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
+          tierOneHeading={t("The Hidden Layers")}
+          tierTwoHeading={t("A Closer Look at")}
           align="right"
           externalStyle="z-10"
           size="default"
@@ -69,7 +71,7 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                       font-medium
                     `}
                     >
-                      {title}
+                      {t(title)}
                     </div>
                   </div>
                   <div
@@ -81,7 +83,7 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                     text-dark-gray-900
                   `}
                   >
-                    {description}
+                    {t(description)}
                   </div>
                 </div>
               ))
@@ -136,63 +138,6 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                 />
               );
             })}
-            {/* <div ref={ref}>
-              <Image
-                src={`/images/sequence/${id}/frame.png`}
-                alt="frame"
-                width={920}
-                height={640}
-                priority
-                className={`
-                  relative ${
-                    !startAnimation && !stopIntersecting
-                      ? "translate-y-full opacity-50"
-                      : "translate-y-0 opacity-100"
-                  }
-                  transition-all
-                  duration-[2s]
-                `}
-              />
-            </div>
-
-            <Image
-              src={`/images/sequence/${id}/backsheet.png`}
-              alt="backsheet"
-              width={920}
-              height={640}
-              priority
-              className={`
-                absolute
-                ${
-                  !startAnimation && !stopIntersecting
-                    ? "-bottom-full opacity-50"
-                    : "bottom-0 opacity-100"
-                }
-                transition-all
-                duration-[2s]
-                delay-300
-              `}
-            />
-            <Image
-              src={`/images/sequence/${id}/front.png`}
-              alt="front"
-              width={920}
-              height={640}
-              priority
-              onTransitionEnd={() => setStopIntersecting(true)}
-              className={`
-                absolute
-                ${
-                  !startAnimation && !stopIntersecting
-                    ? "-bottom-full opacity-50"
-                    : "bottom-0 opacity-100"
-                }
-                transition-all
-                duration-[2s]
-                delay-700
-              `}
-            />
-            <div className="fade-strip-bottom max-lg:!h-[200px] max-md:!h-[100px]" /> */}
             <div className="fade-strip-bottom !h-[150px]" />
           </div>
         </div>

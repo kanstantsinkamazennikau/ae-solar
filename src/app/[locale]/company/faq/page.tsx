@@ -1,7 +1,6 @@
 "use client";
 
 import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
-import Loader from "@/app/[locale]/components/common/Loader";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import AccordionWithIntersection from "@/app/[locale]/documents/components/AccordionWithIntersection";
 import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
@@ -9,7 +8,7 @@ import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { DOCUMENTS_FAQ_FILES } from "@/app/[locale]/utils/constants";
 import { useParams } from "next/navigation";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 
 export default function FAQ() {
   const locale = useParams()?.locale as LocaleTypes;

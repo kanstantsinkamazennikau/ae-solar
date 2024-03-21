@@ -1,13 +1,8 @@
 "use client";
 
-import Loader from "@/app/[locale]/components/common/Loader";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  HEADER_TIER1,
-  HEADER_TIER1_QUALITY,
-} from "@/app/[locale]/utils/constants";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useParams } from "next/navigation";

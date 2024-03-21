@@ -2,34 +2,18 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import {
-  ABOUT_OUR_HISTORY,
-  ABOUT_THROUGH,
-  HISTORY_READ_FULL_STORY,
-  TECH_INFO_READ_MORE,
-} from "@/app/[locale]/utils/constants";
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { useRef, useState } from "react";
 
-import Image from "next/image";
-import parse from "html-react-parser";
-import Button from "@/app/[locale]/components/common/Button";
 import { ABOUT_HISTORY } from "@/app/[locale]/company/constants";
-import Starfield from "@/app/[locale]/products/components/StarField";
-import { useParams } from "next/navigation";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import Button from "@/app/[locale]/components/common/Button";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import Starfield from "@/app/[locale]/products/components/StarField";
+import Image from "next/image";
+import { useParams } from "next/navigation";
 import { Trans } from "react-i18next";
 
 export default function OurHistory() {
-  const [scrollDirection, setScrollDirection] = useState(1);
-  const [scrollFrame, setScrollFrame] = useState(0);
-  const [activeStepIndex, setActiveStepIndex] = useState(0);
   const container = useRef(null);
   const [isOpenItem, setIsOpenItem] = useState(false);
 

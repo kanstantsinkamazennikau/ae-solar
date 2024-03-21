@@ -4,10 +4,7 @@ import { ProductSloganProps } from "@/app/[locale]/components/ProductIntroVideo/
 import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  PRODUCT_INTRO_DETAILED_INFO,
-  PRODUCT_INTRO_PANELS,
-} from "@/app/[locale]/utils/constants";
+import { PRODUCT_INTRO_PANELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useState } from "react";

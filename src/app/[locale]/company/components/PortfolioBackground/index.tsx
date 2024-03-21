@@ -1,21 +1,10 @@
 "use client";
 
-import {
-  ABOUT_OUR_DESIGN,
-  ABOUT_OUR_DESIGN_HIGHLIGHT,
-  ABOUT_OUR_GOES_BEYOND,
-  ABOUT_OUR_PORTFOLIO,
-} from "@/app/[locale]/company/constants";
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  CONSTRUCTOR_CONFIGURE_YOUR_MODEL,
-  HEADER_CONFIGURE_YOUR_MODEL,
-} from "@/app/[locale]/utils/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";

@@ -1,25 +1,15 @@
 "use client";
 
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { SEQUENCE_ANIMATION_TEXT } from "@/app/[locale]/utils/constants";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  SEQUENCE_ANIMATION_TEXT,
-  TECH_INFO_A_CLOSE_LOOK_AT,
-  TECH_INFO_THE_HIDDEN_LAYERS,
-} from "@/app/[locale]/utils/constants";
-import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { useParams } from "next/navigation";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const scrollTriggerPositionFromResolution = (
   isDesktop: boolean,
@@ -122,8 +112,6 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
   }, [images.length, renderImage]);
 
   useEffect(() => {
-    // if (!canvasRef.current || images.length === 0) return;
-    // renderImage();
     if (!canvasRef.current) return;
     const img = new Image();
     const imgSrc = `/images/sequence/home/Layer-2-4-1.jpg`;

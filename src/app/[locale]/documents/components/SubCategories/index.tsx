@@ -1,11 +1,9 @@
-import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import Presentation from "@/app/[locale]/documents/components/Presentation";
 import Text from "@/app/[locale]/documents/components/Text";
 import { DocumentsTypesWithSubCategories } from "@/app/[locale]/documents/components/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { useParams } from "next/navigation";
-import { useContext } from "react";
 
 export default function SubCategories({
   documents,

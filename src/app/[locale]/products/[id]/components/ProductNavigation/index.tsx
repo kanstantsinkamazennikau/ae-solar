@@ -2,6 +2,8 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { ProductNavigationProps } from "@/app/[locale]/products/[id]/components/ProductNavigation/types";
 import {
   PRODUCT_NAVIGATION,
@@ -13,9 +15,12 @@ import {
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 export default function ProductNavigation({ id }: ProductNavigationProps) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(false);
   const [height, setHeight] = useState<number | undefined>(undefined);
@@ -83,7 +88,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
               </div>
               {/* DESKTOP NAVIGATION */}
               <div className="md:flex hidden gap-4 [font-size:_clamp(12px,1vw,14px)] font-normal leading-[100%]">
-                <div className="text-dark-gray-900">{PRODUCT_OVERVIEW}</div>
+                <div className="text-dark-gray-900">{t("Overview")}:</div>
                 {PRODUCT_NAVIGATION.map(({ title, link, position }) => {
                   const onClick = () => {
                     document.getElementById(link)!.scrollIntoView({
@@ -97,7 +102,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
                       onClick={onClick}
                       className="cursor-pointer"
                     >
-                      {title}
+                      {t(title)}
                     </div>
                   );
                 })}
@@ -142,7 +147,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
       >
         <div className="flex flex-col md:hidden [font-size:_clamp(14px,1vw,14px)] font-normal leading-[100%] p-4 w-full">
           <div className="text-dark-gray-900 py-4 pl-6  border-solid border-b border-option-border">
-            {PRODUCT_OVERVIEW}
+            {t("Overview")}
           </div>
           {PRODUCT_NAVIGATION.map(({ title, link, position }) => {
             const onClick = () => {
@@ -158,7 +163,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
                 onClick={onClick}
                 className="cursor-pointer py-4 border-solid border-b border-option-border pl-6 last-of-type:border-0"
               >
-                {title}
+                {t(title)}
               </div>
             );
           })}

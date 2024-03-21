@@ -5,13 +5,6 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  GET_IN_TOUCH_BECOME_A,
-  GET_IN_TOUCH_CLIENT_TYPE,
-  GET_IN_TOUCH_ELEVATE_GROWTH,
-  GET_IN_TOUCH_JOIN_US,
-  GET_IN_TOUCH_OUR_VISION,
-} from "@/app/[locale]/utils/constants";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -170,6 +163,7 @@ export default function GetInTouch({
                 <div className="flex flex-col justify-center items-center [font-size:_clamp(26px,5vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1100px] leading-[120%]">
                   <div className="md:whitespace-nowrap overflow-y-hidden">
                     <span>{t("Become")}</span>
+                    <br className="max-md:block hidden" />
                     <span
                       className="relative animate-partnerTransition transition-all"
                       key={clientType}

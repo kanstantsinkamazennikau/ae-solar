@@ -2,15 +2,9 @@
 
 import BensPopUp from "@/app/[locale]/components/TechInfo/BensPopUp";
 import { BenProps } from "@/app/[locale]/components/TechInfo/types";
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  TECH_INFO_CLOSE,
-  TECH_INFO_READ_MORE,
-} from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";

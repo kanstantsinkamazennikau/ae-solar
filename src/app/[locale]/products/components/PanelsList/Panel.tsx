@@ -8,7 +8,6 @@ import {
   PRODUCT_DESCRIPTIONS,
   PRODUCT_SLOGAN,
 } from "@/app/[locale]/products/constants";
-import { PRODUCT_INTRO_LEARN_MORE } from "@/app/[locale]/utils/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import dynamic from "next/dynamic";
 import Image from "next/image";

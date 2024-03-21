@@ -2,15 +2,7 @@
 
 import ContactInfo from "@/app/[locale]/components/common/Footer/ContactInfo";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  DOCUMENTS_IMPRINT_INFO_CONTACTS,
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-} from "@/app/[locale]/utils/constants";
-import getLocale from "@/app/[locale]/utils/getLocale";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import { useParams } from "next/navigation";
 import { Trans } from "react-i18next";
 

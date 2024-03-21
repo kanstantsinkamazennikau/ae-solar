@@ -6,11 +6,6 @@ import ConsultForm from "@/app/[locale]/contacts/components/ConsultForm";
 import { CONTACTS_OFFICES } from "@/app/[locale]/contacts/constants";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-} from "@/app/[locale]/utils/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { Trans } from "react-i18next";

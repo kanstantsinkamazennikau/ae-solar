@@ -14,10 +14,7 @@ import {
 } from "@/app/[locale]/documents/components/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  DOCUMENTS_FILES,
-  DOCUMENT_SUBCATEGORIES_SPLITTER,
-} from "@/app/[locale]/utils/constants";
+import { DOCUMENTS_FILES } from "@/app/[locale]/utils/constants";
 import { useParams } from "next/navigation";
 import { useCallback, useContext, useEffect } from "react";
 

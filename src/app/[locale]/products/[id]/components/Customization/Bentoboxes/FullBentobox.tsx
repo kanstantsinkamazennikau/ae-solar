@@ -1,3 +1,9 @@
+"use client";
+
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useParams } from "next/navigation";
+
 export default function FullBentobox({
   imageUrl,
   shortDescription,
@@ -12,6 +18,9 @@ export default function FullBentobox({
   };
   gridArea?: string;
 }) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -43,17 +52,19 @@ export default function FullBentobox({
       {longDescription && (
         <div className="flex flex-col gap-5 self-start">
           <div>
-            {longDescription.title.split(/\r?\n|\r|\n/g).map((string) => (
-              <div
-                className="[font-size:_clamp(24px,2.5vw,48px)] font-semibold md:-tracking-[1.44px] leading-[110%] capitalize"
-                key={string}
-              >
-                {string}
-              </div>
-            ))}
+            {t(longDescription.title)
+              .split(/\r?\n|\r|\n/g)
+              .map((string) => (
+                <div
+                  className="[font-size:_clamp(24px,2.5vw,48px)] font-semibold md:-tracking-[1.44px] leading-[110%] capitalize"
+                  key={string}
+                >
+                  {string}
+                </div>
+              ))}
           </div>
           <div>
-            {longDescription.description
+            {t(longDescription.description || "")
               ?.split(/\r?\n|\r|\n/g)
               .map((string) => (
                 <div
@@ -67,14 +78,16 @@ export default function FullBentobox({
         </div>
       )}
       {shortDescription &&
-        shortDescription.split(/\r?\n|\r|\n/g).map((string) => (
-          <div
-            className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] capitalize"
-            key={string}
-          >
-            {string}
-          </div>
-        ))}
+        t(shortDescription)
+          .split(/\r?\n|\r|\n/g)
+          .map((string) => (
+            <div
+              className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] capitalize"
+              key={string}
+            >
+              {string}
+            </div>
+          ))}
     </div>
   );
 }

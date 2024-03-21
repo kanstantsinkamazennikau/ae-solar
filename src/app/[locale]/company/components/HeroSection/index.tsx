@@ -1,11 +1,5 @@
 "use client";
 
-import {
-  ABOUT_DOWNLOAD_PRESENTATION,
-  ABOUT_ILLUMINATING,
-  ABOUT_MANUFACTURER,
-  ABOUT_WATCH_VIDEO,
-} from "@/app/[locale]/company/constants";
 import Button from "@/app/[locale]/components/common/Button";
 import LightBoxYoutubeVideo from "@/app/[locale]/components/common/LightBoxYoutubeVideo";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
@@ -13,7 +7,6 @@ import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useState } from "react";
-import parse from "html-react-parser";
 import { Trans } from "react-i18next";
 
 export default function HeroSection() {
@@ -128,7 +121,7 @@ export default function HeroSection() {
                     width={24}
                     height={24}
                   />
-                  <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
+                  <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%] hyphens-auto">
                     <Trans>{t("Company Presentation")}</Trans>
                   </div>
                 </div>
@@ -148,7 +141,7 @@ export default function HeroSection() {
                   width={24}
                   height={24}
                 />
-                <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%]">
+                <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%] hyphens-auto">
                   <Trans>{t("Production Process")}</Trans>
                 </div>
               </div>

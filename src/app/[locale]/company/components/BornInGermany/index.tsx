@@ -1,19 +1,11 @@
 "use client";
 
-import {
-  ABOUT_BORN_IN_GERMANY,
-  ABOUT_BORN_STORY,
-  ABOUT_BORN_STORY_WORDS_TO_HIGHLIGHT,
-} from "@/app/[locale]/company/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import getLocale from "@/app/[locale]/utils/getLocale";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { Trans, TransWithoutContext } from "react-i18next";
+import { Trans } from "react-i18next";
 
 export default function BornInGermany() {
   const locale = useParams()?.locale as LocaleTypes;

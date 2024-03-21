@@ -3,18 +3,22 @@
 import { CheckoutFormFileds } from "@/app/[locale]/cart/components/CheckoutForm/types";
 import BuyerForm from "@/app/[locale]/components/common/BuyerForm";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   CART_LOCALSTORAGE,
-  CHECKOUT_FILL_OUT,
   CHECKOUT_FORM_FIELDS,
   FORMS_FIELDS,
 } from "@/app/[locale]/utils/constants";
+import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { FieldValues, RegisterOptions } from "react-hook-form";
-import { toast } from "react-toastify";
+import { Trans } from "react-i18next";
 
 export default function CheckoutForm() {
   const { modelsInBag, setModelsInBag } = useContext(ConstructorContext);
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   const sendCheckoutEmail = async (data: FieldValues) => {
     const apiEndpoint = "/api/checkout";
@@ -35,21 +39,21 @@ export default function CheckoutForm() {
 
   const inputsRules: { [key in keyof CheckoutFormFileds]: RegisterOptions } = {
     name: {
-      required: "Name is required",
+      required: t("Name is required"),
     },
     email: {
-      required: "Email is required",
+      required: t("Email is required"),
       pattern: {
         value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-        message: "Invalid email address",
+        message: t("Invalid email address"),
       },
     },
 
     phone: {
-      required: "Phone number is required",
+      required: t("Phone number is required"),
       pattern: {
         value: /^[0-9]+$/,
-        message: "Please enter a number",
+        message: t("Please enter a number"),
       },
     },
   };
@@ -68,7 +72,15 @@ export default function CheckoutForm() {
         inputsRules={inputsRules as RegisterOptions}
         defaultValues={defaultValues}
         formFields={CHECKOUT_FORM_FIELDS}
-        formHeader={CHECKOUT_FILL_OUT}
+        formHeader={
+          <Trans
+            components={{
+              red: <span className="text-[#B30006]" />,
+            }}
+          >
+            {t("Fill out Your Order Information")}
+          </Trans>
+        }
         submitFunction={sendCheckoutEmail}
         hideBackgroundImage
         formHeaderStyle="
@@ -76,7 +88,6 @@ export default function CheckoutForm() {
           flex
           flex-col
           whitespace-break-spaces
-          [&>*:first-child]:text-[#9A9A9A]
           [&>div]:block
           first:!inline
           !mb-10

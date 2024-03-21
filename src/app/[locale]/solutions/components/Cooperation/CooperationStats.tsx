@@ -2,19 +2,8 @@
 
 import Logo from "@/app/[locale]/components/common/Logo";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  SOLUTIONS_STATS_WITH_DETAILS,
-  SOLUTIONS_TIER_1,
-} from "@/app/[locale]/solutions/constants";
-import {
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-  FOOTER_SAVE_THE_WORLD,
-} from "@/app/[locale]/utils/constants";
-import getLocale from "@/app/[locale]/utils/getLocale";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
+import { SOLUTIONS_STATS_WITH_DETAILS } from "@/app/[locale]/solutions/constants";
 import { useParams } from "next/navigation";
 import { Fragment } from "react";
 import { Trans } from "react-i18next";

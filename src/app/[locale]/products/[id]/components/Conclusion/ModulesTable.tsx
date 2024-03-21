@@ -1,24 +1,27 @@
 import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import DesktopTableRow from "@/app/[locale]/products/[id]/components/Conclusion/DesktopTableRow";
 import MobileTable from "@/app/[locale]/products/[id]/components/Conclusion/MobileTable";
 import { ConclusionProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
 import {
-  PRODUCT_CHOOSE_READY_MODULES,
   PRODUCT_CONCLUSION_TABLE_BODY,
   PRODUCT_CONCLUSION_TABLE_HEADERS,
 } from "@/app/[locale]/products/[id]/constants";
-import {
-  CART_LOCALSTORAGE,
-  CART_SUCCESSFULLY_ADDED,
-} from "@/app/[locale]/utils/constants";
+import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
+import { useParams } from "next/navigation";
 import { useContext } from "react";
+import { Trans } from "react-i18next";
 import { toast } from "react-toastify";
 
 export default function ModulesTable({ id }: ConclusionProps) {
   const { modules } = PRODUCT_CONCLUSION_TABLE_BODY[id];
   const { setModelsInBag, modelsInBag } = useContext(ConstructorContext);
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   const addModelToBag = (
     model: string,
@@ -57,7 +60,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
       return modelsInBag;
     });
-    toast.success(CART_SUCCESSFULLY_ADDED);
+    toast.success(t("Successfully added to bag"));
   };
 
   const removeModel = (model: string) => {
@@ -70,23 +73,21 @@ export default function ModulesTable({ id }: ConclusionProps) {
     <div className="mt-[60px] w-full flex flex-col items-center">
       <BasicWidthContainer>
         <div className="lg:block hidden">
-          <div className="flex justify-center">
-            {PRODUCT_CHOOSE_READY_MODULES.split(/\r?\n|\r|\n/g).map(
-              (string, index) => (
-                <span
-                  key={string}
-                  className={`
-                    ${index === 1 ? "text-[#B30006]" : ""} 
-                    text-center
-                    [font-size:_clamp(24px,2.5vw,32px)]
-                    font-semibold
-                    leading-[130%]
-                  `}
-                >
-                  {string}
-                </span>
-              )
-            )}
+          <div
+            className="
+              text-center
+              [font-size:_clamp(24px,2.5vw,32px)]
+              font-semibold
+              leading-[130%]
+            "
+          >
+            <Trans
+              components={{
+                red: <span className="text-[#B30006]" />,
+              }}
+            >
+              {t("Choose Your Ideal Product")}
+            </Trans>
           </div>
 
           <table
@@ -126,19 +127,21 @@ export default function ModulesTable({ id }: ConclusionProps) {
                     items-start
                   "
                   >
-                    {header.split(/\r?\n|\r|\n/g).map((string) => (
-                      <div
-                        key={string}
-                        className={`
-                        text-center
-                        [font-size:_clamp(12px,1.5vw,14px)]
-                        font-medium
-                        leading-[100%]
-                      `}
-                      >
-                        {string}
-                      </div>
-                    ))}
+                    {t(header)
+                      .split(/\r?\n|\r|\n/g)
+                      .map((string) => (
+                        <div
+                          key={string}
+                          className={`
+                            text-center
+                            [font-size:_clamp(12px,1.5vw,14px)]
+                            font-medium
+                            leading-[100%]
+                          `}
+                        >
+                          {string}
+                        </div>
+                      ))}
                   </th>
                 ))}
               </tr>

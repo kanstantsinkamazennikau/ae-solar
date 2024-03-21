@@ -10,8 +10,6 @@ import TextArea from "@/app/[locale]/components/common/TextArea";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
-  CHECKOUT_SEND_REQUEST,
-  CONSULT_AGREEMENT,
   DROPDOWN_INPUT_VALUES,
   PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";

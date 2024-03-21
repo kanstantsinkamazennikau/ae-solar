@@ -1,8 +1,11 @@
 "use client";
 
 import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { BenefitProps } from "@/app/[locale]/products/[id]/components/Benefits/types";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useState } from "react";
 
 export default function Benefit({
@@ -12,6 +15,8 @@ export default function Benefit({
 }: BenefitProps) {
   const [stopIntersecting, setStopIntersecting] = useState(false);
   const { ref, intersecting } = useIntersection(0.35);
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <div
@@ -79,29 +84,11 @@ export default function Benefit({
             w-full
           "
         >
-          {/* <div className="md:hidden leading-[100%] font-walsheim font-bold h-5 text-[#505050] flex">
-            <div className="[font-size:_clamp(11px,1.5vw,20px)] flex items-start h-full">
-              {formatNumber(index + 1)}
-            </div>
-            <div className="[font-size:_clamp(8px,1.2vw,14px)] flex items-end h-full">
-              /{formatNumber(benefitsLength)}
-            </div>
-          </div> */}
-          {benefitTitle}
+          {t(benefitTitle)}
         </div>
       </div>
 
-      {/* <div className="flex justify-between items-center gap-3"> */}
       <div className="flex flex-col items-start lg:gap-6 md:gap-3 gap-2">
-        {/* DESKTOP COUNTER */}
-        {/* <div className="md:flex leading-[100%] font-walsheim font-bold h-5 text-[#505050] hidden">
-          <div className="[font-size:_clamp(10px,1.5vw,20px)] flex items-end h-full">
-            {formatNumber(index + 1)}
-          </div>
-          <div className="[font-size:_clamp(8px,1.2vw,14px)] flex items-start h-full">
-            /{formatNumber(benefitsLength)}
-          </div>
-        </div> */}
         <p
           className="
             [font-size:_clamp(12px,1.5vw,20px)]
@@ -113,7 +100,7 @@ export default function Benefit({
             w-full
           "
         >
-          {benefitDescription}
+          {t(benefitDescription)}
         </p>
       </div>
     </div>

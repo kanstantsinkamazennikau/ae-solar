@@ -1,11 +1,5 @@
 "use client";
 
-import {
-  ABOUT_AS_A_TIER,
-  ABOUT_AS_A_TIER_HIGHLIGHT,
-  ABOUT_SYNONYMOUS,
-  ABOUT_SYNONYMOUS_HIGHLIGHT,
-} from "@/app/[locale]/company/constants";
 import Tier1 from "@/app/[locale]/components/common/Tier1";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";

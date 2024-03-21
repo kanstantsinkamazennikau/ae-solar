@@ -1,3 +1,4 @@
+import { Model } from "@/app/[locale]/context/constructorContext";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { ImageResponse } from "next/og";
@@ -13,13 +14,12 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image({
-  params: { locale },
+  params: { id },
 }: {
-  params: { locale: LocaleTypes };
+  params: { id: Model };
 }) {
-  const { t } = await useServerTranslation(locale, "translation");
   const interSemiBold = fetch(
-    new URL("../fonts/Criteria CF/Criteria CF Medium.otf", import.meta.url)
+    new URL("../../fonts/Criteria CF/Criteria CF Medium.otf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
@@ -36,7 +36,7 @@ export default async function Image({
           justifyContent: "center",
         }}
       >
-        AE Solar | {t("Contacts")}
+        AE Solar | {id}
       </div>
     ),
     {

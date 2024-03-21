@@ -5,7 +5,6 @@ import {
 } from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
 import { getDocumentSlugs, getDocuments, load } from "outstatic/server";
-import { useEffect } from "react";
 
 export async function generateStaticParams() {
   const blogs = getDocumentSlugs("blog");

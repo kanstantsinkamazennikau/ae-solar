@@ -6,7 +6,6 @@ import Filter from "@/app/[locale]/documents/components/Filter";
 import SearchBar from "@/app/[locale]/documents/components/SearchBar";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { DOCUMENTS_NO_RESULT } from "@/app/[locale]/utils/constants";
 import { useParams } from "next/navigation";
 import { useContext } from "react";
 

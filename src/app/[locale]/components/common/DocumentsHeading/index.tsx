@@ -1,23 +1,7 @@
 "use client";
 
-import {
-  MANUFACTURER_MANUFACTURER,
-  MANUFACTURER_QUALITY,
-} from "@/app/[locale]/company/manufacturer/constants";
-import {
-  DOCUMENTS_PUBLISHERS_INFO_INFORMATION,
-  DOCUMENTS_PUBLISHERS_INFO_PUBLISHERS,
-} from "@/app/[locale]/company/publishers_info/constants";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  DOCUMENTS_DOCUMENTS_HEADING,
-  DOCUMENTS_FAQ_HAVE_A_QUESTION,
-  DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS,
-  DOCUMENTS_IMPRINT_INFO_IMPRINT,
-  DOCUMENTS_IMPRINT_INFO_INFORMATION,
-  DOCUMENTS_YOU_NEED_TO_KNOW,
-} from "@/app/[locale]/utils/constants";
 import { useParams, usePathname } from "next/navigation";
 import { Trans } from "react-i18next";
 

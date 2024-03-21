@@ -1,7 +1,5 @@
 import { ManufacturerArticle } from "@/app/[locale]/company/manufacturer/types";
 
-export const MANUFACTURER_MANUFACTURER = "Manufacturer";
-export const MANUFACTURER_QUALITY = "Quality Delivered Everytime";
 export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
   {
     paragraphHeading: "ArticleHeading1",
@@ -59,9 +57,3 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
     ],
   },
 ];
-export const MANUFACTURER_DO_IT_TOGETHER =
-  "Let's do it together, one ray at a time.";
-export const MANUFACTURER_SAVE_THE_WORLD =
-  "AESOLAR — It's time to save the World. ";
-export const MANUFACTURER_WELCOME = "Welcome to AESolar";
-export const MANUFACTURER_HARNESS = "Harnessing the Sun, Empowering the World";

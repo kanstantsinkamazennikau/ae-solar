@@ -1,5 +1,4 @@
 import { RecentPost } from "@/app/[locale]/company/news/components/RecentPosts/types";
-import { BLOG_RECENT_POSTS } from "@/app/[locale]/company/news/constants";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import Link from "next/link";

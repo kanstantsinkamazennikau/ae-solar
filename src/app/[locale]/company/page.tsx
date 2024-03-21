@@ -6,17 +6,9 @@ import ExploreOurDifference from "@/app/[locale]/company/components/ExploreOurDi
 import HeroSection from "@/app/[locale]/company/components/HeroSection";
 import OurHistory from "@/app/[locale]/company/components/OurHistory";
 import PortfolioBackground from "@/app/[locale]/company/components/PortfolioBackground";
-import {
-  ABOUT_AS_A_TIER,
-  ABOUT_AS_A_TIER_HIGHLIGHT,
-  ABOUT_SYNONYMOUS,
-  ABOUT_SYNONYMOUS_HIGHLIGHT,
-} from "@/app/[locale]/company/constants";
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
-import { MainPageFAQ } from "@/app/[locale]/components/MainPageFAQ";
 import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import Tier1 from "@/app/[locale]/components/common/Tier1";
 import GlobalImpact from "@/app/[locale]/solutions/components/GlobalImpact";
 import JoinOurMission from "@/app/[locale]/solutions/components/JoinOurMission";
 

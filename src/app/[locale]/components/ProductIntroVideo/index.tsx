@@ -9,17 +9,13 @@ import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
-import dynamic from "next/dynamic";
 import {
-  PRODUCT_INTRO_CALCULATE_YOUR_MODEL,
-  PRODUCT_INTRO_HIGH_QUALITY_SP,
-  PRODUCT_INTRO_LEARN_MORE,
   PRODUCT_INTRO_PANELS,
   PRODUCT_INTRO_PANELS_IMAGES,
-  PRODUCT_INTRO_THE_NEXT_LEVEL_OF,
 } from "@/app/[locale]/utils/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 //@ts-ignore
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { Video } from "@splidejs/splide-extension-video";
 import Image from "next/image";
@@ -33,7 +29,6 @@ import {
   useState,
 } from "react";
 import { Trans } from "react-i18next";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 
 export default function ProductIntroVideo() {
   const { model, setModel } = useContext(ModelContext);

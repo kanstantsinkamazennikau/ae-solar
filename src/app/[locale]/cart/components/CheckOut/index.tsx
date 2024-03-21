@@ -1,15 +1,17 @@
 "use client";
 
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import {
-  CART_BAG_IS_EMPTY,
-  CART_MODELS_ARE_READY,
-} from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useParams } from "next/navigation";
 import { useContext, useEffect } from "react";
 
 export default function CheckOut() {
   const { modelsInBag, setIsGenerateModel, setIsShowCheckoutForm } =
     useContext(ConstructorContext);
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   useEffect(() => {
     setIsGenerateModel(false);
@@ -20,28 +22,14 @@ export default function CheckOut() {
       {!!modelsInBag.length ? (
         <>
           <div className="[font-size:_clamp(24px,5vw,40px)] font-bold leading-[120%] -tracking-[0.4px] mb-3 max-w-[474px]">
-            {CART_MODELS_ARE_READY}
+            {t("Your modules")}
           </div>
-          {/* <div className="[font-size:_clamp(16px,2.5vw,18px)] font-medium leading-[150%] mb-7 max-w-[226px] font-walsheim text-dark-gray-900">
-            {CART_PLEASE_CHECKOUT}
-          </div>
-          <Button onClick={() => setIsShowCheckoutForm(true)} size="small">
-            {CART_GET_A_QUOTE}
-          </Button> */}
         </>
       ) : (
         <div className="[font-size:_clamp(24px,5vw,40px)] font-bold leading-[120%] -tracking-[0.4px] mb-3 max-w-[474px]">
-          {CART_BAG_IS_EMPTY}
+          {t("Bag is empty")}
         </div>
       )}
-      {/* <Image
-        src={`/images/glowFull.png`}
-        alt="glow"
-        priority
-        width={1320}
-        height={60}
-        className="mt-2 mb-8"
-      /> */}
     </div>
   );
 }

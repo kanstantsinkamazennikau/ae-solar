@@ -6,7 +6,6 @@ import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 //@ts-ignore
 import { Splide, SplideSlide, Options } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import parse from "html-react-parser";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { Fragment, useEffect, useRef, useState } from "react";

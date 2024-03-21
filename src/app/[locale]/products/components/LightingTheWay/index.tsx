@@ -3,10 +3,6 @@
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import {
-  PRODUCTS_LIGHTING,
-  PRODUCTS_WELCOME,
-} from "@/app/[locale]/products/constants";
 import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
 import { useContext } from "react";

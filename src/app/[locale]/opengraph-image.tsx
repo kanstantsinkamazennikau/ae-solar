@@ -1,4 +1,6 @@
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { ImageResponse } from "next/og";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
 
 export const runtime = "edge";
 
@@ -10,7 +12,13 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default async function Image() {
+export default async function Image({
+  params: { locale },
+}: {
+  params: { locale: LocaleTypes };
+}) {
+  const { t } = await useServerTranslation(locale, "translation");
+
   const interSemiBold = fetch(
     new URL("./fonts/Criteria CF/Criteria CF Medium.otf", import.meta.url)
   ).then((res) => res.arrayBuffer());
@@ -33,7 +41,7 @@ export default async function Image() {
           justifyContent: "center",
         }}
       >
-        AE Solar | Main page
+        AE Solar | {t("Main page")}
         {/* <img width="256" height="256" src={imageData} alt="AE Solar" /> */}
       </div>
     ),

@@ -6,15 +6,7 @@ import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import PanelsList from "@/app/[locale]/products/components/PanelsList";
-import {
-  PRODUCT_ADVANTAGES,
-  PRODUCT_ESSENTIAL,
-  PRODUCT_SINCE,
-  PRODUCT_SINCE_HIGHLIGHT,
-  PRODUCT_THE_ADVANTAGES,
-  PRODUCT_WE_ARE_TIER,
-  PRODUCT_WE_ARE_TIER_HIGHLIGHT,
-} from "@/app/[locale]/products/constants";
+import { PRODUCT_ADVANTAGES } from "@/app/[locale]/products/constants";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { Trans } from "react-i18next";

@@ -1,16 +1,5 @@
-import {
-  ABOUT_AS_A_TIER,
-  ABOUT_AS_A_TIER_HIGHLIGHT,
-  ABOUT_SYNONYMOUS,
-  ABOUT_SYNONYMOUS_HIGHLIGHT,
-} from "@/app/[locale]/company/constants";
-import Awards from "@/app/[locale]/components/AwardsAndStats/Awards";
-import Production from "@/app/[locale]/components/AwardsAndStats/Production";
-import Stats from "@/app/[locale]/components/AwardsAndStats/Stats";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { Tier1Props } from "@/app/[locale]/components/common/Tier1/types";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
-import Image from "next/image";
 
 export default function Tier1({
   descriptionText,

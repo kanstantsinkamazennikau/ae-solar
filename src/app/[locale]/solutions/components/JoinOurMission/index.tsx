@@ -2,14 +2,8 @@
 
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Starfield from "@/app/[locale]/products/components/StarField";
-import {
-  SOLUTIONS_JOIN,
-  SOLUTIONS_OUR_MISSION,
-  SOLUTIONS_OUR_MISSION_TEXT,
-} from "@/app/[locale]/solutions/constants";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { Trans } from "react-i18next";
@@ -56,8 +50,6 @@ export default function JoinOurMission() {
           -translate-x-1/2
         "
       />
-      {/* <div className="flex justify-center items-center flex-col">
-        <BasicWidthContainer> */}
       <div className="w-full absolute bottom-0 flex justify-center px-5">
         <div className="flex w-[874px] flex-col items-center gap-10">
           <TwoTierHeading
@@ -70,7 +62,6 @@ export default function JoinOurMission() {
                 {t("Join Our Mission")}
               </Trans>
             }
-            // tierTwoHeading={SOLUTIONS_OUR_MISSION}
             size="small"
             externalStyle="
               md:!text-[96px]
@@ -88,8 +79,6 @@ export default function JoinOurMission() {
           </div>
         </div>
       </div>
-      {/* </BasicWidthContainer>
-      </div> */}
     </div>
   );
 }
