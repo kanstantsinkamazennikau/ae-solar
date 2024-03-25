@@ -1,16 +1,16 @@
+"use client";
+
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import {
-  PRODUCT_FOR_PLANET,
-  PRODUCT_FOR_YOU,
-  PRODUCT_WE_TRANSFORM,
-  PRODUCT_WE_TRANSFORM_HIGHLIGHT,
-  PRODUCT_WE_TRANSFORM_RANGE,
-  PRODUCT_WE_TRANSFORM_SUNLIGHT,
-} from "@/app/[locale]/products/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export default function WeTransform() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -79,7 +79,6 @@ export default function WeTransform() {
             className="
               [font-size:_clamp(36px,6vw,96px)]
               font-extrabold
-              capitalize
               -tracking-[0.96px]
               relative
               z-10
@@ -90,16 +89,21 @@ export default function WeTransform() {
               gap-1
             "
           >
-            <p>{PRODUCT_WE_TRANSFORM}</p>
-            <p
-              className="
-                bg-clip-text
-                text-transparent
-                bg-[linear-gradient(to_right,#FFB800,#EBFF00,#42FF00)]
-              "
+            <Trans
+              components={{
+                gradientYellow: (
+                  <p
+                    className="
+                      bg-clip-text
+                      text-transparent
+                      bg-[linear-gradient(to_right,#FFB800,#EBFF00,#42FF00)]
+                    "
+                  />
+                ),
+              }}
             >
-              {PRODUCT_WE_TRANSFORM_SUNLIGHT}
-            </p>
+              {t("We Transform")}
+            </Trans>
           </div>
 
           <div
@@ -112,25 +116,40 @@ export default function WeTransform() {
               flex
               self-end
               flex-col
+              gap-4
+              mb-4
             "
           >
-            {PRODUCT_WE_TRANSFORM_RANGE.split(/\r?\n|\r|\n/g).map(
-              (string, index) => (
-                <div
-                  key={string}
-                  className="
-                    mb-4
-                  "
-                >
-                  {styleMatchingText(
-                    string,
-                    PRODUCT_WE_TRANSFORM_HIGHLIGHT,
-                    "",
-                    "font-bold"
-                  )}
-                </div>
-              )
-            )}
+            <p>
+              <Trans
+                components={{
+                  white: (
+                    <span
+                      className="
+                      font-bold
+                    "
+                    />
+                  ),
+                }}
+              >
+                {t("Our range")}
+              </Trans>
+            </p>
+            <p>
+              <Trans
+                components={{
+                  white: (
+                    <span
+                      className="
+                      font-bold
+                    "
+                    />
+                  ),
+                }}
+              >
+                {t("Each of product")}
+              </Trans>
+            </p>
           </div>
           <Image
             src={`/images/products/weTransformPathes.svg`}
@@ -158,16 +177,21 @@ export default function WeTransform() {
               -mt-5
             "
           >
-            <p>{PRODUCT_FOR_YOU}</p>
-            <p
-              className="
-                bg-clip-text
-                text-transparent
-                bg-[linear-gradient(to_right,#FFFFFF,#00A3FF)]
-              "
+            <Trans
+              components={{
+                gradientBlue: (
+                  <p
+                    className="
+                      bg-clip-text
+                      text-transparent
+                      bg-[linear-gradient(to_right,#FFFFFF,#00A3FF)]
+                    "
+                  />
+                ),
+              }}
             >
-              {PRODUCT_FOR_PLANET}
-            </p>
+              {t("For You and Planet")}
+            </Trans>
           </div>
         </div>
       </BasicWidthContainer>

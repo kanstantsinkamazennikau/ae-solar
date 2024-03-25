@@ -1,23 +1,10 @@
-import {
-  ABOUT_AS_A_TIER,
-  ABOUT_AS_A_TIER_HIGHLIGHT,
-  ABOUT_SYNONYMOUS,
-  ABOUT_SYNONYMOUS_HIGHLIGHT,
-} from "@/app/[locale]/company/constants";
-import Awards from "@/app/[locale]/components/AwardsAndStats/Awards";
-import Production from "@/app/[locale]/components/AwardsAndStats/Production";
-import Stats from "@/app/[locale]/components/AwardsAndStats/Stats";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { Tier1Props } from "@/app/[locale]/components/common/Tier1/types";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
-import Image from "next/image";
 
 export default function Tier1({
-  tier1TextStyle = "text-[#038DF4]",
   descriptionText,
   descriptionTextHighlight,
   tier1Text,
-  tier1TextHighlight,
   externalStyle,
 }: Tier1Props) {
   return (
@@ -55,24 +42,20 @@ export default function Tier1({
             max-md:text-left
           "
         >
-          {styleMatchingText(tier1Text, tier1TextHighlight, "", tier1TextStyle)}
+          {tier1Text}
         </div>
         <div
           className="
-              font-normal
-              leading-[150%]
-              [font-size:_clamp(16px,1.5vw,24px)]
-              font-walsheim
-              max-w-[650px]
-              max-md:text-left
-            "
+            font-normal
+            leading-[150%]
+            [font-size:_clamp(16px,1.5vw,24px)]
+            font-walsheim
+            max-w-[600px]
+            max-md:text-left
+            text-dark-gray-900
+          "
         >
-          {styleMatchingText(
-            descriptionText,
-            descriptionTextHighlight,
-            "text-dark-gray-900",
-            "text-white"
-          )}
+          {descriptionText}
         </div>
       </div>
     </BasicWidthContainer>

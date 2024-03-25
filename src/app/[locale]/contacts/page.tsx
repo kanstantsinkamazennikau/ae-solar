@@ -5,13 +5,21 @@ import {
   CONTACTS_CONTACT_US,
   CONTACTS_INFORMATION,
 } from "@/app/[locale]/contacts/constants";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 
-export default function ContactsPage() {
+export default async function ContactsPage({
+  params: { locale },
+}: {
+  params: { locale: LocaleTypes };
+}) {
+  const { t } = await useServerTranslation(locale, "translation");
+
   return (
     <>
       <HeadingWithBackground
-        tierOneHeading={CONTACTS_CONTACT_US}
-        tierTwoHeading={CONTACTS_INFORMATION}
+        tierOneHeading={t("Contact Us")}
+        tierTwoHeading={t("Information")}
         backgroundImage="/images/contacts/contactsBackground.png"
       />
       <div className="flex w-full justify-center flex-col items-center mb-20">

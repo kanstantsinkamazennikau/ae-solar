@@ -2,23 +2,20 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import { SOLUTIONS_CONTACTS_US } from "@/app/[locale]/solutions/constants";
-import {
-  GET_IN_TOUCH_CLIENT_TYPE,
-  GET_IN_TOUCH_ELEVATE_GROWTH,
-  HEADER_CONTACT_US,
-} from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function ContactUs() {
-  const [clientType, setClientType] =
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
+  const [clientType, _] =
     useState<keyof typeof matchPartnerTypeWithArticle>("partner");
   const router = useRouter();
 
-  //TODO fill form with partner type value for "intrested in" dropdown
   const handleClick = () => {
     router.push(`/contacts?type=${clientType}`);
   };
@@ -33,29 +30,29 @@ export default function ContactUs() {
     <BasicWidthContainer styles={`mx-auto w-full max-[540px]:!px-0`}>
       <div
         className={`
-        flex
-        flex-col
-        justify-center
-        items-center
-        w-full
-        bg-[url('/images/getInTouchBackground.svg')]
-        2xl:py-[100px]
-        2xl:px-[100px]
-        md:py-[80px]
-        md:px-[50px]
-        py-[40px]
-        min-[540px]:px-[30px]
-        px-[8px]
-        rounded-[40px]
-        max-[540px]:rounded-none
-        max-[540px]:border-x-0
-        border-2
-        border-solid
-        border-[#3e0002]
-        relative
-        overflow-hidden
-        bg-[#111]
-      `}
+          flex
+          flex-col
+          justify-center
+          items-center
+          w-full
+          bg-[url('/images/getInTouchBackground.svg')]
+          2xl:py-[100px]
+          2xl:px-[100px]
+          md:py-[80px]
+          md:px-[50px]
+          py-[40px]
+          min-[540px]:px-[30px]
+          px-[8px]
+          rounded-[40px]
+          max-[540px]:rounded-none
+          max-[540px]:border-x-0
+          border-2
+          border-solid
+          border-[#3e0002]
+          relative
+          overflow-hidden
+          bg-[#111]
+        `}
       >
         <div
           className="
@@ -88,7 +85,7 @@ export default function ContactUs() {
           "
         >
           {/* CLIENT TYPE */}
-          <div
+          {/* <div
             className={`flex p-1 justify-center items-center md:gap-5 gap-1 get-in-touch-border [&>*:last-child>div:last-child]:hidden relative`}
           >
             {GET_IN_TOUCH_CLIENT_TYPE.map((type) => (
@@ -109,13 +106,13 @@ export default function ContactUs() {
                   }
                 >
                   <span className="[font-size:_clamp(10px,2vw,24px)] leading-[0.9] capitalize">
-                    {type}
+                    {t(type)}
                   </span>
                 </button>
                 <div className="w-1 h-5 bg-base-red"></div>
               </div>
             ))}
-          </div>
+          </div> */}
           <div
             className="
               flex
@@ -140,7 +137,7 @@ export default function ContactUs() {
               font-medium
             "
             >
-              {GET_IN_TOUCH_ELEVATE_GROWTH}
+              {t("Fueling growth together")}
             </div>
             <div
               className="
@@ -152,16 +149,14 @@ export default function ContactUs() {
                 leading-[100%]
               "
             >
-              {SOLUTIONS_CONTACTS_US}
+              {t("Contact Us for a Sustainable Future")}
             </div>
           </div>
-          {/* <Link href={`/consult`}> */}
           <Button externalStyle="!py-[14px] !px-[26px]" onClick={handleClick}>
             <span className="[font-size:_clamp(16px,1.5vw,20px)] leading-[100%] whitespace-nowrap">
-              {HEADER_CONTACT_US}
+              {t("Contact Us")}
             </span>
           </Button>
-          {/* </Link> */}
         </div>
       </div>
     </BasicWidthContainer>

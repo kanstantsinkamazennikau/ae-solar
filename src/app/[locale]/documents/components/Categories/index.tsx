@@ -5,10 +5,12 @@ import {
   DocumentsTypesOther,
   DocumentsTypesPresentation,
 } from "@/app/[locale]/documents/components/types";
-import { DOCUMENTS_CATEGORIES } from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { romanize } from "@/app/[locale]/utils/romanize";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Fragment, useContext, useEffect, useRef, useState } from "react";
 
 export default function Categories() {
@@ -16,7 +18,6 @@ export default function Categories() {
     selectedCategoryIndex,
     onCategoryClick,
     documentsFile,
-    documentsLoading,
     documentsType,
     setSelectedCategoryIndex,
   } = useContext(DocumentsContext);
@@ -24,6 +25,9 @@ export default function Categories() {
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(false);
   const [height, setHeight] = useState<number | undefined>(undefined);
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   const onClick = () => {
     setIsOpenItem(!isOpenItem);
@@ -59,7 +63,7 @@ export default function Categories() {
           />
           <div className="absolute top-4 w-full px-7 min-[920px]:block hidden">
             <p className="font-semibold text-[#505050] [font-size:_clamp(12px,1.5vw,16px)] leading-[120%] mb-4">
-              {DOCUMENTS_CATEGORIES}
+              {t("Categories")}
             </p>
             <hr className="bg-option-border h-[1px] border-none w-full" />
           </div>
@@ -118,13 +122,13 @@ export default function Categories() {
                       >
                         <div className="max-w-[215px]">
                           {documentsType !== "publishers_info" ? (
-                            category
+                            t(category)
                           ) : (
                             <div className="flex gap-1">
                               <div className="min-w-[20px]">
                                 {romanize(index + 1)}.
                               </div>
-                              <div>{category}</div>
+                              <div>{t(category)}</div>
                             </div>
                           )}
                         </div>
@@ -173,7 +177,7 @@ export default function Categories() {
                                 setSelectedCategoryIndex(index);
                             }}
                           >
-                            {category}
+                            {t(category)}
                           </Link>
                         ))}
                       </div>
@@ -213,7 +217,7 @@ export default function Categories() {
                 items-center
               "
             >
-              {documentsFile[selectedCategoryIndex]?.category}
+              {t(documentsFile[selectedCategoryIndex]?.category)}
               <Image
                 src={`/images/selectorWhite.svg`}
                 alt="selectorWhite"
@@ -259,13 +263,13 @@ export default function Categories() {
                         >
                           <div className="max-w-[215px]">
                             {documentsType !== "publishers_info" ? (
-                              category
+                              t(category)
                             ) : (
                               <div className="flex gap-1">
                                 <div className="min-w-[20px]">
                                   {romanize(index + 1)}.
                                 </div>
-                                <div>{category}</div>
+                                <div>{t(category)}</div>
                               </div>
                             )}
                           </div>
@@ -314,7 +318,7 @@ export default function Categories() {
                                   setSelectedCategoryIndex(index);
                               }}
                             >
-                              {category}
+                              {t(category)}
                             </Link>
                           ))}
                         </div>

@@ -1,6 +1,8 @@
+import { ReactElement } from "react";
+
 export interface TwoTierHeadingProps {
-  tierOneHeading: string;
-  tierTwoHeading: string;
+  tierOneHeading: string | ReactElement<any, any>;
+  tierTwoHeading?: string;
   align?: "right" | "left" | "center";
   size?: "default" | "small";
   reverseColor?: boolean;

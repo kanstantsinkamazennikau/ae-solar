@@ -1,12 +1,13 @@
 import RecentNews from "@/app/[locale]/components/MainPageNews/RecentNews";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import {
-  MAIN_PAGE_COMPANY,
-  MAIN_PAGE_NEWS_INSIGHTS,
-} from "@/app/[locale]/utils/constants";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import getLocale from "@/app/[locale]/utils/getLocale";
 
-export default function MainPageNews() {
+export default async function MainPageNews() {
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -23,8 +24,8 @@ export default function MainPageNews() {
     >
       <BasicWidthContainer>
         <TwoTierHeading
-          tierOneHeading={MAIN_PAGE_NEWS_INSIGHTS}
-          tierTwoHeading={MAIN_PAGE_COMPANY}
+          tierOneHeading={t("News and Insights")}
+          tierTwoHeading={t("From Our Company")}
           align="left"
         />
       </BasicWidthContainer>

@@ -1,7 +1,6 @@
+import DifferenceCenter from "@/app/[locale]/company/components/ExploreOurDifference/DifferenceCenter";
 import DifferenceRow from "@/app/[locale]/company/components/ExploreOurDifference/DifferenceRow";
 import {
-  ABOUT_EXPLORE_CENTER,
-  ABOUT_EXPLORE_CENTER_MOBILE,
   ABOUT_EXPLORE_FOOTER,
   ABOUT_EXPLORE_HEADER,
 } from "@/app/[locale]/company/constants";
@@ -54,19 +53,7 @@ export default function ExploreOurDifference() {
                 md:hidden
               "
           >
-            {ABOUT_EXPLORE_CENTER_MOBILE.split(/\r?\n|\r|\n/g).map(
-              (string, index) => (
-                <div
-                  key={string}
-                  className={`
-                  ${index === 1 ? "text-[#B30006]" : "text-white"}
-                  
-                `}
-                >
-                  {string}
-                </div>
-              )
-            )}
+            <DifferenceCenter />
           </div>
           <div
             className="
@@ -108,19 +95,7 @@ export default function ExploreOurDifference() {
                 text-center
               "
             >
-              {ABOUT_EXPLORE_CENTER.split(/\r?\n|\r|\n/g).map(
-                (string, index) => (
-                  <div
-                    key={string}
-                    className={`
-                  ${index === 1 ? "text-[#B30006]" : "text-white"}
-                  
-                `}
-                  >
-                    {string}
-                  </div>
-                )
-              )}
+              <DifferenceCenter />
             </div>
           </div>
 

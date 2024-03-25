@@ -8,22 +8,24 @@ import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import MobileNavigation from "@/app/[locale]/components/common/Navigation/MobileNavigation";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
-import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
+import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
-import {
-  HEADER_CONTACT_US,
-  HEADER_NAV_LINKS_ARRAY,
-} from "@/app/[locale]/utils/constants";
+import { HEADER_NAV_LINKS_ARRAY } from "@/app/[locale]/utils/constants";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
 
-export default function Navigation({ host }: NavigationProps) {
+export default function Navigation() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const { sticky } = useContext(StickyNavigationContext);
   const productsContext = useContext(ProductsContext);
+  const { setIsHamburgerMenuOpen } = useContext(MobileSideMenuContext);
   const mainPageVideoContext = useContext(MainPageVideoContext);
   const params = useParams();
   const router = useRouter();
@@ -31,6 +33,10 @@ export default function Navigation({ host }: NavigationProps) {
 
   const isProductsPage = pathname === "/products";
   const isMainPage = pathname === "/";
+
+  const closeSideMenuOnLogoClickForMobile = () => {
+    setIsHamburgerMenuOpen(false);
+  };
 
   const hideSubnavigation = () => {
     return [
@@ -86,12 +92,12 @@ export default function Navigation({ host }: NavigationProps) {
       <div className="bg-navigation-black flex justify-center py-4 h-full">
         <BasicWidthContainer>
           <nav className="flex items-center justify-between relative font-normal w-full gap-2">
-            <Link href={"/"}>
+            <Link href={"/"} onClick={closeSideMenuOnLogoClickForMobile}>
               <Logo />
             </Link>
 
             {/* DESKTOP NAV */}
-            <ul className="gap-8 min-[920px]:flex hidden">
+            <ul className="xl:gap-8 gap-4 min-[920px]:flex hidden">
               {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
                 <NavLink
                   key={navLink.url}
@@ -100,20 +106,20 @@ export default function Navigation({ host }: NavigationProps) {
               ))}
             </ul>
             <div className="gap-3 min-[920px]:flex hidden">
-              <ChangeLocale host={host} />
+              <ChangeLocale />
               <Cart />
               <Button
                 onClick={handleClick}
                 externalStyle="!py-[10px] !px-[18px]"
               >
                 <span className="[font-size:_clamp(14px,1.5vw,16px)] whitespace-nowrap">
-                  {HEADER_CONTACT_US}
+                  {t("Contact Us")}
                 </span>
               </Button>
             </div>
 
             {/* MOBILE NAV */}
-            <MobileNavigation host={host} />
+            <MobileNavigation />
           </nav>
         </BasicWidthContainer>
       </div>

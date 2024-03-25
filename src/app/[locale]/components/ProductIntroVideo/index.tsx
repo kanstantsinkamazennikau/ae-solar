@@ -9,17 +9,13 @@ import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
-import dynamic from "next/dynamic";
 import {
-  PRODUCT_INTRO_CALCULATE_YOUR_MODEL,
-  PRODUCT_INTRO_HIGH_QUALITY_SP,
-  PRODUCT_INTRO_LEARN_MORE,
   PRODUCT_INTRO_PANELS,
   PRODUCT_INTRO_PANELS_IMAGES,
-  PRODUCT_INTRO_THE_NEXT_LEVEL_OF,
 } from "@/app/[locale]/utils/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 //@ts-ignore
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { Video } from "@splidejs/splide-extension-video";
 import Image from "next/image";
@@ -32,6 +28,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { Trans } from "react-i18next";
 
 export default function ProductIntroVideo() {
   const { model, setModel } = useContext(ModelContext);
@@ -40,6 +37,7 @@ export default function ProductIntroVideo() {
   const modelInfo = PRODUCT_INTRO_PANELS[model].info;
   const ref = useRef<HTMLDivElement | null>(null);
   const locale = useParams()?.locale;
+  const { t } = useClientTranslation(locale, "translation");
   const router = useRouter();
   const sliderRef = useRef<Splide>(null);
   const sliderId = PRODUCT_INTRO_PANELS_IMAGES.indexOf(model);
@@ -121,10 +119,13 @@ export default function ProductIntroVideo() {
         "
       >
         <div className="font-bold leading-[1.2] [font-size:_clamp(36px,4vw,64px)] text-center px-5 xl:-mb-20 md:-mb-10">
-          <div>{PRODUCT_INTRO_THE_NEXT_LEVEL_OF}</div>
-          <div className="text-base-red mb-6">
-            {PRODUCT_INTRO_HIGH_QUALITY_SP}
-          </div>
+          <Trans
+            components={{
+              red: <div className="text-base-red mb-6" />,
+            }}
+          >
+            {t("Home slider next level")}
+          </Trans>
           <Image
             src={`/images/glowFull.png`}
             alt="glow"
@@ -177,12 +178,9 @@ export default function ProductIntroVideo() {
               text-center
             "
           >
-            {modelInfo.text}
+            {t(modelInfo.text)}
           </div>
-          <LinkWithArrow
-            label={PRODUCT_INTRO_LEARN_MORE}
-            href={`/products/${model}`}
-          />
+          <LinkWithArrow label={t("Learn more")} href={`/products/${model}`} />
         </div>
         <div
           className="
@@ -231,7 +229,7 @@ export default function ProductIntroVideo() {
                   height={20}
                   className="inline relative -top-[1px]"
                 />
-                Play Slider
+                {t("Play Slider")}
               </span>
               <span className="splide__toggle__pause flex items-center gap-[2px]">
                 <Image
@@ -242,7 +240,7 @@ export default function ProductIntroVideo() {
                   height={20}
                   className="inline relative -top-[1px]"
                 />
-                Pause Slider
+                {t("Pause Slider")}
               </span>
             </button>
             {/* </button> */}
@@ -357,10 +355,10 @@ export default function ProductIntroVideo() {
                 text-center
               "
             >
-              {modelInfo.text}
+              {t(modelInfo.text)}
             </div>
             <LinkWithArrow
-              label={PRODUCT_INTRO_LEARN_MORE}
+              label={t("Learn more")}
               href={`/products/${model}`}
             />
           </div>
@@ -389,10 +387,8 @@ export default function ProductIntroVideo() {
         <SubNavigation isProductionIntroBlock />
       </div>
       {/* )} */}
-      <div ref={ref}></div>
-      <Button onClick={handleClick}>
-        {PRODUCT_INTRO_CALCULATE_YOUR_MODEL}
-      </Button>
+      <div ref={ref} />
+      <Button onClick={handleClick}>{t("All Products")}</Button>
     </div>
   );
 }

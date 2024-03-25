@@ -6,22 +6,17 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import {
-  FAQ_ACCORDION_DATA,
-  FAQ_MORE_SOLUTIONS,
-  FAQ_QUESTION,
-  FAQ_SOLUTIONS,
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-} from "@/app/[locale]/utils/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { FAQ_ACCORDION_DATA } from "@/app/[locale]/utils/constants";
 import { useParams, useRouter } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export function MainPageFAQ() {
-  const locale = useParams()?.locale;
+  const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
+  const { t } = useClientTranslation(locale, "translation");
 
-  //TODO fill form with partner type value for "intrested in" dropdown
   const handleClick = () => {
     router.push(`/${locale}/documents/faq`);
   };
@@ -29,8 +24,8 @@ export function MainPageFAQ() {
   return (
     <BasicWidthContainer>
       <TwoTierHeading
-        tierOneHeading={FAQ_QUESTION}
-        tierTwoHeading={FAQ_SOLUTIONS}
+        tierOneHeading={t("Got a Question")}
+        tierTwoHeading={t("We have solutions")}
         align="left"
         size="small"
         externalStyle="[&>*:last-child]:!font-medium"
@@ -66,14 +61,20 @@ export function MainPageFAQ() {
                 rounded-xl
                 -mb-12
                 z-10
+                text-sm
+                font-normal
+                leading-[130%]
+                font-walsheim
+                text-[#747474]
               "
           >
-            {styleMatchingText(
-              FOOTER_GERMAN_BRAND,
-              FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-              "text-sm font-normal leading-[130%] font-walsheim text-[#747474]",
-              "text-dark-gray-900 font-bold"
-            )}
+            <Trans
+              components={{
+                bold: <span className="text-dark-gray-900 font-bold" />,
+              }}
+            >
+              {t("German Brand")}
+            </Trans>
             <hr className="mt-6 border-[#131313] min-[920px]:hidden" />
           </div>
         </div>
@@ -83,12 +84,12 @@ export function MainPageFAQ() {
             {FAQ_ACCORDION_DATA.map((item) => (
               <AccordionItem
                 key={item.question}
-                title={item.question}
+                title={t(item.question)}
                 openCloseStyle
                 dropdownIcon="/images/selectorWhite.svg"
               >
                 <p className="leading-[150%] pb-6 [font-size:_clamp(14px,1.5vw,24px)] font-walsheim pl-6">
-                  {item.answer}
+                  {t(item.answer)}
                 </p>
               </AccordionItem>
             ))}
@@ -96,7 +97,7 @@ export function MainPageFAQ() {
           <div className="mt-[60px] flex min-[920px]:justify-start justify-center">
             <Button onClick={handleClick} style="outline" showArrow>
               <span className="[font-size:_clamp(14px,1.5vw,24px)] -tracking-[0.24px] font-semibold">
-                {FAQ_MORE_SOLUTIONS}
+                {t("More solutions")}
               </span>
             </Button>
           </div>

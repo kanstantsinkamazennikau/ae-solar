@@ -1,5 +1,6 @@
 import { RecentPost } from "@/app/[locale]/company/news/components/RecentPosts/types";
-import { BLOG_RECENT_POSTS } from "@/app/[locale]/company/news/constants";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import getLocale from "@/app/[locale]/utils/getLocale";
 import Link from "next/link";
 import { load } from "outstatic/server";
 
@@ -19,6 +20,8 @@ async function getRecentPostsData() {
 
 export default async function RecentPosts() {
   const recentPosts = await getRecentPostsData();
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
 
   return (
     <aside
@@ -32,7 +35,7 @@ export default async function RecentPosts() {
       "
     >
       <div className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold mb-4">
-        {BLOG_RECENT_POSTS}
+        {t("Recent Posts")}
       </div>
       {recentPosts.map(({ title, slug, tag }) => (
         <Link

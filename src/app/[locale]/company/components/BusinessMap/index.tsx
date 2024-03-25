@@ -2,20 +2,22 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import {
-  ABOUT_BUSINESS,
-  ABOUT_MAP,
-  ABOUT_MAP_DESIGNATIONS,
-} from "@/app/[locale]/utils/constants";
+import { ABOUT_MAP_DESIGNATIONS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import LightBoxImage from "@/app/[locale]/components/common/LightBoxImage";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useParams } from "next/navigation";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 
 export default function BusinessMap() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const [open, setOpen] = useState(false);
+
   return (
     <div
       className="
@@ -36,8 +38,8 @@ export default function BusinessMap() {
           "
         >
           <TwoTierHeading
-            tierOneHeading={ABOUT_BUSINESS}
-            tierTwoHeading={ABOUT_MAP}
+            tierOneHeading={t("Business Map")}
+            tierTwoHeading={t("Where Our Power Is")}
             externalStyle="[font-size:_clamp(32px,6vw,96px)!important] md:!text-right !text-left"
             reverseColor
           />
@@ -105,7 +107,7 @@ export default function BusinessMap() {
               {ABOUT_MAP_DESIGNATIONS.map(({ icon, designation, location }) => (
                 <div
                   key={designation}
-                  className={`flex md:gap-2 gap-1 ${
+                  className={`flex md:gap-2 gap-1 hyphens-auto ${
                     location ? "items-start" : "items-center"
                   }`}
                 >
@@ -117,13 +119,15 @@ export default function BusinessMap() {
                     priority
                   />
                   <div className="font-walsheim text-sm leading-none">
-                    <div className="font-bold md:mb-2 mb-3">{designation}</div>
+                    <div className="font-bold md:mb-2 mb-3">
+                      {t(designation)}
+                    </div>
                     {location.map((locationZone) => (
                       <div
                         className="font-normal mt-1 font-walsheim"
                         key={locationZone}
                       >
-                        {locationZone}
+                        {t(locationZone)}
                       </div>
                     ))}
                   </div>

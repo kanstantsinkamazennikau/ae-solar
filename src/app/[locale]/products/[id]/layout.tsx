@@ -1,3 +1,5 @@
+import { Model } from "@/app/[locale]/context/constructorContext";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import ProductNavigation from "@/app/[locale]/products/[id]/components/ProductNavigation";
 import { PRODUCT_PANEL_TITLES } from "@/app/[locale]/products/[id]/constants";
 import {
@@ -5,10 +7,16 @@ import {
   ProductPageProps,
 } from "@/app/[locale]/products/[id]/types";
 import { PRODUCT_INTRO_PANELS_IMAGES } from "@/app/[locale]/utils/constants";
+import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 
-export async function generateMetadata({ params: { id } }: ProductPageProps) {
+export async function generateMetadata({
+  params: { id, locale },
+}: {
+  params: { id: Model; locale: LocaleTypes };
+}) {
+  const { t } = await serverTranslation(locale, "translation");
   const title = `AE-Solar | ${id}`;
-  const description = `AE-Solar | ${PRODUCT_PANEL_TITLES[id]}`;
+  const description = `AE-Solar | ${t(PRODUCT_PANEL_TITLES[id])}`;
 
   return {
     title,

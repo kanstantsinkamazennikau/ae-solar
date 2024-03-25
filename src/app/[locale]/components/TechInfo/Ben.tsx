@@ -2,14 +2,11 @@
 
 import BensPopUp from "@/app/[locale]/components/TechInfo/BensPopUp";
 import { BenProps } from "@/app/[locale]/components/TechInfo/types";
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
-import {
-  TECH_INFO_CLOSE,
-  TECH_INFO_READ_MORE,
-} from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Ben({
@@ -17,10 +14,12 @@ export default function Ben({
   description,
   image,
   isFullHeightRow,
-  fullDescription,
 }: BenProps) {
   const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
   const [isShowPopUp, setShowPopUp] = useState(false);
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   const showPopUp = () => {
     setShowPopUp(true);
@@ -42,8 +41,8 @@ export default function Ben({
       {isShowPopUp && (
         <BensPopUp
           onClose={hidePopUp}
-          title={title}
-          fullDescription={description}
+          title={t(title)}
+          fullDescription={t(description)}
         />
       )}
       <div
@@ -137,7 +136,7 @@ export default function Ben({
                 : "min-[500px]:[word-spacing:normal] [font-size:_clamp(14px,2.5vw,32px)]"
             }`}
           >
-            {title}
+            {t(title)}
           </div>
           <div
             className={`
@@ -152,7 +151,7 @@ export default function Ben({
           `}
           >
             {/* {description} */}
-            {description.split(" ").slice(0, 14).join(" ") + "..."}
+            {t(description).split(" ").slice(0, 14).join(" ") + "..."}
           </div>
 
           <div
@@ -172,7 +171,7 @@ export default function Ben({
                 <div
                   className={`text-base-red [font-size:_clamp(14px,1vw,16px)]`}
                 >
-                  {TECH_INFO_READ_MORE}
+                  {t("Read More")}
                 </div>
                 <Image
                   src="/images/techInfo/expand.svg"

@@ -2,15 +2,16 @@
 
 import BuyerForm from "@/app/[locale]/components/common/BuyerForm";
 import { ConsultFormFileds } from "@/app/[locale]/contacts/components/ConsultForm/types";
-import { CONTACTS_WE_ARE_READY } from "@/app/[locale]/contacts/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   CONSULT_FORM_FIELDS,
-  CONSULT_READY_TO_CONSULT,
   FORMS_FIELDS,
   PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";
-import { useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { FieldValues, RegisterOptions } from "react-hook-form";
+import { Trans } from "react-i18next";
 
 async function sendContactUsEmail(data: FieldValues) {
   const apiEndpoint = "/api/contact_us";
@@ -35,33 +36,35 @@ const patnerTypeMapping = {
 export default function ConsultForm() {
   const searchParams = useSearchParams();
   const type = searchParams.get("type");
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   const inputsRules: { [key in keyof ConsultFormFileds]: RegisterOptions } = {
     name: {
-      required: "Name is required",
+      required: t("Name is required"),
     },
     capacity: {
-      required: "Capacity is required",
+      required: t("Capacity is required"),
       pattern: {
         value: /^[0-9]+$/,
-        message: "Please enter a number",
+        message: t("Please enter a number"),
       },
     },
     email: {
-      required: "Email is required",
+      required: t("Email is required"),
       pattern: {
         value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-        message: "Invalid email address",
+        message: t("Invalid email address"),
       },
     },
     service: {
       required: "Service is required",
     },
     phone: {
-      required: "Phone number is required",
+      required: t("Phone number is required"),
       pattern: {
         value: /^[0-9]+$/,
-        message: "Please enter a number",
+        message: t("Please enter a number"),
       },
     },
   };
@@ -84,7 +87,15 @@ export default function ConsultForm() {
         inputsRules={inputsRules as RegisterOptions}
         defaultValues={defaultValues}
         formFields={CONSULT_FORM_FIELDS}
-        formHeader={CONTACTS_WE_ARE_READY}
+        formHeader={
+          <Trans
+            components={{
+              red: <span className="text-[#B30006]" />,
+            }}
+          >
+            {t("We are Ready to Consult You")}
+          </Trans>
+        }
         isShowCloseIcon={false}
         submitFunction={sendContactUsEmail}
         hideBackgroundImage

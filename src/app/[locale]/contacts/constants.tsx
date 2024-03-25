@@ -1,14 +1,11 @@
 export const CONTACTS_CONTACT_US = "Contact Us";
 export const CONTACTS_INFORMATION = "Information";
-export const CONTACTS_WE_ARE_READY = `We’re Ready to 
-Consult You`;
-export const CONTACTS_DOWNLOAD_PRESENTATION = "Download Presentation";
 export const CONTACTS_OFFICES = [
   {
     office: "Head Office",
     contacts: [
       {
-        title: "Tel.",
+        title: "Tel",
         icon: "phone.svg",
         info: "+49 8231 978268 0",
         linkTo: "tel:+4982319782680",
@@ -36,7 +33,7 @@ export const CONTACTS_OFFICES = [
     office: "Georgia",
     contacts: [
       {
-        title: "Tel.",
+        title: "Tel",
         icon: "phone.svg",
         info: "+995 322 88 06 01",
         linkTo: "tel:+995322880601",
@@ -58,13 +55,13 @@ export const CONTACTS_OFFICES = [
     office: "Brazil",
     contacts: [
       {
-        title: "Tel.",
+        title: "Tel",
         icon: "phone.svg",
         info: "+55 11 3172 1991",
         linkTo: "tel:+551131721991",
       },
       {
-        title: "Cel.",
+        title: "Cel",
         icon: "phone.svg",
         info: "+55 11 98890 6142 (WhatsApp)",
         linkTo: "tel:+5511988906142",
@@ -92,7 +89,7 @@ export const CONTACTS_OFFICES = [
     office: "China",
     contacts: [
       {
-        title: "Tel.",
+        title: "Tel",
         icon: "phone.svg",
         info: "+86 0517 87538800",
         linkTo: "tel:+86051787538800",
@@ -114,7 +111,7 @@ export const CONTACTS_OFFICES = [
     office: "Turkey",
     contacts: [
       {
-        title: "Tel.",
+        title: "Tel",
         icon: "phone.svg",
         info: "0352 352 00 04",
         linkTo: "tel:+0352 352 00 04",

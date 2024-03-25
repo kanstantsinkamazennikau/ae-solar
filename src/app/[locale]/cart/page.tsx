@@ -1,6 +1,5 @@
 "use client";
 
-import AddMorePanels from "@/app/[locale]/cart/components/AddMorePanels";
 import CheckOut from "@/app/[locale]/cart/components/CheckOut";
 import CheckoutForm from "@/app/[locale]/cart/components/CheckoutForm";
 import ModelsInCart from "@/app/[locale]/cart/components/ModelsInCart";

@@ -57,37 +57,6 @@ export default async function BlogPost({
           dangerouslySetInnerHTML={{ __html: content }}
           className="max-w-[900px] mx-auto w-full leading-[150%] blog_post_content"
         />
-        {/* {content.map(({ sectionHeadline, block, image }, index) => (
-          <div key={index}>
-            <div className="flex gap-8">
-              <div className="[font-size:_clamp(16px,1.5vw,24px)] font-bold leading-[120%] -tracking-[0.24px] w-[300px] flex">
-                {sectionHeadline}
-              </div>
-              <div className="flex flex-col">
-                {block &&
-                  block.map(({ paragraphs, subtitle }, index) => (
-                    <div key={index} className="mb-9 [&>p:last-child]:mb-0">
-                      {subtitle && (
-                        <div className="[font-size:_clamp(12px,1.5vw,20px)] font-bold font-walsheim leading-[120%] mb-6 max-w-[650px]">
-                          {subtitle}
-                        </div>
-                      )}
-                      {!!paragraphs?.length &&
-                        paragraphs.map((paragraph) => (
-                          <p
-                            key={paragraph}
-                            className="[font-size:_clamp(12px,1.5vw,20px)] font-normal font-walsheim leading-[150%] mb-5 max-w-[650px]"
-                          >
-                            {parse(paragraph)}
-                          </p>
-                        ))}
-                    </div>
-                  ))}
-              </div>
-            </div>
-            {image && <BlogPostImage image={image} />}
-          </div>
-        ))} */}
       </div>
     </div>
   );

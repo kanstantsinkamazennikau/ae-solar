@@ -1,6 +1,14 @@
-export async function generateMetadata() {
-  const title = `AE-Solar | Resources`;
-  const description = `AE-Solar | Read About Us On the Media`;
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: LocaleTypes };
+}) {
+  const { t } = await serverTranslation(locale, "translation");
+  const title = `AE-Solar | ${t("News")}`;
+  const description = `AE-Solar | ${t("Read About Us")} ${t("On the Media")}`;
 
   return {
     title,

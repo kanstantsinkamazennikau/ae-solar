@@ -3,11 +3,17 @@
 import CartModelDetails from "@/app/[locale]/cart/components/ModelsInCart/CartModelDetails";
 import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { CART_LOCALSTORAGE, CART_REMOVE } from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useContext } from "react";
 
 export default function ModelsInCart() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   const { modelsInBag, setModelsInBag } = useContext(ConstructorContext);
   const removeModel = (modelId: number | string) => {
     const remainingModels = modelsInBag.filter(({ id }) => id !== modelId);
@@ -51,11 +57,11 @@ export default function ModelsInCart() {
             </div>
             <Button onClick={() => removeModel(modelInBag.id)} style="textOnly">
               <span className="font-semibold [font-size:_clamp(11px,5vw,16px)] -tracking-[0.16px] text-base-red">
-                {CART_REMOVE}
+                {t("Remove")}
               </span>
             </Button>
           </div>
-          <div className="cartItemsDivider mt-4 h-[1px]"></div>
+          <div className="cartItemsDivider mt-4 h-[1px]" />
         </div>
       ))}
     </div>

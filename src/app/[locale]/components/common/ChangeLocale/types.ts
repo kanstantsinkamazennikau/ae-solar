@@ -15,5 +15,4 @@ export interface FlagsListProps {
 
 export interface ChangeLocaleProps {
   mobileNavigation?: boolean;
-  host?: string[];
 }

@@ -1,19 +1,20 @@
+"use client";
+
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Tier1 from "@/app/[locale]/components/common/Tier1";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import PanelsList from "@/app/[locale]/products/components/PanelsList";
-import {
-  PRODUCT_ADVANTAGES,
-  PRODUCT_ESSENTIAL,
-  PRODUCT_SINCE,
-  PRODUCT_SINCE_HIGHLIGHT,
-  PRODUCT_THE_ADVANTAGES,
-  PRODUCT_WE_ARE_TIER,
-  PRODUCT_WE_ARE_TIER_HIGHLIGHT,
-} from "@/app/[locale]/products/constants";
+import { PRODUCT_ADVANTAGES } from "@/app/[locale]/products/constants";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export default function Advantages() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -22,19 +23,40 @@ export default function Advantages() {
       "
     >
       <Tier1
-        tier1TextStyle="text-[#F60109]"
-        tier1Text={PRODUCT_WE_ARE_TIER}
-        tier1TextHighlight={PRODUCT_WE_ARE_TIER_HIGHLIGHT}
-        descriptionText={PRODUCT_SINCE}
-        descriptionTextHighlight={PRODUCT_SINCE_HIGHLIGHT}
+        tier1Text={
+          <Trans
+            components={{
+              red: <span className="text-[#F60109]" />,
+            }}
+          >
+            {t("Welcome to AESolar Tier1")}
+          </Trans>
+        }
+        descriptionText={
+          <Trans
+            components={{
+              white: <span className="text-white" />,
+            }}
+          >
+            {t("Where transform")}
+          </Trans>
+        }
         externalStyle="border-t-0 md:mt-0 !py-0"
       />
       <PanelsList />
       <BasicWidthContainer styles="mx-auto -mt-5">
         <TwoTierHeading
-          tierOneHeading={PRODUCT_THE_ADVANTAGES}
-          tierTwoHeading={PRODUCT_ESSENTIAL}
+          tierOneHeading={
+            <Trans
+              components={{
+                red: <span className="text-[#B30006]" />,
+              }}
+            >
+              {t("The Benefits")}
+            </Trans>
+          }
           align="center"
+          reverseColor
           externalStyle="[font-size:_clamp(40px,6vw,102px)!important] font-semibold mb-[60px]"
         />
         <div
@@ -118,9 +140,11 @@ export default function Advantages() {
                   z-10
                 "
               >
-                {title.split(/\r?\n|\r|\n/g).map((string, index) => (
-                  <div key={string}>{string}</div>
-                ))}
+                {t(title)
+                  .split(/\r?\n|\r|\n/g)
+                  .map((string) => (
+                    <div key={string}>{string}</div>
+                  ))}
               </div>
               <div
                 className="
@@ -133,7 +157,7 @@ export default function Advantages() {
                   z-10
                 "
               >
-                {description}
+                {t(description)}
               </div>
             </div>
           ))}

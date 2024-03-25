@@ -15,6 +15,8 @@ import Cookies from "@/app/[locale]/components/common/CookiesBanner";
 import { headers } from "next/headers";
 import ProductsContextProvider from "@/app/[locale]/context/productsContext";
 import MainPageVideoContextProvider from "@/app/[locale]/context/mainPageVideoContext";
+import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
+import MobileSideMenuProvider from "@/app/[locale]/context/mobileSideMenuContext";
 
 const walsheim = localFont({
   src: [
@@ -113,23 +115,31 @@ const criteria = localFont({
   variable: "--font-criteria",
 });
 
-export const metadata: Metadata = {
-  title: "AE-Solar",
-  description: "German TIER1 Manufacturer of High-Quality Solar Panels",
-  keywords: [],
-  metadataBase: new URL(
-    `${
-      process.env.NODE_ENV === "development"
-        ? `http://${process.env.VERCEL_URL}`
-        : `https://${process.env.VERCEL_URL}`
-    }`
-  ),
-  openGraph: {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: LocaleTypes };
+}) {
+  const { t } = await serverTranslation(locale, "translation");
+
+  return {
     title: "AE-Solar",
-    description: "German TIER1 Manufacturer of High-Quality Solar Panels",
-    type: "website",
-  },
-};
+    description: t("MetadataDescriptionHome"),
+    keywords: [],
+    metadataBase: new URL(
+      `${
+        process.env.NODE_ENV === "development"
+          ? `http://${process.env.VERCEL_URL}`
+          : `https://${process.env.VERCEL_URL}`
+      }`
+    ),
+    openGraph: {
+      title: "AE-Solar",
+      description: t("MetadataDescriptionHome"),
+      type: "website",
+    },
+  };
+}
 
 export default function RootLayout({
   children,
@@ -140,7 +150,6 @@ export default function RootLayout({
 }) {
   if (!locales.includes(locale as any)) notFound();
   const url = headers().get("x-url")!.split("/");
-  const host = headers().get("X-Forwarded-Host")?.split(".");
 
   return (
     <html lang={locale}>
@@ -151,18 +160,20 @@ export default function RootLayout({
           <>
             <ToastContainerProvider />
             <ModelProvider>
-              <ConstructorProvider>
-                <ProductsContextProvider>
-                  <MainPageVideoContextProvider>
-                    <StickyNavigationProvider>
-                      <Navigation host={host} />
-                      {children}
-                      <Footer />
-                      <Cookies />
-                    </StickyNavigationProvider>
-                  </MainPageVideoContextProvider>
-                </ProductsContextProvider>
-              </ConstructorProvider>
+              <MobileSideMenuProvider>
+                <ConstructorProvider>
+                  <ProductsContextProvider>
+                    <MainPageVideoContextProvider>
+                      <StickyNavigationProvider>
+                        <Navigation />
+                        {children}
+                        <Footer />
+                        <Cookies />
+                      </StickyNavigationProvider>
+                    </MainPageVideoContextProvider>
+                  </ProductsContextProvider>
+                </ConstructorProvider>
+              </MobileSideMenuProvider>
             </ModelProvider>
           </>
         )}

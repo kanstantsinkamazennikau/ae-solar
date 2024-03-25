@@ -1,20 +1,14 @@
 "use client";
 
 import Contacts from "@/app/[locale]/company/imprint/components/Contacts";
-import ContactInfo from "@/app/[locale]/components/common/Footer/ContactInfo";
-import {
-  DOCUMENTS_IMPRINT_INFO_CONTACTS,
-  DOCUMENTS_IMPRINT_INFO_LEGAL,
-  FOOTER_CONTACT_INFO,
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-} from "@/app/[locale]/utils/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { DOCUMENTS_IMPRINT_INFO_LEGAL } from "@/app/[locale]/utils/constants";
+import { useParams } from "next/navigation";
 
 export default function Imprint() {
-  const router = useRouter();
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <div
@@ -36,7 +30,7 @@ export default function Imprint() {
       <div className="flex flex-col gap-14 max-w-[760px] max-[920px]:self-start">
         <div className="flex flex-col gap-6">
           <div className="[font-size:_clamp(20px,1.5vw,24px)] font-semibold leading-[120%]">
-            {DOCUMENTS_IMPRINT_INFO_LEGAL.title}
+            {t("Legal")}
           </div>
           <div className="flex flex-col">
             {DOCUMENTS_IMPRINT_INFO_LEGAL.registration.map(

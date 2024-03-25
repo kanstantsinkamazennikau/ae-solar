@@ -1,14 +1,19 @@
 "use client";
 
 import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionItem";
-import Loader from "@/app/[locale]/components/common/Loader";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import AccordionWithIntersection from "@/app/[locale]/documents/components/AccordionWithIntersection";
 import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { DOCUMENTS_FAQ_FILES } from "@/app/[locale]/utils/constants";
-import { useContext, useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import { useContext, useEffect } from "react";
 
 export default function FAQ() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   const {
     searchInputValue,
     setDocumentsFile,
@@ -22,7 +27,7 @@ export default function FAQ() {
     const filteredDocuments = DOCUMENTS_FAQ_FILES.map(({ data, category }) => ({
       category,
       data: data.filter(({ question }) =>
-        question.toLowerCase().includes(searchInputValue.toLowerCase())
+        t(question).toLowerCase().includes(searchInputValue.toLowerCase())
       ),
     })).filter(({ data }) => data.length > 0);
 
@@ -30,7 +35,7 @@ export default function FAQ() {
       setDocumentsFile(filteredDocuments as typeof DOCUMENTS_FAQ_FILES);
       setDocumentsLoading(false);
     }, 500);
-  }, [searchInputValue, setDocumentsFile, setDocumentsLoading]);
+  }, [searchInputValue, setDocumentsFile, setDocumentsLoading, t]);
 
   return documentsLoading ? (
     <DocumentsLoader />
@@ -39,7 +44,7 @@ export default function FAQ() {
       ({ category, data }, index) => {
         return (
           <AccordionWithIntersection
-            category={category}
+            category={t(category)}
             key={category}
             index={index}
           >
@@ -52,7 +57,7 @@ export default function FAQ() {
                     leading-[120%]
                   `}
                 >
-                  {question}
+                  {t(question)}
                 </span>
               );
               return (
@@ -63,7 +68,7 @@ export default function FAQ() {
                   dropdownIcon="/images/selectorWhite.svg"
                 >
                   <p className="pb-4 pt-2 pl-4 font-walsheim [font-size:_clamp(16px,1.5vw,20px)]">
-                    {answer}
+                    {t(answer)}
                   </p>
                 </AccordionItem>
               );

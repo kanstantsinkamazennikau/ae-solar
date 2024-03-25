@@ -3,22 +3,29 @@
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
-import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
+import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   FOOTER_CONTACT_INFO,
-  HEADER_CONTACT_US,
-  HEADER_LANGUAGE,
   HEADER_NAV_LINKS_ARRAY,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
-export default function MobileNavigation({ host }: NavigationProps) {
-  const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+export default function MobileNavigation() {
+  const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useContext(
+    MobileSideMenuContext
+  );
   const params = useParams();
   const router = useRouter();
+
+  const { t } = useClientTranslation(
+    params?.locale as LocaleTypes,
+    "translation"
+  );
 
   const onLinkClick = () => {
     setIsHamburgerMenuOpen(false);
@@ -100,7 +107,7 @@ export default function MobileNavigation({ host }: NavigationProps) {
           ))}
         </ul>
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
-        <ChangeLocale mobileNavigation host={host} />
+        <ChangeLocale mobileNavigation />
         {/* <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" /> */}
         <Link
           href={`/${params?.locale}/consult`}
@@ -109,7 +116,7 @@ export default function MobileNavigation({ host }: NavigationProps) {
           }
           onClick={onLinkClick}
         >
-          {HEADER_CONTACT_US}
+          {t("Contact Us")}
         </Link>
         <div className="mb-4 flex flex-col gap-2">
           {FOOTER_CONTACT_INFO.map(({ icon, info, linkTo }) => {

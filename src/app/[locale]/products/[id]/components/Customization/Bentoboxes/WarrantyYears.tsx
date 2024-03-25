@@ -1,8 +1,11 @@
-import Image from "next/image";
-const warrantyText = `Years
-Warranty`;
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useParams } from "next/navigation";
 
 export default function WarrantyYears({ gridArea }: { gridArea?: string }) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -51,14 +54,16 @@ export default function WarrantyYears({ gridArea }: { gridArea?: string }) {
         30
       </div>
 
-      {warrantyText.split(/\r?\n|\r|\n/g).map((string) => (
-        <div
-          className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%]"
-          key={string}
-        >
-          {string}
-        </div>
-      ))}
+      {t("Years Warranty")
+        .split(/\r?\n|\r|\n/g)
+        .map((string) => (
+          <div
+            className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%]"
+            key={string}
+          >
+            {string}
+          </div>
+        ))}
     </div>
   );
 }

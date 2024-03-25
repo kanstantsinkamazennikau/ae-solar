@@ -1,11 +1,12 @@
-import {
-  MANUFACTURER_HARNESS,
-  MANUFACTURER_WELCOME,
-} from "@/app/[locale]/company/manufacturer/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 
-export default function ManufacturerHeader() {
+export default async function ManufacturerHeader() {
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
+
   return (
     <>
       <div
@@ -50,7 +51,7 @@ export default function ManufacturerHeader() {
                   -tracking-[0.36px]
                 "
               >
-                {MANUFACTURER_WELCOME}
+                {t("Welcome to AESolar")}
               </p>
               <hr className="h-[1px] bg-white border-none w-full" />
               <p
@@ -61,7 +62,7 @@ export default function ManufacturerHeader() {
                   md:-tracking-[4.08px]
                 "
               >
-                {MANUFACTURER_HARNESS}
+                {t("Harnessing the Sun, Empowering the World")}
               </p>
             </div>
           </BasicWidthContainer>

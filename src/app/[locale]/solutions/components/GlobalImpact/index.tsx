@@ -1,16 +1,17 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import {
-  SOLUTIONS_GLOBAL_IMPACT,
-  SOLUTIONS_GLOBAL_IMPACT_DESCRIPTION,
   SOLUTIONS_GLOBAL_IMPACT_STATS,
   SOLUTIONS_GLOBAL_IMPACT_STATS_WITH_IMAGES,
-  SOLUTIONS_SEE_DETAILED_PRESENTATION,
 } from "@/app/[locale]/solutions/constants";
+import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
-import Link from "next/link";
 
-export default function GlobalImpact() {
+export default async function GlobalImpact() {
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -42,10 +43,10 @@ export default function GlobalImpact() {
           {/* IMPACT */}
           <div className="flex max-w-[650px] flex-col items-start md:gap-10 gap-5">
             <p className="md:text-[64px] text-[36px] font-semibold leading-[100%] -tracking-[1.08px]">
-              {SOLUTIONS_GLOBAL_IMPACT}
+              {t("Global Impact")}
             </p>
             <p className="md:text-[20px] text-[16px] font-normal font-walsheim leading-[150%]">
-              {SOLUTIONS_GLOBAL_IMPACT_DESCRIPTION}
+              {t("Global Impact Description")}
             </p>
             <a href="/documents/presentation.pdf" target="_blank">
               <Button style="textOnly" externalStyle="!p-0">
@@ -59,7 +60,7 @@ export default function GlobalImpact() {
                     text-base-red
                   "
                 >
-                  {SOLUTIONS_SEE_DETAILED_PRESENTATION}
+                  {t("View PDF-Presentation")}
                 </p>
                 <Image
                   src="/images/arrowFutureRed.svg"
@@ -89,16 +90,17 @@ export default function GlobalImpact() {
               items-center
             "
           >
-            {SOLUTIONS_GLOBAL_IMPACT_STATS.map(({ measure, value }) => (
+            {SOLUTIONS_GLOBAL_IMPACT_STATS.map(({ measure, value, units }) => (
               <div
                 key={measure}
                 className="flex flex-col items-start gap-2 self-stretch font-bold"
               >
                 <div className="[font-size:_clamp(36px,1.5vw,36px)] leading-[100%] -tracking-[1.08px]">
                   {value}
+                  {" " + t(units)}
                 </div>
                 <div className="[font-size:_clamp(20px,1.5vw,24px)] leading-[100%] font-walsheim text-dark-gray-900">
-                  {measure}
+                  {t(measure)}
                 </div>
               </div>
             ))}
@@ -111,7 +113,6 @@ export default function GlobalImpact() {
                 className={`
                   min-[720px]:w-[315px]
                   min-[620px]:w-[270px]
-                  min-[540px]:w-[240px]
                   min-[540px]:w-[315px]
                   min-[620px]:h-[315px]
                   min-[540px]:h-[250px]
@@ -142,7 +143,7 @@ export default function GlobalImpact() {
                     {value}
                   </div>
                   <div className="[font-size:_clamp(20px,1.5vw,24px)] leading-[100%] font-walsheim">
-                    {country}
+                    {t(country)}
                   </div>
                 </div>
               </div>

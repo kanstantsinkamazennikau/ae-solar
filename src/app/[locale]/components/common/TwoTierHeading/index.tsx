@@ -51,10 +51,18 @@ export default function TwoTierHeading({
             className="absolute top-0 -right-[1px] rotate-90"
           />
         )}
-        <div className={`${reverseColor ? "text-white" : "text-[#B30006]"}`}>
+        <div
+          className={`${
+            reverseColor ? "text-white" : "text-[#B30006]"
+          } hyphens-auto`}
+        >
           {tierOneHeading}
         </div>
-        <div className={`${reverseColor ? "text-[#B30006]" : "text-white"}`}>
+        <div
+          className={`${
+            reverseColor ? "text-[#B30006]" : "text-white"
+          } hyphens-auto`}
+        >
           {tierTwoHeading}
         </div>
       </div>

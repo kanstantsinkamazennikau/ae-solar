@@ -1,20 +1,22 @@
 "use client";
 
-import Loader from "@/app/[locale]/components/common/Loader";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
-import {
-  HEADER_TIER1,
-  HEADER_TIER1_QUALITY,
-} from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useContext } from "react";
+import { Trans } from "react-i18next";
 
 const HeroSectionVideo = dynamic(() => import("./HeroSectionVideo"), {
   ssr: false,
 });
 
 export default function HeroSection() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   const { isStartAnimation, isLongVideoLoadingTime } =
     useContext(MainPageVideoContext);
 
@@ -50,16 +52,21 @@ export default function HeroSection() {
           }
         `}
       >
-        <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,4vw,40px)] mainPageTextShadow">
-          {HEADER_TIER1}
-        </p>
-        <p
+        <div
           className=" text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,102px)] 
-          mainPageTextShadow
-        "
+            mainPageTextShadow
+          "
         >
-          {HEADER_TIER1_QUALITY}
-        </p>
+          <Trans
+            components={{
+              red: (
+                <p className="text-center text-base-red -tracking-[1.2px] leading-none [font-size:_clamp(20px,4vw,40px)] mainPageTextShadow" />
+              ),
+            }}
+          >
+            {t("Home Tier1")}
+          </Trans>
+        </div>
       </div>
 
       <div
@@ -85,7 +92,7 @@ export default function HeroSection() {
           }
         `}
       >
-        <span>{"Scroll to the future"}</span>
+        <span>{t("Scroll to the future")}</span>
         <Image
           src="/images/arrowFuture.svg"
           alt="arrow"

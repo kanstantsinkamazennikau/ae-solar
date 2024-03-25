@@ -2,15 +2,14 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
-import {
-  HEADER_CONFIGURE_YOUR_MODEL,
-  TECH_INFO_EXPLORE,
-  TECH_INFO_INNOVATIVE,
-} from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useLayoutEffect, useState } from "react";
+import { Trans } from "react-i18next";
 
 const Video = ({ videoLink }: { videoLink: string }) => {
   const { videoRef } = useVideoIntersection();
@@ -61,6 +60,9 @@ const Video = ({ videoLink }: { videoLink: string }) => {
 };
 
 export default function FeaturedProducts() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -88,8 +90,13 @@ export default function FeaturedProducts() {
 
       <div className="flex flex-col items-center lg:gap-[68px] md:gap-[38px] gap-8 w-full md:absolute bottom-0 max-md:-mt-[70px]">
         <div className="text-center font-bold leading-[1.2] -tracking-[0.64] [font-size:_clamp(24px,4vw,64px)] z-10">
-          <p>{TECH_INFO_INNOVATIVE}</p>
-          <p className="text-base-red">{TECH_INFO_EXPLORE}</p>
+          <Trans
+            components={{
+              red: <div className="text-base-red" />,
+            }}
+          >
+            {t("Innovative")}
+          </Trans>
         </div>
         <div className="relative w-full justify-center items-center flex">
           <Image
@@ -115,7 +122,7 @@ export default function FeaturedProducts() {
           >
             <Link href="/products">
               <span className="[font-size:_clamp(12px,1.5vw,20px)] -tracking-[0.24px] font-semibold">
-                {HEADER_CONFIGURE_YOUR_MODEL}
+                {t("All Products")}
               </span>
             </Link>
           </Button>

@@ -1,11 +1,12 @@
-import {
-  MANUFACTURER_DO_IT_TOGETHER,
-  MANUFACTURER_SAVE_THE_WORLD,
-} from "@/app/[locale]/company/manufacturer/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 
-export default function SaveTheWorld() {
+export default async function SaveTheWorld() {
+  const locale = getLocale();
+  const { t } = await useServerTranslation(locale, "translation");
+
   return (
     <BasicWidthContainer styles={`mx-auto w-full max-[540px]:!px-0 mt-28`}>
       <div
@@ -42,9 +43,6 @@ export default function SaveTheWorld() {
               left-0
             "
         />
-
-        {/* CLIENT TYPE */}
-
         <Image
           src={`/images/products/weTransformPathes.svg`}
           alt="weTransformPathes"
@@ -76,7 +74,7 @@ export default function SaveTheWorld() {
               text-base-red
             "
           >
-            {MANUFACTURER_DO_IT_TOGETHER}
+            {t("Do it together")}
           </p>
           <p
             className="
@@ -86,7 +84,7 @@ export default function SaveTheWorld() {
               md:-tracking-[1.28px]
             "
           >
-            {MANUFACTURER_SAVE_THE_WORLD}
+            {t("AESOLAR — It's time to save the World")}
           </p>
         </div>
       </div>

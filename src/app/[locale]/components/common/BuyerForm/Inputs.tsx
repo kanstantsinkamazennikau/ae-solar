@@ -7,15 +7,16 @@ import Input from "@/app/[locale]/components/common/Input";
 import PhoneNumberInput from "@/app/[locale]/components/common/PhoneNumberInput";
 import PickerInput from "@/app/[locale]/components/common/PickerInput";
 import TextArea from "@/app/[locale]/components/common/TextArea";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
-  CHECKOUT_SEND_REQUEST,
-  CONSULT_AGREEMENT,
   DROPDOWN_INPUT_VALUES,
   PICKER_INPUT_VALUES,
 } from "@/app/[locale]/utils/constants";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useState } from "react";
 
 export default function BuyerForm({
@@ -37,6 +38,9 @@ export default function BuyerForm({
   agreementInputColor,
 }: InputsProps) {
   const [agreement, setAgreement] = useState(false);
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   const onChangeAgreement = () => {
     setAgreement((prevState) => !prevState);
@@ -92,14 +96,7 @@ export default function BuyerForm({
         
         `}
       >
-        {formHeader.split(/\r?\n|\r|\n/g).map((string, index) => (
-          <div
-            key={string}
-            className={`${index === 0 ? "text-dark-gray-900" : ""}`}
-          >
-            {string}
-          </div>
-        ))}
+        {formHeader}
       </div>
       {!hideDivider && (
         <Image
@@ -121,7 +118,7 @@ export default function BuyerForm({
                   flex
                   min-[640px]:items-center
                   min-[640px]:content-center
-                  items-start
+                  min-[640px]:!items-end
                   content-start
                   min-[640px]:gap-3 gap-0
                   self-stretch
@@ -131,14 +128,14 @@ export default function BuyerForm({
                   flex-nowrap
                 "
               >
-                <span className="font-semibold leading-[120%] whitespace-nowrap">
-                  {inputField.formTitle}
+                <span className="font-semibold leading-[120%] xl:whitespace-nowrap">
+                  {t(inputField.formTitle)}
                 </span>
                 <Input
-                  externalStyle={`font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)] ${inputBorders} placeholder:text-[#505050]`}
+                  externalStyle={`font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2vw,30px)] ${inputBorders} placeholder:text-[#505050]`}
                   externalContainerStyle="!w-full"
                   name={inputField.name}
-                  placeholder={inputField.placeholder}
+                  placeholder={t(inputField.placeholder || "")}
                   register={register(
                     inputField.name,
                     inputsRules[inputField.name as keyof typeof inputsRules]
@@ -154,12 +151,12 @@ export default function BuyerForm({
                 className="flex items-center content-center min-[640px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,30px)]"
               >
                 <span className="font-semibold leading-[120%]">
-                  {inputField.formTitle}
+                  {t(inputField.formTitle)}
                 </span>
                 <DropdownInput
                   externalStyle="font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)]"
                   name={inputField.name}
-                  placeholder={inputField.placeholder}
+                  placeholder={t(inputField.placeholder || "")}
                   setValue={setValue}
                   register={register(
                     inputField.name,
@@ -177,12 +174,12 @@ export default function BuyerForm({
                 className="flex items-center content-center min-[640px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,30px)]"
               >
                 <span className="font-semibold leading-[120%]">
-                  {inputField.formTitle}
+                  {t(inputField.formTitle)}
                 </span>
                 <PickerInput
                   externalStyle="font-light leading-[120%] "
                   name={inputField.name}
-                  placeholder={inputField.placeholder}
+                  placeholder={t(inputField.placeholder || "")}
                   register={register(
                     inputField.name,
                     inputsRules[inputField.name as keyof typeof inputsRules]
@@ -205,18 +202,18 @@ export default function BuyerForm({
                   flex-nowrap
                   min-[640px]:flex-row
                   flex-col
-                  min-[640px]:items-center
+                  min-[640px]:items-end
                   items-start
                   [font-size:_clamp(20px,2.5vw,30px)]
                 "
               >
-                <span className="font-semibold leading-[120%] whitespace-nowrap">
-                  {inputField.formTitle}
+                <span className="font-semibold leading-[120%] xl:whitespace-nowrap">
+                  {t(inputField.formTitle)}
                 </span>
                 <PhoneNumberInput
                   externalStyle="font-light leading-[120%]"
                   name={inputField.name}
-                  placeholder={inputField.placeholder}
+                  placeholder={t(inputField.placeholder || "")}
                   register={register(
                     inputField.name,
                     inputsRules[inputField.name as keyof typeof inputsRules]
@@ -245,13 +242,13 @@ export default function BuyerForm({
                 "
               >
                 <span className="font-semibold leading-[120%] whitespace-nowrap">
-                  {inputField.formTitle}
+                  {t(inputField.formTitle)}
                 </span>
                 <TextArea
-                  externalStyle={`font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2.5vw,30px)] ${inputBorders} placeholder:text-[#505050]`}
+                  externalStyle={`font-light leading-[120%] pr-3 placeholder:[font-size:_clamp(20px,2vw,30px)] ${inputBorders} placeholder:text-[#505050]`}
                   externalContainerStyle="!w-full"
                   name={inputField.name}
-                  placeholder={inputField.placeholder}
+                  placeholder={t(inputField.placeholder || "")}
                   register={register(
                     inputField.name,
                     inputsRules[inputField.name as keyof typeof inputsRules]
@@ -304,7 +301,7 @@ export default function BuyerForm({
            ${agreementTextColor}
           `}
         >
-          {CONSULT_AGREEMENT}
+          {t("Consult agreement")}
         </span>
       </label>
 
@@ -314,7 +311,7 @@ export default function BuyerForm({
         externalStyle="min-[640px]:w-fit w-full !py-[14px] !px-[26px]"
         disabled={!agreement}
       >
-        {CHECKOUT_SEND_REQUEST}
+        {t("Send Request")}
       </Button>
     </form>
   );

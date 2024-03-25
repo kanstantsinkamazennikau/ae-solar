@@ -1,22 +1,15 @@
 "use client";
 
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { SEQUENCE_ANIMATION_TEXT } from "@/app/[locale]/utils/constants";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  SEQUENCE_ANIMATION_TEXT,
-  TECH_INFO_A_CLOSE_LOOK_AT,
-  TECH_INFO_THE_HIDDEN_LAYERS,
-} from "@/app/[locale]/utils/constants";
-import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useParams } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const scrollTriggerPositionFromResolution = (
   isDesktop: boolean,
@@ -35,6 +28,8 @@ const frameIndex = { frame: 0 };
 const numFrames = 120;
 
 export default function SequenceAnimation({ width = 1158, height = 600 }) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [activeStepIndex, setActiveStepIndex] = useState(0);
@@ -117,8 +112,6 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
   }, [images.length, renderImage]);
 
   useEffect(() => {
-    // if (!canvasRef.current || images.length === 0) return;
-    // renderImage();
     if (!canvasRef.current) return;
     const img = new Image();
     const imgSrc = `/images/sequence/home/Layer-2-4-1.jpg`;
@@ -161,8 +154,8 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
     >
       <BasicWidthContainer styles="max-md:!px-0">
         <TwoTierHeading
-          tierOneHeading={TECH_INFO_THE_HIDDEN_LAYERS}
-          tierTwoHeading={TECH_INFO_A_CLOSE_LOOK_AT}
+          tierOneHeading={t("The Hidden Layers")}
+          tierTwoHeading={t("A Closer Look at")}
           align="right"
           externalStyle="z-10"
         />
@@ -230,7 +223,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                             //   });
                             // }}
                           >
-                            {title}
+                            {t(title)}
                           </div>
                         </div>
                         <div
@@ -243,7 +236,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                             text-dark-gray-900
                           `}
                         >
-                          {description}
+                          {t(description)}
                         </div>
                       </div>
                     );

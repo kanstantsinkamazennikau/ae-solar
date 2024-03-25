@@ -1,26 +1,27 @@
-import { Metadata } from "next";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 
-const title = "AE-Solar | Cart";
-const description =
-  "Your models are ready for the next step. Please check out your order and we will finalize it.";
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: LocaleTypes };
+}) {
+  const { t } = await serverTranslation(locale, "translation");
+  const title = `AE-Solar | ${t("Cart")}`;
+  const description = `AE-Solar | ${t("Your modules")}`;
 
-export const metadata: Metadata = {
-  title,
-  description,
-  keywords: [],
-  metadataBase: new URL(
-    `${
-      process.env.NODE_ENV === "development"
-        ? `http://${process.env.VERCEL_URL}`
-        : `https://${process.env.VERCEL_URL}`
-    }`
-  ),
-  openGraph: {
+  return {
     title,
     description,
-    type: "website",
-  },
-};
+    keywords: [],
+    metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+    openGraph: {
+      title,
+      description,
+      type: "website",
+    },
+  };
+}
 
 export default function CartLayout({
   children,

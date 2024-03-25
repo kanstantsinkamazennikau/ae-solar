@@ -1,6 +1,17 @@
-export async function generateMetadata() {
-  const title = `AE-Solar | Solutions`;
-  const description = `AE-Solar | Discover AESOLAR–Your Partner for a Sustainable Future`;
+import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: LocaleTypes };
+}) {
+  const { t } = await serverTranslation(locale, "translation");
+
+  const title = `AE-Solar | ${t("B2B Solutions")}`;
+  const description = `AE-Solar | ${t("Discover AESOLAR")} - ${t(
+    "Your Partner in a Sustainable Future"
+  )}`;
 
   return {
     title,

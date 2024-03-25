@@ -1,15 +1,19 @@
+"use client";
+
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Benefit from "@/app/[locale]/products/[id]/components/Benefits/Benefit";
 import { BenefitsProps } from "@/app/[locale]/products/[id]/components/Benefits/types";
-import {
-  PRODUCTS_BEST_FEATURES,
-  PRODUCT_BENEFITS_FOR_PANELS,
-  PRODUCT_WHAT_ARE_ITS,
-} from "@/app/[locale]/products/[id]/constants";
+import { PRODUCT_BENEFITS_FOR_PANELS } from "@/app/[locale]/products/[id]/constants";
+import { useParams } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export default function Benefits({ id }: BenefitsProps) {
   const benefits = PRODUCT_BENEFITS_FOR_PANELS[id];
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <div className="flex justify-center w-full">
@@ -32,8 +36,15 @@ export default function Benefits({ id }: BenefitsProps) {
           "
         >
           <TwoTierHeading
-            tierOneHeading={PRODUCT_WHAT_ARE_ITS}
-            tierTwoHeading={PRODUCTS_BEST_FEATURES}
+            tierOneHeading={
+              <Trans
+                components={{
+                  red: <p className="text-[#B30006]" />,
+                }}
+              >
+                {t("What Are Its Best Features")}
+              </Trans>
+            }
             align="left"
             reverseColor
             marginBottomNone

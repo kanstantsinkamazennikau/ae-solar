@@ -7,7 +7,6 @@ import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import {
   CART_LOCALSTORAGE,
-  CART_SUCCESSFULLY_ADDED,
   CONSTRUCTOR_ADD_TO_BAG,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
@@ -25,7 +24,7 @@ export default function GeneratedModel() {
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
       return modelsInBag;
     });
-    toast.success(CART_SUCCESSFULLY_ADDED);
+    // toast.success(CART_SUCCESSFULLY_ADDED);
   };
 
   useEffect(() => {

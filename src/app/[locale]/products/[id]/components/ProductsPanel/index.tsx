@@ -8,11 +8,16 @@ import { useLayoutEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Loader from "@/app/[locale]/components/common/Loader";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { useParams } from "next/navigation";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 const VideoPlayer = dynamic(() => import("./Video"), {
   ssr: false,
 });
 
 export default function ProductsPanel({ id }: ProductsPanelProps) {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoEnded, setVideoEnded] = useState(false);
   const [startTextTransition, setStartTextTransition] = useState(false);
@@ -152,7 +157,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             {id}
           </div>
           <p className="font-walsheim [font-size:_clamp(18px,1.5vw,24px)] leading-[150%] font-medium text-center max-w-[650px]">
-            {PRODUCT_PANEL_TITLES[id]}
+            {t(PRODUCT_PANEL_TITLES[id])}
           </p>
         </div>
       </div>
@@ -180,7 +185,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           z-10
         `}
       >
-        <span>{"Scroll to the future"}</span>
+        <span>{t("Scroll to the future")}</span>
         <Image
           src="/images/arrowFuture.svg"
           alt="arrow"

@@ -18,9 +18,6 @@ export const FORM_FIELDS_INPUT_TYPES = {
   textarea: "textarea",
 };
 
-export const HEADER_TIER1 = "German TIER1 Manufacturer of ";
-export const HEADER_TIER1_QUALITY = "High Quality Solar Panels";
-
 export const FORMS_FIELDS = {
   name: "name",
   email: "email",
@@ -59,24 +56,6 @@ export const HEADER_NAV_LINKS_ARRAY = [
       { url: "/products/Neptune", text: "Neptune" },
     ],
   },
-  // {
-  //   url: "/info",
-  //   text: "Info",
-  //   subMenu: [
-  //     {
-  //       url: "/info/faq",
-  //       text: "FAQ",
-  //     },
-  //     {
-  //       url: "/info/publishers_info",
-  //       text: "Publisher's Info",
-  //     },
-  //     {
-  //       url: "/info/imprint",
-  //       text: "Imprint Info",
-  //     },
-  //   ],
-  // },
   {
     url: "/documents",
     text: "Documents",
@@ -86,7 +65,6 @@ export const HEADER_NAV_LINKS_ARRAY = [
     text: "B2B Solutions",
   },
 ];
-export const HEADER_CONTACT_US = "Contact Us";
 export const HEADER_LANGUAGE = "Language";
 export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "Aurora.svg",
@@ -96,16 +74,9 @@ export const HEADER_SUBNAVIGATION_PANELS_MODELS = [
   "ShadeStar.svg",
   "Neptune.svg",
 ];
-export const HEADER_SUBNAVIGATION_ALL_MODULES = "All Modules";
-export const HEADER_CONFIGURE_YOUR_MODEL = "All Products";
 export const HEADER_CALCULATE = "Calculate";
-export const HEADER_CHOOSE_LANGUAGE = "Choose language";
 
 //MAIN PAGE
-export const HERO_SECTION_SLOGAN =
-  "We are TIER1 Manufacturer of High-Quality Solar Panels";
-export const HERO_SECTION_SCROLL_TO_THE_FUTURE = "Scroll to the future";
-
 export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
   { stat: "2003", details: "experience since", initialValue: "2023" },
   {
@@ -116,9 +87,6 @@ export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
   },
   { stat: "100", details: "countries", initialValue: "50", sign: "+" },
 ];
-export const AWARDS_AND_STATS_GERMAN_ENGINEERING = "German Engineering";
-export const AWARDS_AND_STATS_PRODUCTION_PLANTS =
-  "Production facilities in Europe and Asia";
 export const AWARDS_AND_STATS_AWARDS_IMAGES = [
   "badge1.png",
   "badge2.png",
@@ -133,11 +101,7 @@ export const AWARDS_AND_STATS_AWARDS_IMAGES = [
   "badge11.png",
   "badge12.png",
 ];
-export const AWARDS_AND_STATS_SEE_ALL_AWARDS = "See all awards";
 
-export const PRODUCT_INTRO_THE_NEXT_LEVEL_OF = "The Next Level of";
-export const PRODUCT_INTRO_MODULES = "Modules";
-export const PRODUCT_INTRO_HIGH_QUALITY_SP = "High-Quality Solar Panels";
 export const PRODUCT_INTRO_PANELS_MAPPING = {
   power: "Power (up to)",
   efficiency: "Effienciency (up to)",
@@ -151,7 +115,6 @@ export const PRODUCT_INTRO_PANELS_IMAGES = [
   "ShadeStar",
   "Neptune",
 ];
-export const PRODUCT_INTRO_DETAILED_INFO = "Detailed Info";
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
     stats: {
@@ -161,29 +124,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Comet.svg",
-      text: "Comet (HJT). Highlight Comet's unparalleled all-weather performance and cutting-edge technology and draw a parallel with the relentless journey of a comet.",
+      text: "CometDescription",
     },
     advantages: [
       {
-        title: "N-Type heterojunction",
-        description: "Advanced solar technology",
+        title: "CometAdvantage1",
+        description: "CometAdvantageDescription1",
       },
       {
-        title: "High reliability",
-        description: "Exceptionally low degradation",
+        title: "CometAdvantage2",
+        description: "CometAdvantageDescription2",
       },
-      { title: "Temperature Stability", description: "Very low coefficient" },
+      { title: "CometAdvantage3", description: "CometAdvantageDescription3" },
       {
-        title: "Low light performance",
-        description: "High performance in low light",
-      },
-      {
-        title: "Extreme climate suitability",
-        description: "Designed for harsh environments",
+        title: "CometAdvantage4",
+        description: "CometAdvantageDescription4",
       },
       {
-        title: "Final statement",
-        description: `"Comet: Leading efficiency, whatever the weather"`,
+        title: "CometAdvantage5",
+        description: "CometAdvantageDescription5",
+      },
+      {
+        title: "CometAdvantage6",
+        description: "CometAdvantageDescription6",
       },
     ],
   },
@@ -195,29 +158,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Aurora.svg",
-      text: "Aurora (PERC). Redesigned with the theme of the Aurora Borealis. Reinvent Aurora as a solar panel inspired by the dynamic and vibrant colors of the Northern Lights. Emphasizes its versatility and aesthetic appeal, reflecting the ever-changing colors of the Northern Lights",
+      text: "AuroraDescription",
     },
     advantages: [
-      { title: "Advanced cells", description: "PERC technology" },
       {
-        title: "Variety of sizes",
-        description: "Small, medium, large modules",
+        title: "AuroraAdvantage1",
+        description: "AuroraAdvantageDescription1",
       },
       {
-        title: "Design option",
-        description: "Mono/Bifacial, choice of colors",
+        title: "AuroraAdvantage2",
+        description: "AuroraAdvantageDescription2",
+      },
+      { title: "AuroraAdvantage3", description: "AuroraAdvantageDescription3" },
+      {
+        title: "AuroraAdvantage4",
+        description: "AuroraAdvantageDescription4",
       },
       {
-        title: "Custom features",
-        description: "Tailored material and performance",
+        title: "AuroraAdvantage5",
+        description: "AuroraAdvantageDescription5",
       },
       {
-        title: "Climate adaptability",
-        description: "Designed for extreme conditions",
-      },
-      {
-        title: "Final statement",
-        description: `"Aurora: Diverse and dynamic solar solutions"`,
+        title: "AuroraAdvantage6",
+        description: "AuroraAdvantageDescription6",
       },
     ],
   },
@@ -229,26 +192,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Meteor.svg",
-      text: "Meteor (TOPCon). Focus on Meteor's ability to shine brightly in low light conditions, just like a meteor streaking across the night sky",
+      text: "MeteorDescription",
     },
     advantages: [
-      { title: "TOPCon N-Type", description: "Superior efficiency technology" },
       {
-        title: "Wide range of customization",
-        description: "Materials, performance, dimensions",
-      },
-      { title: "Color diversity", description: "Wide choice" },
-      {
-        title: "Resilient performance",
-        description: "Low degradation, high durability",
+        title: "MeteorAdvantage1",
+        description: "MeteorAdvantageDescription1",
       },
       {
-        title: "Climate versatility",
-        description: "Ideal for changing weather conditions",
+        title: "MeteorAdvantage2",
+        description: "MeteorAdvantageDescription2",
+      },
+      { title: "MeteorAdvantage3", description: "MeteorAdvantageDescription3" },
+      {
+        title: "MeteorAdvantage4",
+        description: "MeteorAdvantageDescription4",
       },
       {
-        title: "Final statement",
-        description: `"Meteor: efficiency and durability in harmony"`,
+        title: "MeteorAdvantage5",
+        description: "MeteorAdvantageDescription5",
+      },
+      {
+        title: "MeteorAdvantage6",
+        description: "MeteorAdvantageDescription6",
       },
     ],
   },
@@ -260,29 +226,29 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Terra.svg",
-      text: "Versatile and robust solar power. Terra (Agrivoltaic, Noise Barrier, Solar Fence and Utility Applications) showcases Terra's multifunctional applications, emphasizing its role in harmonizing with the needs of the earth.",
+      text: "TerraDescription",
     },
     advantages: [
       {
-        title: "N-Type TOPCon Technology",
-        description: "State of the art efficiency",
+        title: "TerraAdvantage1",
+        description: "TerraAdvantageDescription1",
       },
       {
-        title: "Application flexibility",
-        description: "Ideal for different installations",
+        title: "TerraAdvantage2",
+        description: "TerraAdvantageDescription2",
+      },
+      { title: "TerraAdvantage3", description: "TerraAdvantageDescription3" },
+      {
+        title: "TerraAdvantage4",
+        description: "TerraAdvantageDescription4",
       },
       {
-        title: "Design strength",
-        description: "High resistance to wind and snow",
-      },
-      { title: "Long term eeliability", description: "Minimal degradation" },
-      {
-        title: "Bifacial efficiency",
-        description: "Optimum energy capture",
+        title: "TerraAdvantage5",
+        description: "TerraAdvantageDescription5",
       },
       {
-        title: "Final statement",
-        description: `"Terra: Adaptable energy for any environment"`,
+        title: "TerraAdvantage6",
+        description: "TerraAdvantageDescription6",
       },
     ],
   },
@@ -294,32 +260,32 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "Neptune.svg",
-      text: "Neptune: Double power, maximum efficiency",
+      text: "NeptuneDescription",
     },
     advantages: [
       {
-        title: "Hybrid energy",
-        description: "Electricity and heat generation",
+        title: "NeptuneAdvantage1",
+        description: "NeptuneAdvantageDescription1",
       },
       {
-        title: "High efficiency",
-        description: "Around 70% combined efficiency",
+        title: "NeptuneAdvantage2",
+        description: "NeptuneAdvantageDescription2",
       },
       {
-        title: "Economic benefit",
-        description: "Low long-term LCOE",
+        title: "NeptuneAdvantage3",
+        description: "NeptuneAdvantageDescription3",
       },
       {
-        title: "Versatile use",
-        description: "Effective in different climates",
+        title: "NeptuneAdvantage4",
+        description: "NeptuneAdvantageDescription4",
       },
       {
-        title: "Sustainable design",
-        description: "Eco-conscious technology",
+        title: "NeptuneAdvantage5",
+        description: "NeptuneAdvantageDescription5",
       },
       {
-        title: "Final statement",
-        description: `"Neptune: The future of hybrid solar power"`,
+        title: "NeptuneAdvantage6",
+        description: "NeptuneAdvantageDescription6",
       },
     ],
   },
@@ -331,159 +297,83 @@ export const PRODUCT_INTRO_PANELS = {
     },
     info: {
       icon: "ShadeStar.svg",
-      text: `"ShadeStar: Light where you need it" (Smart Cell) Focus on ShadeStar's resistance to partial shading, like a guardian in the cosmos`,
+      text: `ShadeStarDescription`,
     },
     advantages: [
       {
-        title: "Shade resilience",
-        description: "Maintains high output in shade",
+        title: "ShadeStarAdvantage1",
+        description: "ShadeStarAdvantageDescription1",
       },
       {
-        title: "Rooftop optimization",
-        description: "Ideal for limited space",
+        title: "ShadeStarAdvantage2",
+        description: "ShadeStarAdvantageDescription2",
       },
       {
-        title: "Economic performance",
-        description: "Low LCOE",
+        title: "ShadeStarAdvantage3",
+        description: "ShadeStarAdvantageDescription3",
       },
       {
-        title: "Intelligent technology",
-        description: "Advanced shade resistance",
+        title: "ShadeStarAdvantage4",
+        description: "ShadeStarAdvantageDescription4",
       },
       {
-        title: "Sustainable solution",
-        description: "Environmentally friendly design",
+        title: "ShadeStarAdvantage5",
+        description: "ShadeStarAdvantageDescription5",
       },
       {
-        title: "Final statement",
-        description: `"ShadeStar: Smart Energy for Every Roof"`,
+        title: "ShadeStarAdvantage6",
+        description: "ShadeStarAdvantageDescription6",
       },
     ],
   },
 };
-export const PRODUCT_INTRO_LEARN_MORE = "Learn more";
-export const HISTORY_READ_FULL_STORY = "Read Full History";
-export const PRODUCT_INTRO_CALCULATE_YOUR_MODEL = "All Products";
 
-export const FEATURED_PRODUCTS_HIGH_QUALITY = "High-Quality";
-
-export const TECH_INFO_THE_HIDDEN_LAYERS = "The Hidden Layers";
-export const TECH_INFO_A_CLOSE_LOOK_AT = "A Closer Look at";
-export const TECH_INFO_PANELS_DETAILS = [
-  {
-    title: "Photovoltaic Cells",
-    description:
-      "Semiconductor photovoltaic cells convert sunlight into electricity, crucial for solar panels.",
-  },
-  {
-    title: "Solar Panel Encapsulation",
-    description:
-      "Solar panels endure diverse conditions, shielded by encapsulation for longevity and efficiency.",
-  },
-  {
-    title: "Frame and Backsheet",
-    description:
-      "Frame offers support; backsheet shields from elements, ensuring solar panel durability.",
-  },
-];
-export const TECH_INFO_PANELS = ["structure.png", "frame.png", "panel.png"];
-export const TECH_INFO_WHY_WE_ARE = "Why We are";
-export const TECH_INFO_BEST_AT_THIS = "Best at This";
-export const TECH_INFO_CLOSE = "Close";
 export const TECH_INFO_BENS = [
   {
-    title: `Leading Solar Technology`,
-    description:
-      "AESOLAR, a leading German solar module manufacturer, stands for precision and reliability in engineering. We're at the forefront, using advanced technology to shape the future of solar energy. Our commitment to innovation paves the way for exciting developments in solar power.",
+    title: "BensTitle1",
+    description: "BensDescription1",
     image: "automation.svg",
   },
   {
-    title: "Building a Greener Future",
-    description:
-      "AESOLAR doesn't just make solar panels, we're building a more sustainable future. By combining the latest technology with high quality and our commitment to the environment, we're not just creating products - we're inspiring a vision of a world powered by renewable energy.",
+    title: "BensTitle2",
+    description: "BensDescription2",
     image: "manufacturer.png",
   },
   {
-    title: "Quality Manufacturing",
-    description:
-      "Our high-tech factories use intelligent automation for precise and efficient assembly, minimizing errors. Quality is key at AESOLAR. We ensure that every solar panel is first class in terms of efficiency, durability and performance. Our thorough checks at every stage demonstrate our commitment to quality and customer satisfaction.",
+    title: "BensTitle3",
+    description: "BensDescription3",
     image: "technologies.svg",
   },
   {
-    title: "Setting New Efficiency Standards",
-    description:
-      "At AESOLAR, we are all about raising the bar in the solar industry. We focus on making our manufacturing more energy efficient, which reduces costs and our environmental footprint. This helps our customers in the long run. And we back up our commitment to quality with a strong product warranty.",
+    title: "BensTitle4",
+    description: "BensDescription4",
     image: "efficiency.svg",
   },
   {
-    title: "Committed to Sustainability",
-    description:
-      "Sustainability is at the heart of everything we do at AESOLAR. We power our facilities with our solar panels and other green energy sources. This commitment reflects our belief in the clean energy movement. We're mindful of the lifecycle of our products, using recyclable materials and reducing energy consumption. We follow strict German standards for sustainable and responsible manufacturing.",
+    title: "BensTitle5",
+    description: "BensDescription5",
     image: "materials.svg",
   },
 ];
-export const TECH_INFO_READ_MORE = "Read More";
-export const TECH_INFO_INNOVATIVE = "Innovative. Stylish. Essential:";
-export const TECH_INFO_EXPLORE = "Explore Our Product Range";
-
-export const REVIEWS_RAVE_REVIEWS = "Rave Reviews";
-export const REVIEWS_SEE_WHY_WE_SHINE = "See Why We Shine";
-export const REVIEWS_QUOTES_WITH_AUTHORS = [
-  {
-    quote:
-      "Why do I like working with the company AE Solar...🤔. Quite simply because it's awesome. Great team, great products, great service. All-round carefree package. There are no problems with the employees, there are only solutions and that for every customer of ours. Just German quality.",
-    author: "Thomas Schneider",
-    organisation: "Purchasing, sales, consulting at the company SVM Solar",
-  },
-  {
-    quote:
-      "2Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
-    author: "Emily Johnson2",
-    organisation: "Quantum Dynamics2",
-  },
-  {
-    quote:
-      "3Thrilled with my new solar panels from AESolar! The efficiency and durability exceeded my expectations. Enjoying savings and environmental impact. Highly recommend!",
-    author: "Emily Johnson3",
-    organisation: "Quantum Dynamics3",
-  },
-];
-
-export const MAIN_PAGE_NEWS_INSIGHTS = "News and Insights";
-export const MAIN_PAGE_COMPANY = "from Our Company";
-export const MAIN_PAGE_NEWS_READ_ALL = "Read all the news";
-
-export const GET_IN_TOUCH_CLIENT_TYPE = ["investor", "partner", "installer"];
-export const GET_IN_TOUCH_ELEVATE_GROWTH = "Fueling growth together";
-export const GET_IN_TOUCH_JOIN_US = "Become ";
-export const GET_IN_TOUCH_OUR_VISION = " in our solar vision";
-export const GET_IN_TOUCH_BECOME_A = "Become ";
 
 export const FAQ_ACCORDION_DATA = [
   {
-    question: "How do solar panels work?",
-    answer:
-      "Solar panels work by converting sunlight into electricity through a process called the photovoltaic effect. The solar cells within the panels absorb sunlight, and the energy from the absorbed light creates an electric current.",
+    question: "FAQQuestion1",
+    answer: "FAQAnswer1",
   },
   {
-    question: "What factors affect the efficiency of a solar system?",
-    answer:
-      "The efficiency of a solar system is influenced by sunlight exposure, shading, panel orientation, and temperature. Choosing high-quality panels and proper installation also impact overall performance.",
+    question: "FAQQuestion2",
+    answer: "FAQAnswer2",
   },
   {
-    question: "What is usual estimated time of delivery?",
-    answer:
-      "You can purchase directly from stocks of our local distributor at your country . Or you can place order for manufacturing and ETA will depend on destination, quantity and other order details.Usually by order ETA is from 30 to 60 days.",
+    question: "FAQQuestion3",
+    answer: "FAQAnswer3",
   },
   {
-    question: "How to become your distributor?",
-    answer:
-      "Please contact our sales office, send us your company presentation and get Distributorship terms and conditions from dedicated to your country Regional Manager.",
+    question: "FAQQuestion4",
+    answer: "FAQAnswer4",
   },
 ];
-export const FAQ_QUESTION = "Got a Question?";
-export const FAQ_SOLUTIONS = "We have solutions";
-export const FAQ_MORE_SOLUTIONS = "More solutions";
 
 //FOOTER
 export const FOOTER_LINKS_ARRAY = [
@@ -521,18 +411,10 @@ export const FOOTER_LINKS_ARRAY = [
     links: [
       { title: "Datasheet", link: "/documents" },
       { title: "Warranty", link: "/documents" },
-      // { title: "Certifications", link: "/documents" },
-      // { title: "Manual", link: "/documents" },
-
-      // { title: "Presentations", link: "/documents" },
-      // { title: "FAQ", link: "/info/faq" },
     ],
   },
 ];
-export const FOOTER_GERMAN_BRAND =
-  "German brand in the renewable energy industry, providing high-quality products and services since 2003.";
-export const FOOTER_GERMAN_BRAND_WORDS_TO_BOLD = ["German brand", "since 2003"];
-export const FOOTER_WE_ARE_SOCIAL = "We are social";
+
 export const FOOTER_SOCIAL = [
   { icon: "facebook.svg", link: "https://www.facebook.com/aesolarenergy/" },
   { icon: "linkedin.svg", link: "https://www.linkedin.com/company/ae-solar/" },
@@ -540,7 +422,6 @@ export const FOOTER_SOCIAL = [
   { icon: "twitter.svg", link: "https://twitter.com/aesolar_energy/" },
   { icon: "youtube.svg", link: "https://www.youtube.com/@AESOLAR/featured/" },
 ];
-export const FOOTER_SAVE_THE_WORLD = "It's time to save the world!";
 export const FOOTER_CONTACT_INFO = [
   {
     icon: "location.svg",
@@ -562,15 +443,10 @@ export const FOOTER_CONTACT_INFO = [
     linkTo: "mailto:sales@ae-solar.com",
   },
 ];
-export const FOOTER_SUBSCRIBE_NEWSLETTER = "Subscribe to Our Newsletter";
-export const FOOTER_COPYRIGHT =
-  "Copyright © 2023 AESolar. All rights reserved.";
-export const FOOTER_YOUR_EMAIL = "your e-mail";
-export const FOOTER_SUBSCRIBE = "Subscribe";
 export const POLICY_LINKS = [
-  { text: "Privacy Policy", link: "/company/publishers_info" },
-  { text: "Terms of Use", link: "/company/publishers_info" },
-  { text: "Legal", link: "/company/imprint" },
+  { text: "PolicyLink1", link: "/company/publishers_info" },
+  { text: "PolicyLink2", link: "/company/publishers_info" },
+  { text: "PolicyLink3", link: "/company/imprint" },
 ];
 
 export const CONSTRUCTOR_OPTION_LINES = [
@@ -1019,28 +895,28 @@ export const CONSTRUCTOR_APPLICATIONS_STANDARDS: ApplicationStandard[] = [
 ];
 export const SEQUENCE_ANIMATION_TEXT = [
   {
-    title: "Front cover",
-    description: "Protects the panel from external elements",
+    title: "SequenceAnimationTitle1",
+    description: "SequenceAnimationDescription1",
   },
   {
-    title: "Front encapsulation",
-    description: "Shields solar cells, seals panel",
+    title: "SequenceAnimationTitle2",
+    description: "SequenceAnimationDescription2",
   },
   {
-    title: "Solar cells",
-    description: "Converts sunlight into electricity",
+    title: "SequenceAnimationTitle3",
+    description: "SequenceAnimationDescription3",
   },
   {
-    title: "Rear encapsulation",
-    description: "Provides insulation and protection",
+    title: "SequenceAnimationTitle4",
+    description: "SequenceAnimationDescription4",
   },
   {
-    title: "Back cover",
-    description: "Protects the back of the panel",
+    title: "SequenceAnimationTitle5",
+    description: "SequenceAnimationDescription5",
   },
   {
-    title: "Frame",
-    description: "Structural support for solar panel",
+    title: "SequenceAnimationTitle6",
+    description: "SequenceAnimationDescription6",
   },
 ];
 
@@ -1050,7 +926,6 @@ export const CONSTRUCTOR_CUSTOMIZE = "Customize.";
 export const CONSTRUCTOR_YOUR_MODEL = "Your model";
 export const CONSTRUCTOR_APPLICATIONS = "Applications.";
 export const CONSTRUCTOR_STANDARD = "Standard";
-export const CONSTRUCTOR_CONFIGURE_YOUR_MODEL = "Configure your module";
 export const CONSTRUCTOR_YOUR_MODEL_IS = "Your model is";
 export const CONSTRUCTOR_MODELS_SHORT_DETAILS_SPECS = {
   Aurora: {
@@ -1846,11 +1721,6 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
   },
 };
 
-export const CART_MODELS_ARE_READY = "Your modules";
-export const CART_PLEASE_CHECKOUT =
-  "Please check out your order and we will finalize it.";
-export const CART_GET_A_QUOTE = "Get a quote";
-export const CART_REMOVE = "Remove";
 export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
   solarCellTechnology: "Solar Cell Technology",
   moduleSpecification: "Module Specifation",
@@ -1862,16 +1732,8 @@ export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
   applications: "Applications",
 };
 export const CART_ADD_ONE_MORE_PANEL = "Add one more panel";
-export const CART_BAG_IS_EMPTY = "Bag is empty";
-export const CART_SUCCESSFULLY_ADDED = "Successfully added to bag";
 export const CART_LOCALSTORAGE = "cart";
 
-export const CHECKOUT_FILL_OUT = `Fill out Your
-Order Information`;
-export const CHECKOUT_THANK_YOU = `Thank You
-We are Contact 
-You Soon`;
-export const CHECKOUT_GO_TO_HOME_PAGE = "Go to Homepage";
 export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
   {
     formTitle: "My name is",
@@ -1898,11 +1760,6 @@ export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
     type: "textarea",
   },
 ];
-export const CHECKOUT_SEND_REQUEST = "Send Request";
-
-export const CONSULT_READY_TO_CONSULT = `Hey! We are Ready
-to Consult You`;
-export const CONSULT_AGREEMENT = "I agree to the processing of personal data";
 
 export const CONSULT_FORM_FIELDS: FormFileds[] = [
   {
@@ -1923,7 +1780,7 @@ export const CONSULT_FORM_FIELDS: FormFileds[] = [
     type: "input",
   },
   {
-    formTitle: "Please, contact me at",
+    formTitle: "Contact me at",
     placeholder: "your e-mail",
     name: "email",
     type: "input",
@@ -1950,23 +1807,9 @@ export const DROPDOWN_INPUT_VALUES = {
 };
 
 export const PICKER_INPUT_VALUES = {
-  [FORMS_FIELDS.budget]: ["$1…5k", "$5…10k", "$10…20k", "$20…50k", "> $50k"],
   [FORMS_FIELDS.interest]: ["installing", "partnership", "investing"],
 };
 
-export const ABOUT_SUSTAINABLE = `Sustainable
-Since 2003`;
-export const ABOUT_COMPANY_FOUNDATION =
-  "AE Solar TIER1 Company was founded by Dr. Alexander Maier and his brothers in Königsbrunn, Germany. AE Solar is one of the award-winning leading brands in the renewable energy industry, providing high-quality new renewable energy products and services since 2003.";
-export const ABOUT_COMPANY_FOUNDATION_WORDS_TO_HIGHLIGHT = [
-  "was",
-  "AE Solar is one of",
-  "leading brands in the renewable energy industry, providing",
-  "and services since 2003.",
-];
-
-export const ABOUT_BUSINESS = "Business Map";
-export const ABOUT_MAP = "Where Our Power Is";
 export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "germany.svg",
@@ -1989,33 +1832,9 @@ export const ABOUT_MAP_DESIGNATIONS = [
     location: ["All around the World"],
   },
 ];
-export const ABOUT_OUR_HISTORY = "Our History";
-export const ABOUT_THROUGH = "Through the Years";
 
-export const COOKIES_AESOLAR = "Cookies on AESolar";
-export const COOKIES_WE_USE_COOKIES =
-  "We use cookies and other tracking technologies to improve your browsing experience on our site, show personalized content and targeted ads, analyze site traffic, and understand where our audiences come from. To learn more or opt-out, read our Cookie Policy. Please also read our Privacy Notice and Terms of Use, which became effective December 20, 2019.";
-export const COOKIES_LINKS = [
-  "Cookie Policy",
-  "Privacy Notice",
-  "Terms of Use",
-];
-export const COOKIES_MATCH_TEXT_WITH_LINK = {
-  "Cookie Policy": "policy",
-  "Privacy Notice": "privacy",
-  "Terms of Use": "terms",
-};
-export const COOKIES_BY_CHOOSING =
-  "By choosing “I Accept”, you consent to our use of cookies and other tracking technologies.";
-export const COOKIES_I_ACCEPT = "I accept";
-export const COOKIES_I_DO_NOT_ACCEPT = "I do not accept";
 export const COOKIES_USER_CONSENT_FLAG = "cookieConsentIsTrue";
 
-export const DOCUMENTS_DOCUMENTS_HEADING = "Documents";
-export const DOCUMENTS_YOU_NEED_TO_KNOW = "You Need to Know";
-export const DOCUMENTS_CATEGORIES = "Categories";
-export const DOCUMENTS_SEARCH = "Search";
-export const DOCUMENT_SUBCATEGORIES_SPLITTER = "$";
 export const DOCUMENTS_FILES: (
   | DocumentsTypesPresentation
   | DocumentsTypesOther
@@ -2369,241 +2188,152 @@ export const DOCUMENTS_FILES: (
       },
     ],
   },
-  // {
-  //   category: "Technical Data",
-  //   type: "Text",
-  //   data: [
-  //     { linkTitle: "Technical Data1", link: "link" },
-  //     { linkTitle: "Technical Data2", link: "link" },
-  //     { linkTitle: "Technical Data3", link: "link" },
-  //     { linkTitle: "Technical Data4", link: "link" },
-  //     { linkTitle: "Technical Data5", link: "link" },
-  //     { linkTitle: "Technical Data6", link: "link" },
-  //   ],
-  // },
-  // {
-  //   category: "Certification",
-  //   type: "Text",
-  //   data: [
-  //     { linkTitle: "Certification1", link: "link" },
-  //     { linkTitle: "Certification2", link: "link" },
-  //     { linkTitle: "Certification3", link: "link" },
-  //     { linkTitle: "Certification4", link: "link" },
-  //     { linkTitle: "Certification5", link: "link" },
-  //     { linkTitle: "Certification6", link: "link" },
-  //   ],
-  // },
-  // {
-  //   category: "Warranty",
-  //   type: "Text",
-  //   data: [
-  //     { linkTitle: "Warranty1", link: "link" },
-  //     { linkTitle: "Warranty2", link: "link" },
-  //     { linkTitle: "Warranty3", link: "link" },
-  //     { linkTitle: "Warranty4", link: "link" },
-  //     { linkTitle: "Warranty5", link: "link" },
-  //     { linkTitle: "Warranty6", link: "link" },
-  //   ],
-  // },
-  // {
-  //   category: "Videos",
-  //   type: "Text",
-  //   data: [
-  //     { linkTitle: "Videos1", link: "link" },
-  //     { linkTitle: "Videos2", link: "link" },
-  //     { linkTitle: "Videos3", link: "link" },
-  //     { linkTitle: "Videos4", link: "link" },
-  //     { linkTitle: "Videos5", link: "link" },
-  //     { linkTitle: "Videos6", link: "link" },
-  //     { linkTitle: "Videos7", link: "link" },
-  //     { linkTitle: "Videos8", link: "link" },
-  //     { linkTitle: "Videos9", link: "link" },
-  //     { linkTitle: "Videos10", link: "link" },
-  //     { linkTitle: "Videos11", link: "link" },
-  //     { linkTitle: "Videos12", link: "link" },
-  //   ],
-  // },
 ];
 
-export const DOCUMENTS_FAQ_HAVE_A_QUESTION = "Got a Question?";
-export const DOCUMENTS_FAQ_WE_HAVE_SOLUTIONS = "We Have Solutions";
 export const DOCUMENTS_FAQ_FILES = [
   {
-    category: "AESOLAR Company and Product Overview",
+    category: "FAQCategory1",
     data: [
       {
-        question: "What does TIER 1 mean?",
-        answer:
-          "The Bloomberg New Energy Finance (BNEF) ranking allows for a transparent differentiation among the numerous PV manufacturers in the market. The title Tier-1 manufacturer is one of the highest distinctions in the industry.",
+        question: "FAQCategory1Question1",
+        answer: "FAQCategory1Answer1",
       },
       {
-        question: "Is AESOLAR listed as TIER 1?",
-        answer: "Yes",
+        question: "FAQCategory1Question2",
+        answer: "FAQCategory1Answer2",
       },
       {
-        question: "What modules does AESOLAR produce?",
-        answer:
-          "AESOLAR offers a wide range of solar modules, including monocrystalline, polycrystalline, PERC, TOPCon, and HJT modules.",
+        question: "FAQCategory1Question3",
+        answer: "FAQCategory1Answer3",
       },
       {
-        question: "What is the production capacity of AESOLAR?",
-        answer:
-          "Our annual production capacity is 2 gigawatts, with expansion plans for the future",
+        question: "FAQCategory1Question4",
+        answer: "FAQCategory1Answer4",
       },
       {
-        question: "Where does AESOLAR produce?",
-        answer:
-          "Our production facilities are located in China and Turkey, supplemented by planned production facilities in Germany.",
+        question: "FAQCategory1Question5",
+        answer: "FAQCategory1Answer5",
       },
       {
-        question: "Why buy AESOLAR modules?",
-        answer:
-          "AESOLAR modules are characterized by high quality, efficiency, reliability, excellent warranty terms, and outstanding customer service.",
+        question: "FAQCategory1Question6",
+        answer: "FAQCategory1Answer6",
       },
       {
-        question:
-          "How does AESOLAR's quality differ from other TIER 1 manufacturers?",
-        answer:
-          "AESOLAR stands out from other TIER 1 manufacturers due to our advanced technology, rigorous quality controls, and innovation. This justifies the higher price of our products, reflecting superior performance and durability.",
+        question: "FAQCategory1Question7",
+        answer: "FAQCategory1Answer7",
       },
       {
-        question: "Does AESOLAR produce cells?",
-        answer:
-          "No, AESOLAR does not produce solar cells itself. However, we exclusively offer a wide range of solar cells of all technologies, from which our latest and most advanced modules result.",
+        question: "FAQCategory1Question8",
+        answer: "FAQCategory1Answer8",
       },
       {
-        question: "Why do you have a polar bear as a mascot?",
-        answer:
-          "The polar bear symbolizes our commitment to environmental protection and the fight against climate change. It represents our dedication to sustainability and renewable energies.",
+        question: "FAQCategory1Question9",
+        answer: "FAQCategory1Answer9",
       },
     ],
   },
   {
-    category: "Product Specifications and Technologies",
+    category: "FAQCategory2",
     data: [
       {
-        question: "What is PERC?",
-        answer:
-          "Passivated Emitter and Rear Cell is a technology designed to enhance the efficiency of solar cells.",
+        question: "FAQCategory2Question1",
+        answer: "FAQCategory2Answer1",
       },
       {
-        question: "What is TOPCon?",
-        answer:
-          "Tunnel Oxide Passivated Contact - is an advanced technology aimed at improving the efficiency and lifespan of solar cells",
+        question: "FAQCategory2Question2",
+        answer: "FAQCategory2Answer2",
       },
       {
-        question: "What is HJT??",
-        answer:
-          "Heterojunction Technology combines monocrystalline and amorphous silicon to increase efficiency",
+        question: "FAQCategory2Question3",
+        answer: "FAQCategory2Answer3",
       },
       {
-        question: "What is BIPV?",
-        answer:
-          "Building Integrated Photovoltaics refers to the integration of solar technology into building structures.",
+        question: "FAQCategory2Question4",
+        answer: "FAQCategory2Answer4",
       },
       {
-        question: "What does PVT mean?",
-        answer:
-          "Photovoltaic Thermal denotes the combination of photovoltaic and thermal energy generation, as seen in our Neptune series..",
+        question: "FAQCategory2Question5",
+        answer: "FAQCategory2Answer5",
       },
       {
-        question: "Are there colored modules?",
-        answer: "Yes, we offer colored modules to meet aesthetic requirements.",
+        question: "FAQCategory2Question6",
+        answer: "FAQCategory2Answer6",
       },
       {
-        question: "What does Weak Light and Low-Temperature Performance mean?",
-        answer:
-          "These terms describe the performance of solar modules under conditions of low sunlight and at low temperatures. AESOLAR modules are designed to operate efficiently even under such conditions.",
+        question: "FAQCategory2Question7",
+        answer: "FAQCategory2Answer7",
       },
     ],
   },
   {
-    category: "Purchase and Availability",
+    category: "FAQCategory3",
     data: [
       {
-        question: "Where can I buy AESOLAR modules?",
-        answer:
-          "Our modules are available through a network of distributors and dealers. Please contact us directly for more information.",
+        question: "FAQCategory3Question1",
+        answer: "FAQCategory3Answer1",
       },
     ],
   },
   {
-    category: "Market Strategy and Partnerships",
+    category: "FAQCategory4",
     data: [
       {
-        question: "What is your market strategy?",
-        answer:
-          "Our strategy focuses on providing high-quality solar modules, building strong partnerships, and concentrating on innovation and customer service.",
+        question: "FAQCategory4Question1",
+        answer: "FAQCategory4Answer1",
       },
       {
-        question: "How many distribution partners do you have per country?",
-        answer:
-          "The number of distribution partners varies depending on the market size and dynamics.",
+        question: "FAQCategory4Question2",
+        answer: "FAQCategory4Answer2",
       },
       {
-        question:
-          "How can we protect our market share if we become your distribution partner?",
-        answer:
-          "Through exclusive distribution territories, marketing support, and product training, we offer our partners the opportunity to effectively protect and expand their market share.",
+        question: "FAQCategory4Question3",
+        answer: "FAQCategory4Answer3",
       },
     ],
   },
   {
-    category: "General information about solar panels",
+    category: "FAQCategory5",
     data: [
       {
-        question: "What is a solar panel and how does it work?",
-        answer:
-          "A solar panel converts sunlight into electricity based on the photovoltaic effect.",
+        question: "FAQCategory5Question1",
+        answer: "FAQCategory5Answer1",
       },
       {
-        question: "How long do solar panels last?",
-        answer:
-          "Typically, 25 to 30 years, with a slight decrease in efficiency over time.",
+        question: "FAQCategory5Question2",
+        answer: "FAQCategory5Answer2",
       },
       {
-        question: "How much do solar panels cost?",
-        answer: "Costs vary depending on size, type, and manufacturer.",
+        question: "FAQCategory5Question3",
+        answer: "FAQCategory5Answer3",
       },
       {
-        question: "Can solar panels generate energy in any weather?",
-        answer:
-          "Yes, even in cloudy weather, although efficiency is higher in direct sunlight.",
+        question: "FAQCategory5Question4",
+        answer: "FAQCategory5Answer4",
       },
       {
-        question: "Do I need a permit to install solar panels?",
-        answer: "Often, a permit is required depending on local regulations.",
+        question: "FAQCategory5Question5",
+        answer: "FAQCategory5Answer5",
       },
       {
-        question:
-          "How does the installation of solar panels affect the value of my home?",
-        answer:
-          "The installation can increase the value of a home, especially through improved energy efficiency.",
+        question: "FAQCategory5Question6",
+        answer: "FAQCategory5Answer6",
       },
       {
-        question: "How environmentally friendly are solar panels?",
-        answer:
-          "Solar panels are highly environmentally friendly, as they utilize renewable energy and produce no greenhouse gases.",
+        question: "FAQCategory5Question7",
+        answer: "FAQCategory5Answer7",
       },
       {
-        question: "Can I install solar panels myself?",
-        answer:
-          "Installation is possible, but professional installation is recommended.",
+        question: "FAQCategory5Question8",
+        answer: "FAQCategory5Answer8",
       },
       {
-        question: "How maintenance-intensive are solar panels?",
-        answer:
-          "Solar panels require little maintenance, making them a practical solution for sustainable energy.",
+        question: "FAQCategory5Question9",
+        answer: "FAQCategory5Answer9",
       },
     ],
   },
 ];
-export const DOCUMENTS_FILTER = "Filter";
-export const DOCUMENTS_NO_RESULT = "No result for: ";
-export const DOCUMENTS_RESET = "Reset";
 
-export const DOCUMENTS_IMPRINT_INFO_IMPRINT = "Imprint";
-export const DOCUMENTS_IMPRINT_INFO_INFORMATION = "Information";
 export const DOCUMENTS_IMPRINT_INFO_LEGAL = {
   title: "Legal",
   registration: [
@@ -2622,4 +2352,3 @@ export const DOCUMENTS_IMPRINT_INFO_LEGAL = {
     `Germany`,
   ],
 };
-export const DOCUMENTS_IMPRINT_INFO_CONTACTS = "Contacts";

@@ -1,26 +1,38 @@
+"use client";
+
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import FullBentobox from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/FullBentobox";
 import HalfBentobox from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/HalfBentobox";
 import QuarterBentobox from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/QuarterBentobox";
 import WarrantyYears from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/WarrantyYears";
 import { CustomizationProps } from "@/app/[locale]/products/[id]/components/Customization/types";
-import {
-  PRODUCT_BENTOBOXES,
-  PRODUCT_CREATE_YOUR,
-  PRODUCT_OWN_SPACE,
-} from "@/app/[locale]/products/[id]/constants";
+import { PRODUCT_BENTOBOXES } from "@/app/[locale]/products/[id]/constants";
+import { useParams } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export default function Customization({ id }: CustomizationProps) {
   const { areaTemplate, structure } = PRODUCT_BENTOBOXES[id];
+
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <div className="flex items-center relative flex-col min-[1536px]:w-[1440px] xl:mb-[180px] lg:mb-[100px] md:mb-[50px] mb-[30px]">
       <BasicWidthContainer styles="relative z-10">
         <div className="w-full flex flex-col gap-[20px] items-center">
           <TwoTierHeading
-            tierOneHeading={PRODUCT_CREATE_YOUR}
-            tierTwoHeading={PRODUCT_OWN_SPACE}
+            tierOneHeading={
+              <Trans
+                components={{
+                  red: <p className="text-[#B30006]" />,
+                }}
+              >
+                {t("Create Your Own Space")}
+              </Trans>
+            }
             reverseColor
             align="left"
             showDivider
@@ -52,7 +64,7 @@ export default function Customization({ id }: CustomizationProps) {
                   <HalfBentobox
                     key={gridArea}
                     imageUrl={imageUrl}
-                    shortDescription={shortDescription}
+                    shortDescription={t(shortDescription || "")}
                     gridArea={gridArea}
                   />
                 );
@@ -62,7 +74,7 @@ export default function Customization({ id }: CustomizationProps) {
                   <QuarterBentobox
                     key={gridArea}
                     imageUrl={imageUrl}
-                    shortDescription={shortDescription}
+                    shortDescription={t(shortDescription || "")}
                     gridArea={gridArea}
                   />
                 );

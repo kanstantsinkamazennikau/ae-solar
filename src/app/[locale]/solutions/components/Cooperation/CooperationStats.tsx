@@ -1,17 +1,17 @@
+"use client";
+
 import Logo from "@/app/[locale]/components/common/Logo";
-import {
-  SOLUTIONS_STATS_WITH_DETAILS,
-  SOLUTIONS_TIER_1,
-} from "@/app/[locale]/solutions/constants";
-import {
-  FOOTER_GERMAN_BRAND,
-  FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-  FOOTER_SAVE_THE_WORLD,
-} from "@/app/[locale]/utils/constants";
-import { styleMatchingText } from "@/app/[locale]/utils/styleMatchingText";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { SOLUTIONS_STATS_WITH_DETAILS } from "@/app/[locale]/solutions/constants";
+import { useParams } from "next/navigation";
 import { Fragment } from "react";
+import { Trans } from "react-i18next";
 
 export default function CooperationStats() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -42,16 +42,17 @@ export default function CooperationStats() {
         <div className="flex flex-col w-fit relative z-10">
           <Logo />
           <p className="text-base-red text-[10px] text-right">
-            {FOOTER_SAVE_THE_WORLD}
+            {t("Save the World")}
           </p>
         </div>
-        <div className="[font-size:_clamp(14px,1.5vw,16px)] max-md:text-center">
-          {styleMatchingText(
-            FOOTER_GERMAN_BRAND,
-            FOOTER_GERMAN_BRAND_WORDS_TO_BOLD,
-            "font-normal leading-[130%] font-walsheim",
-            "font-bold"
-          )}
+        <div className="[font-size:_clamp(14px,1.5vw,16px)] max-md:text-center font-normal leading-[130%] font-walsheim">
+          <Trans
+            components={{
+              bold: <span className="font-bold" />,
+            }}
+          >
+            {t("German Brand")}
+          </Trans>
         </div>
       </div>
       <div
@@ -68,7 +69,7 @@ export default function CooperationStats() {
         "
       >
         <p className="[font-size:_clamp(20px,2.5vw,36px)] font-semibold leading-[110%] mb-8 max-md:text-center">
-          {SOLUTIONS_TIER_1}
+          {t("We’re TIER 1 Company")}
         </p>
         <div
           className="
@@ -89,7 +90,7 @@ export default function CooperationStats() {
                   {stat}
                 </p>
                 <p className="[font-size:_clamp(14px,1.5vw,20px)] font-normal font-walsheim leading-[110%] max-md:text-center">
-                  {details}
+                  {t(details)}
                 </p>
               </div>
               <div className="w-0.5 bg-[#131313] mx-4 h-auto last:hidden" />

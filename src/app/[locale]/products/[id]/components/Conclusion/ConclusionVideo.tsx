@@ -2,20 +2,21 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { ConclusionProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
-import {
-  PRODUCT_CONCLUSION,
-  PRODUCT_CONCLUSION_FOR_PANELS,
-} from "@/app/[locale]/products/[id]/constants";
-import { CONSTRUCTOR_CONFIGURE_YOUR_MODEL } from "@/app/[locale]/utils/constants";
+import { PRODUCT_CONCLUSION_FOR_PANELS } from "@/app/[locale]/products/[id]/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useLayoutEffect, useState } from "react";
 
 export default function ConclusionVideo({ id }: ConclusionProps) {
   const { videoRef } = useVideoIntersection();
   const [isIOSDevice, setIsIOSDevice] = useState(false);
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
 
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
@@ -139,11 +140,11 @@ export default function ConclusionVideo({ id }: ConclusionProps) {
               text-center
             "
           >
-            {PRODUCT_CONCLUSION}
+            {t("Conclusion")}
           </div>
           <div className="flex flex-col min-[920px]:gap-8 gap-4 items-center">
             <div className="[font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim text-center z-10">
-              {PRODUCT_CONCLUSION_FOR_PANELS[id]
+              {t(PRODUCT_CONCLUSION_FOR_PANELS[id])
                 .split(/\r?\n|\r|\n/g)
                 .map((string) => (
                   <p key={string} className="min-[920px]:mb-7 mb-3 last:mb-0">

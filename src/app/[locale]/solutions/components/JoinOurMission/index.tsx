@@ -1,13 +1,17 @@
+"use client";
+
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Starfield from "@/app/[locale]/products/components/StarField";
-import {
-  SOLUTIONS_JOIN,
-  SOLUTIONS_OUR_MISSION,
-  SOLUTIONS_OUR_MISSION_TEXT,
-} from "@/app/[locale]/solutions/constants";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export default function JoinOurMission() {
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   return (
     <div
       className="
@@ -46,13 +50,18 @@ export default function JoinOurMission() {
           -translate-x-1/2
         "
       />
-      {/* <div className="flex justify-center items-center flex-col">
-        <BasicWidthContainer> */}
       <div className="w-full absolute bottom-0 flex justify-center px-5">
         <div className="flex w-[874px] flex-col items-center gap-10">
           <TwoTierHeading
-            tierOneHeading={SOLUTIONS_JOIN}
-            tierTwoHeading={SOLUTIONS_OUR_MISSION}
+            tierOneHeading={
+              <Trans
+                components={{
+                  red: <p className="text-[#B30006]" />,
+                }}
+              >
+                {t("Join Our Mission")}
+              </Trans>
+            }
             size="small"
             externalStyle="
               md:!text-[96px]
@@ -64,17 +73,12 @@ export default function JoinOurMission() {
             marginBottomNone
             align="center"
           />
-          <div className="text-center md:text-[20px] text-[16px] leading-[150%] font-walsheim font-medium md:max-w-[650px] max-w-[450px]">
-            {SOLUTIONS_OUR_MISSION_TEXT.split(/\r?\n|\r|\n/g).map((string) => (
-              <p key={string} className="mb-6 last:mb-0">
-                {string}
-              </p>
-            ))}
+          <div className="text-center md:text-[20px] text-[16px] leading-[150%] font-walsheim font-medium md:max-w-[650px] max-w-[450px] gap-6 flex flex-col">
+            <p>{t("With Every Sunrise")}</p>
+            <p>{t("Save The World Together, One Ray At A Time")}</p>
           </div>
         </div>
       </div>
-      {/* </BasicWidthContainer>
-      </div> */}
     </div>
   );
 }

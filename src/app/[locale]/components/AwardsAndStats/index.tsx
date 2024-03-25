@@ -28,7 +28,6 @@ export default async function AwardsAndStats() {
           overflow-hidden
         "
       >
-        {/* bg-[linear-gradient(0deg,_rgb(0_0_0_/_50%),_rgb(0_0_0_/_50%)),_linear-gradient(0deg,_#19191947,_#19191947)] */}
         <Image
           src="/images/awards/dividerSmall.svg"
           alt="dividerSmall"
