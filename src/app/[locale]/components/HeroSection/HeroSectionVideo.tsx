@@ -64,8 +64,8 @@ export default function HeroSectionVideo() {
       )}
       {(isLongVideoLoadingTime || isIOSDevice) && (
         <Image
-          src="/images/heroSectionBackground.png"
-          alt="solar panel"
+          src={`/images/products/productsFlower.png`}
+          alt="heroSectionBackground"
           priority
           width={1920}
           height={1080}

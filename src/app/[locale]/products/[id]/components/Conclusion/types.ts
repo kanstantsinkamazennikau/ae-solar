@@ -17,6 +17,7 @@ export interface DestopTableRowProps {
   moduleDimension: {
     length: string;
     width: string;
+    height: string;
   };
   links: {
     tooltip: string;
@@ -32,6 +33,7 @@ export interface DestopTableRowProps {
     moduleDimension: {
       length: string;
       width: string;
+      height: string;
     },
     applications: Applications[],
     powerRange: string,

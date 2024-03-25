@@ -32,6 +32,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
     moduleDimension: {
       length: string;
       width: string;
+      height: string;
     },
     applications: Applications[],
     powerRange: string,

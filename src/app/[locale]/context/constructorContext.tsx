@@ -40,6 +40,7 @@ export interface ConstructorModel {
   moduleDimension: {
     length: string;
     width: string;
+    height: string;
   };
   powerRange: {
     from: string;
@@ -62,6 +63,8 @@ export interface ConstructorContext {
   isBagLoading: boolean;
   setIsShowCheckoutForm: (flag: boolean) => void;
   isShowCheckoutForm: boolean;
+  setSearchInputValue: Dispatch<SetStateAction<string>>;
+  searchInputValue: string;
 }
 
 export const ConstructorContext = createContext<ConstructorContext>(null!);
@@ -76,6 +79,7 @@ export default function ConstructorProvider({
   const [isGenerateModel, setIsGenerateModel] = useState<boolean>(false);
   const [isBagLoading, setIsBagLoading] = useState<boolean>(true);
   const [isShowCheckoutForm, setIsShowCheckoutForm] = useState<boolean>(false);
+  const [searchInputValue, setSearchInputValue] = useState("");
   const [constructorModel, setConstructorModel] = useState<ConstructorModel>({
     model: "",
     solarCellTechnology: defaultModel.solarCellTechnology.values[0],
@@ -86,6 +90,7 @@ export default function ConstructorProvider({
     moduleDimension: {
       length: "",
       width: "",
+      height: "",
     },
     powerRange: {
       from: "",
@@ -109,6 +114,7 @@ export default function ConstructorProvider({
       moduleDimension: {
         length: "",
         width: "",
+        height: "",
       },
       powerRange: {
         from: "",
@@ -140,6 +146,8 @@ export default function ConstructorProvider({
         isBagLoading,
         setIsShowCheckoutForm,
         isShowCheckoutForm,
+        searchInputValue,
+        setSearchInputValue,
       }}
     >
       {children}

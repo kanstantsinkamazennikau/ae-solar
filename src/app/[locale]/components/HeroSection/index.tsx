@@ -22,11 +22,6 @@ export default function HeroSection() {
 
   return (
     <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[70vh] overflow-x-hidden overflow-hidden">
-      <div className="fade-strip-top" />
-      <div className="fade-strip-bottom" />
-      <div className="fade-strip-left md:block hidden" />
-      <div className="fade-strip-right md:block hidden" />
-
       <HeroSectionVideo />
       <div
         className={`

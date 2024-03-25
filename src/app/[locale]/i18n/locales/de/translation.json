@@ -576,5 +576,24 @@
   "Power Range": "Leistungsbereich",
   "Applications": "Anwendungen",
   "Information": "Informationen",
-  "Close": "Schließen Sie"
+  "Close": "Schließen Sie",
+
+  "Perfectly Aligned Options": "Diese Optionen sind <red>Perfekt auf Sie abgestimmt</red>",
+  "Dimension": "Abmessungen",
+  "Download": "Herunterladen",
+  "Technology": "Technologie",
+  "PERc Technology": "PERc Technologie",
+  "HJT Technology": "HJT Technologie",
+  "TOPCon Technology": "TOPCon Technologie",
+  "Wind/Snow Resistant Technology": "Wind-/Schneesichere Technologie",
+  "PV-Thermal Technology": "PV-Thermal Technologie",
+  "Shade Resistant Technology": "Schattierungsresistente Technologie",
+  "Technical name": "Technische Bezeichnung",
+  "Customize": "Anpassen",
+  "From": "von",
+  "Up to": "bis zu",
+  "length": "L (mm)",
+  "width": "B (mm)",
+  "height": "H (mm)",
+  "Added": "Hinzugefügt"
 }
