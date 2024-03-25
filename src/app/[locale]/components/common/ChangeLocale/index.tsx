@@ -83,7 +83,7 @@ export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
               priority
               width={1320}
               height={30}
-              className="mb-5"
+              className="mt-5 mb-2"
             />
             <FlagsList handleSelection={handleSelection} mobileNavigation />
           </div>
