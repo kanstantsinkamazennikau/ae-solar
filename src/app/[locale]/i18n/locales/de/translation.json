@@ -578,7 +578,7 @@
   "Information": "Informationen",
   "Close": "Schließen Sie",
 
-  "Perfectly Aligned Options": "Diese Optionen sind <red>Perfekt auf Sie abgestimmt</red>",
+  "Perfectly Aligned Options": "Diese Optionen sind <red><br/>Perfekt auf Sie abgestimmt</red>",
   "Dimension": "Abmessungen",
   "Download": "Herunterladen",
   "Technology": "Technologie",
@@ -595,5 +595,9 @@
   "length": "L (mm)",
   "width": "B (mm)",
   "height": "H (mm)",
-  "Added": "Hinzugefügt"
+  "Added": "Hinzugefügt",
+  "from high to low": "von hoch zu niedrig",
+  "from low to high": "von niedrig bis hoch",
+  "Sort": "Sortieren",
+  "Show": "Anzeigen"
 }

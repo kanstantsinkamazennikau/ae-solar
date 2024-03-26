@@ -595,5 +595,9 @@
   "length": "L (mm)",
   "width": "W (mm)",
   "height": "H (mm)",
-  "Added": "Added"
+  "Added": "Added",
+  "from high to low": "from high to low",
+  "from low to high": "from low to high",
+  "Sort": "Sort",
+  "Show": "Show"
 }

@@ -108,3 +108,16 @@ export const CUSTOMIZE_FRAME_COLOR = [
     title: "Silver",
   },
 ];
+
+export const CATALOGUE_SORT_VALUES = [
+  { label: "from high to low", value: "powerDESC" },
+  { label: "from low to high", value: "powerASC" },
+];
+
+export const CATALOGUE_SHOW_VALUES = [
+  { label: "10", value: "10" },
+  { label: "20", value: "20" },
+];
+
+export const SORT_ORDER = "sortOrder";
+export const PER_PAGE = "perPage";

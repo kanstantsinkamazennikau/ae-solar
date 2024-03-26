@@ -45,10 +45,8 @@ export default function CatalogueSearchBar() {
           min-[920px]:top-[79px]
           top-[63px]
           z-30
-          pb-2
           bg-black
           backdrop-blur-3xl
-          pt-1
         `}
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -92,7 +90,6 @@ export default function CatalogueSearchBar() {
           </div>
         </div>
       </form>
-      <hr className="bg-[#191919] h-[1px] border-none w-full mt-4 mb-10" />
     </>
   );
 }

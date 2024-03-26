@@ -1,3 +1,5 @@
+import { Dispatch, RefObject, SetStateAction } from "react";
+
 export interface CataloguePanelDetailsProps {
   cellType: string;
   moduleDesign: string;
@@ -32,4 +34,26 @@ export interface TechnologyFilterProps {
   subCategory?: string;
   showModelIcon?: boolean;
   showColorIcon?: boolean;
+}
+
+export interface SortOption {
+  label: string;
+  value: string;
+}
+export interface SelectedSortOptionProps {
+  selectedOption: SortOption;
+  setIsSelection: Dispatch<SetStateAction<boolean>>;
+  dropdownRef: RefObject<HTMLDivElement>;
+  isSelection: boolean;
+}
+
+export interface OptionsSortProps {
+  handleSelection: (option: SortOption) => void;
+  optionsList: SortOption[];
+}
+
+export interface DropdownSortProps {
+  param: string;
+  title: string;
+  dropDownValues: SortOption[];
 }

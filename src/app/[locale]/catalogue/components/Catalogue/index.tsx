@@ -1,5 +1,6 @@
 import CataloguePanelsList from "@/app/[locale]/catalogue/components/Catalogue/CataloguePanelsList";
 import CatalogueSearchBar from "@/app/[locale]/catalogue/components/Catalogue/CatalogueSearchBar";
+import CatalogueSort from "@/app/[locale]/catalogue/components/Catalogue/CatalogueSort";
 import Filters from "@/app/[locale]/catalogue/components/Catalogue/Filters";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 
@@ -9,7 +10,11 @@ export default function Catalogue() {
       <BasicWidthContainer>
         <div className="flex justify-between gap-14">
           <div className="max-w-[1000px]">
-            <CatalogueSearchBar />
+            <div className="flex flex-col gap-4">
+              <CatalogueSearchBar />
+              <CatalogueSort />
+              <hr className="bg-[#191919] h-[1px] border-none w-full mb-10" />
+            </div>
             <CataloguePanelsList />
           </div>
           <Filters />

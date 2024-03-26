@@ -42,20 +42,20 @@ export default function PowerRange() {
             <div className="flex items-center flex-col gap-2 w-1/2" key={field}>
               <input
                 className="
-                p-3
-                border-2
-                rounded-xl
-                border-solid
-                border-[#191919]
-                focus:border-base-red
-                focus:outline-none
-                bg-black
-                text-center
-                md:max-w-[115px]
-                max-[768px]:w-full
-                [font-size:_clamp(11px,2vw,14px)]
-                placeholder:[font-size:_clamp(11px,2vw,14px)]
-              "
+                  p-3
+                  border-2
+                  rounded-xl
+                  border-solid
+                  border-[#191919]
+                  focus:border-base-red
+                  focus:outline-none
+                  bg-black
+                  text-center
+                  md:max-w-[115px]
+                  max-[768px]:w-full
+                  [font-size:_clamp(11px,2vw,14px)]
+                  placeholder:[font-size:_clamp(11px,2vw,14px)]
+                "
                 placeholder={isFromField ? "0" : "1000"}
                 value={powerRange[field as keyof typeof powerRange]}
                 onChange={(e) => {
