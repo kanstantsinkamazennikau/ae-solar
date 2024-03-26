@@ -29,7 +29,6 @@ export default function PowerRange() {
   };
 
   const powerRangeRenderFields = ["from", "to"];
-
   return (
     <div>
       <div className="[font-size:_clamp(12px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
