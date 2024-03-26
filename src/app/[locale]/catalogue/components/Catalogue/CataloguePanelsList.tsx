@@ -2,33 +2,241 @@
 
 import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import CataloguePanelDetails from "@/app/[locale]/catalogue/components/Catalogue/CataloguePanelDetails";
+import {
+  CATALOGUE_SHOW_VALUES,
+  CATALOGUE_SORT_VALUES,
+  PAGE,
+  PER_PAGE,
+  POWER_RANGE_FROM,
+  POWER_RANGE_TO,
+  SORT_ORDER,
+} from "@/app/[locale]/catalogue/constants";
+import BlogPostPagination from "@/app/[locale]/company/news/components/BlogPostsPagination";
 import Button from "@/app/[locale]/components/common/Button";
+import Loader from "@/app/[locale]/components/common/Loader";
 import {
   ConstructorContext,
   Model,
 } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { PRODUCT_CONCLUSION_TABLE_BODY } from "@/app/[locale]/products/[id]/constants";
 import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
-import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useContext } from "react";
+import { useParams, useSearchParams } from "next/navigation";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { toast } from "react-toastify";
 
 export default function CataloguePanelsList() {
-  const { setModelsInBag, modelsInBag } = useContext(ConstructorContext);
+  const modelsListModelsKeys = useMemo(
+    () => Object.keys(PRODUCT_CONCLUSION_TABLE_BODY) as Model[],
+    []
+  );
+  const searchParams = useSearchParams();
+  const params = useMemo(
+    () => new URLSearchParams(searchParams),
+    [searchParams]
+  );
+  const sortOrder = params.get(SORT_ORDER) || CATALOGUE_SORT_VALUES[0].value;
+  const itemsPerPage = params.get(PER_PAGE) || CATALOGUE_SHOW_VALUES[0].value;
+  const page = params.get(PAGE) || 1;
+
+  const {
+    setModelsInBag,
+    modelsInBag,
+    isFilterModels,
+    setIsFilterModels,
+    isResetFilter,
+    setIsResetFilter,
+  } = useContext(ConstructorContext);
+  const [modelsList, setModelsList] = useState<any[]>([]);
+  const [modelsListLength, setModelsListLength] = useState<any[]>([]);
+
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
-  const modelsListModelsKeys = Object.keys(
-    PRODUCT_CONCLUSION_TABLE_BODY
-  ) as Model[];
+  useEffect(() => {
+    if (isFilterModels || isResetFilter) {
+      const powerRange = `${searchParams.get(POWER_RANGE_FROM) || 0}-${
+        searchParams.get(POWER_RANGE_TO) || 10000
+      }`;
+
+      const searchParamsObjectWithValues = Object.fromEntries([
+        ...Array.from(searchParams.entries())
+          .filter(
+            ([searchParam]) =>
+              ![
+                PER_PAGE,
+                SORT_ORDER,
+                POWER_RANGE_FROM,
+                POWER_RANGE_TO,
+                PAGE,
+              ].includes(searchParam)
+          )
+          .map(([key, val]) => [
+            key,
+            val.split("&").map((val) => val.toLowerCase()),
+          ]),
+        ["powerRange", powerRange],
+      ]);
+
+      const sortedModulesByOrder = modelsListModelsKeys
+        .map((modelKey) => PRODUCT_CONCLUSION_TABLE_BODY[modelKey].modules)
+        .flat(1)
+        .filter((item) => {
+          if (isResetFilter) return true;
+          return Object.keys(searchParamsObjectWithValues).every((key) => {
+            if (["length", "width", "height"].includes(key)) {
+              return (
+                +item.moduleDimension[
+                  key as keyof typeof item.moduleDimension
+                ] > +searchParamsObjectWithValues[key][0]
+              );
+            }
+
+            if (key === "powerRange") {
+              const [paramsLowerPowerValue, paramsUpperPowerValue] =
+                searchParamsObjectWithValues[key].split("-");
+              const [moduleLowerPowerValue, moduleUpperPowerValue] =
+                item[key].split("-");
+
+              return (
+                +moduleLowerPowerValue > +paramsLowerPowerValue &&
+                +moduleUpperPowerValue < +paramsUpperPowerValue
+              );
+            }
+
+            if (key === "applications") {
+              return item[key].some((application: string) =>
+                searchParamsObjectWithValues[key].includes(
+                  application.toLowerCase()
+                )
+              );
+            }
+
+            return searchParamsObjectWithValues[key].includes(
+              (item[key as keyof typeof item] as string).toLowerCase()
+            );
+          });
+        });
+      // .sort((module1, module2) => {
+      //   if (sortOrder === "powerDESC") {
+      //     const module1HighestPower = module1.powerRange.split("-")[1];
+      //     const module2HighestPower = module2.powerRange.split("-")[1];
+      //     return +module2HighestPower - +module1HighestPower;
+      //   } else {
+      //     const module1HighestPower = module1.powerRange.split("-")[0];
+      //     const module2HighestPower = module2.powerRange.split("-")[0];
+      //     return +module1HighestPower - +module2HighestPower;
+      //   }
+      // });
+
+      setModelsListLength(sortedModulesByOrder);
+
+      // setIsFilterModels(false);
+    }
+  }, [isFilterModels, isResetFilter, modelsListModelsKeys, searchParams]);
+
+  useEffect(() => {
+    modelsListLength.sort((module1, module2) => {
+      if (sortOrder === "powerDESC") {
+        const module1HighestPower = module1.powerRange.split("-")[1];
+        const module2HighestPower = module2.powerRange.split("-")[1];
+        return +module2HighestPower - +module1HighestPower;
+      } else {
+        const module1HighestPower = module1.powerRange.split("-")[0];
+        const module2HighestPower = module2.powerRange.split("-")[0];
+        return +module1HighestPower - +module2HighestPower;
+      }
+    });
+
+    const modelsToDisplayOnPage = modelsListLength.slice(
+      (+page - 1) * +itemsPerPage,
+      +page * +itemsPerPage
+    );
+    if (+page > 1) {
+      document
+        .getElementById("panelsList")
+        ?.scrollIntoView({ behavior: "smooth", inline: "start" });
+    }
+
+    setModelsList(modelsToDisplayOnPage);
+    setIsFilterModels(false);
+    setIsResetFilter(false);
+  }, [itemsPerPage, modelsListLength, page, setIsFilterModels, sortOrder]);
+
+  // useEffect(() => {
+  //   // const searchParamsObject = {}
+  //   // for (const [key, value] of searchParams.entries()) {
+  //   //   searchParamsObject[key]: [value.split("&")]
+  //   // }
+  //   const powerRange = `${searchParams.get(POWER_RANGE_FROM) || 0}-${
+  //     searchParams.get(POWER_RANGE_TO) || 10000
+  //   }`;
+
+  //   const searchParamsObjectWithValues = Object.fromEntries([
+  //     ...Array.from(searchParams.entries())
+  //       .filter(
+  //         ([searchParam]) =>
+  //           ![PER_PAGE, SORT_ORDER, POWER_RANGE_FROM, POWER_RANGE_TO].includes(
+  //             searchParam
+  //           )
+  //       )
+  //       .map(([key, val]) => [
+  //         key,
+  //         val.split("&").map((val) => val.toLowerCase()),
+  //       ]),
+  //     ["powerRange", powerRange],
+  //   ]);
+  //   console.log("searchParamsObjectWithValues", searchParamsObjectWithValues);
+
+  //   // console.log(
+  //   //   Object.fromEntries(
+  //   //     Array.from(searchParams.entries()).map(([key, val]) => [
+  //   //       key,
+  //   //       val.split("&"),
+  //   //     ])
+  //   //   )
+  //   // );
+  //   // console.log(modelsList);
+  //   console.log(searchParamsObjectWithValues);
+  //   console.log(
+  //     // (
+  //     //   modelsListModelsKeys
+  //     //     .map((modelKey) => PRODUCT_CONCLUSION_TABLE_BODY[modelKey].modules)
+  //     //     .flat(1) as any[]
+  //     // )
+
+  //     modelsList.filter((item) => {
+  //       return Object.keys(searchParamsObjectWithValues).every((key) => {
+  //         if (["length", "width", "height"].includes(key)) {
+  //           return (
+  //             +item.moduleDimension[key] > +searchParamsObjectWithValues[key][0]
+  //           );
+  //         }
+
+  //         if (key === "powerRange") {
+  //           const [paramsLowerPowerValue, paramsUpperPowerValue] =
+  //             searchParamsObjectWithValues[key].split("-");
+  //           const [moduleLowerPowerValue, moduleUpperPowerValue] =
+  //             item[key].split("-");
+
+  //           return (
+  //             +moduleLowerPowerValue > +paramsLowerPowerValue &&
+  //             +moduleUpperPowerValue < +paramsUpperPowerValue
+  //           );
+  //         }
+
+  //         return searchParamsObjectWithValues[key].includes(
+  //           item[key].toLowerCase()
+  //         );
+  //       });
+  //     })
+  //   );
+  // }, [modelsList, searchParams]);
 
   const addModelToBag = (
-    modelKey: Model,
+    techName: Model,
     model: string,
     cellType: string,
     moduleDesign: string,
@@ -49,7 +257,7 @@ export default function CataloguePanelsList() {
         ...prevState,
         {
           id: model,
-          model: modelKey,
+          model: techName,
           solarCellTechnology: cellType,
           moduleSpecification: moduleDesign,
           moduleColor,
@@ -75,11 +283,14 @@ export default function CataloguePanelsList() {
     localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(remainingModels));
   };
 
-  return (
-    <div className="grid grid-cols-2 gap-10">
-      {modelsListModelsKeys.map((modelKey) =>
-        PRODUCT_CONCLUSION_TABLE_BODY[modelKey].modules.map(
+  return isFilterModels ? (
+    <Loader />
+  ) : (
+    <div>
+      <div className="grid grid-cols-2 gap-10">
+        {modelsList.map(
           ({
+            techName,
             model,
             cellType,
             frameColor,
@@ -96,8 +307,8 @@ export default function CataloguePanelsList() {
               <div className="flex flex-col" key={model}>
                 <div className="flex gap-3 items-center">
                   <Image
-                    src={`/images/models/${modelKey}.svg`}
-                    alt={modelKey}
+                    src={`/images/models/${techName}.svg`}
+                    alt={techName}
                     priority
                     width={40}
                     height={40}
@@ -105,7 +316,7 @@ export default function CataloguePanelsList() {
                   />
                   <div className="flex flex-col gap-1">
                     <div className="[font-size:_clamp(14px,2vw,24px)] leading-[100%] font-bold md:-tracking-[0.24px] ">
-                      {modelKey}
+                      {techName}
                     </div>
                     <div className="[font-size:_clamp(12px,1.5vw,16px)] leading-[100%] font-bold md:-tracking-[0.16px] text-[#707070]">
                       {model}
@@ -117,8 +328,8 @@ export default function CataloguePanelsList() {
                   <div className="flex justify-center items-end gap-5 lg:flex-row flex-col">
                     <div className="relative w-[160px] h-[216px]">
                       <Image
-                        src={`/images/cart/${modelKey}.png`}
-                        alt={modelKey}
+                        src={`/images/cart/${techName}.png`}
+                        alt={techName}
                         priority
                         quality={100}
                         width={160}
@@ -149,7 +360,7 @@ export default function CataloguePanelsList() {
                           isAlreadyInBag
                             ? removeModel(model)
                             : addModelToBag(
-                                modelKey,
+                                techName as Model,
                                 model,
                                 cellType,
                                 moduleDesign,
@@ -212,37 +423,12 @@ export default function CataloguePanelsList() {
               </div>
             );
           }
-        )
-      )}
+        )}
+      </div>
+      <BlogPostPagination
+        totalBlogPosts={modelsListLength.length}
+        itemsPerPage={+itemsPerPage}
+      />
     </div>
   );
-}
-
-{
-  /* <div className="flex justify-center items-center gap-5 lg:flex-row flex-col">
-  <div className="flex items-center gap-3 lg:min-w-[200px] xl:min-w-[260px]">
-    <Image
-      src={`/images/models/${modelInBag.model}.svg`}
-      alt={modelInBag.model}
-      priority
-      width={48}
-      height={48}
-      className="md:h-12 md:w-12 h-[28px] w-[28px]"
-    />
-    <div className="[font-size:_clamp(22px,2.5vw,36px)] leading-[120%] font-bold -tracking-[0.4px] ">
-      {modelInBag.model}
-    </div>
-  </div>
-  <div className="relative">
-    <Image
-      src={`/images/cart/${modelInBag.model}.png`}
-      alt={modelInBag.model}
-      priority
-      quality={100}
-      width={200}
-      height={20}
-    />
-    <div className="fade-strip-bottom max-h-[100px] max-w-[200px]"></div>
-  </div>
-</div>; */
 }

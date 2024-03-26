@@ -647,6 +647,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
   Aurora: {
     modules: [
       {
+        techName: "Aurora",
         model: "AE×××ME-132",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -684,6 +685,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-144",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -721,6 +723,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-132",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -758,6 +761,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-120",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -795,6 +799,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-108",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -832,6 +837,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××ME-132BD",
         cellType: "P type PERC",
         moduleDesign: "Bifacial",
@@ -869,6 +875,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-144BD",
         cellType: "P type PERC",
         moduleDesign: "Bifacial",
@@ -906,6 +913,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-132BD",
         cellType: "P type PERC",
         moduleDesign: "Bifacial",
@@ -943,6 +951,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-120BD",
         cellType: "P type PERC",
         moduleDesign: "Bifacial",
@@ -980,6 +989,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-108BD",
         cellType: "P type PERC",
         moduleDesign: "Bifacial",
@@ -1017,6 +1027,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-132E",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -1054,6 +1065,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-120E",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -1091,6 +1103,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Aurora",
         model: "AE×××MD-108E",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -1132,6 +1145,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
   Comet: {
     modules: [
       {
+        techName: "Comet",
         model: "AE×××TME-132BDS",
         cellType: "N type HJT",
         moduleDesign: "Bifacial",
@@ -1169,6 +1183,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Comet",
         model: "AExxxTMD-144BDE",
         cellType: "N type HJT",
         moduleDesign: "Bifacial",
@@ -1206,6 +1221,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Comet",
         model: "AExxxTMD-120BDE",
         cellType: "N type HJT",
         moduleDesign: "Bifacial",
@@ -1243,6 +1259,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Comet",
         model: "AExxxTMD-108BDE",
         cellType: "N type HJT",
         moduleDesign: "Bifacial",
@@ -1284,6 +1301,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
   Terra: {
     modules: [
       {
+        techName: "Terra",
         model: "AE×××CMD-L132BD",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1291,7 +1309,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: ["Snow Resistant"],
         moduleDimension: {
           length: "1070",
           width: "2235",
@@ -1325,6 +1343,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
   ShadeStar: {
     modules: [
       {
+        techName: "ShadeStar",
         model: "AE×××SMB-60",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -1362,6 +1381,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "ShadeStar",
         model: "AE×××SMD-108E",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -1403,6 +1423,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
   Neptune: {
     modules: [
       {
+        techName: "Neptune",
         model: "AE×××PV-120",
         cellType: "P type PERC",
         moduleDesign: "Mono-facial",
@@ -1444,6 +1465,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
   Meteor: {
     modules: [
       {
+        techName: "Neptune",
         model: "AE×××CMD-108BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1481,6 +1503,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CMD-120BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1518,6 +1541,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CMD-144BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1555,6 +1579,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CMD-108BDE",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1592,6 +1617,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CMD-108",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1629,6 +1655,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CMD-120",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1666,6 +1693,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CMD-144",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1703,6 +1731,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CMD-108E",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1740,6 +1769,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CME-132",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1777,6 +1807,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CME-132BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1814,6 +1845,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CMER-132BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1851,6 +1883,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
+        techName: "Neptune",
         model: "AE×××CMDR-120BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",

@@ -1,9 +1,11 @@
 import Customize from "@/app/[locale]/catalogue/components/Catalogue/Customize";
+import FilterControlButtons from "@/app/[locale]/catalogue/components/Catalogue/FilterControlButtons";
 import TechnologyFilter from "@/app/[locale]/catalogue/components/Catalogue/TechnologyFilter";
 import {
   MODELS_LIST,
   TECHNOLOGIES_LIST,
 } from "@/app/[locale]/catalogue/constants";
+import Button from "@/app/[locale]/components/common/Button";
 
 export default function Filters() {
   return (
@@ -20,6 +22,7 @@ export default function Filters() {
       />
       <hr className="bg-[#191919] h-[1px] border-none w-full" />
       <Customize />
+      <FilterControlButtons />
     </div>
   );
 }

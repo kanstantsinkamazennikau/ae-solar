@@ -28,7 +28,7 @@ export default function Customize() {
     dimension: "",
   });
 
-  const { constructorModel, setIsGenerateModel } =
+  const { constructorModel, setIsFilterModels } =
     useContext(ConstructorContext);
 
   useEffect(() => {
@@ -131,7 +131,7 @@ export default function Customize() {
             return;
           }
           if (isEmptyObjectCheck(error)) {
-            setIsGenerateModel(true);
+            setIsFilterModels(true);
           }
         }}
         size="normal"

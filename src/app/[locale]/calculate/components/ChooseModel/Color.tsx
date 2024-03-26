@@ -12,12 +12,12 @@ export default function Color({ text, paramsKey, values }: ColorProps) {
   const {
     constructorModel,
     setConstructorModel,
-    isGenerateModel,
-    setIsGenerateModel,
+    isFilterModels,
+    setIsFilterModels,
   } = useContext(ConstructorContext);
 
   const onClickHandler = (color: string) => {
-    isGenerateModel && setIsGenerateModel(false);
+    isFilterModels && setIsFilterModels(false);
     setConstructorModel((prevState: ConstructorModel) => ({
       ...prevState,
       [paramsKey]: color,

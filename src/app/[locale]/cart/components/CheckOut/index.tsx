@@ -7,15 +7,15 @@ import { useParams } from "next/navigation";
 import { useContext, useEffect } from "react";
 
 export default function CheckOut() {
-  const { modelsInBag, setIsGenerateModel, setIsShowCheckoutForm } =
+  const { modelsInBag, setIsFilterModels, setIsShowCheckoutForm } =
     useContext(ConstructorContext);
 
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
   useEffect(() => {
-    setIsGenerateModel(false);
-  }, [setIsGenerateModel]);
+    setIsFilterModels(false);
+  }, [setIsFilterModels]);
 
   return (
     <div className="lg:mt-[100px] md:mt-20 mt-10 text-center flex flex-col items-center">

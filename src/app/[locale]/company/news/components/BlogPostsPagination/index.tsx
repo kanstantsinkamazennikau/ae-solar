@@ -7,10 +7,12 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function BlogPostPagination({
   totalBlogPosts,
+  itemsPerPage,
 }: {
   totalBlogPosts: number;
+  itemsPerPage: number;
 }) {
-  const totalPages = Math.ceil(totalBlogPosts / BLOG_POSTS_PER_PAGE);
+  const totalPages = Math.ceil(totalBlogPosts / itemsPerPage);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
@@ -26,7 +28,7 @@ export default function BlogPostPagination({
     currentPage,
     totalCount: totalBlogPosts,
     siblingCount: 1,
-    pageSize: BLOG_POSTS_PER_PAGE,
+    pageSize: itemsPerPage,
   });
 
   return (

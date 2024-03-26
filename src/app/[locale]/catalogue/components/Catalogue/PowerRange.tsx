@@ -1,5 +1,9 @@
 "use client";
 
+import {
+  POWER_RANGE_FROM,
+  POWER_RANGE_TO,
+} from "@/app/[locale]/catalogue/constants";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { useParams, usePathname, useSearchParams } from "next/navigation";
@@ -15,8 +19,8 @@ export default function PowerRange() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
   const [powerRange, setPowerRange] = useState({
-    from: params.get("powerRangeFrom") || "",
-    to: params.get("powerRangeTo") || "",
+    from: params.get(POWER_RANGE_FROM) || "",
+    to: params.get(POWER_RANGE_TO) || "",
   });
 
   const handleOnChange = (keyParam: string, value: string) => {
@@ -29,6 +33,7 @@ export default function PowerRange() {
   };
 
   const powerRangeRenderFields = ["from", "to"];
+
   return (
     <div>
       <div className="[font-size:_clamp(12px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
@@ -66,7 +71,7 @@ export default function PowerRange() {
                     }));
 
                     handleOnChange(
-                      isFromField ? "powerRangeFrom" : "powerRangeTo",
+                      isFromField ? POWER_RANGE_FROM : POWER_RANGE_TO,
                       e.target.value
                     );
                   }

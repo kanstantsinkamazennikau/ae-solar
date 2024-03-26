@@ -1,31 +1,31 @@
 export const TECHNOLOGIES_LIST = [
   {
-    technology: "PERc",
+    technology: "P type PERC",
     placeToSearch: "cellType",
     title: "PERc Technology",
   },
   {
-    technology: "HJT",
+    technology: "N type HJT",
     placeToSearch: "cellType",
     title: "HJT Technology",
   },
   {
-    technology: "TOPCon",
+    technology: "N type TOPCon",
     placeToSearch: "cellType",
     title: "TOPCon Technology",
   },
   {
-    technology: "PERcc",
-    placeToSearch: "cellType",
+    technology: "Snow Resistant",
+    placeToSearch: "applications",
     title: "Wind/Snow Resistant Technology",
   },
   {
-    technology: "PV",
+    technology: "PV-Thermal",
     placeToSearch: "applications",
     title: "PV-Thermal Technology",
   },
   {
-    technology: "Shade",
+    technology: "Shade Resistant",
     placeToSearch: "applications",
     title: "Shade Resistant Technology",
   },
@@ -34,33 +34,33 @@ export const TECHNOLOGIES_LIST = [
 export const MODELS_LIST = [
   {
     technology: "Aurora",
-    placeToSearch: "module",
+    placeToSearch: "techName",
     title: "Aurora",
   },
   {
     technology: "Meteor",
-    placeToSearch: "module",
+    placeToSearch: "techName",
     title: "Meteor",
   },
   {
     technology: "Comet",
-    placeToSearch: "module",
+    placeToSearch: "techName",
     title: "Comet",
   },
 
   {
     technology: "Terra",
-    placeToSearch: "module",
+    placeToSearch: "techName",
     title: "Terra",
   },
   {
     technology: "ShadeStar",
-    placeToSearch: "module",
+    placeToSearch: "techName",
     title: "ShadeStar",
   },
   {
     technology: "Neptune",
-    placeToSearch: "module",
+    placeToSearch: "techName",
     title: "Neptune",
   },
 ];
@@ -121,3 +121,6 @@ export const CATALOGUE_SHOW_VALUES = [
 
 export const SORT_ORDER = "sortOrder";
 export const PER_PAGE = "perPage";
+export const PAGE = "page";
+export const POWER_RANGE_FROM = "powerRangeFrom";
+export const POWER_RANGE_TO = "powerRangeTo";

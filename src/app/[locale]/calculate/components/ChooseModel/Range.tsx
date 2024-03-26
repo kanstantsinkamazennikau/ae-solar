@@ -20,15 +20,15 @@ export default function Range({
   const {
     constructorModel,
     setConstructorModel,
-    isGenerateModel,
-    setIsGenerateModel,
+    isFilterModels,
+    setIsFilterModels,
   } = useContext(ConstructorContext);
 
   const onChange = (
     e: ChangeEvent<HTMLInputElement>,
     paramsKey: ObjectKeys<ConstructorModel>
   ) => {
-    isGenerateModel && setIsGenerateModel(false);
+    isFilterModels && setIsFilterModels(false);
     const { value, name } = e.target;
 
     const re = /^[0-9\b]+$/;

@@ -14,7 +14,7 @@ import { useContext, useEffect } from "react";
 import { toast } from "react-toastify";
 
 export default function GeneratedModel() {
-  const { constructorModel, isGenerateModel, setModelsInBag } =
+  const { constructorModel, isFilterModels, setModelsInBag } =
     useContext(ConstructorContext);
 
   const addModelToBag = () => {
@@ -28,16 +28,16 @@ export default function GeneratedModel() {
   };
 
   useEffect(() => {
-    if (isGenerateModel) {
+    if (isFilterModels) {
       window.scrollTo({
         top: document.getElementById("model")!.offsetTop + 50,
         behavior: "smooth",
       });
     }
-  }, [isGenerateModel]);
+  }, [isFilterModels]);
 
   return (
-    isGenerateModel && (
+    isFilterModels && (
       <div className="w-full flex flex-col items-center">
         <div
           id="model"

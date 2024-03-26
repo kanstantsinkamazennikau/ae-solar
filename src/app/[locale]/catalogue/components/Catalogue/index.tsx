@@ -6,10 +6,13 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 
 export default function Catalogue() {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div
+      className="flex flex-col justify-center items-center scroll-mt-[84px]"
+      id="panelsList"
+    >
       <BasicWidthContainer>
         <div className="flex justify-between gap-14">
-          <div className="max-w-[1000px]">
+          <div className="max-w-[1000px] w-full">
             <div className="flex flex-col gap-4">
               <CatalogueSearchBar />
               <CatalogueSort />

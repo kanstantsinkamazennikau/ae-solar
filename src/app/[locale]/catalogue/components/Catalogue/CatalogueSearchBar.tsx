@@ -41,9 +41,6 @@ export default function CatalogueSearchBar() {
     <>
       <form
         className={`
-          min-[920px]:sticky
-          min-[920px]:top-[79px]
-          top-[63px]
           z-30
           bg-black
           backdrop-blur-3xl

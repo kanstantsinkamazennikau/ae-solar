@@ -11,12 +11,12 @@ export default function Slider({ text, values, paramsKey }: SliderProps) {
   const {
     constructorModel,
     setConstructorModel,
-    isGenerateModel,
-    setIsGenerateModel,
+    isFilterModels,
+    setIsFilterModels,
   } = useContext(ConstructorContext);
 
   const onClickHandler = (value: string) => {
-    isGenerateModel && setIsGenerateModel(false);
+    isFilterModels && setIsFilterModels(false);
     setConstructorModel((prevState: ConstructorModel) => ({
       ...prevState,
       [paramsKey]: value,

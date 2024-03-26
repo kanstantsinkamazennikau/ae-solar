@@ -55,8 +55,8 @@ interface ConstructorModelWithId extends ConstructorModel {
 export interface ConstructorContext {
   setConstructorModel: (model: any) => void;
   constructorModel: ConstructorModel;
-  setIsGenerateModel: (flag: boolean) => void;
-  isGenerateModel: boolean;
+  setIsFilterModels: (flag: boolean) => void;
+  isFilterModels: boolean;
   setModelsInBag: Dispatch<SetStateAction<ConstructorModelWithId[]>>;
   modelsInBag: ConstructorModelWithId[];
   setIsBagLoading: (flag: boolean) => void;
@@ -65,6 +65,8 @@ export interface ConstructorContext {
   isShowCheckoutForm: boolean;
   setSearchInputValue: Dispatch<SetStateAction<string>>;
   searchInputValue: string;
+  isResetFilter: boolean;
+  setIsResetFilter: Dispatch<SetStateAction<boolean>>;
 }
 
 export const ConstructorContext = createContext<ConstructorContext>(null!);
@@ -76,7 +78,8 @@ export default function ConstructorProvider({
 }) {
   const defaultModel = CONSTRUCTOR_MODELS_SPEC.Aurora.params;
   const [modelsInBag, setModelsInBag] = useState<ConstructorModelWithId[]>([]);
-  const [isGenerateModel, setIsGenerateModel] = useState<boolean>(false);
+  const [isFilterModels, setIsFilterModels] = useState<boolean>(true);
+  const [isResetFilter, setIsResetFilter] = useState<boolean>(false);
   const [isBagLoading, setIsBagLoading] = useState<boolean>(true);
   const [isShowCheckoutForm, setIsShowCheckoutForm] = useState<boolean>(false);
   const [searchInputValue, setSearchInputValue] = useState("");
@@ -122,7 +125,7 @@ export default function ConstructorProvider({
       },
       applications: [selectedModelParams.applications.values[0]],
     });
-    setIsGenerateModel(false);
+    setIsFilterModels(false);
   }, [constructorModel.model]);
 
   useEffect(() => {
@@ -138,8 +141,8 @@ export default function ConstructorProvider({
       value={{
         setConstructorModel,
         constructorModel,
-        setIsGenerateModel,
-        isGenerateModel,
+        setIsFilterModels,
+        isFilterModels,
         setModelsInBag,
         modelsInBag,
         setIsBagLoading,
@@ -148,6 +151,8 @@ export default function ConstructorProvider({
         isShowCheckoutForm,
         searchInputValue,
         setSearchInputValue,
+        isResetFilter,
+        setIsResetFilter,
       }}
     >
       {children}

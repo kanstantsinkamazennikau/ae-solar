@@ -9,13 +9,19 @@ import {
 import {
   CATALOGUE_SHOW_VALUES,
   CATALOGUE_SORT_VALUES,
+  PAGE,
   PER_PAGE,
   SORT_ORDER,
 } from "@/app/[locale]/catalogue/constants";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import {
+  useParams,
+  usePathname,
+  useRouter,
+  useSearchParams,
+} from "next/navigation";
 import { Fragment, useEffect, useRef, useState } from "react";
 
 export default function CatalogueSort() {
@@ -35,17 +41,29 @@ export default function CatalogueSort() {
   );
 }
 
-function DropdownInput({ dropDownValues, title }: DropdownSortProps) {
+function DropdownInput({ dropDownValues, title, param }: DropdownSortProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
-  const [selectedOption, setSelectedOption] = useState(dropDownValues[0]);
   const [isSelection, setIsSelection] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const { replace } = useRouter();
+  const params = new URLSearchParams(searchParams);
+
+  const [selectedOption, setSelectedOption] = useState(
+    dropDownValues.find(({ value }) => value == params.get(param)) ||
+      dropDownValues[0]
+  );
 
   const handleSelection = (serviceName: SortOption) => {
     setIsSelection(false);
     setSelectedOption(serviceName);
-    // setValue(name, serviceName, { shouldValidate: true });
+    params.set(param, `${serviceName.value}`);
+    if (param === PER_PAGE) {
+      params.set(PAGE, "1");
+    }
+    replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   return (

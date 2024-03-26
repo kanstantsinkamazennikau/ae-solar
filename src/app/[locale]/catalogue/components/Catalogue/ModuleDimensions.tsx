@@ -33,7 +33,10 @@ export default function ModuleDimensions() {
   return (
     <div>
       <div className="[font-size:_clamp(12px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
-        {t("Module Dimension")}
+        {t("Module Dimension")}{" "}
+        <span className="lowercase font-normal text-dark-gray-900">{`(${t(
+          "From"
+        )})`}</span>
       </div>
       <div className="flex gap-1">
         {dimensionsFields.map((field) => {
