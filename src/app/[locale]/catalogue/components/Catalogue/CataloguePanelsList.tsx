@@ -90,7 +90,7 @@ export default function CataloguePanelsList() {
               return (
                 +item.moduleDimension[
                   key as keyof typeof item.moduleDimension
-                ] > +searchParamsObjectWithValues[key][0]
+                ] >= +searchParamsObjectWithValues[key][0]
               );
             }
 
@@ -101,8 +101,8 @@ export default function CataloguePanelsList() {
                 item[key].split("-");
 
               return (
-                +moduleLowerPowerValue > +paramsLowerPowerValue &&
-                +moduleUpperPowerValue < +paramsUpperPowerValue
+                +moduleLowerPowerValue >= +paramsLowerPowerValue &&
+                +moduleUpperPowerValue <= +paramsUpperPowerValue
               );
             }
 
@@ -163,7 +163,14 @@ export default function CataloguePanelsList() {
     setModelsList(modelsToDisplayOnPage);
     setIsFilterModels(false);
     setIsResetFilter(false);
-  }, [itemsPerPage, modelsListLength, page, setIsFilterModels, sortOrder]);
+  }, [
+    itemsPerPage,
+    modelsListLength,
+    page,
+    setIsFilterModels,
+    setIsResetFilter,
+    sortOrder,
+  ]);
 
   // useEffect(() => {
   //   // const searchParamsObject = {}

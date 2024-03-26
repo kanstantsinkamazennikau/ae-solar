@@ -30,6 +30,9 @@ export default function FilterControlButtons() {
     params.set(PAGE, "1");
     replace(`${pathname}?${params.toString()}`, { scroll: false });
     setIsFilterModels(true);
+    document
+      .getElementById("panelsList")
+      ?.scrollIntoView({ behavior: "smooth", inline: "start" });
   };
 
   const onReset = () => {

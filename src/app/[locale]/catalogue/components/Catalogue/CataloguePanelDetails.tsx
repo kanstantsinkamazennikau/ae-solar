@@ -97,10 +97,11 @@ export default function CataloguePanelDetails({
 
         <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26]">
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-            {t("Dimension")}, mm
+            {t("Dimension")}, <span className="lowercase">mm</span>
           </p>
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%] lowercase">
-            {moduleDimension.length} x {moduleDimension.width}
+            {moduleDimension.length} x {moduleDimension.width} x{" "}
+            {moduleDimension.height}
           </p>
         </div>
 

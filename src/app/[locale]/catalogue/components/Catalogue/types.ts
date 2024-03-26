@@ -9,6 +9,7 @@ export interface CataloguePanelDetailsProps {
   moduleDimension: {
     length: string;
     width: string;
+    height: string;
   };
   links: {
     tooltip: string;
