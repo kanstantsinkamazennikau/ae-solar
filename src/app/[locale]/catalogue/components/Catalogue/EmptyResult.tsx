@@ -28,7 +28,15 @@ export default function EmptyResult() {
   };
 
   return (
-    <div className="max-w-[400px] flex flex-col text-center mx-auto gap-5">
+    <div className="max-w-[400px] flex flex-col text-center mx-auto gap-5 items-center mt-16">
+      <Image
+        src="/images/option/emptyResult.svg"
+        alt="emptyResult"
+        width={118}
+        height={104}
+        priority
+        className="h-[104px] w-[118px] object-cover"
+      />
       <p className="[font-size:_clamp(20px,2vw,24px)] md:-tracking-[0.24px] leading-[120%] font-bold">
         {t("Could not find result")}
       </p>

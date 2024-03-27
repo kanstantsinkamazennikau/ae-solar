@@ -150,10 +150,15 @@ export default function CataloguePanelsList() {
       }
     });
 
-    const modelsToDisplayOnPage = allModels.slice(
-      (+page - 1) * +itemsPerPage,
-      +page * +itemsPerPage
-    );
+    let modelsToDisplayOnPage;
+    if (itemsPerPage === "all") {
+      modelsToDisplayOnPage = allModels.slice();
+    } else {
+      modelsToDisplayOnPage = allModels.slice(
+        (+page - 1) * +itemsPerPage,
+        +page * +itemsPerPage
+      );
+    }
 
     if (+page > 1) {
       document

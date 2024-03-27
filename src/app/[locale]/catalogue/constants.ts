@@ -117,6 +117,7 @@ export const CATALOGUE_SORT_VALUES = [
 export const CATALOGUE_SHOW_VALUES = [
   { label: "10", value: "10" },
   { label: "20", value: "20" },
+  { label: "All", value: "all" },
 ];
 
 export const SORT_ORDER = "sortOrder";
