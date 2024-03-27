@@ -67,6 +67,8 @@ export interface ConstructorContext {
   searchInputValue: string;
   isResetFilter: boolean;
   setIsResetFilter: Dispatch<SetStateAction<boolean>>;
+  error: string;
+  setError: Dispatch<SetStateAction<string>>;
 }
 
 export const ConstructorContext = createContext<ConstructorContext>(null!);
@@ -83,6 +85,7 @@ export default function ConstructorProvider({
   const [isBagLoading, setIsBagLoading] = useState<boolean>(true);
   const [isShowCheckoutForm, setIsShowCheckoutForm] = useState<boolean>(false);
   const [searchInputValue, setSearchInputValue] = useState("");
+  const [error, setError] = useState("");
   const [constructorModel, setConstructorModel] = useState<ConstructorModel>({
     model: "",
     solarCellTechnology: defaultModel.solarCellTechnology.values[0],
@@ -153,6 +156,8 @@ export default function ConstructorProvider({
         setSearchInputValue,
         isResetFilter,
         setIsResetFilter,
+        error,
+        setError,
       }}
     >
       {children}

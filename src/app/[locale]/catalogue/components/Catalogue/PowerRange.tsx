@@ -4,14 +4,15 @@ import {
   POWER_RANGE_FROM,
   POWER_RANGE_TO,
 } from "@/app/[locale]/catalogue/constants";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { useParams, usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 export default function PowerRange() {
-  const [error, setError] = useState("");
+  const { setError, error } = useContext(ConstructorContext);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();

@@ -22,6 +22,7 @@ export default function Filters() {
       />
       <hr className="bg-[#191919] h-[1px] border-none w-full" />
       <Customize />
+      <hr className="bg-[#191919] h-[1px] border-none w-full" />
       <FilterControlButtons />
     </div>
   );

@@ -18,7 +18,7 @@ export default function FilterControlButtons() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
-  const { setIsFilterModels, setIsResetFilter } =
+  const { setIsFilterModels, setIsResetFilter, error } =
     useContext(ConstructorContext);
 
   const pathname = usePathname();
@@ -26,23 +26,32 @@ export default function FilterControlButtons() {
   const { replace } = useRouter();
   const params = new URLSearchParams(searchParams);
 
-  const onFilter = () => {
-    params.set(PAGE, "1");
-    replace(`${pathname}?${params.toString()}`, { scroll: false });
-    setIsFilterModels(true);
+  const scrollToPanelsListTop = () => {
     document
       .getElementById("panelsList")
       ?.scrollIntoView({ behavior: "smooth", inline: "start" });
   };
 
+  const onFilter = () => {
+    params.set(PAGE, "1");
+    replace(`${pathname}?${params.toString()}`, { scroll: false });
+    setIsFilterModels(true);
+    scrollToPanelsListTop();
+  };
+
   const onReset = () => {
     replace(pathname, { scroll: false });
     setIsResetFilter(true);
+    scrollToPanelsListTop();
   };
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <Button externalStyle="!py-3" onClick={onFilter}>
+      <Button
+        externalStyle="!py-3"
+        onClick={onFilter}
+        disabled={!!error.length}
+      >
         <div className="flex gap-[6px] items-center">
           <Image
             src={`/images/option/filter.svg`}

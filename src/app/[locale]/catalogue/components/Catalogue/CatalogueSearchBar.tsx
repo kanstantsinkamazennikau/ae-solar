@@ -7,45 +7,47 @@ import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { FORMS_FIELDS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import {
+  useParams,
+  usePathname,
+  useRouter,
+  useSearchParams,
+} from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 export default function CatalogueSearchBar() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
-  const { setSearchInputValue, searchInputValue } =
-    useContext(ConstructorContext);
-  const [inputValue, setInputValue] = useState(searchInputValue);
-  const defaultValues = {
-    [FORMS_FIELDS.searchInputValue]: "",
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const { replace } = useRouter();
+  const params = new URLSearchParams(searchParams);
+
+  const [searchValue, setSearchValue] = useState(params.get("model") || "");
+  const { setIsFilterModels } = useContext(ConstructorContext);
+
+  const handleOnChange = (value: string) => {
+    if (!value) {
+      params.delete("model");
+    } else {
+      params.set("model", `${value}`);
+    }
+    replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
-  const { handleSubmit, setValue } = useForm<FieldValues>({
-    defaultValues,
-  });
-
-  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    setSearchInputValue(inputValue);
+  const onClick = () => {
+    setIsFilterModels(true);
   };
-
-  useEffect(() => {
-    setValue(FORMS_FIELDS.searchInputValue, "");
-  }, [setValue]);
-
-  // useEffect(() => {
-  //   !inputValue && setSearchInputValue("");
-  // }, [inputValue, setSearchInputValue]);
 
   return (
     <>
-      <form
+      <div
         className={`
           z-30
           bg-black
           backdrop-blur-3xl
         `}
-        onSubmit={handleSubmit(onSubmit)}
       >
         <div
           className="
@@ -74,19 +76,22 @@ export default function CatalogueSearchBar() {
               externalContainerStyle="!w-full"
               name={FORMS_FIELDS.searchInputValue}
               placeholder={t("Im looking for")}
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
+              value={searchValue}
+              onChange={(e) => {
+                setSearchValue(e.target.value);
+                handleOnChange(e.target.value);
+              }}
             />
           </div>
           <div>
-            <Button externalStyle="!py-[8px] !px-[14px]">
+            <Button externalStyle="!py-[8px] !px-[14px]" onClick={onClick}>
               <span className="[font-size:_clamp(12px,1.5vw,16px)] leading-[100%]">
                 {t("Search")}
               </span>
             </Button>
           </div>
         </div>
-      </form>
+      </div>
     </>
   );
 }

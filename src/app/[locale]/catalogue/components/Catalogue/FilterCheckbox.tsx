@@ -62,13 +62,10 @@ export default function FilterCheckbox({
             grid
             place-content-center
             appearance-none
-            w-4
-            h-4
-            border-2
-            border-[#2D2D2D]
-            rounded-[3px]
+            w-5
+            h-5
             bg-black
-            before:shadow-[inset_1em_1em_#F60109]
+            before:shadow-[inset_1em_1em_#F6010
             before:content-['']
             before:w-2
             before:h-2
@@ -79,7 +76,12 @@ export default function FilterCheckbox({
             before:ease-in-out
             checked:before:scale-[1]
             disabled:border-dark-gray-650
-            cursor-pointer               
+            cursor-pointer
+            bg-[url('/images/option/checkboxBlack.svg')]
+            checked:bg-[url('/images/option/checkboxRed.svg')]
+            bg-no-repeat
+            bg-contain
+            shrink-0 
           `}
           onChange={() =>
             handleOnChange(
@@ -104,6 +106,7 @@ export default function FilterCheckbox({
               font-semibold
               [font-size:_clamp(11px,2vw,14px)]
               capitalize
+              leading-tight
             `}
           >
             {t(title)}
@@ -123,3 +126,25 @@ export default function FilterCheckbox({
     </div>
   );
 }
+
+// grid
+//             place-content-center
+//             appearance-none
+//             w-4
+//             h-4
+//             border-2
+//             border-[#2D2D2D]
+//             rounded-[3px]
+//             bg-black
+//             before:shadow-[inset_1em_1em_#F60109]
+//             before:content-['']
+//             before:w-2
+//             before:h-2
+//             before:rounded-[1px]
+//             before:scale-0
+//             before:transition-transform
+//             before:delay-150
+//             before:ease-in-out
+//             checked:before:scale-[1]
+//             disabled:border-dark-gray-650
+//             cursor-pointer

@@ -80,6 +80,8 @@ export default function CataloguePanelsList() {
         ["powerRange", powerRange],
       ]);
 
+      console.log(searchParamsObjectWithValues);
+
       const sortedModulesByOrder = modelsListModelsKeys
         .map((modelKey) => PRODUCT_CONCLUSION_TABLE_BODY[modelKey].modules)
         .flat(1)
@@ -112,6 +114,12 @@ export default function CataloguePanelsList() {
                   application.toLowerCase()
                 )
               );
+            }
+
+            if (key === "model") {
+              return item[key]
+                .toLocaleLowerCase()
+                .includes(searchParamsObjectWithValues[key][0]);
             }
 
             return searchParamsObjectWithValues[key].includes(
@@ -154,6 +162,7 @@ export default function CataloguePanelsList() {
       (+page - 1) * +itemsPerPage,
       +page * +itemsPerPage
     );
+
     if (+page > 1) {
       document
         .getElementById("panelsList")
@@ -294,7 +303,7 @@ export default function CataloguePanelsList() {
     <Loader />
   ) : (
     <div>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-2 gap-10 mb-14">
         {modelsList.map(
           ({
             techName,
