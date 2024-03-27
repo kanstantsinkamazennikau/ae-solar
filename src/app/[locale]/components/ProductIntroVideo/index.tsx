@@ -60,7 +60,7 @@ export default function ProductIntroVideo() {
   };
 
   const handleClick = () => {
-    router.push(`/products`);
+    router.push(`/catalogue`);
   };
 
   const handleScroll = useCallback(() => {

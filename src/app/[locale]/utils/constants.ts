@@ -55,6 +55,10 @@ export const HEADER_NAV_LINKS_ARRAY = [
     url: "/documents",
     text: "Documents",
   },
+  // {
+  //   url: "/catalogue",
+  //   text: "Catalogue",
+  // },
   {
     url: "/solutions",
     text: "B2B Solutions",
