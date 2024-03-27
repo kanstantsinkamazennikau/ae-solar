@@ -1,4 +1,4 @@
-import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
+import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";

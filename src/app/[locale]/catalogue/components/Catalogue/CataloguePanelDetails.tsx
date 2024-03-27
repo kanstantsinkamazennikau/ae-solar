@@ -2,9 +2,7 @@
 
 import { CataloguePanelDetailsProps } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 
@@ -45,7 +43,7 @@ export default function CataloguePanelDetails({
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
             {t("Module color")}
           </p>
-          <div className="flex items-center gap-1 items-center">
+          <div className="flex gap-1 items-center">
             <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
               {t(moduleColor)}
             </p>
@@ -63,7 +61,7 @@ export default function CataloguePanelDetails({
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
             {t("Frame color")}
           </p>
-          <div className="flex items-center gap-1 items-center">
+          <div className="flex gap-1 items-center">
             <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
               {t(frameColor)}
             </p>

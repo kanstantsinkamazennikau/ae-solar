@@ -1,5 +1,12 @@
 import { Dispatch, RefObject, SetStateAction } from "react";
 
+export type Applications =
+  | "Shade Resistant"
+  | "Carport"
+  | "PV-Thermal"
+  | "Agri-Voltaics"
+  | "Snow Resistant";
+
 export interface CataloguePanelDetailsProps {
   cellType: string;
   moduleDesign: string;
@@ -57,4 +64,9 @@ export interface DropdownSortProps {
   param: string;
   title: string;
   dropDownValues: SortOption[];
+}
+
+export interface SectionHeaderProps {
+  title: string;
+  clarification?: string;
 }

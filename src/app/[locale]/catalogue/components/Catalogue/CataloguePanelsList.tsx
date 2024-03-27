@@ -1,6 +1,6 @@
 "use client";
 
-import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
+import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import CataloguePanelDetails from "@/app/[locale]/catalogue/components/Catalogue/CataloguePanelDetails";
 import EmptyResult from "@/app/[locale]/catalogue/components/Catalogue/EmptyResult";
 import {

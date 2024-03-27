@@ -1,4 +1,4 @@
-import { SectionHeaderProps } from "@/app/[locale]/calculate/components/ChooseModel/types";
+import { SectionHeaderProps } from "@/app/[locale]/catalogue/components/Catalogue/types";
 
 export default function SectionHeader({
   title,

@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeader from "@/app/[locale]/calculate/components/ChooseModel/SectionHeader";
+import SectionHeader from "@/app/[locale]/catalogue/components/Catalogue/SectionHeader";
 import FilterCheckbox from "@/app/[locale]/catalogue/components/Catalogue/FilterCheckbox";
 import { TechnologyFilterProps } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";

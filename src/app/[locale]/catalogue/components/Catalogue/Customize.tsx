@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeader from "@/app/[locale]/calculate/components/ChooseModel/SectionHeader";
+import SectionHeader from "@/app/[locale]/catalogue/components/Catalogue/SectionHeader";
 import ModuleDimensions from "@/app/[locale]/catalogue/components/Catalogue/ModuleDimensions";
 import PowerRange from "@/app/[locale]/catalogue/components/Catalogue/PowerRange";
 import TechnologyFilter from "@/app/[locale]/catalogue/components/Catalogue/TechnologyFilter";
