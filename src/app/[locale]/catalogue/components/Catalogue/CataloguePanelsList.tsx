@@ -2,6 +2,7 @@
 
 import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
 import CataloguePanelDetails from "@/app/[locale]/catalogue/components/Catalogue/CataloguePanelDetails";
+import EmptyResult from "@/app/[locale]/catalogue/components/Catalogue/EmptyResult";
 import {
   CATALOGUE_SHOW_VALUES,
   CATALOGUE_SORT_VALUES,
@@ -49,14 +50,18 @@ export default function CataloguePanelsList() {
     isResetFilter,
     setIsResetFilter,
   } = useContext(ConstructorContext);
-  const [modelsList, setModelsList] = useState<any[]>([]);
-  const [modelsListLength, setModelsListLength] = useState<any[]>([]);
 
+  const [keepFiltering, setKeepFiltering] = useState(true);
+  const [modelsListToDisplayOnPage, setModelsListToDisplayOnPage] = useState<
+    any[]
+  >([]);
+  const [allModels, setAllModels] = useState<any[]>([]);
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
   useEffect(() => {
     if (isFilterModels || isResetFilter) {
+      setKeepFiltering(true);
       const powerRange = `${searchParams.get(POWER_RANGE_FROM) || 0}-${
         searchParams.get(POWER_RANGE_TO) || 10000
       }`;
@@ -79,8 +84,6 @@ export default function CataloguePanelsList() {
           ]),
         ["powerRange", powerRange],
       ]);
-
-      console.log(searchParamsObjectWithValues);
 
       const sortedModulesByOrder = modelsListModelsKeys
         .map((modelKey) => PRODUCT_CONCLUSION_TABLE_BODY[modelKey].modules)
@@ -127,26 +130,15 @@ export default function CataloguePanelsList() {
             );
           });
         });
-      // .sort((module1, module2) => {
-      //   if (sortOrder === "powerDESC") {
-      //     const module1HighestPower = module1.powerRange.split("-")[1];
-      //     const module2HighestPower = module2.powerRange.split("-")[1];
-      //     return +module2HighestPower - +module1HighestPower;
-      //   } else {
-      //     const module1HighestPower = module1.powerRange.split("-")[0];
-      //     const module2HighestPower = module2.powerRange.split("-")[0];
-      //     return +module1HighestPower - +module2HighestPower;
-      //   }
-      // });
-
-      setModelsListLength(sortedModulesByOrder);
-
-      // setIsFilterModels(false);
+      setAllModels(sortedModulesByOrder);
+      setKeepFiltering(false);
     }
   }, [isFilterModels, isResetFilter, modelsListModelsKeys, searchParams]);
 
   useEffect(() => {
-    modelsListLength.sort((module1, module2) => {
+    if (keepFiltering) return;
+    setIsFilterModels(true);
+    allModels.sort((module1, module2) => {
       if (sortOrder === "powerDESC") {
         const module1HighestPower = module1.powerRange.split("-")[1];
         const module2HighestPower = module2.powerRange.split("-")[1];
@@ -158,7 +150,7 @@ export default function CataloguePanelsList() {
       }
     });
 
-    const modelsToDisplayOnPage = modelsListLength.slice(
+    const modelsToDisplayOnPage = allModels.slice(
       (+page - 1) * +itemsPerPage,
       +page * +itemsPerPage
     );
@@ -169,87 +161,24 @@ export default function CataloguePanelsList() {
         ?.scrollIntoView({ behavior: "smooth", inline: "start" });
     }
 
-    setModelsList(modelsToDisplayOnPage);
+    setModelsListToDisplayOnPage(modelsToDisplayOnPage);
     setIsFilterModels(false);
     setIsResetFilter(false);
   }, [
     itemsPerPage,
-    modelsListLength,
+    allModels,
     page,
     setIsFilterModels,
     setIsResetFilter,
     sortOrder,
+    keepFiltering,
   ]);
 
-  // useEffect(() => {
-  //   // const searchParamsObject = {}
-  //   // for (const [key, value] of searchParams.entries()) {
-  //   //   searchParamsObject[key]: [value.split("&")]
-  //   // }
-  //   const powerRange = `${searchParams.get(POWER_RANGE_FROM) || 0}-${
-  //     searchParams.get(POWER_RANGE_TO) || 10000
-  //   }`;
-
-  //   const searchParamsObjectWithValues = Object.fromEntries([
-  //     ...Array.from(searchParams.entries())
-  //       .filter(
-  //         ([searchParam]) =>
-  //           ![PER_PAGE, SORT_ORDER, POWER_RANGE_FROM, POWER_RANGE_TO].includes(
-  //             searchParam
-  //           )
-  //       )
-  //       .map(([key, val]) => [
-  //         key,
-  //         val.split("&").map((val) => val.toLowerCase()),
-  //       ]),
-  //     ["powerRange", powerRange],
-  //   ]);
-  //   console.log("searchParamsObjectWithValues", searchParamsObjectWithValues);
-
-  //   // console.log(
-  //   //   Object.fromEntries(
-  //   //     Array.from(searchParams.entries()).map(([key, val]) => [
-  //   //       key,
-  //   //       val.split("&"),
-  //   //     ])
-  //   //   )
-  //   // );
-  //   // console.log(modelsList);
-  //   console.log(searchParamsObjectWithValues);
-  //   console.log(
-  //     // (
-  //     //   modelsListModelsKeys
-  //     //     .map((modelKey) => PRODUCT_CONCLUSION_TABLE_BODY[modelKey].modules)
-  //     //     .flat(1) as any[]
-  //     // )
-
-  //     modelsList.filter((item) => {
-  //       return Object.keys(searchParamsObjectWithValues).every((key) => {
-  //         if (["length", "width", "height"].includes(key)) {
-  //           return (
-  //             +item.moduleDimension[key] > +searchParamsObjectWithValues[key][0]
-  //           );
-  //         }
-
-  //         if (key === "powerRange") {
-  //           const [paramsLowerPowerValue, paramsUpperPowerValue] =
-  //             searchParamsObjectWithValues[key].split("-");
-  //           const [moduleLowerPowerValue, moduleUpperPowerValue] =
-  //             item[key].split("-");
-
-  //           return (
-  //             +moduleLowerPowerValue > +paramsLowerPowerValue &&
-  //             +moduleUpperPowerValue < +paramsUpperPowerValue
-  //           );
-  //         }
-
-  //         return searchParamsObjectWithValues[key].includes(
-  //           item[key].toLowerCase()
-  //         );
-  //       });
-  //     })
-  //   );
-  // }, [modelsList, searchParams]);
+  useEffect(() => {
+    return () => {
+      setIsFilterModels(true);
+    };
+  }, [setIsFilterModels]);
 
   const addModelToBag = (
     techName: Model,
@@ -299,12 +228,12 @@ export default function CataloguePanelsList() {
     localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(remainingModels));
   };
 
-  return isFilterModels ? (
+  return isFilterModels || keepFiltering ? (
     <Loader />
-  ) : (
+  ) : !!modelsListToDisplayOnPage.length ? (
     <div>
-      <div className="grid grid-cols-2 gap-10 mb-14">
-        {modelsList.map(
+      <div className="grid grid-cols-2 gap-x-10 gap-y-[60px] mb-14">
+        {modelsListToDisplayOnPage.map(
           ({
             techName,
             model,
@@ -442,9 +371,11 @@ export default function CataloguePanelsList() {
         )}
       </div>
       <BlogPostPagination
-        totalBlogPosts={modelsListLength.length}
+        totalBlogPosts={allModels.length}
         itemsPerPage={+itemsPerPage}
       />
     </div>
+  ) : (
+    <EmptyResult />
   );
 }

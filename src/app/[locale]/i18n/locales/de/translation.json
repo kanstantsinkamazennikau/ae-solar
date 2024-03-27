@@ -600,5 +600,11 @@
   "from low to high": "von niedrig bis hoch",
   "Sort": "Sortieren",
   "Show": "Anzeigen",
-  "Filter Modules": "Filter Module"
+  "Filter Modules": "Filter Module",
+  "Add one more panel": "Eine weitere Tafel hinzufügen",
+  "Model": "Modell",
+  "Could not find result": "Wir konnten leider keine Ergebnisse finden, die Ihren Kriterien entsprechen.",
+  "Try new filter": "Probieren Sie neue Filterkombinationen aus, um weitere Optionen zu finden, die Sie interessieren könnten.",
+  "Reset Filter": "Filter Zurücksetzen",
+  "Catalogue": "Katalog"
 }

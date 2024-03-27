@@ -23,7 +23,7 @@ export default function CataloguePanelDetails({
   return (
     <div className="bg-black rounded-xl w-full">
       <div className="pl-2 pt-3 w-full items-center gap-y-1 capitalize">
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26]">
+        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
             {t("Cell type")}
           </p>
@@ -32,7 +32,7 @@ export default function CataloguePanelDetails({
           </p>
         </div>
 
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26]">
+        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
             {t("Module design")}
           </p>
@@ -41,11 +41,11 @@ export default function CataloguePanelDetails({
           </p>
         </div>
 
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26]">
+        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
             {t("Module color")}
           </p>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 items-center">
             <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
               {t(moduleColor)}
             </p>
@@ -59,7 +59,25 @@ export default function CataloguePanelDetails({
           </div>
         </div>
 
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26]">
+        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
+          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
+            {t("Frame color")}
+          </p>
+          <div className="flex items-center gap-1 items-center">
+            <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
+              {t(frameColor)}
+            </p>
+            <Image
+              src={`/images/option/${frameColor.toLowerCase()}.svg`}
+              alt={frameColor}
+              priority
+              width={16}
+              height={16}
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
             {t("Frame color")}
           </p>
@@ -77,25 +95,7 @@ export default function CataloguePanelDetails({
           </div>
         </div>
 
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26]">
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-            {t("Frame color")}
-          </p>
-          <div className="flex items-center gap-1">
-            <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
-              {t(frameColor)}
-            </p>
-            <Image
-              src={`/images/option/${frameColor.toLowerCase()}.svg`}
-              alt={frameColor}
-              priority
-              width={16}
-              height={16}
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26]">
+        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
             {t("Dimension")}, <span className="lowercase">mm</span>
           </p>
@@ -105,7 +105,7 @@ export default function CataloguePanelDetails({
           </p>
         </div>
 
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26]">
+        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
             {t("Power range, W")}
           </p>
@@ -116,7 +116,7 @@ export default function CataloguePanelDetails({
 
         {links?.map(({ link, tooltip }) => (
           <div
-            className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26]"
+            className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center"
             key={tooltip}
           >
             <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">

@@ -600,5 +600,11 @@
   "from low to high": "from low to high",
   "Sort": "Sort",
   "Show": "Show",
-  "Filter Modules": "Filter Modules"
+  "Filter Modules": "Filter Modules",
+  "Add one more panel": "Add one more panel",
+  "Model": "Model",
+  "Could not find result": "Sorry, we couldn't find any results matching your criteria.",
+  "Try new filter": "Try new filter combinations to find other options that might interest you.",
+  "Reset Filter": "Reset Filter",
+  "Catalogue": "Catalogue"
 }

@@ -48,7 +48,7 @@ export interface ConstructorModel {
   };
   applications?: Applications[];
 }
-interface ConstructorModelWithId extends ConstructorModel {
+export interface ConstructorModelWithId extends ConstructorModel {
   id: string | number;
 }
 
@@ -128,7 +128,7 @@ export default function ConstructorProvider({
       },
       applications: [selectedModelParams.applications.values[0]],
     });
-    setIsFilterModels(false);
+    // setIsFilterModels(false);
   }, [constructorModel.model]);
 
   useEffect(() => {

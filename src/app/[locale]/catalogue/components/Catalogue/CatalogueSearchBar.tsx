@@ -1,5 +1,6 @@
 "use client";
 
+import { PAGE } from "@/app/[locale]/catalogue/constants";
 import Button from "@/app/[locale]/components/common/Button";
 import Input from "@/app/[locale]/components/common/Input";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
@@ -25,7 +26,7 @@ export default function CatalogueSearchBar() {
   const params = new URLSearchParams(searchParams);
 
   const [searchValue, setSearchValue] = useState(params.get("model") || "");
-  const { setIsFilterModels } = useContext(ConstructorContext);
+  const { setIsFilterModels, isResetFilter } = useContext(ConstructorContext);
 
   const handleOnChange = (value: string) => {
     if (!value) {
@@ -33,12 +34,19 @@ export default function CatalogueSearchBar() {
     } else {
       params.set("model", `${value}`);
     }
+    params.set(PAGE, `1`);
     replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   const onClick = () => {
     setIsFilterModels(true);
   };
+
+  useEffect(() => {
+    if (isResetFilter) {
+      setSearchValue("");
+    }
+  }, [isResetFilter]);
 
   return (
     <>

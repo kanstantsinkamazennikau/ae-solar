@@ -76,12 +76,13 @@ export default function CartModelDetails({ model }: DetailsProps) {
           );
         }
         if (
+          modelKey === "id" ||
           modelKey === "backCover" ||
           modelKey === "solarCellTechnology" ||
           modelKey === "moduleSpecification"
         ) {
           const modelParameterValue = model[modelKey];
-          component = <span>{t(modelParameterValue)}</span>;
+          component = <span>{t(modelParameterValue.toString())}</span>;
         }
 
         return (

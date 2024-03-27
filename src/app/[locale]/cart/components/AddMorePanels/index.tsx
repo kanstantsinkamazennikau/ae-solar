@@ -2,16 +2,18 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import { CART_ADD_ONE_MORE_PANEL } from "@/app/[locale]/utils/constants";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 
 export default function AddMorePanels() {
-  const locale = useParams()?.locale;
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/${locale}/calculate`);
+    router.push(`/${locale}/catalogue`);
   };
 
   return (
@@ -26,7 +28,7 @@ export default function AddMorePanels() {
         />
         <Button onClick={handleClick} style="transparent" size="thin">
           <span className="font-semibold text-sm -tracking-[0.2px] leading-none">
-            {CART_ADD_ONE_MORE_PANEL}
+            {t("Add one more panel")}
           </span>
         </Button>
       </div>

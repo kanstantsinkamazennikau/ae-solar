@@ -1,5 +1,6 @@
 "use client";
 
+import AddMorePanels from "@/app/[locale]/cart/components/AddMorePanels";
 import CheckOut from "@/app/[locale]/cart/components/CheckOut";
 import CheckoutForm from "@/app/[locale]/cart/components/CheckoutForm";
 import ModelsInCart from "@/app/[locale]/cart/components/ModelsInCart";
@@ -12,7 +13,6 @@ import { useContext, useState } from "react";
 
 export default function Cart() {
   const { isBagLoading, modelsInBag } = useContext(ConstructorContext);
-  const [showBuyerForm, _] = useState(!!modelsInBag.length);
 
   if (isBagLoading) return <Loader />;
 
@@ -21,7 +21,7 @@ export default function Cart() {
       <BasicWidthContainer>
         <CheckOut />
         <ModelsInCart />
-        {/* <AddMorePanels /> */}
+        <AddMorePanels />
         <Image
           src={`/images/glowFull.png`}
           alt="glow"
@@ -30,7 +30,7 @@ export default function Cart() {
           height={60}
           className="mb-[60px] rotate-180"
         />
-        {(showBuyerForm || !!modelsInBag.length) && (
+        {!!modelsInBag.length && (
           <div
             className="
               flex

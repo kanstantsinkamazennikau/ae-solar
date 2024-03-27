@@ -13,9 +13,9 @@ export default function CheckOut() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
-  useEffect(() => {
-    setIsFilterModels(false);
-  }, [setIsFilterModels]);
+  // useEffect(() => {
+  //   setIsFilterModels(false);
+  // }, [setIsFilterModels]);
 
   return (
     <div className="lg:mt-[100px] md:mt-20 mt-10 text-center flex flex-col items-center">

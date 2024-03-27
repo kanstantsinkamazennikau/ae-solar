@@ -1722,6 +1722,7 @@ export const CONSTRUCTOR_MODELS_SPECS: ModelsSpecs = {
 };
 
 export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
+  id: "Model",
   solarCellTechnology: "Solar Cell Technology",
   moduleSpecification: "Module Specifation",
   moduleColor: "Module Color",
@@ -1731,7 +1732,6 @@ export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
   powerRange: "Power Range",
   applications: "Applications",
 };
-export const CART_ADD_ONE_MORE_PANEL = "Add one more panel";
 export const CART_LOCALSTORAGE = "cart";
 
 export const CHECKOUT_FORM_FIELDS: FormFileds[] = [

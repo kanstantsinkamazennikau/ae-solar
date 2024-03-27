@@ -2,6 +2,7 @@ import CataloguePanelsList from "@/app/[locale]/catalogue/components/Catalogue/C
 import CatalogueSearchBar from "@/app/[locale]/catalogue/components/Catalogue/CatalogueSearchBar";
 import CatalogueSort from "@/app/[locale]/catalogue/components/Catalogue/CatalogueSort";
 import Filters from "@/app/[locale]/catalogue/components/Catalogue/Filters";
+import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 
 export default function Catalogue() {
@@ -11,7 +12,7 @@ export default function Catalogue() {
       id="panelsList"
     >
       <BasicWidthContainer>
-        <div className="flex justify-between gap-14">
+        <div className="flex justify-between gap-14 relative z-10">
           <div className="max-w-[1000px] w-full">
             <div className="flex flex-col gap-4">
               <CatalogueSearchBar />
@@ -23,6 +24,7 @@ export default function Catalogue() {
           <Filters />
         </div>
       </BasicWidthContainer>
+      <GetInTouch />
     </div>
   );
 }

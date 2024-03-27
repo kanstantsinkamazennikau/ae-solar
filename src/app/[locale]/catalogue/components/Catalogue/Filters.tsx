@@ -5,11 +5,10 @@ import {
   MODELS_LIST,
   TECHNOLOGIES_LIST,
 } from "@/app/[locale]/catalogue/constants";
-import Button from "@/app/[locale]/components/common/Button";
 
 export default function Filters() {
   return (
-    <div className="p-10 flex flex-col rounded-[20px] border border-solid border-[#131313] bg-[#0D0D0D] h-fit gap-6 max-w-[315px]">
+    <div className="p-10 flex flex-col rounded-[20px] border border-solid border-[#131313] bg-[#0D0D0D] h-fit gap-6 max-w-[315px] mb-10">
       <TechnologyFilter
         checkboxesList={TECHNOLOGIES_LIST}
         filterTitle="Technology"

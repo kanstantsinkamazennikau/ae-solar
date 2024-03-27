@@ -13,6 +13,7 @@ import {
   PER_PAGE,
   SORT_ORDER,
 } from "@/app/[locale]/catalogue/constants";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
@@ -22,7 +23,7 @@ import {
   useRouter,
   useSearchParams,
 } from "next/navigation";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useContext, useEffect, useRef, useState } from "react";
 
 export default function CatalogueSort() {
   return (
@@ -51,6 +52,8 @@ function DropdownInput({ dropDownValues, title, param }: DropdownSortProps) {
   const { replace } = useRouter();
   const params = new URLSearchParams(searchParams);
 
+  const { isResetFilter } = useContext(ConstructorContext);
+
   const [selectedOption, setSelectedOption] = useState(
     dropDownValues.find(({ value }) => value == params.get(param)) ||
       dropDownValues[0]
@@ -65,6 +68,12 @@ function DropdownInput({ dropDownValues, title, param }: DropdownSortProps) {
     }
     replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
+
+  useEffect(() => {
+    if (isResetFilter) {
+      setSelectedOption(dropDownValues[0]);
+    }
+  }, [dropDownValues, isResetFilter]);
 
   return (
     <div className={`flex items-center gap-2`}>
