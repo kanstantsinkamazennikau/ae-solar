@@ -62,6 +62,8 @@ export interface ConstructorContext {
   isResetFilter: boolean;
   setError: Dispatch<SetStateAction<string>>;
   error: string;
+  setIsShowFilterMenu: Dispatch<SetStateAction<boolean>>;
+  isShowFilterMenu: boolean;
 }
 
 export const ConstructorContext = createContext<ConstructorContext>(null!);
@@ -74,6 +76,7 @@ export default function ConstructorProvider({
   const [modelsInBag, setModelsInBag] = useState<ConstructorModelWithId[]>([]);
   const [isFilterModels, setIsFilterModels] = useState<boolean>(true);
   const [isResetFilter, setIsResetFilter] = useState<boolean>(false);
+  const [isShowFilterMenu, setIsShowFilterMenu] = useState<boolean>(false);
   const [isBagLoading, setIsBagLoading] = useState<boolean>(true);
   const [isShowCheckoutForm, setIsShowCheckoutForm] = useState<boolean>(false);
   const [error, setError] = useState("");
@@ -101,6 +104,8 @@ export default function ConstructorProvider({
         setIsResetFilter,
         error,
         setError,
+        setIsShowFilterMenu,
+        isShowFilterMenu,
       }}
     >
       {children}

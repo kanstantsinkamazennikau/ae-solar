@@ -26,8 +26,14 @@ import {
 import { Fragment, useContext, useEffect, useRef, useState } from "react";
 
 export default function CatalogueSort() {
+  const { setIsShowFilterMenu } = useContext(ConstructorContext);
+
+  const onClick = () => {
+    setIsShowFilterMenu((prevState) => !prevState);
+  };
+
   return (
-    <div>
+    <div className="flex items-center justify-between min-[1380px]:flex-row-reverse">
       <div className="flex gap-3 justify-end">
         <DropdownInput
           dropDownValues={CATALOGUE_SORT_VALUES}
@@ -38,6 +44,16 @@ export default function CatalogueSort() {
           dropDownValues={CATALOGUE_SHOW_VALUES}
           title={"Show"}
           param={PER_PAGE}
+        />
+      </div>
+      <div className="min-[1380px]:hidden">
+        <Image
+          src={`/images/option/filter.svg`}
+          alt={"filter"}
+          priority
+          width={24}
+          height={24}
+          onClick={onClick}
         />
       </div>
     </div>
