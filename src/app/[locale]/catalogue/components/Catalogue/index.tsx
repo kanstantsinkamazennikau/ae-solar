@@ -12,8 +12,8 @@ export default function Catalogue() {
       id="panelsList"
     >
       <BasicWidthContainer>
-        <div className="flex justify-between gap-14 relative z-10">
-          <div className="max-w-[1000px] w-full">
+        <div className="flex justify-between gap-14 relative z-10 overflow-hidden">
+          <div className="min-[1380px]:max-w-[1000px] w-full">
             <div className="flex flex-col gap-4">
               <CatalogueSearchBar />
               <CatalogueSort />

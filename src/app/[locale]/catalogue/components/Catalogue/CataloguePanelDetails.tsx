@@ -18,103 +18,80 @@ export default function CataloguePanelDetails({
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
+  const paramsMapping = [
+    { value: cellType, paramName: "Cell type" },
+    { value: moduleDesign, paramName: "Module design" },
+    { value: moduleColor, paramName: "Module color", withColorImage: true },
+    { value: frameColor, paramName: "Frame color", withColorImage: true },
+    {
+      value: `${moduleDimension.length} x ${moduleDimension.width} x ${moduleDimension.height}`,
+      paramName: "Dimension",
+    },
+    { value: powerRange, paramName: "Power range, W" },
+  ];
+
   return (
     <div className="bg-black rounded-xl w-full">
       <div className="pl-2 pt-3 w-full items-center gap-y-1 capitalize">
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-            {t("Cell type")}
-          </p>
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
-            {cellType}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-            {t("Module design")}
-          </p>
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
-            {moduleDesign}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-            {t("Module color")}
-          </p>
-          <div className="flex gap-1 items-center">
-            <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
-              {t(moduleColor)}
-            </p>
-            <Image
-              src={`/images/option/${moduleColor.toLowerCase()}.svg`}
-              alt={moduleColor}
-              priority
-              width={16}
-              height={16}
-            />
+        {paramsMapping.map(({ value, paramName, withColorImage }) => (
+          <div
+            key={paramName}
+            className="
+              grid
+              grid-cols-[120px_auto]
+              gap-x-4
+              py-[6px]
+              border-b
+              border-dashed
+              border-[#ffffff26]
+              items-center
+            "
+          >
+            {withColorImage ? (
+              <>
+                <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
+                  {t(paramName)}
+                </p>
+                <div className="flex gap-1 items-center">
+                  <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
+                    {t(value)}
+                  </p>
+                  <Image
+                    src={`/images/option/${value.toLowerCase()}.svg`}
+                    alt={value}
+                    priority
+                    width={16}
+                    height={16}
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
+                  {t(paramName)}
+                  {paramName === "Dimension" && (
+                    <span className="lowercase">, mm</span>
+                  )}
+                </p>
+                <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
+                  {value}
+                </p>
+              </>
+            )}
           </div>
-        </div>
-
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-            {t("Frame color")}
-          </p>
-          <div className="flex gap-1 items-center">
-            <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
-              {t(frameColor)}
-            </p>
-            <Image
-              src={`/images/option/${frameColor.toLowerCase()}.svg`}
-              alt={frameColor}
-              priority
-              width={16}
-              height={16}
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-            {t("Frame color")}
-          </p>
-          <div className="flex items-center gap-1">
-            <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
-              {t(frameColor)}
-            </p>
-            <Image
-              src={`/images/option/${frameColor.toLowerCase()}.svg`}
-              alt={frameColor}
-              priority
-              width={16}
-              height={16}
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-            {t("Dimension")}, <span className="lowercase">mm</span>
-          </p>
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%] lowercase">
-            {moduleDimension.length} x {moduleDimension.width} x{" "}
-            {moduleDimension.height}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center">
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-            {t("Power range, W")}
-          </p>
-          <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
-            {powerRange}
-          </p>
-        </div>
-
+        ))}
         {links?.map(({ link, tooltip }) => (
           <div
-            className="grid grid-cols-[120px_auto] gap-x-4 py-[6px] border-b border-dashed border-[#ffffff26] items-center"
+            className="
+              grid
+              grid-cols-[120px_auto]
+              gap-x-4
+              py-[6px]
+              border-b
+              border-dashed
+              border-[#ffffff26]
+              items-center
+            "
             key={tooltip}
           >
             <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">

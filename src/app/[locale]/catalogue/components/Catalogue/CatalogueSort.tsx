@@ -27,17 +27,19 @@ import { Fragment, useContext, useEffect, useRef, useState } from "react";
 
 export default function CatalogueSort() {
   return (
-    <div className="flex gap-3 justify-end">
-      <DropdownInput
-        dropDownValues={CATALOGUE_SORT_VALUES}
-        title={"Sort"}
-        param={SORT_ORDER}
-      />
-      <DropdownInput
-        dropDownValues={CATALOGUE_SHOW_VALUES}
-        title={"Show"}
-        param={PER_PAGE}
-      />
+    <div>
+      <div className="flex gap-3 justify-end">
+        <DropdownInput
+          dropDownValues={CATALOGUE_SORT_VALUES}
+          title={"Sort"}
+          param={SORT_ORDER}
+        />
+        <DropdownInput
+          dropDownValues={CATALOGUE_SHOW_VALUES}
+          title={"Show"}
+          param={PER_PAGE}
+        />
+      </div>
     </div>
   );
 }

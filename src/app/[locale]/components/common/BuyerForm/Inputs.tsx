@@ -116,14 +116,13 @@ export default function BuyerForm({
                 key={inputField.name}
                 className="
                   flex
-                  min-[640px]:items-center
-                  min-[640px]:content-center
-                  min-[640px]:!items-end
+                  min-[1380px]:content-center
+                  min-[1380px]:items-end
                   content-start
-                  min-[640px]:gap-3 gap-0
+                  min-[1380px]:gap-3 gap-0
                   self-stretch
                   [font-size:_clamp(20px,2.5vw,30px)]
-                  min-[640px]:flex-row
+                  min-[1380px]:flex-row
                   flex-col
                   flex-nowrap
                 "
@@ -148,7 +147,7 @@ export default function BuyerForm({
             return (
               <div
                 key={inputField.name}
-                className="flex items-center content-center min-[640px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,30px)]"
+                className="flex items-center content-center min-[1380px]:gap-3 gap-0 self-stretch flex-wrap [font-size:_clamp(20px,2.5vw,30px)]"
               >
                 <span className="font-semibold leading-[120%]">
                   {t(inputField.formTitle)}
@@ -197,12 +196,12 @@ export default function BuyerForm({
                 className="
                   flex
                   content-center 
-                  min-[640px]:gap-3 
+                  min-[1380px]:gap-3 
                   gap-1 
                   flex-nowrap
-                  min-[640px]:flex-row
+                  min-[1380px]:flex-row
                   flex-col
-                  min-[640px]:items-end
+                  min-[1380px]:items-end
                   items-start
                   [font-size:_clamp(20px,2.5vw,30px)]
                 "
@@ -230,13 +229,13 @@ export default function BuyerForm({
                 key={inputField.name}
                 className="
                   flex
-                  min-[640px]:content-center
+                  min-[1380px]:content-center
                   items-start
                   content-start
-                  min-[640px]:gap-3 gap-0
+                  min-[1380px]:gap-3 gap-0
                   self-stretch
                   [font-size:_clamp(20px,2.5vw,30px)]
-                  min-[640px]:flex-row
+                  min-[1380px]:flex-row
                   flex-col
                   flex-nowrap
                 "
@@ -308,7 +307,7 @@ export default function BuyerForm({
       <Button
         onClick={handleSubmit}
         showArrow
-        externalStyle="min-[640px]:w-fit w-full !py-[14px] !px-[26px]"
+        externalStyle="min-[1380px]:w-fit w-full !py-[14px] !px-[26px]"
         disabled={!agreement}
       >
         {t("Send Request")}

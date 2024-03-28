@@ -8,7 +8,25 @@ import {
 
 export default function Filters() {
   return (
-    <div className="p-10 flex flex-col rounded-[20px] border border-solid border-[#131313] bg-[#0D0D0D] h-fit gap-6 max-w-[315px] mb-10">
+    <div
+      className="
+        p-10
+        flex
+        flex-col
+        rounded-[20px]
+        border
+        border-solid
+        border-[#131313]
+        bg-[#0D0D0D]
+        h-fit
+        gap-6
+        max-w-[315px]
+        mb-10
+        max-[1380px]:translate-x-full
+        max-[1380px]:absolute
+        right-0
+      "
+    >
       <TechnologyFilter
         checkboxesList={TECHNOLOGIES_LIST}
         filterTitle="Technology"

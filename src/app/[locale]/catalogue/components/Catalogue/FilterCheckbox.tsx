@@ -64,7 +64,6 @@ export default function FilterCheckbox({
             appearance-none
             w-5
             h-5
-            bg-black
             before:shadow-[inset_1em_1em_#F6010
             before:content-['']
             before:w-2
