@@ -47,27 +47,28 @@ export default function FilterCheckbox({
     replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
+  const isChecked = !!params
+    .get(placeToSearch)
+    ?.split("&")
+    .includes(technology);
+
   return (
     <div className="flex justify-between">
       <label
-        className={`flex items-center w-full cursor-pointer gap-2`}
+        className={`flex items-center w-full cursor-pointer`}
         htmlFor={technology + placeToSearch}
       >
         <input
           type="checkbox"
           name={technology}
           id={technology + placeToSearch}
-          checked={!!params.get(placeToSearch)?.split("&").includes(technology)}
+          checked={isChecked}
           className={`
             grid
             place-content-center
             appearance-none
-            w-5
-            h-5
             before:shadow-[inset_1em_1em_#F6010
             before:content-['']
-            before:w-2
-            before:h-2
             before:rounded-[1px]
             before:scale-0
             before:transition-transform
@@ -76,8 +77,6 @@ export default function FilterCheckbox({
             checked:before:scale-[1]
             disabled:border-dark-gray-650
             cursor-pointer
-            bg-[url('/images/option/checkboxBlack.svg')]
-            checked:bg-[url('/images/option/checkboxRed.svg')]
             bg-no-repeat
             bg-contain
             shrink-0 
@@ -90,6 +89,32 @@ export default function FilterCheckbox({
           }
         />
         <div className="flex">
+          <div
+            className="
+              w-[16px]
+              h-[16px]
+              mr-2
+              shrink-0 
+            "
+          >
+            {isChecked ? (
+              <Image
+                src={`/images/option/checkboxRed.svg`}
+                alt={"checkboxRed"}
+                priority
+                width={16}
+                height={16}
+              />
+            ) : (
+              <Image
+                src={`/images/option/checkboxBlack.svg`}
+                alt={"checkboxBlack"}
+                priority
+                width={16}
+                height={16}
+              />
+            )}
+          </div>
           {showModelIcon && (
             <Image
               src={`/images/models/${technology}.svg`}
