@@ -62,8 +62,8 @@ export default function Filters() {
           flex
           flex-col
           min-[1380px]:h-fit
-          min-[920px]:h-[calc(100vh-79px)]
-          h-[calc(100vh-63px)]           
+          min-[920px]:h-[calc(100dvh-79px)]
+          h-[calc(100dvh-63px)]           
           transition-[right]
           duration-300
           ${
