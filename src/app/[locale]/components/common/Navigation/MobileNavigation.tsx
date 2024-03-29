@@ -84,7 +84,7 @@ export default function MobileNavigation() {
           top-[63px]
           z-30
           w-full 
-          h-screen
+          h-[calc(100dvh-63px)]
           overflow-y-auto 
           bottom-0 
           px-4
