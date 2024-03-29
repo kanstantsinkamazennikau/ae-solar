@@ -28,7 +28,7 @@ export enum ModelsEnum {
 }
 
 export interface ConstructorModel {
-  model: Model | "";
+  model: Model | undefined;
   solarCellTechnology: string;
   moduleSpecification: string;
   moduleColor: string;

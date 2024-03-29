@@ -1,12 +1,14 @@
 "use client";
 
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { useParams, usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export default function ModuleDimensions() {
+  const { isResetFilter } = useContext(ConstructorContext);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
@@ -18,6 +20,16 @@ export default function ModuleDimensions() {
     width: params.get("width") || "",
     height: params.get("height") || "",
   });
+
+  useEffect(() => {
+    if (isResetFilter) {
+      setDimensions({
+        length: "",
+        width: "",
+        height: "",
+      });
+    }
+  }, [isResetFilter]);
 
   const handleOnChange = (keyParam: string, value: string) => {
     if (!value) {
@@ -32,7 +44,7 @@ export default function ModuleDimensions() {
 
   return (
     <div>
-      <div className="[font-size:_clamp(12px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
+      <div className="[font-size:_clamp(14px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
         {t("Module Dimension")}{" "}
         <span className="lowercase font-normal text-dark-gray-900">{`(${t(
           "From"

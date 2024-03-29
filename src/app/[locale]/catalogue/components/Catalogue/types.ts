@@ -64,6 +64,7 @@ export interface DropdownSortProps {
   param: string;
   title: string;
   dropDownValues: SortOption[];
+  externalStyle: string;
 }
 
 export interface SectionHeaderProps {

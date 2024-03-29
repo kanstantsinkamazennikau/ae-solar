@@ -1,6 +1,5 @@
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import getLocale from "@/app/[locale]/utils/getLocale";
-import Image from "next/image";
 
 export default async function CatalogueHeroSection() {
   const locale = getLocale();
@@ -25,21 +24,6 @@ export default async function CatalogueHeroSection() {
           bg-[url(/images/products/productsFlowerCatalogue.png)]
         `}
       >
-        {/* <Image
-          src={`/images/products/productsFlowerCatalogue.png`}
-          alt="productsFlower"
-          priority
-          width={1920}
-          height={600}
-          className={`!w-screen absolute 
-            top-0
-            min-[540px]:scale-100
-            scale-150
-            transition-all
-            duration-[1.5s]
-            !translate-y-0
-         `}
-        /> */}
         <div
           className={`
             absolute

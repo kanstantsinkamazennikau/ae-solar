@@ -32,7 +32,7 @@ export default function ModelsInCart() {
                   <div className="flex items-center gap-3 max-md:justify-center">
                     <Image
                       src={`/images/models/${modelInBag.model}.svg`}
-                      alt={modelInBag.model}
+                      alt={modelInBag.model!}
                       priority
                       width={32}
                       height={32}
@@ -44,7 +44,7 @@ export default function ModelsInCart() {
                   </div>
                   <Image
                     src={`/images/cart/${modelInBag.model}.png`}
-                    alt={modelInBag.model}
+                    alt={modelInBag.model!}
                     priority
                     quality={100}
                     width={200}

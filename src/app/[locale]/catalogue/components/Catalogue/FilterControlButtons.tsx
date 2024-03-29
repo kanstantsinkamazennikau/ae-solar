@@ -18,8 +18,13 @@ export default function FilterControlButtons() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
-  const { setIsFilterModels, setIsResetFilter, error } =
-    useContext(ConstructorContext);
+  const {
+    setIsFilterModels,
+    setIsResetFilter,
+    error,
+    isShowFilterMenu,
+    setIsShowFilterMenu,
+  } = useContext(ConstructorContext);
 
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -37,18 +42,28 @@ export default function FilterControlButtons() {
     replace(`${pathname}?${params.toString()}`, { scroll: false });
     setIsFilterModels(true);
     scrollToPanelsListTop();
+    isShowFilterMenu && setIsShowFilterMenu(false);
   };
 
   const onReset = () => {
     replace(pathname, { scroll: false });
     setIsResetFilter(true);
     scrollToPanelsListTop();
+    isShowFilterMenu && setIsShowFilterMenu(false);
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div
+      className="
+        flex
+        flex-col
+        justify-center
+        items-center
+        max-[1380px]:mb-4
+      "
+    >
       <Button
-        externalStyle="!py-3"
+        externalStyle="!py-[10px] !px-[18px]"
         onClick={onFilter}
         disabled={!!error.length}
       >
@@ -60,11 +75,13 @@ export default function FilterControlButtons() {
             width={24}
             height={24}
           />
-          <span>{t("Filter Modules")}</span>
+          <span className="font-semibold [font-size:_clamp(12px,2vw,16px)] contents">
+            {t("Filter Modules")}
+          </span>
         </div>
       </Button>
-      <Button style="textOnly" onClick={onReset}>
-        <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red">
+      <Button style="textOnly" onClick={onReset} externalStyle="pb-0">
+        <span className="font-semibold [font-size:_clamp(12px,2vw,16px)] text-base-red">
           {t("Reset")}
         </span>
         <Image

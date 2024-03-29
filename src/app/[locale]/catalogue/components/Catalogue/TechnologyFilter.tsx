@@ -21,7 +21,7 @@ export default function TechnologyFilter({
     <div className="flex flex-col">
       {filterTitle && <SectionHeader title={t(filterTitle)} />}
       {subCategory && (
-        <div className="[font-size:_clamp(12px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
+        <div className="[font-size:_clamp(14px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
           {t(subCategory)}
         </div>
       )}

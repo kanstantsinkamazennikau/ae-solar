@@ -9,10 +9,10 @@ import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { useParams, usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export default function PowerRange() {
-  const { setError, error } = useContext(ConstructorContext);
+  const { setError, error, isResetFilter } = useContext(ConstructorContext);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
@@ -33,11 +33,20 @@ export default function PowerRange() {
     replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
+  useEffect(() => {
+    if (isResetFilter) {
+      setPowerRange({
+        from: "",
+        to: "",
+      });
+    }
+  }, [isResetFilter]);
+
   const powerRangeRenderFields = ["from", "to"];
 
   return (
     <div>
-      <div className="[font-size:_clamp(12px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
+      <div className="[font-size:_clamp(14px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
         {t("Power Range")}
       </div>
       <div className="flex gap-1">

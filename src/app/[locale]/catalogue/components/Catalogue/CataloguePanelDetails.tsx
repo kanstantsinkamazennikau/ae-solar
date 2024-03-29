@@ -73,7 +73,11 @@ export default function CataloguePanelDetails({
                     <span className="lowercase">, mm</span>
                   )}
                 </p>
-                <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
+                <p
+                  className={`[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%] ${
+                    paramName === "Dimension" ? "lowercase" : ""
+                  }`}
+                >
                   {value}
                 </p>
               </>

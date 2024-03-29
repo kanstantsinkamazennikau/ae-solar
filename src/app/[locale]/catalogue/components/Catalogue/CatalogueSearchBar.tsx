@@ -15,7 +15,6 @@ import {
   useSearchParams,
 } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 export default function CatalogueSearchBar() {
   const locale = useParams()?.locale as LocaleTypes;
@@ -38,10 +37,6 @@ export default function CatalogueSearchBar() {
     replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
-  const onClick = () => {
-    setIsFilterModels(true);
-  };
-
   useEffect(() => {
     if (isResetFilter) {
       setSearchValue("");
@@ -50,12 +45,16 @@ export default function CatalogueSearchBar() {
 
   return (
     <>
-      <div
+      <form
         className={`
           z-30
           bg-black
           backdrop-blur-3xl
         `}
+        onSubmit={(e) => {
+          e.preventDefault();
+          setIsFilterModels(true);
+        }}
       >
         <div
           className="
@@ -92,14 +91,14 @@ export default function CatalogueSearchBar() {
             />
           </div>
           <div>
-            <Button externalStyle="!py-[8px] !px-[14px]" onClick={onClick}>
+            <Button externalStyle="!py-[8px] !px-[14px]">
               <span className="[font-size:_clamp(12px,1.5vw,16px)] leading-[100%]">
                 {t("Search")}
               </span>
             </Button>
           </div>
         </div>
-      </div>
+      </form>
     </>
   );
 }

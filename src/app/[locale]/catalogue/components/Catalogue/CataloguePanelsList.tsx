@@ -1,8 +1,8 @@
 "use client";
 
-import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import CataloguePanelDetails from "@/app/[locale]/catalogue/components/Catalogue/CataloguePanelDetails";
 import EmptyResult from "@/app/[locale]/catalogue/components/Catalogue/EmptyResult";
+import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import {
   CATALOGUE_SHOW_VALUES,
   CATALOGUE_SORT_VALUES,
@@ -49,6 +49,7 @@ export default function CataloguePanelsList() {
     setIsFilterModels,
     isResetFilter,
     setIsResetFilter,
+    setIsShowFilterMenu,
   } = useContext(ConstructorContext);
 
   const [keepFiltering, setKeepFiltering] = useState(true);
@@ -182,11 +183,11 @@ export default function CataloguePanelsList() {
   useEffect(() => {
     return () => {
       setIsFilterModels(true);
+      setIsShowFilterMenu(false);
     };
-  }, [setIsFilterModels]);
+  }, [setIsFilterModels, setIsShowFilterMenu]);
 
   const addModelToBag = (
-    techName: Model,
     model: string,
     cellType: string,
     moduleDesign: string,
@@ -199,7 +200,8 @@ export default function CataloguePanelsList() {
     },
     applications: Applications[],
     powerRange: string,
-    backCover: string
+    backCover: string,
+    techName?: Model
   ) => {
     const [from, to] = powerRange.split("-");
     setModelsInBag((prevState) => {
@@ -237,7 +239,7 @@ export default function CataloguePanelsList() {
     <Loader />
   ) : !!modelsListToDisplayOnPage.length ? (
     <div>
-      <div className="grid grid-cols-2 gap-x-10 gap-y-[60px] mb-14">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-x-10 gap-y-[60px] mb-14">
         {modelsListToDisplayOnPage.map(
           ({
             techName,
@@ -255,28 +257,96 @@ export default function CataloguePanelsList() {
             const isAlreadyInBag = modelsInBag.some(({ id }) => id === model);
             return (
               <div className="flex flex-col" key={model}>
-                <div className="flex gap-3 items-center">
-                  <Image
-                    src={`/images/models/${techName}.svg`}
-                    alt={techName}
-                    priority
-                    width={40}
-                    height={40}
-                    className="md:h-10 md:w-10 h-[28px] w-[28px]"
-                  />
-                  <div className="flex flex-col gap-1">
-                    <div className="[font-size:_clamp(14px,2vw,24px)] leading-[100%] font-bold md:-tracking-[0.24px] ">
-                      {techName}
-                    </div>
-                    <div className="[font-size:_clamp(12px,1.5vw,16px)] leading-[100%] font-bold md:-tracking-[0.16px] text-[#707070]">
-                      {model}
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-3 items-center">
+                    <Image
+                      src={`/images/models/${techName}.svg`}
+                      alt={techName}
+                      priority
+                      width={40}
+                      height={40}
+                      className="md:h-10 md:w-10 h-[28px] w-[28px]"
+                    />
+                    <div className="flex flex-col gap-1">
+                      <div className="[font-size:_clamp(14px,2vw,24px)] leading-[100%] font-bold md:-tracking-[0.24px] ">
+                        {techName}
+                      </div>
+                      <div className="[font-size:_clamp(12px,1.5vw,16px)] leading-[100%] font-bold md:-tracking-[0.16px] text-[#707070]">
+                        {model}
+                      </div>
                     </div>
                   </div>
+
+                  <Button
+                    externalStyle={`
+                          ${
+                            isAlreadyInBag
+                              ? "bg-[#3E0002] border-[#7B0004]"
+                              : ""
+                          }
+                          transition-[opacity]
+                          duration-200
+                          !py-1
+                          !px-2
+                          z-10
+                          md:hidden
+                        `}
+                    style="outline"
+                    onClick={() =>
+                      isAlreadyInBag
+                        ? removeModel(model)
+                        : addModelToBag(
+                            model,
+                            cellType,
+                            moduleDesign,
+                            moduleColor,
+                            frameColor,
+                            moduleDimension,
+                            applications as Applications[],
+                            powerRange,
+                            backCover,
+                            techName as Model
+                          )
+                    }
+                  >
+                    <div
+                      className="
+                          flex
+                          gap-1
+                          items-center
+                          w-max
+                        "
+                    >
+                      <Image
+                        src={`/images/cart.svg`}
+                        alt={"cart"}
+                        priority
+                        width={24}
+                        height={24}
+                        className={`
+                              ${
+                                isAlreadyInBag &&
+                                "[filter:invert(67%)_sepia(89%)_saturate(7492%)_hue-rotate(392deg)_brightness(84%)_contrast(146%)]"
+                              }
+                            `}
+                      />
+                      <p
+                        className={`
+                            ${isAlreadyInBag && "text-[#B30006]"}
+                            [font-size:_clamp(12px,1.5vw,14px)]
+                            md:-tracking-[0.14px]
+                            font-semibold
+                          `}
+                      >
+                        {t(!isAlreadyInBag ? "Add" : "Added")}
+                      </p>
+                    </div>
+                  </Button>
                 </div>
                 <hr className="bg-[#191919] h-[1px] border-none w-full mt-3 mb-3" />
-                <div className="flex lg:gap-3 gap-2 md:flex-row flex-col group/add">
-                  <div className="flex justify-center items-end gap-5 lg:flex-row flex-col">
-                    <div className="relative w-[160px] h-[216px]">
+                <div className="flex lg:gap-3 gap-2 lg:flex-row flex-col group/add">
+                  <div className="flex justify-center lg:items-end items-center gap-5 lg:flex-row flex-col">
+                    <div className="relative md:w-[160px] md:h-[216px] w-[230px] h-[146px] overflow-hidden">
                       <Image
                         src={`/images/cart/${techName}.png`}
                         alt={techName}
@@ -284,7 +354,7 @@ export default function CataloguePanelsList() {
                         quality={100}
                         width={160}
                         height={176}
-                        className="w-[160px] h-[216px]"
+                        className="md:w-[160px] md:h-[216px] w-[230px] h-[254px]"
                       />
                       <div className="fade-strip-bottom max-h-[100px] max-w-[200px] !z-10" />
                       <Button
@@ -304,13 +374,13 @@ export default function CataloguePanelsList() {
                           z-10
                           left-1/2
                           -translate-x-1/2
+                          max-md:hidden
                         `}
                         style="outline"
                         onClick={() =>
                           isAlreadyInBag
                             ? removeModel(model)
                             : addModelToBag(
-                                techName as Model,
                                 model,
                                 cellType,
                                 moduleDesign,
@@ -319,7 +389,8 @@ export default function CataloguePanelsList() {
                                 moduleDimension,
                                 applications as Applications[],
                                 powerRange,
-                                backCover
+                                backCover,
+                                techName as Model
                               )
                         }
                       >
@@ -375,10 +446,12 @@ export default function CataloguePanelsList() {
           }
         )}
       </div>
-      <BlogPostPagination
-        totalBlogPosts={allModels.length}
-        itemsPerPage={+itemsPerPage}
-      />
+      <div className="mb-10">
+        <BlogPostPagination
+          totalBlogPosts={allModels.length}
+          itemsPerPage={+itemsPerPage}
+        />
+      </div>
     </div>
   ) : (
     <EmptyResult />

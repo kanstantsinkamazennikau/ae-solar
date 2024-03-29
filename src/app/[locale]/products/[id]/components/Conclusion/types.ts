@@ -5,7 +5,7 @@ export interface ConclusionProps {
   id: Model;
 }
 
-export interface DestopTableRowProps {
+export interface DesktopTableRowProps {
   model: string;
   cellType: string;
   moduleDesign: string;
@@ -37,7 +37,9 @@ export interface DestopTableRowProps {
     },
     applications: Applications[],
     powerRange: string,
-    backCover: string
+    backCover: string,
+    techName?: Model
   ) => void;
   removeModel: (model: string) => void;
+  isShowDimensions?: boolean;
 }

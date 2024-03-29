@@ -13,6 +13,7 @@ import {
   PER_PAGE,
   SORT_ORDER,
 } from "@/app/[locale]/catalogue/constants";
+import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
@@ -28,39 +29,89 @@ import { Fragment, useContext, useEffect, useRef, useState } from "react";
 export default function CatalogueSort() {
   const { setIsShowFilterMenu } = useContext(ConstructorContext);
 
+  const locale = useParams()?.locale as LocaleTypes;
+  const { t } = useClientTranslation(locale, "translation");
+
   const onClick = () => {
     setIsShowFilterMenu((prevState) => !prevState);
   };
 
   return (
-    <div className="flex items-center justify-between min-[1380px]:flex-row-reverse">
-      <div className="flex gap-3 justify-end">
-        <DropdownInput
-          dropDownValues={CATALOGUE_SORT_VALUES}
-          title={"Sort"}
-          param={SORT_ORDER}
-        />
-        <DropdownInput
-          dropDownValues={CATALOGUE_SHOW_VALUES}
-          title={"Show"}
-          param={PER_PAGE}
-        />
+    <>
+      <div
+        className="
+          flex
+          items-center
+          justify-between
+          min-[1380px]:flex-row-reverse
+          relative
+          pt-4
+          min-[460px]:pb-4    
+          bg-black
+          w-full
+        "
+      >
+        <div className="flex gap-3 justify-start flex-row w-full">
+          <DropdownInput
+            dropDownValues={CATALOGUE_SORT_VALUES}
+            title={"Sort"}
+            param={SORT_ORDER}
+            externalStyle={"z-30 max-[460px]:w-[70%]"}
+          />
+          <DropdownInput
+            dropDownValues={CATALOGUE_SHOW_VALUES}
+            title={"Show"}
+            param={PER_PAGE}
+            externalStyle={"z-30 max-[460px]:w-[30%]"}
+          />
+        </div>
       </div>
-      <div className="min-[1380px]:hidden">
-        <Image
-          src={`/images/option/filter.svg`}
-          alt={"filter"}
-          priority
-          width={24}
-          height={24}
+      <div
+        className="
+          min-[460px]:justify-end
+          justify-center
+          flex
+          min-[1380px]:hidden
+          cursor-pointer
+          max-[1380px]:sticky
+          max-[1380px]:top-[78px]
+          max-[920px]:top-[62px]
+          min-[460px]:-mt-[67px]
+          h-[67px]
+          pt-4
+          pb-4
+          bg-black
+          z-20
+          items-center
+        "
+      >
+        <Button
+          style="outline"
+          externalStyle="md:!py-2 !py-1 !px-4"
           onClick={onClick}
-        />
+        >
+          <span className="[font-size:_clamp(14px,1.5vw,16px)]">
+            {t("Filter")}
+          </span>
+          <Image
+            src={`/images/option/filter.svg`}
+            alt={"filter"}
+            priority
+            width={24}
+            height={24}
+          />
+        </Button>
       </div>
-    </div>
+    </>
   );
 }
 
-function DropdownInput({ dropDownValues, title, param }: DropdownSortProps) {
+function DropdownInput({
+  dropDownValues,
+  title,
+  param,
+  externalStyle,
+}: DropdownSortProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
   const [isSelection, setIsSelection] = useState(false);
@@ -94,11 +145,13 @@ function DropdownInput({ dropDownValues, title, param }: DropdownSortProps) {
   }, [dropDownValues, isResetFilter]);
 
   return (
-    <div className={`flex items-center gap-2`}>
+    <div
+      className={`flex min-[600px]:items-center items-start gap-2 ${externalStyle} min-[600px]:flex-row flex-col`}
+    >
       <span className="[font-size:_clamp(14px,1.5vw,16px)] text-[#505050]">
         {t(title)}
       </span>
-      <div className="bg-[#131313] border border-solid border-[#191919] outline-none py-[6px] px-2 flex rounded-md relative">
+      <div className="bg-[#131313] border border-solid border-[#191919] outline-none py-[6px] px-2 flex rounded-md relative w-full">
         <SelectedOption
           selectedOption={selectedOption}
           setIsSelection={setIsSelection}
@@ -168,11 +221,12 @@ function SelectedOption({
     <div
       className={`
         inline-flex
-        justify-center
+        justify-between
         items-center
         gap-2
         cursor-pointer
         flex-shrink-0
+        w-full
         ${selectedOption ? "" : "text-[#9ca3af]"}
         [font-size:_clamp(12px,1.5vw,14px)]
       `}
@@ -202,7 +256,7 @@ function Options({ handleSelection, optionsList }: OptionsSortProps) {
       {optionsList.map(({ label, value }) => (
         <Fragment key={value}>
           <div
-            className="cursor-pointer flex justify-center items-center [font-size:_clamp(12px,1.5vw,14px)] mb-1 last-of-type:mb-0"
+            className="cursor-pointer flex justify-start items-center [font-size:_clamp(12px,1.5vw,14px)] mb-1 last-of-type:mb-0"
             onClick={() => handleSelection({ label, value })}
           >
             {t(label)}
