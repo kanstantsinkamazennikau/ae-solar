@@ -2,6 +2,7 @@ import BlogPostsList from "@/app/[locale]/company/news/components/BlogPostsList"
 import BlogPostPagination from "@/app/[locale]/company/news/components/BlogPostsPagination";
 import RecentPosts from "@/app/[locale]/company/news/components/RecentPosts";
 import TagsFilter from "@/app/[locale]/company/news/components/TagsFilter";
+import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
@@ -117,7 +118,10 @@ export default async function Blog({
               <RecentPosts />
             </div>
           </div>
-          <BlogPostPagination totalBlogPosts={blogPostsAmount} />
+          <BlogPostPagination
+            totalBlogPosts={blogPostsAmount}
+            itemsPerPage={BLOG_POSTS_PER_PAGE}
+          />
         </BasicWidthContainer>
       </div>
     </>

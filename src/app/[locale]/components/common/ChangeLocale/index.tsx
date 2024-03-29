@@ -7,6 +7,7 @@ import Image from "next/image";
 import {
   useParams,
   useRouter,
+  useSearchParams,
   useSelectedLayoutSegments,
 } from "next/navigation";
 import { useRef, useState } from "react";
@@ -15,12 +16,17 @@ export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
   const router = useRouter();
   const params = useParams();
   const urlSegments = useSelectedLayoutSegments();
+  const searchParams = useSearchParams();
+  const URLParams = new URLSearchParams(searchParams);
+
   const [isSelection, setIsSelection] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleSelection = (code: string) => {
     const newLocale = code.toLowerCase();
-    router.push(`/${newLocale}/${urlSegments.join("/")}`);
+    router.push(
+      `/${newLocale}/${urlSegments.join("/")}?${URLParams.toString()}`
+    );
   };
 
   return (

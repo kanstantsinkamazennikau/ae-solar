@@ -1,4 +1,17 @@
 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="8" cy="8" r="8" fill="#202020"/>
-<circle cx="8" cy="8" r="7.5" stroke="white" stroke-opacity="0.3"/>
+<mask id="mask0_6035_54797" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+<circle cx="8" cy="8" r="7.5" fill="#D9D9D9" stroke="#2D2D2D"/>
+</mask>
+<g mask="url(#mask0_6035_54797)">
+<g opacity="0.5">
+<path d="M-1.89948 9.41418L9.41423 -1.89952" stroke="white"/>
+<path d="M-0.485291 10.8284L10.8284 -0.485339" stroke="white"/>
+<path d="M0.928955 12.2426L12.2427 0.928906" stroke="white"/>
+<path d="M2.34314 13.6568L13.6568 2.34309" stroke="white"/>
+<path d="M3.75739 15.071L15.0711 3.75734" stroke="white"/>
+<path d="M5.17157 16.4852L16.4853 5.17152" stroke="white"/>
+<path d="M6.58582 17.8995L17.8995 6.58577" stroke="white"/>
+</g>
+</g>
+<circle cx="8" cy="8" r="7.5" stroke="#2D2D2D"/>
 </svg>

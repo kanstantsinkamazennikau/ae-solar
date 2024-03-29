@@ -39,7 +39,7 @@ export default function Customization({ id }: CustomizationProps) {
           />
           <div className="flex justify-center items-start gap-8 self-stretch min-[540px]:flex-row flex-col" />
         </div>
-        <div className={`grid gap-5 ${areaTemplate}`}>
+        <div className={`grid gap-5 ${areaTemplate} w-fit mx-auto`}>
           {structure.map(
             ({
               gridArea,

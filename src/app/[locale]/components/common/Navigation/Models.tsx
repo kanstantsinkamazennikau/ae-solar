@@ -21,7 +21,7 @@ export default function Models({
   const { t } = useClientTranslation(locale, "translation");
 
   const handleClick = () => {
-    router.push(`/products`);
+    router.push(`/catalogue`);
   };
 
   return (

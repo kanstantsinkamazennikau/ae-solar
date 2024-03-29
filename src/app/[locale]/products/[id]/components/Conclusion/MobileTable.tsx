@@ -1,8 +1,8 @@
-import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
+import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { DestopTableRowProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
+import { DesktopTableRowProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
@@ -20,7 +20,8 @@ export default function MobileTable({
   backCover,
   addModelToBag,
   removeModel,
-}: DestopTableRowProps) {
+  isShowDimensions,
+}: DesktopTableRowProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
   const { modelsInBag } = useContext(ConstructorContext);
@@ -105,9 +106,9 @@ export default function MobileTable({
               </p>
             </>
           ) : (
-            <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] -tracking-[0.16px] text-[#B30006]">
+            <p className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] -tracking-[0.16px] text-[#B30006] h-6 flex items-center">
               {t("Remove")}
-            </span>
+            </p>
           )}
         </div>
       </button>
@@ -161,6 +162,16 @@ export default function MobileTable({
               height={16}
             />
           </div>
+          {isShowDimensions && (
+            <>
+              <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
+                {t("Dimension")}, mm
+              </p>
+              <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
+                {`${moduleDimension.length} x ${moduleDimension.width} x ${moduleDimension.height}`}
+              </p>
+            </>
+          )}
         </div>
         <div className="w-full px-4">
           <hr className="bg-[#131313] w-full h-[1px] border-none " />

@@ -128,7 +128,7 @@ export default function PortfolioBackground() {
               </Trans>
             </p>
           </div>
-          <Link href="/products">
+          <Link href="/catalogue">
             <Button externalStyle="max-[768px]:!py-4 !py-[14px] !px-[26]">
               <span className="[font-size:_clamp(20px,1.5vw,20px)] font-semibold -tracking-[0.2px]">
                 {t("All Products")}

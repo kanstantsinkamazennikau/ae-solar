@@ -110,7 +110,7 @@ export default function MobileNavigation() {
         <ChangeLocale mobileNavigation />
         {/* <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" /> */}
         <Link
-          href={`/${params?.locale}/consult`}
+          href={`/${params?.locale}/contacts`}
           className={
             "flex pt-2 pb-5 min-[920px]:items-center [font-size:_clamp(14px,1.5vw,16px)] leading-none justify-between cursor-pointer"
           }

@@ -1,11 +1,10 @@
 "use client";
 
-import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
-import Button from "@/app/[locale]/components/common/Button";
+import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { DestopTableRowProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
+import { DesktopTableRowProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
@@ -23,7 +22,7 @@ export default function DesktopTableRow({
   backCover,
   addModelToBag,
   removeModel,
-}: DestopTableRowProps) {
+}: DesktopTableRowProps) {
   const { modelsInBag } = useContext(ConstructorContext);
   const [isAlreadyInBag, setIsAlreadyInBag] = useState(
     modelsInBag.some(({ id }) => id === model)

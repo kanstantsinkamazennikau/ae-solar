@@ -1,10 +1,7 @@
 "use client";
 
-import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
-import {
-  CART_LOCALSTORAGE,
-  CONSTRUCTOR_MODELS_SPEC,
-} from "@/app/[locale]/utils/constants";
+import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
+import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
 import {
   Dispatch,
   SetStateAction,
@@ -31,7 +28,7 @@ export enum ModelsEnum {
 }
 
 export interface ConstructorModel {
-  model: Model | "";
+  model: Model | undefined;
   solarCellTechnology: string;
   moduleSpecification: string;
   moduleColor: string;
@@ -40,6 +37,7 @@ export interface ConstructorModel {
   moduleDimension: {
     length: string;
     width: string;
+    height: string;
   };
   powerRange: {
     from: string;
@@ -47,21 +45,25 @@ export interface ConstructorModel {
   };
   applications?: Applications[];
 }
-interface ConstructorModelWithId extends ConstructorModel {
+export interface ConstructorModelWithId extends ConstructorModel {
   id: string | number;
 }
 
 export interface ConstructorContext {
-  setConstructorModel: (model: any) => void;
-  constructorModel: ConstructorModel;
-  setIsGenerateModel: (flag: boolean) => void;
-  isGenerateModel: boolean;
+  setIsFilterModels: (flag: boolean) => void;
+  isFilterModels: boolean;
   setModelsInBag: Dispatch<SetStateAction<ConstructorModelWithId[]>>;
   modelsInBag: ConstructorModelWithId[];
   setIsBagLoading: (flag: boolean) => void;
   isBagLoading: boolean;
   setIsShowCheckoutForm: (flag: boolean) => void;
   isShowCheckoutForm: boolean;
+  setIsResetFilter: Dispatch<SetStateAction<boolean>>;
+  isResetFilter: boolean;
+  setError: Dispatch<SetStateAction<string>>;
+  error: string;
+  setIsShowFilterMenu: Dispatch<SetStateAction<boolean>>;
+  isShowFilterMenu: boolean;
 }
 
 export const ConstructorContext = createContext<ConstructorContext>(null!);
@@ -71,53 +73,13 @@ export default function ConstructorProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const defaultModel = CONSTRUCTOR_MODELS_SPEC.Aurora.params;
   const [modelsInBag, setModelsInBag] = useState<ConstructorModelWithId[]>([]);
-  const [isGenerateModel, setIsGenerateModel] = useState<boolean>(false);
+  const [isFilterModels, setIsFilterModels] = useState<boolean>(true);
+  const [isResetFilter, setIsResetFilter] = useState<boolean>(false);
+  const [isShowFilterMenu, setIsShowFilterMenu] = useState<boolean>(false);
   const [isBagLoading, setIsBagLoading] = useState<boolean>(true);
   const [isShowCheckoutForm, setIsShowCheckoutForm] = useState<boolean>(false);
-  const [constructorModel, setConstructorModel] = useState<ConstructorModel>({
-    model: "",
-    solarCellTechnology: defaultModel.solarCellTechnology.values[0],
-    moduleSpecification: defaultModel.moduleSpecification.values[0],
-    moduleColor: defaultModel.moduleColor.values[0].color,
-    backCover: defaultModel.backCover.values[0],
-    frameColor: defaultModel.frameColor.values[0].color,
-    moduleDimension: {
-      length: "",
-      width: "",
-    },
-    powerRange: {
-      from: "",
-      to: "",
-    },
-    applications: [defaultModel.applications.values[0]],
-  });
-
-  useEffect(() => {
-    const selectedModelParams =
-      CONSTRUCTOR_MODELS_SPEC[constructorModel?.model]?.params;
-
-    if (!selectedModelParams) return;
-    setConstructorModel({
-      model: constructorModel.model,
-      solarCellTechnology: selectedModelParams.solarCellTechnology.values[0],
-      moduleSpecification: selectedModelParams.moduleSpecification.values[0],
-      moduleColor: selectedModelParams.moduleColor.values[0].color,
-      backCover: selectedModelParams.backCover.values[0],
-      frameColor: selectedModelParams.frameColor.values[0].color,
-      moduleDimension: {
-        length: "",
-        width: "",
-      },
-      powerRange: {
-        from: "",
-        to: "",
-      },
-      applications: [selectedModelParams.applications.values[0]],
-    });
-    setIsGenerateModel(false);
-  }, [constructorModel.model]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const cartItemsFromLocalStorage = localStorage.getItem(CART_LOCALSTORAGE);
@@ -130,16 +92,20 @@ export default function ConstructorProvider({
   return (
     <ConstructorContext.Provider
       value={{
-        setConstructorModel,
-        constructorModel,
-        setIsGenerateModel,
-        isGenerateModel,
+        setIsFilterModels,
+        isFilterModels,
         setModelsInBag,
         modelsInBag,
         setIsBagLoading,
         isBagLoading,
         setIsShowCheckoutForm,
         isShowCheckoutForm,
+        isResetFilter,
+        setIsResetFilter,
+        error,
+        setError,
+        setIsShowFilterMenu,
+        isShowFilterMenu,
       }}
     >
       {children}

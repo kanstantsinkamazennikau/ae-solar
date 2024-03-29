@@ -1,6 +1,9 @@
-import { ConstructorModel } from "@/app/[locale]/context/constructorContext";
+import {
+  ConstructorModel,
+  ConstructorModelWithId,
+} from "@/app/[locale]/context/constructorContext";
 
-export type Details = Omit<ConstructorModel, "model">;
+export type Details = Omit<ConstructorModelWithId, "model">;
 export interface DetailsProps {
   model: Details;
 }

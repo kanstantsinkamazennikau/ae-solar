@@ -1,4 +1,4 @@
-import { Applications } from "@/app/[locale]/calculate/components/ChooseModel/types";
+import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
@@ -32,6 +32,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
     moduleDimension: {
       length: string;
       width: string;
+      height: string;
     },
     applications: Applications[],
     powerRange: string,

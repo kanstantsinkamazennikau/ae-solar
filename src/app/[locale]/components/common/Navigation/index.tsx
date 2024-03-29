@@ -48,6 +48,7 @@ export default function Navigation() {
       "solutions",
       "manufacturer",
       "company",
+      "catalogue",
     ].some((path) => pathname.includes(path));
   };
 

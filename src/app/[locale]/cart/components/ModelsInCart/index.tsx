@@ -28,23 +28,23 @@ export default function ModelsInCart() {
           <div className="flex justify-center items-center lg:gap-10 gap-0 md:flex-row flex-col">
             <div className="flex lg:gap-5 gap-2 md:flex-row flex-col">
               <div className="flex justify-center items-center gap-5 lg:flex-row flex-col">
-                <div className="flex items-center gap-3 lg:min-w-[200px] xl:min-w-[260px]">
-                  <Image
-                    src={`/images/models/${modelInBag.model}.svg`}
-                    alt={modelInBag.model}
-                    priority
-                    width={48}
-                    height={48}
-                    className="md:h-12 md:w-12 h-[28px] w-[28px]"
-                  />
-                  <div className="[font-size:_clamp(22px,2.5vw,36px)] leading-[120%] font-bold -tracking-[0.4px] ">
-                    {modelInBag.model}
-                  </div>
-                </div>
                 <div className="relative">
+                  <div className="flex items-center gap-3 max-md:justify-center">
+                    <Image
+                      src={`/images/models/${modelInBag.model}.svg`}
+                      alt={modelInBag.model!}
+                      priority
+                      width={32}
+                      height={32}
+                      className="md:h-8 md:w-8 h-[28px] w-[28px]"
+                    />
+                    <div className="md:text-2xl text-[32px] leading-[120%] font-bold -tracking-[0.4px] ">
+                      {modelInBag.model}
+                    </div>
+                  </div>
                   <Image
                     src={`/images/cart/${modelInBag.model}.png`}
-                    alt={modelInBag.model}
+                    alt={modelInBag.model!}
                     priority
                     quality={100}
                     width={200}
