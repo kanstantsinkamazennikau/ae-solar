@@ -1,7 +1,13 @@
+import BlogPostContent from "@/app/[locale]/company/news/[slug]/BlogPostContent";
 import BlogPostStats from "@/app/[locale]/company/news/components/BlogPostStats";
-import { BlogPost } from "@/app/[locale]/company/news/components/BlogPostsList/types";
+import {
+  BlogPost,
+  StrapiBlogs,
+} from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
+import { fetchAPI, getStrapiMedia } from "@/app/[locale]/utils/fetch-api";
 import { markdownToHtml } from "@/app/[locale]/utils/markdownToHtml";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { getDocumentBySlug, getDocumentSlugs } from "outstatic/server";
 
 async function getBlogPostData(slug: string) {
@@ -22,21 +28,66 @@ async function getBlogPostData(slug: string) {
   };
 }
 
+const getPostBySlug = async (slug: string) => {
+  const path = `/blogs`;
+
+  const urlParamsObject = {
+    filters: { slug },
+    populate: {
+      authorBio: {
+        populate: ["name", "avatar"],
+      },
+      tag: {
+        populate: ["tag"],
+      },
+    },
+    fields: ["title", "slug", "readingTime", "publishedAt", "body"],
+  };
+  // const urlParamsObject = {
+  //   filters: { slug },
+  //   populate: {
+  //     cover: { fields: ["url"] },
+  //     authorsBio: { populate: "*" },
+  //     category: { fields: ["name"] },
+  //     blocks: {
+  //       populate: {
+  //         __component: "*",
+  //         files: "*",
+  //         file: "*",
+  //         url: "*",
+  //         body: "*",
+  //         title: "*",
+  //         author: "*",
+  //       },
+  //     },
+  //   },
+  // };
+  const response = await fetchAPI(path, urlParamsObject);
+  return response as StrapiBlogs;
+};
+
 export default async function BlogPost({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  const blogPost = await getBlogPostData(slug);
+  // const blogPost = await getBlogPostData(slug);
+  const { data } = await getPostBySlug(slug);
 
-  if (!blogPost.content)
+  if (!data)
     return (
       <div className="text-center [font-size:_clamp(20px,2vw,32px)]">
         Post not found
       </div>
     );
+  const { attributes } = data[0];
 
-  const { title, content, publishedAt, author, readingTime } = blogPost;
+  const authorPicture = getStrapiMedia(
+    attributes.authorBio.data?.attributes.avatar.data.attributes.url
+  );
+  const authorName = attributes.authorBio.data?.attributes.name;
+
+  const { title, body, readingTime } = attributes;
 
   return (
     <div className="-mt-[160px] relative z-10">
@@ -48,15 +99,13 @@ export default async function BlogPost({
       </div>
       <BlogPostStats
         statistics={{
-          author: author?.name,
+          author: authorName,
+          image: authorPicture,
           readingTime,
         }}
       />
-      <div className="flex flex-col mt-14 font-walsheim ">
-        <div
-          dangerouslySetInnerHTML={{ __html: content }}
-          className="max-w-[900px] mx-auto w-full leading-[150%] blog_post_content"
-        />
+      <div className="flex flex-col mt-14 font-walsheim max-w-[900px] mx-auto w-full leading-[150%] blog_post_content">
+        <BlogPostContent body={body} />
       </div>
     </div>
   );

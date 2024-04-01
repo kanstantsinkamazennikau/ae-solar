@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: process.env.NEXT_PUBLIC_STRAPI_URL,
+        port: process.env.NEXT_PUBLIC_STRAPI_URL_PORT,
+      },
+    ],
+  },
   output: "standalone",
   async redirects() {
     return [

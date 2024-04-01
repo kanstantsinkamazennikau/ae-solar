@@ -104,6 +104,7 @@ export default function Post({
         <BlogPostStats
           statistics={{
             author: author.name,
+            image: author.picture,
             readingTime,
           }}
           dividerColor="gray"

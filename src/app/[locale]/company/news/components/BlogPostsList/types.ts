@@ -1,3 +1,5 @@
+import { BlocksContent } from "@strapi/blocks-react-renderer";
+
 export interface BlogPost {
   title: string;
   slug: string;
@@ -30,8 +32,47 @@ export interface PostProps {
   publishedAt: string;
   author: {
     name: string;
-    picture: string;
+    picture: string | null;
   };
   readingTime?: string;
   tag?: string;
+}
+
+export interface StrapiBlogs {
+  data: StrapiBlog[];
+}
+
+export interface StrapiBlogAttributes {
+  title: string;
+  slug: string;
+  readingTime: string;
+  publishedAt: string;
+  authorBio: {
+    data: {
+      attributes: {
+        name: string;
+        avatar: {
+          data: {
+            attributes: {
+              name: string;
+              url: string;
+            };
+          };
+        };
+      };
+    };
+  };
+  tag: {
+    data: {
+      attributes: {
+        tag: string;
+      };
+    };
+  };
+  body?: BlocksContent;
+}
+
+export interface StrapiBlog {
+  id: number;
+  attributes: StrapiBlogAttributes;
 }

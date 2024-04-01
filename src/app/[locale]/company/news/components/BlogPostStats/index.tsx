@@ -37,17 +37,34 @@ export default function BlogPostStats({
             items-center
           `}
         >
-          <Image
-            src={`/images/about/blog/${
-              statisticsParamsWithIconsMapping[
-                statParam as keyof typeof statisticsParamsWithIconsMapping
-              ]
-            }.svg`}
-            alt={statParam}
-            width={16}
-            height={16}
-            className="mr-1"
-          />
+          {statParam !== "author" ? (
+            <Image
+              src={`/images/about/blog/${
+                statisticsParamsWithIconsMapping[
+                  statParam as keyof typeof statisticsParamsWithIconsMapping
+                ]
+              }.svg`}
+              alt={statParam}
+              width={16}
+              height={16}
+              className="mr-1"
+            />
+          ) : (
+            <Image
+              src={
+                statistics.image ||
+                `/images/about/blog/${
+                  statisticsParamsWithIconsMapping[
+                    statParam as keyof typeof statisticsParamsWithIconsMapping
+                  ]
+                }.svg`
+              }
+              alt={statParam}
+              width={16}
+              height={16}
+              className="mr-1 rounded-full"
+            />
+          )}
           <span className="[font-size:_clamp(12px,1vw,14px)] font- font-walsheim text-dark-gray-900 leading-[100%]">
             {statistics[statParam as keyof typeof statistics] ||
               defaultValues[statParam as keyof typeof defaultValues]}
