@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Post({
-  slug,
+  id,
   title,
   publishedAt,
   author,
@@ -29,6 +29,7 @@ export default function Post({
         md:flex-row
         flex-col
         items-start
+        w-full
       "
     >
       <div
@@ -96,7 +97,7 @@ export default function Post({
       </div>
 
       <div className="flex flex-col gap-4">
-        <Link href={`/company/news/${slug}`}>
+        <Link href={`/company/news/${id}`}>
           <h2 className="[font-size:_clamp(16px,1.5vw,24px)] font-bold -tracking-[0.24] hover:text-base-red">
             {title.slice(0, 1).toUpperCase() + title.slice(1).toLowerCase()}
           </h2>

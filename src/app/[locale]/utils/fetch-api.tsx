@@ -1,7 +1,7 @@
 import qs from "qs";
-const url = `${process.env.NEXT_PUBLIC_STRAPI_URL}:${
-  process.env.NEXT_PUBLIC_STRAPI_URL_PORT ?? ""
-}`;
+const url = `${process.env.NEXT_PUBLIC_STRAPI_URL_PROTOCOL}://${
+  process.env.NEXT_PUBLIC_STRAPI_URL
+}:${process.env.NEXT_PUBLIC_STRAPI_URL_PORT ?? ""}`;
 
 const getStrapiURL = (path = "") => {
   return `${url || "http://localhost:1337"}${path}`;
@@ -28,9 +28,9 @@ export async function fetchAPI(
     )}`;
     const response = await fetch(requestUrl, mergedOptions);
     const data = await response.json();
+
     return data;
   } catch (error) {
-    console.error(error);
     throw new Error(
       `Please check if your server is running and you set all the required tokens.`
     );

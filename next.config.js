@@ -3,8 +3,14 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        protocol: process.env.NEXT_PUBLIC_STRAPI_URL_PROTOCOL,
         hostname: process.env.NEXT_PUBLIC_STRAPI_URL,
         port: process.env.NEXT_PUBLIC_STRAPI_URL_PORT,
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        port: "",
       },
     ],
   },

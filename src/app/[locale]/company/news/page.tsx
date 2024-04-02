@@ -1,68 +1,77 @@
 import BlogPostsList from "@/app/[locale]/company/news/components/BlogPostsList";
+import { StrapiBlogsWithPagination } from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import BlogPostPagination from "@/app/[locale]/company/news/components/BlogPostsPagination";
 import RecentPosts from "@/app/[locale]/company/news/components/RecentPosts";
 import TagsFilter from "@/app/[locale]/company/news/components/TagsFilter";
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
+import { TagsResponse } from "@/app/[locale]/company/news/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
+import Loader from "@/app/[locale]/components/common/Loader";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
-import { load } from "outstatic/server";
-import path from "path";
+import { Suspense } from "react";
 
-async function getOutstaticDirectory() {
-  return path.join(process.cwd(), "outstatic");
-}
-
-async function getBlogPostsAmount(searchParamsTags?: string) {
-  const tagsArray = searchParamsTags
-    ?.split("&")
-    .filter((tag) => tag)
-    .map((tag) => ({ tag }));
-
+async function getBlogPosts(currentPage: number, searchParamsTags?: string) {
   try {
-    await getOutstaticDirectory();
+    const tagsArray = searchParamsTags
+      ?.split("&")
+      .filter((tag) => tag)
+      .map((tag) => ({ tag }));
 
-    const db = await load();
-    const blogPosts = await db
-      .find({
-        collection: "blog",
-        $or: tagsArray || [{ collection: "blog" }],
-      })
-      .project(["tag"])
-      .toArray();
-
-    return blogPosts.length;
+    const path = `/blogs`;
+    const urlParamsObject = {
+      // locale: "de",
+      filters: {
+        tag: {
+          $or: tagsArray,
+        },
+      },
+      sort: { createdAt: "desc" },
+      populate: {
+        authorBio: {
+          populate: ["name", "avatar"],
+        },
+        tag: {
+          populate: ["tag"],
+        },
+      },
+      fields: ["title", "slug", "readingTime", "publishedAt"],
+      pagination: {
+        page: currentPage,
+        pageSize: BLOG_POSTS_PER_PAGE,
+      },
+    };
+    const responseData = await fetchAPI(path, urlParamsObject);
+    return responseData as StrapiBlogsWithPagination;
   } catch (error) {
-    return 0;
+    return {
+      data: [],
+      meta: {
+        pagination: {
+          total: 0,
+        },
+      },
+    };
   }
 }
 
-async function getBlogTags() {
+const getTags = async () => {
   try {
-    await getOutstaticDirectory();
-    const db = await load();
-    const blogPosts = await db
-      .find({
-        collection: "blog",
-      })
-      .project(["tag"])
-      .toArray();
-
-    const tags = [
-      ...new Set(
-        blogPosts.map(({ tag }) => {
-          if (!tag) return;
-          return tag;
-        })
-      ),
-    ].filter((tag) => tag);
-
-    return tags;
+    const path = `/tags`;
+    const urlParamsObject = {
+      fields: ["tag"],
+    };
+    const responseData: TagsResponse = await fetchAPI(path, urlParamsObject);
+    if (responseData) {
+      return responseData.data.map(({ attributes: { tag } }) => tag);
+    }
+    return [];
   } catch (error) {
     return [];
   }
-}
+};
 
 export default async function Blog({
   searchParams,
@@ -74,13 +83,13 @@ export default async function Blog({
 }) {
   const currentPage = Number(searchParams?.page) || 1;
   const searchParamsTags = searchParams?.tags;
-  const blogPostsAmount = await getBlogPostsAmount(searchParamsTags);
-  const tags = await getBlogTags();
+  const { data, meta } = await getBlogPosts(currentPage, searchParamsTags);
+  const tags = await getTags();
 
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
 
-  if (!blogPostsAmount)
+  if (!data.length)
     return (
       <>
         <HeadingWithBackground
@@ -89,14 +98,14 @@ export default async function Blog({
           tierTwoHeading={t("On the Media")}
           mobileBackgroundImage="/images/about/blog/blogMobileBackground.png"
         />
-        <div className="text-center [font-size:_clamp(20px,2vw,32px)]">
+        <div className="text-center [font-size:_clamp(20px,2vw,32px)] mb-14">
           {t("No posts")}
         </div>
       </>
     );
 
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <HeadingWithBackground
         backgroundImage="/images/about/blog/blogBackground.png"
         tierOneHeading={t("Read About Us")}
@@ -106,12 +115,9 @@ export default async function Blog({
       <div className="flex w-full justify-center flex-col items-center md:mt-0 -mt-[60px] pb-20">
         <BasicWidthContainer>
           <div className="flex gap-[60px] justify-between">
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <TagsFilter tags={tags as string[]} />
-              <BlogPostsList
-                currentPage={currentPage}
-                searchParamsTags={searchParamsTags}
-              />
+              <BlogPostsList blogsList={data} />
             </div>
             <div className="hidden flex-col gap-[60px] w-full max-w-[315px] min-[920px]:flex">
               {/* <MostPopularPosts /> */}
@@ -119,11 +125,11 @@ export default async function Blog({
             </div>
           </div>
           <BlogPostPagination
-            totalBlogPosts={blogPostsAmount}
+            totalBlogPosts={meta.pagination.total}
             itemsPerPage={BLOG_POSTS_PER_PAGE}
           />
         </BasicWidthContainer>
       </div>
-    </>
+    </Suspense>
   );
 }

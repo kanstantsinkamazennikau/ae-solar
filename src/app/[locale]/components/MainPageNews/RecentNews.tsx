@@ -1,42 +1,48 @@
 import Post from "@/app/[locale]/company/news/components/BlogPostsList/Post";
-import { BlogPost } from "@/app/[locale]/company/news/components/BlogPostsList/types";
+import {
+  BlogPost,
+  StrapiBlogsWithPagination,
+} from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import { fetchAPI, getStrapiMedia } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 import Link from "next/link";
 import { getDocumentSlugs, load } from "outstatic/server";
 
-export async function generateStaticParams() {
-  const blogs = getDocumentSlugs("blog");
-  return blogs.map((slug) => ({ slug }));
-}
-
-const getBlogPosts = async () => {
-  const db = await load();
-  const blogPosts = await db
-    .find({
-      collection: "blog",
-    })
-    .sort({ publishedAt: -1 })
-    .limit(3)
-    .project([
-      "title",
-      "slug",
-      "publishedAt",
-      "author",
-      "description",
-      "readingTime",
-      "tag",
-    ])
-    .toArray();
-
-  return blogPosts as BlogPost[];
+const getRecentPosts = async () => {
+  try {
+    const path = `/blogs`;
+    const urlParamsObject = {
+      // locale: "de",
+      sort: { createdAt: "desc" },
+      populate: {
+        authorBio: {
+          populate: ["name", "avatar"],
+        },
+        tag: {
+          populate: ["tag"],
+        },
+      },
+      fields: ["title", "readingTime", "publishedAt"],
+      pagination: {
+        page: 1,
+        pageSize: 5,
+      },
+    };
+    const responseData = await fetchAPI(path, urlParamsObject);
+    return responseData as StrapiBlogsWithPagination;
+  } catch (error) {
+    return {
+      data: [],
+    };
+  }
 };
 
 export default async function RecentNews() {
-  const blogPosts = await getBlogPosts();
+  const blogPosts = await getRecentPosts();
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
 
@@ -77,14 +83,30 @@ export default async function RecentNews() {
             [&>*:first-child]:border-t-0
           "
         >
-          {blogPosts.map(
-            ({ slug, title, publishedAt, author, readingTime, tag }) => (
+          {blogPosts.data.map(({ id, attributes }) => {
+            const authorPicture = getStrapiMedia(
+              attributes.authorBio.data?.attributes.avatar.data.attributes.url
+            );
+            const authorName = attributes.authorBio.data?.attributes.name;
+            const tag = attributes.tag.data?.attributes.tag;
+
+            return (
               <Post
-                {...{ slug, title, publishedAt, author, readingTime, tag }}
-                key={slug}
+                {...{
+                  id,
+                  title: attributes.title,
+                  publishedAt: attributes.publishedAt,
+                  author: {
+                    name: authorName,
+                    picture: authorPicture,
+                  },
+                  readingTime: attributes.readingTime,
+                  tag,
+                }}
+                key={id}
               />
-            )
-          )}
+            );
+          })}
           <Link href="company/news" className="mt-10 mx-auto">
             <Button style="outline" showArrow>
               <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">

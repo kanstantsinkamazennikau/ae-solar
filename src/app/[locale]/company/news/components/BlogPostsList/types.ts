@@ -22,13 +22,12 @@ export interface Description {
 }
 
 export interface BlogPostsListProps {
-  currentPage: number;
-  searchParamsTags?: string;
+  blogsList: StrapiBlog[];
 }
 
 export interface PostProps {
+  id: number;
   title: string;
-  slug: string;
   publishedAt: string;
   author: {
     name: string;
@@ -40,6 +39,18 @@ export interface PostProps {
 
 export interface StrapiBlogs {
   data: StrapiBlog[];
+}
+
+export interface StrapiBlogsWithPagination {
+  data: StrapiBlog[];
+  meta: {
+    pagination: {
+      page: number;
+      pageSize: number;
+      pageCount: number;
+      total: number;
+    };
+  };
 }
 
 export interface StrapiBlogAttributes {

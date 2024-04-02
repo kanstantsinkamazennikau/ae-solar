@@ -23,3 +23,12 @@ export interface BlogPosts {
 export interface TagsFilterProps {
   tags: string[];
 }
+
+export interface TagsResponse {
+  data: {
+    id: number;
+    attributes: {
+      tag: string;
+    };
+  }[];
+}

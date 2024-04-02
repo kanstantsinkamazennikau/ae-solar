@@ -1,33 +1,60 @@
-import { BlogPost } from "@/app/[locale]/company/news/components/BlogPostsList/types";
+import { MetadataResponse } from "@/app/[locale]/company/news/[slug]/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import Image from "next/image";
-import { getDocumentBySlug } from "outstatic/server";
 
 export async function generateMetadata({
-  params: { slug },
+  params: { slug, locale },
 }: {
-  params: { slug: string };
+  params: { slug: string; locale: LocaleTypes };
 }) {
-  const blogPost = (await getDocumentBySlug("blog", slug, [
-    "title",
-  ])) as BlogPost;
-  const formattedTitle =
-    blogPost.title.slice(0, 1).toUpperCase() +
-    blogPost.title.slice(1).toLowerCase();
-  const title = `AE-Solar | ${formattedTitle}`;
-  const description = `AE-Solar | ${formattedTitle}`;
+  const { t } = await serverTranslation(locale, "translation");
+  const defaultTitle = `AE-Solar | ${t("News")}`;
+  const defaultDescription = `AE-Solar | ${t("Read About Us")} ${t(
+    "On the Media"
+  )}`;
 
-  return {
-    title,
-    description,
-    keywords: [],
-    metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
-    openGraph: {
+  try {
+    const path = `/blogs`;
+    const urlParamsObject = {
+      filters: { slug },
+      fields: ["title"],
+      populate: {
+        seo: {
+          populate: "*",
+        },
+      },
+    };
+    const response: MetadataResponse = await fetchAPI(path, urlParamsObject);
+    const title = response.data[0].attributes.seo[0].metaTitle || defaultTitle;
+    const description =
+      response.data[0].attributes.seo[0].metaTitle || defaultDescription;
+    return {
       title,
       description,
-      type: "website",
-    },
-  };
+      keywords: [],
+      metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+      openGraph: {
+        title,
+        description,
+        type: "website",
+      },
+    };
+  } catch (error) {
+    return {
+      title: defaultTitle,
+      description: defaultDescription,
+      keywords: [],
+      metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+      openGraph: {
+        title: defaultTitle,
+        description: defaultDescription,
+        type: "website",
+      },
+    };
+  }
 }
 
 export default function DocumentsLayout({
