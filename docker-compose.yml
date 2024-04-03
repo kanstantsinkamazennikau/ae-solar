@@ -13,8 +13,8 @@ services:
     restart: always
     ports:
       - "80:80"
-    depends_on:
-      - pgadmin
+    # depends_on:
+    #   - pgadmin
     volumes:
       - ./html:/var/www/html
       - /home/aesolar/docker/config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
