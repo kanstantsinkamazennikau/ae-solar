@@ -17,4 +17,4 @@ jobs:
       - name: build
         run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker-compose build
       - name: up
-        run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker-compose up
+        run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker-compose up -d
