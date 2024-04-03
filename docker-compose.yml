@@ -19,7 +19,7 @@ services:
     env_file:
       - ./.env
     volumes:
-      - ./data/db:/var/lib/postgresql/data
+      - /home/aesolar/data/db:/var/lib/postgresql/data
     networks:
       - aesolar_network
 
@@ -42,7 +42,7 @@ services:
     env_file:
       - ./.env
     volumes:
-      - ./data/pgadmin:/var/lib/pgadmin
+      - /home/aesolar/data/pgadmin:/var/lib/pgadmin
       - ./config/pgadmin/servers.json:/pgadmin4/servers.json
       - ./config/pgadmin/pgpass:/pgadmin4/pgpass
     networks:
