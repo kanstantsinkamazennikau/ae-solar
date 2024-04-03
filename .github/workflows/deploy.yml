@@ -15,6 +15,6 @@ jobs:
       - name: copy env
         run: cp /home/aesolar/docker/.env .env
       - name: build
-        run: sudo docker-compose build
+        run: docker-compose build
       - name: up
-        run: sudo docker-compose up
+        run: docker-compose up
