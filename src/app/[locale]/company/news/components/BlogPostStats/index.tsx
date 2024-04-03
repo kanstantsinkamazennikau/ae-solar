@@ -7,7 +7,7 @@ const statisticsParamsWithIconsMapping = {
 };
 
 const defaultValues = {
-  readingTime: "5min",
+  readingTime: "5 min",
   author: "NL",
 };
 
@@ -30,6 +30,7 @@ export default function BlogPostStats({
           key={statParam}
           className={`
             flex
+            items-center
             border-r
             border-solid
             ${dividerColor === "gray" ? "border-[#2D2D2D]" : "border-base-red"}
@@ -37,21 +38,38 @@ export default function BlogPostStats({
             items-center
           `}
         >
-          <Image
-            src={`/images/about/blog/${
-              statisticsParamsWithIconsMapping[
-                statParam as keyof typeof statisticsParamsWithIconsMapping
-              ]
-            }.svg`}
-            alt={statParam}
-            width={16}
-            height={16}
-            className="mr-1"
-          />
-          <span className="[font-size:_clamp(12px,1vw,14px)] font- font-walsheim text-dark-gray-900 leading-[100%]">
+          {statParam !== "author" ? (
+            <Image
+              src={`/images/about/blog/${
+                statisticsParamsWithIconsMapping[
+                  statParam as keyof typeof statisticsParamsWithIconsMapping
+                ]
+              }.svg`}
+              alt={statParam}
+              width={16}
+              height={16}
+              className="mr-1 w-4 h-4"
+            />
+          ) : (
+            <Image
+              src={
+                statistics.image ||
+                `/images/about/blog/${
+                  statisticsParamsWithIconsMapping[
+                    statParam as keyof typeof statisticsParamsWithIconsMapping
+                  ]
+                }.svg`
+              }
+              alt={statParam}
+              width={16}
+              height={16}
+              className="mr-1 rounded-full w-4 h-4"
+            />
+          )}
+          <p className="[font-size:_clamp(12px,1vw,14px)] font- font-walsheim text-dark-gray-900 leading-[normal]">
             {statistics[statParam as keyof typeof statistics] ||
               defaultValues[statParam as keyof typeof defaultValues]}
-          </span>
+          </p>
         </div>
       ))}
     </div>

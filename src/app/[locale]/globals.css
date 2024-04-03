@@ -37,6 +37,24 @@
   .blog_post_content ul,
   .blog_post_content ol {
     list-style: revert;
+    padding: 0 20px;
+    font-size: clamp(16px, 1.5vw, 20px);
+  }
+
+  .blog_post_content p {
+    font-size: clamp(16px, 1.5vw, 20px);
+  }
+
+  .blog_post_content blockquote {
+    font-size: clamp(16px, 1.5vw, 20px);
+  }
+
+  .blog_post_content blockquote::before {
+    content: "\201c";
+  }
+
+  .blog_post_content blockquote::after {
+    content: "\201d";
   }
 }
 

@@ -1,27 +1,35 @@
-import { RecentPost } from "@/app/[locale]/company/news/components/RecentPosts/types";
+import { StrapiBlogsWithPagination } from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import Link from "next/link";
-import { load } from "outstatic/server";
 
-async function getRecentPostsData() {
-  const db = await load();
-  const recentPosts = await db
-    .find({
-      collection: "blog",
-    })
-    .sort({ publishedAt: -1 })
-    .project(["title", "slug", "tag"])
-    .limit(5)
-    .toArray();
-
-  return recentPosts as RecentPost[];
-}
+const getRecentPosts = async () => {
+  try {
+    const path = `/blogs`;
+    const urlParamsObject = {
+      // locale: "de",
+      sort: { createdAt: "desc" },
+      populate: {
+        tag: {
+          populate: ["tag"],
+        },
+      },
+      fields: ["title", "slug"],
+    };
+    const responseData = await fetchAPI(path, urlParamsObject);
+    return responseData as StrapiBlogsWithPagination;
+  } catch (error) {
+    return {
+      data: [],
+    };
+  }
+};
 
 export default async function RecentPosts() {
-  const recentPosts = await getRecentPostsData();
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
+  const recentPosts = await getRecentPosts();
 
   return (
     <aside
@@ -37,15 +45,15 @@ export default async function RecentPosts() {
       <div className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold mb-4">
         {t("Recent Posts")}
       </div>
-      {recentPosts.map(({ title, slug, tag }) => (
+      {recentPosts.data?.map(({ id, attributes: { title, tag } }) => (
         <Link
-          key={title}
-          href={`blog/${slug}`}
+          key={id}
+          href={`news/${id}`}
           className="py-3 hover:text-base-red border-t border-solid border-[#191919] leading-[150%]"
         >
           {tag && (
             <div className="[font-size:_clamp(8px,1vw,12px)] uppercase font-extrabold text-[#505050] mb-1">
-              {tag}
+              {tag.data.attributes.tag}
             </div>
           )}
           <div className="[font-size:_clamp(12px,1vw,16px)] -tracking-[0.32px] font-normal">

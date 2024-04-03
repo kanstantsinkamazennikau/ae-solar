@@ -96,7 +96,7 @@ export default function TagsFilter({ tags }: TagsFilterProps) {
             </Button>
           )}
         </div>
-        {tags.map((tag) => {
+        {tags?.map((tag) => {
           const isAppliedFilter = params.get("tags")?.includes(tag);
 
           return (
