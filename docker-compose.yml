@@ -7,3 +7,65 @@ services:
     build: .
     ports:
       - "3000:3000"
+    networks:
+      - aesolar_network
+  postgres:
+    image: postgres:alpine
+    container_name: postgres_db
+    restart: always
+    shm_size: 128mb
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./.env
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    networks:
+      - aesolar_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    entrypoint: >
+      /bin/sh -c "
+      cp -f /pgadmin4/pgpass /var/lib/pgadmin/;
+      chmod 600 /var/lib/pgadmin/pgpass;
+      chown pgadmin:pgadmin /var/lib/pgadmin/pgpass;
+      /entrypoint.sh
+      "
+    user: root
+    depends_on:
+      - postgres
+    ports:
+      - "8888:80"
+    env_file:
+      - ./.env
+    volumes:
+      - ./data/pgadmin:/var/lib/pgadmin
+      - ./config/pgadmin/servers.json:/pgadmin4/servers.json
+      - ./config/pgadmin/pgpass:/pgadmin4/pgpass
+    networks:
+      - aesolar_network
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_server
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - pgadmin
+    volumes:
+      - ./html:/var/www/html
+      - ./config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - aesolar_network
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+
+networks:
+  aesolar_network:
+    driver: bridge
