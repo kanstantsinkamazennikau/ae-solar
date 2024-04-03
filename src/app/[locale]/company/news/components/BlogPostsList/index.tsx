@@ -7,7 +7,7 @@ export default async function BlogPostsList({ blogsList }: BlogPostsListProps) {
     <div className="flex flex-col w-full max-w-[945px]">
       {blogsList.map(({ attributes, id }) => {
         const authorPicture = getStrapiMedia(
-          attributes.authorBio.data?.attributes.avatar.data.attributes.url
+          attributes.authorBio.data?.attributes.avatar.data?.attributes.url
         );
         const authorName = attributes.authorBio.data?.attributes.name;
         const tag = attributes.tag.data?.attributes.tag;

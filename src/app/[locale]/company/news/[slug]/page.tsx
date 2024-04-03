@@ -46,7 +46,7 @@ export default async function BlogPost({
   const { attributes } = data[0];
 
   const authorPicture = getStrapiMedia(
-    attributes.authorBio.data?.attributes.avatar.data.attributes.url
+    attributes.authorBio.data?.attributes.avatar.data?.attributes.url
   );
   const authorName = attributes.authorBio.data?.attributes.name;
 
