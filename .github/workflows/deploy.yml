@@ -13,7 +13,7 @@ jobs:
       - name: copy config
         run: cp -r /home/aesolar/docker/config .
       - name: copy env
-        run: cp /home/aesolar/docker/.env .env
+        run: cp /home/aesolar/docker/fontend.env .env
       - name: build
         run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker-compose build
       - name: up
