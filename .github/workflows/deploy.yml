@@ -1,0 +1,30 @@
+name: web ci
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "yarn"
+      - name: install dependencies
+        run: yarn install --immutable
+      - name: copy config
+        run: cp /var/www/quizy.web/.env .env
+      - name: build
+        run: npm run build:web:prod
+
+  deploy:
+    runs-on: self-hosted
+    needs: [build]
+    steps:
+      - run: rm -rf /var/www/quizy.web/dist
+      - run: cp -r ./dist /var/www/quizy.web
