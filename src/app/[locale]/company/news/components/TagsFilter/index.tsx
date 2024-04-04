@@ -137,7 +137,7 @@ export default function TagsFilter({ tags }: TagsFilterProps) {
         {!!params.get("tags") && (
           <Button
             style="textOnly"
-            externalStyle="!px-0 ml-2 min-[920px]:flex hidden"
+            externalStyle="!px-0 ml-2 min-[920px]:flex hidden pb-0 pt-0"
             onClick={resetFilter}
           >
             <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red">
