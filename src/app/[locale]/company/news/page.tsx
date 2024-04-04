@@ -48,7 +48,7 @@ async function getBlogPosts(currentPage: number, searchParamsTags?: string) {
     return responseData as StrapiBlogsWithPagination;
   } catch (error) {
     return {
-      data: null,
+      data: [],
       meta: {
         pagination: {
           total: 0,
