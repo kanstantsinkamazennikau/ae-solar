@@ -16,6 +16,10 @@ const getRecentPosts = async () => {
         },
       },
       fields: ["title", "slug"],
+      pagination: {
+        page: 1,
+        pageSize: 5,
+      },
     };
     const responseData = await fetchAPI(path, urlParamsObject);
     return responseData as StrapiBlogsWithPagination;

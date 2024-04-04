@@ -10,7 +10,7 @@ const getStrapiURL = (path = "") => {
 export async function fetchAPI(
   path: string,
   urlParamsObject = {},
-  options = {}
+  options: RequestInit = {}
 ) {
   try {
     const mergedOptions = {

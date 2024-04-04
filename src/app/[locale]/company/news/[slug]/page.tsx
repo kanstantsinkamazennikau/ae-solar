@@ -1,9 +1,12 @@
 import BlogPostContent from "@/app/[locale]/company/news/[slug]/BlogPostContent";
+import { UpdateViewsResponse } from "@/app/[locale]/company/news/[slug]/types";
 import BlogPostStats from "@/app/[locale]/company/news/components/BlogPostStats";
 import { StrapiBlogs } from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { fetchAPI, getStrapiMedia } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
+
+export const revalidate = 1800;
 
 const getPostBySlug = async (slug: string) => {
   try {
@@ -27,6 +30,36 @@ const getPostBySlug = async (slug: string) => {
   }
 };
 
+const updatePostViews = async (slug: string) => {
+  try {
+    const path = `/blogs/${slug}`;
+    const urlParamsObject = {
+      fields: ["views"],
+    };
+    const responseData: UpdateViewsResponse = await fetchAPI(
+      path,
+      urlParamsObject
+    );
+    if (responseData.data) {
+      const {
+        attributes: { views },
+      } = responseData.data;
+      const options: RequestInit = {
+        method: "PUT",
+        body: JSON.stringify({
+          data: {
+            views: Number(views) + 1,
+          },
+        }),
+      };
+
+      await fetchAPI(path, urlParamsObject, options);
+    }
+  } catch (error) {
+    return { data: [] };
+  }
+};
+
 export default async function BlogPost({
   params: { slug },
 }: {
@@ -35,6 +68,7 @@ export default async function BlogPost({
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
   const { data } = await getPostBySlug(slug);
+  await updatePostViews(slug);
 
   if (!data.length)
     return (

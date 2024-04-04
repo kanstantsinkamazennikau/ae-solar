@@ -1,6 +1,7 @@
 import BlogPostsList from "@/app/[locale]/company/news/components/BlogPostsList";
 import { StrapiBlogsWithPagination } from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import BlogPostPagination from "@/app/[locale]/company/news/components/BlogPostsPagination";
+import MostPopularPosts from "@/app/[locale]/company/news/components/MostPopularPosts";
 import RecentPosts from "@/app/[locale]/company/news/components/RecentPosts";
 import TagsFilter from "@/app/[locale]/company/news/components/TagsFilter";
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
@@ -47,7 +48,7 @@ async function getBlogPosts(currentPage: number, searchParamsTags?: string) {
     return responseData as StrapiBlogsWithPagination;
   } catch (error) {
     return {
-      data: [],
+      data: null,
       meta: {
         pagination: {
           total: 0,
@@ -64,12 +65,12 @@ const getTags = async () => {
       fields: ["tag"],
     };
     const responseData: TagsResponse = await fetchAPI(path, urlParamsObject);
-    if (responseData) {
-      return responseData.data.map(({ attributes: { tag } }) => tag);
+    if (responseData.data) {
+      return { data: responseData.data.map(({ attributes: { tag } }) => tag) };
     }
-    return [];
+    return { data: [] };
   } catch (error) {
-    return [];
+    return { data: [] };
   }
 };
 
@@ -85,11 +86,10 @@ export default async function Blog({
   const searchParamsTags = searchParams?.tags;
   const { data, meta } = await getBlogPosts(currentPage, searchParamsTags);
   const tags = await getTags();
-
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
 
-  if (!data.length)
+  if (!data)
     return (
       <>
         <HeadingWithBackground
@@ -98,6 +98,17 @@ export default async function Blog({
           tierTwoHeading={t("On the Media")}
           mobileBackgroundImage="/images/about/blog/blogMobileBackground.png"
         />
+        {!!tags.data.length && (
+          <div className="flex w-full justify-center flex-col items-center md:mt-0 -mt-[60px] pb-20">
+            <BasicWidthContainer>
+              <div className="flex gap-[60px] justify-between">
+                <div className="flex flex-col w-full">
+                  <TagsFilter tags={tags.data as string[]} />
+                </div>
+              </div>
+            </BasicWidthContainer>
+          </div>
+        )}
         <div className="text-center [font-size:_clamp(20px,2vw,32px)] mb-14">
           {t("No posts")}
         </div>
@@ -116,11 +127,11 @@ export default async function Blog({
         <BasicWidthContainer>
           <div className="flex gap-[60px] justify-between">
             <div className="flex flex-col w-full">
-              <TagsFilter tags={tags as string[]} />
+              <TagsFilter tags={tags.data as string[]} />
               <BlogPostsList blogsList={data} />
             </div>
-            <div className="hidden flex-col gap-[60px] w-full max-w-[315px] min-[920px]:flex">
-              {/* <MostPopularPosts /> */}
+            <div className="hidden flex-col gap-[40px] w-full max-w-[315px] min-[920px]:flex">
+              <MostPopularPosts />
               <RecentPosts />
             </div>
           </div>

@@ -19,7 +19,7 @@ export async function generateMetadata({
   try {
     const path = `/blogs`;
     const urlParamsObject = {
-      filters: { slug },
+      filters: { id: slug },
       fields: ["title"],
       populate: {
         seo: {
