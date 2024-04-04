@@ -45,10 +45,11 @@ async function getBlogPosts(currentPage: number, searchParamsTags?: string) {
       },
     };
     const responseData = await fetchAPI(path, urlParamsObject);
+
     return responseData as StrapiBlogsWithPagination;
   } catch (error) {
     return {
-      data: null,
+      data: [],
       meta: {
         pagination: {
           total: 0,
@@ -89,7 +90,7 @@ export default async function Blog({
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
 
-  if (!data)
+  if (!data.length)
     return (
       <>
         <HeadingWithBackground
