@@ -19,3 +19,12 @@ export interface MetadataResponse {
     };
   }[];
 }
+
+export interface UpdateViewsResponse {
+  data: {
+    id: number;
+    attributes: {
+      views: string;
+    };
+  };
+}
