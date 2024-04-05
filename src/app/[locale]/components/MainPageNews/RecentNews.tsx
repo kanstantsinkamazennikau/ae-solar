@@ -89,7 +89,6 @@ export default async function RecentNews() {
                   id,
                   title: attributes.title,
                   publishedAt: attributes.publishedAt,
-                  readingTime: attributes.readingTime,
                   tag,
                 }}
                 key={id}
