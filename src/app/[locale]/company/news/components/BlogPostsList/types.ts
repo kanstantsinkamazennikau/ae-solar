@@ -29,7 +29,8 @@ export interface PostProps {
   id: number;
   title: string;
   publishedAt: string;
-  author: {
+  body: BlocksContent;
+  author?: {
     name: string;
     picture: string | null;
   };

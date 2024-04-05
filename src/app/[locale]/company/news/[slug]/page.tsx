@@ -1,9 +1,8 @@
 import BlogPostContent from "@/app/[locale]/company/news/[slug]/BlogPostContent";
 import { UpdateViewsResponse } from "@/app/[locale]/company/news/[slug]/types";
-import BlogPostStats from "@/app/[locale]/company/news/components/BlogPostStats";
 import { StrapiBlogs } from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import { fetchAPI, getStrapiMedia } from "@/app/[locale]/utils/fetch-api";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 
 export const revalidate = 1800;
@@ -14,14 +13,14 @@ const getPostBySlug = async (slug: string) => {
     const urlParamsObject = {
       filters: { id: slug },
       populate: {
-        authorBio: {
-          populate: ["name", "avatar"],
-        },
+        // authorBio: {
+        //   populate: ["name", "avatar"],
+        // },
         tag: {
           populate: ["tag"],
         },
       },
-      fields: ["title", "slug", "readingTime", "publishedAt", "body"],
+      fields: ["title", "slug", "publishedAt", "body"],
     };
     const response = await fetchAPI(path, urlParamsObject);
     return response as StrapiBlogs;
@@ -79,25 +78,18 @@ export default async function BlogPost({
 
   const { attributes } = data[0];
 
-  const authorPicture = getStrapiMedia(
-    attributes.authorBio.data?.attributes.avatar.data?.attributes.url
-  );
-  const authorName = attributes.authorBio.data?.attributes.name;
+  // const authorPicture = getStrapiMedia(
+  //   attributes.authorBio.data?.attributes.avatar.data?.attributes.url
+  // );
+  // const authorName = attributes.authorBio.data?.attributes.name;
 
-  const { title, body, readingTime } = attributes;
+  const { title, body } = attributes;
 
   return (
     <div className="-mt-[160px] relative z-10">
       <div className="[font-size:_clamp(32px,4vw,64px)] font-semibold leading-[130%] mb-6">
         {title.slice(0, 1).toUpperCase() + title.slice(1).toLowerCase()}
       </div>
-      <BlogPostStats
-        statistics={{
-          author: authorName,
-          image: authorPicture,
-          readingTime,
-        }}
-      />
       <div className="flex flex-col mt-14 font-walsheim max-w-[900px] mx-auto w-full leading-[150%] blog_post_content">
         <BlogPostContent body={body} />
       </div>

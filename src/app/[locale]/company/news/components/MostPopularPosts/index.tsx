@@ -60,7 +60,7 @@ export default async function MostPopularPosts() {
             href={`news/${id}`}
             className="py-3 hover:text-base-red border-t border-solid border-[#191919] leading-[150%]"
           >
-            {tag && (
+            {tag.data && (
               <div className="[font-size:_clamp(8px,1vw,12px)] uppercase font-extrabold text-[#505050] mb-1">
                 {tag.data.attributes.tag}
               </div>

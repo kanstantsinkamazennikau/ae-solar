@@ -31,14 +31,14 @@ async function getBlogPosts(currentPage: number, searchParamsTags?: string) {
       },
       sort: { createdAt: "desc" },
       populate: {
-        authorBio: {
-          populate: ["name", "avatar"],
-        },
+        // authorBio: {
+        //   populate: ["name", "avatar"],
+        // },
         tag: {
           populate: ["tag"],
         },
       },
-      fields: ["title", "slug", "readingTime", "publishedAt"],
+      fields: ["title", "slug", "publishedAt", "body"],
       pagination: {
         page: currentPage,
         pageSize: BLOG_POSTS_PER_PAGE,

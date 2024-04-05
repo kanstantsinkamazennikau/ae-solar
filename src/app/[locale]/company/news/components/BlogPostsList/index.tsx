@@ -1,15 +1,14 @@
 import Post from "@/app/[locale]/company/news/components/BlogPostsList/Post";
 import { BlogPostsListProps } from "@/app/[locale]/company/news/components/BlogPostsList/types";
-import { getStrapiMedia } from "@/app/[locale]/utils/fetch-api";
 
 export default async function BlogPostsList({ blogsList }: BlogPostsListProps) {
   return (
     <div className="flex flex-col w-full max-w-[945px]">
       {blogsList.map(({ attributes, id }) => {
-        const authorPicture = getStrapiMedia(
-          attributes.authorBio.data?.attributes.avatar.data?.attributes.url
-        );
-        const authorName = attributes.authorBio.data?.attributes.name;
+        // const authorPicture = getStrapiMedia(
+        //   attributes.authorBio.data?.attributes.avatar.data?.attributes.url
+        // );
+        // const authorName = attributes.authorBio.data?.attributes.name;
         const tag = attributes.tag.data?.attributes.tag;
 
         return (
@@ -18,12 +17,8 @@ export default async function BlogPostsList({ blogsList }: BlogPostsListProps) {
               id,
               title: attributes.title,
               publishedAt: attributes.publishedAt,
-              author: {
-                name: authorName,
-                picture: authorPicture,
-              },
-              readingTime: attributes.readingTime,
               tag,
+              body: attributes.body!,
             }}
             key={attributes.slug}
           />
