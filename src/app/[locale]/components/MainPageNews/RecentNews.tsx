@@ -1,16 +1,12 @@
 import Post from "@/app/[locale]/company/news/components/BlogPostsList/Post";
-import {
-  BlogPost,
-  StrapiBlogsWithPagination,
-} from "@/app/[locale]/company/news/components/BlogPostsList/types";
+import { StrapiBlogsWithPagination } from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import { fetchAPI, getStrapiMedia } from "@/app/[locale]/utils/fetch-api";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 import Link from "next/link";
-import { getDocumentSlugs, load } from "outstatic/server";
 
 const getRecentPosts = async () => {
   try {
