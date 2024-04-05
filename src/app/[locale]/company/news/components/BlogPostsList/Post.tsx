@@ -12,11 +12,13 @@ export default async function Post({
   body,
   tag,
 }: PostProps) {
-  const firstParagraph = body.find(
-    (el) =>
-      el.type === "paragraph" &&
-      el.children.some((chld) => Object.keys(chld).length === 2)
-  );
+  const firstParagraph =
+    body &&
+    body.find(
+      (el) =>
+        el.type === "paragraph" &&
+        el.children.some((chld) => Object.keys(chld).length === 2)
+    );
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
 
