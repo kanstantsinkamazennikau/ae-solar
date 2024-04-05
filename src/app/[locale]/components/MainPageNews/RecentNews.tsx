@@ -19,14 +19,11 @@ const getRecentPosts = async () => {
       // locale: "de",
       sort: { createdAt: "desc" },
       populate: {
-        authorBio: {
-          populate: ["name", "avatar"],
-        },
         tag: {
           populate: ["tag"],
         },
       },
-      fields: ["title", "readingTime", "publishedAt"],
+      fields: ["title", "publishedAt"],
       pagination: {
         page: 1,
         pageSize: 5,
@@ -84,10 +81,6 @@ export default async function RecentNews() {
           "
         >
           {blogPosts.data.map(({ id, attributes }) => {
-            const authorPicture = getStrapiMedia(
-              attributes.authorBio.data?.attributes.avatar.data?.attributes.url
-            );
-            const authorName = attributes.authorBio.data?.attributes.name;
             const tag = attributes.tag.data?.attributes.tag;
 
             return (
@@ -96,10 +89,6 @@ export default async function RecentNews() {
                   id,
                   title: attributes.title,
                   publishedAt: attributes.publishedAt,
-                  author: {
-                    name: authorName,
-                    picture: authorPicture,
-                  },
                   readingTime: attributes.readingTime,
                   tag,
                 }}
