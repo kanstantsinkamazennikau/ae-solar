@@ -378,39 +378,43 @@ export const FAQ_ACCORDION_DATA = [
 //FOOTER
 export const FOOTER_LINKS_ARRAY = [
   {
-    category: { title: "Products", link: "/products" },
-    links: [
-      { title: "Aurora", link: "/products/Aurora" },
-      { title: "Meteor", link: "/products/Meteor" },
-      { title: "Comet", link: "/products/Comet" },
-      { title: "Terra", link: "/products/Terra" },
-      { title: "ShadeStar", link: "/products/ShadeStar" },
-      { title: "Neptune", link: "/products/Neptune" },
+    text: "Products",
+    url: "/products",
+    subMenu: [
+      { text: "Aurora", url: "/products/Aurora" },
+      { text: "Meteor", url: "/products/Meteor" },
+      { text: "Comet", url: "/products/Comet" },
+      { text: "Terra", url: "/products/Terra" },
+      { text: "ShadeStar", url: "/products/ShadeStar" },
+      { text: "Neptune", url: "/products/Neptune" },
     ],
   },
   {
-    category: { title: "About Us", link: "/company" },
-    links: [
-      { title: "Company", link: "/company" },
-      { title: "Manufacturer", link: "/company/manufacturer" },
-      { title: "B2B Solutions", link: "/solutions" },
-      { title: "Contacts", link: "/contacts" },
-      { title: "News", link: "/company/news" },
-      { title: "FAQ", link: "/company/faq" },
+    text: "About Us",
+    url: "/company",
+    subMenu: [
+      { text: "Company", url: "/company" },
+      { text: "Manufacturer", url: "/company/manufacturer" },
+      { text: "B2B Solutions", url: "/solutions" },
+      { text: "Contacts", url: "/contacts" },
+      { text: "News", url: "/company/news" },
+      { text: "FAQ", url: "/company/faq" },
     ],
   },
   {
-    category: { title: "Legal Info", link: "/company/imprint" },
-    links: [
-      { title: "Imprint", link: "/company/imprint" },
-      { title: "Publisher's", link: "/company/publishers_info" },
+    text: "Legal Info",
+    url: "/company/imprint",
+    subMenu: [
+      { text: "Imprint", url: "/company/imprint" },
+      { text: "Publisher's", url: "/company/publishers_info" },
     ],
   },
   {
-    category: { title: "Documents", link: "/documents" },
-    links: [
-      { title: "Datasheet", link: "/documents" },
-      { title: "Warranty", link: "/documents" },
+    text: "Documents",
+    url: "/documents",
+    subMenu: [
+      { text: "Datasheet", url: "/documents" },
+      { text: "Warranty", url: "/documents" },
     ],
   },
 ];

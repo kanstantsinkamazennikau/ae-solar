@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-export function FooterCategory({ category, links }: FooterCategoryProps) {
+export function FooterCategory({ subMenu, text, url }: FooterCategoryProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
   const contentHeight = useRef<HTMLDivElement>(null);
@@ -28,9 +28,9 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
       {/* DESKTOP */}
       <div className="md:block hidden">
         <div className="text-dark-gray-900 mb-6 font-medium [font-size:_clamp(14px,2vw,24px)]">
-          <span className="md:block hidden">{t(category.title)}</span>
+          <span className="md:block hidden">{text}</span>
           <Link
-            href={category.link}
+            href={url}
             className="
           hover:text-base-red
             active::text-base-red
@@ -38,12 +38,12 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
             block
           "
           >
-            {t(category.title)}
+            {t(text)}
           </Link>
         </div>
-        {links.map(({ title, link }) => (
+        {subMenu.map(({ url, text }) => (
           <Link
-            href={link}
+            href={url}
             className="
             text-base
             mb-5
@@ -53,9 +53,9 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
             hover:text-base-red
             active::text-base-red
           "
-            key={title}
+            key={text}
           >
-            {t(title)}
+            {text}
           </Link>
         ))}
       </div>
@@ -71,7 +71,7 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
               isOpenItem ? "min-[500px]:text-white" : "text-dark-gray-900"
             }`}
           >
-            {t(category.title)}
+            {t(text)}
           </p>
           <Image
             className={`
@@ -94,9 +94,9 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
           style={isOpenItem ? { height } : { height: 0 }}
           className={`transition-all duration-[400ms] ease-in-out overflow-hidden flex flex-col`}
         >
-          {links.map(({ title, link }) => (
+          {subMenu.map(({ text, url }) => (
             <Link
-              href={link}
+              href={url}
               className="
                 text-base
                 mb-5
@@ -106,9 +106,9 @@ export function FooterCategory({ category, links }: FooterCategoryProps) {
                 min-[500px]:pl-0
                 pl-4
               "
-              key={title}
+              key={text}
             >
-              {t(title)}
+              {text}
             </Link>
           ))}
         </div>

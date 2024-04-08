@@ -14,6 +14,7 @@ import { useContext } from "react";
 export default function Models({
   isLink,
   isProductionIntroBlock = false,
+  chooseYourModuleText,
 }: ModelsProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
@@ -94,7 +95,7 @@ export default function Models({
       {isLink && (
         <Button onClick={handleClick} size="extrasmall" style="outline">
           <span className="font-semibold text-sm leading-[120%] [font-size:_clamp(14px,1vw,16px)]">
-            {t("Choose Your Module")}
+            {chooseYourModuleText}
           </span>
         </Button>
       )}

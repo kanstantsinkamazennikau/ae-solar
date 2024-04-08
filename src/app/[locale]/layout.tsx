@@ -17,6 +17,12 @@ import ProductsContextProvider from "@/app/[locale]/context/productsContext";
 import MainPageVideoContextProvider from "@/app/[locale]/context/mainPageVideoContext";
 import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 import MobileSideMenuProvider from "@/app/[locale]/context/mobileSideMenuContext";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
+import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
+import {
+  FooterCopyright,
+  FooterNavigation,
+} from "@/app/[locale]/components/common/Footer/types";
 
 const walsheim = localFont({
   src: [
@@ -141,7 +147,33 @@ export async function generateMetadata({
   };
 }
 
-export default function RootLayout({
+const getHeaderLayoutData = async () => {
+  const path = `/pages`;
+  const headerUrlParamsObject = {
+    filters: { slug: "header" },
+    populate: {
+      contentSections: {
+        populate: "*",
+      },
+    },
+  };
+
+  const footerUrlParamsObject = {
+    filters: { slug: "footer" },
+    populate: {
+      contentSections: {
+        populate: "*",
+      },
+    },
+  };
+  const responseData = await Promise.all([
+    fetchAPI(path, headerUrlParamsObject),
+    fetchAPI(path, footerUrlParamsObject),
+  ]);
+  return responseData;
+};
+
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
@@ -150,6 +182,15 @@ export default function RootLayout({
 }) {
   if (!locales.includes(locale as any)) notFound();
   const url = headers().get("x-url")!.split("/");
+  const [headerData, footerData] = await getHeaderLayoutData();
+
+  const {
+    attributes: { contentSections: headerContentSections },
+  } = headerData.data[0];
+
+  const {
+    attributes: { contentSections: footerContentSections },
+  } = footerData.data[0];
 
   return (
     <html lang={locale}>
@@ -165,9 +206,21 @@ export default function RootLayout({
                   <ProductsContextProvider>
                     <MainPageVideoContextProvider>
                       <StickyNavigationProvider>
-                        <Navigation />
+                        <Navigation contentSections={headerContentSections} />
                         {children}
-                        <Footer />
+
+                        <Footer
+                          contentSections={{
+                            navigation: footerContentSections.filter(
+                              (content: FooterNavigation) =>
+                                content.__component === "layout.header"
+                            ),
+                            copyright: footerContentSections.filter(
+                              (content: FooterCopyright) =>
+                                content.__component === "layout.copyright"
+                            ),
+                          }}
+                        />
                         <Cookies />
                       </StickyNavigationProvider>
                     </MainPageVideoContextProvider>

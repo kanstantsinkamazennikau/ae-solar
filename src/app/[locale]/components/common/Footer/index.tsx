@@ -5,40 +5,31 @@ import ContactInfo from "@/app/[locale]/components/common/Footer/ContactInfo";
 import { FooterCategory } from "@/app/[locale]/components/common/Footer/FooterCategory";
 import PolicyLink from "@/app/[locale]/components/common/Footer/PolicyLink";
 import Social from "@/app/[locale]/components/common/Footer/Social";
-import { FooterFormFields } from "@/app/[locale]/components/common/Footer/types";
+import { FooterProps } from "@/app/[locale]/components/common/Footer/types";
 import Logo from "@/app/[locale]/components/common/Logo";
+import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   FOOTER_LINKS_ARRAY,
-  FORMS_FIELDS,
   POLICY_LINKS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams, usePathname } from "next/navigation";
 import { useEffect } from "react";
-import {
-  FieldValues,
-  RegisterOptions,
-  SubmitHandler,
-  useForm,
-} from "react-hook-form";
 import { Trans } from "react-i18next";
 
-export default function Footer() {
+export default function Footer({
+  contentSections,
+}: {
+  contentSections: FooterProps;
+}) {
+  const { navigation, copyright } = contentSections;
+  console.log(copyright);
+
   const pathname = usePathname();
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
-
-  const inputsRules: { [key in keyof FooterFormFields]: RegisterOptions } = {
-    email: {
-      required: "Email is required",
-      pattern: {
-        value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-        message: "Invalid email address",
-      },
-    },
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -111,11 +102,12 @@ export default function Footer() {
             </div>
             {/* LINKS */}
             <div className="min-[500px]:justify-between min-w-0 lg:min-w-[720px] grid min-[500px]:grid-cols-4 grid-cols-1 w-full max-w-[900px] gap-[10px]">
-              {FOOTER_LINKS_ARRAY.map(({ category, links }) => (
+              {navigation.map(({ url, text, subMenu }) => (
                 <FooterCategory
-                  key={category.title}
-                  category={category}
-                  links={links}
+                  key={text}
+                  url={url}
+                  text={text}
+                  subMenu={subMenu}
                 />
               ))}
             </div>
@@ -128,10 +120,10 @@ export default function Footer() {
           <div className="relative z-10">
             <hr className="bg-dark-gray-800 h-[1px] border-none mb-3" />
             <div className="flex justify-between text-dark-gray-800 mb-5 text-[10px] min-[550px]:flex-row flex-col">
-              <div>{t("Copyright")}</div>
+              <div>{copyright[0].copyrightText}</div>
               <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row max-[550px]:gap-x-4 flex-wrap">
-                {POLICY_LINKS.map(({ text, link }) => (
-                  <PolicyLink key={text} link={link} text={text} />
+                {copyright[0].policyLinks?.map(({ text, url }) => (
+                  <PolicyLink key={text} link={url} text={text} />
                 ))}
               </div>
             </div>

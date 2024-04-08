@@ -12,7 +12,10 @@ import {
 } from "next/navigation";
 import { useRef, useState } from "react";
 
-export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
+export default function ChangeLocale({
+  mobileNavigation,
+  mobileNavigationLanguageSelectorText,
+}: ChangeLocaleProps) {
   const router = useRouter();
   const params = useParams();
   const urlSegments = useSelectedLayoutSegments();
@@ -29,6 +32,14 @@ export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
     );
   };
 
+  const languageText = mobileNavigationLanguageSelectorText?.find(
+    (content) => content.componentName === "language"
+  );
+
+  const chooseLanguageText = mobileNavigationLanguageSelectorText?.find(
+    (content) => content.componentName === "chooseLanguage"
+  );
+
   return (
     <div className={`flex relative min-[640px]:w-auto w-full`}>
       <div className="bg-transparent outline-none flex w-full">
@@ -37,6 +48,7 @@ export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
           setIsSelection={setIsSelection}
           dropdownRef={dropdownRef}
           mobileNavigation={mobileNavigation}
+          languageText={languageText?.text}
         />
         {isSelection && !mobileNavigation && (
           <div
@@ -91,7 +103,11 @@ export default function ChangeLocale({ mobileNavigation }: ChangeLocaleProps) {
               height={30}
               className="mt-5 mb-2"
             />
-            <FlagsList handleSelection={handleSelection} mobileNavigation />
+            <FlagsList
+              handleSelection={handleSelection}
+              mobileNavigation
+              chooseLanguageText={chooseLanguageText?.text}
+            />
           </div>
         )}
       </div>

@@ -3,9 +3,8 @@
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
+import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   FOOTER_CONTACT_INFO,
   HEADER_NAV_LINKS_ARRAY,
@@ -13,19 +12,20 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 
-export default function MobileNavigation() {
+export default function MobileNavigation({
+  contactUsText,
+  mobileNavigationLanguageSelectorText,
+}: {
+  contactUsText?: string;
+  mobileNavigationLanguageSelectorText: NavigationProps[];
+}) {
   const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useContext(
     MobileSideMenuContext
   );
   const params = useParams();
   const router = useRouter();
-
-  const { t } = useClientTranslation(
-    params?.locale as LocaleTypes,
-    "translation"
-  );
 
   const onLinkClick = () => {
     setIsHamburgerMenuOpen(false);
@@ -107,7 +107,12 @@ export default function MobileNavigation() {
           ))}
         </ul>
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
-        <ChangeLocale mobileNavigation />
+        <ChangeLocale
+          mobileNavigation
+          mobileNavigationLanguageSelectorText={
+            mobileNavigationLanguageSelectorText
+          }
+        />
         {/* <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" /> */}
         <Link
           href={`/${params?.locale}/contacts`}
@@ -116,7 +121,7 @@ export default function MobileNavigation() {
           }
           onClick={onLinkClick}
         >
-          {t("Contact Us")}
+          {contactUsText}
         </Link>
         <div className="mb-4 flex flex-col gap-2">
           {FOOTER_CONTACT_INFO.map(({ icon, info, linkTo }) => {

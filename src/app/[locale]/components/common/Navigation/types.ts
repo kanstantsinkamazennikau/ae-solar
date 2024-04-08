@@ -12,6 +12,7 @@ export interface NavLinkProps {
   onSubMenuHeadingClick?: (e: any) => void;
   onLinkClick?: () => void;
   isProductsPage?: boolean;
+  allModulesText?: string;
 }
 
 export interface SubMenuItemsProps {
@@ -22,9 +23,45 @@ export interface SubMenuItemsProps {
 export interface SubNavigationProps {
   isLink?: boolean;
   isProductionIntroBlock?: boolean;
+  chooseYourModuleText?: string;
 }
 
 export interface ModelsProps {
   isLink?: boolean;
   isProductionIntroBlock?: boolean;
+  chooseYourModuleText?: string;
+}
+
+export interface NavigationProps {
+  url: string;
+  text: string;
+  stickyProducts: boolean;
+  __component: "layout.header" | "links.button";
+  componentName?:
+    | "contact"
+    | "allModules"
+    | "chooseModule"
+    | "language"
+    | "chooseLanguage";
+  subMenu: {
+    url: string;
+    text: string;
+  }[];
+}
+
+export interface NavigationProps {
+  url: string;
+  text: string;
+  stickyProducts: boolean;
+  __component: "layout.header" | "links.button";
+  componentName?:
+    | "contact"
+    | "allModules"
+    | "chooseModule"
+    | "language"
+    | "chooseLanguage";
+  subMenu: {
+    url: string;
+    text: string;
+  }[];
 }

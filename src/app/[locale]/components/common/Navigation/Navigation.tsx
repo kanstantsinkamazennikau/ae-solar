@@ -1,5 +1,4 @@
 "use client";
-
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
@@ -16,7 +15,6 @@ import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigation
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
-import { HEADER_NAV_LINKS_ARRAY } from "@/app/[locale]/utils/constants";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";

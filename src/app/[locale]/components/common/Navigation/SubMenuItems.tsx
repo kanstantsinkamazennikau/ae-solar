@@ -11,7 +11,6 @@ export default function SubMenuItems({
   onLinkClick,
 }: SubMenuItemsProps) {
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <ul
@@ -41,7 +40,7 @@ export default function SubMenuItems({
             className="flex items-center hover:text-primary"
             onClick={onLinkClick}
           >
-            {t(text)}
+            {text}
           </Link>
         </li>
       ))}

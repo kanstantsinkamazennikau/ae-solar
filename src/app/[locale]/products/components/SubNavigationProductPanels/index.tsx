@@ -8,8 +8,10 @@ import { useParams, usePathname } from "next/navigation";
 
 export default function SubNavigationProductPanels({
   isShowAllProductsLink,
+  allModulesText,
 }: {
   isShowAllProductsLink?: boolean;
+  allModulesText?: string;
 }) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
@@ -54,7 +56,7 @@ export default function SubNavigationProductPanels({
                 className="md:w-6 md:h-6 w-5 h-5"
               />
               <span className="font-normal group-hover/link:text-base-red transition-all duration-200">
-                {t("All Modules")}
+                {allModulesText}
               </span>
             </Link>
             <div className="w-[1px] h-[90%] bg-[#2D2D2D]" />
