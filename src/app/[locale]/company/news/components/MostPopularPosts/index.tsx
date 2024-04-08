@@ -36,7 +36,7 @@ export default async function MostPopularPosts() {
   const theMostPopularPosts = await getMostPopularPosts();
 
   return (
-    !!theMostPopularPosts.data.length && (
+    !!theMostPopularPosts.data?.length && (
       <div
         className="
           flex

@@ -18,3 +18,5 @@ jobs:
         run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker-compose build
       - name: up
         run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker-compose up -d
+      - name: prune
+        run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker image prune
