@@ -83,12 +83,13 @@ export default function HeroSection() {
           <div className="flex flex-col gap-5 px-5">
             <div
               className="
-                [font-size:_clamp(20px,2vw,36px)]
+                [font-size:_clamp(20px,2.5vw,36px)]
                 font-medium
                 leading-[100%]
                 -tracking-[1.08px]
               text-base-red
                 text-center
+                capitalize
               "
             >
               {t("Company Welcome")}
@@ -101,6 +102,7 @@ export default function HeroSection() {
               leading-[100%]
               md:-tracking-[4.08px]
               -tracking-[1.58px]
+              capitalize
             "
             >
               {t("Company Illuminating")}
@@ -108,7 +110,10 @@ export default function HeroSection() {
           </div>
 
           <div className="flex gap-5 md:flex-row flex-col">
-            <a href="/documents/presentation.pdf" target="_blank">
+            <a
+              href="/documents/presentations/Company_Profile_EN_2024_JAN_v1.pdf"
+              target="_blank"
+            >
               <Button
                 size="normal"
                 externalStyle="!py-[12px] md:w-[260px] w-[220px]"

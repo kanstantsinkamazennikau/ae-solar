@@ -49,6 +49,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
       { url: "/products/Terra", text: "Terra" },
       { url: "/products/ShadeStar", text: "ShadeStar" },
       { url: "/products/Neptune", text: "Neptune" },
+      { url: "/catalogue", text: "Choose Your Module" },
     ],
   },
   {
@@ -117,7 +118,7 @@ export const PRODUCT_INTRO_PANELS_IMAGES = [
 export const PRODUCT_INTRO_PANELS = {
   Comet: {
     stats: {
-      power: "700W",
+      power: "720W",
       efficiency: "22.56%",
       voltage: "1500",
     },

@@ -31,7 +31,9 @@ export default function Navigation() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const isProductsPage = pathname === "/products";
+  const isProductsPage = ["/products", `/${locale}/products`].includes(
+    pathname
+  );
   const isMainPage = pathname === "/";
 
   const closeSideMenuOnLogoClickForMobile = () => {
@@ -78,14 +80,13 @@ export default function Navigation() {
               : "-translate-y-[144px] pointer-events-none"
           }`
         }
-        ${
-          isMainPage &&
-          `${
-            mainPageVideoContext.isStartAnimation
-              ? "translate-y-0"
-              : "-translate-y-[144px] pointer-events-none"
-          }`
-        }
+        // {
+        //   isMainPage &&
+        //     mainPageVideoContext.isStartAnimation
+        //       ? "translate-y-0"
+        //       : "-translate-y-[144px] pointer-events-none"
+        //   }
+        // }
       `}
     >
       {/* MAIN NAVIGATION */}

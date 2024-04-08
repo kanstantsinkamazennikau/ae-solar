@@ -122,7 +122,7 @@ export default function FeaturedProducts() {
           >
             <Link href="/catalogue">
               <span className="[font-size:_clamp(12px,1.5vw,20px)] -tracking-[0.24px] font-semibold">
-                {t("All Products")}
+                {t("Choose Your Module")}
               </span>
             </Link>
           </Button>

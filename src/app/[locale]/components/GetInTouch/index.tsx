@@ -160,7 +160,7 @@ export default function GetInTouch({
                 <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
                   {t("Fueling growth together")}
                 </div>
-                <div className="flex flex-col justify-center items-center [font-size:_clamp(26px,5vw,96px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1100px] leading-[120%]">
+                <div className="flex flex-col justify-center items-center [font-size:_clamp(26px,5vw,86px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1100px] leading-[120%]">
                   <div className="md:whitespace-nowrap overflow-y-hidden">
                     <span>{t("Become")}</span>
                     <br className="max-md:block hidden" />

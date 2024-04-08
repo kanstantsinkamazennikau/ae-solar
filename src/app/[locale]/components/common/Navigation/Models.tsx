@@ -93,8 +93,8 @@ export default function Models({
 
       {isLink && (
         <Button onClick={handleClick} size="extrasmall" style="outline">
-          <span className="leading-[10px] font-semibold text-sm">
-            {t("All Products")}
+          <span className="font-semibold text-sm leading-[120%] [font-size:_clamp(14px,1vw,16px)]">
+            {t("Choose Your Module")}
           </span>
         </Button>
       )}

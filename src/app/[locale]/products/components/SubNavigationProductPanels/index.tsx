@@ -1,9 +1,10 @@
+import Button from "@/app/[locale]/components/common/Button";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 
 export default function SubNavigationProductPanels({
   isShowAllProductsLink,
@@ -12,6 +13,10 @@ export default function SubNavigationProductPanels({
 }) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
+  const pathname = usePathname();
+  const isProductsPage = ["/products", `/${locale}/products`].some((path) =>
+    pathname.includes(path)
+  );
 
   return (
     <div
@@ -37,7 +42,7 @@ export default function SubNavigationProductPanels({
                 gap-2
                 cursor-pointer
                 leading-[100%]
-                [font-size:_clamp(12px,1vw,16px)]
+                [font-size:_clamp(14px,1vw,16px)]
                 group/link
               `}
             >
@@ -52,7 +57,7 @@ export default function SubNavigationProductPanels({
                 {t("All Modules")}
               </span>
             </Link>
-            <div className="w-[1px] h-[90%] bg-[#2D2D2D]"></div>
+            <div className="w-[1px] h-[90%] bg-[#2D2D2D]" />
           </>
         )}
         {HEADER_SUBNAVIGATION_PANELS_MODELS.map((panel) => {
@@ -68,7 +73,7 @@ export default function SubNavigationProductPanels({
                   gap-2
                   cursor-pointer
                   leading-[100%]
-                  [font-size:_clamp(12px,1vw,16px)]
+                  [font-size:_clamp(14px,1vw,16px)]
                   group/link
                 `}
             >
@@ -86,6 +91,14 @@ export default function SubNavigationProductPanels({
           );
           return component;
         })}
+        {/* <div className="w-[1px] h-[90%] bg-[#2D2D2D]" /> */}
+        {isProductsPage && (
+          <Link href={"/catalogue"} className="max-[920px]:hidden">
+            <Button externalStyle="!py-[10px] mx-auto relative z-10 [font-size:_clamp(14px,1vw,16px)]">
+              {t("Choose Your Module")}
+            </Button>
+          </Link>
+        )}
       </div>
     </div>
   );

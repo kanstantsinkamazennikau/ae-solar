@@ -18,7 +18,7 @@ export function MainPageFAQ() {
   const { t } = useClientTranslation(locale, "translation");
 
   const handleClick = () => {
-    router.push(`/${locale}/documents/faq`);
+    router.push(`/${locale}/company/faq`);
   };
 
   return (

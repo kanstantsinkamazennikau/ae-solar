@@ -56,7 +56,7 @@ export default function ProductIntroVideo() {
     resetProgress: false,
     arrows: false,
     drag: false,
-    interval: 3000,
+    interval: 5000,
   };
 
   const handleClick = () => {
@@ -388,7 +388,7 @@ export default function ProductIntroVideo() {
       </div>
       {/* )} */}
       <div ref={ref} />
-      <Button onClick={handleClick}>{t("All Products")}</Button>
+      <Button onClick={handleClick}>{t("Choose Your Module")}</Button>
     </div>
   );
 }
