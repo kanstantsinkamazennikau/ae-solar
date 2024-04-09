@@ -15,6 +15,7 @@ export default function Models({
   isLink,
   isProductionIntroBlock = false,
   chooseYourModuleText,
+  modulesText,
 }: ModelsProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
@@ -33,7 +34,7 @@ export default function Models({
     >
       {isProductionIntroBlock && (
         <div className="font-normal [font-size:_clamp(12px,1vw,14px)] leading-normal text-dark-gray-600 -tracking-[0.14px]">
-          {t("Modules")}
+          {modulesText}
         </div>
       )}
       <div className="flex justify-center items-center gap-2 xl:gap-11 md:gap-5">

@@ -6,10 +6,11 @@ import SaveTheWorld from "@/app/[locale]/company/manufacturer/components/SaveThe
 import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
+import I18nProvider from "@/app/[locale]/i18nProvider";
 
 export default function ManufacturerPage() {
   return (
-    <>
+    <I18nProvider translate={{ downloadPresentation: "1213" }}>
       <ManufacturerHeader />
       <div className="flex w-full justify-center flex-col items-center mb-20">
         <BasicWidthContainer>
@@ -76,6 +77,6 @@ export default function ManufacturerPage() {
           </div>
         </BasicWidthContainer>
       </div>
-    </>
+    </I18nProvider>
   );
 }

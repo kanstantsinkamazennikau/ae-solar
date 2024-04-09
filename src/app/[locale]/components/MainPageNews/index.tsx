@@ -1,12 +1,20 @@
+"use client";
+
 import RecentNews from "@/app/[locale]/components/MainPageNews/RecentNews";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import Button from "@/app/[locale]/components/common/Button";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import getLocale from "@/app/[locale]/utils/getLocale";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import Link from "next/link";
+import { useContext } from "react";
+import { Trans } from "react-i18next";
 
-export default async function MainPageNews() {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+export default function MainPageNews({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -24,12 +32,20 @@ export default async function MainPageNews() {
     >
       <BasicWidthContainer>
         <TwoTierHeading
-          tierOneHeading={t("News and Insights")}
-          tierTwoHeading={t("From Our Company")}
+          tierOneHeading={
+            <Trans
+              components={{
+                red: <p className="text-[#B30006]" />,
+              }}
+            >
+              {translation.mainPageNews}
+            </Trans>
+          }
           align="left"
+          reverseColor
         />
       </BasicWidthContainer>
-      <RecentNews />
+      {children}
     </div>
   );
 }

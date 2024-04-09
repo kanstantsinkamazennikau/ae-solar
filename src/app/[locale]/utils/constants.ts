@@ -78,10 +78,10 @@ export const HEADER_CALCULATE = "Calculate";
 
 //MAIN PAGE
 export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
-  { stat: "2003", details: "experience since", initialValue: "2023" },
+  { stat: "2003", details: "experience", initialValue: "2023" },
   {
     stat: "3200",
-    details: "successful PV installations",
+    details: "installations",
     initialValue: "3100",
     sign: "+",
   },
@@ -378,7 +378,7 @@ export const FAQ_ACCORDION_DATA = [
 //FOOTER
 export const FOOTER_LINKS_ARRAY = [
   {
-    text: "Products",
+    text: "products",
     url: "/products",
     subMenu: [
       { text: "Aurora", url: "/products/Aurora" },
@@ -390,31 +390,31 @@ export const FOOTER_LINKS_ARRAY = [
     ],
   },
   {
-    text: "About Us",
+    text: "aboutUs",
     url: "/company",
     subMenu: [
-      { text: "Company", url: "/company" },
-      { text: "Manufacturer", url: "/company/manufacturer" },
-      { text: "B2B Solutions", url: "/solutions" },
-      { text: "Contacts", url: "/contacts" },
-      { text: "News", url: "/company/news" },
-      { text: "FAQ", url: "/company/faq" },
+      { text: "company", url: "/company" },
+      { text: "manufacturer", url: "/company/manufacturer" },
+      { text: "b2b", url: "/solutions" },
+      { text: "contacts", url: "/contacts" },
+      { text: "news", url: "/company/news" },
+      { text: "faq", url: "/company/faq" },
     ],
   },
   {
-    text: "Legal Info",
+    text: "legalInfo",
     url: "/company/imprint",
     subMenu: [
-      { text: "Imprint", url: "/company/imprint" },
-      { text: "Publisher's", url: "/company/publishers_info" },
+      { text: "imprint", url: "/company/imprint" },
+      { text: "publishers", url: "/company/publishers_info" },
     ],
   },
   {
-    text: "Documents",
+    text: "documents",
     url: "/documents",
     subMenu: [
-      { text: "Datasheet", url: "/documents" },
-      { text: "Warranty", url: "/documents" },
+      { text: "datasheet", url: "/documents" },
+      { text: "warranty", url: "/documents" },
     ],
   },
 ];
@@ -448,9 +448,9 @@ export const FOOTER_CONTACT_INFO = [
   },
 ];
 export const POLICY_LINKS = [
-  { text: "PolicyLink1", link: "/company/publishers_info" },
-  { text: "PolicyLink2", link: "/company/publishers_info" },
-  { text: "PolicyLink3", link: "/company/imprint" },
+  { text: "policy", link: "/company/publishers_info" },
+  { text: "terms", link: "/company/publishers_info" },
+  { text: "legal", link: "/company/imprint" },
 ];
 
 export const CONSTRUCTOR_OPTION_LINES = [

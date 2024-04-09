@@ -34,10 +34,27 @@ const getRecentPosts = async () => {
   }
 };
 
+const getMainPageTranslation = async () => {
+  const locale = getLocale();
+
+  //TODO
+
+  const footerUrlParamsObject = {
+    // locale,
+  };
+
+  const footerPath = `/main-page`;
+  const responseData = await fetchAPI(footerPath, footerUrlParamsObject);
+  return responseData;
+};
+
 export default async function RecentNews() {
   const blogPosts = await getRecentPosts();
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
+  const {
+    data: { attributes },
+  } = await getMainPageTranslation();
 
   return (
     <div className="flex md:flex-row flex-col">
@@ -94,7 +111,7 @@ export default async function RecentNews() {
           <Link href="company/news" className="mt-10 mx-auto">
             <Button style="outline" showArrow>
               <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">
-                {t("Read all the news")}
+                {attributes.readAllNews}
               </span>
             </Button>
           </Link>

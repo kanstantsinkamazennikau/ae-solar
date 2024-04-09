@@ -3,12 +3,12 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
+import { NavigationProps } from "@/app/[locale]/components/common/Footer/types";
 import Logo from "@/app/[locale]/components/common/Logo";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import MobileNavigation from "@/app/[locale]/components/common/Navigation/MobileNavigation";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
-import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
@@ -22,9 +22,9 @@ import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
 
 export default function Navigation({
-  contentSections,
+  headerAttributes,
 }: {
-  contentSections: NavigationProps[];
+  headerAttributes: NavigationProps;
 }) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
@@ -39,18 +39,6 @@ export default function Navigation({
     pathname
   );
   const isMainPage = pathname === "/";
-
-  const allModulesText = contentSections.find(
-    (content) => content.componentName === "allModules"
-  )?.text;
-
-  const chooseYourModuleText = contentSections.find(
-    (content) => content.componentName === "chooseModule"
-  )?.text;
-
-  const contactUsText = contentSections.find(
-    (content) => content.componentName === "contact"
-  )?.text;
 
   const closeSideMenuOnLogoClickForMobile = () => {
     setIsHamburgerMenuOpen(false);
@@ -116,20 +104,16 @@ export default function Navigation({
 
             {/* DESKTOP NAV */}
             <ul className="xl:gap-8 gap-4 min-[920px]:flex hidden">
-              {contentSections
-                .filter((section) => section.__component === "layout.header")
-                .map((navLink) => (
-                  <NavLink
-                    key={navLink.url}
-                    {...{
-                      ...navLink,
-                      isProductsPage,
-                      allModulesText: contentSections.find(
-                        (content) => content.componentName === "allModules"
-                      )?.text,
-                    }}
-                  />
-                ))}
+              {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
+                <NavLink
+                  key={navLink.url}
+                  {...{
+                    ...navLink,
+                    isProductsPage,
+                    allModulesText: headerAttributes.allModules,
+                  }}
+                />
+              ))}
             </ul>
             <div className="gap-3 min-[920px]:flex hidden">
               <ChangeLocale />
@@ -139,20 +123,18 @@ export default function Navigation({
                 externalStyle="!py-[10px] !px-[18px]"
               >
                 <span className="[font-size:_clamp(14px,1.5vw,16px)] whitespace-nowrap">
-                  {contactUsText}
+                  {headerAttributes.contactUs}
                 </span>
               </Button>
             </div>
 
             {/* MOBILE NAV */}
             <MobileNavigation
-              contactUsText={contactUsText}
-              mobileNavigationLanguageSelectorText={contentSections.filter(
-                (content) =>
-                  ["language", "chooseLanguage"].includes(
-                    content.componentName || ""
-                  )
-              )}
+              contactUsText={headerAttributes.contactUs}
+              mobileNavigationLanguageSelectorText={{
+                language: headerAttributes.language,
+                chooseLanguage: headerAttributes.chooseLanguage,
+              }}
             />
           </nav>
         </BasicWidthContainer>
@@ -160,11 +142,17 @@ export default function Navigation({
 
       {/* SUBNAVIGATION */}
       {sticky && !hideSubnavigation() && (
-        <SubNavigation isLink chooseYourModuleText={chooseYourModuleText} />
+        <SubNavigation
+          isLink
+          chooseYourModuleText={headerAttributes.chooseModule}
+          modulesText={headerAttributes.modules}
+        />
       )}
 
       {isProductsPage && (
-        <SubNavigationProductPanels allModulesText={allModulesText} />
+        <SubNavigationProductPanels
+          allModulesText={headerAttributes.allModules}
+        />
       )}
     </div>
   );

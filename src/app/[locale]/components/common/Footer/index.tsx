@@ -5,9 +5,8 @@ import ContactInfo from "@/app/[locale]/components/common/Footer/ContactInfo";
 import { FooterCategory } from "@/app/[locale]/components/common/Footer/FooterCategory";
 import PolicyLink from "@/app/[locale]/components/common/Footer/PolicyLink";
 import Social from "@/app/[locale]/components/common/Footer/Social";
-import { FooterProps } from "@/app/[locale]/components/common/Footer/types";
+import { NavigationProps } from "@/app/[locale]/components/common/Footer/types";
 import Logo from "@/app/[locale]/components/common/Logo";
-import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
@@ -20,13 +19,10 @@ import { useEffect } from "react";
 import { Trans } from "react-i18next";
 
 export default function Footer({
-  contentSections,
+  footerAttributes,
 }: {
-  contentSections: FooterProps;
+  footerAttributes: NavigationProps;
 }) {
-  const { navigation, copyright } = contentSections;
-  console.log(copyright);
-
   const pathname = usePathname();
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
@@ -75,7 +71,7 @@ export default function Footer({
               <div className="flex flex-col w-fit">
                 <Logo />
                 <p className="text-base-red text-[10px] text-right">
-                  {t("Save the World")}
+                  {footerAttributes.logoText}
                 </p>
               </div>
               <div
@@ -92,38 +88,45 @@ export default function Footer({
                     bold: <span className="text-dark-gray-900 font-bold" />,
                   }}
                 >
-                  {t("German Brand")}
+                  {t(footerAttributes.germanBrand)}
                 </Trans>
               </div>
               <div className="min-[500px]:flex gap-8 flex-col hidden">
                 <ContactInfo />
-                <Social />
+                <Social socialText={footerAttributes.weAreSocial} />
               </div>
             </div>
             {/* LINKS */}
             <div className="min-[500px]:justify-between min-w-0 lg:min-w-[720px] grid min-[500px]:grid-cols-4 grid-cols-1 w-full max-w-[900px] gap-[10px]">
-              {navigation.map(({ url, text, subMenu }) => (
+              {FOOTER_LINKS_ARRAY.map(({ url, text, subMenu }) => (
                 <FooterCategory
                   key={text}
                   url={url}
-                  text={text}
-                  subMenu={subMenu}
+                  text={footerAttributes[text]}
+                  subMenu={subMenu.map((item) => ({
+                    ...item,
+                    text: footerAttributes[item.text] || item.text,
+                  }))}
                 />
               ))}
             </div>
             <div className="min-[500px]:hidden gap-8 flex-col flex mt-8">
               <ContactInfo />
-              <Social />
+              <Social socialText={footerAttributes.weAreSocial} />
             </div>
           </nav>
           {/* POLICY */}
           <div className="relative z-10">
             <hr className="bg-dark-gray-800 h-[1px] border-none mb-3" />
             <div className="flex justify-between text-dark-gray-800 mb-5 text-[10px] min-[550px]:flex-row flex-col">
-              <div>{copyright[0].copyrightText}</div>
+              <div>{footerAttributes.copyright}</div>
               <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row max-[550px]:gap-x-4 flex-wrap">
-                {copyright[0].policyLinks?.map(({ text, url }) => (
-                  <PolicyLink key={text} link={url} text={text} />
+                {POLICY_LINKS.map(({ text, link }) => (
+                  <PolicyLink
+                    key={text}
+                    link={link}
+                    text={footerAttributes[text]}
+                  />
                 ))}
               </div>
             </div>

@@ -3,8 +3,10 @@
 import { DownloadPresentationProps } from "@/app/[locale]/components/common/DownloadPresentation/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import { useContext } from "react";
 
 export default function DownloadPresentation({
   link,
@@ -12,6 +14,7 @@ export default function DownloadPresentation({
 }: DownloadPresentationProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -52,7 +55,7 @@ export default function DownloadPresentation({
         />
 
         <div className="min-[920px]:text-2xl text-[13px] font-semibold min-[920px]:leading-[120%] leading-[100%]">
-          {t("Download Presentation")}
+          {translation.downloadPresentation}
         </div>
         <Image
           src="/images/arrowFutureRed.svg"

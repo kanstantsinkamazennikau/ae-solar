@@ -6,6 +6,7 @@ export default function SubNavigation({
   isLink,
   isProductionIntroBlock = false,
   chooseYourModuleText,
+  modulesText,
 }: SubNavigationProps) {
   return (
     <div
@@ -25,7 +26,14 @@ export default function SubNavigation({
       `}
     >
       <BasicWidthContainer>
-        <Models {...{ isLink, isProductionIntroBlock, chooseYourModuleText }} />
+        <Models
+          {...{
+            isLink,
+            isProductionIntroBlock,
+            chooseYourModuleText,
+            modulesText,
+          }}
+        />
       </BasicWidthContainer>
     </div>
   );

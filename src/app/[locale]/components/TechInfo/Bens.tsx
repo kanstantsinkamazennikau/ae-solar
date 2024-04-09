@@ -1,19 +1,29 @@
+"use client";
+
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import Ben from "@/app/[locale]/components/TechInfo/Ben";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { TECH_INFO_BENS } from "@/app/[locale]/utils/constants";
-import getLocale from "@/app/[locale]/utils/getLocale";
+import { useContext } from "react";
+import { Trans } from "react-i18next";
 
-export default async function Bens() {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+export default function Bens() {
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <>
       <TwoTierHeading
-        tierOneHeading={t("Why We are")}
-        tierTwoHeading={t("Best at This")}
+        tierOneHeading={
+          <Trans
+            components={{
+              red: <p className="text-[#B30006]" />,
+            }}
+          >
+            {translation.weAreBest}
+          </Trans>
+        }
         align="left"
+        reverseColor
       />
       <div
         className="

@@ -3,7 +3,7 @@
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
-import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
+import { MobileNavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
 import {
   FOOTER_CONTACT_INFO,
@@ -19,7 +19,7 @@ export default function MobileNavigation({
   mobileNavigationLanguageSelectorText,
 }: {
   contactUsText?: string;
-  mobileNavigationLanguageSelectorText: NavigationProps[];
+  mobileNavigationLanguageSelectorText: MobileNavigationProps;
 }) {
   const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useContext(
     MobileSideMenuContext

@@ -32,13 +32,10 @@ export default function ChangeLocale({
     );
   };
 
-  const languageText = mobileNavigationLanguageSelectorText?.find(
-    (content) => content.componentName === "language"
-  );
+  const languageText = mobileNavigationLanguageSelectorText?.language;
 
-  const chooseLanguageText = mobileNavigationLanguageSelectorText?.find(
-    (content) => content.componentName === "chooseLanguage"
-  );
+  const chooseLanguageText =
+    mobileNavigationLanguageSelectorText?.chooseLanguage;
 
   return (
     <div className={`flex relative min-[640px]:w-auto w-full`}>
@@ -48,7 +45,7 @@ export default function ChangeLocale({
           setIsSelection={setIsSelection}
           dropdownRef={dropdownRef}
           mobileNavigation={mobileNavigation}
-          languageText={languageText?.text}
+          languageText={languageText}
         />
         {isSelection && !mobileNavigation && (
           <div
@@ -88,7 +85,7 @@ export default function ChangeLocale({
             overflow-y-auto 
             bottom-0 
             px-4 
-            py-[28px]
+            pt-[15px]
             duration-500 
             z-10
             cursor-default
@@ -101,12 +98,12 @@ export default function ChangeLocale({
               priority
               width={1320}
               height={30}
-              className="mt-5 mb-2"
+              className="mt-5 mb-2 h-[30px]"
             />
             <FlagsList
               handleSelection={handleSelection}
               mobileNavigation
-              chooseLanguageText={chooseLanguageText?.text}
+              chooseLanguageText={chooseLanguageText}
             />
           </div>
         )}

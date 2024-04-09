@@ -1,28 +1,23 @@
-import type { Metadata } from "next";
 import "./globals.css";
 
-import Footer from "@/app/[locale]/components/common/Footer";
-import localFont from "next/font/local";
-import Navigation from "@/app/[locale]/components/common/Navigation";
-import { LocaleTypes, locales } from "@/app/[locale]/i18n/settings";
-import { notFound } from "next/navigation";
-import ModelProvider from "@/app/[locale]/context/modelContext";
-import StickyNavigationProvider from "@/app/[locale]/context/stickyNavigationContext";
-import ConstructorProvider from "@/app/[locale]/context/constructorContext";
-import ToastContainerProvider from "@/app/[locale]/context/toastProvider";
-import "react-toastify/dist/ReactToastify.css";
 import Cookies from "@/app/[locale]/components/common/CookiesBanner";
-import { headers } from "next/headers";
-import ProductsContextProvider from "@/app/[locale]/context/productsContext";
+import Footer from "@/app/[locale]/components/common/Footer";
+import Navigation from "@/app/[locale]/components/common/Navigation";
+import ConstructorProvider from "@/app/[locale]/context/constructorContext";
 import MainPageVideoContextProvider from "@/app/[locale]/context/mainPageVideoContext";
-import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 import MobileSideMenuProvider from "@/app/[locale]/context/mobileSideMenuContext";
+import ModelProvider from "@/app/[locale]/context/modelContext";
+import ProductsContextProvider from "@/app/[locale]/context/productsContext";
+import StickyNavigationProvider from "@/app/[locale]/context/stickyNavigationContext";
+import ToastContainerProvider from "@/app/[locale]/context/toastProvider";
+import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
+import { LocaleTypes, locales } from "@/app/[locale]/i18n/settings";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
-import { NavigationProps } from "@/app/[locale]/components/common/Navigation/types";
-import {
-  FooterCopyright,
-  FooterNavigation,
-} from "@/app/[locale]/components/common/Footer/types";
+import getLocale from "@/app/[locale]/utils/getLocale";
+import localFont from "next/font/local";
+import { headers } from "next/headers";
+import { notFound } from "next/navigation";
+import "react-toastify/dist/ReactToastify.css";
 
 const walsheim = localFont({
   src: [
@@ -147,28 +142,20 @@ export async function generateMetadata({
   };
 }
 
-const getHeaderLayoutData = async () => {
-  const path = `/pages`;
-  const headerUrlParamsObject = {
-    filters: { slug: "header" },
-    populate: {
-      contentSections: {
-        populate: "*",
-      },
-    },
+const getLayoutData = async () => {
+  const locale = getLocale();
+
+  //TODO
+
+  const urlParamsObject = {
+    // locale,
   };
 
-  const footerUrlParamsObject = {
-    filters: { slug: "footer" },
-    populate: {
-      contentSections: {
-        populate: "*",
-      },
-    },
-  };
+  const footerPath = `/footer`;
+  const cookiesPath = `/cookie`;
   const responseData = await Promise.all([
-    fetchAPI(path, headerUrlParamsObject),
-    fetchAPI(path, footerUrlParamsObject),
+    fetchAPI(footerPath, urlParamsObject),
+    fetchAPI(cookiesPath, urlParamsObject),
   ]);
   return responseData;
 };
@@ -182,15 +169,10 @@ export default async function RootLayout({
 }) {
   if (!locales.includes(locale as any)) notFound();
   const url = headers().get("x-url")!.split("/");
-  const [headerData, footerData] = await getHeaderLayoutData();
+  const [navigationData, cookiesData] = await getLayoutData();
 
-  const {
-    attributes: { contentSections: headerContentSections },
-  } = headerData.data[0];
-
-  const {
-    attributes: { contentSections: footerContentSections },
-  } = footerData.data[0];
+  const navigationAttributes = navigationData.data?.attributes;
+  const cookiesAttributes = cookiesData.data?.attributes;
 
   return (
     <html lang={locale}>
@@ -206,22 +188,10 @@ export default async function RootLayout({
                   <ProductsContextProvider>
                     <MainPageVideoContextProvider>
                       <StickyNavigationProvider>
-                        <Navigation contentSections={headerContentSections} />
+                        <Navigation headerAttributes={navigationAttributes} />
                         {children}
-
-                        <Footer
-                          contentSections={{
-                            navigation: footerContentSections.filter(
-                              (content: FooterNavigation) =>
-                                content.__component === "layout.header"
-                            ),
-                            copyright: footerContentSections.filter(
-                              (content: FooterCopyright) =>
-                                content.__component === "layout.copyright"
-                            ),
-                          }}
-                        />
-                        <Cookies />
+                        <Footer footerAttributes={navigationAttributes} />
+                        <Cookies cookiesAttributes={cookiesAttributes} />
                       </StickyNavigationProvider>
                     </MainPageVideoContextProvider>
                   </ProductsContextProvider>
