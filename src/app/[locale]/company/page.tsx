@@ -9,12 +9,40 @@ import PortfolioBackground from "@/app/[locale]/company/components/PortfolioBack
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import I18nProvider from "@/app/[locale]/i18nProvider";
 import GlobalImpact from "@/app/[locale]/solutions/components/GlobalImpact";
 import JoinOurMission from "@/app/[locale]/solutions/components/JoinOurMission";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
+import getLocale from "@/app/[locale]/utils/getLocale";
 
-export default function About() {
+const getTranslation = async () => {
+  const locale = getLocale();
+
+  //TODO
+
+  const footerUrlParamsObject = {
+    // locale,
+  };
+
+  const pagePath = `/company`;
+  const commonPath = `/common`;
+  const responseData = await Promise.all([
+    fetchAPI(pagePath, footerUrlParamsObject),
+    fetchAPI(commonPath, footerUrlParamsObject),
+  ]);
+  return responseData;
+};
+
+export default async function About() {
+  const [pageI18n, commonI18n] = await getTranslation();
+
   return (
-    <>
+    <I18nProvider
+      translate={{
+        ...pageI18n.data.attributes,
+        ...commonI18n.data.attributes,
+      }}
+    >
       <HeroSection />
       <BornInGermany />
       <CompanyTier1 />
@@ -42,6 +70,6 @@ export default function About() {
       <BusinessMap />
       <OurHistory />
       <GetInTouch />
-    </>
+    </I18nProvider>
   );
 }

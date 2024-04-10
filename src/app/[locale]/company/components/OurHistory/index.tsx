@@ -2,23 +2,19 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
 import { ABOUT_HISTORY } from "@/app/[locale]/company/constants";
 import Button from "@/app/[locale]/components/common/Button";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Starfield from "@/app/[locale]/products/components/StarField";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { Trans } from "react-i18next";
 
 export default function OurHistory() {
   const container = useRef(null);
   const [isOpenItem, setIsOpenItem] = useState(false);
-
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const onClick = () => {
     setIsOpenItem(true);
@@ -36,8 +32,8 @@ export default function OurHistory() {
       <BasicWidthContainer>
         <div id="history">
           <TwoTierHeading
-            tierOneHeading={t("Our History")}
-            tierTwoHeading={t("Through the Years")}
+            tierOneHeading={translation.ourHistory}
+            tierTwoHeading={translation.throughTheYears}
             align="center"
             reverseColor
             marginBottomNone
@@ -110,7 +106,7 @@ export default function OurHistory() {
                       leading-[150%]
                     `}
                   >
-                    <Trans>{t(event)}</Trans>
+                    <Trans>{translation[event]}</Trans>
                   </div>
                 </div>
               );
@@ -124,9 +120,9 @@ export default function OurHistory() {
                 onClick={onClick}
               >
                 <div
-                  className={`text-base-red [font-size:_clamp(14px,1vw,16px)]`}
+                  className={`text-base-red [font-size:_clamp(14px,1vw,16px)] capitalize`}
                 >
-                  {t("Read Full History")}
+                  {translation.readFullHistory}
                 </div>
                 <Image
                   src="/images/techInfo/expand.svg"

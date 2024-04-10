@@ -30,7 +30,11 @@ const getMostPopularPosts = async () => {
   }
 };
 
-export default async function MostPopularPosts() {
+export default async function MostPopularPosts({
+  heading,
+}: {
+  heading: string;
+}) {
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
   const theMostPopularPosts = await getMostPopularPosts();
@@ -52,7 +56,7 @@ export default async function MostPopularPosts() {
         "
       >
         <div className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold mb-4">
-          {t("Most Popular")}
+          {heading}
         </div>
         {theMostPopularPosts.data.map(({ id, attributes: { title, tag } }) => (
           <Link

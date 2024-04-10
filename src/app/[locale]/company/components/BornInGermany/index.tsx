@@ -1,15 +1,13 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function BornInGermany() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -84,7 +82,7 @@ export default function BornInGermany() {
                 max-w-[306px]
               "
               >
-                {t("Born in Germany")}
+                {translation.bornInGermany}
               </p>
             </div>
 
@@ -96,7 +94,7 @@ export default function BornInGermany() {
                     bold: <span className="font-bold" />,
                   }}
                 >
-                  {t("In the heart")}
+                  {translation.inTheHeart}
                 </Trans>
               </div>
               <div>
@@ -105,7 +103,7 @@ export default function BornInGermany() {
                     bold: <span className="font-bold" />,
                   }}
                 >
-                  {t("Visionary idea")}
+                  {translation.visionaryIdea}
                 </Trans>
               </div>
             </div>

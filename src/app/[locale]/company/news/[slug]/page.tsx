@@ -59,20 +59,40 @@ const updatePostViews = async (slug: string) => {
   }
 };
 
+const getTranslation = async () => {
+  const locale = getLocale();
+
+  //TODO
+
+  const footerUrlParamsObject = {
+    // locale,
+  };
+
+  const mainPagePath = `/news`;
+  const commonPath = `/common`;
+  const [pageI18n, commonI18n] = await Promise.all([
+    fetchAPI(mainPagePath, footerUrlParamsObject),
+    fetchAPI(commonPath, footerUrlParamsObject),
+  ]);
+  return {
+    ...pageI18n.data.attributes,
+    ...commonI18n.data.attributes,
+  };
+};
+
 export default async function BlogPost({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
   const { data } = await getPostBySlug(slug);
   await updatePostViews(slug);
+  const translation = await getTranslation();
 
   if (!data.length)
     return (
       <div className="text-center [font-size:_clamp(20px,2vw,32px)]">
-        {t("Post not found")}
+        {translation.postNotFound}
       </div>
     );
 

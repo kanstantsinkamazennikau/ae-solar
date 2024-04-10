@@ -25,13 +25,13 @@ export const SOLUTIONS_COOPERATION = [
   },
 ];
 export const SOLUTIONS_GLOBAL_IMPACT_STATS = [
-  { value: "108,600", units: "Measure Units Sqm", measure: "Total Area" },
+  { value: "108,600", units: "measureUnitsSqm", measure: "totalArea" },
   {
     value: "62,000",
-    units: "Measure Units Sqm",
-    measure: "Manufacturing Area",
+    units: "measureUnitsSqm",
+    measure: "manufacturingArea",
   },
-  { value: "2", units: "Measure Units GW/year", measure: "Capacity" },
+  { value: "2", units: "measureUnitsGW", measure: "capacity" },
 ];
 export const SOLUTIONS_GLOBAL_IMPACT_STATS_WITH_IMAGES = [
   {
@@ -48,7 +48,7 @@ export const SOLUTIONS_GLOBAL_IMPACT_STATS_WITH_IMAGES = [
   },
   {
     value: "2.2 MWp",
-    country: "Latin America",
+    country: "LatinAmerica",
     desktopImage: "LatinAmericaDesktop.png",
     mobileImage: "LatinAmericaMobile.png",
   },
@@ -60,7 +60,7 @@ export const SOLUTIONS_GLOBAL_IMPACT_STATS_WITH_IMAGES = [
   },
   {
     value: "3.2 MWp",
-    country: "Others",
+    country: "DominicanRepublic",
     desktopImage: "OthersDesktop.png",
     mobileImage: "OthersMobile.png",
   },

@@ -2,16 +2,12 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import LightBoxYoutubeVideo from "@/app/[locale]/components/common/LightBoxYoutubeVideo";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Trans } from "react-i18next";
 
 export default function HeroSection() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const [showVideo, setShowVideo] = useState(false);
 
   const onVideoClose = () => {
@@ -21,6 +17,8 @@ export default function HeroSection() {
   const onVideoOpen = () => {
     setShowVideo(true);
   };
+
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <>
@@ -92,7 +90,7 @@ export default function HeroSection() {
                 capitalize
               "
             >
-              {t("Company Welcome")}
+              {translation.companyWelcome}
             </div>
             <div
               className="
@@ -105,7 +103,7 @@ export default function HeroSection() {
               capitalize
             "
             >
-              {t("Company Illuminating")}
+              {translation.companyIlluminating}
             </div>
           </div>
 
@@ -127,7 +125,7 @@ export default function HeroSection() {
                     height={24}
                   />
                   <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%] hyphens-auto">
-                    <Trans>{t("Company Presentation")}</Trans>
+                    <Trans>{translation.companyPresentation}</Trans>
                   </div>
                 </div>
               </Button>
@@ -147,7 +145,7 @@ export default function HeroSection() {
                   height={24}
                 />
                 <div className="max-w-[160px] [font-size:_clamp(16px,1vw,16px)] font-semibold -tracking-[0.16px] text-left capitalize leading-[120%] hyphens-auto">
-                  <Trans>{t("Production Process")}</Trans>
+                  <Trans>{translation.productionProcess}</Trans>
                 </div>
               </div>
             </Button>

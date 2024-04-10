@@ -1,13 +1,11 @@
 "use client";
 
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams } from "next/navigation";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function DifferenceCenter() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <Trans
@@ -15,7 +13,7 @@ export default function DifferenceCenter() {
         red: <p className="text-[#B30006]" />,
       }}
     >
-      {t("Explore Our Difference")}
+      {translation.exploreOurDifference}
     </Trans>
   );
 }

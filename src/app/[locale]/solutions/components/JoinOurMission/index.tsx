@@ -1,16 +1,14 @@
 "use client";
 
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Starfield from "@/app/[locale]/products/components/StarField";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function JoinOurMission() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -59,7 +57,7 @@ export default function JoinOurMission() {
                   red: <p className="text-[#B30006]" />,
                 }}
               >
-                {t("Join Our Mission")}
+                {translation.joinOurMission}
               </Trans>
             }
             size="small"
@@ -74,8 +72,8 @@ export default function JoinOurMission() {
             align="center"
           />
           <div className="text-center md:text-[20px] text-[16px] leading-[150%] font-walsheim font-medium md:max-w-[650px] max-w-[450px] gap-6 flex flex-col">
-            <p>{t("With Every Sunrise")}</p>
-            <p>{t("Save The World Together, One Ray At A Time")}</p>
+            <p> {translation.withEverySunrise}</p>
+            <p> {translation.saveTheWorldTogether}</p>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 
-const getMainPageTranslation = async () => {
+const getTranslation = async () => {
   const locale = getLocale();
 
   //TODO
@@ -20,18 +20,25 @@ const getMainPageTranslation = async () => {
     // locale,
   };
 
-  const footerPath = `/main-page`;
-  const responseData = await fetchAPI(footerPath, footerUrlParamsObject);
+  const mainPagePath = `/main-page`;
+  const commonPath = `/common`;
+  const responseData = await Promise.all([
+    fetchAPI(mainPagePath, footerUrlParamsObject),
+    fetchAPI(commonPath, footerUrlParamsObject),
+  ]);
   return responseData;
 };
 
 export default async function Home() {
-  const {
-    data: { attributes },
-  } = await getMainPageTranslation();
+  const [pageI18n, commonI18n] = await getTranslation();
 
   return (
-    <I18nProvider translate={attributes}>
+    <I18nProvider
+      translate={{
+        ...pageI18n.data.attributes,
+        ...commonI18n.data.attributes,
+      }}
+    >
       <main className="flex flex-col items-center w-full ">
         <HeroSection />
         <div className="w-full relative">

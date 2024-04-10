@@ -30,7 +30,7 @@ const getRecentPosts = async () => {
   }
 };
 
-export default async function RecentPosts() {
+export default async function RecentPosts({ heading }: { heading: string }) {
   const locale = getLocale();
   const { t } = await useServerTranslation(locale, "translation");
   const recentPosts = await getRecentPosts();
@@ -47,7 +47,7 @@ export default async function RecentPosts() {
       "
     >
       <div className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold mb-4">
-        {t("Recent Posts")}
+        {heading}
       </div>
       {recentPosts.data?.map(({ id, attributes: { title, tag } }) => (
         <Link

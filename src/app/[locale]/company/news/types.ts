@@ -29,6 +29,16 @@ export interface TagsResponse {
     id: number;
     attributes: {
       tag: string;
+      dislpayTagName: string | null;
     };
   }[];
+}
+
+export interface TagsProps {
+  tags: {
+    tag: string;
+    dislpayTagName: string | null;
+  }[];
+  resetText: string;
+  filterText: string;
 }

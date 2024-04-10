@@ -996,23 +996,23 @@ export const PICKER_INPUT_VALUES = {
 export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "germany.svg",
-    designation: "Headquater",
-    location: ["Königsbrunn,", "Germany"],
+    designation: "headquater",
+    location: ["konigsbrunn"],
   },
   {
     icon: "office.svg",
-    designation: "Branch office",
+    designation: "branchOffice",
     location: ["Georgia", "Brasil", "Colombia"],
   },
   {
     icon: "base.svg",
-    designation: "Production site",
+    designation: "productionSite",
     location: ["Turkey", "China"],
   },
   {
     icon: "distributor.svg",
-    designation: "Distributors",
-    location: ["All around the World"],
+    designation: "distributors",
+    location: ["aroundTheWorld"],
   },
 ];
 

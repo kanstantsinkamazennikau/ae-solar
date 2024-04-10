@@ -149,6 +149,7 @@ const getLayoutData = async () => {
 
   const urlParamsObject = {
     // locale,
+    populate: "*",
   };
 
   const footerPath = `/footer`;

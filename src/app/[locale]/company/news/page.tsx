@@ -5,7 +5,7 @@ import MostPopularPosts from "@/app/[locale]/company/news/components/MostPopular
 import RecentPosts from "@/app/[locale]/company/news/components/RecentPosts";
 import TagsFilter from "@/app/[locale]/company/news/components/TagsFilter";
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
-import { TagsResponse } from "@/app/[locale]/company/news/types";
+import { TagsProps, TagsResponse } from "@/app/[locale]/company/news/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
 import Loader from "@/app/[locale]/components/common/Loader";
@@ -63,16 +63,41 @@ const getTags = async () => {
   try {
     const path = `/tags`;
     const urlParamsObject = {
-      fields: ["tag"],
+      fields: ["tag", "dislpayTagName"],
     };
     const responseData: TagsResponse = await fetchAPI(path, urlParamsObject);
     if (responseData.data) {
-      return { data: responseData.data.map(({ attributes: { tag } }) => tag) };
+      return {
+        data: responseData.data.map(
+          ({ attributes: { tag, dislpayTagName } }) => ({ tag, dislpayTagName })
+        ),
+      };
     }
     return { data: [] };
   } catch (error) {
     return { data: [] };
   }
+};
+
+const getTranslation = async () => {
+  const locale = getLocale();
+
+  //TODO
+
+  const footerUrlParamsObject = {
+    // locale,
+  };
+
+  const mainPagePath = `/news`;
+  const commonPath = `/common`;
+  const [pageI18n, commonI18n] = await Promise.all([
+    fetchAPI(mainPagePath, footerUrlParamsObject),
+    fetchAPI(commonPath, footerUrlParamsObject),
+  ]);
+  return {
+    ...pageI18n.data.attributes,
+    ...commonI18n.data.attributes,
+  };
 };
 
 export default async function Blog({
@@ -87,16 +112,15 @@ export default async function Blog({
   const searchParamsTags = searchParams?.tags;
   const { data, meta } = await getBlogPosts(currentPage, searchParamsTags);
   const tags = await getTags();
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+  const translation = await getTranslation();
 
   if (!data.length)
     return (
       <>
         <HeadingWithBackground
           backgroundImage="/images/about/blog/blogBackground.png"
-          tierOneHeading={t("Read About Us")}
-          tierTwoHeading={t("On the Media")}
+          tierOneHeading={translation.readAboutUs}
+          tierTwoHeading={translation.onTheMedia}
           mobileBackgroundImage="/images/about/blog/blogMobileBackground.png"
         />
         {!!tags.data.length && (
@@ -104,14 +128,18 @@ export default async function Blog({
             <BasicWidthContainer>
               <div className="flex gap-[60px] justify-between">
                 <div className="flex flex-col w-full">
-                  <TagsFilter tags={tags.data as string[]} />
+                  <TagsFilter
+                    tags={tags.data}
+                    filterText={translation.filter}
+                    resetText={translation.reset}
+                  />
                 </div>
               </div>
             </BasicWidthContainer>
           </div>
         )}
         <div className="text-center [font-size:_clamp(20px,2vw,32px)] mb-14">
-          {t("No posts")}
+          {translation.noPosts}
         </div>
       </>
     );
@@ -120,20 +148,24 @@ export default async function Blog({
     <Suspense fallback={<Loader />}>
       <HeadingWithBackground
         backgroundImage="/images/about/blog/blogBackground.png"
-        tierOneHeading={t("Read About Us")}
-        tierTwoHeading={t("On the Media")}
+        tierOneHeading={translation.readAboutUs}
+        tierTwoHeading={translation.onTheMedia}
         mobileBackgroundImage="/images/about/blog/blogMobileBackground.png"
       />
       <div className="flex w-full justify-center flex-col items-center md:mt-0 -mt-[60px] pb-20">
         <BasicWidthContainer>
           <div className="flex gap-[60px] justify-between">
             <div className="flex flex-col w-full">
-              <TagsFilter tags={tags.data as string[]} />
+              <TagsFilter
+                tags={tags.data}
+                filterText={translation.filter}
+                resetText={translation.reset}
+              />
               <BlogPostsList blogsList={data} />
             </div>
             <div className="hidden flex-col gap-[40px] w-full max-w-[315px] min-[920px]:flex">
-              <MostPopularPosts />
-              <RecentPosts />
+              <MostPopularPosts heading={translation.mostPopular} />
+              <RecentPosts heading={translation.recentPosts} />
             </div>
           </div>
           <BlogPostPagination

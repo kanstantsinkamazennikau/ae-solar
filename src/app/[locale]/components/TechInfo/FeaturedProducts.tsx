@@ -2,13 +2,10 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { useContext, useLayoutEffect, useState } from "react";
 import { Trans } from "react-i18next";
 
@@ -61,9 +58,6 @@ const Video = ({ videoLink }: { videoLink: string }) => {
 };
 
 export default function FeaturedProducts() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   const { translation } = useContext(i18nProviderContext);
 
   return (

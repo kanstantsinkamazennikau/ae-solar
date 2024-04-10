@@ -54,7 +54,7 @@ export default function DownloadPresentation({
           className="min-[920px]:hidden block"
         />
 
-        <div className="min-[920px]:text-2xl text-[13px] font-semibold min-[920px]:leading-[120%] leading-[100%]">
+        <div className="min-[920px]:text-2xl text-[13px] font-semibold min-[920px]:leading-[120%] leading-[100%] capitalize">
           {translation.downloadPresentation}
         </div>
         <Image

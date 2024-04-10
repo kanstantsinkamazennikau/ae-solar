@@ -3,12 +3,13 @@
 import ContactInfo from "@/app/[locale]/components/common/Footer/ContactInfo";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { useParams } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function Contacts() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -35,7 +36,7 @@ export default function Contacts() {
         "
       >
         <p className="[font-size:_clamp(20px,1.5vw,24px)] font-semibold leading-[120%]">
-          {t("Contacts")}
+          {translation.contacts}
         </p>
         <div className="text-sm font-normal leading-[130%] font-walsheim text-[#747474]">
           <Trans
@@ -43,7 +44,7 @@ export default function Contacts() {
               bold: <span className="text-dark-gray-900 font-bold" />,
             }}
           >
-            {t("German Brand")}
+            {translation.germanBrand}
           </Trans>
         </div>
         <ContactInfo />

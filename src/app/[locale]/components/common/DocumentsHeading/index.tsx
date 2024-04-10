@@ -2,7 +2,9 @@
 
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { useParams, usePathname } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 const mapHeadingWithCategory = {
@@ -10,7 +12,7 @@ const mapHeadingWithCategory = {
     heading: "Documents You Need to Know",
   },
   faq: {
-    heading: "Got a Question We have solutions",
+    heading: "gotAQuestion",
   },
   publishers_info: {
     heading: "Publisher's Information",
@@ -24,6 +26,8 @@ export default function DocumentsHeading() {
   const pathName = usePathname().split("/");
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
+
+  const { translation } = useContext(i18nProviderContext);
 
   const documentsCategory = pathName[pathName.length - 1];
 
@@ -43,11 +47,13 @@ export default function DocumentsHeading() {
             ),
           }}
         >
-          {t(
-            mapHeadingWithCategory[
-              documentsCategory as keyof typeof mapHeadingWithCategory
-            ].heading
-          )}
+          {
+            translation[
+              mapHeadingWithCategory[
+                documentsCategory as keyof typeof mapHeadingWithCategory
+              ].heading
+            ]
+          }
         </Trans>
       </div>
     </div>

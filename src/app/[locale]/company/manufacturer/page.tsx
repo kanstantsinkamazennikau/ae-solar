@@ -7,10 +7,37 @@ import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProduct
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
 import I18nProvider from "@/app/[locale]/i18nProvider";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
+import getLocale from "@/app/[locale]/utils/getLocale";
 
-export default function ManufacturerPage() {
+const getTranslation = async () => {
+  const locale = getLocale();
+
+  //TODO
+
+  const footerUrlParamsObject = {
+    // locale,
+  };
+
+  const pagePath = `/manufacturer`;
+  const commonPath = `/common`;
+  const responseData = await Promise.all([
+    fetchAPI(pagePath, footerUrlParamsObject),
+    fetchAPI(commonPath, footerUrlParamsObject),
+  ]);
+  return responseData;
+};
+
+export default async function ManufacturerPage() {
+  const [pageI18n, commonI18n] = await getTranslation();
+
   return (
-    <I18nProvider translate={{ downloadPresentation: "1213" }}>
+    <I18nProvider
+      translate={{
+        ...pageI18n.data.attributes,
+        ...commonI18n.data.attributes,
+      }}
+    >
       <ManufacturerHeader />
       <div className="flex w-full justify-center flex-col items-center mb-20">
         <BasicWidthContainer>

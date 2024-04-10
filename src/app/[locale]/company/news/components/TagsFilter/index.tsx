@@ -1,6 +1,6 @@
 "use client";
 
-import { TagsFilterProps } from "@/app/[locale]/company/news/types";
+import { TagsFilterProps, TagsProps } from "@/app/[locale]/company/news/types";
 import Button from "@/app/[locale]/components/common/Button";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
@@ -12,7 +12,7 @@ import {
   useSearchParams,
 } from "next/navigation";
 
-export default function TagsFilter({ tags }: TagsFilterProps) {
+export default function TagsFilter({ tags, filterText, resetText }: TagsProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
@@ -77,7 +77,7 @@ export default function TagsFilter({ tags }: TagsFilterProps) {
             max-[920px]:mb-2
           "
         >
-          <div className="text-[#505050]">{t("Filter")}</div>
+          <div className="text-[#505050]">{filterText}</div>
           {!!params.get("tags") && (
             <Button
               style="textOnly"
@@ -85,7 +85,7 @@ export default function TagsFilter({ tags }: TagsFilterProps) {
               onClick={resetFilter}
             >
               <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red">
-                {t("Reset")}
+                {resetText}
               </span>
               <Image
                 alt="close"
@@ -96,7 +96,7 @@ export default function TagsFilter({ tags }: TagsFilterProps) {
             </Button>
           )}
         </div>
-        {tags?.map((tag) => {
+        {tags?.map(({ tag, dislpayTagName }) => {
           const isAppliedFilter = params.get("tags")?.includes(tag);
 
           return (
@@ -121,7 +121,7 @@ export default function TagsFilter({ tags }: TagsFilterProps) {
               onClick={() => implementTagFilter(tag)}
             >
               <span className="font-normal [font-size:_clamp(12px,1vw,16px)] capitalize">
-                {tag}
+                {dislpayTagName || tag}
               </span>
               {isAppliedFilter && (
                 <Image
@@ -141,7 +141,7 @@ export default function TagsFilter({ tags }: TagsFilterProps) {
             onClick={resetFilter}
           >
             <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red">
-              {t("Reset")}
+              {resetText}
             </span>
             <Image
               alt="close"

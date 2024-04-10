@@ -1,11 +1,12 @@
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import getLocale from "@/app/[locale]/utils/getLocale";
-import Image from "next/image";
+"use client";
 
-export default async function SaveTheWorld() {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import Image from "next/image";
+import { useContext } from "react";
+
+export default function SaveTheWorld() {
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <BasicWidthContainer styles={`mx-auto w-full max-[540px]:!px-0 mt-28`}>
@@ -74,7 +75,7 @@ export default async function SaveTheWorld() {
               text-base-red
             "
           >
-            {t("Do it together")}
+            {translation.doItTogether}
           </p>
           <p
             className="
@@ -84,7 +85,8 @@ export default async function SaveTheWorld() {
               md:-tracking-[1.28px]
             "
           >
-            {t("AESOLAR — It's time to save the World")}
+            {" "}
+            {translation.saveTheWorld}
           </p>
         </div>
       </div>
