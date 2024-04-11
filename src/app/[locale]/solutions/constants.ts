@@ -1,27 +1,27 @@
 export const SOLUTIONS_COOPERATION = [
   {
-    clientType: `Invest in Our Company`,
+    clientType: `investInCompany`,
     picture: "investors.png",
-    description: "Be a part of vision",
-    links: [{ title: "Invest in AESOLAR", link: "/contacts?type=investor" }],
+    description: "aPartOfVision",
+    links: [{ title: "investInAESOLAR", link: "/contacts?type=investor" }],
   },
   {
-    clientType: `Invest in Solar Farms`,
+    clientType: `investInFarms`,
     picture: "investorsPark.png",
-    description: "Join in investing",
-    links: [{ title: "Invest in AESOLAR", link: "/contacts?type=investor" }],
+    description: "joinInInvesting",
+    links: [{ title: "investInAESOLAR", link: "/contacts?type=investor" }],
   },
   {
-    clientType: "Installers",
+    clientType: "installers",
     picture: "installers.png",
-    description: "Expand portfolio",
-    links: [{ title: "Discover Our Products", link: "/products" }],
+    description: "expandPortfolio",
+    links: [{ title: "discoverProducts", link: "/products" }],
   },
   {
-    clientType: `End Consumer and Homeowners`,
+    clientType: `endConsumer`,
     picture: "consumer.png",
-    description: "Learn AESOLAR",
-    links: [{ title: "Discover Our Products", link: "/products" }],
+    description: "learnAESOLAR",
+    links: [{ title: "discoverProducts", link: "/products" }],
   },
 ];
 export const SOLUTIONS_GLOBAL_IMPACT_STATS = [
@@ -67,10 +67,10 @@ export const SOLUTIONS_GLOBAL_IMPACT_STATS_WITH_IMAGES = [
 ];
 
 export const SOLUTIONS_STATS_WITH_DETAILS = [
-  { stat: "20+", details: "years of expertise" },
+  { stat: "20+", details: "yearsOfExpertise" },
   {
     stat: "3200+",
-    details: "successful PV installations",
+    details: "installations",
   },
   { stat: "100+", details: "countries" },
 ];

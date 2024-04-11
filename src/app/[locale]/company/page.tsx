@@ -17,18 +17,14 @@ import getLocale from "@/app/[locale]/utils/getLocale";
 
 const getTranslation = async () => {
   const locale = getLocale();
-
-  //TODO
-
-  const footerUrlParamsObject = {
-    // locale,
+  const urlParamsObject = {
+    locale,
   };
-
-  const pagePath = `/company`;
+  const pageTranslationApiPath = `/company`;
   const commonPath = `/common`;
   const responseData = await Promise.all([
-    fetchAPI(pagePath, footerUrlParamsObject),
-    fetchAPI(commonPath, footerUrlParamsObject),
+    fetchAPI(pageTranslationApiPath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
   ]);
   return responseData;
 };
@@ -39,8 +35,8 @@ export default async function About() {
   return (
     <I18nProvider
       translate={{
-        ...pageI18n.data.attributes,
-        ...commonI18n.data.attributes,
+        ...pageI18n.data?.attributes,
+        ...commonI18n.data?.attributes,
       }}
     >
       <HeroSection />

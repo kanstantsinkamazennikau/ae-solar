@@ -1,12 +1,9 @@
 "use client";
 
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
 

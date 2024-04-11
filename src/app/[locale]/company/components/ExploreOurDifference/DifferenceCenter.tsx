@@ -10,7 +10,7 @@ export default function DifferenceCenter() {
   return (
     <Trans
       components={{
-        red: <p className="text-[#B30006]" />,
+        red: <span className="text-[#B30006]" />,
       }}
     >
       {translation.exploreOurDifference}

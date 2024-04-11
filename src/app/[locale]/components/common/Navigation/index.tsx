@@ -9,11 +9,9 @@ import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import MobileNavigation from "@/app/[locale]/components/common/Navigation/MobileNavigation";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
-import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
 import { HEADER_NAV_LINKS_ARRAY } from "@/app/[locale]/utils/constants";
@@ -27,18 +25,15 @@ export default function Navigation({
   headerAttributes: NavigationProps;
 }) {
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { sticky } = useContext(StickyNavigationContext);
   const productsContext = useContext(ProductsContext);
   const { setIsHamburgerMenuOpen } = useContext(MobileSideMenuContext);
-  const mainPageVideoContext = useContext(MainPageVideoContext);
   const params = useParams();
   const router = useRouter();
   const pathname = usePathname();
   const isProductsPage = ["/products", `/${locale}/products`].includes(
     pathname
   );
-  const isMainPage = pathname === "/";
 
   const closeSideMenuOnLogoClickForMobile = () => {
     setIsHamburgerMenuOpen(false);
@@ -84,13 +79,6 @@ export default function Navigation({
               : "-translate-y-[144px] pointer-events-none"
           }`
         }
-        // {
-        //   isMainPage &&
-        //     mainPageVideoContext.isStartAnimation
-        //       ? "translate-y-0"
-        //       : "-translate-y-[144px] pointer-events-none"
-        //   }
-        // }
       `}
     >
       {/* MAIN NAVIGATION */}
@@ -110,7 +98,7 @@ export default function Navigation({
                   {...{
                     ...navLink,
                     isProductsPage,
-                    allModulesText: headerAttributes.allModules,
+                    allModulesText: headerAttributes?.allModules,
                   }}
                 />
               ))}
@@ -123,17 +111,17 @@ export default function Navigation({
                 externalStyle="!py-[10px] !px-[18px]"
               >
                 <span className="[font-size:_clamp(14px,1.5vw,16px)] whitespace-nowrap">
-                  {headerAttributes.contactUs}
+                  {headerAttributes?.contactUs}
                 </span>
               </Button>
             </div>
 
             {/* MOBILE NAV */}
             <MobileNavigation
-              contactUsText={headerAttributes.contactUs}
+              contactUsText={headerAttributes?.contactUs}
               mobileNavigationLanguageSelectorText={{
-                language: headerAttributes.language,
-                chooseLanguage: headerAttributes.chooseLanguage,
+                language: headerAttributes?.language,
+                chooseLanguage: headerAttributes?.chooseLanguage,
               }}
             />
           </nav>
@@ -144,14 +132,15 @@ export default function Navigation({
       {sticky && !hideSubnavigation() && (
         <SubNavigation
           isLink
-          chooseYourModuleText={headerAttributes.chooseModule}
-          modulesText={headerAttributes.modules}
+          chooseYourModuleText={headerAttributes?.chooseModule}
+          modulesText={headerAttributes?.modules}
         />
       )}
 
       {isProductsPage && (
         <SubNavigationProductPanels
-          allModulesText={headerAttributes.allModules}
+          allModulesText={headerAttributes?.allModules}
+          chooseModuleText={headerAttributes?.chooseModule}
         />
       )}
     </div>

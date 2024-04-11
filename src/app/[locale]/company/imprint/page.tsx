@@ -3,12 +3,16 @@
 import Contacts from "@/app/[locale]/company/imprint/components/Contacts";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { DOCUMENTS_IMPRINT_INFO_LEGAL } from "@/app/[locale]/utils/constants";
 import { useParams } from "next/navigation";
+import { useContext } from "react";
 
 export default function Imprint() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
+
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -30,7 +34,7 @@ export default function Imprint() {
       <div className="flex flex-col gap-14 max-w-[760px] max-[920px]:self-start">
         <div className="flex flex-col gap-6">
           <div className="[font-size:_clamp(20px,1.5vw,24px)] font-semibold leading-[120%]">
-            {t("Legal")}
+            {translation.legal}
           </div>
           <div className="flex flex-col">
             {DOCUMENTS_IMPRINT_INFO_LEGAL.registration.map(

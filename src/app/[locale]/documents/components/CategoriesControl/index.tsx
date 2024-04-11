@@ -4,9 +4,7 @@ import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import Categories from "@/app/[locale]/documents/components/Categories";
 import Filter from "@/app/[locale]/documents/components/Filter";
 import SearchBar from "@/app/[locale]/documents/components/SearchBar";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams } from "next/navigation";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { useContext } from "react";
 
 export default function CategoriesWithControl({
@@ -14,8 +12,7 @@ export default function CategoriesWithControl({
 }: {
   children: React.ReactNode;
 }) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
   const { documentsFile, documentsLoading, searchInputValue, documentsType } =
     useContext(DocumentsContext);
   const isImprint = "imprint" === documentsType;
@@ -42,7 +39,7 @@ export default function CategoriesWithControl({
               mt-5
             "
           >
-            {t("No result for") + searchInputValue}
+            {translation.noResultFor + searchInputValue}
           </div>
         )}
       </div>

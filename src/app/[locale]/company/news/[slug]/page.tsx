@@ -61,22 +61,18 @@ const updatePostViews = async (slug: string) => {
 
 const getTranslation = async () => {
   const locale = getLocale();
-
-  //TODO
-
-  const footerUrlParamsObject = {
-    // locale,
+  const urlParamsObject = {
+    locale,
   };
-
-  const mainPagePath = `/news`;
+  const pageTranslationApiPath = `/news`;
   const commonPath = `/common`;
   const [pageI18n, commonI18n] = await Promise.all([
-    fetchAPI(mainPagePath, footerUrlParamsObject),
-    fetchAPI(commonPath, footerUrlParamsObject),
+    fetchAPI(pageTranslationApiPath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
   ]);
   return {
-    ...pageI18n.data.attributes,
-    ...commonI18n.data.attributes,
+    ...pageI18n.data?.attributes,
+    ...commonI18n.data?.attributes,
   };
 };
 

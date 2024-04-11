@@ -144,19 +144,16 @@ export async function generateMetadata({
 
 const getLayoutData = async () => {
   const locale = getLocale();
-
-  //TODO
-
   const urlParamsObject = {
-    // locale,
-    populate: "*",
+    locale,
   };
-
   const footerPath = `/footer`;
   const cookiesPath = `/cookie`;
+  const commonPath = `/common`;
   const responseData = await Promise.all([
     fetchAPI(footerPath, urlParamsObject),
     fetchAPI(cookiesPath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
   ]);
   return responseData;
 };

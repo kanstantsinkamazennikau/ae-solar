@@ -85,7 +85,6 @@ export default function SaveTheWorld() {
               md:-tracking-[1.28px]
             "
           >
-            {" "}
             {translation.saveTheWorld}
           </p>
         </div>

@@ -13,18 +13,14 @@ import Image from "next/image";
 
 const getTranslation = async () => {
   const locale = getLocale();
-
-  //TODO
-
-  const footerUrlParamsObject = {
-    // locale,
+  const urlParamsObject = {
+    locale,
   };
-
-  const mainPagePath = `/main-page`;
+  const pageTranslationApiPath = `/main-page`;
   const commonPath = `/common`;
   const responseData = await Promise.all([
-    fetchAPI(mainPagePath, footerUrlParamsObject),
-    fetchAPI(commonPath, footerUrlParamsObject),
+    fetchAPI(pageTranslationApiPath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
   ]);
   return responseData;
 };
@@ -35,8 +31,8 @@ export default async function Home() {
   return (
     <I18nProvider
       translate={{
-        ...pageI18n.data.attributes,
-        ...commonI18n.data.attributes,
+        ...pageI18n.data?.attributes,
+        ...commonI18n.data?.attributes,
       }}
     >
       <main className="flex flex-col items-center w-full ">

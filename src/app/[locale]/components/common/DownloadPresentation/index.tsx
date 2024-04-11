@@ -12,8 +12,6 @@ export default function DownloadPresentation({
   link,
   title = "PROJECT REFERENCE",
 }: DownloadPresentationProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { translation } = useContext(i18nProviderContext);
 
   return (

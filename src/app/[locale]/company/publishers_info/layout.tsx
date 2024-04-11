@@ -5,5 +5,5 @@ export default function DocumentsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <ClientLayout>{children}</ClientLayout>;
+  return <ClientLayout apiRoute="/publisher">{children}</ClientLayout>;
 }

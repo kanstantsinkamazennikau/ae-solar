@@ -919,26 +919,26 @@ export const CART_LOCALSTORAGE = "cart";
 
 export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
   {
-    formTitle: "My name is",
-    placeholder: "first and last",
+    formTitle: "myName",
+    placeholder: "myNamePlaceholder",
     name: "name",
     type: "input",
   },
   {
-    formTitle: "Please, contact me at",
-    placeholder: "your e-mail",
+    formTitle: "contactMe",
+    placeholder: "contactMePlaceholder",
     name: "email",
     type: "input",
   },
   {
-    formTitle: "My phone number",
-    placeholder: "phone number",
+    formTitle: "myPhone",
+    placeholder: "myPhonePlaceholder",
     name: "phone",
     type: "phone",
   },
   {
-    formTitle: "I have a",
-    placeholder: "comment or question, etc.",
+    formTitle: "comment",
+    placeholder: "commentPlaceholder",
     name: "comment",
     type: "textarea",
   },
@@ -946,37 +946,37 @@ export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
 
 export const CONSULT_FORM_FIELDS: FormFileds[] = [
   {
-    formTitle: "My name is",
-    placeholder: "first and last",
+    formTitle: "myName",
+    placeholder: "myNamePlaceholder",
     name: "name",
     type: "input",
   },
   {
-    formTitle: "I’m interested in",
+    formTitle: "interestedIn",
     name: "interest",
     type: "picker",
   },
   {
-    formTitle: "Capacity",
-    placeholder: "kW",
+    formTitle: "capacity",
+    placeholder: "capacityPlaceholder",
     name: "capacity",
     type: "input",
   },
   {
-    formTitle: "Contact me at",
-    placeholder: "your e-mail",
+    formTitle: "contactMe",
+    placeholder: "contactMePlaceholder",
     name: "email",
     type: "input",
   },
   {
-    formTitle: "My phone number",
-    placeholder: "phone number",
+    formTitle: "myPhone",
+    placeholder: "myPhonePlaceholder",
     name: "phone",
     type: "phone",
   },
   {
-    formTitle: "I have a",
-    placeholder: "comment or question, etc.",
+    formTitle: "comment",
+    placeholder: "commentPlaceholder",
     name: "comment",
     type: "textarea",
   },
@@ -1024,7 +1024,7 @@ export const DOCUMENTS_FILES: (
   | DocumentsTypesWithSubCategories
 )[] = [
   {
-    category: "Presentation",
+    category: "presentation",
     type: "Text",
     data: [
       {
@@ -1069,11 +1069,11 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    category: "Technical Data",
+    category: "technicalData",
     type: "SubCategories",
     subCategories: [
       {
-        category: "Datasheets",
+        category: "datasheets",
         type: "Text",
         data: [
           {
@@ -1214,7 +1214,7 @@ export const DOCUMENTS_FILES: (
         ],
       },
       {
-        category: "Installation Manual",
+        category: "installationManual",
         type: "Text",
         data: [
           {
@@ -1228,7 +1228,7 @@ export const DOCUMENTS_FILES: (
         ],
       },
       {
-        category: "NFC-chips",
+        category: "NFCChips",
         type: "Text",
         data: [
           {
@@ -1246,7 +1246,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    category: "Certificates",
+    category: "certificates",
     type: "Text",
     data: [
       {
@@ -1346,7 +1346,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    category: "Warranty",
+    category: "warranty",
     type: "Text",
     data: [
       {

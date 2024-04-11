@@ -5,12 +5,10 @@ import {
   DocumentsTypesOther,
   DocumentsTypesPresentation,
 } from "@/app/[locale]/documents/components/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { romanize } from "@/app/[locale]/utils/romanize";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { Fragment, useContext, useEffect, useRef, useState } from "react";
 
 export default function Categories() {
@@ -26,8 +24,7 @@ export default function Categories() {
   const [isOpenItem, setIsOpenItem] = useState(false);
   const [height, setHeight] = useState<number | undefined>(undefined);
 
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const onClick = () => {
     setIsOpenItem(!isOpenItem);
@@ -63,7 +60,7 @@ export default function Categories() {
           />
           <div className="absolute top-4 w-full px-7 min-[920px]:block hidden">
             <p className="font-semibold text-[#505050] [font-size:_clamp(12px,1.5vw,16px)] leading-[120%] mb-4">
-              {t("Categories")}
+              {translation.categories}
             </p>
             <hr className="bg-option-border h-[1px] border-none w-full" />
           </div>
@@ -122,13 +119,13 @@ export default function Categories() {
                       >
                         <div className="max-w-[215px]">
                           {documentsType !== "publishers_info" ? (
-                            t(category)
+                            translation[category] || category
                           ) : (
                             <div className="flex gap-1">
                               <div className="min-w-[20px]">
                                 {romanize(index + 1)}.
                               </div>
-                              <div>{t(category)}</div>
+                              <div>{translation[category] || category}</div>
                             </div>
                           )}
                         </div>
@@ -177,7 +174,7 @@ export default function Categories() {
                                 setSelectedCategoryIndex(index);
                             }}
                           >
-                            {t(category)}
+                            {translation[category] || category}
                           </Link>
                         ))}
                       </div>
@@ -217,7 +214,8 @@ export default function Categories() {
                 items-center
               "
             >
-              {t(documentsFile[selectedCategoryIndex]?.category)}
+              {translation[documentsFile[selectedCategoryIndex]?.category] ||
+                documentsFile[selectedCategoryIndex]?.category}
               <Image
                 src={`/images/selectorWhite.svg`}
                 alt="selectorWhite"
@@ -263,13 +261,13 @@ export default function Categories() {
                         >
                           <div className="max-w-[215px]">
                             {documentsType !== "publishers_info" ? (
-                              t(category)
+                              translation[category] || category
                             ) : (
                               <div className="flex gap-1">
                                 <div className="min-w-[20px]">
                                   {romanize(index + 1)}.
                                 </div>
-                                <div>{t(category)}</div>
+                                <div>{translation[category] || category}</div>
                               </div>
                             )}
                           </div>
@@ -318,7 +316,7 @@ export default function Categories() {
                                   setSelectedCategoryIndex(index);
                               }}
                             >
-                              {t(category)}
+                              {translation[category] || category}
                             </Link>
                           ))}
                         </div>

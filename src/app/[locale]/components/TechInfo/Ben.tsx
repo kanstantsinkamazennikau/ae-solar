@@ -147,7 +147,8 @@ export default function Ben({
           `}
           >
             {/* {description} */}
-            {translation[description].split(" ").slice(0, 14).join(" ") + "..."}
+            {translation[description]?.split(" ").slice(0, 14).join(" ") +
+              "..."}
           </div>
 
           <div

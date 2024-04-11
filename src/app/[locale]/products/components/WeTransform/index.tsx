@@ -1,15 +1,13 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function WeTransform() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -73,8 +71,6 @@ export default function WeTransform() {
               left-0
             "
           />
-
-          {/* CLIENT TYPE */}
           <div
             className="
               [font-size:_clamp(36px,6vw,96px)]
@@ -102,7 +98,7 @@ export default function WeTransform() {
                 ),
               }}
             >
-              {t("We Transform")}
+              {translation.weTransform}
             </Trans>
           </div>
 
@@ -132,7 +128,7 @@ export default function WeTransform() {
                   ),
                 }}
               >
-                {t("Our range")}
+                {translation.ourRange}
               </Trans>
             </p>
             <p>
@@ -147,7 +143,7 @@ export default function WeTransform() {
                   ),
                 }}
               >
-                {t("Each of product")}
+                {translation.eachOfProduct}
               </Trans>
             </p>
           </div>
@@ -190,7 +186,7 @@ export default function WeTransform() {
                 ),
               }}
             >
-              {t("For You and Planet")}
+              {translation.forYouAndPlanet}
             </Trans>
           </div>
         </div>

@@ -6,7 +6,6 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { FAQ_ACCORDION_DATA } from "@/app/[locale]/utils/constants";
@@ -17,8 +16,6 @@ import { Trans } from "react-i18next";
 export function MainPageFAQ() {
   const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
-  const { t } = useClientTranslation(locale, "translation");
-
   const { translation } = useContext(i18nProviderContext);
 
   const handleClick = () => {
@@ -77,7 +74,7 @@ export function MainPageFAQ() {
                 bold: <span className="text-dark-gray-900 font-bold" />,
               }}
             >
-              {translation.faqGermanBrand}
+              {translation.germanBrand}
             </Trans>
             <hr className="mt-6 border-[#131313] min-[920px]:hidden" />
           </div>

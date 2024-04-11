@@ -4,15 +4,12 @@ import AccordionItem from "@/app/[locale]/components/common/Accordion/AccordionI
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import AccordionWithIntersection from "@/app/[locale]/documents/components/AccordionWithIntersection";
 import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { DOCUMENTS_FAQ_FILES } from "@/app/[locale]/utils/constants";
-import { useParams } from "next/navigation";
 import { useContext, useEffect } from "react";
 
 export default function ClientFAQ() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const {
     searchInputValue,
@@ -27,7 +24,9 @@ export default function ClientFAQ() {
     const filteredDocuments = DOCUMENTS_FAQ_FILES.map(({ data, category }) => ({
       category,
       data: data.filter(({ question }) =>
-        t(question).toLowerCase().includes(searchInputValue.toLowerCase())
+        translation[question]
+          ?.toLowerCase()
+          .includes(searchInputValue.toLowerCase())
       ),
     })).filter(({ data }) => data.length > 0);
 
@@ -35,7 +34,7 @@ export default function ClientFAQ() {
       setDocumentsFile(filteredDocuments as typeof DOCUMENTS_FAQ_FILES);
       setDocumentsLoading(false);
     }, 500);
-  }, [searchInputValue, setDocumentsFile, setDocumentsLoading, t]);
+  }, [searchInputValue, setDocumentsFile, setDocumentsLoading, translation]);
 
   return documentsLoading ? (
     <DocumentsLoader />
@@ -44,7 +43,7 @@ export default function ClientFAQ() {
       ({ category, data }, index) => {
         return (
           <AccordionWithIntersection
-            category={t(category)}
+            category={translation[category]}
             key={category}
             index={index}
           >
@@ -57,7 +56,7 @@ export default function ClientFAQ() {
                     leading-[120%]
                   `}
                 >
-                  {t(question)}
+                  {translation[question]}
                 </span>
               );
               return (
@@ -68,7 +67,7 @@ export default function ClientFAQ() {
                   dropdownIcon="/images/selectorWhite.svg"
                 >
                   <p className="pb-4 pt-2 pl-4 font-walsheim [font-size:_clamp(16px,1.5vw,20px)]">
-                    {t(answer)}
+                    {translation[answer]}
                   </p>
                 </AccordionItem>
               );

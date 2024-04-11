@@ -5,15 +5,18 @@ import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import CooperationStats from "@/app/[locale]/solutions/components/Cooperation/CooperationStats";
 import { SOLUTIONS_COOPERATION } from "@/app/[locale]/solutions/constants";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function Cooperation() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -33,7 +36,7 @@ export default function Cooperation() {
                   red: <p className="text-[#B30006]" />,
                 }}
               >
-                {t("We Are Open To cooperation")}
+                {translation.openToCooperation}
               </Trans>
             }
             align="left"
@@ -87,8 +90,8 @@ export default function Cooperation() {
                     >
                       <div className="flex gap-6 items-start [font-size:_clamp(30px,3.5vw,64px)] leading-[100%] ">
                         <span className="font-semibold -tracking-[1.08px]">
-                          {t(clientType)
-                            .split(/\r?\n|\r|\n/g)
+                          {translation[clientType]
+                            ?.split(/\r?\n|\r|\n/g)
                             .map((string) => (
                               <div key={string}>{string}</div>
                             ))}
@@ -102,14 +105,14 @@ export default function Cooperation() {
                         font-walsheim
                       "
                       >
-                        {t(description)}
+                        {translation[description]}
                       </p>
                       <div className="flex gap-4 items-baseline">
                         <div className="flex flex-col gap-3">
                           {links.map(({ link, title }) => (
                             <LinkWithArrow
                               key={link}
-                              label={t(title)}
+                              label={translation[title]}
                               href={link}
                               externalStyle="[font-size:_clamp(16px,1.5vw,20px)!important] font-semibold leading-[100%] -tracking-[0.2px]"
                               arrowStyle="w-[14px] h-[14px]"

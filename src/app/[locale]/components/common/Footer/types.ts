@@ -40,7 +40,7 @@ export interface RepeatableText {
 
 export interface NavigationProps {
   [key: string]: string;
-  logoText: string;
+  logoSlogan: string;
   germanBrand: string;
   weAreSocial: string;
   copyright: string;

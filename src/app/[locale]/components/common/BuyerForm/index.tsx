@@ -6,8 +6,7 @@ import Inputs from "@/app/[locale]/components/common/BuyerForm/Inputs";
 import { BuyerFormProps } from "@/app/[locale]/components/common/BuyerForm/types";
 import Loader from "@/app/[locale]/components/common/Loader";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useContext, useState } from "react";
@@ -37,7 +36,7 @@ export default function BuyerForm({
   agreementTextColor,
 }: BuyerFormProps) {
   const locale = useParams()?.locale;
-  const { t } = useClientTranslation(locale as LocaleTypes, "translation");
+  const { translation } = useContext(i18nProviderContext);
   const router = useRouter();
   const { setIsShowCheckoutForm } = useContext(ConstructorContext);
   const [isShowMessageAfterSubmit, setIsShowMessageAfterSubmit] =
@@ -139,8 +138,8 @@ export default function BuyerForm({
                   text-center
                 "
               >
-                {t("We contact you")
-                  .split(/\r?\n|\r|\n/g)
+                {translation.weContactYou
+                  ?.split(/\r?\n|\r|\n/g)
                   .map((string, index) => (
                     <div
                       key={string}
@@ -156,7 +155,7 @@ export default function BuyerForm({
                 showArrow
                 onClick={handleClick}
               >
-                {t("Go to Homepage")}
+                {translation.goToHomepage}
               </Button>
             </div>
           ) : loading ? (

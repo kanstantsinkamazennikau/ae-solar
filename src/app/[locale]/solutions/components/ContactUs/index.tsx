@@ -4,26 +4,20 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 export default function ContactUs() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
 
-  const [clientType, _] =
-    useState<keyof typeof matchPartnerTypeWithArticle>("partner");
+  const { translation } = useContext(i18nProviderContext);
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/contacts?type=${clientType}`);
-  };
-
-  const matchPartnerTypeWithArticle = {
-    partner: "a partner",
-    investor: "an investor",
-    installer: "an installer",
+    router.push(`/contacts`);
   };
 
   return (
@@ -56,11 +50,11 @@ export default function ContactUs() {
       >
         <div
           className="
-              [background:radial-gradient(100%_100%_at_50%_100%,rgba(109,2,7,0.30)_0%,rgba(109,2,7,0.00)_100%),linear-gradient(297deg,#000_0%,rgba(0,0,0,0.00)_100%),#0d0d0d00]
-              w-full
-              h-full
-              absolute
-            "
+            [background:radial-gradient(100%_100%_at_50%_100%,rgba(109,2,7,0.30)_0%,rgba(109,2,7,0.00)_100%),linear-gradient(297deg,#000_0%,rgba(0,0,0,0.00)_100%),#0d0d0d00]
+            w-full
+            h-full
+            absolute
+          "
         />
         <Image
           src={`/images/getInTouchUnion.svg`}
@@ -84,35 +78,6 @@ export default function ContactUs() {
             relative
           "
         >
-          {/* CLIENT TYPE */}
-          {/* <div
-            className={`flex p-1 justify-center items-center md:gap-5 gap-1 get-in-touch-border [&>*:last-child>div:last-child]:hidden relative`}
-          >
-            {GET_IN_TOUCH_CLIENT_TYPE.map((type) => (
-              <div
-                key={type}
-                className="flex justify-center items-center md:gap-5 gap-1"
-              >
-                <button
-                  className={`flex py-[14px] md:px-7 px-5 ${
-                    clientType === type
-                      ? "get-in-touch-client-border"
-                      : "border-1 border border-transparent"
-                  }`}
-                  onClick={() =>
-                    setClientType(
-                      type as keyof typeof matchPartnerTypeWithArticle
-                    )
-                  }
-                >
-                  <span className="[font-size:_clamp(10px,2vw,24px)] leading-[0.9] capitalize">
-                    {t(type)}
-                  </span>
-                </button>
-                <div className="w-1 h-5 bg-base-red"></div>
-              </div>
-            ))}
-          </div> */}
           <div
             className="
               flex
@@ -137,7 +102,7 @@ export default function ContactUs() {
               font-medium
             "
             >
-              {t("Fueling growth together")}
+              {translation.fuelingGrowth}
             </div>
             <div
               className="
@@ -149,12 +114,12 @@ export default function ContactUs() {
                 leading-[100%]
               "
             >
-              {t("Contact Us for a Sustainable Future")}
+              {translation.sustainableFuture}
             </div>
           </div>
           <Button externalStyle="!py-[14px] !px-[26px]" onClick={handleClick}>
             <span className="[font-size:_clamp(16px,1.5vw,20px)] leading-[100%] whitespace-nowrap">
-              {t("Contact Us")}
+              {translation.contactUs}
             </span>
           </Button>
         </div>

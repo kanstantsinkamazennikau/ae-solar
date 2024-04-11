@@ -2,7 +2,6 @@ import Post from "@/app/[locale]/company/news/components/BlogPostsList/Post";
 import { StrapiBlogsWithPagination } from "@/app/[locale]/company/news/components/BlogPostsList/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
@@ -36,25 +35,17 @@ const getRecentPosts = async () => {
 
 const getMainPageTranslation = async () => {
   const locale = getLocale();
-
-  //TODO
-
-  const footerUrlParamsObject = {
-    // locale,
+  const urlParamsObject = {
+    locale,
   };
-
   const footerPath = `/main-page`;
-  const responseData = await fetchAPI(footerPath, footerUrlParamsObject);
+  const responseData = await fetchAPI(footerPath, urlParamsObject);
   return responseData;
 };
 
 export default async function RecentNews() {
   const blogPosts = await getRecentPosts();
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
-  const {
-    data: { attributes },
-  } = await getMainPageTranslation();
+  const { data } = await getMainPageTranslation();
 
   return (
     <div className="flex md:flex-row flex-col">
@@ -111,7 +102,7 @@ export default async function RecentNews() {
           <Link href="company/news" className="mt-10 mx-auto">
             <Button style="outline" showArrow>
               <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">
-                {attributes.readAllNews}
+                {data?.attributes.readAllNews}
               </span>
             </Button>
           </Link>

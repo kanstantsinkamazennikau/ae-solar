@@ -71,7 +71,7 @@ export default function Footer({
               <div className="flex flex-col w-fit">
                 <Logo />
                 <p className="text-base-red text-[10px] text-right">
-                  {footerAttributes.logoText}
+                  {footerAttributes?.logoSlogan}
                 </p>
               </div>
               <div
@@ -88,12 +88,12 @@ export default function Footer({
                     bold: <span className="text-dark-gray-900 font-bold" />,
                   }}
                 >
-                  {t(footerAttributes.germanBrand)}
+                  {footerAttributes?.germanBrand}
                 </Trans>
               </div>
               <div className="min-[500px]:flex gap-8 flex-col hidden">
                 <ContactInfo />
-                <Social socialText={footerAttributes.weAreSocial} />
+                <Social socialText={footerAttributes?.weAreSocial} />
               </div>
             </div>
             {/* LINKS */}
@@ -102,30 +102,30 @@ export default function Footer({
                 <FooterCategory
                   key={text}
                   url={url}
-                  text={footerAttributes[text]}
+                  text={footerAttributes?.[text]}
                   subMenu={subMenu.map((item) => ({
                     ...item,
-                    text: footerAttributes[item.text] || item.text,
+                    text: footerAttributes?.[item.text] || item.text,
                   }))}
                 />
               ))}
             </div>
             <div className="min-[500px]:hidden gap-8 flex-col flex mt-8">
               <ContactInfo />
-              <Social socialText={footerAttributes.weAreSocial} />
+              <Social socialText={footerAttributes?.weAreSocial} />
             </div>
           </nav>
           {/* POLICY */}
           <div className="relative z-10">
             <hr className="bg-dark-gray-800 h-[1px] border-none mb-3" />
             <div className="flex justify-between text-dark-gray-800 mb-5 text-[10px] min-[550px]:flex-row flex-col">
-              <div>{footerAttributes.copyright}</div>
+              <div>{footerAttributes?.copyright}</div>
               <div className="flex last-of-type:[&>a]:pr-0 last-of-type:[&>div]:hidden min-[550px]:flex-row max-[550px]:gap-x-4 flex-wrap">
                 {POLICY_LINKS.map(({ text, link }) => (
                   <PolicyLink
                     key={text}
                     link={link}
-                    text={footerAttributes[text]}
+                    text={footerAttributes?.[text]}
                   />
                 ))}
               </div>

@@ -3,37 +3,33 @@ import I18nProvider from "@/app/[locale]/i18nProvider";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 
-const getTranslation = async (page: string) => {
+const getTranslation = async (pagePath: string) => {
   const locale = getLocale();
-
-  //TODO
-
-  const footerUrlParamsObject = {
-    // locale,
+  const urlParamsObject = {
+    locale,
   };
-
   const commonPath = `/common`;
   const responseData = await Promise.all([
-    fetchAPI(page, footerUrlParamsObject),
-    fetchAPI(commonPath, footerUrlParamsObject),
+    fetchAPI(pagePath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
   ]);
   return responseData;
 };
 
 export default async function Layout({
   children,
-  page,
+  apiRoute,
 }: {
   children: React.ReactNode;
-  page?: string;
+  apiRoute?: string;
 }) {
-  const [pageI18n, commonI18n] = await getTranslation(page!);
+  const [pageI18n, commonI18n] = await getTranslation(apiRoute!);
 
   return (
     <I18nProvider
       translate={{
-        ...pageI18n.data.attributes,
-        ...commonI18n.data.attributes,
+        ...pageI18n.data?.attributes,
+        ...commonI18n.data?.attributes,
       }}
     >
       <DocumentsLayout>{children}</DocumentsLayout>

@@ -3,17 +3,14 @@
 import Button from "@/app/[locale]/components/common/Button";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import SearchBar from "@/app/[locale]/documents/components/SearchBar";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 
 export default function Filter() {
   const { setFilterModels, filterModels } = useContext(DocumentsContext);
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -49,7 +46,7 @@ export default function Filter() {
             max-[920px]:mb-2
           "
         >
-          <div className="text-[#505050]">{t("Filter")}</div>
+          <div className="text-[#505050]">{translation.filter}</div>
           {!!filterModels.length && (
             <Button
               style="textOnly"
@@ -57,7 +54,7 @@ export default function Filter() {
               onClick={() => setFilterModels([])}
             >
               <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red">
-                {t("Reset")}
+                {translation.reset}
               </span>
               <Image
                 alt="close"
@@ -127,7 +124,7 @@ export default function Filter() {
             onClick={() => setFilterModels([])}
           >
             <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red">
-              {t("Reset")}
+              {translation.reset}
             </span>
             <Image
               alt="close"

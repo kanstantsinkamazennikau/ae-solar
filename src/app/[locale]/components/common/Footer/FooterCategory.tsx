@@ -1,16 +1,11 @@
 "use client";
 
 import { FooterCategoryProps } from "@/app/[locale]/components/common/Footer/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 export function FooterCategory({ subMenu, text, url }: FooterCategoryProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(false);
   const [height, setHeight] = useState<number | undefined>(undefined);
@@ -38,7 +33,7 @@ export function FooterCategory({ subMenu, text, url }: FooterCategoryProps) {
             block
           "
           >
-            {t(text)}
+            {text}
           </Link>
         </div>
         {subMenu.map(({ url, text }) => (
@@ -71,7 +66,7 @@ export function FooterCategory({ subMenu, text, url }: FooterCategoryProps) {
               isOpenItem ? "min-[500px]:text-white" : "text-dark-gray-900"
             }`}
           >
-            {t(text)}
+            {text}
           </p>
           <Image
             className={`

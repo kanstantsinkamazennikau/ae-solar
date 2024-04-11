@@ -1,11 +1,12 @@
-import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import getLocale from "@/app/[locale]/utils/getLocale";
-import Image from "next/image";
+"use client";
 
-export default async function Discover() {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import Image from "next/image";
+import { useContext } from "react";
+
+export default function Discover() {
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div className="-mt-[80px] overflow-hidden 2xl:-mb-[120px] xl:-mb-[60px] md:-mb-[20px] mb-[100px] flex md:flex-row flex-col justify-center">
@@ -49,19 +50,19 @@ export default async function Discover() {
       >
         <div className="flex flex-col gap-4 xl:max-w-[1100px] lg:max-w-[800px] min-[400px]:max-w-[600px] max-w-[240px] text-center">
           <div className=" text-base-red md:-tracking-[1.2px] leading-[120%] [font-size:_clamp(20px,3vw,36px)] font-medium">
-            {t("Discover AESOLAR")}
+            {translation.discover}
           </div>
           <div className="[font-size:_clamp(30px,5.5vw,96px)] leading-[100%] font-semibold">
-            {t("Your Partner in a Sustainable Future")}
+            {translation.partnerFuture}
           </div>
         </div>
 
         <div className="max-w-[538px] flex flex-col items-center lg:gap-6 gap-4">
           <p className="[font-size:_clamp(16px,1.5vw,20px)] font-walsheim font-medium leading-[150%] text-center">
-            {t("Leading Provider")}
+            {translation.leadingProvider}
           </p>
           <LinkWithArrow
-            label={t("Learn more About Us")}
+            label={translation.moreAboutUs}
             href="/company"
             externalStyle="[font-size:_clamp(16px,1vw,20px)!important] font-medium"
           />
