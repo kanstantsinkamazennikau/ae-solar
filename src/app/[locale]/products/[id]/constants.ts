@@ -1465,7 +1465,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
   Meteor: {
     modules: [
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-108BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1503,7 +1503,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-120BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1541,7 +1541,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-144BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1579,7 +1579,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-108BDE",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1617,7 +1617,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-108",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1655,7 +1655,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-120",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1693,7 +1693,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-144",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1731,7 +1731,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-108E",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1769,7 +1769,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CME-132",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1807,7 +1807,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CME-132BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1845,7 +1845,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMER-132BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1883,7 +1883,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMDR-120BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
