@@ -259,110 +259,6 @@ export const PRODUCT_CONCLUSION_FOR_PANELS = {
   ShadeStar: `ConclusionShadeStar`,
   Neptune: `ConclusionNeptune`,
 };
-export const PRODUCT_DEFAULT_MODEL_PARAMS = {
-  Aurora: {
-    model: "Aurora",
-    solarCellTechnology: "Gallium-doped Mono c-Si PERC, Half-cut cells",
-    moduleSpecification: "AE650ME-132-650Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "2.0 mm, high transmission solar glass, tempered",
-    frameColor: "White Backsheet",
-    moduleDimension: {
-      length: "1302",
-      width: "2383",
-    },
-    powerRange: {
-      from: "640",
-      to: "660",
-    },
-    applications: ["PV-Thermal"],
-  },
-  Comet: {
-    model: "Comet",
-    solarCellTechnology: "Silicon Heterojunction Technology, Half-cut cells",
-    moduleSpecification: "AE685TME-132BDS-513Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "2.0 mm white glazed glass, tempered",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "1302",
-      width: "2383",
-    },
-    powerRange: {
-      from: "510",
-      to: "525",
-    },
-    applications: ["PV-Thermal"],
-  },
-  Meteor: {
-    model: "Meteor",
-    solarCellTechnology: "n-Type TOPCon Technology, Half-cut cells",
-    moduleSpecification: "AE425CMD-108-335.3Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "White Backsheet",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "1721",
-      width: "1133",
-    },
-    powerRange: {
-      from: "420",
-      to: "440",
-    },
-    applications: ["PV-Thermal"],
-  },
-  Terra: {
-    model: "Terra",
-    solarCellTechnology: "Gallium-doped Mono c-Si PERC, Half-cut cells",
-    moduleSpecification: "AE495MD-L132BD-377Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "2.0 mm, high transmission solar glass, tempered",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "2235",
-      width: "1070",
-    },
-    powerRange: {
-      from: "370",
-      to: "377",
-    },
-    applications: ["Agri-Voltsics"],
-  },
-  ShadeStar: {
-    model: "ShadeStar",
-    solarCellTechnology: "Mono c-Si PERC, Full cells",
-    moduleSpecification: "AE190SMB-395Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "2.0 mm, high transmission solar glass, tempered",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "1721",
-      width: "1133",
-    },
-    powerRange: {
-      from: "395",
-      to: "410",
-    },
-    applications: ["Shade Resistant"],
-  },
-  Neptune: {
-    model: "Neptune",
-    solarCellTechnology: "Gallium-doped Mono c-Si PERC, Half-cut cells",
-    moduleSpecification: "",
-    moduleColor: "Transparent / Black / White",
-    backCover: "White Backsheet",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "1755",
-      width: "1038",
-    },
-    powerRange: {
-      from: "370",
-      to: "380",
-    },
-    applications: ["PV-Thermal"],
-  },
-};
 
 export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
   Aurora: {
@@ -655,7 +551,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -693,7 +589,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -731,7 +627,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2094",
           width: "1133",
@@ -769,7 +665,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -807,7 +703,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -845,7 +741,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -883,7 +779,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -921,7 +817,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2094",
           width: "1133",
@@ -959,7 +855,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -997,7 +893,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1035,7 +931,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2094",
           width: "1133",
@@ -1073,7 +969,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -1111,7 +1007,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1153,7 +1049,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -1191,7 +1087,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -1229,7 +1125,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -1267,7 +1163,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1309,7 +1205,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Snow Resistant"],
+        applications: "Snow Resistant",
         moduleDimension: {
           length: "1070",
           width: "2235",
@@ -1351,7 +1247,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Shade Resistant"],
+        applications: "Shade Resistant",
         moduleDimension: {
           length: "1690",
           width: "996",
@@ -1389,7 +1285,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Shade Resistant"],
+        applications: "Shade Resistant",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1431,7 +1327,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["PV-Thermal"],
+        applications: "PV-Thermal",
         moduleDimension: {
           length: "1755",
           width: "1038",
@@ -1465,7 +1361,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
   Meteor: {
     modules: [
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-108BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1473,7 +1369,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1503,7 +1399,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-120BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1511,7 +1407,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -1541,7 +1437,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-144BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1549,7 +1445,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -1579,7 +1475,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-108BDE",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1587,7 +1483,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1617,7 +1513,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-108",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1625,7 +1521,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1655,7 +1551,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-120",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1663,7 +1559,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -1693,7 +1589,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-144",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1701,7 +1597,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -1731,7 +1627,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMD-108E",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1739,7 +1635,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1769,7 +1665,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CME-132",
         cellType: "N type TOPCon",
         moduleDesign: "Mono-facial",
@@ -1777,7 +1673,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -1807,7 +1703,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CME-132BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1815,7 +1711,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -1845,7 +1741,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMER-132BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1853,7 +1749,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2383",
           width: "1133",
@@ -1883,7 +1779,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         ],
       },
       {
-        techName: "Neptune",
+        techName: "Meteor",
         model: "AE×××CMDR-120BDS",
         cellType: "N type TOPCon",
         moduleDesign: "Bifacial",
@@ -1891,7 +1787,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2077",
           width: "1133",

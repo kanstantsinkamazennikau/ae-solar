@@ -63,26 +63,27 @@ export default function CartModelDetails({ model }: DetailsProps) {
             <span>{`${modelParameterFrom} — ${modelParameterTo} W`}</span>
           );
         }
-        if (modelKey === "applications") {
-          const modelParameterApplications = model[modelKey];
-          component = (
-            <>
-              {modelParameterApplications?.map((application, index) => (
-                <span key={application}>
-                  {`${index ? ", " : ""}${application}`}
-                </span>
-              ))}
-            </>
-          );
-        }
+        // if (modelKey === "applications") {
+        //   const modelParameterApplications = model[modelKey];
+        //   component = (
+        //     <>
+        //       {modelParameterApplications?.map((application, index) => (
+        //         <span key={application}>
+        //           {`${index ? ", " : ""}${application}`}
+        //         </span>
+        //       ))}
+        //     </>
+        //   );
+        // }
         if (
           modelKey === "id" ||
           modelKey === "backCover" ||
           modelKey === "solarCellTechnology" ||
-          modelKey === "moduleSpecification"
+          modelKey === "moduleSpecification" ||
+          modelKey === "applications"
         ) {
           const modelParameterValue = model[modelKey];
-          component = <span>{t(modelParameterValue.toString())}</span>;
+          component = <span>{t(modelParameterValue?.toString() || "")}</span>;
         }
 
         return (

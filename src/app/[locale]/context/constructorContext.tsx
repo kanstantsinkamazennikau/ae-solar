@@ -43,7 +43,7 @@ export interface ConstructorModel {
     from: string;
     to?: string;
   };
-  applications?: Applications[];
+  applications?: Applications;
 }
 export interface ConstructorModelWithId extends ConstructorModel {
   id: string | number;

@@ -135,7 +135,7 @@ export default function DesktopTableRow({
               moduleColor,
               frameColor,
               moduleDimension,
-              applications as Applications[],
+              applications,
               powerRange,
               backCover
             )

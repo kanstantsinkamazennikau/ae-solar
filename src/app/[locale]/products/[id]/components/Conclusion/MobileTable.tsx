@@ -45,7 +45,7 @@ export default function MobileTable({
                 moduleColor,
                 frameColor,
                 moduleDimension,
-                applications as Applications[],
+                applications as Applications,
                 powerRange,
                 backCover
               )

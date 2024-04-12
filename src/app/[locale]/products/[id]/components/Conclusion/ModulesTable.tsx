@@ -34,7 +34,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
       width: string;
       height: string;
     },
-    applications: Applications[],
+    applications: Applications,
     powerRange: string,
     backCover: string
   ) => {
@@ -172,7 +172,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                       moduleDesign,
                       powerRange,
                       moduleDimension,
-                      applications,
+                      applications: applications as Applications,
                       backCover,
                       addModelToBag,
                       removeModel,
@@ -210,7 +210,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                   moduleDesign,
                   powerRange,
                   moduleDimension,
-                  applications,
+                  applications: applications as Applications,
                   backCover,
                   addModelToBag,
                   removeModel,

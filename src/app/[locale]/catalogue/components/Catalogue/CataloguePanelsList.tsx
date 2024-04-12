@@ -112,13 +112,13 @@ export default function CataloguePanelsList() {
               );
             }
 
-            if (key === "applications") {
-              return item[key].some((application: string) =>
-                searchParamsObjectWithValues[key].includes(
-                  application.toLowerCase()
-                )
-              );
-            }
+            // if (key === "applications") {
+            //   return item[key].some((application: string) =>
+            //     searchParamsObjectWithValues[key].includes(
+            //       application.toLowerCase()
+            //     )
+            //   );
+            // }
 
             if (key === "model") {
               return item[key]
@@ -198,7 +198,7 @@ export default function CataloguePanelsList() {
       width: string;
       height: string;
     },
-    applications: Applications[],
+    applications: Applications,
     powerRange: string,
     backCover: string,
     techName?: Model
@@ -302,7 +302,7 @@ export default function CataloguePanelsList() {
                             moduleColor,
                             frameColor,
                             moduleDimension,
-                            applications as Applications[],
+                            applications as Applications,
                             powerRange,
                             backCover,
                             techName as Model
@@ -387,7 +387,7 @@ export default function CataloguePanelsList() {
                                 moduleColor,
                                 frameColor,
                                 moduleDimension,
-                                applications as Applications[],
+                                applications as Applications,
                                 powerRange,
                                 backCover,
                                 techName as Model

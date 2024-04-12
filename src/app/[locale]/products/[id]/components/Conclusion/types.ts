@@ -12,7 +12,7 @@ export interface DesktopTableRowProps {
   powerRange: string;
   moduleColor: string;
   frameColor: string;
-  applications: string[];
+  applications: Applications;
   backCover: string;
   moduleDimension: {
     length: string;
@@ -35,7 +35,7 @@ export interface DesktopTableRowProps {
       width: string;
       height: string;
     },
-    applications: Applications[],
+    applications: Applications,
     powerRange: string,
     backCover: string,
     techName?: Model
