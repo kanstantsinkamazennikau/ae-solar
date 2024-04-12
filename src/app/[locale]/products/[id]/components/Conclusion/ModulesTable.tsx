@@ -16,8 +16,7 @@ import { useContext } from "react";
 import { Trans } from "react-i18next";
 import { toast } from "react-toastify";
 
-export default function ModulesTable({ id }: ConclusionProps) {
-  const { modules } = PRODUCT_CONCLUSION_TABLE_BODY[id];
+export default function ModulesTable({ id, panelsList }: ConclusionProps) {
   const { setModelsInBag, modelsInBag } = useContext(ConstructorContext);
 
   const locale = useParams()?.locale as LocaleTypes;
@@ -148,7 +147,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
               </tr>
             </thead>
             <tbody className="contents">
-              {modules.map(
+              {panelsList?.map(
                 ({
                   model,
                   cellType,
@@ -186,7 +185,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
 
         {/* MOBILE */}
         <div className="grid min-[920px]:grid-cols-3 min-[640px]:grid-cols-2 grid-cols-1 gap-4 lg:hidden justify-center">
-          {modules.map(
+          {panelsList?.map(
             ({
               model,
               cellType,

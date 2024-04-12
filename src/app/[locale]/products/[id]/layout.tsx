@@ -1,13 +1,13 @@
 import { Model } from "@/app/[locale]/context/constructorContext";
+import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import I18nProvider from "@/app/[locale]/i18nProvider";
 import ProductNavigation from "@/app/[locale]/products/[id]/components/ProductNavigation";
 import { PRODUCT_PANEL_TITLES } from "@/app/[locale]/products/[id]/constants";
-import {
-  LayoutProps,
-  ProductPageProps,
-} from "@/app/[locale]/products/[id]/types";
+import { LayoutProps } from "@/app/[locale]/products/[id]/types";
 import { PRODUCT_INTRO_PANELS_IMAGES } from "@/app/[locale]/utils/constants";
-import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
+import getLocale from "@/app/[locale]/utils/getLocale";
 
 export async function generateMetadata({
   params: { id, locale },
@@ -31,10 +31,27 @@ export async function generateMetadata({
   };
 }
 
-export default function ContactLayout({
+const getTranslation = async () => {
+  const locale = getLocale();
+  const urlParamsObject = {
+    //TODO
+    // locale,
+  };
+  const pageTranslationApiPath = `/main-page`;
+  const commonPath = `/common`;
+  const responseData = await Promise.all([
+    fetchAPI(pageTranslationApiPath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
+  ]);
+  return responseData;
+};
+
+export default async function ContactLayout({
   params: { id },
   children,
 }: LayoutProps) {
+  const [pageI18n, commonI18n] = await getTranslation();
+
   if (!PRODUCT_INTRO_PANELS_IMAGES.includes(id))
     return (
       <div className="text-center [font-size:_clamp(20px,2vw,32px)] mt-8">
@@ -43,9 +60,14 @@ export default function ContactLayout({
     );
 
   return (
-    <div>
+    <I18nProvider
+      translate={{
+        ...pageI18n.data?.attributes,
+        ...commonI18n.data?.attributes,
+      }}
+    >
       <ProductNavigation id={id} />
       {children}
-    </div>
+    </I18nProvider>
   );
 }

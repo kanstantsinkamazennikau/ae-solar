@@ -22,6 +22,7 @@ export default function Catalogue() {
           <Filters />
         </div>
       </BasicWidthContainer>
+      {/* //TODO */}
       {/* <GetInTouch /> */}
     </div>
   );

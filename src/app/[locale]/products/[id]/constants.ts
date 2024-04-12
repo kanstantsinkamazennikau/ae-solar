@@ -3,22 +3,22 @@ import { ProductBentofoxes } from "@/app/[locale]/products/[id]/components/Custo
 
 export const PRODUCT_NAVIGATION = [
   {
-    title: "Introduction",
+    title: "introduction",
     link: "introduction",
     position: "start",
   },
   {
-    title: "Benefits",
+    title: "benefits",
     link: "benefits",
     position: "start",
   },
   {
-    title: "Construction",
+    title: "construction",
     link: "construction",
     position: "start",
   },
   {
-    title: "Conclusion",
+    title: "conclusion",
     link: "conclusion",
     position: "start",
   },
