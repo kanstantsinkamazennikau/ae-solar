@@ -1865,11 +1865,11 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
           //   link: "",
           //   icon: "/images/option/document.svg",
           // },
-          {
-            tooltip: "Datasheet",
-            link: "",
-            icon: "/images/option/download.svg",
-          },
+          // {
+          //   tooltip: "Datasheet",
+          //   link: "",
+          //   icon: "/images/option/download.svg",
+          // },
           // {
           //   tooltip: "certificate",
           //   link: "",
@@ -1903,11 +1903,11 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
           //   link: "",
           //   icon: "/images/option/document.svg",
           // },
-          {
-            tooltip: "Datasheet",
-            link: "",
-            icon: "/images/option/download.svg",
-          },
+          // {
+          //   tooltip: "Datasheet",
+          //   link: "",
+          //   icon: "/images/option/download.svg",
+          // },
           // {
           //   tooltip: "certificate",
           //   link: "",
