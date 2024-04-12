@@ -55,6 +55,13 @@ const nextConfig = {
           "/documents/presentations/Dr-Hamed-Hanifi_AESOLAR_TERRA_.pdf",
         permanent: true,
       },
+      {
+        source:
+          "/wp-content/uploads/2024/01/AE_MD-L132BD_495W-505W_Ver24.1.1.pdf",
+        destination:
+          "/documents/solar_panels/Terra/AE_CMD-L132BD_505W-525W_Ver24.1.1.pdf",
+        permanent: true,
+      },
     ];
   },
   pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
