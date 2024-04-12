@@ -1,7 +1,7 @@
 import qs from "qs";
-const url = `${process.env.NEXT_PUBLIC_STRAPI_URL_PROTOCOL}://${
-  process.env.NEXT_PUBLIC_STRAPI_URL
-}:${process.env.NEXT_PUBLIC_STRAPI_URL_PORT ?? ""}`;
+const url = `${process.env.STRAPI_URL_PROTOCOL}://${process.env.STRAPI_URL}:${
+  process.env.STRAPI_URL_PORT ?? ""
+}`;
 
 const getStrapiURL = (path = "") => {
   return `${url || "http://localhost:1337"}${path}`;
