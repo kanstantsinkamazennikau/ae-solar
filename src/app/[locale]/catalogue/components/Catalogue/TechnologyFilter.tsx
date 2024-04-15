@@ -1,11 +1,9 @@
 "use client";
 
-import SectionHeader from "@/app/[locale]/catalogue/components/Catalogue/SectionHeader";
 import FilterCheckbox from "@/app/[locale]/catalogue/components/Catalogue/FilterCheckbox";
+import SectionHeader from "@/app/[locale]/catalogue/components/Catalogue/SectionHeader";
 import { TechnologyFilterProps } from "@/app/[locale]/catalogue/components/Catalogue/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export default function TechnologyFilter({
   checkboxesList,
@@ -14,15 +12,18 @@ export default function TechnologyFilter({
   filterTitle,
   subCategory,
 }: TechnologyFilterProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   return (
     <div className="flex flex-col">
-      {filterTitle && <SectionHeader title={t(filterTitle)} />}
+      {filterTitle && <SectionHeader title={filterTitle} />}
       {subCategory && (
         <div className="[font-size:_clamp(14px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
-          {t(subCategory)}
+          <Trans
+            components={{
+              br: <span />,
+            }}
+          >
+            {subCategory}
+          </Trans>
         </div>
       )}
       <div className="flex flex-col gap-2">

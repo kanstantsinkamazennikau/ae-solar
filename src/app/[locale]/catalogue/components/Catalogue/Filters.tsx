@@ -8,12 +8,13 @@ import {
   TECHNOLOGIES_LIST,
 } from "@/app/[locale]/catalogue/constants";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import { useContext, useEffect } from "react";
 
 export default function Filters() {
   const { isShowFilterMenu } = useContext(ConstructorContext);
-
+  const { translation } = useContext(i18nProviderContext);
   const { setIsShowFilterMenu } = useContext(ConstructorContext);
 
   const onHideFilterMenu = () => {
@@ -123,13 +124,13 @@ export default function Filters() {
         >
           <TechnologyFilter
             checkboxesList={TECHNOLOGIES_LIST}
-            filterTitle="Technology"
+            filterTitle={translation.filterTitleTechnology}
           />
           <hr className="h-[1px] border-t border-solid border-[#191919] w-full" />
           <TechnologyFilter
             checkboxesList={MODELS_LIST}
             showModelIcon
-            filterTitle="Technical name"
+            filterTitle={translation.filterTitleTechName}
           />
           <hr className="h-[1px] border-t border-solid border-[#191919] w-full" />
           <Customize />

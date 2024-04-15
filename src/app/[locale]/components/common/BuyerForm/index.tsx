@@ -16,6 +16,7 @@ import {
   SubmitHandler,
   useForm,
 } from "react-hook-form";
+import { Trans } from "react-i18next";
 import { toast } from "react-toastify";
 
 export default function BuyerForm({
@@ -138,16 +139,13 @@ export default function BuyerForm({
                   text-center
                 "
               >
-                {translation.weContactYou
-                  ?.split(/\r?\n|\r|\n/g)
-                  .map((string, index) => (
-                    <div
-                      key={string}
-                      className={`${index === 0 ? "text-dark-gray-900" : ""}`}
-                    >
-                      {string}
-                    </div>
-                  ))}
+                <Trans
+                  components={{
+                    br: <p />,
+                  }}
+                >
+                  {translation.weContactYou}
+                </Trans>
               </div>
               <Button
                 style="outline"

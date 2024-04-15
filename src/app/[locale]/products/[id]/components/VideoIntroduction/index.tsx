@@ -1,34 +1,27 @@
 "use client";
 
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { IntroductionProps } from "@/app/[locale]/products/[id]/components/VideoIntroduction/types";
-import { PRODUCT_INTRODUCTION_DESCRIPTION } from "@/app/[locale]/products/[id]/constants";
-import {
-  PRODUCT_INTRO_PANELS,
-  PRODUCT_INTRO_PANELS_MAPPING,
-} from "@/app/[locale]/utils/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext, useLayoutEffect, useState } from "react";
 
 export default function Introduction({ id }: IntroductionProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { translation } = useContext(i18nProviderContext);
   const modelStats = translation.stats as unknown as {
     [key: string]: string;
   };
-  const modelStatsKeys = Object.keys(modelStats);
   const [isIOSDevice, setIsIOSDevice] = useState(false);
   const { videoRef } = useVideoIntersection();
 
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
   }, []);
+
+  if (!modelStats) return;
+
+  const modelStatsKeys = Object.keys(modelStats);
 
   const moduleStats = modelStatsKeys
     ?.filter((key) => key !== "id")
@@ -214,7 +207,7 @@ export default function Introduction({ id }: IntroductionProps) {
               </p>
               <p
                 className="
-                  [font-size:_clamp(14px,1.5vw,20px)]
+                  [font-size:_clamp(13px,1.5vw,20px)]
                   font-walsheim
                   font-normal
                   leading-[150%]
@@ -280,7 +273,7 @@ export default function Introduction({ id }: IntroductionProps) {
         >
           <p
             className="
-              [font-size:_clamp(12px,1.5vw,20px)]
+              [font-size:_clamp(13px,1.5vw,20px)]
               font-walsheim
               font-normal
               leading-[150%]

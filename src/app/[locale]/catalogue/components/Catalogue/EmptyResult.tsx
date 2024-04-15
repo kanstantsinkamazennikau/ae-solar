@@ -2,6 +2,7 @@ import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import {
   useParams,
@@ -14,6 +15,7 @@ import { useContext } from "react";
 export default function EmptyResult() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const { setIsResetFilter } = useContext(ConstructorContext);
 
@@ -38,15 +40,15 @@ export default function EmptyResult() {
         className="h-[104px] w-[118px] object-cover"
       />
       <p className="[font-size:_clamp(20px,2vw,24px)] md:-tracking-[0.24px] leading-[120%] font-bold">
-        {t("Could not find result")}
+        {translation.couldNotFindResult}
       </p>
       <p className="[font-size:_clamp(14px,2vw,20px)] font-walsheim leading-[150%] text-dark-gray-900">
-        {t("Try new filter")}
+        {translation.tryNewFilter}
       </p>
 
       <Button style="textOnly" onClick={onReset}>
-        <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red">
-          {t("Reset Filter")}
+        <span className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] text-base-red capitalize">
+          {translation.resetFilter}
         </span>
         <Image
           alt="close"

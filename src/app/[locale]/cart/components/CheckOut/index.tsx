@@ -1,10 +1,7 @@
 "use client";
 
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 
 export default function CheckOut() {

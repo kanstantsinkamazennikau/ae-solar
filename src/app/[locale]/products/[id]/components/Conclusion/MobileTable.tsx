@@ -1,11 +1,12 @@
 import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { DesktopTableRowProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
+import { Trans } from "react-i18next";
 
 export default function MobileTable({
   model,
@@ -20,15 +21,13 @@ export default function MobileTable({
   backCover,
   addModelToBag,
   removeModel,
-  isShowDimensions,
 }: DesktopTableRowProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { modelsInBag } = useContext(ConstructorContext);
   const [isAlreadyInBag, setIsAlreadyInBag] = useState(
     modelsInBag.some(({ id }) => id === model)
   );
 
+  const { translation } = useContext(i18nProviderContext);
   useEffect(() => {
     setIsAlreadyInBag(modelsInBag.some(({ id }) => id === model));
   }, [model, modelsInBag]);
@@ -100,14 +99,15 @@ export default function MobileTable({
                   duration-100
                   md:-tracking-[0.24px]
                   font-bold
+                  capitalize
                 "
               >
-                {t("Add To Cart")}
+                {translation.addToCart}
               </p>
             </>
           ) : (
             <p className="font-semibold [font-size:_clamp(12px,1.5vw,16px)] -tracking-[0.16px] text-[#B30006] h-6 flex items-center">
-              {t("Remove")}
+              {translation.remove}
             </p>
           )}
         </div>
@@ -115,29 +115,71 @@ export default function MobileTable({
       <div className="bg-black rounded-xl w-full">
         <div className="px-4 pt-3 grid grid-cols-2 gap-x-8 pb-3 w-full items-center gap-y-3">
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {t("Cell type")}
+            <Trans
+              components={{
+                br: <span />,
+              }}
+            >
+              {translation.cellType}
+            </Trans>
           </p>
           <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
-            {cellType}
+            <Trans
+              components={{
+                br: <span />,
+              }}
+            >
+              {cellType}
+            </Trans>
           </p>
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {t("Module design")}
+            <Trans
+              components={{
+                br: <span />,
+              }}
+            >
+              {translation.moduleDesign}
+            </Trans>
           </p>
           <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
-            {moduleDesign}
+            <Trans
+              components={{
+                br: <span />,
+              }}
+            >
+              {moduleDesign}
+            </Trans>
           </p>
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {t("Power range, W")}
+            <Trans
+              components={{
+                br: <span />,
+              }}
+            >
+              {translation.powerRangeW}
+            </Trans>
           </p>
           <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
-            {powerRange}
+            <Trans
+              components={{
+                br: <span />,
+              }}
+            >
+              {powerRange}
+            </Trans>
           </p>
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {t("Module color")}
+            <Trans
+              components={{
+                br: <span />,
+              }}
+            >
+              {translation.moduleColor}
+            </Trans>
           </p>
           <div className="flex items-center gap-1">
-            <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
-              {t(moduleColor)}
+            <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%] capitalize">
+              {translation[moduleColor.toLowerCase()]}
             </p>
             <Image
               src={`/images/option/${moduleColor.toLowerCase()}.svg`}
@@ -148,11 +190,17 @@ export default function MobileTable({
             />
           </div>
           <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-            {t("Frame color")}
+            <Trans
+              components={{
+                br: <span />,
+              }}
+            >
+              {translation.frameColor}
+            </Trans>
           </p>
           <div className="flex items-center gap-1">
-            <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
-              {t(frameColor)}
+            <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%] capitalize">
+              {translation[frameColor.toLowerCase()]}
             </p>
             <Image
               src={`/images/option/${frameColor.toLowerCase()}.svg`}
@@ -162,23 +210,13 @@ export default function MobileTable({
               height={16}
             />
           </div>
-          {isShowDimensions && (
-            <>
-              <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium  leading-[100%]">
-                {t("Dimension")}, mm
-              </p>
-              <p className="[font-size:_clamp(14px,1.5vw,16px)] font-normal text-dark-gray-900 leading-[100%]">
-                {`${moduleDimension.length} x ${moduleDimension.width} x ${moduleDimension.height}`}
-              </p>
-            </>
-          )}
         </div>
         <div className="w-full px-4">
           <hr className="bg-[#131313] w-full h-[1px] border-none " />
         </div>
 
         <div className="flex gap-2 px-4 pb-3 pt-3 min-h-[48px]">
-          {links?.map(({ icon, link, tooltip }) => (
+          {links?.map(({ icon, link }) => (
             <a key={icon} href={link} target="_blank" className="group">
               <Image
                 src={icon}
@@ -188,19 +226,6 @@ export default function MobileTable({
                 height={24}
                 className="inline-flex"
               />
-              <span
-                className="
-                  absolute
-                  -top-full
-                  hidden
-                  group-hover:block p-1 
-                  bg-[#131313]
-                  [font-size:_clamp(8px,1vw,10px)]
-                  capitalize
-                "
-              >
-                {t(tooltip)}
-              </span>
             </a>
           ))}
         </div>

@@ -3,18 +3,13 @@
 import Button from "@/app/[locale]/components/common/Button";
 import Input from "@/app/[locale]/components/common/Input";
 import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { FORMS_FIELDS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 export default function SearchBar({ isDocuments }: { isDocuments?: boolean }) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { translation } = useContext(i18nProviderContext);
   const { setSearchInputValue, documentsType, searchInputValue } =
     useContext(DocumentsContext);

@@ -5,6 +5,7 @@ import {
 } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import {
   useParams,
@@ -12,6 +13,7 @@ import {
   useRouter,
   useSearchParams,
 } from "next/navigation";
+import { useContext } from "react";
 
 export default function FilterCheckbox({
   placeToSearch,
@@ -20,8 +22,7 @@ export default function FilterCheckbox({
   showColorIcon,
   showModelIcon,
 }: FilterCheckboxProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -133,7 +134,7 @@ export default function FilterCheckbox({
               leading-tight
             `}
           >
-            {t(title)}
+            {translation[title] || title}
           </span>
           {showColorIcon && (
             <Image

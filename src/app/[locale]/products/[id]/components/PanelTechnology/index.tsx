@@ -70,7 +70,7 @@ export default function PanelTechnology({ id }: PanelTechnologyProps) {
         <div className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-bold -tracking-[0.48px] leading-[100%] text-center">
           {translation.panelTechnologyTitle}
         </div>
-        <div className="text-center [font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim">
+        <div className="text-center [font-size:_clamp(13px,1.5vw,20px)] leading-[150%] font-walsheim">
           <Trans
             components={{
               br: <p className="mt-6" />,

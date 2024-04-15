@@ -905,15 +905,15 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
 };
 
 export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
-  id: "Model",
-  solarCellTechnology: "Solar Cell Technology",
-  moduleSpecification: "Module Specifation",
-  moduleColor: "Module Color",
-  backCover: "Back Cover",
-  frameColor: "Frame Color",
-  moduleDimension: "Module Dimension",
-  powerRange: "Power Range",
-  applications: "Applications",
+  id: "cartModel",
+  solarCellTechnology: "solarCellTechnology",
+  moduleSpecification: "moduleSpecification",
+  moduleColor: "moduleColor",
+  backCover: "backCover",
+  frameColor: "frameColor",
+  moduleDimension: "moduleDimension",
+  powerRange: "powerRange",
+  applications: "applications",
 };
 export const CART_LOCALSTORAGE = "cart";
 

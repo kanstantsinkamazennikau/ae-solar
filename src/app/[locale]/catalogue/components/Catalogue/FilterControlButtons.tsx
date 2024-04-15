@@ -5,6 +5,7 @@ import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import {
   useParams,
@@ -17,6 +18,7 @@ import { useContext } from "react";
 export default function FilterControlButtons() {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const {
     setIsFilterModels,
@@ -75,14 +77,14 @@ export default function FilterControlButtons() {
             width={24}
             height={24}
           />
-          <span className="font-semibold [font-size:_clamp(12px,2vw,16px)] contents">
-            {t("Filter Modules")}
+          <span className="font-semibold [font-size:_clamp(12px,2vw,16px)] contents capitalize">
+            {translation.filterModules}
           </span>
         </div>
       </Button>
       <Button style="textOnly" onClick={onReset} externalStyle="pb-0">
         <span className="font-semibold [font-size:_clamp(12px,2vw,16px)] text-base-red">
-          {t("Reset")}
+          {translation.reset}
         </span>
         <Image
           alt="close"

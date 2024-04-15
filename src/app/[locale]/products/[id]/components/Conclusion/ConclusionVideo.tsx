@@ -2,21 +2,18 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { ConclusionProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
-import { PRODUCT_CONCLUSION_FOR_PANELS } from "@/app/[locale]/products/[id]/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useLayoutEffect, useState } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
+import { Trans } from "react-i18next";
 
 export default function ConclusionVideo({ id }: ConclusionProps) {
   const { videoRef } = useVideoIntersection();
   const [isIOSDevice, setIsIOSDevice] = useState(false);
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
@@ -140,20 +137,20 @@ export default function ConclusionVideo({ id }: ConclusionProps) {
               text-center
             "
           >
-            {t("Conclusion")}
+            {translation.conclusion}
           </div>
           <div className="flex flex-col min-[920px]:gap-8 gap-4 items-center">
-            <div className="[font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim text-center z-10">
-              {t(PRODUCT_CONCLUSION_FOR_PANELS[id])
-                .split(/\r?\n|\r|\n/g)
-                .map((string) => (
-                  <p key={string} className="min-[920px]:mb-7 mb-3 last:mb-0">
-                    {string}
-                  </p>
-                ))}
+            <div className="[font-size:_clamp(13px,1.5vw,20px)] leading-[150%] font-walsheim text-center z-10">
+              <Trans
+                components={{
+                  br: <p className="min-[920px]:mt-7 mt-3" />,
+                }}
+              >
+                {translation.moduleConclusion}
+              </Trans>
             </div>
-            {/* <Link href={"/calculate"}>
-              <Button externalStyle="!px-[26px] !py-[16px]">
+            <Link href={"/catalogue"}>
+              <Button externalStyle="!px-[26px] !py-[12px]">
                 <div className="flex justify-center items-center px-2">
                   <Image
                     src={`/images/cart.svg`}
@@ -164,11 +161,11 @@ export default function ConclusionVideo({ id }: ConclusionProps) {
                     className="inline-block"
                   />
                   <span className="[font-size:_clamp(14px,2vw,20px)] -tracking-[0.2px] font-semibold">
-                    {CONSTRUCTOR_CONFIGURE_YOUR_MODEL}
+                    {translation.chooseModule}
                   </span>
                 </div>
               </Button>
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>

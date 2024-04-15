@@ -15,22 +15,14 @@ import {
 } from "@/app/[locale]/catalogue/constants";
 import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import {
-  useParams,
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Fragment, useContext, useEffect, useRef, useState } from "react";
 
 export default function CatalogueSort() {
   const { setIsShowFilterMenu } = useContext(ConstructorContext);
-
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const onClick = () => {
     setIsShowFilterMenu((prevState) => !prevState);
@@ -54,13 +46,13 @@ export default function CatalogueSort() {
         <div className="flex gap-3 justify-start flex-row w-full">
           <DropdownInput
             dropDownValues={CATALOGUE_SORT_VALUES}
-            title={"Sort"}
+            title={translation.sort}
             param={SORT_ORDER}
             externalStyle={"z-30 max-[460px]:w-[70%]"}
           />
           <DropdownInput
             dropDownValues={CATALOGUE_SHOW_VALUES}
-            title={"Show"}
+            title={translation.show}
             param={PER_PAGE}
             externalStyle={"z-30 max-[460px]:w-[30%]"}
           />
@@ -91,7 +83,7 @@ export default function CatalogueSort() {
           onClick={onClick}
         >
           <span className="[font-size:_clamp(14px,1.5vw,16px)]">
-            {t("Filter")}
+            {translation.filter}
           </span>
           <Image
             src={`/images/option/filter.svg`}
@@ -112,8 +104,6 @@ function DropdownInput({
   param,
   externalStyle,
 }: DropdownSortProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const [isSelection, setIsSelection] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
@@ -149,7 +139,7 @@ function DropdownInput({
       className={`flex min-[600px]:items-center items-start gap-2 ${externalStyle} min-[600px]:flex-row flex-col`}
     >
       <span className="[font-size:_clamp(14px,1.5vw,16px)] text-[#505050]">
-        {t(title)}
+        {title}
       </span>
       <div className="bg-[#131313] border border-solid border-[#191919] outline-none py-[6px] px-2 flex rounded-md relative w-full">
         <SelectedOption
@@ -198,8 +188,7 @@ function SelectedOption({
   dropdownRef,
   isSelection,
 }: SelectedSortOptionProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
   const outsideClickRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -233,7 +222,7 @@ function SelectedOption({
       onClick={() => setIsSelection((prevState) => !prevState)}
       ref={outsideClickRef}
     >
-      {t(selectedOption.label)}
+      {translation[selectedOption.label] || selectedOption.label}
       <Image
         src={`/images/documents/dropDownIcon.svg`}
         alt="triangle"
@@ -248,8 +237,7 @@ function SelectedOption({
 }
 
 function Options({ handleSelection, optionsList }: OptionsSortProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <>
@@ -259,7 +247,7 @@ function Options({ handleSelection, optionsList }: OptionsSortProps) {
             className="cursor-pointer flex justify-start items-center [font-size:_clamp(12px,1.5vw,14px)] mb-1 last-of-type:mb-0"
             onClick={() => handleSelection({ label, value })}
           >
-            {t(label)}
+            {translation[label] || label}
           </div>
           <hr className="bg-[#191919] h-[1px] border-none w-full mb-2 mt-2 last:h-0 last:mt-0 last:mb-0" />
         </Fragment>

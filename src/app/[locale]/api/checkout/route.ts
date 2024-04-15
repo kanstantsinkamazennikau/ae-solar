@@ -37,7 +37,9 @@ export async function POST(request: NextRequest) {
 
   const sendMailPromise = async () => {
     try {
-      await nodemailerTransport.sendMail(mailOptions);
+      //TODO
+      // await nodemailerTransport.sendMail(mailOptions);
+      console.log(mailOptions);
     } catch (error) {
       throw error;
     }

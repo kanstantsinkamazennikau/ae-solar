@@ -54,8 +54,7 @@ const getPanelsList = async (id: string) => {
 const getTranslation = async (id: string) => {
   const locale = getLocale();
   const urlParamsObject = {
-    //TODO
-    // locale,
+    locale,
   };
 
   const urlParamsObjectModule = {
@@ -67,8 +66,7 @@ const getTranslation = async (id: string) => {
       },
     },
     populate: "*",
-    //TODO
-    // locale,
+    locale,
   };
   const pageTranslationApiPath = `/individuals`;
   const commonPath = `/common`;

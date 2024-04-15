@@ -3,15 +3,12 @@
 import { CheckoutFormFileds } from "@/app/[locale]/cart/components/CheckoutForm/types";
 import BuyerForm from "@/app/[locale]/components/common/BuyerForm";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import {
   CART_LOCALSTORAGE,
   CHECKOUT_FORM_FIELDS,
   FORMS_FIELDS,
 } from "@/app/[locale]/utils/constants";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { FieldValues, RegisterOptions } from "react-hook-form";
 import { Trans } from "react-i18next";
@@ -31,6 +28,7 @@ export default function CheckoutForm() {
 
       setModelsInBag([]);
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify([]));
+
       if (!res.ok) throw new Error("Something went wrong");
     } catch (err) {
       throw err;

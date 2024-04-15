@@ -48,7 +48,7 @@ export default function QuarterBentobox({
       )}
 
       {shortDescription && (
-        <div className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%] capitalize">
+        <div className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%] capitalize text-center">
           <Trans>{shortDescription}</Trans>
         </div>
       )}

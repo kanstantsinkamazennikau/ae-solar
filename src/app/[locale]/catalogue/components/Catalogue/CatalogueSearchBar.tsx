@@ -4,21 +4,14 @@ import { PAGE } from "@/app/[locale]/catalogue/constants";
 import Button from "@/app/[locale]/components/common/Button";
 import Input from "@/app/[locale]/components/common/Input";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { FORMS_FIELDS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import {
-  useParams,
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 export default function CatalogueSearchBar() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
@@ -82,7 +75,7 @@ export default function CatalogueSearchBar() {
               externalStyle="border-none"
               externalContainerStyle="!w-full"
               name={FORMS_FIELDS.searchInputValue}
-              placeholder={t("Im looking for")}
+              placeholder={translation.lookingFor}
               value={searchValue}
               onChange={(e) => {
                 setSearchValue(e.target.value);
@@ -93,7 +86,7 @@ export default function CatalogueSearchBar() {
           <div>
             <Button externalStyle="!py-[8px] !px-[14px]">
               <span className="[font-size:_clamp(12px,1.5vw,16px)] leading-[100%]">
-                {t("Search")}
+                {translation.search}
               </span>
             </Button>
           </div>

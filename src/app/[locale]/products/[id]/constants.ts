@@ -24,6 +24,7 @@ export const PRODUCT_NAVIGATION = [
   },
 ];
 export const PRODUCT_OVERVIEW = "Overview:";
+
 export const PRODUCT_PANEL_TITLES = {
   Aurora: "ProductTitleAurora",
   Comet: "ProductTitleComet",
@@ -32,6 +33,7 @@ export const PRODUCT_PANEL_TITLES = {
   Neptune: "ProductTitleNeptune",
   ShadeStar: "ProductTitleShadeStar",
 };
+
 export const PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS = {
   Aurora: {
     technology: "ProductTechAurora",
@@ -116,148 +118,139 @@ export const PRODUCT_BENEFITS_FOR_PANELS = {
   ],
   Comet: [
     {
-      benefitTitle: "High Efficiency",
-      benefitDescription: "CometBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "power.svg",
     },
     {
-      benefitTitle: "Superior Performance in Shaded Areas",
-      benefitDescription: "CometBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "performance.svg",
     },
     {
-      benefitTitle: "Low Light Performance",
-      benefitDescription: "CometBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Long-Term Stability",
-      benefitDescription: "CometBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "longTerm.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "CometBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],
   Meteor: [
     {
-      benefitTitle: "Outstanding Efficiency",
-      benefitDescription: "MeteorBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "lightning.svg",
     },
     {
-      benefitTitle: "Excellent Low Light Performance",
-      benefitDescription: "MeteorBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Robust Temperature Coefficient",
-      benefitDescription: "MeteorBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "temperature.svg",
     },
     {
-      benefitTitle: "Enhanced Durability",
-      benefitDescription: "MeteorBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "shield2.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "MeteorBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],
   Terra: [
     {
-      benefitTitle: "High Efficiency",
-      benefitDescription: "TerraBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "power.svg",
     },
     {
-      benefitTitle: "Excellent Diffuse Light Performance",
-      benefitDescription: "TerraBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Lower Light Induced Degradation (LID)",
-      benefitDescription: "TerraBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "lightning2.svg",
     },
     {
-      benefitTitle: "Reduced Power Loss",
-      benefitDescription: "TerraBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "shield.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "TerraBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],
   Neptune: [
     {
-      benefitTitle: "Double Duty, Triple Gain",
-      benefitDescription: "NeptuneBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "double.svg",
     },
     {
-      benefitTitle: "Getting the Most Out of the Heat",
-      benefitDescription: "NeptuneBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "heat.svg",
     },
     {
-      benefitTitle: "High Efficiency in Different Climates",
-      benefitDescription: "NeptuneBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "temperature.svg",
     },
     {
-      benefitTitle: "Longevity and Durability",
-      benefitDescription: "NeptuneBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "shield2.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "NeptuneBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],
   ShadeStar: [
     {
-      benefitTitle: "Impressive Shade Resistance",
-      benefitDescription: "ShadeStarBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "performance.svg",
     },
     {
-      benefitTitle: "Superior Energy Output",
-      benefitDescription: "ShadeStarBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "power.svg",
     },
     {
-      benefitTitle: "Increased Installation Capacity",
-      benefitDescription: "ShadeStarBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "capacity.svg",
     },
     {
-      benefitTitle: "Lower Levelized Cost of Energy (LCOE)",
-      benefitDescription: "ShadeStarBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "costEnergy.svg",
     },
     {
-      benefitTitle: "Unmatched Durability",
-      benefitDescription: "ShadeStarBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "shield2.svg",
     },
   ],
-};
-
-export const PRODUCT_CONCLUSION_FOR_PANELS = {
-  Aurora: `ConclusionAurora`,
-  Meteor: `ConclusionMeteor`,
-  Comet: `ConclusionComet`,
-  Terra: `ConclusionTerra`,
-  ShadeStar: `ConclusionShadeStar`,
-  Neptune: `ConclusionNeptune`,
 };
 
 export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
@@ -528,14 +521,24 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     ],
   },
 };
+
+export const PRODUCT_CONCLUSION_FOR_PANELS = {
+  Aurora: `ConclusionAurora`,
+  Meteor: `ConclusionMeteor`,
+  Comet: `ConclusionComet`,
+  Terra: `ConclusionTerra`,
+  ShadeStar: `ConclusionShadeStar`,
+  Neptune: `ConclusionNeptune`,
+};
+
 export const PRODUCT_CONCLUSION_TABLE_HEADERS = [
-  `Module name`,
-  `Cell type`,
-  `Module design`,
-  `Power range, W`,
-  `Module color`,
-  `Frame color`,
-  `Datasheets`,
+  `moduleName`,
+  `cellType`,
+  `moduleDesign`,
+  `powerRangeW`,
+  `moduleColor`,
+  `frameColor`,
+  `datasheets`,
   ``,
 ];
 

@@ -1,12 +1,9 @@
 "use client";
 
 import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { BenefitProps } from "@/app/[locale]/products/[id]/components/Benefits/types";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext, useState } from "react";
 
 export default function Benefit({
@@ -91,7 +88,7 @@ export default function Benefit({
       <div className="flex flex-col items-start lg:gap-6 md:gap-3 gap-2">
         <p
           className="
-            [font-size:_clamp(12px,1.5vw,20px)]
+            [font-size:_clamp(13px,1.5vw,20px)]
             font-normal
             leading-[150%]
             font-walsheim

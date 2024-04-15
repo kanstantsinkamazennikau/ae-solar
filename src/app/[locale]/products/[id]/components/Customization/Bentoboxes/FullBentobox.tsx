@@ -1,5 +1,7 @@
 "use client";
 
+import { Trans } from "react-i18next";
+
 export default function FullBentobox({
   imageUrl,
   shortDescription,
@@ -47,7 +49,7 @@ export default function FullBentobox({
           <div>
             {longDescription.title && (
               <div className="[font-size:_clamp(24px,2.5vw,48px)] font-semibold md:-tracking-[1.44px] leading-[110%] capitalize">
-                {longDescription.title}
+                <Trans>{longDescription.title}</Trans>
               </div>
             )}
           </div>
@@ -61,8 +63,8 @@ export default function FullBentobox({
         </div>
       )}
       {shortDescription && (
-        <div className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] capitalize">
-          {shortDescription}
+        <div className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] capitalize text-center">
+          <Trans>{shortDescription}</Trans>
         </div>
       )}
     </div>

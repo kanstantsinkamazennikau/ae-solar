@@ -2,8 +2,6 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import FullBentobox from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/FullBentobox";
 import HalfBentobox from "@/app/[locale]/products/[id]/components/Customization/Bentoboxes/HalfBentobox";
@@ -15,15 +13,11 @@ import {
   CustomizationProps,
 } from "@/app/[locale]/products/[id]/components/Customization/types";
 import { PRODUCT_BENTOBOXES } from "@/app/[locale]/products/[id]/constants";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function Customization({ id }: CustomizationProps) {
   const { areaTemplate, structure } = PRODUCT_BENTOBOXES[id];
-
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { translation } = useContext(i18nProviderContext);
   const bentoboxesTexts = translation.bentoboxes;
 

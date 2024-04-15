@@ -34,8 +34,7 @@ export async function generateMetadata({
 const getTranslation = async () => {
   const locale = getLocale();
   const urlParamsObject = {
-    //TODO
-    // locale,
+    locale,
   };
   const pageTranslationApiPath = `/main-page`;
   const commonPath = `/common`;

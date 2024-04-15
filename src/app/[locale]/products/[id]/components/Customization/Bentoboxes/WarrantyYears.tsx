@@ -60,7 +60,7 @@ export default function WarrantyYears({
       >
         30
       </div>
-      <div className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%]">
+      <div className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%] text-center">
         <Trans>{shortDescription}</Trans>
       </div>
     </div>
