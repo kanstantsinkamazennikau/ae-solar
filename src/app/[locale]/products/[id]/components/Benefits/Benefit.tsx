@@ -95,7 +95,6 @@ export default function Benefit({
             font-normal
             leading-[150%]
             font-walsheim
-            capitalize
             md:max-w-[427px]
             w-full
           "
