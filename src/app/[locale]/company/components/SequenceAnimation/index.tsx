@@ -2,14 +2,11 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { SEQUENCE_ANIMATION_TEXT } from "@/app/[locale]/utils/constants";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useParams } from "next/navigation";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { Trans } from "react-i18next";
 
@@ -30,8 +27,6 @@ const frameIndex = { frame: 0 };
 const numFrames = 120;
 
 export default function SequenceAnimation({ width = 1158, height = 600 }) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [activeStepIndex, setActiveStepIndex] = useState(0);

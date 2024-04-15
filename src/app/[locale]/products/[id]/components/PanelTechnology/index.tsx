@@ -1,12 +1,13 @@
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import { PanelTechnologyProps } from "@/app/[locale]/products/[id]/components/PanelTechnology/types";
-import { PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS } from "@/app/[locale]/products/[id]/constants";
-import getLocale from "@/app/[locale]/utils/getLocale";
-import Image from "next/image";
+"use client";
 
-export default async function PanelTechnology({ id }: PanelTechnologyProps) {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { PanelTechnologyProps } from "@/app/[locale]/products/[id]/components/PanelTechnology/types";
+import Image from "next/image";
+import { useContext } from "react";
+import { Trans } from "react-i18next";
+
+export default function PanelTechnology({ id }: PanelTechnologyProps) {
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -67,16 +68,16 @@ export default async function PanelTechnology({ id }: PanelTechnologyProps) {
         `}
       >
         <div className="[font-size:_clamp(24px,2.5vw,48px)] capitalize font-bold -tracking-[0.48px] leading-[100%] text-center">
-          {t(PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS[id]?.technology)}
+          {translation.panelTechnologyTitle}
         </div>
         <div className="text-center [font-size:_clamp(12px,1.5vw,20px)] leading-[150%] font-walsheim">
-          {t(PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS[id]?.description)
-            .split(/\r?\n|\r|\n/g)
-            .map((string) => (
-              <p key={string} className="mb-7 last:mb-0">
-                {string}
-              </p>
-            ))}
+          <Trans
+            components={{
+              br: <p className="mt-6" />,
+            }}
+          >
+            {translation.panelTechnologyDescription}
+          </Trans>
         </div>
       </div>
       <div className="fade-strip-bottom !z-10"></div>

@@ -3,34 +3,22 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { ProductsPanelProps } from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
-import { PRODUCTS_SEQUENCE_ANIMATION_TEXT_NEPTUNE } from "@/app/[locale]/products/[id]/constants";
-import { SEQUENCE_ANIMATION_TEXT } from "@/app/[locale]/utils/constants";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import {
+  Layers,
+  ProductsPanelProps,
+} from "@/app/[locale]/products/[id]/components/ProductsPanel/types";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { Trans } from "react-i18next";
 
 export default function LayersAnimation({ id }: ProductsPanelProps) {
-  const [textArray, setTextArray] = useState(SEQUENCE_ANIMATION_TEXT);
   const [stopIntersecting, setStopIntersecting] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
   const { intersecting, ref } = useIntersection(0.2);
+  const { translation } = useContext(i18nProviderContext);
 
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
-  useEffect(() => {
-    if (id === "Neptune")
-      setTextArray((prevState) => [
-        ...prevState.slice(0, 5),
-        PRODUCTS_SEQUENCE_ANIMATION_TEXT_NEPTUNE,
-        ...prevState.slice(5),
-      ]);
-
-    return () => setTextArray(SEQUENCE_ANIMATION_TEXT);
-  }, [id]);
+  const layers = translation.sequence as unknown as Layers[];
 
   useEffect(() => {
     intersecting && setStartAnimation(true);
@@ -40,18 +28,26 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
     <div id="construction" className="scroll-mt-[140px] mb-20">
       <BasicWidthContainer>
         <TwoTierHeading
-          tierOneHeading={t("The Hidden Layers")}
-          tierTwoHeading={t("A Closer Look at")}
+          tierOneHeading={
+            <Trans
+              components={{
+                red: <p className="text-[#B30006]" />,
+              }}
+            >
+              {translation.hiddenLayers}
+            </Trans>
+          }
+          reverseColor
           align="right"
           externalStyle="z-10"
           size="default"
         />
         <div className="flex justify-center items-center min-[600px]:flex-row flex-col-reverse">
           <div className="min-[600px]:flex flex-col gap-2 grid min-[480px]:grid-cols-2 grid-cols-1 max-[600px]:mt-10">
-            {textArray
-              .map(({ title, description }) => (
+            {layers
+              ?.map(({ sequenceTitle, sequenceDescription }) => (
                 <div
-                  key={title}
+                  key={sequenceTitle}
                   className={`
                   first:pt-0
                   last:pb-0
@@ -71,7 +67,7 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                       font-medium
                     `}
                     >
-                      {t(title)}
+                      {sequenceTitle}
                     </div>
                   </div>
                   <div
@@ -83,14 +79,14 @@ export default function LayersAnimation({ id }: ProductsPanelProps) {
                     text-dark-gray-900
                   `}
                   >
-                    {t(description)}
+                    {sequenceDescription}
                   </div>
                 </div>
               ))
               .reverse()}
           </div>
           <div className="relative overflow-hidden">
-            {new Array(textArray.length).fill(null).map((_, index) => {
+            {new Array(layers?.length).fill(null).map((_, index) => {
               if (index === 0) {
                 return (
                   <div ref={ref} key={index}>

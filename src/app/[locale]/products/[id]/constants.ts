@@ -89,28 +89,28 @@ export const PRODUCT_INTRODUCTION_DESCRIPTION = {
 export const PRODUCT_BENEFITS_FOR_PANELS = {
   Aurora: [
     {
-      benefitTitle: "High Efficiency",
-      benefitDescription: "AuroraBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "lightning.svg",
     },
     {
-      benefitTitle: "Excellent Diffuse Light Performance",
-      benefitDescription: "AuroraBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Lower Light Induced Degradation (LID)",
-      benefitDescription: "AuroraBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "lightning2.svg",
     },
     {
-      benefitTitle: "Reduced Power Loss",
-      benefitDescription: "AuroraBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "shield.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "AuroraBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],

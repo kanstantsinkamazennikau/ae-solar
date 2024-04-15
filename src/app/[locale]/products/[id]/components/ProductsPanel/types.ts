@@ -10,3 +10,8 @@ export interface VideoProps {
   onEnded: () => void;
   id: Model;
 }
+
+export interface Layers {
+  sequenceTitle: string;
+  sequenceDescription: string;
+}

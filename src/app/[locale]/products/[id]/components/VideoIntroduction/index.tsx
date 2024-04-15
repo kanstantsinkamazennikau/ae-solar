@@ -3,6 +3,7 @@
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { IntroductionProps } from "@/app/[locale]/products/[id]/components/VideoIntroduction/types";
 import { PRODUCT_INTRODUCTION_DESCRIPTION } from "@/app/[locale]/products/[id]/constants";
 import {
@@ -12,12 +13,15 @@ import {
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { useLayoutEffect, useState } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
 
 export default function Introduction({ id }: IntroductionProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const { t } = useClientTranslation(locale, "translation");
-  const modelStats = PRODUCT_INTRO_PANELS[id].stats;
+  const { translation } = useContext(i18nProviderContext);
+  const modelStats = translation.stats as unknown as {
+    [key: string]: string;
+  };
   const modelStatsKeys = Object.keys(modelStats);
   const [isIOSDevice, setIsIOSDevice] = useState(false);
   const { videoRef } = useVideoIntersection();
@@ -25,6 +29,19 @@ export default function Introduction({ id }: IntroductionProps) {
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
   }, []);
+
+  const moduleStats = modelStatsKeys
+    ?.filter((key) => key !== "id")
+    ?.map((key) => (
+      <div key={key}>
+        <div className="leading-[1.3] font-semibold [font-size:_clamp(24px,3vw,48px)]">
+          {modelStats[key]}
+        </div>
+        <div className="text-lg leading-[1.7] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,18px)]">
+          {translation[key]}
+        </div>
+      </div>
+    ));
 
   return (
     <div
@@ -106,7 +123,7 @@ export default function Introduction({ id }: IntroductionProps) {
            
               "
             >
-              {t(PRODUCT_INTRODUCTION_DESCRIPTION[id].title)}
+              {translation.introductionTitle}
             </p>
             {isIOSDevice ? (
               <Image
@@ -193,7 +210,7 @@ export default function Introduction({ id }: IntroductionProps) {
                   text-center
                 "
               >
-                {t(PRODUCT_INTRODUCTION_DESCRIPTION[id].title)}
+                {translation.introductionTitle}
               </p>
               <p
                 className="
@@ -206,7 +223,7 @@ export default function Introduction({ id }: IntroductionProps) {
                   text-center
                 "
               >
-                {t(PRODUCT_INTRODUCTION_DESCRIPTION[id].description)}
+                {translation.introductionDescription}
               </p>
             </div>
 
@@ -225,20 +242,7 @@ export default function Introduction({ id }: IntroductionProps) {
                 justify-around
               "
             >
-              {modelStatsKeys.map((key) => (
-                <div key={key}>
-                  <div className="leading-[1.3] font-semibold [font-size:_clamp(24px,3vw,48px)]">
-                    {modelStats[key as keyof typeof modelStats]}
-                  </div>
-                  <div className="text-lg leading-[1.7] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,18px)]">
-                    {t(
-                      PRODUCT_INTRO_PANELS_MAPPING[
-                        key as keyof typeof modelStats
-                      ]
-                    )}
-                  </div>
-                </div>
-              ))}
+              {moduleStats}
             </div>
           </div>
         </div>
@@ -285,7 +289,7 @@ export default function Introduction({ id }: IntroductionProps) {
               text-center
             "
           >
-            {t(PRODUCT_INTRODUCTION_DESCRIPTION[id].description)}
+            {translation.introductionDescription}
           </p>
         </div>
 
@@ -305,18 +309,7 @@ export default function Introduction({ id }: IntroductionProps) {
             justify-around
           "
         >
-          {modelStatsKeys.map((key) => (
-            <div key={key}>
-              <div className="leading-[1.3] font-semibold [font-size:_clamp(24px,3vw,48px)]">
-                {modelStats[key as keyof typeof modelStats]}
-              </div>
-              <div className="text-lg leading-[1.7] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,18px)]">
-                {t(
-                  PRODUCT_INTRO_PANELS_MAPPING[key as keyof typeof modelStats]
-                )}
-              </div>
-            </div>
-          ))}
+          {moduleStats}
         </div>
       </div>
     </div>

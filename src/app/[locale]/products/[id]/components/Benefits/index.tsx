@@ -2,18 +2,16 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Benefit from "@/app/[locale]/products/[id]/components/Benefits/Benefit";
 import { BenefitsProps } from "@/app/[locale]/products/[id]/components/Benefits/types";
 import { PRODUCT_BENEFITS_FOR_PANELS } from "@/app/[locale]/products/[id]/constants";
-import { useParams } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function Benefits({ id }: BenefitsProps) {
   const benefits = PRODUCT_BENEFITS_FOR_PANELS[id];
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div className="flex justify-center w-full">
@@ -42,7 +40,7 @@ export default function Benefits({ id }: BenefitsProps) {
                   red: <p className="text-[#B30006]" />,
                 }}
               >
-                {t("What Are Its Best Features")}
+                {translation.moduleBestFeatures}
               </Trans>
             }
             align="left"

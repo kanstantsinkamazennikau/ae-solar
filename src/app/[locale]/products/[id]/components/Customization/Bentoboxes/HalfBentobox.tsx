@@ -39,7 +39,7 @@ export default function HalfBentobox({
       }}
     >
       {shortDescription &&
-        shortDescription.split(/\r?\n|\r|\n/g).map((string) => (
+        shortDescription?.split(/\r?\n|\r|\n/g).map((string) => (
           <div
             className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px]"
             key={string}

@@ -3,10 +3,11 @@
 import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { BenefitProps } from "@/app/[locale]/products/[id]/components/Benefits/types";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 export default function Benefit({
   benefitTitle,
@@ -15,8 +16,7 @@ export default function Benefit({
 }: BenefitProps) {
   const [stopIntersecting, setStopIntersecting] = useState(false);
   const { ref, intersecting } = useIntersection(0.35);
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -84,7 +84,7 @@ export default function Benefit({
             w-full
           "
         >
-          {t(benefitTitle)}
+          {translation[benefitTitle]}
         </div>
       </div>
 
@@ -95,12 +95,11 @@ export default function Benefit({
             font-normal
             leading-[150%]
             font-walsheim
-            capitalize
             md:max-w-[427px]
             w-full
           "
         >
-          {t(benefitDescription)}
+          {translation[benefitDescription]}
         </p>
       </div>
     </div>
