@@ -1,28 +1,16 @@
 import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import {
-  useParams,
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
 
 export default function EmptyResult() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { translation } = useContext(i18nProviderContext);
-
   const { setIsResetFilter } = useContext(ConstructorContext);
 
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const { replace } = useRouter();
-  const params = new URLSearchParams(searchParams);
 
   const onReset = () => {
     replace(pathname, { scroll: false });

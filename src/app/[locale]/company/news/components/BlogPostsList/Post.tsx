@@ -1,7 +1,5 @@
 import { PostProps } from "@/app/[locale]/company/news/components/BlogPostsList/types";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { blogPostFormatDate } from "@/app/[locale]/utils/blogPostFormatDate";
-import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,8 +17,6 @@ export default async function Post({
         el.type === "paragraph" &&
         el.children.some((chld) => Object.keys(chld).length === 2)
     );
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
 
   return (
     <Link href={`/company/news/${id}`}>
@@ -115,7 +111,7 @@ export default async function Post({
 
           {firstParagraph && firstParagraph.children[0].type === "text" && (
             <p className="lowercase first-letter:capitalize [font-size:_clamp(12px,1vw,16px)]">
-              {t(firstParagraph.children[0].text)
+              {firstParagraph?.children[0]?.text
                 .split(" ")
                 .slice(0, 10)
                 .join(" ") + "..."}

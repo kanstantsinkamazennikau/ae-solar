@@ -1,21 +1,11 @@
 "use client";
 
-import { TagsFilterProps, TagsProps } from "@/app/[locale]/company/news/types";
+import { TagsProps } from "@/app/[locale]/company/news/types";
 import Button from "@/app/[locale]/components/common/Button";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Image from "next/image";
-import {
-  useParams,
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function TagsFilter({ tags, filterText, resetText }: TagsProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();

@@ -55,6 +55,13 @@ const nextConfig = {
           "/documents/presentations/Dr-Hamed-Hanifi_AESOLAR_TERRA_.pdf",
         permanent: true,
       },
+
+      //TODO remove
+      {
+        source: "/de/:path*",
+        destination: "/en/:path*",
+        permanent: true,
+      },
     ];
   },
   pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],

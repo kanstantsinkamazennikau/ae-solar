@@ -1,22 +1,24 @@
 import { Model } from "@/app/[locale]/context/constructorContext";
-import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import I18nProvider from "@/app/[locale]/i18nProvider";
 import ProductNavigation from "@/app/[locale]/products/[id]/components/ProductNavigation";
-import { PRODUCT_PANEL_TITLES } from "@/app/[locale]/products/[id]/constants";
+import { PRODUCT_PANEL_METADATA } from "@/app/[locale]/products/[id]/constants";
 import { LayoutProps } from "@/app/[locale]/products/[id]/types";
 import { PRODUCT_INTRO_PANELS_IMAGES } from "@/app/[locale]/utils/constants";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
+import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 
 export async function generateMetadata({
   params: { id, locale },
 }: {
   params: { id: Model; locale: LocaleTypes };
 }) {
-  const { t } = await serverTranslation(locale, "translation");
+  const metadata = await getOpengraphMetadata(locale);
   const title = `AE-Solar | ${id}`;
-  const description = `AE-Solar | ${t(PRODUCT_PANEL_TITLES[id])}`;
+  const description = `AE-Solar | ${
+    metadata?.[PRODUCT_PANEL_METADATA[id] as keyof typeof metadata]
+  }`;
 
   return {
     title,

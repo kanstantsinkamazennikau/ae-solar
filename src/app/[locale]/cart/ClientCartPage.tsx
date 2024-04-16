@@ -9,10 +9,11 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Loader from "@/app/[locale]/components/common/Loader";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 export default function ClientCartPage() {
   const { isBagLoading, modelsInBag } = useContext(ConstructorContext);
+  const [showBuyerForm, _] = useState(!!modelsInBag.length);
 
   if (isBagLoading) return <Loader />;
 
@@ -30,7 +31,7 @@ export default function ClientCartPage() {
           height={60}
           className="mb-[60px] rotate-180"
         />
-        {!!modelsInBag.length && (
+        {(showBuyerForm || !!modelsInBag.length) && (
           <div
             className="
               flex

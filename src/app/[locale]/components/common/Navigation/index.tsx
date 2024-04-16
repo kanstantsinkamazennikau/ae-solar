@@ -12,6 +12,7 @@ import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNaviga
 import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
 import { HEADER_NAV_LINKS_ARRAY } from "@/app/[locale]/utils/constants";
@@ -24,6 +25,7 @@ export default function Navigation({
 }: {
   headerAttributes: NavigationProps;
 }) {
+  useClientTranslation("", "");
   const locale = useParams()?.locale as LocaleTypes;
   const { sticky } = useContext(StickyNavigationContext);
   const productsContext = useContext(ProductsContext);
@@ -104,7 +106,7 @@ export default function Navigation({
               ))}
             </ul>
             <div className="gap-3 min-[920px]:flex hidden">
-              <ChangeLocale />
+              {/* <ChangeLocale /> */}
               <Cart />
               <Button
                 onClick={handleClick}

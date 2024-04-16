@@ -3,19 +3,14 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Tier1 from "@/app/[locale]/components/common/Tier1";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import PanelsList from "@/app/[locale]/products/components/PanelsList";
 import { PRODUCT_ADVANTAGES } from "@/app/[locale]/products/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function Advantages() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { translation } = useContext(i18nProviderContext);
 
   return (

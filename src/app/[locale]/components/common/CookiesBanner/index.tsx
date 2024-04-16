@@ -18,7 +18,6 @@ export default function CookiesBanner({
   cookiesAttributes: CookiesProps;
 }) {
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
 
   const [cookieConsentIsTrue, setCookieConsentIsTrue] = useState(true);
 

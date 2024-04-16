@@ -10,14 +10,16 @@ import ModelProvider from "@/app/[locale]/context/modelContext";
 import ProductsContextProvider from "@/app/[locale]/context/productsContext";
 import StickyNavigationProvider from "@/app/[locale]/context/stickyNavigationContext";
 import ToastContainerProvider from "@/app/[locale]/context/toastProvider";
-import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes, locales } from "@/app/[locale]/i18n/settings";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
+import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 import localFont from "next/font/local";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
+
+export const revalidate = 3600;
 
 const walsheim = localFont({
   src: [
@@ -121,11 +123,11 @@ export async function generateMetadata({
 }: {
   params: { locale: LocaleTypes };
 }) {
-  const { t } = await serverTranslation(locale, "translation");
+  const metadata = await getOpengraphMetadata(locale);
 
   return {
     title: "AE-Solar",
-    description: t("MetadataDescriptionHome"),
+    description: metadata?.metadataDescriptionMainPage,
     keywords: [],
     metadataBase: new URL(
       `${
@@ -136,7 +138,7 @@ export async function generateMetadata({
     ),
     openGraph: {
       title: "AE-Solar",
-      description: t("MetadataDescriptionHome"),
+      description: metadata?.metadataDescriptionMainPage,
       type: "website",
     },
   };
@@ -158,6 +160,18 @@ const getLayoutData = async () => {
   return responseData;
 };
 
+const getMetadata = async () => {
+  const locale = getLocale();
+  const urlParamsObject = {
+    locale,
+  };
+  const metadataApiPath = `/metadata`;
+  const { data } = await fetchAPI(metadataApiPath, urlParamsObject);
+  global.metadata = {
+    ...data?.attributes,
+  };
+};
+
 export default async function RootLayout({
   children,
   params: { locale },
@@ -165,6 +179,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: LocaleTypes };
 }) {
+  await getMetadata();
   if (!locales.includes(locale as any)) notFound();
   const url = headers().get("x-url")!.split("/");
   const [navigationData, cookiesData] = await getLayoutData();

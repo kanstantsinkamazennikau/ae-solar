@@ -1,7 +1,5 @@
 import { StrapiBlogsWithPagination } from "@/app/[locale]/company/news/components/BlogPostsList/types";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
-import getLocale from "@/app/[locale]/utils/getLocale";
 import Link from "next/link";
 
 const getMostPopularPosts = async () => {
@@ -35,8 +33,6 @@ export default async function MostPopularPosts({
 }: {
   heading: string;
 }) {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
   const theMostPopularPosts = await getMostPopularPosts();
 
   return (

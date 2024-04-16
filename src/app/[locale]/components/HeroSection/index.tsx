@@ -6,6 +6,8 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
+import parse from "html-react-parser";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 
 const HeroSectionVideo = dynamic(() => import("./HeroSectionVideo"), {
   ssr: false,
@@ -14,6 +16,7 @@ const HeroSectionVideo = dynamic(() => import("./HeroSectionVideo"), {
 export default function HeroSection() {
   const { isStartAnimation, isLongVideoLoadingTime } =
     useContext(MainPageVideoContext);
+  useClientTranslation("", "");
 
   const { translation } = useContext(i18nProviderContext);
 

@@ -1,6 +1,3 @@
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams } from "next/navigation";
 import { Trans } from "react-i18next";
 
 export default function WarrantyYears({
@@ -10,9 +7,6 @@ export default function WarrantyYears({
   gridArea?: string;
   shortDescription: string;
 }) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   return (
     <div
       className="

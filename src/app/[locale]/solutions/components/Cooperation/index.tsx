@@ -14,8 +14,6 @@ import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function Cooperation() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { translation } = useContext(i18nProviderContext);
 
   return (

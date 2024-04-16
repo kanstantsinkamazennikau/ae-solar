@@ -1,5 +1,5 @@
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
@@ -17,7 +17,7 @@ export default async function Image({
 }: {
   params: { locale: LocaleTypes };
 }) {
-  const { t } = await useServerTranslation(locale, "translation");
+  const metadata = await getOpengraphMetadata(locale);
   const interSemiBold = fetch(
     new URL("../../fonts/Criteria CF/Criteria CF Medium.otf", import.meta.url)
   ).then((res) => res.arrayBuffer());
@@ -36,7 +36,7 @@ export default async function Image({
           justifyContent: "center",
         }}
       >
-        AE Solar | {t("Manufacturer")}
+        AE Solar | {metadata?.opengraphManufacturer}
       </div>
     ),
     {

@@ -1,17 +1,11 @@
 "use client";
 
 import Contacts from "@/app/[locale]/company/imprint/components/Contacts";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { DOCUMENTS_IMPRINT_INFO_LEGAL } from "@/app/[locale]/utils/constants";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 
 export default function Imprint() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   const { translation } = useContext(i18nProviderContext);
 
   return (

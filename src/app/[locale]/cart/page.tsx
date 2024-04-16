@@ -5,9 +5,8 @@ import getLocale from "@/app/[locale]/utils/getLocale";
 
 const getTranslation = async () => {
   const locale = getLocale();
-  //TODO
   const urlParamsObject = {
-    // locale,
+    locale,
   };
   const pageTranslationApiPath = `/cart`;
   const commonPath = `/common`;

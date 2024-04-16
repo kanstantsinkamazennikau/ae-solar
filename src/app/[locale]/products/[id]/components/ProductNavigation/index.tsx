@@ -11,8 +11,6 @@ import { useParams } from "next/navigation";
 import { useContext, useEffect, useRef, useState } from "react";
 
 export default function ProductNavigation({ id }: ProductNavigationProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  // const { t } = useClientTranslation(locale, "translation");
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(false);
   const [height, setHeight] = useState<number | undefined>(undefined);

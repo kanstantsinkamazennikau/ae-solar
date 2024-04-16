@@ -2,20 +2,15 @@
 
 import { ProductSloganProps } from "@/app/[locale]/components/ProductIntroVideo/ProductSlogan/types";
 import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { PRODUCT_INTRO_PANELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext, useState } from "react";
 
 const SloganWithIntersection = ({ model }: ProductSloganProps) => {
   const modelAdvantages = PRODUCT_INTRO_PANELS[model].advantages;
   const [stopIntersecting, setStopIntersecting] = useState(false);
   const { ref, intersecting } = useIntersection();
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
 
   const { translation } = useContext(i18nProviderContext);
 

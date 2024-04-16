@@ -8,13 +8,12 @@ import Social from "@/app/[locale]/components/common/Footer/Social";
 import { NavigationProps } from "@/app/[locale]/components/common/Footer/types";
 import Logo from "@/app/[locale]/components/common/Logo";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import {
   FOOTER_LINKS_ARRAY,
   POLICY_LINKS,
 } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { Trans } from "react-i18next";
 
@@ -24,9 +23,6 @@ export default function Footer({
   footerAttributes: NavigationProps;
 }) {
   const pathname = usePathname();
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);

@@ -1,0 +1,47 @@
+declare module globalThis {
+  var metadata: {
+    metadataDescriptionMainPage: string;
+    opengraphMainPage: string;
+    metadataTitleCart: string;
+    metadataDescriptionCart: string;
+    opengraphCart: string;
+    metadataTitleCatalogue: string;
+    metadataDescriptionCatalogue: string;
+    opengraphCatalogue: string;
+    metadataTitleFAQ: string;
+    metadataDescriptionFAQ: string;
+    metadataTitlePublishers: string;
+    metadataDescriptionPublishers: string;
+    opengraphPublishers: string;
+    metadataTitleImprint: string;
+    metadataDescriptionImprint: string;
+    opengraphImprint: string;
+    metadataTitleManufacturer: string;
+    metadataDescriptionManufacturer: string;
+    opengraphManufacturer: string;
+    metadataTitleNews: string;
+    metadataDescriptionNews: string;
+    opengraphNews: string;
+    metadataTitleCompany: string;
+    metadataDescriptionCompany: string;
+    opengraphCompany: string;
+    metadataTitleContacts: string;
+    metadataDescriptionContacts: string;
+    opengraphContacts: string;
+    metadataTitleDocuments: string;
+    metadataDescriptionDocuments: string;
+    opengraphDocuments: string;
+    metadataTitleProducts: string;
+    metadataDescriptionProducts: string;
+    opengraphProducts: string;
+    metadataDescriptionAurora: string;
+    metadataDescriptionComet: string;
+    metadataDescriptionMeteor: string;
+    metadataDescriptionTerra: string;
+    metadataDescriptionNeptune: string;
+    metadataDescriptionShadeStar: string;
+    metadataTitleSolutions: string;
+    metadataDescriptionSolutions: string;
+    opengraphSolutions: string;
+  };
+}

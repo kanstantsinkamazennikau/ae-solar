@@ -26,6 +26,15 @@ export const PRODUCT_NAVIGATION = [
 export const PRODUCT_OVERVIEW = "Overview:";
 
 export const PRODUCT_PANEL_TITLES = {
+  Aurora: "metadataDescriptionAurora",
+  Comet: "metadataDescriptionComet",
+  Meteor: "metadataDescriptionMeteor",
+  Terra: "metadataDescriptionTerra",
+  Neptune: "metadataDescriptionNeptune",
+  ShadeStar: "metadataDescriptionShadeStar",
+};
+
+export const PRODUCT_PANEL_METADATA = {
   Aurora: "ProductTitleAurora",
   Comet: "ProductTitleComet",
   Meteor: "ProductTitleMeteor",

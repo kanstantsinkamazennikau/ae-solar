@@ -4,18 +4,14 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
 import ConsultForm from "@/app/[locale]/contacts/components/ConsultForm";
 import { CONTACTS_OFFICES } from "@/app/[locale]/contacts/constants";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function ContactsList() {
-  const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
-  const { t } = useClientTranslation(locale, "translation");
   const { translation } = useContext(i18nProviderContext);
 
   return (

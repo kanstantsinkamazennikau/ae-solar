@@ -24,9 +24,6 @@ export default function Panel({ panel }: PanelProps) {
   const [isIOSDevice, setIsIOSDevice] = useState(false);
   const { translation } = useContext(i18nProviderContext);
 
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
   }, []);

@@ -3,7 +3,6 @@
 import Button from "@/app/[locale]/components/common/Button";
 import { ModelsProps } from "@/app/[locale]/components/common/Navigation/types";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
@@ -20,7 +19,6 @@ export default function Models({
   const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
   const { setModel, model } = useContext(ModelContext);
-  const { t } = useClientTranslation(locale, "translation");
 
   const handleClick = () => {
     router.push(`/catalogue`);

@@ -306,7 +306,7 @@ export default function BuyerForm({
       <Button
         onClick={handleSubmit}
         showArrow
-        externalStyle="min-[1380px]:w-fit w-full !py-[14px] !px-[26px]"
+        externalStyle="min-[1380px]:w-fit w-fit !py-[14px] !px-[26px]"
         disabled={!agreement}
       >
         {translation.formSend}

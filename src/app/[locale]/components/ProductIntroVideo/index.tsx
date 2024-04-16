@@ -15,11 +15,11 @@ import {
 } from "@/app/[locale]/utils/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 //@ts-ignore
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { Video } from "@splidejs/splide-extension-video";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import {
   useCallback,
   useContext,
@@ -29,7 +29,6 @@ import {
   useState,
 } from "react";
 import { Trans } from "react-i18next";
-import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 
 export default function ProductIntroVideo() {
   const { model, setModel } = useContext(ModelContext);
@@ -37,8 +36,6 @@ export default function ProductIntroVideo() {
   const [isIOSDevice, setIsIOSDevice] = useState(false);
   const modelInfo = PRODUCT_INTRO_PANELS[model].info;
   const ref = useRef<HTMLDivElement | null>(null);
-  const locale = useParams()?.locale;
-  const { t } = useClientTranslation(locale, "translation");
   const router = useRouter();
   const sliderRef = useRef<Splide>(null);
   const sliderId = PRODUCT_INTRO_PANELS_IMAGES.indexOf(model);

@@ -32,10 +32,12 @@ export default function Filters() {
   return (
     <div
       className="
-        max-[1380px]:fixed
+        min-[1380px]:static
+        fixed
         min-[920px]:top-[79px]
         max-[1380px]:top-[63px]
-        max-[1380px]:w-full
+        min-[1380px]:w-auto
+        w-full 
         z-30
       "
     >
@@ -72,7 +74,8 @@ export default function Filters() {
               ? "max-[1380px]:right-0"
               : "max-[1380px]:-right-full"
           }
-          max-[1380px]:fixed
+          min-[1380px]:static
+          fixed
           max-w-[315px]
         `}
       >
@@ -122,6 +125,13 @@ export default function Filters() {
             bensPopUp
           `}
         >
+          <div className="min-[1380px]:block hidden">
+            <p className="[font-size:_clamp(14px,2vw,20px)] font-bold -tracking-[0.4px] capitalize text-base-red mb-2">
+              {translation.filter}
+            </p>
+            <hr className="h-[1px] border-t border-solid border-[#191919] w-full -mb-2" />
+          </div>
+
           <TechnologyFilter
             checkboxesList={TECHNOLOGIES_LIST}
             filterTitle={translation.filterTitleTechnology}

@@ -1,7 +1,5 @@
 import { StrapiBlogsWithPagination } from "@/app/[locale]/company/news/components/BlogPostsList/types";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
-import getLocale from "@/app/[locale]/utils/getLocale";
 import Link from "next/link";
 
 const getRecentPosts = async () => {
@@ -31,8 +29,6 @@ const getRecentPosts = async () => {
 };
 
 export default async function RecentPosts({ heading }: { heading: string }) {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
   const recentPosts = await getRecentPosts();
 
   return (

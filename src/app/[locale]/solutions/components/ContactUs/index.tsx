@@ -2,17 +2,12 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
-import { useContext, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useContext } from "react";
 
 export default function ContactUs() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   const { translation } = useContext(i18nProviderContext);
   const router = useRouter();
 

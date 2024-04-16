@@ -1,14 +1,14 @@
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
+import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 
 export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: LocaleTypes };
 }) {
-  const { t } = await serverTranslation(locale, "translation");
-  const title = `AE-Solar | ${t("Products")}`;
-  const description = `AE-Solar | ${t("Our portfolio")} ${t("Goes beyond")}`;
+  const metadata = await getOpengraphMetadata(locale);
+  const title = `AE-Solar | ${metadata?.metadataTitleProducts}`;
+  const description = `AE-Solar | ${metadata?.metadataDescriptionProducts}`;
 
   return {
     title,

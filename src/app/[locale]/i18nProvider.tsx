@@ -1,12 +1,12 @@
 "use client";
 
-import { Dispatch, SetStateAction, createContext, useState } from "react";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { createContext, useEffect } from "react";
 
 export interface i18nProvider {
   translation: {
     [key: string]: string;
   };
-  setTranslation: Dispatch<SetStateAction<{}>>;
 }
 
 export const i18nProviderContext = createContext<i18nProvider>(null!);
@@ -20,13 +20,10 @@ export default function I18nProvider({
     [key: string]: string;
   };
 }) {
-  const [translation, setTranslation] = useState(translate);
-
   return (
     <i18nProviderContext.Provider
       value={{
-        translation,
-        setTranslation,
+        translation: translate,
       }}
     >
       {children}
