@@ -13,7 +13,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: [],
+    keywords: metadata?.metadataKeywordsCart,
     metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
     openGraph: {
       title,

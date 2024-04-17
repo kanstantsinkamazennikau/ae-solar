@@ -43,6 +43,15 @@ export const PRODUCT_PANEL_METADATA = {
   ShadeStar: "ProductTitleShadeStar",
 };
 
+export const PRODUCT_PANEL_KEYWORDS = {
+  Aurora: "metadataKeywordsAurora",
+  Comet: "metadataKeywordsComet",
+  Meteor: "metadataKeywordsMeteor",
+  Terra: "metadataKeywordsTerra",
+  Neptune: "metadataKeywordsNeptune",
+  ShadeStar: "metadataKeywordsShadeStar",
+};
+
 export const PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS = {
   Aurora: {
     technology: "ProductTechAurora",

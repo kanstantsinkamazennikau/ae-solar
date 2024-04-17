@@ -3,26 +3,35 @@ import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata"
 import { headers } from "next/headers";
 
 const mapTitleWithDocumentsCategory = {
-  faq: { title: "metadataTitleFAQ", description: "metadataDescriptionFAQ" },
+  faq: {
+    title: "metadataTitleFAQ",
+    description: "metadataDescriptionFAQ",
+    keywords: "metadataKeywordsFAQ",
+  },
   publishers_info: {
     title: "metadataTitlePublishers",
     description: "metadataDescriptionPublishers",
+    keywords: "metadataKeywordsPublishers",
   },
   imprint: {
     title: "metadataTitleImprint",
     description: "metadataDescriptionImprint",
+    keywords: "metadataKeywordsImprint",
   },
   manufacturer: {
     title: "metadataTitleManufacturer",
     description: "metadataDescriptionManufacturer",
+    keywords: "metadataKeywordsManufacturer",
   },
   news: {
     title: "metadataTitleNews",
     description: "metadataDescriptionNews",
+    keywords: "metadataKeywordsNews",
   },
   company: {
     title: "metadataTitleCompany",
     description: "metadataDescriptionCompany",
+    keywords: "metadataKeywordsCompany",
   },
 };
 
@@ -50,11 +59,16 @@ export async function generateMetadata({
         ?.description as keyof typeof metadata
     ] || ""
   }`;
+  const keywords =
+    metadata?.[
+      mapTitleWithDocumentsCategory[documentsCategory]
+        ?.keywords as keyof typeof metadata
+    ] || "";
 
   return {
     title,
     description,
-    keywords: [],
+    keywords,
     metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
     openGraph: {
       title,

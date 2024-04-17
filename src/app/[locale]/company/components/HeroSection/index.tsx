@@ -81,7 +81,7 @@ export default function HeroSection() {
           <div className="flex flex-col gap-5 px-5">
             <div
               className="
-                [font-size:_clamp(20px,2.5vw,36px)]
+                [font-size:_clamp(24px,3vw,48px)]
                 font-medium
                 leading-[100%]
                 -tracking-[1.08px]
@@ -95,7 +95,7 @@ export default function HeroSection() {
             <div
               className="
               text-center
-              [font-size:_clamp(40px,5.5vw,102px)]
+              [font-size:_clamp(36px,5.5vw,102px)]
               font-semibold
               leading-[100%]
               md:-tracking-[4.08px]

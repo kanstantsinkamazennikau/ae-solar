@@ -115,8 +115,8 @@ export default function Filters() {
             max-[1380px]:border-t-0
             border
             border-solid
-            border-[#131313]
-            bg-[#0D0D0D]
+            border-[#191919]
+            bg-[#131313]
             min-[1380px]:h-fit
             gap-6
             max-w-[315px]
@@ -126,10 +126,10 @@ export default function Filters() {
           `}
         >
           <div className="min-[1380px]:block hidden">
-            <p className="[font-size:_clamp(14px,2vw,20px)] font-bold -tracking-[0.4px] capitalize text-base-red mb-2">
+            <p className="[font-size:_clamp(26px,2vw,32px)] font-bold -tracking-[0.32px] capitalize text-base-red mb-4">
               {translation.filter}
             </p>
-            <hr className="h-[1px] border-t border-solid border-[#191919] w-full -mb-2" />
+            <hr className="h-[1px] border-t border-solid border-[#191919] w-full" />
           </div>
 
           <TechnologyFilter

@@ -13,6 +13,7 @@ export interface NavLinkProps {
   onLinkClick?: () => void;
   isProductsPage?: boolean;
   allModulesText?: string;
+  chooseModuleText?: string;
 }
 
 export interface SubMenuItemsProps {

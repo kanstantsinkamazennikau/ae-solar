@@ -13,7 +13,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: [],
+    keywords: metadata?.metadataKeywordsCatalogue,
     metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
     openGraph: {
       title,

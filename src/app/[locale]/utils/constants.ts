@@ -1002,7 +1002,7 @@ export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "office.svg",
     designation: "branchOffice",
-    location: ["Georgia", "Brasil", "Colombia"],
+    location: ["Georgia", "Brazil", "Colombia"],
   },
   {
     icon: "base.svg",

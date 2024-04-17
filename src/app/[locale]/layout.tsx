@@ -128,7 +128,7 @@ export async function generateMetadata({
   return {
     title: "AE-Solar",
     description: metadata?.metadataDescriptionMainPage,
-    keywords: [],
+    keywords: metadata?.metadataKeywordsMainPage,
     metadataBase: new URL(
       `${
         process.env.NODE_ENV === "development"

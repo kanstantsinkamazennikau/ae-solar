@@ -101,6 +101,7 @@ export default function Navigation({
                     ...navLink,
                     isProductsPage,
                     allModulesText: headerAttributes?.allModules,
+                    chooseModuleText: headerAttributes?.chooseModule,
                   }}
                 />
               ))}

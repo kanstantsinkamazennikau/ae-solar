@@ -18,6 +18,7 @@ export default function NavLink({
   stickyProducts,
   isProductsPage,
   allModulesText,
+  chooseModuleText,
 }: NavLinkProps) {
   const path = usePathname();
   const locale = useParams()?.locale as LocaleTypes;
@@ -103,6 +104,7 @@ export default function NavLink({
                 <SubNavigationProductPanels
                   isShowAllProductsLink
                   allModulesText={allModulesText}
+                  chooseModuleText={chooseModuleText}
                 />
               </div>
             )
