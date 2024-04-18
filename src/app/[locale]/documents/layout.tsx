@@ -29,5 +29,5 @@ export default function DocumentsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <ClientLayout apiRoute="/documents">{children}</ClientLayout>;
+  return <ClientLayout apiRoute="/pluraldocuments/1">{children}</ClientLayout>;
 }

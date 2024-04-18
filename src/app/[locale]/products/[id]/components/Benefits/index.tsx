@@ -56,9 +56,7 @@ export default function Benefits({ id }: BenefitsProps) {
             lg:px-20
             min-[920px]:px-14
             rounded-[20px]
-            min-[920px]:bg-[url('/images/getInTouchBackground.svg')]
-            bg-no-repeat
-            bg-cover
+            bg-[#0D0D0D]
           "
           >
             {benefits?.map(

@@ -12,6 +12,7 @@ export default function Ben({
   description,
   image,
   isFullHeightRow,
+  popUpImage,
 }: BenProps) {
   const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
   const [isShowPopUp, setShowPopUp] = useState(false);
@@ -39,6 +40,7 @@ export default function Ben({
           onClose={hidePopUp}
           title={translation[title]}
           fullDescription={translation[description]}
+          popUpImage={popUpImage}
         />
       )}
       <div

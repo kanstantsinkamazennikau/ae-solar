@@ -43,12 +43,8 @@ const getTranslation = async () => {
   const urlParamsObject = {
     locale,
   };
-  const pageTranslationApiPath = `/main-page`;
-  const commonPath = `/common`;
-  const responseData = await Promise.all([
-    fetchAPI(pageTranslationApiPath, urlParamsObject),
-    fetchAPI(commonPath, urlParamsObject),
-  ]);
+  const commonPath = `/commons`;
+  const responseData = await fetchAPI(commonPath, urlParamsObject);
   return responseData;
 };
 
@@ -56,7 +52,7 @@ export default async function ContactLayout({
   params: { id },
   children,
 }: LayoutProps) {
-  const [pageI18n, commonI18n] = await getTranslation();
+  const commonI18n = await getTranslation();
 
   if (!PRODUCT_INTRO_PANELS_IMAGES.includes(id))
     return (
@@ -68,8 +64,7 @@ export default async function ContactLayout({
   return (
     <I18nProvider
       translate={{
-        ...pageI18n.data?.attributes,
-        ...commonI18n.data?.attributes,
+        ...commonI18n.data[0]?.attributes,
       }}
     >
       <ProductNavigation id={id} />

@@ -8,7 +8,7 @@ const getTranslation = async (pagePath: string) => {
   const urlParamsObject = {
     locale,
   };
-  const commonPath = `/common`;
+  const commonPath = `/commons`;
   const responseData = await Promise.all([
     fetchAPI(pagePath, urlParamsObject),
     fetchAPI(commonPath, urlParamsObject),
@@ -28,8 +28,8 @@ export default async function Layout({
   return (
     <I18nProvider
       translate={{
-        ...pageI18n.data?.attributes,
-        ...commonI18n.data?.attributes,
+        ...pageI18n.data[0]?.attributes,
+        ...commonI18n.data[0]?.attributes,
       }}
     >
       <DocumentsLayout>{children}</DocumentsLayout>

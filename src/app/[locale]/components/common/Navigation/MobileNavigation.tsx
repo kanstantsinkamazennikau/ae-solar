@@ -107,12 +107,12 @@ export default function MobileNavigation({
           ))}
         </ul>
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />
-        {/* <ChangeLocale
+        <ChangeLocale
           mobileNavigation
           mobileNavigationLanguageSelectorText={
             mobileNavigationLanguageSelectorText
           }
-        /> */}
+        />
         {/* <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" /> */}
         <Link
           href={`/${params?.locale}/contacts`}

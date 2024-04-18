@@ -65,14 +65,14 @@ const getTranslation = async () => {
     locale,
   };
   const pageTranslationApiPath = `/news`;
-  const commonPath = `/common`;
+  const commonPath = `/commons`;
   const [pageI18n, commonI18n] = await Promise.all([
     fetchAPI(pageTranslationApiPath, urlParamsObject),
     fetchAPI(commonPath, urlParamsObject),
   ]);
   return {
-    ...pageI18n.data?.attributes,
-    ...commonI18n.data?.attributes,
+    ...pageI18n.data[0]?.attributes,
+    ...commonI18n.data[0]?.attributes,
   };
 };
 

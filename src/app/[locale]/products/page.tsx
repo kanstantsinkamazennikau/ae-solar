@@ -8,8 +8,8 @@ const getTranslation = async () => {
   const urlParamsObject = {
     locale,
   };
-  const pageTranslationApiPath = `/product`;
-  const commonPath = `/common`;
+  const pageTranslationApiPath = `/products`;
+  const commonPath = `/commons`;
   const responseData = await Promise.all([
     fetchAPI(pageTranslationApiPath, urlParamsObject),
     fetchAPI(commonPath, urlParamsObject),
@@ -23,8 +23,8 @@ export default async function ProductsPage() {
   return (
     <I18nProvider
       translate={{
-        ...pageI18n.data?.attributes,
-        ...commonI18n.data?.attributes,
+        ...pageI18n.data[0]?.attributes,
+        ...commonI18n.data[0]?.attributes,
       }}
     >
       <ClientProductsPage />

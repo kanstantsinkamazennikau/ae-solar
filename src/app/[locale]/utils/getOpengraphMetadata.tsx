@@ -6,8 +6,10 @@ export const getOpengraphMetadata = async (locale: string) => {
       //TODO
       // locale,
     };
-    const metadataApiPath = `/metadata`;
+    //TODO
+    const metadataApiPath = `/metadatas/1`;
     const { data } = await fetchAPI(metadataApiPath, urlParamsObject);
+
     return data?.attributes;
   } catch (error) {
     return {};

@@ -38,7 +38,7 @@ const getMainPageTranslation = async () => {
   const urlParamsObject = {
     locale,
   };
-  const footerPath = `/main-page`;
+  const footerPath = `/main-pag`;
   const responseData = await fetchAPI(footerPath, urlParamsObject);
   return responseData;
 };
@@ -102,7 +102,7 @@ export default async function RecentNews() {
           <Link href="company/news" className="mt-10 mx-auto">
             <Button style="outline" showArrow>
               <span className="[font-size:_clamp(16px,1.5vw,20px)] font-semibold -tracking-[0.2]">
-                {data?.attributes.readAllNews}
+                {data[0]?.attributes.readAllNews}
               </span>
             </Button>
           </Link>

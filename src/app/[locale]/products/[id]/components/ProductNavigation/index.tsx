@@ -1,13 +1,10 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { ProductNavigationProps } from "@/app/[locale]/products/[id]/components/ProductNavigation/types";
 import { PRODUCT_NAVIGATION } from "@/app/[locale]/products/[id]/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext, useEffect, useRef, useState } from "react";
 
 export default function ProductNavigation({ id }: ProductNavigationProps) {

@@ -16,8 +16,8 @@ const getTranslation = async () => {
   const urlParamsObject = {
     locale,
   };
-  const pageTranslationApiPath = `/main-page`;
-  const commonPath = `/common`;
+  const pageTranslationApiPath = `/main-pag`;
+  const commonPath = `/commons`;
   const responseData = await Promise.all([
     fetchAPI(pageTranslationApiPath, urlParamsObject),
     fetchAPI(commonPath, urlParamsObject),
@@ -27,12 +27,13 @@ const getTranslation = async () => {
 
 export default async function Home() {
   const [pageI18n, commonI18n] = await getTranslation();
+  console.log(pageI18n);
 
   return (
     <I18nProvider
       translate={{
-        ...pageI18n.data?.attributes,
-        ...commonI18n.data?.attributes,
+        ...pageI18n.data[0]?.attributes,
+        ...commonI18n.data[0]?.attributes,
       }}
     >
       <main className="flex flex-col items-center w-full ">

@@ -149,27 +149,15 @@ const getLayoutData = async () => {
   const urlParamsObject = {
     locale,
   };
-  const footerPath = `/footer`;
-  const cookiesPath = `/cookie`;
-  const commonPath = `/common`;
+  const footerPath = `/footers`;
+  const cookiesPath = `/cookies`;
+  const commonPath = `/commons`;
   const responseData = await Promise.all([
     fetchAPI(footerPath, urlParamsObject),
     fetchAPI(cookiesPath, urlParamsObject),
     fetchAPI(commonPath, urlParamsObject),
   ]);
   return responseData;
-};
-
-const getMetadata = async () => {
-  const locale = getLocale();
-  const urlParamsObject = {
-    locale,
-  };
-  const metadataApiPath = `/metadata`;
-  const { data } = await fetchAPI(metadataApiPath, urlParamsObject);
-  global.metadata = {
-    ...data?.attributes,
-  };
 };
 
 export default async function RootLayout({
@@ -179,13 +167,12 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: LocaleTypes };
 }) {
-  await getMetadata();
   if (!locales.includes(locale as any)) notFound();
   const url = headers().get("x-url")!.split("/");
   const [navigationData, cookiesData] = await getLayoutData();
 
-  const navigationAttributes = navigationData.data?.attributes;
-  const cookiesAttributes = cookiesData.data?.attributes;
+  const navigationAttributes = navigationData.data[0]?.attributes;
+  const cookiesAttributes = cookiesData.data[0]?.attributes;
 
   return (
     <html lang={locale}>

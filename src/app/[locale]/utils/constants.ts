@@ -333,26 +333,31 @@ export const TECH_INFO_BENS = [
     title: "BensTitle1",
     description: "BensDescription1",
     image: "automation.svg",
+    popUpImage: "bens1.png",
   },
   {
     title: "BensTitle2",
     description: "BensDescription2",
     image: "manufacturer.png",
+    popUpImage: "bens2.png",
   },
   {
     title: "BensTitle3",
     description: "BensDescription3",
     image: "technologies.svg",
+    popUpImage: "bens3.png",
   },
   {
     title: "BensTitle4",
     description: "BensDescription4",
     image: "efficiency.svg",
+    popUpImage: "bens4.png",
   },
   {
     title: "BensTitle5",
     description: "BensDescription5",
     image: "materials.svg",
+    popUpImage: "bens5.png",
   },
 ];
 

@@ -9,6 +9,7 @@ export default function BensPopUp({
   onClose,
   title,
   fullDescription,
+  popUpImage,
 }: BensPopUpProps) {
   const { translation } = useContext(i18nProviderContext);
 
@@ -36,7 +37,7 @@ export default function BensPopUp({
           "
         >
           <Image
-            src={`/images/techInfo/popUpHeader.png`}
+            src={`/images/techInfo/${popUpImage}`}
             alt="popUpHeader"
             width={1320}
             height={300}
