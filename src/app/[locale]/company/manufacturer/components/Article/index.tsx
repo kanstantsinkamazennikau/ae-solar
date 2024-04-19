@@ -22,7 +22,6 @@ const ArtcileHeading = ({ heading }: { heading: string }) => {
 
 const ArticleStats = () => {
   const { translation } = useContext(i18nProviderContext);
-  console.log(translation);
 
   return (
     <div
