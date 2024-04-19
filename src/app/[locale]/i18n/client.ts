@@ -15,9 +15,14 @@ i18next
   .use(initReactI18next)
   .use(LanguageDetector)
   .use(
+    //TODO
+    // resourcesToBackend(
+    //   (language: string, namespace: string) =>
+    //     import(`./locales/${language}/${namespace}.json`)
+    // )
     resourcesToBackend(
       (language: string, namespace: string) =>
-        import(`./locales/${language}/${namespace}.json`)
+        import(`./locales/en/${namespace}.json`)
     )
   )
   .init({

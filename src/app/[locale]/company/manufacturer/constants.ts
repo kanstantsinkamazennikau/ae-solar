@@ -55,8 +55,7 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
       },
       {
         type: "stroke",
-        value:
-          "Our goal <stroke>is to maximize return on investment, lower energy costs, and minimize carbon footprint.</stroke>",
+        value: "manufacturerStrokeText",
       },
       {
         type: "text",
@@ -69,18 +68,18 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
 export const MANUFACTURER_ARTICLE_STATS = [
   {
     title: "2003",
-    description: "Was founded by Dr. Alexander Maier and his brothers.",
+    description: "manufacturerStat1",
   },
   {
     title: "3200+",
-    description: "Executing Successful PV Installations",
+    description: "manufacturerStat2",
   },
   {
     title: "100+",
-    description: "We have a global network offering solutions worldwide.",
+    description: "manufacturerStat3",
   },
   {
     title: "TIER1",
-    description: "Company known for high-quality, reliable solar panels.",
+    description: "manufacturerStat4",
   },
 ];

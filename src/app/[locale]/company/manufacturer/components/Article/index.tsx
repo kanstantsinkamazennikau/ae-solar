@@ -21,6 +21,9 @@ const ArtcileHeading = ({ heading }: { heading: string }) => {
 };
 
 const ArticleStats = () => {
+  const { translation } = useContext(i18nProviderContext);
+  console.log(translation);
+
   return (
     <div
       className="
@@ -76,7 +79,7 @@ const ArticleStats = () => {
               {title}
             </p>
             <p className="[font-size:_clamp(16px,1.5vw,20px)] font-normal leading-[120%] -tracking-[0.2px] font-walsheim text-[#505050]">
-              {description}
+              {translation[description]}
             </p>
           </div>
         ))}
@@ -265,8 +268,7 @@ export default function Artcile() {
             if (paragraph.type === "stroke")
               return (
                 <ArticleStroke
-                  // paragraph={translation[paragraph.value]}
-                  paragraph={paragraph.value}
+                  paragraph={translation[paragraph.value]}
                   key={index}
                 />
               );
