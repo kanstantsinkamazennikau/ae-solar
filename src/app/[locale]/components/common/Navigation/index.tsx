@@ -3,12 +3,12 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
+import { NavigationProps } from "@/app/[locale]/components/common/Footer/types";
 import Logo from "@/app/[locale]/components/common/Logo";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import MobileNavigation from "@/app/[locale]/components/common/Navigation/MobileNavigation";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
-import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
@@ -20,21 +20,22 @@ import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
 
-export default function Navigation() {
+export default function Navigation({
+  headerAttributes,
+}: {
+  headerAttributes: NavigationProps;
+}) {
+  useClientTranslation("", "");
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const { sticky } = useContext(StickyNavigationContext);
   const productsContext = useContext(ProductsContext);
   const { setIsHamburgerMenuOpen } = useContext(MobileSideMenuContext);
-  const mainPageVideoContext = useContext(MainPageVideoContext);
   const params = useParams();
   const router = useRouter();
   const pathname = usePathname();
-
   const isProductsPage = ["/products", `/${locale}/products`].includes(
     pathname
   );
-  const isMainPage = pathname === "/";
 
   const closeSideMenuOnLogoClickForMobile = () => {
     setIsHamburgerMenuOpen(false);
@@ -80,13 +81,6 @@ export default function Navigation() {
               : "-translate-y-[144px] pointer-events-none"
           }`
         }
-        // {
-        //   isMainPage &&
-        //     mainPageVideoContext.isStartAnimation
-        //       ? "translate-y-0"
-        //       : "-translate-y-[144px] pointer-events-none"
-        //   }
-        // }
       `}
     >
       {/* MAIN NAVIGATION */}
@@ -103,7 +97,11 @@ export default function Navigation() {
               {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
                 <NavLink
                   key={navLink.url}
-                  {...{ ...navLink, isProductsPage }}
+                  {...{
+                    ...navLink,
+                    isProductsPage,
+                    headerAttributes,
+                  }}
                 />
               ))}
             </ul>
@@ -115,21 +113,39 @@ export default function Navigation() {
                 externalStyle="!py-[10px] !px-[18px]"
               >
                 <span className="[font-size:_clamp(14px,1.5vw,16px)] whitespace-nowrap">
-                  {t("Contact Us")}
+                  {headerAttributes?.contactUs}
                 </span>
               </Button>
             </div>
 
             {/* MOBILE NAV */}
-            <MobileNavigation />
+            <MobileNavigation
+              contactUsText={headerAttributes?.contactUs}
+              headerAttributes={headerAttributes}
+              mobileNavigationLanguageSelectorText={{
+                language: headerAttributes?.language,
+                chooseLanguage: headerAttributes?.chooseLanguage,
+              }}
+            />
           </nav>
         </BasicWidthContainer>
       </div>
 
       {/* SUBNAVIGATION */}
-      {sticky && !hideSubnavigation() && <SubNavigation isLink />}
+      {sticky && !hideSubnavigation() && (
+        <SubNavigation
+          isLink
+          chooseYourModuleText={headerAttributes?.chooseModule}
+          modulesText={headerAttributes?.modules}
+        />
+      )}
 
-      {isProductsPage && <SubNavigationProductPanels />}
+      {isProductsPage && (
+        <SubNavigationProductPanels
+          allModulesText={headerAttributes?.allModules}
+          chooseModuleText={headerAttributes?.chooseModule}
+        />
+      )}
     </div>
   );
 }

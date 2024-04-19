@@ -1,12 +1,9 @@
 "use client";
 
-import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { DesktopTableRowProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 export default function DesktopTableRow({
@@ -28,8 +25,7 @@ export default function DesktopTableRow({
     modelsInBag.some(({ id }) => id === model)
   );
 
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   useEffect(() => {
     setIsAlreadyInBag(modelsInBag.some(({ id }) => id === model));
@@ -135,7 +131,7 @@ export default function DesktopTableRow({
               moduleColor,
               frameColor,
               moduleDimension,
-              applications as Applications[],
+              applications,
               powerRange,
               backCover
             )
@@ -174,7 +170,7 @@ export default function DesktopTableRow({
               font-bold
             "
             >
-              {t("Add")}
+              {translation.add}
             </p>
           </div>
         </td>
@@ -182,7 +178,7 @@ export default function DesktopTableRow({
         <td>
           <button onClick={() => removeModel(model)} className="pr-6">
             <span className="font-semibold [font-size:_clamp(12px,1.5vw,14px)] -tracking-[0.16px] text-base-red">
-              {t("Remove")}
+              {translation.remove}
             </span>
           </button>
         </td>

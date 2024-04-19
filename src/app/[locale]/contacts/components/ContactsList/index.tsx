@@ -4,16 +4,15 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
 import ConsultForm from "@/app/[locale]/contacts/components/ConsultForm";
 import { CONTACTS_OFFICES } from "@/app/[locale]/contacts/constants";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function ContactsList() {
-  const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <BasicWidthContainer>
@@ -45,7 +44,7 @@ export default function ContactsList() {
                   bold: <span className="text-dark-gray-900 font-bold" />,
                 }}
               >
-                {t("German Brand")}
+                {translation.germanBrand}
               </Trans>
               <hr className="mt-6 border-[#131313] min-[920px]:hidden" />
             </div>
@@ -58,7 +57,7 @@ export default function ContactsList() {
               <hr className="bg-[#131313] h-[1px] border-none mb-[60px]" />
               <div className="min-[560px]:grid grid-cols-[clamp(35%,20%,280px)_auto] gap-4 w-full max-[920px]:justify-center flex flex-col">
                 <div className="[font-size:_clamp(20px,2.5vw,40px)] min-[560px]:[word-spacing:1000px] hyphens-auto">
-                  {t(office)}
+                  {translation[office]}
                 </div>
                 <div className="flex flex-col">
                   {contacts.map(({ title, icon, info, linkTo }) => (
@@ -85,7 +84,7 @@ export default function ContactsList() {
                           priority
                         />
                         <div className="[font-size:_clamp(11px,1.5vw,20px)] font-semibold hyphens-auto">
-                          {t(title)}
+                          {translation[title]}
                         </div>
                       </div>
                       <div

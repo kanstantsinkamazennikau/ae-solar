@@ -1,16 +1,17 @@
+"use client";
+
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import {
   SOLUTIONS_GLOBAL_IMPACT_STATS,
   SOLUTIONS_GLOBAL_IMPACT_STATS_WITH_IMAGES,
 } from "@/app/[locale]/solutions/constants";
-import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
+import { useContext } from "react";
 
-export default async function GlobalImpact() {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+export default function GlobalImpact() {
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -43,10 +44,10 @@ export default async function GlobalImpact() {
           {/* IMPACT */}
           <div className="flex max-w-[650px] flex-col items-start md:gap-10 gap-5">
             <p className="md:text-[64px] text-[36px] font-semibold leading-[100%] -tracking-[1.08px]">
-              {t("Global Impact")}
+              {translation.globalImpact}
             </p>
             <p className="md:text-[20px] text-[16px] font-normal font-walsheim leading-[150%]">
-              {t("Global Impact Description")}
+              {translation.globalImpactDescription}
             </p>
             <a href="/documents/presentation.pdf" target="_blank">
               <Button style="textOnly" externalStyle="!p-0">
@@ -60,7 +61,7 @@ export default async function GlobalImpact() {
                     text-base-red
                   "
                 >
-                  {t("View PDF-Presentation")}
+                  {translation.viewPDFPresentation}
                 </p>
                 <Image
                   src="/images/arrowFutureRed.svg"
@@ -97,10 +98,10 @@ export default async function GlobalImpact() {
               >
                 <div className="[font-size:_clamp(36px,1.5vw,36px)] leading-[100%] -tracking-[1.08px]">
                   {value}
-                  {" " + t(units)}
+                  {" " + translation[units]}
                 </div>
                 <div className="[font-size:_clamp(20px,1.5vw,24px)] leading-[100%] font-walsheim text-dark-gray-900">
-                  {t(measure)}
+                  {translation[measure]}
                 </div>
               </div>
             ))}
@@ -143,7 +144,7 @@ export default async function GlobalImpact() {
                     {value}
                   </div>
                   <div className="[font-size:_clamp(20px,1.5vw,24px)] leading-[100%] font-walsheim">
-                    {t(country)}
+                    {translation[country]}
                   </div>
                 </div>
               </div>

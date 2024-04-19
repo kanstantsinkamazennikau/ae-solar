@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Trans } from "react-i18next";
 
 export default function QuarterBentobox({
   imageUrl,
@@ -46,15 +47,11 @@ export default function QuarterBentobox({
         />
       )}
 
-      {shortDescription &&
-        shortDescription.split(/\r?\n|\r|\n/g).map((string) => (
-          <div
-            className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%] capitalize"
-            key={string}
-          >
-            {string}
-          </div>
-        ))}
+      {shortDescription && (
+        <div className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] leading-[100%] capitalize text-center">
+          <Trans>{shortDescription}</Trans>
+        </div>
+      )}
     </div>
   );
 }

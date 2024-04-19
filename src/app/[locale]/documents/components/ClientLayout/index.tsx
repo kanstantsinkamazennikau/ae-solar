@@ -1,62 +1,38 @@
-"use client";
+import DocumentsLayout from "@/app/[locale]/documents/components/ClientLayout/ClientLayout";
+import I18nProvider from "@/app/[locale]/i18nProvider";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
+import getLocale from "@/app/[locale]/utils/getLocale";
 
-import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import DocumentsHeading from "@/app/[locale]/components/common/DocumentsHeading";
-import DocumentsProvider from "@/app/[locale]/context/documentsContext";
-import CategoriesWithControl from "@/app/[locale]/documents/components/CategoriesControl";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-
-const mapBackgroundWithCategory = {
-  documents: `/images/documents/documents.png`,
-  faq: `/images/documents/faq.png`,
-  publishers_info: `/images/documents/publishers_info.png`,
-  imprint: `/images/documents/imprint.png`,
+const getTranslation = async (pagePath: string) => {
+  const locale = getLocale();
+  const urlParamsObject = {
+    locale,
+  };
+  const commonPath = `/commons`;
+  const responseData = await Promise.all([
+    fetchAPI(pagePath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
+  ]);
+  return responseData;
 };
 
-export default function ClientLayout({
+export default async function Layout({
   children,
+  apiRoute,
 }: {
   children: React.ReactNode;
+  apiRoute?: string;
 }) {
-  const pathName = usePathname().split("/");
-  const documentsCategory = pathName[pathName.length - 1];
+  const [pageI18n, commonI18n] = await getTranslation(apiRoute!);
 
   return (
-    <DocumentsProvider category={documentsCategory} key={documentsCategory}>
-      <div className="relative -mt-[80px] flex justify-center">
-        <Image
-          src={
-            mapBackgroundWithCategory[
-              documentsCategory as keyof typeof mapBackgroundWithCategory
-            ]
-          }
-          alt="documents"
-          width={1920}
-          height={440}
-          quality={100}
-          priority
-          className="lg:h-[440px] min-[920px]:h-[400px] md:h-[360px] h-[300px]"
-        />
-        <div className="flex w-full justify-center absolute bottom-0">
-          <BasicWidthContainer>
-            <DocumentsHeading />
-          </BasicWidthContainer>
-        </div>
-      </div>
-      <div className="flex w-full justify-center">
-        <BasicWidthContainer>
-          <Image
-            src={`/images/glowFull.png`}
-            alt="glow"
-            priority
-            width={1320}
-            height={60}
-            className="min-[920px]:mb-[60px] mb-[40px]"
-          />
-          <CategoriesWithControl>{children}</CategoriesWithControl>
-        </BasicWidthContainer>
-      </div>
-    </DocumentsProvider>
+    <I18nProvider
+      translate={{
+        ...pageI18n.data[0]?.attributes,
+        ...commonI18n.data[0]?.attributes,
+      }}
+    >
+      <DocumentsLayout>{children}</DocumentsLayout>
+    </I18nProvider>
   );
 }

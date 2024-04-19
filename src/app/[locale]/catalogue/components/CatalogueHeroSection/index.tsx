@@ -1,9 +1,10 @@
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import getLocale from "@/app/[locale]/utils/getLocale";
+"use client";
 
-export default async function CatalogueHeroSection() {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { useContext } from "react";
+
+export default function CatalogueHeroSection() {
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div className={`relative`}>
@@ -47,10 +48,10 @@ export default async function CatalogueHeroSection() {
           `}
         >
           <p className="capitalize text-center md:-tracking-[1.08px] font-medium -tracking-[0px] leading-[100%] [font-size:_clamp(14px,2.5vw,36px)] after:p-0 text-base-red">
-            {t("Our portfolio")}
+            {translation.ourPortfolio}
           </p>
           <p className="mainPageTextShadow text-center font-semibold md:-tracking-[4px] -tracking-[0px] leading-[100%] [font-size:_clamp(34px,6vw,96px)] capitalize">
-            {t("Goes beyond")}
+            {translation.goesBeyond}
           </p>
         </div>
       </div>

@@ -1,18 +1,17 @@
 import { BensPopUpProps } from "@/app/[locale]/components/TechInfo/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useContext } from "react";
 
 export default function BensPopUp({
   onClose,
   title,
   fullDescription,
+  popUpImage,
 }: BensPopUpProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div className="fixed justify-center z-[40] flex w-full top-0 left-0 h-full items-center">
@@ -38,7 +37,7 @@ export default function BensPopUp({
           "
         >
           <Image
-            src={`/images/techInfo/popUpHeader.png`}
+            src={`/images/techInfo/${popUpImage}`}
             alt="popUpHeader"
             width={1320}
             height={300}
@@ -48,7 +47,7 @@ export default function BensPopUp({
           <div className="absolute top-[30px] right-[30px]">
             <Button externalStyle="!py-2 !px-3" onClick={onClose}>
               <div className="flex justify-center items-center gap-1">
-                {t("Close")}
+                {translation.close}
                 <Image
                   src={`/images/close.svg`}
                   alt="close"

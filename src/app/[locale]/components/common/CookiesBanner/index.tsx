@@ -2,18 +2,22 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import { COOKIES_USER_CONSENT_FLAG } from "@/app/[locale]/utils/constants";
-import Image from "next/image";
-import { MouseEvent, useEffect, useState } from "react";
-import Cookies from "js-cookie";
-import { useParams } from "next/navigation";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { CookiesProps } from "@/app/[locale]/components/common/Footer/types";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { COOKIES_USER_CONSENT_FLAG } from "@/app/[locale]/utils/constants";
+import Cookies from "js-cookie";
+import Image from "next/image";
+import { useParams } from "next/navigation";
+import { MouseEvent, useEffect, useState } from "react";
 import { Trans } from "react-i18next";
 
-export default function CookiesBanner() {
+export default function CookiesBanner({
+  cookiesAttributes,
+}: {
+  cookiesAttributes: CookiesProps;
+}) {
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
 
   const [cookieConsentIsTrue, setCookieConsentIsTrue] = useState(true);
 
@@ -62,7 +66,7 @@ export default function CookiesBanner() {
           />
           <div className="flex [font-size:_clamp(10px,1.5vw,14px)] font-walsheim flex-col text-dark-gray-900">
             <p className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold font-sans mb-2 text-white">
-              {t("Cookies on AESolar")}
+              {cookiesAttributes.cookiesOnAESolar}
             </p>
             <p className="mb-2 [font-size:_clamp(10px,1.5vw,14px)] font-walsheim font-medium">
               <Trans
@@ -76,15 +80,15 @@ export default function CookiesBanner() {
                   ),
                 }}
               >
-                {t("We Use Cookies")}
+                {cookiesAttributes.cookiesDescription}
               </Trans>
             </p>
-            <p>{t("Cookies Choosing")}</p>
+            <p>{cookiesAttributes.cookieChoosing}</p>
           </div>
           <div className="flex md:flex-col flex-row font-semibold gap-6">
             <Button onClick={onAcceptClick} externalStyle="py-[9px] px-[26px]">
               <span className="whitespace-nowrap [font-size:_clamp(14px,1.5vw,20px)]">
-                {t("I accept")}
+                {cookiesAttributes.accept}
               </span>
             </Button>
             <Button
@@ -93,7 +97,7 @@ export default function CookiesBanner() {
               externalStyle="!px-0 !py-0"
             >
               <span className="whitespace-nowrap text-base-red [font-size:_clamp(14px,1.5vw,20px)]">
-                {t("I do not accept")}
+                {cookiesAttributes.doNotAccept}
               </span>
             </Button>
           </div>

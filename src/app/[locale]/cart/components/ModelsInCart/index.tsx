@@ -3,23 +3,20 @@
 import CartModelDetails from "@/app/[locale]/cart/components/ModelsInCart/CartModelDetails";
 import Button from "@/app/[locale]/components/common/Button";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 
 export default function ModelsInCart() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   const { modelsInBag, setModelsInBag } = useContext(ConstructorContext);
   const removeModel = (modelId: number | string) => {
     const remainingModels = modelsInBag.filter(({ id }) => id !== modelId);
     setModelsInBag(remainingModels);
     localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(remainingModels));
   };
+
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div className="flex pt-5 pb-10 flex-col gap-4">
@@ -57,7 +54,7 @@ export default function ModelsInCart() {
             </div>
             <Button onClick={() => removeModel(modelInBag.id)} style="textOnly">
               <span className="font-semibold [font-size:_clamp(11px,5vw,16px)] -tracking-[0.16px] text-base-red">
-                {t("Remove")}
+                {translation.remove}
               </span>
             </Button>
           </div>

@@ -1,14 +1,12 @@
 "use client";
 
 import Tier1 from "@/app/[locale]/components/common/Tier1";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams } from "next/navigation";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function CompanyTier1() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <Tier1
@@ -26,7 +24,7 @@ export default function CompanyTier1() {
             blue: <span className="text-[#038DF4]" />,
           }}
         >
-          {t("As a TIER 1 Company")}
+          {translation.asTIER1Company}
         </Trans>
       }
       descriptionText={
@@ -35,7 +33,7 @@ export default function CompanyTier1() {
             white: <span className="text-white" />,
           }}
         >
-          {t("We Synonymous")}
+          {translation.weSynonymous}
         </Trans>
       }
     />

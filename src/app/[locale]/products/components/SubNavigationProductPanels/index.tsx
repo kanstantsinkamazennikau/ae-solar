@@ -1,5 +1,4 @@
 import Button from "@/app/[locale]/components/common/Button";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
@@ -8,11 +7,14 @@ import { useParams, usePathname } from "next/navigation";
 
 export default function SubNavigationProductPanels({
   isShowAllProductsLink,
+  allModulesText,
+  chooseModuleText,
 }: {
   isShowAllProductsLink?: boolean;
+  allModulesText?: string;
+  chooseModuleText?: string;
 }) {
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const pathname = usePathname();
   const isProductsPage = ["/products", `/${locale}/products`].some((path) =>
     pathname.includes(path)
@@ -54,7 +56,7 @@ export default function SubNavigationProductPanels({
                 className="md:w-6 md:h-6 w-5 h-5"
               />
               <span className="font-normal group-hover/link:text-base-red transition-all duration-200">
-                {t("All Modules")}
+                {allModulesText}
               </span>
             </Link>
             <div className="w-[1px] h-[90%] bg-[#2D2D2D]" />
@@ -95,7 +97,7 @@ export default function SubNavigationProductPanels({
         {isProductsPage && (
           <Link href={"/catalogue"} className="max-[920px]:hidden">
             <Button externalStyle="!py-[10px] mx-auto relative z-10 [font-size:_clamp(14px,1vw,16px)]">
-              {t("Choose Your Module")}
+              {chooseModuleText}
             </Button>
           </Link>
         )}

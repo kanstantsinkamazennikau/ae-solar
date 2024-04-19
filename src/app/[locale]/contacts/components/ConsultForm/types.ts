@@ -3,6 +3,5 @@ export interface ConsultFormFileds {
   capacity: string;
   email: string;
   phone: string;
-  service: string;
   comment?: string;
 }

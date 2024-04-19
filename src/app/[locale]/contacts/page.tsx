@@ -1,33 +1,33 @@
-import GetInTouch from "@/app/[locale]/components/GetInTouch";
-import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
-import ContactsList from "@/app/[locale]/contacts/components/ContactsList";
-import {
-  CONTACTS_CONTACT_US,
-  CONTACTS_INFORMATION,
-} from "@/app/[locale]/contacts/constants";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import ClientContactsPage from "@/app/[locale]/contacts/ClientContactsPage";
+import I18nProvider from "@/app/[locale]/i18nProvider";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
+import getLocale from "@/app/[locale]/utils/getLocale";
 
-export default async function ContactsPage({
-  params: { locale },
-}: {
-  params: { locale: LocaleTypes };
-}) {
-  const { t } = await useServerTranslation(locale, "translation");
+const getTranslation = async () => {
+  const locale = getLocale();
+  const urlParamsObject = {
+    locale,
+  };
+  const pageTranslationApiPath = `/contacts`;
+  const commonPath = `/commons`;
+  const responseData = await Promise.all([
+    fetchAPI(pageTranslationApiPath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
+  ]);
+  return responseData;
+};
+
+export default async function ContactsPage() {
+  const [pageI18n, commonI18n] = await getTranslation();
 
   return (
-    <>
-      <HeadingWithBackground
-        tierOneHeading={t("Contact Us")}
-        tierTwoHeading={t("Information")}
-        backgroundImage="/images/contacts/contactsBackground.png"
-      />
-      <div className="flex w-full justify-center flex-col items-center mb-20">
-        <ContactsList />
-        <div className="w-full 2xl:-mb-60 lg:-mb-20 md:mb-10 md:mt-32 lg:mt-0 mt-10 min-[560px]:-mb-16 min-[560px]:-mt-10 -mb-20">
-          <GetInTouch />
-        </div>
-      </div>
-    </>
+    <I18nProvider
+      translate={{
+        ...pageI18n.data[0]?.attributes,
+        ...commonI18n.data[0]?.attributes,
+      }}
+    >
+      <ClientContactsPage />
+    </I18nProvider>
   );
 }

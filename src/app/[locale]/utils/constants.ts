@@ -30,31 +30,31 @@ export const FORMS_FIELDS = {
 export const HEADER_NAV_LINKS_ARRAY = [
   {
     url: "/company",
-    text: "Company",
+    text: "company",
     subMenu: [
-      { url: "/company/manufacturer", text: "Manufacturer" },
-      { url: "/company/news", text: "News" },
-      { url: "/company/faq", text: "FAQ" },
+      { url: "/company/manufacturer", text: "manufacturer" },
+      { url: "/company/news", text: "news" },
+      { url: "/company/faq", text: "faq" },
     ],
   },
   {
     url: "/products",
-    text: "Products",
+    text: "products",
     stickyProducts: true,
     subMenu: [
-      { url: "/products", text: "All Modules" },
+      { url: "/products", text: "allModules" },
       { url: "/products/Aurora", text: "Aurora" },
       { url: "/products/Meteor", text: "Meteor" },
       { url: "/products/Comet", text: "Comet" },
       { url: "/products/Terra", text: "Terra" },
       { url: "/products/ShadeStar", text: "ShadeStar" },
       { url: "/products/Neptune", text: "Neptune" },
-      { url: "/catalogue", text: "Choose Your Module" },
+      { url: "/catalogue", text: "chooseModule" },
     ],
   },
   {
     url: "/documents",
-    text: "Documents",
+    text: "documents",
   },
   // {
   //   url: "/catalogue",
@@ -62,7 +62,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
   // },
   {
     url: "/solutions",
-    text: "B2B Solutions",
+    text: "b2b",
   },
 ];
 export const HEADER_LANGUAGE = "Language";
@@ -78,10 +78,10 @@ export const HEADER_CALCULATE = "Calculate";
 
 //MAIN PAGE
 export const AWARDS_AND_STATS_STATS_WITH_DETAILS = [
-  { stat: "2003", details: "experience since", initialValue: "2023" },
+  { stat: "2003", details: "experience", initialValue: "2023" },
   {
     stat: "3200",
-    details: "successful PV installations",
+    details: "installations",
     initialValue: "3100",
     sign: "+",
   },
@@ -333,26 +333,31 @@ export const TECH_INFO_BENS = [
     title: "BensTitle1",
     description: "BensDescription1",
     image: "automation.svg",
+    popUpImage: "bens1.png",
   },
   {
     title: "BensTitle2",
     description: "BensDescription2",
     image: "manufacturer.png",
+    popUpImage: "bens2.png",
   },
   {
     title: "BensTitle3",
     description: "BensDescription3",
     image: "technologies.svg",
+    popUpImage: "bens3.png",
   },
   {
     title: "BensTitle4",
     description: "BensDescription4",
     image: "efficiency.svg",
+    popUpImage: "bens4.png",
   },
   {
     title: "BensTitle5",
     description: "BensDescription5",
     image: "materials.svg",
+    popUpImage: "bens5.png",
   },
 ];
 
@@ -378,39 +383,43 @@ export const FAQ_ACCORDION_DATA = [
 //FOOTER
 export const FOOTER_LINKS_ARRAY = [
   {
-    category: { title: "Products", link: "/products" },
-    links: [
-      { title: "Aurora", link: "/products/Aurora" },
-      { title: "Meteor", link: "/products/Meteor" },
-      { title: "Comet", link: "/products/Comet" },
-      { title: "Terra", link: "/products/Terra" },
-      { title: "ShadeStar", link: "/products/ShadeStar" },
-      { title: "Neptune", link: "/products/Neptune" },
+    text: "products",
+    url: "/products",
+    subMenu: [
+      { text: "Aurora", url: "/products/Aurora" },
+      { text: "Meteor", url: "/products/Meteor" },
+      { text: "Comet", url: "/products/Comet" },
+      { text: "Terra", url: "/products/Terra" },
+      { text: "ShadeStar", url: "/products/ShadeStar" },
+      { text: "Neptune", url: "/products/Neptune" },
     ],
   },
   {
-    category: { title: "About Us", link: "/company" },
-    links: [
-      { title: "Company", link: "/company" },
-      { title: "Manufacturer", link: "/company/manufacturer" },
-      { title: "B2B Solutions", link: "/solutions" },
-      { title: "Contacts", link: "/contacts" },
-      { title: "News", link: "/company/news" },
-      { title: "FAQ", link: "/company/faq" },
+    text: "aboutUs",
+    url: "/company",
+    subMenu: [
+      { text: "company", url: "/company" },
+      { text: "manufacturer", url: "/company/manufacturer" },
+      { text: "b2b", url: "/solutions" },
+      { text: "contacts", url: "/contacts" },
+      { text: "news", url: "/company/news" },
+      { text: "faq", url: "/company/faq" },
     ],
   },
   {
-    category: { title: "Legal Info", link: "/company/imprint" },
-    links: [
-      { title: "Imprint", link: "/company/imprint" },
-      { title: "Publisher's", link: "/company/publishers_info" },
+    text: "legalInfo",
+    url: "/company/imprint",
+    subMenu: [
+      { text: "imprint", url: "/company/imprint" },
+      { text: "publishers", url: "/company/publishers_info" },
     ],
   },
   {
-    category: { title: "Documents", link: "/documents" },
-    links: [
-      { title: "Datasheet", link: "/documents" },
-      { title: "Warranty", link: "/documents" },
+    text: "documents",
+    url: "/documents",
+    subMenu: [
+      { text: "datasheet", url: "/documents" },
+      { text: "warranty", url: "/documents" },
     ],
   },
 ];
@@ -444,9 +453,9 @@ export const FOOTER_CONTACT_INFO = [
   },
 ];
 export const POLICY_LINKS = [
-  { text: "PolicyLink1", link: "/company/publishers_info" },
-  { text: "PolicyLink2", link: "/company/publishers_info" },
-  { text: "PolicyLink3", link: "/company/imprint" },
+  { text: "policy", link: "/company/publishers_info" },
+  { text: "terms", link: "/company/publishers_info" },
+  { text: "legal", link: "/company/imprint" },
 ];
 
 export const CONSTRUCTOR_OPTION_LINES = [
@@ -901,40 +910,40 @@ export const CONSTRUCTOR_MODELS_ADVANTAGES = {
 };
 
 export const CART_CONSTRUCTOR_MODEL_TO_DETAILS_MAPPING = {
-  id: "Model",
-  solarCellTechnology: "Solar Cell Technology",
-  moduleSpecification: "Module Specifation",
-  moduleColor: "Module Color",
-  backCover: "Back Cover",
-  frameColor: "Frame Color",
-  moduleDimension: "Module Dimension",
-  powerRange: "Power Range",
-  applications: "Applications",
+  id: "cartModel",
+  solarCellTechnology: "solarCellTechnology",
+  moduleSpecification: "moduleSpecification",
+  moduleColor: "moduleColor",
+  backCover: "backCover",
+  frameColor: "frameColor",
+  moduleDimension: "moduleDimension",
+  powerRange: "powerRange",
+  applications: "applications",
 };
 export const CART_LOCALSTORAGE = "cart";
 
 export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
   {
-    formTitle: "My name is",
-    placeholder: "first and last",
+    formTitle: "myName",
+    placeholder: "myNamePlaceholder",
     name: "name",
     type: "input",
   },
   {
-    formTitle: "Please, contact me at",
-    placeholder: "your e-mail",
+    formTitle: "contactMe",
+    placeholder: "contactMePlaceholder",
     name: "email",
     type: "input",
   },
   {
-    formTitle: "My phone number",
-    placeholder: "phone number",
+    formTitle: "myPhone",
+    placeholder: "myPhonePlaceholder",
     name: "phone",
     type: "phone",
   },
   {
-    formTitle: "I have a",
-    placeholder: "comment or question, etc.",
+    formTitle: "comment",
+    placeholder: "commentPlaceholder",
     name: "comment",
     type: "textarea",
   },
@@ -942,37 +951,37 @@ export const CHECKOUT_FORM_FIELDS: FormFileds[] = [
 
 export const CONSULT_FORM_FIELDS: FormFileds[] = [
   {
-    formTitle: "My name is",
-    placeholder: "first and last",
+    formTitle: "myName",
+    placeholder: "myNamePlaceholder",
     name: "name",
     type: "input",
   },
   {
-    formTitle: "I’m interested in",
+    formTitle: "interestedIn",
     name: "interest",
     type: "picker",
   },
   {
-    formTitle: "Capacity",
-    placeholder: "kW",
+    formTitle: "capacity",
+    placeholder: "capacityPlaceholder",
     name: "capacity",
     type: "input",
   },
   {
-    formTitle: "Contact me at",
-    placeholder: "your e-mail",
+    formTitle: "contactMe",
+    placeholder: "contactMePlaceholder",
     name: "email",
     type: "input",
   },
   {
-    formTitle: "My phone number",
-    placeholder: "phone number",
+    formTitle: "myPhone",
+    placeholder: "myPhonePlaceholder",
     name: "phone",
     type: "phone",
   },
   {
-    formTitle: "I have a",
-    placeholder: "comment or question, etc.",
+    formTitle: "comment",
+    placeholder: "commentPlaceholder",
     name: "comment",
     type: "textarea",
   },
@@ -992,23 +1001,23 @@ export const PICKER_INPUT_VALUES = {
 export const ABOUT_MAP_DESIGNATIONS = [
   {
     icon: "germany.svg",
-    designation: "Headquater",
-    location: ["Königsbrunn,", "Germany"],
+    designation: "headquater",
+    location: ["konigsbrunn"],
   },
   {
     icon: "office.svg",
-    designation: "Branch office",
-    location: ["Georgia", "Brasil", "Colombia"],
+    designation: "branchOffice",
+    location: ["Georgia", "Brazil", "Colombia"],
   },
   {
     icon: "base.svg",
-    designation: "Production site",
+    designation: "productionSite",
     location: ["Turkey", "China"],
   },
   {
     icon: "distributor.svg",
-    designation: "Distributors",
-    location: ["All around the World"],
+    designation: "distributors",
+    location: ["aroundTheWorld"],
   },
 ];
 
@@ -1020,7 +1029,7 @@ export const DOCUMENTS_FILES: (
   | DocumentsTypesWithSubCategories
 )[] = [
   {
-    category: "Presentation",
+    category: "presentation",
     type: "Text",
     data: [
       {
@@ -1065,11 +1074,11 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    category: "Technical Data",
+    category: "technicalData",
     type: "SubCategories",
     subCategories: [
       {
-        category: "Datasheets",
+        category: "datasheets",
         type: "Text",
         data: [
           {
@@ -1210,7 +1219,7 @@ export const DOCUMENTS_FILES: (
         ],
       },
       {
-        category: "Installation Manual",
+        category: "installationManual",
         type: "Text",
         data: [
           {
@@ -1224,7 +1233,7 @@ export const DOCUMENTS_FILES: (
         ],
       },
       {
-        category: "NFC-chips",
+        category: "NFCChips",
         type: "Text",
         data: [
           {
@@ -1242,7 +1251,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    category: "Certificates",
+    category: "certificates",
     type: "Text",
     data: [
       {
@@ -1342,7 +1351,7 @@ export const DOCUMENTS_FILES: (
     ],
   },
   {
-    category: "Warranty",
+    category: "warranty",
     type: "Text",
     data: [
       {

@@ -45,22 +45,20 @@ export default function HeadingWithBackground({
         <div className="flex w-full justify-center absolute bottom-0">
           <BasicWidthContainer>
             <div className="flex flex-col gap-4">
-              <p
+              <div
                 className="
-                  [font-size:_clamp(40px,4vw,96px)]
+                  [font-size:_clamp(40px,6vw,96px)]
                   font-extrabold
                   leading-[100%]
-                  -tracking-[2.88]
                 "
               >
                 {tierOneHeading}
-              </p>
+              </div>
               <p
                 className="
                   [font-size:_clamp(32px,4vw,64px)]
                   font-medium
                   leading-[100%]
-                  -tracking-[1.92]
                   text-[#B30006]
                 "
               >

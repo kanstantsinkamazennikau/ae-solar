@@ -15,11 +15,11 @@ import {
 } from "@/app/[locale]/utils/constants";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 //@ts-ignore
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { Video } from "@splidejs/splide-extension-video";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import {
   useCallback,
   useContext,
@@ -36,11 +36,11 @@ export default function ProductIntroVideo() {
   const [isIOSDevice, setIsIOSDevice] = useState(false);
   const modelInfo = PRODUCT_INTRO_PANELS[model].info;
   const ref = useRef<HTMLDivElement | null>(null);
-  const locale = useParams()?.locale;
-  const { t } = useClientTranslation(locale, "translation");
   const router = useRouter();
   const sliderRef = useRef<Splide>(null);
   const sliderId = PRODUCT_INTRO_PANELS_IMAGES.indexOf(model);
+
+  const { translation } = useContext(i18nProviderContext);
 
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
@@ -124,7 +124,7 @@ export default function ProductIntroVideo() {
               red: <div className="text-base-red mb-6" />,
             }}
           >
-            {t("Home slider next level")}
+            {translation.sliderNextLevel}
           </Trans>
           <Image
             src={`/images/glowFull.png`}
@@ -178,9 +178,12 @@ export default function ProductIntroVideo() {
               text-center
             "
           >
-            {t(modelInfo.text)}
+            {translation[modelInfo.text]}
           </div>
-          <LinkWithArrow label={t("Learn more")} href={`/products/${model}`} />
+          <LinkWithArrow
+            label={translation.learnMore}
+            href={`/products/${model}`}
+          />
         </div>
         <div
           className="
@@ -229,7 +232,7 @@ export default function ProductIntroVideo() {
                   height={20}
                   className="inline relative -top-[1px]"
                 />
-                {t("Play Slider")}
+                {translation.playSlider}
               </span>
               <span className="splide__toggle__pause flex items-center gap-[2px]">
                 <Image
@@ -240,7 +243,7 @@ export default function ProductIntroVideo() {
                   height={20}
                   className="inline relative -top-[1px]"
                 />
-                {t("Pause Slider")}
+                {translation.pauseSlider}
               </span>
             </button>
             {/* </button> */}
@@ -355,10 +358,10 @@ export default function ProductIntroVideo() {
                 text-center
               "
             >
-              {t(modelInfo.text)}
+              {translation[modelInfo.text]}
             </div>
             <LinkWithArrow
-              label={t("Learn more")}
+              label={translation.learnMore}
               href={`/products/${model}`}
             />
           </div>
@@ -384,11 +387,16 @@ export default function ProductIntroVideo() {
       {/* {!sticky && ( */}
       {/* MOBILE NAVIGATION */}
       <div className="w-full z-30 bottom-0 left-0 md:hidden">
-        <SubNavigation isProductionIntroBlock />
+        <SubNavigation
+          isProductionIntroBlock
+          modulesText={translation.modules}
+        />
       </div>
       {/* )} */}
       <div ref={ref} />
-      <Button onClick={handleClick}>{t("Choose Your Module")}</Button>
+      <Button onClick={handleClick}>
+        {<span className="capitalize">{translation.chooseModule}</span>}
+      </Button>
     </div>
   );
 }

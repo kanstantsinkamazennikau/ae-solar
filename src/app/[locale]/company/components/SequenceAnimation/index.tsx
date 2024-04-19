@@ -2,14 +2,13 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { SEQUENCE_ANIMATION_TEXT } from "@/app/[locale]/utils/constants";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useParams } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import { Trans } from "react-i18next";
 
 const scrollTriggerPositionFromResolution = (
   isDesktop: boolean,
@@ -28,8 +27,6 @@ const frameIndex = { frame: 0 };
 const numFrames = 120;
 
 export default function SequenceAnimation({ width = 1158, height = 600 }) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [activeStepIndex, setActiveStepIndex] = useState(0);
@@ -38,6 +35,8 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
   const framesPerSection = Math.ceil(
     numFrames / SEQUENCE_ANIMATION_TEXT.length
   );
+
+  const { translation } = useContext(i18nProviderContext);
 
   const renderImage = useCallback(() => {
     if (!canvasRef.current) return;
@@ -155,10 +154,18 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
       <BasicWidthContainer styles="max-md:!px-0">
         <div id="canvas">
           <TwoTierHeading
-            tierOneHeading={t("The Hidden Layers")}
-            tierTwoHeading={t("A Closer Look at")}
+            tierOneHeading={
+              <Trans
+                components={{
+                  red: <p className="text-[#B30006]" />,
+                }}
+              >
+                {translation.hiddenLayers}
+              </Trans>
+            }
             align="right"
             externalStyle="z-10"
+            reverseColor
           />
           <div className="flex flex-col items-center">
             <div className="flex items-center lg:-mt-[56px] w-full justify-between">
@@ -206,7 +213,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                               font-medium
                             `}
                             >
-                              {t(title)}
+                              {translation[title]}
                             </div>
                           </div>
                           <div
@@ -219,7 +226,7 @@ export default function SequenceAnimation({ width = 1158, height = 600 }) {
                             text-dark-gray-900
                           `}
                           >
-                            {t(description)}
+                            {translation[description]}
                           </div>
                         </div>
                       );

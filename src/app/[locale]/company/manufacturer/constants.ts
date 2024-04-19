@@ -28,6 +28,9 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
         value: "ManufacturerArticle2",
       },
       {
+        type: "stats",
+      },
+      {
         type: "text",
         value: "ManufacturerArticle3",
       },
@@ -51,9 +54,32 @@ export const MANUFACTURER_ARTICLE: ManufacturerArticle[] = [
         value: "ManufacturerArticle4",
       },
       {
+        type: "stroke",
+        value: "manufacturerStrokeText",
+      },
+      {
         type: "text",
         value: "ManufacturerArticle5",
       },
     ],
+  },
+];
+
+export const MANUFACTURER_ARTICLE_STATS = [
+  {
+    title: "2003",
+    description: "manufacturerStat1",
+  },
+  {
+    title: "3200+",
+    description: "manufacturerStat2",
+  },
+  {
+    title: "100+",
+    description: "manufacturerStat3",
+  },
+  {
+    title: "TIER1",
+    description: "manufacturerStat4",
   },
 ];

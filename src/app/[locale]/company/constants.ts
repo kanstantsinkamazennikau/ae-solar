@@ -1,12 +1,12 @@
 export const ABOUT_EXPLORE_HEADER = [
-  `Solar Solutions for Everyone`,
-  `Quality Promise`,
-  `German Engineering`,
+  `solarSolutions`,
+  `qualityPromise`,
+  `germanEngineering`,
 ];
 export const ABOUT_EXPLORE_FOOTER = [
-  `Power of Innovation`,
-  `Unmatched Durability Meets Elegant Design`,
-  `Our Commitment to You`,
+  `powerOfInnovation`,
+  `unmatchedDurability`,
+  `ourCommitment`,
 ];
 
 export const ABOUT_HISTORY = [

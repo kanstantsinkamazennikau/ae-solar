@@ -1,29 +1,18 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import Button from "@/app/[locale]/components/common/Button";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { ProductNavigationProps } from "@/app/[locale]/products/[id]/components/ProductNavigation/types";
-import {
-  PRODUCT_NAVIGATION,
-  PRODUCT_OVERVIEW,
-} from "@/app/[locale]/products/[id]/constants";
-import {
-  CONSTRUCTOR_CONFIGURE,
-  CONSTRUCTOR_CONFIGURE_MODULE,
-} from "@/app/[locale]/utils/constants";
+import { PRODUCT_NAVIGATION } from "@/app/[locale]/products/[id]/constants";
 import Image from "next/image";
-import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 export default function ProductNavigation({ id }: ProductNavigationProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const contentHeight = useRef<HTMLDivElement>(null);
   const [isOpenItem, setIsOpenItem] = useState(false);
   const [height, setHeight] = useState<number | undefined>(undefined);
+
+  const { translation } = useContext(i18nProviderContext);
 
   const onClick = () => {
     setIsOpenItem(!isOpenItem);
@@ -88,7 +77,9 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
               </div>
               {/* DESKTOP NAVIGATION */}
               <div className="md:flex hidden gap-4 [font-size:_clamp(12px,1vw,14px)] font-normal leading-[100%]">
-                <div className="text-dark-gray-900">{t("Overview")}:</div>
+                <div className="text-dark-gray-900">
+                  {translation.overview}:
+                </div>
                 {PRODUCT_NAVIGATION.map(({ title, link, position }) => {
                   const onClick = () => {
                     document.getElementById(link)!.scrollIntoView({
@@ -102,28 +93,12 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
                       onClick={onClick}
                       className="cursor-pointer"
                     >
-                      {t(title)}
+                      {translation[title]}
                     </div>
                   );
                 })}
               </div>
             </div>
-            {/* <Link href="/calculate">
-              <Button
-                size="extrasmall"
-                style="outline"
-                externalStyle="max-md:!py-2"
-              >
-                <div className="flex justify-center items-center gap-[6px] [font-size:_clamp(14px,1vw,14px)]">
-                  <span className="-tracking-[0.14px] font-semibold leading-[100%] md:block hidden">
-                    {CONSTRUCTOR_CONFIGURE_MODULE}
-                  </span>
-                  <span className="-tracking-[0.14px] font-semibold leading-[100%]  block md:hidden">
-                    {CONSTRUCTOR_CONFIGURE}
-                  </span>
-                </div>
-              </Button>
-            </Link> */}
           </div>
         </BasicWidthContainer>
         {/* MOBILE NAVIGATION*/}
@@ -147,7 +122,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
       >
         <div className="flex flex-col md:hidden [font-size:_clamp(14px,1vw,14px)] font-normal leading-[100%] p-4 w-full">
           <div className="text-dark-gray-900 py-4 pl-6  border-solid border-b border-option-border">
-            {t("Overview")}
+            {translation.overview}
           </div>
           {PRODUCT_NAVIGATION.map(({ title, link, position }) => {
             const onClick = () => {
@@ -163,7 +138,7 @@ export default function ProductNavigation({ id }: ProductNavigationProps) {
                 onClick={onClick}
                 className="cursor-pointer py-4 border-solid border-b border-option-border pl-6 last-of-type:border-0"
               >
-                {t(title)}
+                {translation[title]}
               </div>
             );
           })}

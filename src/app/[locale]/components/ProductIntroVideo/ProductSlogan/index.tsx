@@ -2,19 +2,17 @@
 
 import { ProductSloganProps } from "@/app/[locale]/components/ProductIntroVideo/ProductSlogan/types";
 import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { PRODUCT_INTRO_PANELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 const SloganWithIntersection = ({ model }: ProductSloganProps) => {
   const modelAdvantages = PRODUCT_INTRO_PANELS[model].advantages;
   const [stopIntersecting, setStopIntersecting] = useState(false);
   const { ref, intersecting } = useIntersection();
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div className="overflow-hidden" ref={ref}>
@@ -48,10 +46,10 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
 
           <div>
             <div className="leading-[130%] font-semibold [font-size:_clamp(16px,1.5vw,20px)]">
-              {t(title)}
+              {translation[title]}
             </div>
             <div className="text-lg leading-[120%] font-medium font-walsheim text-dark-gray-900 [font-size:_clamp(12px,1.5vw,16px)]">
-              {t(description)}
+              {translation[description]}
             </div>
             {/* <div className="bg-white opacity-20 h-0.5 mt-3 md:hidden block" /> */}
           </div>
@@ -62,8 +60,6 @@ const SloganWithIntersection = ({ model }: ProductSloganProps) => {
 };
 
 export default function ProductSlogan({ model }: ProductSloganProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
   const [showDetails, setShowDetails] = useState(false);
   const onClose = () => {
     setShowDetails(false);
@@ -72,6 +68,8 @@ export default function ProductSlogan({ model }: ProductSloganProps) {
   const onOpen = () => {
     setShowDetails(true);
   };
+
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <>
@@ -148,7 +146,7 @@ export default function ProductSlogan({ model }: ProductSloganProps) {
           `}
           onClick={onOpen}
         >
-          <p>{t("Detailed Info")}</p>
+          <p className="capitalize">{translation.detailedInfo}</p>
           <Image
             className="-rotate-90"
             alt="arrow"

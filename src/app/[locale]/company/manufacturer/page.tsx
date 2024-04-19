@@ -6,10 +6,34 @@ import SaveTheWorld from "@/app/[locale]/company/manufacturer/components/SaveThe
 import FeaturedProducts from "@/app/[locale]/components/TechInfo/FeaturedProducts";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
+import I18nProvider from "@/app/[locale]/i18nProvider";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
+import getLocale from "@/app/[locale]/utils/getLocale";
 
-export default function ManufacturerPage() {
+const getTranslation = async () => {
+  const locale = getLocale();
+  const urlParamsObject = {
+    locale,
+  };
+  const pageTranslationApiPath = `/manufacturers`;
+  const commonPath = `/commons`;
+  const responseData = await Promise.all([
+    fetchAPI(pageTranslationApiPath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
+  ]);
+  return responseData;
+};
+
+export default async function ManufacturerPage() {
+  const [pageI18n, commonI18n] = await getTranslation();
+
   return (
-    <>
+    <I18nProvider
+      translate={{
+        ...pageI18n.data[0]?.attributes,
+        ...commonI18n.data[0]?.attributes,
+      }}
+    >
       <ManufacturerHeader />
       <div className="flex w-full justify-center flex-col items-center mb-20">
         <BasicWidthContainer>
@@ -76,6 +100,6 @@ export default function ManufacturerPage() {
           </div>
         </BasicWidthContainer>
       </div>
-    </>
+    </I18nProvider>
   );
 }

@@ -58,6 +58,10 @@
   }
 }
 
+.manufacturer_stroke {
+  text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
+}
+
 .blog_post_content p {
   margin-bottom: 15px;
   line-height: 150%;

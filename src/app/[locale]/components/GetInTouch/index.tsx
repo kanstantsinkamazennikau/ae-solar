@@ -3,10 +3,9 @@
 import { GetInTuchProps } from "@/app/[locale]/components/GetInTouch/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { useRouter } from "next/navigation";
+import { useContext, useEffect, useState } from "react";
 
 const matchPartnerTypeWithArticle = {
   partner: "a partner",
@@ -24,8 +23,7 @@ export default function GetInTouch({
   bgContainer,
   contentContainer,
 }: GetInTuchProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const [clientType, setClientType] =
     useState<keyof typeof matchPartnerTypeWithArticle>("partner");
@@ -144,7 +142,7 @@ export default function GetInTouch({
                   }
                 >
                   <span className="[font-size:_clamp(10px,2vw,24px)] leading-[0.9] capitalize">
-                    {t(type)}
+                    {translation[type]}
                   </span>
                 </button>
                 <div className="w-1 h-5 bg-base-red" />
@@ -158,20 +156,21 @@ export default function GetInTouch({
             <div className="flex flex-col xl:gap-[40px] lg:gap-[30px] md:gap-[20px] gap-[16px] items-center text-center self-stretch z-10">
               <>
                 <div className="[font-size:_clamp(14px,5vw,64px)] leading-none text-base-red md:-tracking-[1.92px] tracking-normal font-medium">
-                  {t("Fueling growth together")}
+                  {translation.fuelingGrowth}
                 </div>
                 <div className="flex flex-col justify-center items-center [font-size:_clamp(26px,5vw,86px)] md:leading-none -tracking-[-2.88px] font-extrabold max-w-[1100px] leading-[120%]">
                   <div className="md:whitespace-nowrap overflow-y-hidden">
-                    <span>{t("Become")}</span>
+                    <span>{translation.become}</span>
                     <br className="max-md:block hidden" />
                     <span
-                      className="relative animate-partnerTransition transition-all"
+                      className="relative animate-partnerTransition transition-all before:content-['_'] after:content-['_']"
                       key={clientType}
                     >
-                      {t(clientType + "WithArticle")}
+                      {translation[clientType + "WithArticle"] ||
+                        translation[clientType]}
                     </span>
                   </div>
-                  <p>{t("In our solar vision")}</p>
+                  <p>{translation.inOurVision}</p>
                 </div>
               </>
             </div>
@@ -189,16 +188,18 @@ export default function GetInTouch({
           >
             <span className="overflow-hidden">
               <span className="[font-size:_clamp(12px,1.5vw,16px)]">
-                {t("Become")}
+                {translation.become}
               </span>
               <span
                 className={`
                   [font-size:_clamp(12px,1.5vw,16px)]
+                  before:content-['_']
                   relative
                   ${children ? "animate-partnerTransition" : ""}`}
                 key={clientType}
               >
-                {t(clientType + "WithArticle")}
+                {translation[clientType + "WithArticle"] ||
+                  translation[clientType]}
               </span>
             </span>
           </Button>

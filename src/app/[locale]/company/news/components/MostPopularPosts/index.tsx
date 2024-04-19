@@ -1,14 +1,11 @@
 import { StrapiBlogsWithPagination } from "@/app/[locale]/company/news/components/BlogPostsList/types";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
-import getLocale from "@/app/[locale]/utils/getLocale";
 import Link from "next/link";
 
 const getMostPopularPosts = async () => {
   try {
     const path = `/blogs`;
     const urlParamsObject = {
-      // locale: "de",
       sort: { views: "desc" },
       populate: {
         tag: {
@@ -30,9 +27,11 @@ const getMostPopularPosts = async () => {
   }
 };
 
-export default async function MostPopularPosts() {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+export default async function MostPopularPosts({
+  heading,
+}: {
+  heading: string;
+}) {
   const theMostPopularPosts = await getMostPopularPosts();
 
   return (
@@ -52,7 +51,7 @@ export default async function MostPopularPosts() {
         "
       >
         <div className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold mb-4">
-          {t("Most Popular")}
+          {heading}
         </div>
         {theMostPopularPosts.data.map(({ id, attributes: { title, tag } }) => (
           <Link

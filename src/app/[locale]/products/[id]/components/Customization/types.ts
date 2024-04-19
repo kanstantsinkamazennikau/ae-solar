@@ -19,3 +19,14 @@ export type ProductBentofoxes = {
     }[];
   };
 };
+
+export interface BentoboxesLongDescription {
+  __component: "module.bento-long-description";
+  title: string;
+  description: "Customize your power solution with tailored materials and power options, ensuring precise alignment with your specific needs and preferences.";
+}
+
+export interface BentoboxesShortDescription {
+  __component: "module.bento-short-description";
+  shortDescription: string;
+}

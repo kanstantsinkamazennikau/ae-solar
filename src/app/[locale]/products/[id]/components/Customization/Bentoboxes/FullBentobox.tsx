@@ -1,8 +1,6 @@
 "use client";
 
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams } from "next/navigation";
+import { Trans } from "react-i18next";
 
 export default function FullBentobox({
   imageUrl,
@@ -18,9 +16,6 @@ export default function FullBentobox({
   };
   gridArea?: string;
 }) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   return (
     <div
       className="
@@ -52,42 +47,26 @@ export default function FullBentobox({
       {longDescription && (
         <div className="flex flex-col gap-5 self-start">
           <div>
-            {t(longDescription.title)
-              .split(/\r?\n|\r|\n/g)
-              .map((string) => (
-                <div
-                  className="[font-size:_clamp(24px,2.5vw,48px)] font-semibold md:-tracking-[1.44px] leading-[110%] capitalize"
-                  key={string}
-                >
-                  {string}
-                </div>
-              ))}
+            {longDescription.title && (
+              <div className="[font-size:_clamp(24px,2.5vw,48px)] font-semibold md:-tracking-[1.44px] leading-[110%] capitalize">
+                <Trans>{longDescription.title}</Trans>
+              </div>
+            )}
           </div>
           <div>
-            {t(longDescription.description || "")
-              ?.split(/\r?\n|\r|\n/g)
-              .map((string) => (
-                <div
-                  className="[font-size:_clamp(14px,1.5vw,20px)] font-normal font-walsheim leading-[150%] text-dark-gray-900"
-                  key={string}
-                >
-                  {string}
-                </div>
-              ))}
+            {longDescription.description && (
+              <div className="[font-size:_clamp(14px,1.5vw,20px)] font-normal font-walsheim leading-[150%] text-dark-gray-900">
+                {longDescription.description}
+              </div>
+            )}
           </div>
         </div>
       )}
-      {shortDescription &&
-        t(shortDescription)
-          .split(/\r?\n|\r|\n/g)
-          .map((string) => (
-            <div
-              className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] capitalize"
-              key={string}
-            >
-              {string}
-            </div>
-          ))}
+      {shortDescription && (
+        <div className="[font-size:_clamp(16px,1.5vw,24px)] font-semibold md:-tracking-[0.96px] capitalize text-center">
+          <Trans>{shortDescription}</Trans>
+        </div>
+      )}
     </div>
   );
 }

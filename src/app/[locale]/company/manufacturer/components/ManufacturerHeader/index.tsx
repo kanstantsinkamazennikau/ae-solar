@@ -1,11 +1,14 @@
+"use client";
+
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
+import { useContext } from "react";
 
-export default async function ManufacturerHeader() {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+export default function ManufacturerHeader() {
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <>
@@ -51,7 +54,7 @@ export default async function ManufacturerHeader() {
                   -tracking-[0.36px]
                 "
               >
-                {t("Welcome to AESolar")}
+                {translation.welcome}
               </p>
               <hr className="h-[1px] bg-white border-none w-full" />
               <p
@@ -62,7 +65,7 @@ export default async function ManufacturerHeader() {
                   md:-tracking-[4.08px]
                 "
               >
-                {t("Harnessing the Sun, Empowering the World")}
+                {translation.harnessingTheSun}
               </p>
             </div>
           </BasicWidthContainer>

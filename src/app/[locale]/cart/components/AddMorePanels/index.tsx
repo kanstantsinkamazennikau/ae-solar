@@ -2,14 +2,15 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
+import { useContext } from "react";
 
 export default function AddMorePanels() {
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
   const router = useRouter();
 
   const handleClick = () => {
@@ -28,7 +29,7 @@ export default function AddMorePanels() {
         />
         <Button onClick={handleClick} style="transparent" size="thin">
           <span className="font-semibold text-sm -tracking-[0.2px] leading-none">
-            {t("Add one more panel")}
+            {translation.addMorePanels}
           </span>
         </Button>
       </div>

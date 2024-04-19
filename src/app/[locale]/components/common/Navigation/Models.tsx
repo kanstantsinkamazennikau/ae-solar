@@ -3,7 +3,6 @@
 import Button from "@/app/[locale]/components/common/Button";
 import { ModelsProps } from "@/app/[locale]/components/common/Navigation/types";
 import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
@@ -14,11 +13,12 @@ import { useContext } from "react";
 export default function Models({
   isLink,
   isProductionIntroBlock = false,
+  chooseYourModuleText,
+  modulesText,
 }: ModelsProps) {
   const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
   const { setModel, model } = useContext(ModelContext);
-  const { t } = useClientTranslation(locale, "translation");
 
   const handleClick = () => {
     router.push(`/catalogue`);
@@ -32,7 +32,7 @@ export default function Models({
     >
       {isProductionIntroBlock && (
         <div className="font-normal [font-size:_clamp(12px,1vw,14px)] leading-normal text-dark-gray-600 -tracking-[0.14px]">
-          {t("Modules")}
+          {modulesText}
         </div>
       )}
       <div className="flex justify-center items-center gap-2 xl:gap-11 md:gap-5">
@@ -94,7 +94,7 @@ export default function Models({
       {isLink && (
         <Button onClick={handleClick} size="extrasmall" style="outline">
           <span className="font-semibold text-sm leading-[120%] [font-size:_clamp(14px,1vw,16px)]">
-            {t("Choose Your Module")}
+            {chooseYourModuleText}
           </span>
         </Button>
       )}

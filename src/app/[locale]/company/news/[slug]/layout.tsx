@@ -1,8 +1,8 @@
 import { MetadataResponse } from "@/app/[locale]/company/news/[slug]/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
+import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 import Image from "next/image";
 
 export async function generateMetadata({
@@ -10,11 +10,9 @@ export async function generateMetadata({
 }: {
   params: { slug: string; locale: LocaleTypes };
 }) {
-  const { t } = await serverTranslation(locale, "translation");
-  const defaultTitle = `AE-Solar | ${t("News")}`;
-  const defaultDescription = `AE-Solar | ${t("Read About Us")} ${t(
-    "On the Media"
-  )}`;
+  const metadata = await getOpengraphMetadata(locale);
+  const defaultTitle = `AE-Solar | ${metadata?.metadataTitleNews}`;
+  const defaultDescription = `AE-Solar | ${metadata?.metadataDescriptionNews}`;
 
   try {
     const path = `/blogs`;

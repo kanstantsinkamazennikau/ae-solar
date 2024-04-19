@@ -21,23 +21,25 @@ import {
 } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { PRODUCT_CONCLUSION_TABLE_BODY } from "@/app/[locale]/products/[id]/constants";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { PanelsListPrettyfiedResponse } from "@/app/[locale]/products/[id]/types";
 import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import { useParams, useSearchParams } from "next/navigation";
 import { useContext, useEffect, useMemo, useState } from "react";
 import { toast } from "react-toastify";
 
-export default function CataloguePanelsList() {
-  const modelsListModelsKeys = useMemo(
-    () => Object.keys(PRODUCT_CONCLUSION_TABLE_BODY) as Model[],
-    []
-  );
+export default function CataloguePanelsList({
+  panelsList,
+}: {
+  panelsList: PanelsListPrettyfiedResponse[] | null;
+}) {
   const searchParams = useSearchParams();
   const params = useMemo(
     () => new URLSearchParams(searchParams),
     [searchParams]
   );
+  const { translation } = useContext(i18nProviderContext);
   const sortOrder = params.get(SORT_ORDER) || CATALOGUE_SORT_VALUES[0].value;
   const itemsPerPage = params.get(PER_PAGE) || CATALOGUE_SHOW_VALUES[0].value;
   const page = params.get(PAGE) || 1;
@@ -57,8 +59,6 @@ export default function CataloguePanelsList() {
     any[]
   >([]);
   const [allModels, setAllModels] = useState<any[]>([]);
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
 
   useEffect(() => {
     if (isFilterModels || isResetFilter) {
@@ -86,55 +86,43 @@ export default function CataloguePanelsList() {
         ["powerRange", powerRange],
       ]);
 
-      const sortedModulesByOrder = modelsListModelsKeys
-        .map((modelKey) => PRODUCT_CONCLUSION_TABLE_BODY[modelKey].modules)
-        .flat(1)
-        .filter((item) => {
-          if (isResetFilter) return true;
-          return Object.keys(searchParamsObjectWithValues).every((key) => {
-            if (["length", "width", "height"].includes(key)) {
-              return (
-                +item.moduleDimension[
-                  key as keyof typeof item.moduleDimension
-                ] >= +searchParamsObjectWithValues[key][0]
-              );
-            }
-
-            if (key === "powerRange") {
-              const [paramsLowerPowerValue, paramsUpperPowerValue] =
-                searchParamsObjectWithValues[key].split("-");
-              const [moduleLowerPowerValue, moduleUpperPowerValue] =
-                item[key].split("-");
-
-              return (
-                +moduleLowerPowerValue >= +paramsLowerPowerValue &&
-                +moduleUpperPowerValue <= +paramsUpperPowerValue
-              );
-            }
-
-            if (key === "applications") {
-              return item[key].some((application: string) =>
-                searchParamsObjectWithValues[key].includes(
-                  application.toLowerCase()
-                )
-              );
-            }
-
-            if (key === "model") {
-              return item[key]
-                .toLocaleLowerCase()
-                .includes(searchParamsObjectWithValues[key][0]);
-            }
-
-            return searchParamsObjectWithValues[key].includes(
-              (item[key as keyof typeof item] as string).toLowerCase()
+      const sortedModulesByOrder = panelsList?.filter((item) => {
+        if (isResetFilter) return true;
+        return Object.keys(searchParamsObjectWithValues).every((key) => {
+          if (["length", "width", "height"].includes(key)) {
+            return (
+              +item.moduleDimension[key as keyof typeof item.moduleDimension] >=
+              +searchParamsObjectWithValues[key][0]
             );
-          });
+          }
+
+          if (key === "powerRange") {
+            const [paramsLowerPowerValue, paramsUpperPowerValue] =
+              searchParamsObjectWithValues[key].split("-");
+            const [moduleLowerPowerValue, moduleUpperPowerValue] =
+              item[key].split("-");
+
+            return (
+              +moduleLowerPowerValue >= +paramsLowerPowerValue &&
+              +moduleUpperPowerValue <= +paramsUpperPowerValue
+            );
+          }
+
+          if (key === "model") {
+            return item[key]
+              .toLocaleLowerCase()
+              .includes(searchParamsObjectWithValues[key][0]);
+          }
+
+          return searchParamsObjectWithValues[key].includes(
+            (item[key as keyof typeof item] as string).toLowerCase()
+          );
         });
-      setAllModels(sortedModulesByOrder);
+      });
+      setAllModels(sortedModulesByOrder || []);
       setKeepFiltering(false);
     }
-  }, [isFilterModels, isResetFilter, modelsListModelsKeys, searchParams]);
+  }, [isFilterModels, isResetFilter, panelsList, searchParams]);
 
   useEffect(() => {
     if (keepFiltering) return;
@@ -198,7 +186,7 @@ export default function CataloguePanelsList() {
       width: string;
       height: string;
     },
-    applications: Applications[],
+    applications: Applications,
     powerRange: string,
     backCover: string,
     techName?: Model
@@ -226,7 +214,7 @@ export default function CataloguePanelsList() {
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
       return modelsInBag;
     });
-    toast.success(t("Successfully added to bag"));
+    toast.success(translation.successfullyAdded);
   };
 
   const removeModel = (model: string) => {
@@ -302,7 +290,7 @@ export default function CataloguePanelsList() {
                             moduleColor,
                             frameColor,
                             moduleDimension,
-                            applications as Applications[],
+                            applications as Applications,
                             powerRange,
                             backCover,
                             techName as Model
@@ -338,7 +326,7 @@ export default function CataloguePanelsList() {
                             font-semibold
                           `}
                       >
-                        {t(!isAlreadyInBag ? "Add" : "Added")}
+                        {translation[!isAlreadyInBag ? "add" : "added"]}
                       </p>
                     </div>
                   </Button>
@@ -387,7 +375,7 @@ export default function CataloguePanelsList() {
                                 moduleColor,
                                 frameColor,
                                 moduleDimension,
-                                applications as Applications[],
+                                applications as Applications,
                                 powerRange,
                                 backCover,
                                 techName as Model
@@ -423,7 +411,7 @@ export default function CataloguePanelsList() {
                             font-semibold
                           `}
                           >
-                            {t(!isAlreadyInBag ? "Add" : "Added")}
+                            {translation[!isAlreadyInBag ? "add" : "added"]}
                           </p>
                         </div>
                       </Button>

@@ -1,14 +1,12 @@
 "use client";
 
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function PerfectlyAlignedOptions() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <>
@@ -18,7 +16,7 @@ export default function PerfectlyAlignedOptions() {
             red: <span className="text-[#B30006]" />,
           }}
         >
-          {t("Perfectly Aligned Options")}
+          {translation.perfectlyAlignedOptions}
         </Trans>
       </div>
       <Image

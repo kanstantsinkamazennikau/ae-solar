@@ -5,6 +5,8 @@ import { SubNavigationProps } from "@/app/[locale]/components/common/Navigation/
 export default function SubNavigation({
   isLink,
   isProductionIntroBlock = false,
+  chooseYourModuleText,
+  modulesText,
 }: SubNavigationProps) {
   return (
     <div
@@ -24,7 +26,14 @@ export default function SubNavigation({
       `}
     >
       <BasicWidthContainer>
-        <Models {...{ isLink, isProductionIntroBlock }} />
+        <Models
+          {...{
+            isLink,
+            isProductionIntroBlock,
+            chooseYourModuleText,
+            modulesText,
+          }}
+        />
       </BasicWidthContainer>
     </div>
   );

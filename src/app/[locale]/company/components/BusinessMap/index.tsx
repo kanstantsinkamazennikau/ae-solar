@@ -1,21 +1,19 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import LightBoxImage from "@/app/[locale]/components/common/LightBoxImage";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { ABOUT_MAP_DESIGNATIONS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Trans } from "react-i18next";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
-import LightBoxImage from "@/app/[locale]/components/common/LightBoxImage";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams } from "next/navigation";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 
 export default function BusinessMap() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
   const [open, setOpen] = useState(false);
 
   return (
@@ -38,8 +36,8 @@ export default function BusinessMap() {
           "
         >
           <TwoTierHeading
-            tierOneHeading={t("Business Map")}
-            tierTwoHeading={t("Where Our Power Is")}
+            tierOneHeading={translation.businessMap}
+            tierTwoHeading={translation.whereOurPowerIs}
             externalStyle="[font-size:_clamp(32px,6vw,96px)!important] md:!text-right !text-left"
             reverseColor
           />
@@ -120,14 +118,14 @@ export default function BusinessMap() {
                   />
                   <div className="font-walsheim text-sm leading-none">
                     <div className="font-bold md:mb-2 mb-3">
-                      {t(designation)}
+                      {translation[designation]}
                     </div>
                     {location.map((locationZone) => (
                       <div
                         className="font-normal mt-1 font-walsheim"
                         key={locationZone}
                       >
-                        {t(locationZone)}
+                        <Trans>{translation[locationZone]}</Trans>
                       </div>
                     ))}
                   </div>

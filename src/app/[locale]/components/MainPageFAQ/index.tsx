@@ -6,16 +6,17 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import DownloadPresentation from "@/app/[locale]/components/common/DownloadPresentation";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { FAQ_ACCORDION_DATA } from "@/app/[locale]/utils/constants";
 import { useParams, useRouter } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export function MainPageFAQ() {
   const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const handleClick = () => {
     router.push(`/${locale}/company/faq`);
@@ -24,8 +25,8 @@ export function MainPageFAQ() {
   return (
     <BasicWidthContainer>
       <TwoTierHeading
-        tierOneHeading={t("Got a Question")}
-        tierTwoHeading={t("We have solutions")}
+        tierOneHeading={translation.faqQuestion}
+        tierTwoHeading={translation.faqSolution}
         align="left"
         size="small"
         externalStyle="[&>*:last-child]:!font-medium"
@@ -73,7 +74,7 @@ export function MainPageFAQ() {
                 bold: <span className="text-dark-gray-900 font-bold" />,
               }}
             >
-              {t("German Brand")}
+              {translation.germanBrand}
             </Trans>
             <hr className="mt-6 border-[#131313] min-[920px]:hidden" />
           </div>
@@ -84,12 +85,12 @@ export function MainPageFAQ() {
             {FAQ_ACCORDION_DATA.map((item) => (
               <AccordionItem
                 key={item.question}
-                title={t(item.question)}
+                title={translation[item.question]}
                 openCloseStyle
                 dropdownIcon="/images/selectorWhite.svg"
               >
                 <p className="leading-[150%] pb-6 [font-size:_clamp(14px,1.5vw,24px)] font-walsheim pl-6">
-                  {t(item.answer)}
+                  {translation[item.answer]}
                 </p>
               </AccordionItem>
             ))}
@@ -97,7 +98,7 @@ export function MainPageFAQ() {
           <div className="mt-[60px] flex min-[920px]:justify-start justify-center">
             <Button onClick={handleClick} style="outline" showArrow>
               <span className="[font-size:_clamp(14px,1.5vw,24px)] -tracking-[0.24px] font-semibold">
-                {t("More solutions")}
+                {translation.moreSolutions}
               </span>
             </Button>
           </div>

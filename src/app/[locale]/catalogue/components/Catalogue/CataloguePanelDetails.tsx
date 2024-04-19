@@ -1,10 +1,10 @@
 "use client";
 
 import { CataloguePanelDetailsProps } from "@/app/[locale]/catalogue/components/Catalogue/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useContext } from "react";
+import { Trans } from "react-i18next";
 
 export default function CataloguePanelDetails({
   cellType,
@@ -15,19 +15,18 @@ export default function CataloguePanelDetails({
   moduleDimension,
   powerRange,
 }: CataloguePanelDetailsProps) {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const paramsMapping = [
-    { value: cellType, paramName: "Cell type" },
-    { value: moduleDesign, paramName: "Module design" },
-    { value: moduleColor, paramName: "Module color", withColorImage: true },
-    { value: frameColor, paramName: "Frame color", withColorImage: true },
+    { value: cellType, paramName: "cellType" },
+    { value: moduleDesign, paramName: "moduleDesign" },
+    { value: moduleColor, paramName: "moduleColor", withColorImage: true },
+    { value: frameColor, paramName: "frameColor", withColorImage: true },
     {
       value: `${moduleDimension.length} x ${moduleDimension.width} x ${moduleDimension.height}`,
-      paramName: "Dimension",
+      paramName: "dimension",
     },
-    { value: powerRange, paramName: "Power range, W" },
+    { value: powerRange, paramName: "powerRangeW" },
   ];
 
   return (
@@ -50,11 +49,17 @@ export default function CataloguePanelDetails({
             {withColorImage ? (
               <>
                 <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-                  {t(paramName)}
+                  <Trans
+                    components={{
+                      br: <span />,
+                    }}
+                  >
+                    {translation[paramName]}
+                  </Trans>
                 </p>
                 <div className="flex gap-1 items-center">
-                  <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%]">
-                    {t(value)}
+                  <p className="[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%] capitalize">
+                    {translation[value.toLowerCase()]}
                   </p>
                   <Image
                     src={`/images/option/${value.toLowerCase()}.svg`}
@@ -68,14 +73,22 @@ export default function CataloguePanelDetails({
             ) : (
               <>
                 <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-                  {t(paramName)}
-                  {paramName === "Dimension" && (
-                    <span className="lowercase">, mm</span>
+                  <Trans
+                    components={{
+                      br: <span />,
+                    }}
+                  >
+                    {translation[paramName]}
+                  </Trans>
+                  {paramName === "dimension" && (
+                    <span className="lowercase">
+                      , {translation.measureUnitsMM}
+                    </span>
                   )}
                 </p>
                 <p
                   className={`[font-size:_clamp(12px,1.5vw,14px)] font-normal leading-[90%] ${
-                    paramName === "Dimension" ? "lowercase" : ""
+                    paramName === "dimension" ? "lowercase" : ""
                   }`}
                 >
                   {value}
@@ -84,9 +97,11 @@ export default function CataloguePanelDetails({
             )}
           </div>
         ))}
-        {links?.map(({ link, tooltip }) => (
-          <div
-            className="
+        {links
+          ?.filter(({ tooltip }) => tooltip.toLowerCase() === "datasheet")
+          ?.map(({ link, tooltip }) => (
+            <div
+              className="
               grid
               grid-cols-[120px_auto]
               gap-x-4
@@ -96,30 +111,34 @@ export default function CataloguePanelDetails({
               border-[#ffffff26]
               items-center
             "
-            key={tooltip}
-          >
-            <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%]">
-              {t(tooltip)}
-            </p>
-            <a href={link} target="_blank" className="flex gap-1 leading-[90%]">
-              <span
-                className="
+              key={tooltip}
+            >
+              <p className="[font-size:_clamp(12px,1.5vw,14px)] font-medium text-[#505050] leading-[90%] capitalize">
+                {translation[tooltip.toLowerCase()]}
+              </p>
+              <a
+                href={link}
+                target="_blank"
+                className="flex gap-1 leading-[90%]"
+              >
+                <span
+                  className="
                   [font-size:_clamp(12px,1.5vw,14px)]
                   text-[#F60109]
                 "
-              >
-                {t("Download")}
-              </span>
-              <Image
-                src={"/images/downloadArrow.svg"}
-                alt={"downloadArrowRed"}
-                priority
-                width={12}
-                height={12}
-              />
-            </a>
-          </div>
-        ))}
+                >
+                  {translation.download}
+                </span>
+                <Image
+                  src={"/images/downloadArrow.svg"}
+                  alt={"downloadArrowRed"}
+                  priority
+                  width={12}
+                  height={12}
+                />
+              </a>
+            </div>
+          ))}
       </div>
     </div>
   );

@@ -6,16 +6,17 @@ import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
 import { Model } from "@/app/[locale]/context/constructorContext";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Panel from "@/app/[locale]/products/components/PanelsList/Panel";
 import { PRODUCT_INTRO_PANELS_IMAGES } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function PanelsList() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -35,7 +36,7 @@ export default function PanelsList() {
               red: <p className="text-[#B30006]" />,
             }}
           >
-            {t("Time To Choose")}
+            {translation.timeToChoose}
           </Trans>
         }
         align="center"
@@ -58,7 +59,7 @@ export default function PanelsList() {
         </div>
         <Link href={"/catalogue"}>
           <Button externalStyle="!py-[14px] mx-auto relative z-10">
-            {t("Choose Your Module")}
+            {translation.chooseModule}
           </Button>
         </Link>
       </BasicWidthContainer>

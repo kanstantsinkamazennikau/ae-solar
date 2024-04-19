@@ -72,6 +72,8 @@ export default function ExploreOurDifference() {
               <DifferenceRow key={header} rowText={header} index={index} />
             ))}
           </div>
+
+          {/* MOBILE */}
           <div className="mb-4 md:hidden"></div>
           <div className="relative md:block hidden">
             <Image

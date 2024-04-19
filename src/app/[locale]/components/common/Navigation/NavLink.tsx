@@ -17,14 +17,14 @@ export default function NavLink({
   onLinkClick,
   stickyProducts,
   isProductsPage,
+  headerAttributes,
 }: NavLinkProps) {
   const path = usePathname();
   const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
 
   return (
     <li className="group min-[920px]:flex justify-center relative">
-      {!subMenu && (
+      {!subMenu?.length && (
         <Link
           href={`/${locale}${url}`}
           className={`
@@ -43,10 +43,10 @@ export default function NavLink({
           `}
           onClick={onLinkClick}
         >
-          {t(text)}
+          {headerAttributes?.[text] || text}
         </Link>
       )}
-      {subMenu && (
+      {!!subMenu?.length && (
         <>
           <Link
             href={`/${locale}${url}`}
@@ -67,7 +67,7 @@ export default function NavLink({
             `}
             onClick={onLinkClick}
           >
-            {t(text)}
+            {headerAttributes?.[text] || text}
             <Image
               src="/images/navMenuTriangle.svg"
               alt="navMenuTriangle"
@@ -95,19 +95,30 @@ export default function NavLink({
           </Link>
           {!stickyProducts ? (
             <div className="absolute hidden group-hover:min-[920px]:block hover:min-[920px]:block z-20 top-[calc(100%-2px)]">
-              <SubMenuItems subMenuArray={subMenu} />
+              <SubMenuItems
+                subMenuArray={subMenu}
+                headerAttributes={headerAttributes}
+              />
             </div>
           ) : (
             !isProductsPage && (
               <div className="w-full fixed hidden group-hover:min-[920px]:block hover:min-[920px]:block pt-[27px] top-[52px] left-1/2 -translate-x-1/2">
-                <SubNavigationProductPanels isShowAllProductsLink />
+                <SubNavigationProductPanels
+                  isShowAllProductsLink
+                  allModulesText={headerAttributes?.allModules}
+                  chooseModuleText={headerAttributes?.chooseModule}
+                />
               </div>
             )
           )}
 
           {/* MOBILE SUBMENU ON HEADING CLICK */}
           <div className="min-[920px]:hidden">
-            <SubMenuItems subMenuArray={subMenu} onLinkClick={onLinkClick} />
+            <SubMenuItems
+              subMenuArray={subMenu}
+              onLinkClick={onLinkClick}
+              headerAttributes={headerAttributes}
+            />
           </div>
         </>
       )}

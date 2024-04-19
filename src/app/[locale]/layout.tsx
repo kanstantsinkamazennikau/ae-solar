@@ -1,22 +1,25 @@
-import type { Metadata } from "next";
 import "./globals.css";
 
-import Footer from "@/app/[locale]/components/common/Footer";
-import localFont from "next/font/local";
-import Navigation from "@/app/[locale]/components/common/Navigation";
-import { LocaleTypes, locales } from "@/app/[locale]/i18n/settings";
-import { notFound } from "next/navigation";
-import ModelProvider from "@/app/[locale]/context/modelContext";
-import StickyNavigationProvider from "@/app/[locale]/context/stickyNavigationContext";
-import ConstructorProvider from "@/app/[locale]/context/constructorContext";
-import ToastContainerProvider from "@/app/[locale]/context/toastProvider";
-import "react-toastify/dist/ReactToastify.css";
 import Cookies from "@/app/[locale]/components/common/CookiesBanner";
-import { headers } from "next/headers";
-import ProductsContextProvider from "@/app/[locale]/context/productsContext";
+import Footer from "@/app/[locale]/components/common/Footer";
+import Navigation from "@/app/[locale]/components/common/Navigation";
+import ConstructorProvider from "@/app/[locale]/context/constructorContext";
 import MainPageVideoContextProvider from "@/app/[locale]/context/mainPageVideoContext";
-import { useServerTranslation as serverTranslation } from "@/app/[locale]/i18n/server";
 import MobileSideMenuProvider from "@/app/[locale]/context/mobileSideMenuContext";
+import ModelProvider from "@/app/[locale]/context/modelContext";
+import ProductsContextProvider from "@/app/[locale]/context/productsContext";
+import StickyNavigationProvider from "@/app/[locale]/context/stickyNavigationContext";
+import ToastContainerProvider from "@/app/[locale]/context/toastProvider";
+import { LocaleTypes, locales } from "@/app/[locale]/i18n/settings";
+import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
+import getLocale from "@/app/[locale]/utils/getLocale";
+import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
+import localFont from "next/font/local";
+import { headers } from "next/headers";
+import { notFound } from "next/navigation";
+import "react-toastify/dist/ReactToastify.css";
+
+export const revalidate = 3600;
 
 const walsheim = localFont({
   src: [
@@ -120,12 +123,12 @@ export async function generateMetadata({
 }: {
   params: { locale: LocaleTypes };
 }) {
-  const { t } = await serverTranslation(locale, "translation");
+  const metadata = await getOpengraphMetadata(locale);
 
   return {
     title: "AE-Solar",
-    description: t("MetadataDescriptionHome"),
-    keywords: [],
+    description: metadata?.metadataDescriptionMainPage,
+    keywords: metadata?.metadataKeywordsMainPage,
     metadataBase: new URL(
       `${
         process.env.NODE_ENV === "development"
@@ -135,13 +138,29 @@ export async function generateMetadata({
     ),
     openGraph: {
       title: "AE-Solar",
-      description: t("MetadataDescriptionHome"),
+      description: metadata?.metadataDescriptionMainPage,
       type: "website",
     },
   };
 }
 
-export default function RootLayout({
+const getLayoutData = async () => {
+  const locale = getLocale();
+  const urlParamsObject = {
+    locale,
+  };
+  const footerPath = `/footers`;
+  const cookiesPath = `/cookies`;
+  const commonPath = `/commons`;
+  const responseData = await Promise.all([
+    fetchAPI(footerPath, urlParamsObject),
+    fetchAPI(cookiesPath, urlParamsObject),
+    fetchAPI(commonPath, urlParamsObject),
+  ]);
+  return responseData;
+};
+
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
@@ -149,34 +168,33 @@ export default function RootLayout({
   params: { locale: LocaleTypes };
 }) {
   if (!locales.includes(locale as any)) notFound();
-  const url = headers().get("x-url")!.split("/");
+  const [navigationData, cookiesData] = await getLayoutData();
+
+  const navigationAttributes = navigationData.data[0]?.attributes;
+  const cookiesAttributes = cookiesData.data[0]?.attributes;
 
   return (
     <html lang={locale}>
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
-        {url.includes("outstatic") ? (
-          children
-        ) : (
-          <>
-            <ToastContainerProvider />
-            <ModelProvider>
-              <MobileSideMenuProvider>
-                <ConstructorProvider>
-                  <ProductsContextProvider>
-                    <MainPageVideoContextProvider>
-                      <StickyNavigationProvider>
-                        <Navigation />
-                        {children}
-                        <Footer />
-                        <Cookies />
-                      </StickyNavigationProvider>
-                    </MainPageVideoContextProvider>
-                  </ProductsContextProvider>
-                </ConstructorProvider>
-              </MobileSideMenuProvider>
-            </ModelProvider>
-          </>
-        )}
+        <>
+          <ToastContainerProvider />
+          <ModelProvider>
+            <MobileSideMenuProvider>
+              <ConstructorProvider>
+                <ProductsContextProvider>
+                  <MainPageVideoContextProvider>
+                    <StickyNavigationProvider>
+                      <Navigation headerAttributes={navigationAttributes} />
+                      {children}
+                      <Footer footerAttributes={navigationAttributes} />
+                      <Cookies cookiesAttributes={cookiesAttributes} />
+                    </StickyNavigationProvider>
+                  </MainPageVideoContextProvider>
+                </ProductsContextProvider>
+              </ConstructorProvider>
+            </MobileSideMenuProvider>
+          </ModelProvider>
+        </>
       </body>
     </html>
   );

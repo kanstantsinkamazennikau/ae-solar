@@ -3,6 +3,7 @@
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { PanelProps } from "@/app/[locale]/products/components/PanelsList/types";
 import {
   PRODUCT_DESCRIPTIONS,
@@ -12,7 +13,7 @@ import { isIOS } from "@/app/[locale]/utils/isIOS";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { useLayoutEffect, useState } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
 const PanelVideo = dynamic(() => import("./PanelVideo"), {
   ssr: false,
 });
@@ -21,9 +22,7 @@ export default function Panel({ panel }: PanelProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isIOSDevice, setIsIOSDevice] = useState(false);
-
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
@@ -140,10 +139,10 @@ export default function Panel({ panel }: PanelProps) {
               text-center
             "
           >
-            {t(PRODUCT_SLOGAN[panel])}
+            {translation[PRODUCT_SLOGAN[panel]]}
           </p>
           <div
-            dynamic-description={t(PRODUCT_DESCRIPTIONS[panel])}
+            dynamic-description={translation[PRODUCT_DESCRIPTIONS[panel]]}
             className={`
               group-hover:after:content-[attr(dynamic-description)]
               [font-size:_clamp(12px,1.5vw,16px)]
@@ -158,7 +157,10 @@ export default function Panel({ panel }: PanelProps) {
             `}
           />
         </div>
-        <LinkWithArrow label={t("Learn more")} href={`/products/${panel}`} />
+        <LinkWithArrow
+          label={translation.learnMore}
+          href={`/products/${panel}`}
+        />
       </div>
     </div>
   );

@@ -4,8 +4,13 @@ import CatalogueSort from "@/app/[locale]/catalogue/components/Catalogue/Catalog
 import Filters from "@/app/[locale]/catalogue/components/Catalogue/Filters";
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
+import { PanelsListPrettyfiedResponse } from "@/app/[locale]/products/[id]/types";
 
-export default function Catalogue() {
+export default function Catalogue({
+  panelsList,
+}: {
+  panelsList: PanelsListPrettyfiedResponse[] | null;
+}) {
   return (
     <div
       className="flex flex-col justify-center items-center scroll-mt-[84px]"
@@ -17,7 +22,7 @@ export default function Catalogue() {
             <CatalogueSearchBar />
             <CatalogueSort />
             <hr className="bg-[#191919] h-[1px] border-none w-full mb-10" />
-            <CataloguePanelsList />
+            <CataloguePanelsList panelsList={panelsList} />
           </div>
           <Filters />
         </div>

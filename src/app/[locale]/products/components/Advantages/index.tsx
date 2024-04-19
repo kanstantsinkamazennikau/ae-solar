@@ -3,17 +3,15 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Tier1 from "@/app/[locale]/components/common/Tier1";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import PanelsList from "@/app/[locale]/products/components/PanelsList";
 import { PRODUCT_ADVANTAGES } from "@/app/[locale]/products/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function Advantages() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -29,7 +27,7 @@ export default function Advantages() {
               red: <span className="text-[#F60109]" />,
             }}
           >
-            {t("Welcome to AESolar Tier1")}
+            {translation.productsWelcome}
           </Trans>
         }
         descriptionText={
@@ -38,7 +36,7 @@ export default function Advantages() {
               white: <span className="text-white" />,
             }}
           >
-            {t("Where transform")}
+            {translation.productsWelcomeWeTransform}
           </Trans>
         }
         externalStyle="border-t-0 md:mt-0 !py-0"
@@ -52,7 +50,7 @@ export default function Advantages() {
                 red: <span className="text-[#B30006]" />,
               }}
             >
-              {t("The Benefits")}
+              {translation.theBenefits}
             </Trans>
           }
           align="center"
@@ -140,11 +138,7 @@ export default function Advantages() {
                   z-10
                 "
               >
-                {t(title)
-                  .split(/\r?\n|\r|\n/g)
-                  .map((string) => (
-                    <div key={string}>{string}</div>
-                  ))}
+                <Trans>{translation[title]}</Trans>
               </div>
               <div
                 className="
@@ -157,7 +151,7 @@ export default function Advantages() {
                   z-10
                 "
               >
-                {t(description)}
+                {translation[description]}
               </div>
             </div>
           ))}

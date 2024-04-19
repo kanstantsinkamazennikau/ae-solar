@@ -3,14 +3,14 @@
 import Logo from "@/app/[locale]/components/common/Logo";
 import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { SOLUTIONS_STATS_WITH_DETAILS } from "@/app/[locale]/solutions/constants";
 import { useParams } from "next/navigation";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Trans } from "react-i18next";
 
 export default function CooperationStats() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -42,7 +42,7 @@ export default function CooperationStats() {
         <div className="flex flex-col w-fit relative z-10">
           <Logo />
           <p className="text-base-red text-[10px] text-right">
-            {t("Save the World")}
+            {translation.logoSlogan}
           </p>
         </div>
         <div className="[font-size:_clamp(14px,1.5vw,16px)] max-md:text-center font-normal leading-[130%] font-walsheim">
@@ -51,7 +51,7 @@ export default function CooperationStats() {
               bold: <span className="font-bold" />,
             }}
           >
-            {t("German Brand")}
+            {translation.germanBrand}
           </Trans>
         </div>
       </div>
@@ -68,8 +68,8 @@ export default function CooperationStats() {
           w-full
         "
       >
-        <p className="[font-size:_clamp(20px,2.5vw,36px)] font-semibold leading-[110%] mb-8 max-md:text-center">
-          {t("We’re TIER 1 Company")}
+        <p className="[font-size:_clamp(20px,2.5vw,36px)] font-semibold leading-[110%] mb-8 max-md:text-center text-[#B30006]">
+          {translation.tierCompany}
         </p>
         <div
           className="
@@ -89,8 +89,17 @@ export default function CooperationStats() {
                 <p className="[font-size:_clamp(26px,2.5vw,48px)] font-semibold leading-[100%] -tracking-[1.44px]">
                   {stat}
                 </p>
-                <p className="[font-size:_clamp(14px,1.5vw,20px)] font-normal font-walsheim leading-[110%] max-md:text-center">
-                  {t(details)}
+                <p
+                  className="
+                    [font-size:_clamp(14px,1.5vw,20px)]
+                    font-normal
+                    font-walsheim
+                    leading-[110%]
+                    max-md:text-center
+                    text-[#505050]
+                  "
+                >
+                  {translation[details]}
                 </p>
               </div>
               <div className="w-0.5 bg-[#131313] mx-4 h-auto last:hidden" />

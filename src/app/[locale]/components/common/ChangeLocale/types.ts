@@ -1,3 +1,4 @@
+import { MobileNavigationProps } from "@/app/[locale]/components/common/Navigation/types";
 import { Dispatch, RefObject, SetStateAction } from "react";
 
 export interface SelectedLanguageProps {
@@ -6,13 +7,16 @@ export interface SelectedLanguageProps {
   externalStyle?: string;
   dropdownRef: RefObject<HTMLDivElement>;
   mobileNavigation?: boolean;
+  languageText?: string;
 }
 
 export interface FlagsListProps {
   handleSelection: (locale: string) => void;
   mobileNavigation?: boolean;
+  chooseLanguageText?: string;
 }
 
 export interface ChangeLocaleProps {
   mobileNavigation?: boolean;
+  mobileNavigationLanguageSelectorText?: MobileNavigationProps;
 }

@@ -1,27 +1,19 @@
 import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import DesktopTableRow from "@/app/[locale]/products/[id]/components/Conclusion/DesktopTableRow";
 import MobileTable from "@/app/[locale]/products/[id]/components/Conclusion/MobileTable";
 import { ConclusionProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
-import {
-  PRODUCT_CONCLUSION_TABLE_BODY,
-  PRODUCT_CONCLUSION_TABLE_HEADERS,
-} from "@/app/[locale]/products/[id]/constants";
+import { PRODUCT_CONCLUSION_TABLE_HEADERS } from "@/app/[locale]/products/[id]/constants";
 import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
 import { toast } from "react-toastify";
 
-export default function ModulesTable({ id }: ConclusionProps) {
-  const { modules } = PRODUCT_CONCLUSION_TABLE_BODY[id];
+export default function ModulesTable({ id, panelsList }: ConclusionProps) {
   const { setModelsInBag, modelsInBag } = useContext(ConstructorContext);
-
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const addModelToBag = (
     model: string,
@@ -34,7 +26,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
       width: string;
       height: string;
     },
-    applications: Applications[],
+    applications: Applications,
     powerRange: string,
     backCover: string
   ) => {
@@ -61,7 +53,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
       return modelsInBag;
     });
-    toast.success(t("Successfully added to bag"));
+    toast.success(translation.successfullyAdded);
   };
 
   const removeModel = (model: string) => {
@@ -87,7 +79,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                 red: <span className="text-[#B30006]" />,
               }}
             >
-              {t("Choose Your Ideal Product")}
+              {translation.chooseIdealProduct}
             </Trans>
           </div>
 
@@ -128,27 +120,22 @@ export default function ModulesTable({ id }: ConclusionProps) {
                     items-start
                   "
                   >
-                    {t(header)
-                      .split(/\r?\n|\r|\n/g)
-                      .map((string) => (
-                        <div
-                          key={string}
-                          className={`
-                            text-center
-                            [font-size:_clamp(12px,1.5vw,14px)]
-                            font-medium
-                            leading-[100%]
-                          `}
-                        >
-                          {string}
-                        </div>
-                      ))}
+                    <div
+                      className={`
+                        [font-size:_clamp(12px,1.5vw,14px)]
+                        font-medium
+                        text-start
+                        leading-[100%]
+                      `}
+                    >
+                      <Trans>{translation[header]}</Trans>
+                    </div>
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody className="contents">
-              {modules.map(
+              {panelsList?.map(
                 ({
                   model,
                   cellType,
@@ -172,7 +159,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                       moduleDesign,
                       powerRange,
                       moduleDimension,
-                      applications,
+                      applications: applications as Applications,
                       backCover,
                       addModelToBag,
                       removeModel,
@@ -186,7 +173,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
 
         {/* MOBILE */}
         <div className="grid min-[920px]:grid-cols-3 min-[640px]:grid-cols-2 grid-cols-1 gap-4 lg:hidden justify-center">
-          {modules.map(
+          {panelsList?.map(
             ({
               model,
               cellType,
@@ -210,7 +197,7 @@ export default function ModulesTable({ id }: ConclusionProps) {
                   moduleDesign,
                   powerRange,
                   moduleDimension,
-                  applications,
+                  applications: applications as Applications,
                   backCover,
                   addModelToBag,
                   removeModel,

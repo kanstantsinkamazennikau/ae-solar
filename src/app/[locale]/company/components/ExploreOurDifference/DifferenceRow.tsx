@@ -1,17 +1,15 @@
+"use client";
+
 import { DifferenceRowProps } from "@/app/[locale]/company/components/ExploreOurDifference/types";
 import {
   ABOUT_EXPLORE_FOOTER,
   ABOUT_EXPLORE_HEADER,
 } from "@/app/[locale]/company/constants";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
-import getLocale from "@/app/[locale]/utils/getLocale";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { useContext } from "react";
 
-export default async function DifferenceRow({
-  rowText,
-  index,
-}: DifferenceRowProps) {
-  const locale = getLocale();
-  const { t } = await useServerTranslation(locale, "translation");
+export default function DifferenceRow({ rowText, index }: DifferenceRowProps) {
+  const { translation } = useContext(i18nProviderContext);
 
   const formatNumber = (number: number) => {
     return String(number).padStart(2, "0");
@@ -81,7 +79,7 @@ export default async function DifferenceRow({
           leading-[120%]
         "
       >
-        <div className="md:block hidden">{t(rowText)}</div>
+        <div className="md:block hidden">{translation[rowText]}</div>
 
         {/* MOBILE */}
         <div className="md:hidden leading-[100%] font-walsheim font-bold h-5 text-dark-gray-900 flex">
@@ -95,7 +93,7 @@ export default async function DifferenceRow({
             )}
           </div>
         </div>
-        <p className="md:hidden block">{t(rowText)}</p>
+        <p className="md:hidden block">{translation[rowText]}</p>
       </div>
     </div>
   );

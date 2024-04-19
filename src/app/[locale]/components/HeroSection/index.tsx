@@ -1,24 +1,24 @@
 "use client";
 
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
+import parse from "html-react-parser";
+import { useClientTranslation } from "@/app/[locale]/i18n/client";
 
 const HeroSectionVideo = dynamic(() => import("./HeroSectionVideo"), {
   ssr: false,
 });
 
 export default function HeroSection() {
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
-
   const { isStartAnimation, isLongVideoLoadingTime } =
     useContext(MainPageVideoContext);
+  useClientTranslation("", "");
+
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[70vh] overflow-x-hidden overflow-hidden">
@@ -59,7 +59,7 @@ export default function HeroSection() {
               ),
             }}
           >
-            {t("Home Tier1")}
+            {translation.heroSection}
           </Trans>
         </div>
       </div>
@@ -87,7 +87,7 @@ export default function HeroSection() {
           }
         `}
       >
-        <span>{t("Scroll to the future")}</span>
+        <span>{translation.scroll}</span>
         <Image
           src="/images/arrowFuture.svg"
           alt="arrow"

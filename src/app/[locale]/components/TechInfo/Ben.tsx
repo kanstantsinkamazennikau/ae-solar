@@ -3,23 +3,20 @@
 import BensPopUp from "@/app/[locale]/components/TechInfo/BensPopUp";
 import { BenProps } from "@/app/[locale]/components/TechInfo/types";
 import Button from "@/app/[locale]/components/common/Button";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export default function Ben({
   title,
   description,
   image,
   isFullHeightRow,
+  popUpImage,
 }: BenProps) {
   const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
   const [isShowPopUp, setShowPopUp] = useState(false);
-
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   const showPopUp = () => {
     setShowPopUp(true);
@@ -41,8 +38,9 @@ export default function Ben({
       {isShowPopUp && (
         <BensPopUp
           onClose={hidePopUp}
-          title={t(title)}
-          fullDescription={t(description)}
+          title={translation[title]}
+          fullDescription={translation[description]}
+          popUpImage={popUpImage}
         />
       )}
       <div
@@ -136,7 +134,7 @@ export default function Ben({
                 : "min-[500px]:[word-spacing:normal] [font-size:_clamp(14px,2.5vw,32px)]"
             }`}
           >
-            {t(title)}
+            {translation[title]}
           </div>
           <div
             className={`
@@ -151,7 +149,8 @@ export default function Ben({
           `}
           >
             {/* {description} */}
-            {t(description).split(" ").slice(0, 14).join(" ") + "..."}
+            {translation[description]?.split(" ").slice(0, 14).join(" ") +
+              "..."}
           </div>
 
           <div
@@ -169,9 +168,9 @@ export default function Ben({
             <div className="flex justify-center items-center gap-2 cursor-pointer">
               <Button style="textOnly" externalStyle="!p-0">
                 <div
-                  className={`text-base-red [font-size:_clamp(14px,1vw,16px)]`}
+                  className={`text-base-red [font-size:_clamp(14px,1vw,16px)] capitalize`}
                 >
-                  {t("Read More")}
+                  {translation.readMore}
                 </div>
                 <Image
                   src="/images/techInfo/expand.svg"

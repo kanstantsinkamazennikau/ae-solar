@@ -2,20 +2,17 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useLayoutEffect, useState } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
 import { Trans } from "react-i18next";
 
 export default function PortfolioBackground() {
   const { videoRef } = useVideoIntersection();
   const [isIOSDevice, setIsIOSDevice] = useState(false);
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
@@ -92,7 +89,7 @@ export default function PortfolioBackground() {
                   text-base-red
                 "
               >
-                {t("Our portfolio")}
+                {translation.ourPortfolio}
               </p>
               <p
                 className="
@@ -105,7 +102,7 @@ export default function PortfolioBackground() {
                   -tracking-[1.08px]
                 "
               >
-                {t("Goes beyond")}
+                {translation.goesBeyond}
               </p>
             </div>
 
@@ -124,14 +121,14 @@ export default function PortfolioBackground() {
                   white: <span className="text-white font-bold" />,
                 }}
               >
-                {t("We innovate")}
+                {translation.weInnovative}
               </Trans>
             </p>
           </div>
           <Link href="/products">
             <Button externalStyle="max-[768px]:!py-4 !py-[14px] !px-[26]">
-              <span className="[font-size:_clamp(20px,1.5vw,20px)] font-semibold -tracking-[0.2px]">
-                {t("All Products")}
+              <span className="[font-size:_clamp(20px,1.5vw,20px)] font-semibold -tracking-[0.2px] capitalize">
+                {translation.allProducts}
               </span>
             </Button>
           </Link>

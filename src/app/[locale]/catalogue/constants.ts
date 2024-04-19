@@ -2,32 +2,32 @@ export const TECHNOLOGIES_LIST = [
   {
     technology: "P type PERC",
     placeToSearch: "cellType",
-    title: "PERc Technology",
+    title: "PERcTechnology",
   },
   {
     technology: "N type HJT",
     placeToSearch: "cellType",
-    title: "HJT Technology",
+    title: "HJTTechnology",
   },
   {
     technology: "N type TOPCon",
     placeToSearch: "cellType",
-    title: "TOPCon Technology",
+    title: "TOPConTechnology",
   },
   {
     technology: "Snow Resistant",
     placeToSearch: "applications",
-    title: "Wind/Snow Resistant Technology",
+    title: "windSnowResistant",
   },
   {
     technology: "PV-Thermal",
     placeToSearch: "applications",
-    title: "PV-Thermal Technology",
+    title: "PVThermalTechnology",
   },
   {
     technology: "Shade Resistant",
     placeToSearch: "applications",
-    title: "Shade Resistant Technology",
+    title: "ShadeResistantTechnology",
   },
 ];
 
@@ -110,14 +110,14 @@ export const CUSTOMIZE_FRAME_COLOR = [
 ];
 
 export const CATALOGUE_SORT_VALUES = [
-  { label: "from high to low", value: "powerDESC" },
-  { label: "from low to high", value: "powerASC" },
+  { label: "fromHighToLow", value: "powerDESC" },
+  { label: "fromLowToHigh", value: "powerASC" },
 ];
 
 export const CATALOGUE_SHOW_VALUES = [
   { label: "10", value: "10" },
   { label: "20", value: "20" },
-  { label: "All", value: "all" },
+  { label: "all", value: "all" },
 ];
 
 export const SORT_ORDER = "sortOrder";

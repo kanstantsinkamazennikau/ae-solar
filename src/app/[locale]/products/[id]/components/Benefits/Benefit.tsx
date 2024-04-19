@@ -1,12 +1,10 @@
 "use client";
 
 import { useIntersection } from "@/app/[locale]/hooks/useIntersection";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { BenefitProps } from "@/app/[locale]/products/[id]/components/Benefits/types";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 export default function Benefit({
   benefitTitle,
@@ -15,8 +13,7 @@ export default function Benefit({
 }: BenefitProps) {
   const [stopIntersecting, setStopIntersecting] = useState(false);
   const { ref, intersecting } = useIntersection(0.35);
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
 
   return (
     <div
@@ -84,14 +81,14 @@ export default function Benefit({
             w-full
           "
         >
-          {t(benefitTitle)}
+          {translation[benefitTitle]}
         </div>
       </div>
 
       <div className="flex flex-col items-start lg:gap-6 md:gap-3 gap-2">
         <p
           className="
-            [font-size:_clamp(12px,1.5vw,20px)]
+            [font-size:_clamp(13px,1.5vw,20px)]
             font-normal
             leading-[150%]
             font-walsheim
@@ -99,7 +96,7 @@ export default function Benefit({
             w-full
           "
         >
-          {t(benefitDescription)}
+          {translation[benefitDescription]}
         </p>
       </div>
     </div>

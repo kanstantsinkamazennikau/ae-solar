@@ -1,10 +1,8 @@
 "use client";
 
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams, usePathname, useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 export default function ModuleDimensions() {
@@ -13,8 +11,8 @@ export default function ModuleDimensions() {
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const params = new URLSearchParams(searchParams);
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
+
   const [dimensions, setDimensions] = useState({
     length: params.get("length") || "",
     width: params.get("width") || "",
@@ -44,11 +42,9 @@ export default function ModuleDimensions() {
 
   return (
     <div>
-      <div className="[font-size:_clamp(14px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
-        {t("Module Dimension")}{" "}
-        <span className="lowercase font-normal text-dark-gray-900">{`(${t(
-          "From"
-        )})`}</span>
+      <div className="[font-size:_clamp(14px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 font-walsheim capitalize">
+        {translation.moduleDimension}
+        <span className="lowercase font-normal text-dark-gray-900">{` (${translation.from})`}</span>
       </div>
       <div className="flex gap-1">
         {dimensionsFields.map((field) => {
@@ -84,7 +80,7 @@ export default function ModuleDimensions() {
                 }}
               />
               <span className="text-sm font-walsheim leading-[1.2] font-normal text-dark-gray-900">
-                {t(field)}
+                {translation[field]}
               </span>
             </div>
           );

@@ -5,10 +5,8 @@ import {
   POWER_RANGE_TO,
 } from "@/app/[locale]/catalogue/constants";
 import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
-import { useParams, usePathname, useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 export default function PowerRange() {
@@ -17,8 +15,7 @@ export default function PowerRange() {
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const params = new URLSearchParams(searchParams);
-  const locale = useParams()?.locale as LocaleTypes;
-  const { t } = useClientTranslation(locale, "translation");
+  const { translation } = useContext(i18nProviderContext);
   const [powerRange, setPowerRange] = useState({
     from: params.get(POWER_RANGE_FROM) || "",
     to: params.get(POWER_RANGE_TO) || "",
@@ -42,12 +39,20 @@ export default function PowerRange() {
     }
   }, [isResetFilter]);
 
+  useEffect(() => {
+    if (powerRange.from && powerRange.to) {
+      powerRange.from > powerRange.to
+        ? setError(translation.minimumValueError)
+        : setError("");
+    }
+  }, [powerRange.from, powerRange.to, setError, translation.minimumValueError]);
+
   const powerRangeRenderFields = ["from", "to"];
 
   return (
     <div>
       <div className="[font-size:_clamp(14px,2vw,16px)] font-medium -tracking-[0.4px] mb-2 capitalize font-walsheim">
-        {t("Power Range")}
+        {translation.powerRange}
       </div>
       <div className="flex gap-1">
         {powerRangeRenderFields.map((field) => {
@@ -86,18 +91,16 @@ export default function PowerRange() {
                     );
                   }
                 }}
-                onBlur={() => {
-                  if (powerRange.from && powerRange.to) {
-                    powerRange.from > powerRange.to
-                      ? setError(
-                          "The minimum value is greater than the maximum value"
-                        )
-                      : setError("");
-                  }
-                }}
+                // onBlur={() => {
+                //   if (powerRange.from && powerRange.to) {
+                //     powerRange.from > powerRange.to
+                //       ? setError(translation.minimumValueError)
+                //       : setError("");
+                //   }
+                // }}
               />
               <span className="text-sm font-walsheim leading-[1.2] font-normal text-dark-gray-900">
-                {isFromField ? t("From") : t("Up to")}
+                {isFromField ? translation.from : translation.upTo}
               </span>
             </div>
           );

@@ -3,28 +3,38 @@ import { ProductBentofoxes } from "@/app/[locale]/products/[id]/components/Custo
 
 export const PRODUCT_NAVIGATION = [
   {
-    title: "Introduction",
+    title: "introduction",
     link: "introduction",
     position: "start",
   },
   {
-    title: "Benefits",
+    title: "benefits",
     link: "benefits",
     position: "start",
   },
   {
-    title: "Construction",
+    title: "construction",
     link: "construction",
     position: "start",
   },
   {
-    title: "Conclusion",
+    title: "conclusion",
     link: "conclusion",
     position: "start",
   },
 ];
 export const PRODUCT_OVERVIEW = "Overview:";
+
 export const PRODUCT_PANEL_TITLES = {
+  Aurora: "metadataDescriptionAurora",
+  Comet: "metadataDescriptionComet",
+  Meteor: "metadataDescriptionMeteor",
+  Terra: "metadataDescriptionTerra",
+  Neptune: "metadataDescriptionNeptune",
+  ShadeStar: "metadataDescriptionShadeStar",
+};
+
+export const PRODUCT_PANEL_METADATA = {
   Aurora: "ProductTitleAurora",
   Comet: "ProductTitleComet",
   Meteor: "ProductTitleMeteor",
@@ -32,6 +42,16 @@ export const PRODUCT_PANEL_TITLES = {
   Neptune: "ProductTitleNeptune",
   ShadeStar: "ProductTitleShadeStar",
 };
+
+export const PRODUCT_PANEL_KEYWORDS = {
+  Aurora: "metadataKeywordsAurora",
+  Comet: "metadataKeywordsComet",
+  Meteor: "metadataKeywordsMeteor",
+  Terra: "metadataKeywordsTerra",
+  Neptune: "metadataKeywordsNeptune",
+  ShadeStar: "metadataKeywordsShadeStar",
+};
+
 export const PRODUCT_PANEL_TECHNOLOGIES_AND_DESCRIPTIONS = {
   Aurora: {
     technology: "ProductTechAurora",
@@ -89,279 +109,166 @@ export const PRODUCT_INTRODUCTION_DESCRIPTION = {
 export const PRODUCT_BENEFITS_FOR_PANELS = {
   Aurora: [
     {
-      benefitTitle: "High Efficiency",
-      benefitDescription: "AuroraBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "lightning.svg",
     },
     {
-      benefitTitle: "Excellent Diffuse Light Performance",
-      benefitDescription: "AuroraBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Lower Light Induced Degradation (LID)",
-      benefitDescription: "AuroraBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "lightning2.svg",
     },
     {
-      benefitTitle: "Reduced Power Loss",
-      benefitDescription: "AuroraBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "shield.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "AuroraBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],
   Comet: [
     {
-      benefitTitle: "High Efficiency",
-      benefitDescription: "CometBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "power.svg",
     },
     {
-      benefitTitle: "Superior Performance in Shaded Areas",
-      benefitDescription: "CometBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "performance.svg",
     },
     {
-      benefitTitle: "Low Light Performance",
-      benefitDescription: "CometBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Long-Term Stability",
-      benefitDescription: "CometBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "longTerm.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "CometBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],
   Meteor: [
     {
-      benefitTitle: "Outstanding Efficiency",
-      benefitDescription: "MeteorBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "lightning.svg",
     },
     {
-      benefitTitle: "Excellent Low Light Performance",
-      benefitDescription: "MeteorBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Robust Temperature Coefficient",
-      benefitDescription: "MeteorBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "temperature.svg",
     },
     {
-      benefitTitle: "Enhanced Durability",
-      benefitDescription: "MeteorBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "shield2.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "MeteorBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],
   Terra: [
     {
-      benefitTitle: "High Efficiency",
-      benefitDescription: "TerraBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "power.svg",
     },
     {
-      benefitTitle: "Excellent Diffuse Light Performance",
-      benefitDescription: "TerraBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "brightness.svg",
     },
     {
-      benefitTitle: "Lower Light Induced Degradation (LID)",
-      benefitDescription: "TerraBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "lightning2.svg",
     },
     {
-      benefitTitle: "Reduced Power Loss",
-      benefitDescription: "TerraBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "shield.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "TerraBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],
   Neptune: [
     {
-      benefitTitle: "Double Duty, Triple Gain",
-      benefitDescription: "NeptuneBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "double.svg",
     },
     {
-      benefitTitle: "Getting the Most Out of the Heat",
-      benefitDescription: "NeptuneBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "heat.svg",
     },
     {
-      benefitTitle: "High Efficiency in Different Climates",
-      benefitDescription: "NeptuneBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "temperature.svg",
     },
     {
-      benefitTitle: "Longevity and Durability",
-      benefitDescription: "NeptuneBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "shield2.svg",
     },
     {
-      benefitTitle: "Environmentally Friendly",
-      benefitDescription: "NeptuneBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "leaf.svg",
     },
   ],
   ShadeStar: [
     {
-      benefitTitle: "Impressive Shade Resistance",
-      benefitDescription: "ShadeStarBenefit1",
+      benefitTitle: "benefitTitle1",
+      benefitDescription: "benefitDescription1",
       benefitPicture: "performance.svg",
     },
     {
-      benefitTitle: "Superior Energy Output",
-      benefitDescription: "ShadeStarBenefit2",
+      benefitTitle: "benefitTitle2",
+      benefitDescription: "benefitDescription2",
       benefitPicture: "power.svg",
     },
     {
-      benefitTitle: "Increased Installation Capacity",
-      benefitDescription: "ShadeStarBenefit3",
+      benefitTitle: "benefitTitle3",
+      benefitDescription: "benefitDescription3",
       benefitPicture: "capacity.svg",
     },
     {
-      benefitTitle: "Lower Levelized Cost of Energy (LCOE)",
-      benefitDescription: "ShadeStarBenefit4",
+      benefitTitle: "benefitTitle4",
+      benefitDescription: "benefitDescription4",
       benefitPicture: "costEnergy.svg",
     },
     {
-      benefitTitle: "Unmatched Durability",
-      benefitDescription: "ShadeStarBenefit5",
+      benefitTitle: "benefitTitle5",
+      benefitDescription: "benefitDescription5",
       benefitPicture: "shield2.svg",
     },
   ],
-};
-
-export const PRODUCT_CONCLUSION_FOR_PANELS = {
-  Aurora: `ConclusionAurora`,
-  Meteor: `ConclusionMeteor`,
-  Comet: `ConclusionComet`,
-  Terra: `ConclusionTerra`,
-  ShadeStar: `ConclusionShadeStar`,
-  Neptune: `ConclusionNeptune`,
-};
-export const PRODUCT_DEFAULT_MODEL_PARAMS = {
-  Aurora: {
-    model: "Aurora",
-    solarCellTechnology: "Gallium-doped Mono c-Si PERC, Half-cut cells",
-    moduleSpecification: "AE650ME-132-650Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "2.0 mm, high transmission solar glass, tempered",
-    frameColor: "White Backsheet",
-    moduleDimension: {
-      length: "1302",
-      width: "2383",
-    },
-    powerRange: {
-      from: "640",
-      to: "660",
-    },
-    applications: ["PV-Thermal"],
-  },
-  Comet: {
-    model: "Comet",
-    solarCellTechnology: "Silicon Heterojunction Technology, Half-cut cells",
-    moduleSpecification: "AE685TME-132BDS-513Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "2.0 mm white glazed glass, tempered",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "1302",
-      width: "2383",
-    },
-    powerRange: {
-      from: "510",
-      to: "525",
-    },
-    applications: ["PV-Thermal"],
-  },
-  Meteor: {
-    model: "Meteor",
-    solarCellTechnology: "n-Type TOPCon Technology, Half-cut cells",
-    moduleSpecification: "AE425CMD-108-335.3Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "White Backsheet",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "1721",
-      width: "1133",
-    },
-    powerRange: {
-      from: "420",
-      to: "440",
-    },
-    applications: ["PV-Thermal"],
-  },
-  Terra: {
-    model: "Terra",
-    solarCellTechnology: "Gallium-doped Mono c-Si PERC, Half-cut cells",
-    moduleSpecification: "AE495MD-L132BD-377Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "2.0 mm, high transmission solar glass, tempered",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "2235",
-      width: "1070",
-    },
-    powerRange: {
-      from: "370",
-      to: "377",
-    },
-    applications: ["Agri-Voltsics"],
-  },
-  ShadeStar: {
-    model: "ShadeStar",
-    solarCellTechnology: "Mono c-Si PERC, Full cells",
-    moduleSpecification: "AE190SMB-395Wp",
-    moduleColor: "Transparent / Black / White",
-    backCover: "2.0 mm, high transmission solar glass, tempered",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "1721",
-      width: "1133",
-    },
-    powerRange: {
-      from: "395",
-      to: "410",
-    },
-    applications: ["Shade Resistant"],
-  },
-  Neptune: {
-    model: "Neptune",
-    solarCellTechnology: "Gallium-doped Mono c-Si PERC, Half-cut cells",
-    moduleSpecification: "",
-    moduleColor: "Transparent / Black / White",
-    backCover: "White Backsheet",
-    frameColor: "Backsheet",
-    moduleDimension: {
-      length: "1755",
-      width: "1038",
-    },
-    powerRange: {
-      from: "370",
-      to: "380",
-    },
-    applications: ["PV-Thermal"],
-  },
 };
 
 export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
@@ -632,14 +539,24 @@ export const PRODUCT_BENTOBOXES: ProductBentofoxes = {
     ],
   },
 };
+
+export const PRODUCT_CONCLUSION_FOR_PANELS = {
+  Aurora: `ConclusionAurora`,
+  Meteor: `ConclusionMeteor`,
+  Comet: `ConclusionComet`,
+  Terra: `ConclusionTerra`,
+  ShadeStar: `ConclusionShadeStar`,
+  Neptune: `ConclusionNeptune`,
+};
+
 export const PRODUCT_CONCLUSION_TABLE_HEADERS = [
-  `Module name`,
-  `Cell type`,
-  `Module design`,
-  `Power range, W`,
-  `Module color`,
-  `Frame color`,
-  `Datasheets`,
+  `moduleName`,
+  `cellType`,
+  `moduleDesign`,
+  `powerRangeW`,
+  `moduleColor`,
+  `frameColor`,
+  `datasheets`,
   ``,
 ];
 
@@ -655,7 +572,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -693,7 +610,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -731,7 +648,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2094",
           width: "1133",
@@ -769,7 +686,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -807,7 +724,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -845,7 +762,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -883,7 +800,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -921,7 +838,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2094",
           width: "1133",
@@ -959,7 +876,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -997,7 +914,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1035,7 +952,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2094",
           width: "1133",
@@ -1073,7 +990,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -1111,7 +1028,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1153,7 +1070,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -1191,7 +1108,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -1229,7 +1146,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -1267,7 +1184,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Double Glass",
-        applications: ["Agri-Voltaics"],
+        applications: "Agri-Voltaics",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1309,7 +1226,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Transparent",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Snow Resistant"],
+        applications: "Snow Resistant",
         moduleDimension: {
           length: "1070",
           width: "2235",
@@ -1351,7 +1268,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Shade Resistant"],
+        applications: "Shade Resistant",
         moduleDimension: {
           length: "1690",
           width: "996",
@@ -1389,7 +1306,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Shade Resistant"],
+        applications: "Shade Resistant",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1431,7 +1348,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["PV-Thermal"],
+        applications: "PV-Thermal",
         moduleDimension: {
           length: "1755",
           width: "1038",
@@ -1473,7 +1390,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1511,7 +1428,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -1549,7 +1466,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -1587,7 +1504,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1625,7 +1542,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1663,7 +1580,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1902",
           width: "1133",
@@ -1701,7 +1618,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2278",
           width: "1133",
@@ -1739,7 +1656,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "1721",
           width: "1133",
@@ -1777,7 +1694,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "Black",
         frameColor: "Black",
         backCover: "Foil",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -1815,7 +1732,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2383",
           width: "1302",
@@ -1853,7 +1770,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2383",
           width: "1133",
@@ -1891,7 +1808,7 @@ export const PRODUCT_CONCLUSION_TABLE_BODY = {
         moduleColor: "White",
         frameColor: "Silver",
         backCover: "Double Glass",
-        applications: ["Carport"],
+        applications: "Carport",
         moduleDimension: {
           length: "2077",
           width: "1133",

@@ -19,23 +19,23 @@ export const PRODUCT_SLOGAN = {
 export const PRODUCT_ADVANTAGES = [
   {
     image: "solutions.svg",
-    title: `Flexible Solutions`,
+    title: `flexibleSolutions`,
     description: "ProductAdvantage1",
   },
   {
     image: "quality.svg",
-    title: `Engineering at Finest`,
+    title: `engineeringAtFinest`,
     description: "ProductAdvantage2",
   },
   {
     image: "engineering.svg",
-    title: `Quality and Innovation`,
+    title: `qualityAndInnovation`,
     description: "ProductAdvantage3",
   },
 
   {
     image: "profit.svg",
-    title: `Profitable and Durable`,
+    title: `profitableAndDurable`,
     description: "ProductAdvantage4",
   },
 ];
