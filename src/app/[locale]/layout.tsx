@@ -168,7 +168,6 @@ export default async function RootLayout({
   params: { locale: LocaleTypes };
 }) {
   if (!locales.includes(locale as any)) notFound();
-  const url = headers().get("x-url")!.split("/");
   const [navigationData, cookiesData] = await getLayoutData();
 
   const navigationAttributes = navigationData.data[0]?.attributes;
@@ -177,29 +176,25 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
-        {url.includes("outstatic") ? (
-          children
-        ) : (
-          <>
-            <ToastContainerProvider />
-            <ModelProvider>
-              <MobileSideMenuProvider>
-                <ConstructorProvider>
-                  <ProductsContextProvider>
-                    <MainPageVideoContextProvider>
-                      <StickyNavigationProvider>
-                        <Navigation headerAttributes={navigationAttributes} />
-                        {children}
-                        <Footer footerAttributes={navigationAttributes} />
-                        <Cookies cookiesAttributes={cookiesAttributes} />
-                      </StickyNavigationProvider>
-                    </MainPageVideoContextProvider>
-                  </ProductsContextProvider>
-                </ConstructorProvider>
-              </MobileSideMenuProvider>
-            </ModelProvider>
-          </>
-        )}
+        <>
+          <ToastContainerProvider />
+          <ModelProvider>
+            <MobileSideMenuProvider>
+              <ConstructorProvider>
+                <ProductsContextProvider>
+                  <MainPageVideoContextProvider>
+                    <StickyNavigationProvider>
+                      <Navigation headerAttributes={navigationAttributes} />
+                      {children}
+                      <Footer footerAttributes={navigationAttributes} />
+                      <Cookies cookiesAttributes={cookiesAttributes} />
+                    </StickyNavigationProvider>
+                  </MainPageVideoContextProvider>
+                </ProductsContextProvider>
+              </ConstructorProvider>
+            </MobileSideMenuProvider>
+          </ModelProvider>
+        </>
       </body>
     </html>
   );

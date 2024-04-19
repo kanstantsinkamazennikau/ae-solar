@@ -84,7 +84,7 @@ export default function Filters() {
             min-[1380px]:hidden
             flex
             flex-col
-            bg-[#0D0D0D]
+            bg-[#131313]
             items-end
             pt-3
             gap-3
@@ -144,7 +144,7 @@ export default function Filters() {
           />
           <hr className="h-[1px] border-t border-solid border-[#191919] w-full" />
           <Customize />
-          <div className="bg-[#0D0D0D] max-[1380px]:hidden">
+          <div className="bg-[#131313] max-[1380px]:hidden">
             <hr className="h-[1px] border-t border-solid border-[#191919] w-full mb-6" />
             <FilterControlButtons />
           </div>
@@ -153,7 +153,7 @@ export default function Filters() {
         {/* MOBILE */}
         <div
           className="
-            bg-[#0D0D0D]
+            bg-[#131313]
             min-[1380px]:hidden
             border-l
             border-solid
