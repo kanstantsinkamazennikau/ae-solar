@@ -41,7 +41,7 @@ export default function PowerRange() {
 
   useEffect(() => {
     if (powerRange.from && powerRange.to) {
-      powerRange.from > powerRange.to
+      +powerRange.from > +powerRange.to
         ? setError(translation.minimumValueError)
         : setError("");
     }
@@ -93,7 +93,7 @@ export default function PowerRange() {
                 }}
                 // onBlur={() => {
                 //   if (powerRange.from && powerRange.to) {
-                //     powerRange.from > powerRange.to
+                //     +powerRange.from > +powerRange.to
                 //       ? setError(translation.minimumValueError)
                 //       : setError("");
                 //   }
