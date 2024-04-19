@@ -6,7 +6,6 @@ const getRecentPosts = async () => {
   try {
     const path = `/blogs`;
     const urlParamsObject = {
-      // locale: "de",
       sort: { createdAt: "desc" },
       populate: {
         tag: {

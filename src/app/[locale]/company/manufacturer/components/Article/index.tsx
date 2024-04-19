@@ -1,12 +1,16 @@
 "use client";
 
-import { MANUFACTURER_ARTICLE } from "@/app/[locale]/company/manufacturer/constants";
+import {
+  MANUFACTURER_ARTICLE,
+  MANUFACTURER_ARTICLE_STATS,
+} from "@/app/[locale]/company/manufacturer/constants";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 //@ts-ignore
 import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import Image from "next/image";
 import { Fragment, useContext, useEffect, useRef, useState } from "react";
+import { Trans } from "react-i18next";
 
 const ArtcileHeading = ({ heading }: { heading: string }) => {
   return (
@@ -16,10 +20,89 @@ const ArtcileHeading = ({ heading }: { heading: string }) => {
   );
 };
 
+const ArticleStats = () => {
+  return (
+    <div
+      className="
+        mt-4
+        bg-[url('/images/about/manufacturer/test.png')]
+        min-h-[324px]
+        max-w-[650px]
+        lg:bg-auto
+        min-[600px]:bg-contain
+        bg-top
+        bg-no-repeat
+        [background-size:340px_500px]
+        mb-10
+      "
+    >
+      <div
+        className="
+          grid
+          grid-cols-1
+          min-[600px]:grid-cols-2
+          justify-between
+          items-start
+          content-start
+          min-[600px]:gap-y-5
+          gap-y-2
+          gap-x-[30px]
+          self-center
+          flex-wrap
+          md:pt-[120px]
+          pt-[60px]
+        "
+      >
+        {MANUFACTURER_ARTICLE_STATS.map(({ description, title }) => (
+          <div
+            key={title}
+            className="
+              lg:py-10
+              md:py-7
+              py-4
+              flex
+              flex-col
+              items-start
+              min-[600px]:gap-5
+              gap-2
+              border-b-2
+              border-solid
+              border-[#191919]
+              min-[600px]:max-w-[310px]
+              h-full
+            "
+          >
+            <p className="[font-size:_clamp(24px,3vw,48px)] font-semibold leading-[100%] -tracking-[0.48px]">
+              {title}
+            </p>
+            <p className="[font-size:_clamp(16px,1.5vw,20px)] font-normal leading-[120%] -tracking-[0.2px] font-walsheim text-[#505050]">
+              {description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const ArticleParagraph = ({ paragraph }: { paragraph: string }) => {
   return (
     <p className="[font-size:_clamp(16px,1.5vw,20px)] font-walsheim leading-[150%] -tracking-[0.36px] font-normal max-w-[650px] ">
       {paragraph}
+    </p>
+  );
+};
+
+const ArticleStroke = ({ paragraph }: { paragraph: string }) => {
+  return (
+    <p className="[font-size:_clamp(24px,3vw,48px)] leading-[110%] font-semibold text-base-red">
+      <Trans
+        components={{
+          stroke: <span className="manufacturer_stroke text-black" />,
+        }}
+      >
+        {paragraph}
+      </Trans>
     </p>
   );
 };
@@ -178,6 +261,15 @@ export default function Artcile() {
               );
             if (paragraph.type === "image")
               return <ImagesSlider key={index} images={paragraph.src} />;
+            if (paragraph.type === "stats") return <ArticleStats key={index} />;
+            if (paragraph.type === "stroke")
+              return (
+                <ArticleStroke
+                  // paragraph={translation[paragraph.value]}
+                  paragraph={paragraph.value}
+                  key={index}
+                />
+              );
           })}
         </Fragment>
       ))}

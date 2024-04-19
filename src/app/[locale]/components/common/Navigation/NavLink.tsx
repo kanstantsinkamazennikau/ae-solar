@@ -17,8 +17,7 @@ export default function NavLink({
   onLinkClick,
   stickyProducts,
   isProductsPage,
-  allModulesText,
-  chooseModuleText,
+  headerAttributes,
 }: NavLinkProps) {
   const path = usePathname();
   const locale = useParams()?.locale as LocaleTypes;
@@ -44,7 +43,7 @@ export default function NavLink({
           `}
           onClick={onLinkClick}
         >
-          {text}
+          {headerAttributes?.[text] || text}
         </Link>
       )}
       {!!subMenu?.length && (
@@ -68,7 +67,7 @@ export default function NavLink({
             `}
             onClick={onLinkClick}
           >
-            {text}
+            {headerAttributes?.[text] || text}
             <Image
               src="/images/navMenuTriangle.svg"
               alt="navMenuTriangle"
@@ -96,15 +95,18 @@ export default function NavLink({
           </Link>
           {!stickyProducts ? (
             <div className="absolute hidden group-hover:min-[920px]:block hover:min-[920px]:block z-20 top-[calc(100%-2px)]">
-              <SubMenuItems subMenuArray={subMenu} />
+              <SubMenuItems
+                subMenuArray={subMenu}
+                headerAttributes={headerAttributes}
+              />
             </div>
           ) : (
             !isProductsPage && (
               <div className="w-full fixed hidden group-hover:min-[920px]:block hover:min-[920px]:block pt-[27px] top-[52px] left-1/2 -translate-x-1/2">
                 <SubNavigationProductPanels
                   isShowAllProductsLink
-                  allModulesText={allModulesText}
-                  chooseModuleText={chooseModuleText}
+                  allModulesText={headerAttributes?.allModules}
+                  chooseModuleText={headerAttributes?.chooseModule}
                 />
               </div>
             )
@@ -112,7 +114,11 @@ export default function NavLink({
 
           {/* MOBILE SUBMENU ON HEADING CLICK */}
           <div className="min-[920px]:hidden">
-            <SubMenuItems subMenuArray={subMenu} onLinkClick={onLinkClick} />
+            <SubMenuItems
+              subMenuArray={subMenu}
+              onLinkClick={onLinkClick}
+              headerAttributes={headerAttributes}
+            />
           </div>
         </>
       )}

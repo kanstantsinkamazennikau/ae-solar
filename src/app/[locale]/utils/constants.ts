@@ -30,31 +30,31 @@ export const FORMS_FIELDS = {
 export const HEADER_NAV_LINKS_ARRAY = [
   {
     url: "/company",
-    text: "Company",
+    text: "company",
     subMenu: [
-      { url: "/company/manufacturer", text: "Manufacturer" },
-      { url: "/company/news", text: "News" },
-      { url: "/company/faq", text: "FAQ" },
+      { url: "/company/manufacturer", text: "manufacturer" },
+      { url: "/company/news", text: "news" },
+      { url: "/company/faq", text: "faq" },
     ],
   },
   {
     url: "/products",
-    text: "Products",
+    text: "products",
     stickyProducts: true,
     subMenu: [
-      { url: "/products", text: "All Modules" },
+      { url: "/products", text: "allModules" },
       { url: "/products/Aurora", text: "Aurora" },
       { url: "/products/Meteor", text: "Meteor" },
       { url: "/products/Comet", text: "Comet" },
       { url: "/products/Terra", text: "Terra" },
       { url: "/products/ShadeStar", text: "ShadeStar" },
       { url: "/products/Neptune", text: "Neptune" },
-      { url: "/catalogue", text: "Choose Your Module" },
+      { url: "/catalogue", text: "chooseModule" },
     ],
   },
   {
     url: "/documents",
-    text: "Documents",
+    text: "documents",
   },
   // {
   //   url: "/catalogue",
@@ -62,7 +62,7 @@ export const HEADER_NAV_LINKS_ARRAY = [
   // },
   {
     url: "/solutions",
-    text: "B2B Solutions",
+    text: "b2b",
   },
 ];
 export const HEADER_LANGUAGE = "Language";

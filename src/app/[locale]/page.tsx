@@ -27,7 +27,6 @@ const getTranslation = async () => {
 
 export default async function Home() {
   const [pageI18n, commonI18n] = await getTranslation();
-  console.log(pageI18n);
 
   return (
     <I18nProvider

@@ -5,5 +5,5 @@ export default function DocumentsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <ClientLayout apiRoute="/faqs/1">{children}</ClientLayout>;
+  return <ClientLayout apiRoute="/faqs">{children}</ClientLayout>;
 }

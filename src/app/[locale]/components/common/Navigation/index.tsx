@@ -100,8 +100,7 @@ export default function Navigation({
                   {...{
                     ...navLink,
                     isProductsPage,
-                    allModulesText: headerAttributes?.allModules,
-                    chooseModuleText: headerAttributes?.chooseModule,
+                    headerAttributes,
                   }}
                 />
               ))}
@@ -122,6 +121,7 @@ export default function Navigation({
             {/* MOBILE NAV */}
             <MobileNavigation
               contactUsText={headerAttributes?.contactUs}
+              headerAttributes={headerAttributes}
               mobileNavigationLanguageSelectorText={{
                 language: headerAttributes?.language,
                 chooseLanguage: headerAttributes?.chooseLanguage,

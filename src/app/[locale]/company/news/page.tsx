@@ -5,11 +5,10 @@ import MostPopularPosts from "@/app/[locale]/company/news/components/MostPopular
 import RecentPosts from "@/app/[locale]/company/news/components/RecentPosts";
 import TagsFilter from "@/app/[locale]/company/news/components/TagsFilter";
 import { BLOG_POSTS_PER_PAGE } from "@/app/[locale]/company/news/constants";
-import { TagsProps, TagsResponse } from "@/app/[locale]/company/news/types";
+import { TagsResponse } from "@/app/[locale]/company/news/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import HeadingWithBackground from "@/app/[locale]/components/common/HeadingWithBackground";
 import Loader from "@/app/[locale]/components/common/Loader";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import { Suspense } from "react";
@@ -23,7 +22,6 @@ async function getBlogPosts(currentPage: number, searchParamsTags?: string) {
 
     const path = `/blogs`;
     const urlParamsObject = {
-      // locale: "de",
       filters: {
         tag: {
           $or: tagsArray,

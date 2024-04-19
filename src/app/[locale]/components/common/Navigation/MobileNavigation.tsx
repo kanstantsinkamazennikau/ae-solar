@@ -1,6 +1,7 @@
 "use client";
 
 import ChangeLocale from "@/app/[locale]/components/common/ChangeLocale";
+import { NavigationProps } from "@/app/[locale]/components/common/Footer/types";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import { MobileNavigationProps } from "@/app/[locale]/components/common/Navigation/types";
@@ -17,9 +18,11 @@ import { useContext, useEffect } from "react";
 export default function MobileNavigation({
   contactUsText,
   mobileNavigationLanguageSelectorText,
+  headerAttributes,
 }: {
   contactUsText?: string;
   mobileNavigationLanguageSelectorText: MobileNavigationProps;
+  headerAttributes: NavigationProps;
 }) {
   const { isHamburgerMenuOpen, setIsHamburgerMenuOpen } = useContext(
     MobileSideMenuContext
@@ -103,7 +106,12 @@ export default function MobileNavigation({
         />
         <ul className="list-none">
           {HEADER_NAV_LINKS_ARRAY.map((navLink) => (
-            <NavLink key={navLink.url} onLinkClick={onLinkClick} {...navLink} />
+            <NavLink
+              key={navLink.url}
+              onLinkClick={onLinkClick}
+              {...navLink}
+              headerAttributes={headerAttributes}
+            />
           ))}
         </ul>
         <hr className="bg-[#131313] h-[1px] border-none mt-5 mb-5" />

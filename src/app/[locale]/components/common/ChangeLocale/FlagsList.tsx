@@ -4,8 +4,19 @@ import { FlagsListProps } from "@/app/[locale]/components/common/ChangeLocale/ty
 import Image from "next/image";
 
 export const LOCALIZATION_COUNTRIES_LIST = [
-  { flagIcon: "Deutsche.svg", abbr: "DE", language: "Deutsche" },
   { flagIcon: "English.svg", abbr: "EN", country: "English" },
+  { flagIcon: "Deutsche.svg", abbr: "DE", country: "Deutsch" },
+  // { flagIcon: "France.svg", abbr: "FR", country: "Français" },
+  // { flagIcon: "China.svg", abbr: "ZN", country: "中文" },
+  // { flagIcon: "Russia.svg", abbr: "RU", country: "Русский" },
+  // { flagIcon: "Poland.svg", abbr: "PL", country: "Polski" },
+  // { flagIcon: "Turkey.svg", abbr: "TR", country: "Türkçe" },
+  // { flagIcon: "Portugal.svg", abbr: "PT", country: "Português" },
+  // { flagIcon: "Spain.svg", abbr: "ES", country: "Español" },
+  // { flagIcon: "Italy.svg", abbr: "IT", country: "Italiano" },
+  // { flagIcon: "Japan.svg", abbr: "JA", country: "日本語" },
+  // { flagIcon: "Arabian.svg", abbr: "AR", country: "اللغة العربية" },
+  // { flagIcon: "Bulgaria.svg", abbr: "BG", country: "Български" },
 ];
 
 export default function FlagsList({
@@ -28,7 +39,7 @@ export default function FlagsList({
           {chooseLanguageText}
         </div>
       )}
-      {LOCALIZATION_COUNTRIES_LIST.map(({ flagIcon, abbr }) => (
+      {LOCALIZATION_COUNTRIES_LIST.map(({ flagIcon, abbr, country }) => (
         <div
           className={`
             cursor-pointer
@@ -48,7 +59,7 @@ export default function FlagsList({
             width={24}
             height={24}
           />
-          <span>{abbr}</span>
+          <span>{mobileNavigation ? country : abbr}</span>
         </div>
       ))}
     </>

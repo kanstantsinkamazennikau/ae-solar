@@ -1,3 +1,5 @@
+import { NavigationProps } from "@/app/[locale]/components/common/Footer/types";
+
 export interface NavLink {
   url: string;
   text: string;
@@ -14,11 +16,13 @@ export interface NavLinkProps {
   isProductsPage?: boolean;
   allModulesText?: string;
   chooseModuleText?: string;
+  headerAttributes: NavigationProps;
 }
 
 export interface SubMenuItemsProps {
   subMenuArray: NavLink[];
   onLinkClick?: () => void;
+  headerAttributes?: NavigationProps;
 }
 
 export interface SubNavigationProps {

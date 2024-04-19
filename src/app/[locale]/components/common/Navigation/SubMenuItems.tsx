@@ -1,7 +1,6 @@
 "use client";
 
 import { SubMenuItemsProps } from "@/app/[locale]/components/common/Navigation/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -9,6 +8,7 @@ import { useParams } from "next/navigation";
 export default function SubMenuItems({
   subMenuArray,
   onLinkClick,
+  headerAttributes,
 }: SubMenuItemsProps) {
   const locale = useParams()?.locale as LocaleTypes;
 
@@ -40,7 +40,7 @@ export default function SubMenuItems({
             className="flex items-center hover:text-primary"
             onClick={onLinkClick}
           >
-            {text}
+            {headerAttributes?.[text] || text}
           </Link>
         </li>
       ))}

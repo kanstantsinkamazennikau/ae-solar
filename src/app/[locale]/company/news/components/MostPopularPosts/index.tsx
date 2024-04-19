@@ -6,7 +6,6 @@ const getMostPopularPosts = async () => {
   try {
     const path = `/blogs`;
     const urlParamsObject = {
-      // locale: "de",
       sort: { views: "desc" },
       populate: {
         tag: {

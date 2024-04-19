@@ -14,5 +14,12 @@ export interface ManufacturerArticle {
         mobileSrc?: string[];
         mobileStyle?: string;
       }
+    | {
+        type: "stats";
+      }
+    | {
+        type: "stroke";
+        value: string;
+      }
   )[];
 }

@@ -39,6 +39,14 @@ export default function PowerRange() {
     }
   }, [isResetFilter]);
 
+  useEffect(() => {
+    if (powerRange.from && powerRange.to) {
+      powerRange.from > powerRange.to
+        ? setError(translation.minimumValueError)
+        : setError("");
+    }
+  }, [powerRange.from, powerRange.to, setError, translation.minimumValueError]);
+
   const powerRangeRenderFields = ["from", "to"];
 
   return (
@@ -83,13 +91,13 @@ export default function PowerRange() {
                     );
                   }
                 }}
-                onBlur={() => {
-                  if (powerRange.from && powerRange.to) {
-                    powerRange.from > powerRange.to
-                      ? setError(translation.minimumValueError)
-                      : setError("");
-                  }
-                }}
+                // onBlur={() => {
+                //   if (powerRange.from && powerRange.to) {
+                //     powerRange.from > powerRange.to
+                //       ? setError(translation.minimumValueError)
+                //       : setError("");
+                //   }
+                // }}
               />
               <span className="text-sm font-walsheim leading-[1.2] font-normal text-dark-gray-900">
                 {isFromField ? translation.from : translation.upTo}
