@@ -43,7 +43,7 @@ export default function HeroSection() {
           ${
             !isStartAnimation
               ? "opacity-0 top-[50%]"
-              : "opacity-100 md:top-[36%] top-[40%]"
+              : "opacity-100 md:-translate-y-[40%] top-[40%]"
           }
         `}
       >
