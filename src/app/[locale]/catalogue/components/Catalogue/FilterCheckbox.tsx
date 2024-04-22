@@ -3,16 +3,9 @@ import {
   PlaceToSearch,
   Technology,
 } from "@/app/[locale]/catalogue/components/Catalogue/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import {
-  useParams,
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useContext } from "react";
 
 export default function FilterCheckbox({
@@ -134,7 +127,7 @@ export default function FilterCheckbox({
               leading-tight
             `}
           >
-            {translation[title] || title}
+            {translation[title.toLowerCase()] || title}
           </span>
           {showColorIcon && (
             <Image

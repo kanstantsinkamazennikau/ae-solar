@@ -37,6 +37,7 @@ export default function TwoTierHeading({
           leading-none
           w-full
           relative
+          capitalize
           ${!marginBottomNone ? "xl:mb-20 lg:mb-16 md:mb-12 mb-10" : "mb-0"}
           ${textAlign[align]}
           ${externalStyle}

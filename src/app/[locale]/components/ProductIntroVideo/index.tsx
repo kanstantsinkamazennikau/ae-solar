@@ -118,7 +118,7 @@ export default function ProductIntroVideo() {
           relative
         "
       >
-        <div className="font-bold leading-[1.2] [font-size:_clamp(36px,4vw,64px)] text-center px-5 xl:-mb-20 md:-mb-10">
+        <div className="font-bold leading-[1.2] [font-size:_clamp(36px,4vw,64px)] text-center px-5 xl:-mb-20 md:-mb-10 capitalize">
           <Trans
             components={{
               red: <div className="text-base-red mb-6" />,

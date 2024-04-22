@@ -75,7 +75,7 @@ export default function SubNavigationProductPanels({
                   gap-2
                   cursor-pointer
                   leading-[100%]
-                  [font-size:_clamp(14px,1vw,16px)]
+                  [font-size:_clamp(12px,1vw,16px)]
                   group/link
                 `}
             >

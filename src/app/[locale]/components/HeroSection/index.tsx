@@ -48,7 +48,7 @@ export default function HeroSection() {
         `}
       >
         <div
-          className=" text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,102px)] 
+          className="capitalize text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,102px)] 
             mainPageTextShadow
           "
         >

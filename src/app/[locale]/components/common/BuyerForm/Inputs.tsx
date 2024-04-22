@@ -7,7 +7,6 @@ import Input from "@/app/[locale]/components/common/Input";
 import PhoneNumberInput from "@/app/[locale]/components/common/PhoneNumberInput";
 import PickerInput from "@/app/[locale]/components/common/PickerInput";
 import TextArea from "@/app/[locale]/components/common/TextArea";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import {
   DROPDOWN_INPUT_VALUES,
@@ -15,7 +14,6 @@ import {
 } from "@/app/[locale]/utils/constants";
 
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext, useState } from "react";
 
 export default function BuyerForm({
@@ -89,6 +87,7 @@ export default function BuyerForm({
           -tracking-[2.88px]
           text-white
           mb-5
+          capitalize
           ${formHeaderStyle}
         
         `}

@@ -110,9 +110,9 @@ export default function ProductSlogan({ model }: ProductSloganProps) {
           backdrop-blur-[10px]
           bg-[#00000033]
           [border-image:linear-gradient(154deg,_#f60109_0%,_rgb(49_9_10_/_73%)_27%,_rgb(49_9_10_/_73%)_51%,_rgb(246_1_9_/_28%)_80%,_#f60109_100%)_1]
-          xl:w-[315px]
-          lg:w-[305px]
-          md:w-[300px]
+          xl:w-[385px]
+          lg:w-[385px]
+          md:w-[370px]
           2xl::mt-0
           xl:-mt-6
           lg:-mt-11

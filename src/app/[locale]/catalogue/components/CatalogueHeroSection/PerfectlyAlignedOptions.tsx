@@ -10,7 +10,7 @@ export default function PerfectlyAlignedOptions() {
 
   return (
     <>
-      <div className="[font-size:_clamp(18px,2.5vw,40px)] font-bold leading-[120%] text-center mb-10">
+      <div className="[font-size:_clamp(18px,2.5vw,40px)] font-bold leading-[120%] text-center mb-10 capitalize">
         <Trans
           components={{
             red: <span className="text-[#B30006]" />,
