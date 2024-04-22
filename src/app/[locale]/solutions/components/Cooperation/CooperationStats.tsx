@@ -85,7 +85,7 @@ export default function CooperationStats() {
         >
           {SOLUTIONS_STATS_WITH_DETAILS.map(({ details, stat }) => (
             <Fragment key={details}>
-              <div className="flex flex-col items-start gap-[6px] max-md:items-center">
+              <div className="flex flex-col items-start gap-[6px] max-md:items-center min-[500px]:w-1/3 md:w-full">
                 <p className="[font-size:_clamp(26px,2.5vw,48px)] font-semibold leading-[100%] -tracking-[1.44px]">
                   {stat}
                 </p>

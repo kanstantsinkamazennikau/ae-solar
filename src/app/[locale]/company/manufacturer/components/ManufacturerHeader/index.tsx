@@ -46,7 +46,7 @@ export default function ManufacturerHeader() {
         <div className="flex w-full justify-center absolute min-[560px]:bottom-[20%] bottom-[10%]">
           <BasicWidthContainer>
             <div className="flex flex-col gap-4 text-center xl:max-w-[1100px] md:max-w-[90%]  mx-auto">
-              <p
+              <h1
                 className="
                   [font-size:_clamp(26px,2.5vw,36px)]
                   font-medium
@@ -55,9 +55,9 @@ export default function ManufacturerHeader() {
                 "
               >
                 {translation.welcome}
-              </p>
+              </h1>
               <hr className="h-[1px] bg-white border-none w-full" />
-              <p
+              <h1
                 className="
                   [font-size:_clamp(36px,7vw,102px)]
                   font-semibold
@@ -66,7 +66,7 @@ export default function ManufacturerHeader() {
                 "
               >
                 {translation.harnessingTheSun}
-              </p>
+              </h1>
             </div>
           </BasicWidthContainer>
         </div>

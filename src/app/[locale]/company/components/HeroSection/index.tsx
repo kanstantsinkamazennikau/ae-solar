@@ -79,7 +79,7 @@ export default function HeroSection() {
           "
         >
           <div className="flex flex-col gap-5 px-5">
-            <div
+            <h1
               className="
                 [font-size:_clamp(24px,3vw,48px)]
                 font-medium
@@ -91,8 +91,8 @@ export default function HeroSection() {
               "
             >
               {translation.companyWelcome}
-            </div>
-            <div
+            </h1>
+            <h1
               className="
               text-center
               [font-size:_clamp(36px,5.5vw,102px)]
@@ -104,7 +104,7 @@ export default function HeroSection() {
             "
             >
               {translation.companyIlluminating}
-            </div>
+            </h1>
           </div>
 
           <div className="flex gap-5 md:flex-row flex-col">

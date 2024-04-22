@@ -49,12 +49,12 @@ export default function Discover() {
         "
       >
         <div className="flex flex-col gap-4 xl:max-w-[1100px] lg:max-w-[800px] min-[400px]:max-w-[600px] max-w-[240px] text-center">
-          <div className=" text-base-red md:-tracking-[1.2px] leading-[120%] [font-size:_clamp(20px,3vw,36px)] font-medium">
+          <h1 className=" text-base-red md:-tracking-[1.2px] leading-[120%] [font-size:_clamp(20px,3vw,36px)] font-medium">
             {translation.discover}
-          </div>
-          <div className="[font-size:_clamp(30px,5.5vw,96px)] leading-[100%] font-semibold">
+          </h1>
+          <h1 className="[font-size:_clamp(30px,5.5vw,96px)] leading-[100%] font-semibold">
             {translation.partnerFuture}
-          </div>
+          </h1>
         </div>
 
         <div className="max-w-[538px] flex flex-col items-center lg:gap-6 gap-4">

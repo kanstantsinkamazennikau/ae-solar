@@ -45,7 +45,7 @@ export default function HeadingWithBackground({
         <div className="flex w-full justify-center absolute bottom-0">
           <BasicWidthContainer>
             <div className="flex flex-col gap-4">
-              <div
+              <h1
                 className="
                   [font-size:_clamp(40px,6vw,96px)]
                   font-extrabold
@@ -53,8 +53,8 @@ export default function HeadingWithBackground({
                 "
               >
                 {tierOneHeading}
-              </div>
-              <p
+              </h1>
+              <h1
                 className="
                   [font-size:_clamp(32px,4vw,64px)]
                   font-medium
@@ -63,7 +63,7 @@ export default function HeadingWithBackground({
                 "
               >
                 {tierTwoHeading}
-              </p>
+              </h1>
             </div>
           </BasicWidthContainer>
         </div>

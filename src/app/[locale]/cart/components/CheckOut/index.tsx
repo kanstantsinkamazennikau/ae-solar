@@ -12,14 +12,14 @@ export default function CheckOut() {
     <div className="lg:mt-[100px] md:mt-20 mt-10 text-center flex flex-col items-center">
       {!!modelsInBag.length ? (
         <>
-          <div className="[font-size:_clamp(24px,5vw,40px)] font-bold leading-[120%] -tracking-[0.4px] mb-3 max-w-[474px]">
+          <h1 className="[font-size:_clamp(24px,5vw,40px)] font-bold leading-[120%] -tracking-[0.4px] mb-3 max-w-[474px]">
             {translation.yourModules}
-          </div>
+          </h1>
         </>
       ) : (
-        <div className="[font-size:_clamp(24px,5vw,40px)] font-bold leading-[120%] -tracking-[0.4px] mb-3 max-w-[474px]">
+        <h1 className="[font-size:_clamp(24px,5vw,40px)] font-bold leading-[120%] -tracking-[0.4px] mb-3 max-w-[474px]">
           {translation.bagIsEmpty}
-        </div>
+        </h1>
       )}
     </div>
   );

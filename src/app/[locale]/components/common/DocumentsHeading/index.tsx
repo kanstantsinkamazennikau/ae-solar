@@ -28,7 +28,7 @@ export default function DocumentsHeading() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div
+      <h1
         className="
           [font-size:_clamp(24px,4vw,96px)]
           font-extrabold
@@ -50,7 +50,7 @@ export default function DocumentsHeading() {
             ]
           }
         </Trans>
-      </div>
+      </h1>
     </div>
   );
 }

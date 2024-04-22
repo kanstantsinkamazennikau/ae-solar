@@ -47,7 +47,7 @@ export default function HeroSection() {
           }
         `}
       >
-        <div
+        <h1
           className="capitalize text-center -tracking-[2.88px] leading-none [font-size:_clamp(48px,5vw,88px)] 
             mainPageTextShadow
           "
@@ -61,7 +61,7 @@ export default function HeroSection() {
           >
             {translation.heroSection}
           </Trans>
-        </div>
+        </h1>
       </div>
 
       <div

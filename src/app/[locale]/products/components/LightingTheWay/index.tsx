@@ -54,12 +54,12 @@ export default function LightingTheWay() {
             ${isStartAnimation ? "opacity-100" : "opacity-0"}
           `}
         >
-          <p className="uppercase textShadow text-center md:-tracking-[2.7px] -tracking-[0px] leading-none [font-size:_clamp(34px,4vw,69px)] max-w-[1000px] after:p-0">
+          <h1 className="uppercase textShadow text-center md:-tracking-[2.7px] -tracking-[0px] leading-none [font-size:_clamp(34px,4vw,69px)] max-w-[1000px] after:p-0">
             {translation.ourPortfolio}
-          </p>
-          <p className="text-center text-base-red md:-tracking-[0.4px] -tracking-[0.5px] leading-none [font-size:_clamp(10px,1.5vw,15px)] uppercase">
+          </h1>
+          <h1 className="text-center text-base-red md:-tracking-[0.4px] -tracking-[0.5px] leading-none [font-size:_clamp(10px,1.5vw,15px)] uppercase">
             {translation.goesBeyond}
-          </p>
+          </h1>
         </div>
       </div>
     </div>

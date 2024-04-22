@@ -142,7 +142,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             height={120}
             className="xl:w-[120px] xl:h-[120px] md:w-[80px] md:h-[80px] w-[48px] h-[48px]"
           />
-          <div
+          <h1
             className="
               [font-size:_clamp(60px,8.5vw,170px)]
               drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
@@ -152,10 +152,10 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
             "
           >
             {id}
-          </div>
-          <p className="font-walsheim [font-size:_clamp(18px,1.5vw,24px)] leading-[150%] font-medium text-center max-w-[650px]">
+          </h1>
+          <h1 className="font-walsheim [font-size:_clamp(18px,1.5vw,24px)] leading-[150%] font-medium text-center max-w-[650px]">
             {translation.heroSectionTitle}
-          </p>
+          </h1>
         </div>
       </div>
       <div
