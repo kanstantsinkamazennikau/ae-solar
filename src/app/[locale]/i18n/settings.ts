@@ -2,7 +2,7 @@ import type { InitOptions } from "i18next";
 
 export const defaultLocale = "en";
 
-// TODO
+// TODO <ChangeLocale
 export const locales = [
   defaultLocale,
   "de",
