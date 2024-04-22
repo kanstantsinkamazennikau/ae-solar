@@ -79,7 +79,7 @@ export default function BornInGermany() {
                 font-semibold
                 [font-size:_clamp(30px,3.5vw,64px)]
                 leading-[clamp(30px,3.5vw,64px)]
-                max-w-[350px]
+                max-w-[480px]
               "
               >
                 {translation.bornInGermany}

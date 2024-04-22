@@ -1,22 +1,22 @@
 import type { InitOptions } from "i18next";
 
 export const defaultLocale = "en";
-// TODO
 
+// TODO
 export const locales = [
   defaultLocale,
   "de",
-  "fr",
-  "zn",
-  "ru",
+  // "fr",
+  // "zn",
+  // "ru",
   "pl",
-  "tr",
-  "pt",
-  "es",
-  "it",
-  "ja",
-  "ar",
-  "bg",
+  // "tr",
+  // "pt",
+  // "es",
+  // "it",
+  // "ja",
+  // "ar",
+  // "bg",
 ];
 // export const locales = [defaultLocale];
 export type LocaleTypes = (typeof locales)[number];

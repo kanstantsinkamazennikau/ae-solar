@@ -66,7 +66,7 @@ export default function CookiesBanner({
           />
           <div className="flex [font-size:_clamp(10px,1.5vw,14px)] font-walsheim flex-col text-dark-gray-900">
             <p className="[font-size:_clamp(14px,1.5vw,20px)] font-semibold font-sans mb-2 text-white">
-              {cookiesAttributes.cookiesOnAESolar}
+              {cookiesAttributes?.cookiesOnAESolar}
             </p>
             <p className="mb-2 [font-size:_clamp(10px,1.5vw,14px)] font-walsheim font-medium">
               <Trans
@@ -80,15 +80,15 @@ export default function CookiesBanner({
                   ),
                 }}
               >
-                {cookiesAttributes.cookiesDescription}
+                {cookiesAttributes?.cookiesDescription}
               </Trans>
             </p>
-            <p>{cookiesAttributes.cookieChoosing}</p>
+            <p>{cookiesAttributes?.cookieChoosing}</p>
           </div>
           <div className="flex md:flex-col flex-row font-semibold gap-6">
             <Button onClick={onAcceptClick} externalStyle="py-[9px] px-[26px]">
               <span className="whitespace-nowrap [font-size:_clamp(14px,1.5vw,20px)]">
-                {cookiesAttributes.accept}
+                {cookiesAttributes?.accept}
               </span>
             </Button>
             <Button
@@ -97,7 +97,7 @@ export default function CookiesBanner({
               externalStyle="!px-0 !py-0"
             >
               <span className="whitespace-nowrap text-base-red [font-size:_clamp(14px,1.5vw,20px)]">
-                {cookiesAttributes.doNotAccept}
+                {cookiesAttributes?.doNotAccept}
               </span>
             </Button>
           </div>
