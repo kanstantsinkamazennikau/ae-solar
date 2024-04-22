@@ -4,7 +4,7 @@ import I18nProvider from "@/app/[locale]/i18nProvider";
 import ProductNavigation from "@/app/[locale]/products/[id]/components/ProductNavigation";
 import {
   PRODUCT_PANEL_KEYWORDS,
-  PRODUCT_PANEL_METADATA,
+  PRODUCT_PANEL_TITLES,
 } from "@/app/[locale]/products/[id]/constants";
 import { LayoutProps } from "@/app/[locale]/products/[id]/types";
 import { PRODUCT_INTRO_PANELS_IMAGES } from "@/app/[locale]/utils/constants";
@@ -20,7 +20,7 @@ export async function generateMetadata({
   const metadata = await getOpengraphMetadata(locale);
   const title = `AE-Solar | ${id}`;
   const description = `AE-Solar | ${
-    metadata?.[PRODUCT_PANEL_METADATA[id] as keyof typeof metadata]
+    metadata?.[PRODUCT_PANEL_TITLES[id] as keyof typeof metadata]
   }`;
   const keywords =
     metadata?.[PRODUCT_PANEL_KEYWORDS[id] as keyof typeof metadata] || "";
