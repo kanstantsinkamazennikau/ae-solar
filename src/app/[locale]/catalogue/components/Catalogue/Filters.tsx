@@ -102,7 +102,7 @@ export default function Filters() {
             onClick={onHideFilterMenu}
             className="cursor-pointer mr-10"
           />
-          <hr className="h-[1px] border-t border-solid border-[#191919] w-full" />
+          <hr className="h-[1px] border-t border-solid border-[#B30006] w-full" />
         </div>
         <div
           className={`
@@ -129,23 +129,23 @@ export default function Filters() {
             <p className="[font-size:_clamp(26px,2vw,32px)] font-bold -tracking-[0.32px] capitalize text-base-red mb-4">
               {translation.filter}
             </p>
-            <hr className="h-[1px] border-t border-solid border-[#191919] w-full" />
+            <hr className="h-[1px] border-t border-solid border-[#B30006] w-full" />
           </div>
 
           <TechnologyFilter
             checkboxesList={TECHNOLOGIES_LIST}
             filterTitle={translation.filterTitleTechnology}
           />
-          <hr className="h-[1px] border-t border-solid border-[#191919] w-full" />
+          <hr className="h-[1px] border-t border-solid border-[#B30006] w-full" />
           <TechnologyFilter
             checkboxesList={MODELS_LIST}
             showModelIcon
             filterTitle={translation.filterTitleTechName}
           />
-          <hr className="h-[1px] border-t border-solid border-[#191919] w-full" />
+          <hr className="h-[1px] border-t border-solid border-[#B30006] w-full" />
           <Customize />
           <div className="bg-[#131313] max-[1380px]:hidden">
-            <hr className="h-[1px] border-t border-solid border-[#191919] w-full mb-6" />
+            <hr className="h-[1px] border-t border-solid border-[#B30006] w-full mb-6" />
             <FilterControlButtons />
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function Filters() {
             border-[#131313]
           "
         >
-          <hr className="h-[1px] border-t border-solid border-[#191919] w-full mb-4" />
+          <hr className="h-[1px] border-t border-solid border-[#B30006] w-full mb-4" />
           <FilterControlButtons />
         </div>
       </div>
