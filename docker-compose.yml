@@ -29,5 +29,4 @@ services:
 
 networks:
   aesolar_network:
-    name: strapi_network
     external: true
