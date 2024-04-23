@@ -53,7 +53,7 @@ export async function generateMetadata({
         ?.title as keyof typeof metadata
     ] || ""
   }`;
-  const description = `AE-Solar | ${
+  const description = `${
     metadata?.[
       mapTitleWithDocumentsCategory[documentsCategory]
         ?.description as keyof typeof metadata

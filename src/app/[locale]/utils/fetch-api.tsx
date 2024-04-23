@@ -14,7 +14,6 @@ export async function fetchAPI(
 ) {
   try {
     const mergedOptions = {
-      next: { revalidate: 60 },
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.STRAPI_PUBLIC_TOKEN}`,

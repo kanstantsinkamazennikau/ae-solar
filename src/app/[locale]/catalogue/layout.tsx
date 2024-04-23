@@ -8,7 +8,7 @@ export async function generateMetadata({
 }) {
   const metadata = await getOpengraphMetadata(locale);
   const title = `AE-Solar | ${metadata?.metadataTitleCatalogue}`;
-  const description = `AE-Solar | ${metadata?.metadataDescriptionCatalogue}`;
+  const description = `${metadata?.metadataDescriptionCatalogue}`;
 
   return {
     title,

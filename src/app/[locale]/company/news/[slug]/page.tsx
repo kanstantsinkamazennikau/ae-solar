@@ -1,7 +1,6 @@
 import BlogPostContent from "@/app/[locale]/company/news/[slug]/BlogPostContent";
 import { UpdateViewsResponse } from "@/app/[locale]/company/news/[slug]/types";
 import { StrapiBlogs } from "@/app/[locale]/company/news/components/BlogPostsList/types";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 

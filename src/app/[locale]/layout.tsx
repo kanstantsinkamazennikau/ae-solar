@@ -15,7 +15,6 @@ import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 import localFont from "next/font/local";
-import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
 

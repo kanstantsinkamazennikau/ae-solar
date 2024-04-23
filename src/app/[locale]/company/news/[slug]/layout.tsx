@@ -12,7 +12,7 @@ export async function generateMetadata({
 }) {
   const metadata = await getOpengraphMetadata(locale);
   const defaultTitle = `AE-Solar | ${metadata?.metadataTitleNews}`;
-  const defaultDescription = `AE-Solar | ${metadata?.metadataDescriptionNews}`;
+  const defaultDescription = `${metadata?.metadataDescriptionNews}`;
 
   try {
     const path = `/blogs`;

@@ -51,11 +51,13 @@ const getTranslation = async () => {
     fetchAPI(pageTranslationApiPath, urlParamsObject),
     fetchAPI(commonPath, urlParamsObject),
   ]);
+
   return responseData;
 };
 
 export default async function CataloguePage() {
   const panelsList = await getPanelsList();
+
   const [pageI18n, commonI18n] = await getTranslation();
 
   return (

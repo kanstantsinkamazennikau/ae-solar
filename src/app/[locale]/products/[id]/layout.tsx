@@ -19,7 +19,7 @@ export async function generateMetadata({
 }) {
   const metadata = await getOpengraphMetadata(locale);
   const title = `AE-Solar | ${id}`;
-  const description = `AE-Solar | ${
+  const description = `${
     metadata?.[PRODUCT_PANEL_TITLES[id] as keyof typeof metadata]
   }`;
   const keywords =
