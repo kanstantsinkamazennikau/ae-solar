@@ -18,6 +18,7 @@ services:
     volumes:
       - ./html:/var/www/html
       - /home/aesolar/config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - /home/aesolar/config/nginx/httpd-cert:/var/www/httpd-cert
     networks:
       - aesolar_network
 
