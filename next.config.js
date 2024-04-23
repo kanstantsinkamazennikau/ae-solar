@@ -62,6 +62,24 @@ const nextConfig = {
           "/documents/solar_panels/Terra/AE_CMD-L132BD_505W-525W_Ver24.1.1.pdf",
         permanent: true,
       },
+      {
+        source: "/pl/pt-pt/aplicativo-ae-solar",
+        destination:
+          "/documents/NFC_chips/Chips_NFC_integrados_aos_painéis_solares_e_APP_AE_Solar.pdf",
+        permanent: true,
+      },
+      {
+        source: "/pl/downloads",
+        destination: "/documents",
+        permanent: true,
+      },
+      {
+        source:
+          "/wp-content/uploads/2024/02/Apresentacao-AE-Solar-Brasil_202402.pdf",
+        destination:
+          "/documents/presentations/Apresentacao-AE-Solar-Brasil_202402.pdf",
+        permanent: true,
+      },
     ];
   },
   pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],

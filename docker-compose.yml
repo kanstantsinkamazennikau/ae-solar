@@ -14,8 +14,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    # depends_on:
-    #   - pgadmin
+    depends_on:
+      - nextapp
     volumes:
       - ./html:/var/www/html
       - /home/aesolar/config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
