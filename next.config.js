@@ -74,6 +74,17 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/pt-pt/aplicativo-ae-solar",
+        destination:
+          "/documents/NFC_chips/Chips_NFC_integrados_aos_painéis_solares_e_APP_AE_Solar.pdf",
+        permanent: true,
+      },
+      {
+        source: "/downloads",
+        destination: "/documents",
+        permanent: true,
+      },
+      {
         source:
           "/wp-content/uploads/2024/02/Apresentacao-AE-Solar-Brasil_202402.pdf",
         destination:
