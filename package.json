@@ -21,7 +21,7 @@
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-resources-to-backend": "^1.2.0",
     "js-cookie": "^3.0.5",
-    "next": "14.1.0",
+    "next": "14.2.2",
     "next-i18next": "^15.2.0",
     "nodemailer": "^6.9.8",
     "outstatic": "^1.0.5",

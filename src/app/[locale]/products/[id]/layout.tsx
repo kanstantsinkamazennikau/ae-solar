@@ -1,7 +1,9 @@
 import { Model } from "@/app/[locale]/context/constructorContext";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import I18nProvider from "@/app/[locale]/i18nProvider";
+import { BASE_URL } from "@/app/[locale]/layout";
 import ProductNavigation from "@/app/[locale]/products/[id]/components/ProductNavigation";
+import ProductNotFoundRedirect from "@/app/[locale]/products/[id]/components/ProductNotFoundRedirect";
 import {
   PRODUCT_PANEL_KEYWORDS,
   PRODUCT_PANEL_TITLES,
@@ -11,6 +13,7 @@ import { PRODUCT_INTRO_PANELS_IMAGES } from "@/app/[locale]/utils/constants";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
+import { redirect } from "next/navigation";
 
 export async function generateMetadata({
   params: { id, locale },
@@ -18,7 +21,7 @@ export async function generateMetadata({
   params: { id: Model; locale: LocaleTypes };
 }) {
   const metadata = await getOpengraphMetadata(locale);
-  const title = `AE-Solar | ${id}`;
+  const title = `${id}`;
   const description = `${
     metadata?.[PRODUCT_PANEL_TITLES[id] as keyof typeof metadata]
   }`;
@@ -29,10 +32,11 @@ export async function generateMetadata({
     title,
     description,
     keywords,
-    metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+    metadataBase: new URL(BASE_URL),
     openGraph: {
       title,
       description,
+      url: `${BASE_URL}/products/${id}`,
       type: "website",
     },
   };
@@ -55,11 +59,7 @@ export default async function ContactLayout({
   const commonI18n = await getTranslation();
 
   if (!PRODUCT_INTRO_PANELS_IMAGES.includes(id))
-    return (
-      <div className="text-center [font-size:_clamp(20px,2vw,32px)] mt-8">
-        Product not found
-      </div>
-    );
+    return <ProductNotFoundRedirect />;
 
   return (
     <I18nProvider

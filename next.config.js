@@ -80,6 +80,39 @@ const nextConfig = {
           "/documents/presentations/Apresentacao-AE-Solar-Brasil_202402.pdf",
         permanent: true,
       },
+      //TODO remove after translation
+      {
+        source: "/tr",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/documents/presentation.pdf",
+        destination:
+          "/documents/presentations/Company_Profile_EN_2024_JAN_v1.pdf",
+        permanent: false,
+      },
+      {
+        source: "/documents/presentation.pdf",
+        destination:
+          "/documents/presentations/Company_Profile_EN_2024_JAN_v1.pdf",
+        permanent: false,
+      },
+      {
+        source: "/company/news/terms",
+        destination: "/company/publishers_info",
+        permanent: false,
+      },
+      {
+        source: "/company/news/how-to-add-solar-panels-to-existing-system",
+        destination: "/company/news",
+        permanent: false,
+      },
+      {
+        source: "/company/news/will-the-eu-really-be-carbon-neutral-by-2050",
+        destination: "/company/news",
+        permanent: false,
+      },
     ];
   },
   pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],

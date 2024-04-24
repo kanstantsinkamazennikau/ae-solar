@@ -117,6 +117,11 @@ const criteria = localFont({
   variable: "--font-criteria",
 });
 
+export const BASE_URL =
+  process.env.NODE_ENV === "development"
+    ? `http://${process.env.VERCEL_URL}`
+    : `https://${process.env.VERCEL_URL}`;
+
 export async function generateMetadata({
   params: { locale },
 }: {
@@ -127,17 +132,17 @@ export async function generateMetadata({
   return {
     title: "AE-Solar",
     description: metadata?.metadataDescriptionMainPage,
-    keywords: metadata?.metadataKeywordsMainPage,
     metadataBase: new URL(
       `${
         process.env.NODE_ENV === "development"
           ? `http://${process.env.VERCEL_URL}`
-          : `https://${process.env.VERCEL_URL}`
+          : BASE_URL
       }`
     ),
     openGraph: {
       title: "AE-Solar",
       description: metadata?.metadataDescriptionMainPage,
+      url: BASE_URL,
       type: "website",
     },
   };

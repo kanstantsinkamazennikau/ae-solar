@@ -1,6 +1,7 @@
 import { MetadataResponse } from "@/app/[locale]/company/news/[slug]/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { BASE_URL } from "@/app/[locale]/layout";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 import Image from "next/image";
@@ -11,7 +12,7 @@ export async function generateMetadata({
   params: { slug: string; locale: LocaleTypes };
 }) {
   const metadata = await getOpengraphMetadata(locale);
-  const defaultTitle = `AE-Solar | ${metadata?.metadataTitleNews}`;
+  const defaultTitle = `${metadata?.metadataTitleNews}`;
   const defaultDescription = `${metadata?.metadataDescriptionNews}`;
 
   try {
@@ -32,10 +33,10 @@ export async function generateMetadata({
     return {
       title,
       description,
-      keywords: [],
-      metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+      metadataBase: new URL(BASE_URL),
       openGraph: {
         title,
+        url: `${BASE_URL}/news/${slug}`,
         description,
         type: "website",
       },
@@ -44,10 +45,10 @@ export async function generateMetadata({
     return {
       title: defaultTitle,
       description: defaultDescription,
-      keywords: [],
-      metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+      metadataBase: new URL(BASE_URL),
       openGraph: {
         title: defaultTitle,
+        url: `${BASE_URL}/news/${slug}`,
         description: defaultDescription,
         type: "website",
       },

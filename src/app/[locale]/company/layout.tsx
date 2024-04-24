@@ -1,4 +1,5 @@
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { BASE_URL } from "@/app/[locale]/layout";
 import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 import { headers } from "next/headers";
 
@@ -6,32 +7,32 @@ const mapTitleWithDocumentsCategory = {
   faq: {
     title: "metadataTitleFAQ",
     description: "metadataDescriptionFAQ",
-    keywords: "metadataKeywordsFAQ",
+    OGUrl: "/company/faq",
   },
   publishers_info: {
     title: "metadataTitlePublishers",
     description: "metadataDescriptionPublishers",
-    keywords: "metadataKeywordsPublishers",
+    OGUrl: "/company/publishers_info",
   },
   imprint: {
     title: "metadataTitleImprint",
     description: "metadataDescriptionImprint",
-    keywords: "metadataKeywordsImprint",
+    OGUrl: "/company/imprint",
   },
   manufacturer: {
     title: "metadataTitleManufacturer",
     description: "metadataDescriptionManufacturer",
-    keywords: "metadataKeywordsManufacturer",
+    OGUrl: "/company/manufacturer",
   },
   news: {
     title: "metadataTitleNews",
     description: "metadataDescriptionNews",
-    keywords: "metadataKeywordsNews",
+    OGUrl: "/company/news",
   },
   company: {
     title: "metadataTitleCompany",
     description: "metadataDescriptionCompany",
-    keywords: "metadataKeywordsCompany",
+    OGUrl: "/company",
   },
 };
 
@@ -47,7 +48,7 @@ export async function generateMetadata({
     url.length - 1
   ] as keyof typeof mapTitleWithDocumentsCategory;
 
-  const title = `AE-Solar | ${
+  const title = `${
     metadata?.[
       mapTitleWithDocumentsCategory[documentsCategory]
         ?.title as keyof typeof metadata
@@ -59,20 +60,15 @@ export async function generateMetadata({
         ?.description as keyof typeof metadata
     ] || ""
   }`;
-  const keywords =
-    metadata?.[
-      mapTitleWithDocumentsCategory[documentsCategory]
-        ?.keywords as keyof typeof metadata
-    ] || "";
 
   return {
     title,
     description,
-    keywords,
-    metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+    metadataBase: new URL(BASE_URL),
     openGraph: {
       title,
       description,
+      url: `${BASE_URL}${mapTitleWithDocumentsCategory[documentsCategory].OGUrl}`,
       type: "website",
     },
   };

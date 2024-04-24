@@ -1,5 +1,6 @@
 import ClientLayout from "@/app/[locale]/documents/components/ClientLayout";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
+import { BASE_URL } from "@/app/[locale]/layout";
 import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 
 export async function generateMetadata({
@@ -8,17 +9,17 @@ export async function generateMetadata({
   params: { locale: LocaleTypes };
 }) {
   const metadata = await getOpengraphMetadata(locale);
-  const title = `AE-Solar | ${metadata?.metadataTitleDocuments}`;
+  const title = `${metadata?.metadataTitleDocuments}`;
   const description = `${metadata?.metadataDescriptionDocuments}`;
 
   return {
     title,
     description,
-    keywords: metadata?.metadataKeywordsDocuments,
-    metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+    metadataBase: new URL(BASE_URL),
     openGraph: {
       title,
       description,
+      url: `${BASE_URL}/documents`,
       type: "website",
     },
   };
