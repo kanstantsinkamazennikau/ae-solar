@@ -28,7 +28,6 @@ const nextConfig = {
           "/documents/presentations/Dr-Hamed-Hanifi_AESOLAR_TERRA_.pdf",
         permanent: true,
       },
-
       {
         source:
           "/wp-content/uploads/2024/01/AE_SMD-108E_395W-410W_Ver24.1.1.pdf",
@@ -70,6 +69,17 @@ const nextConfig = {
       },
       {
         source: "/pl/downloads",
+        destination: "/documents",
+        permanent: true,
+      },
+      {
+        source: "/pt-pt/aplicativo-ae-solar",
+        destination:
+          "/documents/NFC_chips/Chips_NFC_integrados_aos_painéis_solares_e_APP_AE_Solar.pdf",
+        permanent: true,
+      },
+      {
+        source: "/downloads",
         destination: "/documents",
         permanent: true,
       },
