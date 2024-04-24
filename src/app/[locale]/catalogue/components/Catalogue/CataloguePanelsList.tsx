@@ -19,15 +19,13 @@ import {
   ConstructorContext,
   Model,
 } from "@/app/[locale]/context/constructorContext";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { PanelsListPrettyfiedResponse } from "@/app/[locale]/products/[id]/types";
 import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";
-import { useParams, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useContext, useEffect, useMemo, useState } from "react";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 
 export default function CataloguePanelsList({
   panelsList,
@@ -214,7 +212,9 @@ export default function CataloguePanelsList({
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
       return modelsInBag;
     });
-    toast.success(translation.successfullyAdded);
+    toast.success(translation.successfullyAdded, {
+      duration: 3000,
+    });
   };
 
   const removeModel = (model: string) => {

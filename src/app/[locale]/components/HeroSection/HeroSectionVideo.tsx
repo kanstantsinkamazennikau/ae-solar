@@ -64,7 +64,7 @@ export default function HeroSectionVideo() {
       )}
       {(isLongVideoLoadingTime || isIOSDevice) && (
         <Image
-          src={`/images/heroSectionBackground.png`}
+          src={`/images/heroSectionBackground.jpeg`}
           alt="heroSectionBackground"
           priority
           width={1920}
