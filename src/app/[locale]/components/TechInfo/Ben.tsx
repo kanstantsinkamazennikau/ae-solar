@@ -83,7 +83,7 @@ export default function Ben({
           alt={image}
           width={408}
           height={408}
-          priority
+          // priority
           className={`absolute
         ${
           isFullHeightRow

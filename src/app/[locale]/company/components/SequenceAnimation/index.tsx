@@ -26,7 +26,7 @@ function getCurrentFrame(index: number) {
 const frameIndex = { frame: 0 };
 const numFrames = 120;
 
-export default function SequenceAnimation({ width = 1158, height = 600 }) {
+export default function SequenceAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [activeStepIndex, setActiveStepIndex] = useState(0);

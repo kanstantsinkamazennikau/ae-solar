@@ -129,7 +129,7 @@ export default function ProductIntroVideo() {
           <Image
             src={`/images/glowFull.png`}
             alt="glow"
-            priority
+            // priority
             width={1320}
             height={60}
             className="rotate-180 mx-auto relative z-20 pointer-events-none"

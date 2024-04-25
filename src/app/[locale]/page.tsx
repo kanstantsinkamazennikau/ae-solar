@@ -45,7 +45,7 @@ export default async function Home() {
               alt="solarSystem"
               width={1920}
               height={620}
-              priority
+              // priority
               className="absolute h-full object-cover left-1/2 -translate-x-1/2 -z-0"
             />
             <div className="fade-strip-bottom !h-[100px]" />
