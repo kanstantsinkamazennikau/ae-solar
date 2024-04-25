@@ -13,7 +13,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
 
-export function MainPageFAQ() {
+export default function MainPageFAQ() {
   const locale = useParams()?.locale as LocaleTypes;
   const router = useRouter();
   const { translation } = useContext(i18nProviderContext);

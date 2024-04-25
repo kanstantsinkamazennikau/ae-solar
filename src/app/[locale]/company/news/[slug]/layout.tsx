@@ -14,6 +14,7 @@ export async function generateMetadata({
   const metadata = await getOpengraphMetadata(locale);
   const defaultTitle = `${metadata?.metadataTitleNews}`;
   const defaultDescription = `${metadata?.metadataDescriptionNews}`;
+  const canonicalURL = `${BASE_URL}/news/${slug}`;
 
   try {
     const path = `/blogs`;
@@ -30,13 +31,17 @@ export async function generateMetadata({
     const title = response.data[0].attributes.seo[0].metaTitle || defaultTitle;
     const description =
       response.data[0].attributes.seo[0].metaTitle || defaultDescription;
+
     return {
       title,
       description,
       metadataBase: new URL(BASE_URL),
+      alternates: {
+        canonical: canonicalURL,
+      },
       openGraph: {
         title,
-        url: `${BASE_URL}/news/${slug}`,
+        url: canonicalURL,
         description,
         type: "website",
       },
@@ -46,9 +51,12 @@ export async function generateMetadata({
       title: defaultTitle,
       description: defaultDescription,
       metadataBase: new URL(BASE_URL),
+      alternates: {
+        canonical: canonicalURL,
+      },
       openGraph: {
         title: defaultTitle,
-        url: `${BASE_URL}/news/${slug}`,
+        url: canonicalURL,
         description: defaultDescription,
         type: "website",
       },

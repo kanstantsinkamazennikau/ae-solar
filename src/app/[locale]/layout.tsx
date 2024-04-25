@@ -129,7 +129,7 @@ export async function generateMetadata({
   const metadata = await getOpengraphMetadata(locale);
 
   return {
-    title: "AE-Solar",
+    title: metadata?.metadataTitleMainPage,
     description: metadata?.metadataDescriptionMainPage,
     metadataBase: new URL(
       `${
@@ -138,8 +138,11 @@ export async function generateMetadata({
           : BASE_URL
       }`
     ),
+    alternates: {
+      canonical: BASE_URL,
+    },
     openGraph: {
-      title: "AE-Solar",
+      title: metadata?.metadataTitleMainPage,
       description: metadata?.metadataDescriptionMainPage,
       url: BASE_URL,
       type: "website",

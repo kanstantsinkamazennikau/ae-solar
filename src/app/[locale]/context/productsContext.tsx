@@ -7,6 +7,8 @@ export interface ProductsContext {
   isStartAnimation: boolean;
   setIsLongVideoLoadingTime: Dispatch<SetStateAction<boolean>>;
   isLongVideoLoadingTime: boolean;
+  setIsPlaying: Dispatch<SetStateAction<boolean>>;
+  isPlaying: boolean;
 }
 
 export const ProductsContext = createContext<ProductsContext>(null!);
@@ -18,6 +20,7 @@ export default function ProductsContextProvider({
 }) {
   const [isStartAnimation, setIsStartAnimation] = useState(false);
   const [isLongVideoLoadingTime, setIsLongVideoLoadingTime] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <ProductsContext.Provider
@@ -26,6 +29,8 @@ export default function ProductsContextProvider({
         setIsStartAnimation,
         isLongVideoLoadingTime,
         setIsLongVideoLoadingTime,
+        isPlaying,
+        setIsPlaying,
       }}
     >
       {children}

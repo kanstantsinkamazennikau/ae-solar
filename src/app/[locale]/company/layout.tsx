@@ -61,14 +61,19 @@ export async function generateMetadata({
     ] || ""
   }`;
 
+  const canonicalURL = `${BASE_URL}${mapTitleWithDocumentsCategory[documentsCategory].OGUrl}`;
+
   return {
     title,
     description,
     metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: canonicalURL,
+    },
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}${mapTitleWithDocumentsCategory[documentsCategory].OGUrl}`,
+      url: canonicalURL,
       type: "website",
     },
   };

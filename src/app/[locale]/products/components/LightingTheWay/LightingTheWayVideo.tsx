@@ -12,9 +12,10 @@ export default function LightingTheWayVideo() {
     setIsStartAnimation,
     isLongVideoLoadingTime,
     setIsLongVideoLoadingTime,
+    setIsPlaying,
   } = useContext(ProductsContext);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [startFadeIn, setStartFadeIn] = useState(false);
+  // const [isPlaying, setIsPlaying] = useState(false);
+  // const [startFadeIn, setStartFadeIn] = useState(false);
   const ref = useRef(null);
 
   const isIOSDevice = isIOS();
@@ -26,28 +27,28 @@ export default function LightingTheWayVideo() {
     }, 1500);
   };
 
-  useEffect(() => {
-    const timerId = setTimeout(
-      () => {
-        setIsLongVideoLoadingTime(true);
-        setIsStartAnimation(true);
-      },
-      isIOSDevice ? 200 : 6000
-    );
+  // useEffect(() => {
+  //   const timerId = setTimeout(
+  //     () => {
+  //       setIsLongVideoLoadingTime(true);
+  //       setIsStartAnimation(true);
+  //     },
+  //     isIOSDevice ? 200 : 6000
+  //   );
 
-    if (isStartAnimation) {
-      clearTimeout(timerId);
-    }
+  //   if (isStartAnimation) {
+  //     clearTimeout(timerId);
+  //   }
 
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, [
-    isStartAnimation,
-    setIsLongVideoLoadingTime,
-    setIsStartAnimation,
-    isIOSDevice,
-  ]);
+  //   return () => {
+  //     clearTimeout(timerId);
+  //   };
+  // }, [
+  //   isStartAnimation,
+  //   setIsLongVideoLoadingTime,
+  //   setIsStartAnimation,
+  //   isIOSDevice,
+  // ]);
 
   useEffect(() => {
     ref.current && (ref.current as HTMLVideoElement).play();
@@ -55,7 +56,7 @@ export default function LightingTheWayVideo() {
 
   return (
     <>
-      {!isPlaying && !isLongVideoLoadingTime && !isIOSDevice && (
+      {/* {!isPlaying && !isLongVideoLoadingTime && !isIOSDevice && (
         <div
           className={`z-20 fixed -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 ${
             isStartAnimation &&
@@ -99,7 +100,7 @@ export default function LightingTheWayVideo() {
             ${startFadeIn ? "animate-[fadeIn_0.5s_ease-in-out]" : "opacity-0"}
          `}
         />
-      )}
+      )} */}
       {!isLongVideoLoadingTime && !isIOSDevice && (
         <video
           width="1920"

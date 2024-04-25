@@ -45,7 +45,7 @@ export default function Footer({
               <Image
                 src={`/images/footer/productLeft.png`}
                 alt="productLeft"
-                priority
+                // priority
                 width={870}
                 height={547}
                 quality={100}
@@ -54,7 +54,7 @@ export default function Footer({
               <Image
                 src={`/images/footer/productRight.png`}
                 alt="productRight"
-                priority
+                // priority
                 width={800}
                 height={547}
                 quality={100}
