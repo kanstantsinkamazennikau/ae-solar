@@ -34,7 +34,7 @@ export default function StatWithAnimationCounter({
         duration: 3,
         ease: "power3.out",
         onUpdate: () => {
-          setCount(Number(myObj.val).toFixed(0) + (sign ?? ""));
+          setCount(Number(myObj.val).toFixed(0));
         },
       });
     });
@@ -52,7 +52,7 @@ export default function StatWithAnimationCounter({
       >
         <div>
           <p className="font-semibold leading-none [font-size:_clamp(26px,5vw,94px)] test ">
-            {count}
+            {count + (sign ?? "")}
           </p>
           <p className="[font-size:_clamp(10px,2vw,22px)] text-dark-gray-800 md:whitespace-nowrap whitespace-normal">
             {translation[details]}

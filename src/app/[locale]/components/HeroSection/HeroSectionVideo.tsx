@@ -1,21 +1,12 @@
 "use client";
 
-import Loader from "@/app/[locale]/components/common/Loader";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
-import Image from "next/image";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 export default function HeroSectionVideo() {
-  const {
-    isStartAnimation,
-    setIsStartAnimation,
-    isLongVideoLoadingTime,
-    setIsLongVideoLoadingTime,
-    setIsPlaying,
-  } = useContext(MainPageVideoContext);
-  // const [isPlaying, setIsPlaying] = useState(false);
-  // const [startFadeIn, setStartFadeIn] = useState(false);
+  const { setIsStartAnimation, isLongVideoLoadingTime, setIsPlaying } =
+    useContext(MainPageVideoContext);
   const ref = useRef(null);
 
   const isIOSDevice = isIOS();

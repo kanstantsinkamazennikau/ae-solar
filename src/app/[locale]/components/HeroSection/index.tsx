@@ -85,7 +85,7 @@ export default function HeroSection() {
             }`}
           />
         )}
-        {!isLongVideoLoadingTime && <HeroSectionVideo />}
+        {/* {!isLongVideoLoadingTime && <HeroSectionVideo />} */}
       </div>
 
       <div
