@@ -49,7 +49,7 @@ export interface ConstructorModelWithId extends ConstructorModel {
   id: string | number;
 }
 
-export interface ConstructorContext {
+export interface ConstructorContextInterface {
   setIsFilterModels: (flag: boolean) => void;
   isFilterModels: boolean;
   setModelsInBag: Dispatch<SetStateAction<ConstructorModelWithId[]>>;
@@ -66,7 +66,9 @@ export interface ConstructorContext {
   isShowFilterMenu: boolean;
 }
 
-export const ConstructorContext = createContext<ConstructorContext>(null!);
+export const ConstructorContext = createContext<ConstructorContextInterface>(
+  null!
+);
 
 export default function ConstructorProvider({
   children,
