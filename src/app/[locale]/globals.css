@@ -245,15 +245,3 @@ body {
 .get-in-touch-client-border {
   @apply border border-solid border-get-in-touch-client-border rounded-full [background:radial-gradient(50%_49.12%_at_50%_100%,rgba(255,255,255,0.10)_0%,rgba(255,255,255,0.00)_100%),var(--Shades-Dark-2,#191919)];
 }
-
-.constructor-model-picker-border {
-  @apply border-2 rounded-xl border-solid border-[#252525];
-}
-
-.constructor-model-picker-selected-outline {
-  @apply outline-2 rounded-xl outline outline-base-red;
-}
-
-.constructor-model-picker-selected-border {
-  @apply border-2 rounded-xl border-solid border-base-red;
-}

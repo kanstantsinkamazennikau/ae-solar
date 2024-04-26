@@ -35,7 +35,7 @@ export default async function Home() {
         ...commonI18n.data[0]?.attributes,
       }}
     >
-      <main className="flex flex-col items-center w-full ">
+      <main className="flex flex-col items-center w-full">
         <HeroSection />
         <div className="w-full relative">
           <div className="absolute w-full h-[40%] flex">

@@ -1,3 +1,5 @@
+import "./globals.css";
+
 import Cookies from "@/app/[locale]/components/common/CookiesBanner";
 import Footer from "@/app/[locale]/components/common/Footer";
 import Navigation from "@/app/[locale]/components/common/Navigation";
@@ -14,7 +16,6 @@ import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata"
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { Toaster } from "sonner";
-import "./globals.css";
 
 export const revalidate = 3600;
 
@@ -156,11 +157,9 @@ const getLayoutData = async () => {
   };
   const footerPath = `/footers`;
   const cookiesPath = `/cookies`;
-  const commonPath = `/commons`;
   const responseData = await Promise.all([
     fetchAPI(footerPath, urlParamsObject),
     fetchAPI(cookiesPath, urlParamsObject),
-    fetchAPI(commonPath, urlParamsObject),
   ]);
   return responseData;
 };

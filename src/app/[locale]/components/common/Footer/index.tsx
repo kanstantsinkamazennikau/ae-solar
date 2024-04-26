@@ -7,7 +7,6 @@ import PolicyLink from "@/app/[locale]/components/common/Footer/PolicyLink";
 import Social from "@/app/[locale]/components/common/Footer/Social";
 import { NavigationProps } from "@/app/[locale]/components/common/Footer/types";
 import Logo from "@/app/[locale]/components/common/Logo";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import {
   FOOTER_LINKS_ARRAY,
   POLICY_LINKS,

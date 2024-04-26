@@ -1,7 +1,6 @@
 "use client";
 
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { createContext, useEffect } from "react";
+import { createContext } from "react";
 
 export interface i18nProvider {
   translation: {
