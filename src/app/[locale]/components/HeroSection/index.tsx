@@ -66,7 +66,7 @@ export default function HeroSection() {
               className={`w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-screen`}
             />
             <div
-              className={`z-20 absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 `}
+              className={`z-20 absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 w-screen h-screen`}
             >
               <Loader externalStyle="h-auto" />
             </div>
