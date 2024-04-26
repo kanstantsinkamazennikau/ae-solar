@@ -93,7 +93,7 @@ export default function HeroSection() {
             priority
             width={1920}
             height={1080}
-            className={`w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-screen`}
+            className={`w-full object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full`}
           />
         )}
         {!isLongVideoLoadingTime && <HeroSectionVideo />}
