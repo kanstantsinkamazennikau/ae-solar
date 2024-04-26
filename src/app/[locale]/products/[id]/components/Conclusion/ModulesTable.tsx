@@ -1,6 +1,6 @@
 import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import DesktopTableRow from "@/app/[locale]/products/[id]/components/Conclusion/DesktopTableRow";
 import MobileTable from "@/app/[locale]/products/[id]/components/Conclusion/MobileTable";

@@ -1,7 +1,7 @@
 "use client";
 
 import Loader from "@/app/[locale]/components/common/Loader";
-import { ProductsContext } from "@/app/[locale]/context/ProductsContext";
+import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import dynamic from "next/dynamic";

@@ -3,7 +3,7 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { Model } from "@/app/[locale]/context/ConstructorContext";
+import { Model } from "@/app/[locale]/context/constructorContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Panel from "@/app/[locale]/products/components/PanelsList/Panel";
 import { PRODUCT_INTRO_PANELS_IMAGES } from "@/app/[locale]/utils/constants";

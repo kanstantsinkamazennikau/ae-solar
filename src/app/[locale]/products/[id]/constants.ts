@@ -1,4 +1,4 @@
-import { Model } from "@/app/[locale]/context/ConstructorContext";
+import { Model } from "@/app/[locale]/context/constructorContext";
 import { ProductBentofoxes } from "@/app/[locale]/products/[id]/components/Customization/types";
 
 export const PRODUCT_NAVIGATION = [

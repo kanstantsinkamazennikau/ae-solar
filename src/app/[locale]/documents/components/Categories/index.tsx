@@ -1,6 +1,6 @@
 "use client";
 
-import { DocumentsContext } from "@/app/[locale]/context/DocumentsContext";
+import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import {
   DocumentsTypesOther,
   DocumentsTypesPresentation,

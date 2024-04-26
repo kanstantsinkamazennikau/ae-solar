@@ -7,7 +7,7 @@ import ModelsInCart from "@/app/[locale]/cart/components/ModelsInCart";
 import Contacts from "@/app/[locale]/company/imprint/components/Contacts";
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Loader from "@/app/[locale]/components/common/Loader";
-import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import Image from "next/image";
 import { useContext, useState } from "react";
 

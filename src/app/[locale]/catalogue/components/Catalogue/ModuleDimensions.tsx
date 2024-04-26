@@ -1,6 +1,6 @@
 "use client";
 
-import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";

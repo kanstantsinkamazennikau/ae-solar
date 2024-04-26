@@ -1,6 +1,6 @@
 "use client";
 
-import { DocumentsContext } from "@/app/[locale]/context/DocumentsContext";
+import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import { PublishersInfroWithIntersectionProps } from "@/app/[locale]/documents/components/PublishersInfroWithIntersection/types";
 import parse from "html-react-parser";
 import { useContext, useEffect, useRef } from "react";

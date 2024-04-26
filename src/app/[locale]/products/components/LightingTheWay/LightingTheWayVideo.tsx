@@ -1,7 +1,7 @@
 "use client";
 
 import Loader from "@/app/[locale]/components/common/Loader";
-import { ProductsContext } from "@/app/[locale]/context/ProductsContext";
+import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import Image from "next/image";
 import { useContext, useEffect, useRef, useState } from "react";

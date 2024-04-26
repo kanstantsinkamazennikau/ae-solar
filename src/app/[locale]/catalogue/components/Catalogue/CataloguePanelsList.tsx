@@ -18,7 +18,7 @@ import Loader from "@/app/[locale]/components/common/Loader";
 import {
   ConstructorContext,
   Model,
-} from "@/app/[locale]/context/ConstructorContext";
+} from "@/app/[locale]/context/constructorContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { PanelsListPrettyfiedResponse } from "@/app/[locale]/products/[id]/types";
 import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";

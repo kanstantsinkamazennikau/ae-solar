@@ -1,5 +1,5 @@
 import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
-import { Model } from "@/app/[locale]/context/ConstructorContext";
+import { Model } from "@/app/[locale]/context/constructorContext";
 import { PanelsListPrettyfiedResponse } from "@/app/[locale]/products/[id]/types";
 
 export interface ConclusionProps {

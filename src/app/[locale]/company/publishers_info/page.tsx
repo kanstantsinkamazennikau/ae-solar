@@ -1,5 +1,5 @@
 "use client";
-import { DocumentsContext } from "@/app/[locale]/context/DocumentsContext";
+import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
 import PublishersInfroWithIntersection from "@/app/[locale]/documents/components/PublishersInfroWithIntersection";
 import { DOCUMENTS_PUBLISHERS_INFO_FILES } from "@/app/[locale]/company/publishers_info/constants";

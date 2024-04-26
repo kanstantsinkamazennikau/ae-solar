@@ -2,7 +2,7 @@
 
 import { CheckoutFormFileds } from "@/app/[locale]/cart/components/CheckoutForm/types";
 import BuyerForm from "@/app/[locale]/components/common/BuyerForm";
-import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import {
   CART_LOCALSTORAGE,

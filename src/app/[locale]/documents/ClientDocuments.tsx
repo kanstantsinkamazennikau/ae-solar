@@ -1,7 +1,7 @@
 "use client";
 
 import Accordion from "@/app/[locale]/components/common/Accordion";
-import { DocumentsContext } from "@/app/[locale]/context/DocumentsContext";
+import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
 import DocumentsAccordionWithIntersection from "@/app/[locale]/documents/components/DocumentsAccordionWithIntersection";
 import DocumentsLoader from "@/app/[locale]/documents/components/DocumentsLoader";
 import Presentation from "@/app/[locale]/documents/components/Presentation";

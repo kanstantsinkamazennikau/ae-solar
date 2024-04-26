@@ -2,7 +2,7 @@
 
 import GetInTouch from "@/app/[locale]/components/GetInTouch";
 import MainPageFAQ from "@/app/[locale]/components/MainPageFAQ";
-import { ProductsContext } from "@/app/[locale]/context/ProductsContext";
+import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import Advantages from "@/app/[locale]/products/components/Advantages";
 import LightingTheWay from "@/app/[locale]/products/components/LightingTheWay";
 import Starfield from "@/app/[locale]/products/components/StarField";

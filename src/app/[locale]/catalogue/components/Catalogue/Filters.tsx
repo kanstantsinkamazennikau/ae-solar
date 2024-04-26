@@ -7,7 +7,7 @@ import {
   MODELS_LIST,
   TECHNOLOGIES_LIST,
 } from "@/app/[locale]/catalogue/constants";
-import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import { useContext, useEffect } from "react";

@@ -2,7 +2,7 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import { ModelsProps } from "@/app/[locale]/components/common/Navigation/types";
-import { Model, ModelContext } from "@/app/[locale]/context/ModelContext";
+import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";
 import Image from "next/image";

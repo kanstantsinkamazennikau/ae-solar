@@ -2,7 +2,7 @@
 
 import CartModelDetails from "@/app/[locale]/cart/components/ModelsInCart/CartModelDetails";
 import Button from "@/app/[locale]/components/common/Button";
-import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
 import Image from "next/image";

@@ -1,6 +1,6 @@
 "use client";
 
-import { MainPageVideoContext } from "@/app/[locale]/context/MainPageVideoContext";
+import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import { useContext, useEffect, useRef } from "react";
 
