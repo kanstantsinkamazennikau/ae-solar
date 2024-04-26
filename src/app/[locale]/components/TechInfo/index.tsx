@@ -50,7 +50,7 @@ export default function TechDescription() {
       <BasicWidthContainer styles="relative">
         <Bens />
       </BasicWidthContainer>
-      <SequenceAnimation />
+      {/* <SequenceAnimation /> */}
       <BasicWidthContainer styles="relative">
         <FeaturedProducts />
       </BasicWidthContainer>
