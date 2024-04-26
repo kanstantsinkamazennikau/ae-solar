@@ -3,11 +3,10 @@
 import i18next from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import resourcesToBackend from "i18next-resources-to-backend";
-import { useEffect } from "react";
+import { useTranslation as useTranslationOrg } from "next-i18next";
+import { useEffect, useState } from "react";
 import { initReactI18next } from "react-i18next";
 import { LocaleTypes, getOptions, locales } from "./settings";
-import { useState } from "react";
-import { useTranslation as useTranslationOrg } from "next-i18next";
 
 const runsOnServerSide = typeof window === "undefined";
 

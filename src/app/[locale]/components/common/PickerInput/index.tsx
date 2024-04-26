@@ -1,9 +1,6 @@
 import Button from "@/app/[locale]/components/common/Button";
 import { PickerInputProps } from "@/app/[locale]/components/common/PickerInput/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import { useParams } from "next/navigation";
 import { useContext, useState } from "react";
 
 export default function PickerInput({

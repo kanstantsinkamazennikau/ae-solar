@@ -17,7 +17,7 @@ import {
   useForm,
 } from "react-hook-form";
 import { Trans } from "react-i18next";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 
 export default function BuyerForm({
   inputsRules,
@@ -68,7 +68,7 @@ export default function BuyerForm({
       await submitFunction(data);
       setIsShowMessageAfterSubmit(true);
     } catch (error) {
-      toast.error((error as Error).message);
+      toast.error((error as Error).message, { duration: 3000 });
     } finally {
       setLoading(false);
     }

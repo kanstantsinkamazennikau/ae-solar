@@ -2,7 +2,6 @@
 
 import SubMenuItems from "@/app/[locale]/components/common/Navigation/SubMenuItems";
 import { NavLinkProps } from "@/app/[locale]/components/common/Navigation/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import SubNavigationProductPanels from "@/app/[locale]/products/components/SubNavigationProductPanels";
 import highlightNavigationLink from "@/app/[locale]/utils/highlightNavigationLink";

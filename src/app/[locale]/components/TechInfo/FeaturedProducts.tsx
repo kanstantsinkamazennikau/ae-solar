@@ -39,7 +39,7 @@ const Video = ({ videoLink }: { videoLink: string }) => {
         <Image
           src={"/videos/productRangeMobileStatic.jpg"}
           alt="productRangeMobile"
-          priority
+          // priority
           width={1320}
           height={60}
           className="

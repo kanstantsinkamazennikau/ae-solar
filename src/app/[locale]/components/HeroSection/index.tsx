@@ -1,28 +1,93 @@
 "use client";
 
+import Loader from "@/app/[locale]/components/common/Loader";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Trans } from "react-i18next";
-import parse from "html-react-parser";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 
 const HeroSectionVideo = dynamic(() => import("./HeroSectionVideo"), {
   ssr: false,
 });
 
 export default function HeroSection() {
-  const { isStartAnimation, isLongVideoLoadingTime } =
-    useContext(MainPageVideoContext);
-  useClientTranslation("", "");
-
+  const {
+    isStartAnimation,
+    setIsStartAnimation,
+    isLongVideoLoadingTime,
+    setIsLongVideoLoadingTime,
+    isPlaying,
+  } = useContext(MainPageVideoContext);
+  const [startFadeIn, setStartFadeIn] = useState(false);
   const { translation } = useContext(i18nProviderContext);
+  const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(
+    undefined
+  );
+
+  useEffect(() => {
+    setIsIOSDevice(isIOS());
+
+    const timerId = setTimeout(
+      () => {
+        setIsLongVideoLoadingTime(true);
+        setIsStartAnimation(true);
+      },
+      isIOS() ? 300 : 5000
+    );
+
+    if (isStartAnimation) {
+      clearTimeout(timerId);
+    }
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [
+    isStartAnimation,
+    setIsLongVideoLoadingTime,
+    setIsStartAnimation,
+    isIOSDevice,
+  ]);
 
   return (
     <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[70vh] overflow-x-hidden overflow-hidden">
-      <HeroSectionVideo />
+      <div className="h-full w-full">
+        {!isLongVideoLoadingTime && !isPlaying && (
+          <>
+            <Image
+              src={`/videos/headerOpeningPoster.webp`}
+              alt="headerOpeningPoster"
+              priority
+              width={1920}
+              height={1080}
+              className={`w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-screen`}
+            />
+            <div
+              className={`z-20 absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 `}
+            >
+              <Loader externalStyle="h-auto" />
+            </div>
+          </>
+        )}
+        {(isLongVideoLoadingTime || isIOSDevice) && (
+          <Image
+            src={`/images/heroSectionBackground.jpeg`}
+            alt="heroSectionBackground"
+            priority
+            width={1920}
+            height={1080}
+            onLoad={() => setStartFadeIn(true)}
+            className={`object-cover h-full w-full ${
+              startFadeIn ? "animate-[fadeIn_0.7s_ease-in-out]" : "opacity-0"
+            }`}
+          />
+        )}
+        {!isLongVideoLoadingTime && <HeroSectionVideo />}
+      </div>
+
       <div
         className={`
           absolute

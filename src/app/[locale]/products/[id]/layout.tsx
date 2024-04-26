@@ -27,16 +27,20 @@ export async function generateMetadata({
   }`;
   const keywords =
     metadata?.[PRODUCT_PANEL_KEYWORDS[id] as keyof typeof metadata] || "";
+  const canonicalURL = `${BASE_URL}/products/${id}`;
 
   return {
     title,
     description,
     keywords,
     metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: canonicalURL,
+    },
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}/products/${id}`,
+      url: canonicalURL,
       type: "website",
     },
   };

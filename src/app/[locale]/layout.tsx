@@ -9,14 +9,13 @@ import MobileSideMenuProvider from "@/app/[locale]/context/mobileSideMenuContext
 import ModelProvider from "@/app/[locale]/context/modelContext";
 import ProductsContextProvider from "@/app/[locale]/context/productsContext";
 import StickyNavigationProvider from "@/app/[locale]/context/stickyNavigationContext";
-import ToastContainerProvider from "@/app/[locale]/context/toastProvider";
 import { LocaleTypes, locales } from "@/app/[locale]/i18n/settings";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
-import "react-toastify/dist/ReactToastify.css";
+import { Toaster } from "sonner";
 
 export const revalidate = 3600;
 
@@ -130,7 +129,7 @@ export async function generateMetadata({
   const metadata = await getOpengraphMetadata(locale);
 
   return {
-    title: "AE-Solar",
+    title: metadata?.metadataTitleMainPage,
     description: metadata?.metadataDescriptionMainPage,
     metadataBase: new URL(
       `${
@@ -139,8 +138,11 @@ export async function generateMetadata({
           : BASE_URL
       }`
     ),
+    alternates: {
+      canonical: BASE_URL,
+    },
     openGraph: {
-      title: "AE-Solar",
+      title: metadata?.metadataTitleMainPage,
       description: metadata?.metadataDescriptionMainPage,
       url: BASE_URL,
       type: "website",
@@ -155,11 +157,9 @@ const getLayoutData = async () => {
   };
   const footerPath = `/footers`;
   const cookiesPath = `/cookies`;
-  const commonPath = `/commons`;
   const responseData = await Promise.all([
     fetchAPI(footerPath, urlParamsObject),
     fetchAPI(cookiesPath, urlParamsObject),
-    fetchAPI(commonPath, urlParamsObject),
   ]);
   return responseData;
 };
@@ -181,7 +181,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
         <>
-          <ToastContainerProvider />
+          <Toaster richColors />
           <ModelProvider>
             <MobileSideMenuProvider>
               <ConstructorProvider>

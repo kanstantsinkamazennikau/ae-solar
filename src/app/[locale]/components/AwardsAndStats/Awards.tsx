@@ -59,7 +59,7 @@ export default function Awards() {
                 alt={image}
                 width={120}
                 height={120}
-                priority
+                // priority
                 quality={100}
                 className={`
                   object-contain

@@ -1,11 +1,8 @@
 "use client";
 
 import { DownloadPresentationProps } from "@/app/[locale]/components/common/DownloadPresentation/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 
 export default function DownloadPresentation({
@@ -76,7 +73,7 @@ export default function DownloadPresentation({
             pl-4
             pt-4
             !bg-cover
-            [background:url('/images/downloadPresentationBg.png')_padding-box_no-repeat,linear-gradient(180deg,_rgba(227,_34,_34,_82%)_0%,_#131313_100%)_border-box]
+            [background:url('/images/downloadPresentationBg.webp')_padding-box_no-repeat,linear-gradient(180deg,_rgba(227,_34,_34,_82%)_0%,_#131313_100%)_border-box]
           "
         >
           <Image

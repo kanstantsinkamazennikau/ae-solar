@@ -18,17 +18,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/api/outstatic/images/:path*",
-        destination: "/images/:path*",
-        permanent: true,
-      },
-      {
         source: "/products/Dr-Hamed-Hanifi_AESOLAR_TERRA_.pdf",
         destination:
           "/documents/presentations/Dr-Hamed-Hanifi_AESOLAR_TERRA_.pdf",
         permanent: true,
       },
-
       {
         source:
           "/wp-content/uploads/2024/01/AE_SMD-108E_395W-410W_Ver24.1.1.pdf",
@@ -126,7 +120,6 @@ const nextConfig = {
       },
     ];
   },
-  pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
 };
 
 module.exports = nextConfig;

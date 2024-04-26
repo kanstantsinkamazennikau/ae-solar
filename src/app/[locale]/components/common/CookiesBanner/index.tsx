@@ -3,7 +3,6 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import Button from "@/app/[locale]/components/common/Button";
 import { CookiesProps } from "@/app/[locale]/components/common/Footer/types";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { COOKIES_USER_CONSENT_FLAG } from "@/app/[locale]/utils/constants";
 import Cookies from "js-cookie";

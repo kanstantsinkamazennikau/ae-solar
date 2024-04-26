@@ -10,15 +10,19 @@ export async function generateMetadata({
   const metadata = await getOpengraphMetadata(locale);
   const title = `${metadata?.metadataTitleContacts}`;
   const description = `${metadata?.metadataDescriptionContacts}`;
+  const canonicalURL = `${BASE_URL}/contacts`;
 
   return {
     title,
     description,
     metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: canonicalURL,
+    },
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}/contacts`,
+      url: canonicalURL,
       type: "website",
     },
   };

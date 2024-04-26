@@ -1,17 +1,55 @@
 "use client";
 
+import Loader from "@/app/[locale]/components/common/Loader";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
+import { isIOS } from "@/app/[locale]/utils/isIOS";
 import dynamic from "next/dynamic";
-import { useContext } from "react";
+import Image from "next/image";
+import { useContext, useEffect, useState } from "react";
 
 const LightingTheWayVideo = dynamic(() => import("./LightingTheWayVideo"), {
   ssr: false,
 });
 
 export default function LightingTheWay() {
-  const { isStartAnimation } = useContext(ProductsContext);
+  const {
+    isStartAnimation,
+    setIsStartAnimation,
+    isLongVideoLoadingTime,
+    setIsLongVideoLoadingTime,
+    isPlaying,
+  } = useContext(ProductsContext);
+  const [startFadeIn, setStartFadeIn] = useState(false);
   const { translation } = useContext(i18nProviderContext);
+  const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(
+    undefined
+  );
+
+  useEffect(() => {
+    setIsIOSDevice(isIOS());
+
+    const timerId = setTimeout(
+      () => {
+        setIsLongVideoLoadingTime(true);
+        setIsStartAnimation(true);
+      },
+      isIOSDevice ? 300 : 5000
+    );
+
+    if (isStartAnimation) {
+      clearTimeout(timerId);
+    }
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [
+    isStartAnimation,
+    setIsLongVideoLoadingTime,
+    setIsStartAnimation,
+    isIOSDevice,
+  ]);
 
   return (
     <div className={`relative`}>
@@ -30,7 +68,50 @@ export default function LightingTheWay() {
           z-0
         `}
       >
-        <LightingTheWayVideo />
+        <div>
+          {!isLongVideoLoadingTime && !isPlaying && (
+            <>
+              <Image
+                src={`/videos/products/HeaderFlowerPoster.webp`}
+                alt="HeaderFlowerPoster"
+                priority
+                width={1920}
+                height={1080}
+                className={`!w-screen object-cover fixed -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2`}
+              />
+              <div
+                className={`!w-screen object-cover fixed -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2`}
+              >
+                <Loader externalStyle="!h-screen" />
+              </div>
+            </>
+          )}
+          {(isLongVideoLoadingTime || isIOSDevice) && (
+            <Image
+              src={`/images/products/productsFlower.png`}
+              alt="productsFlower"
+              priority
+              width={1920}
+              height={1080}
+              onLoad={() => setStartFadeIn(true)}
+              className={`!w-screen object-cover fixed
+              2xl:!-top-32
+              xl:!-top-20
+              lg:!-top-10
+              min-[640px]:!top-10
+              min-[540px]:!top-20
+              min-[540px]:scale-100
+              scale-150
+              !top-28
+              transition-all
+              duration-[1.5s]
+              !translate-y-0
+              ${startFadeIn ? "animate-[fadeIn_0.5s_ease-in-out]" : "opacity-0"}
+           `}
+            />
+          )}
+          {!isLongVideoLoadingTime && <LightingTheWayVideo />}
+        </div>
         <div
           className={`
             absolute

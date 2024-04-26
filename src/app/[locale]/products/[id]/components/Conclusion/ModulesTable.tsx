@@ -9,7 +9,7 @@ import { PRODUCT_CONCLUSION_TABLE_HEADERS } from "@/app/[locale]/products/[id]/c
 import { CART_LOCALSTORAGE } from "@/app/[locale]/utils/constants";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 
 export default function ModulesTable({ id, panelsList }: ConclusionProps) {
   const { setModelsInBag, modelsInBag } = useContext(ConstructorContext);
@@ -53,7 +53,7 @@ export default function ModulesTable({ id, panelsList }: ConclusionProps) {
       localStorage.setItem(CART_LOCALSTORAGE, JSON.stringify(modelsInBag));
       return modelsInBag;
     });
-    toast.success(translation.successfullyAdded);
+    toast.success(translation.successfullyAdded, { duration: 3000 });
   };
 
   const removeModel = (model: string) => {

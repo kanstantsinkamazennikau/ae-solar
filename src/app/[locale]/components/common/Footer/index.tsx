@@ -7,7 +7,6 @@ import PolicyLink from "@/app/[locale]/components/common/Footer/PolicyLink";
 import Social from "@/app/[locale]/components/common/Footer/Social";
 import { NavigationProps } from "@/app/[locale]/components/common/Footer/types";
 import Logo from "@/app/[locale]/components/common/Logo";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import {
   FOOTER_LINKS_ARRAY,
   POLICY_LINKS,
@@ -45,7 +44,7 @@ export default function Footer({
               <Image
                 src={`/images/footer/productLeft.png`}
                 alt="productLeft"
-                priority
+                // priority
                 width={870}
                 height={547}
                 quality={100}
@@ -54,7 +53,7 @@ export default function Footer({
               <Image
                 src={`/images/footer/productRight.png`}
                 alt="productRight"
-                priority
+                // priority
                 width={800}
                 height={547}
                 quality={100}

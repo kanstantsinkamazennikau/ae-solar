@@ -25,7 +25,7 @@ export default function Navigation({
 }: {
   headerAttributes: NavigationProps;
 }) {
-  useClientTranslation("", "");
+  useClientTranslation("en", "translation");
   const locale = useParams()?.locale as LocaleTypes;
   const { sticky } = useContext(StickyNavigationContext);
   const productsContext = useContext(ProductsContext);

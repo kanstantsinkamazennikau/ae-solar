@@ -7,6 +7,8 @@ export interface MainPageVideoContext {
   isStartAnimation: boolean;
   setIsLongVideoLoadingTime: Dispatch<SetStateAction<boolean>>;
   isLongVideoLoadingTime: boolean;
+  isPlaying: boolean;
+  setIsPlaying: Dispatch<SetStateAction<boolean>>;
 }
 
 export const MainPageVideoContext = createContext<MainPageVideoContext>(null!);
@@ -18,6 +20,7 @@ export default function MainPageVideoContextProvider({
 }) {
   const [isStartAnimation, setIsStartAnimation] = useState(false);
   const [isLongVideoLoadingTime, setIsLongVideoLoadingTime] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <MainPageVideoContext.Provider
@@ -26,6 +29,8 @@ export default function MainPageVideoContextProvider({
         setIsStartAnimation,
         isLongVideoLoadingTime,
         setIsLongVideoLoadingTime,
+        isPlaying,
+        setIsPlaying,
       }}
     >
       {children}

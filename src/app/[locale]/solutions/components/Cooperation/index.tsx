@@ -3,13 +3,10 @@
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import TwoTierHeading from "@/app/[locale]/components/common/TwoTierHeading";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import CooperationStats from "@/app/[locale]/solutions/components/Cooperation/CooperationStats";
 import { SOLUTIONS_COOPERATION } from "@/app/[locale]/solutions/constants";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { Trans } from "react-i18next";
 
