@@ -51,7 +51,7 @@ export default function StatWithAnimationCounter({
         }`}
       >
         <div>
-          <p className="font-semibold leading-none [font-size:_clamp(26px,5vw,94px)] test ">
+          <p className="font-semibold leading-none [font-size:_clamp(26px,5vw,94px)]">
             {count + (sign ?? "")}
           </p>
           <p className="[font-size:_clamp(10px,2vw,22px)] text-dark-gray-800 md:whitespace-nowrap whitespace-normal">

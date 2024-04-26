@@ -69,23 +69,31 @@ export default function HeroSection() {
                 className={`w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-screen`}
               />
               <div
-                className={`z-20 absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2`}
+                className={`z-20 absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 `}
               >
                 <Loader externalStyle="h-auto" />
               </div>
             </>
           )}
         {(isLongVideoLoadingTime || isIOSDevice) && (
+          // <Image
+          //   src={`/images/heroSectionBackground.jpeg`}
+          //   alt="heroSectionBackground"
+          //   priority
+          //   width={1920}
+          //   height={1080}
+          //   onLoad={() => setStartFadeIn(true)}
+          //   className={`object-cover h-full w-full ${
+          //     startFadeIn ? "animate-[fadeIn_0.7s_ease-in-out]" : "opacity-0"
+          //   }`}
+          // />
           <Image
-            src={`/images/heroSectionBackground.jpeg`}
-            alt="heroSectionBackground"
+            src={`/videos/headerOpeningPoster.webp`}
+            alt="headerOpeningPoster"
             priority
             width={1920}
             height={1080}
-            onLoad={() => setStartFadeIn(true)}
-            className={`object-cover h-full w-full ${
-              startFadeIn ? "animate-[fadeIn_0.7s_ease-in-out]" : "opacity-0"
-            }`}
+            className={`w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-screen`}
           />
         )}
         {!isLongVideoLoadingTime && <HeroSectionVideo />}
