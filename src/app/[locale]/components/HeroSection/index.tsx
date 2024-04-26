@@ -23,9 +23,13 @@ export default function HeroSection() {
   } = useContext(MainPageVideoContext);
   const [startFadeIn, setStartFadeIn] = useState(false);
   const { translation } = useContext(i18nProviderContext);
-  const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(true);
+  const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(
+    undefined
+  );
 
   useEffect(() => {
+    console.log(isIOS());
+
     setIsIOSDevice(isIOS());
 
     const timerId = setTimeout(
