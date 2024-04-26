@@ -253,13 +253,14 @@ export default function ProductIntroVideo() {
             <SplideTrack>
               {PRODUCT_INTRO_PANELS_IMAGES.map((video) => (
                 <SplideSlide key={video} className="flex justify-center">
-                  {isIOSDevice !== undefined && isIOSDevice ? (
-                    <Image
-                      alt={model}
-                      src={`/videos/slider/${video}Static.png`}
-                      width={1320}
-                      height={800}
-                      className="
+                  {isIOSDevice !== undefined &&
+                    (isIOSDevice ? (
+                      <Image
+                        alt={model}
+                        src={`/videos/slider/${video}Static.png`}
+                        width={1320}
+                        height={800}
+                        className="
                         w-[1920px]
                         2xl:h-[800px]
                         xl:h-[650px]
@@ -267,29 +268,29 @@ export default function ProductIntroVideo() {
                         h-[300px]
                         object-cover
                       "
-                    />
-                  ) : (
-                    <video
-                      width="1320"
-                      height="800"
-                      muted
-                      autoPlay
-                      key={model}
-                      className="
-                        w-[1920px]
-                        2xl:h-[800px]
-                        xl:h-[650px]
-                        md:h-[500px]
-                        h-[300px]
-                        object-cover
-                      "
-                    >
-                      <source
-                        src={`/videos/slider/${video}.mp4`}
-                        type="video/mp4"
                       />
-                    </video>
-                  )}
+                    ) : (
+                      <video
+                        width="1320"
+                        height="800"
+                        muted
+                        autoPlay
+                        key={model}
+                        className="
+                        w-[1920px]
+                        2xl:h-[800px]
+                        xl:h-[650px]
+                        md:h-[500px]
+                        h-[300px]
+                        object-cover
+                      "
+                      >
+                        <source
+                          src={`/videos/slider/${video}.mp4`}
+                          type="video/mp4"
+                        />
+                      </video>
+                    ))}
                 </SplideSlide>
               ))}
             </SplideTrack>
