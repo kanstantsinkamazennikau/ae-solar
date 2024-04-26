@@ -13,7 +13,7 @@ export default function Social({ socialText }: { socialText?: string }) {
             <Image
               src={`/images/footer/${icon}`}
               alt={icon}
-              priority
+              // priority
               width={24}
               height={24}
             />

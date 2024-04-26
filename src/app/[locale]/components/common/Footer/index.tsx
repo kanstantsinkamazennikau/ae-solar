@@ -33,7 +33,7 @@ export default function Footer({
           <Image
             src={`/images/glowFull.png`}
             alt="glow"
-            priority
+            // priority
             width={1320}
             height={60}
             className="rotate-180 relative z-10"

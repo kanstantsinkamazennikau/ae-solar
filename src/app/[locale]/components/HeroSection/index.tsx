@@ -80,8 +80,8 @@ export default function HeroSection() {
               alt="heroSectionBackground"
               priority
               quality={100}
-              width={1920}
-              height={1080}
+              width={1376}
+              height={768}
               className={`w-full object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full md:hidden`}
             />
             <Image
