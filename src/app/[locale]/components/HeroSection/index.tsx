@@ -23,9 +23,7 @@ export default function HeroSection() {
   } = useContext(MainPageVideoContext);
   const [startFadeIn, setStartFadeIn] = useState(false);
   const { translation } = useContext(i18nProviderContext);
-  const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(
-    undefined
-  );
+  const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(true);
 
   useEffect(() => {
     setIsIOSDevice(isIOS());
@@ -78,6 +76,15 @@ export default function HeroSection() {
         {(isLongVideoLoadingTime || isIOSDevice) && (
           <>
             <Image
+              src={`/images/heroSectionBackground.webp`}
+              alt="heroSectionBackground"
+              priority
+              quality={100}
+              width={1920}
+              height={1080}
+              className={`w-full object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full md:hidden`}
+            />
+            <Image
               src={`/images/heroSectionBackground.jpeg`}
               alt="heroSectionBackground"
               priority
@@ -87,14 +94,6 @@ export default function HeroSection() {
               className={`object-cover h-full w-full md:block hidden ${
                 startFadeIn ? "animate-[fadeIn_0.7s_ease-in-out]" : "opacity-0"
               }`}
-            />
-            <Image
-              src={`/images/heroSectionBackground.webp`}
-              alt="headerOpeningPoster"
-              priority
-              width={1920}
-              height={1080}
-              className={`w-full object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full md:hidden`}
             />
           </>
         )}
