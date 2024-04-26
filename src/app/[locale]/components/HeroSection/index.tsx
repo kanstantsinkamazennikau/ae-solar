@@ -55,23 +55,26 @@ export default function HeroSection() {
   return (
     <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[70vh] overflow-x-hidden overflow-hidden">
       <div className="h-full w-full">
-        {!isLongVideoLoadingTime && !isPlaying && (
-          <>
-            <Image
-              src={`/videos/headerOpeningPoster.webp`}
-              alt="headerOpeningPoster"
-              priority
-              width={1920}
-              height={1080}
-              className={`w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-screen`}
-            />
-            <div
-              className={`z-20 absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2`}
-            >
-              <Loader externalStyle="h-auto" />
-            </div>
-          </>
-        )}
+        {!isLongVideoLoadingTime &&
+          !isPlaying &&
+          !isIOSDevice &&
+          isIOSDevice !== undefined && (
+            <>
+              <Image
+                src={`/videos/headerOpeningPoster.webp`}
+                alt="headerOpeningPoster"
+                priority
+                width={1920}
+                height={1080}
+                className={`w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-screen`}
+              />
+              <div
+                className={`z-20 absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2`}
+              >
+                <Loader externalStyle="h-auto" />
+              </div>
+            </>
+          )}
         {(isLongVideoLoadingTime || isIOSDevice) && (
           <Image
             src={`/images/heroSectionBackground.jpeg`}
