@@ -7,8 +7,8 @@ import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthCont
 import Button from "@/app/[locale]/components/common/Button";
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
 import SubNavigation from "@/app/[locale]/components/common/Navigation/SubNavigation";
-import { Model, ModelContext } from "@/app/[locale]/context/modelContext";
-import { StickyNavigationContext } from "@/app/[locale]/context/stickyNavigationContext";
+import { Model, ModelContext } from "@/app/[locale]/context/ModelContext";
+import { StickyNavigationContext } from "@/app/[locale]/context/StickyNavigationContext";
 import {
   PRODUCT_INTRO_PANELS,
   PRODUCT_INTRO_PANELS_IMAGES,

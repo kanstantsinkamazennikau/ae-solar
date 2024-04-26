@@ -1,4 +1,4 @@
-import { Model } from "@/app/[locale]/context/constructorContext";
+import { Model } from "@/app/[locale]/context/ConstructorContext";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import I18nProvider from "@/app/[locale]/i18nProvider";
 import { BASE_URL } from "@/app/[locale]/layout";

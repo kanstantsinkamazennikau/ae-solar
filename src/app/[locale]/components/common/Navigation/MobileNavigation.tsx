@@ -5,7 +5,7 @@ import { NavigationProps } from "@/app/[locale]/components/common/Footer/types";
 import Cart from "@/app/[locale]/components/common/Navigation/Cart";
 import NavLink from "@/app/[locale]/components/common/Navigation/NavLink";
 import { MobileNavigationProps } from "@/app/[locale]/components/common/Navigation/types";
-import { MobileSideMenuContext } from "@/app/[locale]/context/mobileSideMenuContext";
+import { MobileSideMenuContext } from "@/app/[locale]/context/MobileSideMenuContext";
 import {
   FOOTER_CONTACT_INFO,
   HEADER_NAV_LINKS_ARRAY,

@@ -1,7 +1,7 @@
 "use client";
 
 import Loader from "@/app/[locale]/components/common/Loader";
-import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
+import { MainPageVideoContext } from "@/app/[locale]/context/MainPageVideoContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import dynamic from "next/dynamic";

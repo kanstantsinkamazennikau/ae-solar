@@ -1,6 +1,6 @@
 "use client";
 
-import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
