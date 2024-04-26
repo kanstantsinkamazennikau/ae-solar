@@ -28,8 +28,6 @@ export default function HeroSection() {
   );
 
   useEffect(() => {
-    console.log(isIOS());
-
     setIsIOSDevice(isIOS());
 
     const timerId = setTimeout(
