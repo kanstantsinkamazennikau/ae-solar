@@ -1,6 +1,6 @@
 "use client";
 
-import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
+import { DocumentsContext } from "@/app/[locale]/context/DocumentsContext";
 import Categories from "@/app/[locale]/documents/components/Categories";
 import Filter from "@/app/[locale]/documents/components/Filter";
 import SearchBar from "@/app/[locale]/documents/components/SearchBar";

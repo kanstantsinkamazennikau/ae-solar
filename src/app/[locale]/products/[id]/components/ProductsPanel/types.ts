@@ -1,4 +1,4 @@
-import { Model } from "@/app/[locale]/context/constructorContext";
+import { Model } from "@/app/[locale]/context/ConstructorContext";
 import { Dispatch, SetStateAction } from "react";
 
 export interface ProductsPanelProps {

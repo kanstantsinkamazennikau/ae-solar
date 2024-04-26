@@ -1,6 +1,6 @@
 "use client";
 
-import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { useContext } from "react";
 

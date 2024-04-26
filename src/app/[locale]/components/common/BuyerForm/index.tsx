@@ -5,7 +5,7 @@ import Button from "@/app/[locale]/components/common/Button";
 import Inputs from "@/app/[locale]/components/common/BuyerForm/Inputs";
 import { BuyerFormProps } from "@/app/[locale]/components/common/BuyerForm/types";
 import Loader from "@/app/[locale]/components/common/Loader";
-import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";

@@ -1,5 +1,5 @@
 import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
-import { ConstructorContext } from "@/app/[locale]/context/constructorContext";
+import { ConstructorContext } from "@/app/[locale]/context/ConstructorContext";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { DesktopTableRowProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";

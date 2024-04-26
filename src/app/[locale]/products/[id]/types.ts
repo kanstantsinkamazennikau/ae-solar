@@ -1,5 +1,5 @@
 import { Applications } from "@/app/[locale]/catalogue/components/Catalogue/types";
-import { Model } from "@/app/[locale]/context/constructorContext";
+import { Model } from "@/app/[locale]/context/ConstructorContext";
 
 export interface ProductPageProps {
   params: {

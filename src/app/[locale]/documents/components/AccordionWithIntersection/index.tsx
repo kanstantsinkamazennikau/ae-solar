@@ -1,7 +1,7 @@
 "use client";
 
 import Accordion from "@/app/[locale]/components/common/Accordion";
-import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
+import { DocumentsContext } from "@/app/[locale]/context/DocumentsContext";
 import { AccordionWithIntersectionPropps } from "@/app/[locale]/company/faq/types";
 import { useContext, useEffect, useRef } from "react";
 

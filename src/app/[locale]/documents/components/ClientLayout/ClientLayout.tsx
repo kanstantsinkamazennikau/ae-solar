@@ -2,7 +2,7 @@
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
 import DocumentsHeading from "@/app/[locale]/components/common/DocumentsHeading";
-import DocumentsProvider from "@/app/[locale]/context/documentsContext";
+import DocumentsProvider from "@/app/[locale]/context/DocumentsContext";
 import CategoriesWithControl from "@/app/[locale]/documents/components/CategoriesControl";
 import Image from "next/image";
 import { usePathname } from "next/navigation";

@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/app/[locale]/components/common/Button";
-import { DocumentsContext } from "@/app/[locale]/context/documentsContext";
+import { DocumentsContext } from "@/app/[locale]/context/DocumentsContext";
 import SearchBar from "@/app/[locale]/documents/components/SearchBar";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { HEADER_SUBNAVIGATION_PANELS_MODELS } from "@/app/[locale]/utils/constants";

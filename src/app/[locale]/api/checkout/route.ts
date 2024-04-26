@@ -1,5 +1,5 @@
 import { nodemailerTransport } from "@/app/[locale]/api/nodemailerTransport";
-import { ConstructorModelWithId } from "@/app/[locale]/context/constructorContext";
+import { ConstructorModelWithId } from "@/app/[locale]/context/ConstructorContext";
 import { NextResponse, type NextRequest } from "next/server";
 import Mail from "nodemailer/lib/mailer";
 

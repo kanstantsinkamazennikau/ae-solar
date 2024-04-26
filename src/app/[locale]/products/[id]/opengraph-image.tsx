@@ -1,4 +1,4 @@
-import { Model } from "@/app/[locale]/context/constructorContext";
+import { Model } from "@/app/[locale]/context/ConstructorContext";
 import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { ImageResponse } from "next/og";
