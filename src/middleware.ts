@@ -6,7 +6,7 @@ import { COOKIES_USER_CONSENT_FLAG } from "@/app/[locale]/utils/constants";
 
 export const config = {
   // Do not run the middleware on the following paths
-  matcher: ["/((?!.*\\.).*)", "/opengraph-image.tsx"],
+  matcher: ["/((?!.*\\.).*)"],
 };
 
 // ["/((?!.*\\.).*)", "/favicon.ico"];

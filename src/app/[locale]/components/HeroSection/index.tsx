@@ -54,7 +54,7 @@ export default function HeroSection() {
 
   return (
     <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[70vh] overflow-x-hidden overflow-hidden">
-      <div>
+      <div className="h-full w-full">
         {!isLongVideoLoadingTime && !isPlaying && (
           <>
             <Image

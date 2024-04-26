@@ -18,11 +18,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/api/outstatic/images/:path*",
-        destination: "/images/:path*",
-        permanent: true,
-      },
-      {
         source: "/products/Dr-Hamed-Hanifi_AESOLAR_TERRA_.pdf",
         destination:
           "/documents/presentations/Dr-Hamed-Hanifi_AESOLAR_TERRA_.pdf",

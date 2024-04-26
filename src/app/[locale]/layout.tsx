@@ -1,5 +1,3 @@
-import "./globals.css";
-
 import Cookies from "@/app/[locale]/components/common/CookiesBanner";
 import Footer from "@/app/[locale]/components/common/Footer";
 import Navigation from "@/app/[locale]/components/common/Navigation";
@@ -16,6 +14,7 @@ import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata"
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { Toaster } from "sonner";
+import "./globals.css";
 
 export const revalidate = 3600;
 
