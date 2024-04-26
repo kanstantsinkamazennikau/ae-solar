@@ -2,7 +2,6 @@
 
 import Button from "@/app/[locale]/components/common/Button";
 import LightBoxYoutubeVideo from "@/app/[locale]/components/common/LightBoxYoutubeVideo";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import Image from "next/image";
 import { useContext, useState } from "react";

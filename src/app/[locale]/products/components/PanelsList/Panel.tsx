@@ -1,8 +1,6 @@
 "use client";
 
 import LinkWithArrow from "@/app/[locale]/components/common/LinkWithArrow";
-import { useClientTranslation } from "@/app/[locale]/i18n/client";
-import { LocaleTypes } from "@/app/[locale]/i18n/settings";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { PanelProps } from "@/app/[locale]/products/components/PanelsList/types";
 import {
@@ -12,7 +10,6 @@ import {
 import { isIOS } from "@/app/[locale]/utils/isIOS";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useContext, useLayoutEffect, useState } from "react";
 const PanelVideo = dynamic(() => import("./PanelVideo"), {
   ssr: false,
