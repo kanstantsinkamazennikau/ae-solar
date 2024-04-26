@@ -76,25 +76,27 @@ export default function HeroSection() {
             </>
           )}
         {(isLongVideoLoadingTime || isIOSDevice) && (
-          // <Image
-          //   src={`/images/heroSectionBackground.jpeg`}
-          //   alt="heroSectionBackground"
-          //   priority
-          //   width={1920}
-          //   height={1080}
-          //   onLoad={() => setStartFadeIn(true)}
-          //   className={`object-cover h-full w-full ${
-          //     startFadeIn ? "animate-[fadeIn_0.7s_ease-in-out]" : "opacity-0"
-          //   }`}
-          // />
-          <Image
-            src={`/videos/headerOpeningPoster.webp`}
-            alt="headerOpeningPoster"
-            priority
-            width={1920}
-            height={1080}
-            className={`w-full object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full`}
-          />
+          <>
+            <Image
+              src={`/images/heroSectionBackground.jpeg`}
+              alt="heroSectionBackground"
+              priority
+              width={1920}
+              height={1080}
+              onLoad={() => setStartFadeIn(true)}
+              className={`object-cover h-full w-full md:block hidden ${
+                startFadeIn ? "animate-[fadeIn_0.7s_ease-in-out]" : "opacity-0"
+              }`}
+            />
+            <Image
+              src={`/images/heroSectionBackground.webp`}
+              alt="headerOpeningPoster"
+              priority
+              width={1920}
+              height={1080}
+              className={`w-full object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full md:hidden`}
+            />
+          </>
         )}
         {!isLongVideoLoadingTime && <HeroSectionVideo />}
       </div>
