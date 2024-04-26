@@ -274,7 +274,6 @@ export default function ProductIntroVideo() {
                       height="800"
                       muted
                       autoPlay
-                      preload="none"
                       key={model}
                       className="
                         w-[1920px]
