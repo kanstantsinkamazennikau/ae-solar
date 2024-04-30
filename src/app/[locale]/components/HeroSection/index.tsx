@@ -24,7 +24,6 @@ export default function HeroSection() {
   const [startFadeIn, setStartFadeIn] = useState(false);
   const { translation } = useContext(i18nProviderContext);
   const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(true);
-  console.log(process.env.NODE_ENV);
 
   useEffect(() => {
     setIsIOSDevice(isIOS());
