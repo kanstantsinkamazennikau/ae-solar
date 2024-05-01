@@ -179,7 +179,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${criteria.variable} ${walsheim.variable} font-sans`}>
+      <body
+        className={`${criteria.variable} ${walsheim.variable} ${
+          locale === "ru" ? "font-walsheim" : "font-sans"
+        }`}
+      >
         <>
           <Toaster richColors />
           <ModelProvider>

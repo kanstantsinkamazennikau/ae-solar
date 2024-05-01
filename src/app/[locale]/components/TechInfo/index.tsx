@@ -13,7 +13,6 @@ export default function TechDescription() {
             lg:h-[520px]
             h-[260px]
             border-2
-            border-solid
             border-y-0
             bg-[linear-gradient(180deg,_rgba(19,_19,_19,_0.00)_0%,_#0D0D0D_100%)]
             [border-image:linear-gradient(180deg,_rgba(19,_19,_19,_0.00)_0%,_#131313_100%)_1]
@@ -22,10 +21,10 @@ export default function TechDescription() {
         <div
           className="
             w-full
-            lg:h-[880px]
-            h-[800px]
+            xl:h-[880px]
+            lg:h-[520px]
+            h-[400px]
             border-2
-            border-solid 
             border-x-[#151515]
             border-y-0
             bg-[#0D0D0D]
@@ -34,12 +33,12 @@ export default function TechDescription() {
         <div
           className="
             w-full
-            lg:h-[600px]
+            xl:h-[250px]
+            lg:h-[450px]
             h-[330px]
             md:h-[250px]
             max-[500px]:h-[100px]
             border-2
-            border-solid
             border-y-0
             bg-[linear-gradient(180deg,_rgba(19,_19,_19,_0.00)_0%,_#0D0D0D_100%)]
             [border-image:linear-gradient(180deg,_rgba(19,_19,_19,_0.00)_0%,_#131313_100%)_1]
@@ -50,7 +49,7 @@ export default function TechDescription() {
       <BasicWidthContainer styles="relative">
         <Bens />
       </BasicWidthContainer>
-      {/* <SequenceAnimation /> */}
+      <SequenceAnimation />
       <BasicWidthContainer styles="relative">
         <FeaturedProducts />
       </BasicWidthContainer>

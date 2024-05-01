@@ -79,6 +79,7 @@ export default function Benefit({
             -tracking-[1.44px]
             capitalize
             w-full
+            max-md:hyphens-auto
           "
         >
           {translation[benefitTitle]}

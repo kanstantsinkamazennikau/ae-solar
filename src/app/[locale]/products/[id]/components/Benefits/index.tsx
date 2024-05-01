@@ -55,6 +55,7 @@ export default function Benefits({ id }: BenefitsProps) {
             min-[920px]:border-[#131313]
             lg:px-20
             min-[920px]:px-14
+            px-5
             rounded-[20px]
             bg-[#0D0D0D]
           "
