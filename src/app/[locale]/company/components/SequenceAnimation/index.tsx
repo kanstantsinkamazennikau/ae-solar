@@ -142,7 +142,7 @@ export default function SequenceAnimation() {
                     key={img}
                     src={img}
                     alt={img}
-                    priority
+                    // priority
                     width={800}
                     height={600}
                     style={{ zIndex: `${10 - index}` }}
