@@ -11,7 +11,7 @@ import { Trans } from "react-i18next";
 
 const Video = ({ videoLink }: { videoLink: string }) => {
   const { videoRef } = useVideoIntersection();
-  const [isIOSDevice, setIsIOSDevice] = useState(false);
+  const [isIOSDevice, setIsIOSDevice] = useState(true);
 
   useLayoutEffect(() => {
     setIsIOSDevice(isIOS());
@@ -23,6 +23,7 @@ const Video = ({ videoLink }: { videoLink: string }) => {
         <video
           muted
           ref={videoRef}
+          autoPlay
           className="
             w-full
             xl:h-[840px]
