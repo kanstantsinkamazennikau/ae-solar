@@ -67,10 +67,11 @@ export default function SequenceAnimation() {
             reverseColor
           />
           <div className="flex flex-col items-center ">
-            <div className="flex items-center lg:-mt-[56px] w-full justify-between relative">
-              <div className="flex gap-5 max-w-1/3 min-h-[545px]">
+            <div className="flex items-center lg:-mt-[56px] w-full justify-between relative overflow-hidden">
+              <div className="fade-strip-right !z-10 max-md:!w-24" />
+              <div className="flex gap-5 max-w-1/3 xl:min-h-[490px] md:min-h-[440px] min-h-[390px] ml-[3px]">
                 <div className="sequenceAnimationDivider !w-[1px] basis-[1px] shrink-0" />
-                <div className="py-20 z-10">
+                <div className="py-20 z-20">
                   {SEQUENCE_ANIMATION_TEXT.map(
                     ({ title, description }, index) => {
                       const isActive = activeStepIndex === index;
@@ -99,7 +100,7 @@ export default function SequenceAnimation() {
                               border-base-red
                               rounded-full
                               absolute
-                              -left-[3px]
+                              left-0
                               bg-black
                               ${isActive ? "block" : "hidden"}
                             `}
@@ -135,31 +136,29 @@ export default function SequenceAnimation() {
                   )}
                 </div>
               </div>
-
-              {imagesArray.map((img, index) => (
-                <Image
-                  key={img}
-                  src={img}
-                  alt={img}
-                  priority
-                  width={800}
-                  height={600}
-                  style={{ zIndex: `${10 - index}` }}
-                  className={`
+              <div className="w-2/3 absolute -right-[20%] max-[920px]:-right-1/2 max-[920px]:scale-[2] scale-110">
+                {imagesArray.map((img, index) => (
+                  <Image
+                    key={img}
+                    src={img}
+                    alt={img}
+                    priority
+                    width={800}
+                    height={600}
+                    style={{ zIndex: `${10 - index}` }}
+                    className={`
                       object-cover
                       absolute
-                    
-                      top-1/2
                       transition-all
                       duration-300
-                      left-1/2
                       ${
                         activeStepIndex === index
-                          ? "[transform:translateX(-15%)_translateY(-51%)]"
+                          ? "[transform:translateX(-22%)_translateY(-52%)_scaleY(0.85)_rotateZ(1.5deg)_rotateX(21deg)_rotateY(3deg)]"
                           : "[transform:translateX(-10%)_translateY(-50%)]"
                       }`}
-                />
-              ))}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -167,6 +166,8 @@ export default function SequenceAnimation() {
     </div>
   );
 }
+// "[transform:translateX(-20%)_translateY(-51%)_rotateZ(-1deg)]"
+// "[transform:translateX(-10%)_translateY(-50%)]"
 
 // "use client";
 
