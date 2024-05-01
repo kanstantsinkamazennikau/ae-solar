@@ -127,7 +127,7 @@ export default function FilterCheckbox({
               leading-tight
             `}
           >
-            {translation[title.toLowerCase()] || title}
+            {translation[title] || translation[title.toLowerCase()] || title}
           </span>
           {showColorIcon && (
             <Image
