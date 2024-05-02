@@ -3,7 +3,7 @@
 import Loader from "@/app/[locale]/components/common/Loader";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
@@ -23,19 +23,19 @@ export default function HeroSection() {
   } = useContext(MainPageVideoContext);
   const [startFadeIn, setStartFadeIn] = useState(false);
   const { translation } = useContext(i18nProviderContext);
-  const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(
-    undefined
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean | undefined>(
+    true
   );
 
   useEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
 
     const timerId = setTimeout(
       () => {
         setIsLongVideoLoadingTime(true);
         setIsStartAnimation(true);
       },
-      isIOS() ? 300 : 5000
+      isMobile() ? 300 : 5000
     );
 
     if (isStartAnimation) {
@@ -49,13 +49,13 @@ export default function HeroSection() {
     isStartAnimation,
     setIsLongVideoLoadingTime,
     setIsStartAnimation,
-    isIOSDevice,
+    isMobileDevice,
   ]);
 
   return (
     <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[70vh] overflow-x-hidden overflow-hidden">
       <div className="h-full w-full">
-        {!isLongVideoLoadingTime && !isPlaying && (
+        {!isLongVideoLoadingTime && !isPlaying && !isMobileDevice && (
           <>
             <Image
               src={`/videos/headerOpeningPoster.webp`}
@@ -72,18 +72,29 @@ export default function HeroSection() {
             </div>
           </>
         )}
-        {(isLongVideoLoadingTime || isIOSDevice) && (
-          <Image
-            src={`/images/heroSectionBackground.jpeg`}
-            alt="heroSectionBackground"
-            priority
-            width={1920}
-            height={1080}
-            onLoad={() => setStartFadeIn(true)}
-            className={`object-cover h-full w-full ${
-              startFadeIn ? "animate-[fadeIn_0.7s_ease-in-out]" : "opacity-0"
-            }`}
-          />
+        {(isLongVideoLoadingTime || isMobileDevice) && (
+          <>
+            <Image
+              src={`/images/heroSectionBackground.webp`}
+              alt="heroSectionBackground"
+              priority
+              quality={100}
+              width={1376}
+              height={768}
+              className={`w-full object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full md:hidden`}
+            />
+            <Image
+              src={`/images/heroSectionBackground.jpeg`}
+              alt="heroSectionBackground"
+              priority
+              width={1920}
+              height={1080}
+              onLoad={() => setStartFadeIn(true)}
+              className={`object-cover h-full w-full md:block hidden ${
+                startFadeIn ? "animate-[fadeIn_0.7s_ease-in-out]" : "opacity-0"
+              }`}
+            />
+          </>
         )}
         {!isLongVideoLoadingTime && <HeroSectionVideo />}
       </div>
@@ -97,14 +108,16 @@ export default function HeroSection() {
           gap-4
           font-medium
           max-w-[670px]
-          px-5
+          break
           items-center
           z-10
+          px-2
           transition-all
           ${!isLongVideoLoadingTime && "delay-[4.5s]"}
           duration-[1.5s]
           ease-out
           ease-[cubic-bezier(0.87, 0, 0.13, 1)]
+          max-md:hyphens-auto
           ${
             !isStartAnimation
               ? "opacity-0 top-[50%]"

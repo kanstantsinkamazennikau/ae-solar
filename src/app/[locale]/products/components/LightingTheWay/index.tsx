@@ -3,7 +3,7 @@
 import Loader from "@/app/[locale]/components/common/Loader";
 import { ProductsContext } from "@/app/[locale]/context/productsContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
@@ -22,19 +22,19 @@ export default function LightingTheWay() {
   } = useContext(ProductsContext);
   const [startFadeIn, setStartFadeIn] = useState(false);
   const { translation } = useContext(i18nProviderContext);
-  const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean | undefined>(
     undefined
   );
 
   useEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
 
     const timerId = setTimeout(
       () => {
         setIsLongVideoLoadingTime(true);
         setIsStartAnimation(true);
       },
-      isIOSDevice ? 300 : 5000
+      isMobileDevice ? 300 : 5000
     );
 
     if (isStartAnimation) {
@@ -48,7 +48,7 @@ export default function LightingTheWay() {
     isStartAnimation,
     setIsLongVideoLoadingTime,
     setIsStartAnimation,
-    isIOSDevice,
+    isMobileDevice,
   ]);
 
   return (
@@ -86,7 +86,7 @@ export default function LightingTheWay() {
               </div>
             </>
           )}
-          {(isLongVideoLoadingTime || isIOSDevice) && (
+          {(isLongVideoLoadingTime || isMobileDevice) && (
             <Image
               src={`/images/products/productsFlower.png`}
               alt="productsFlower"

@@ -45,7 +45,7 @@ export default function ContactInfo() {
                 alt={icon}
                 width={16}
                 height={16}
-                priority
+                // priority
                 className="w-4 h-4"
               />
               <div

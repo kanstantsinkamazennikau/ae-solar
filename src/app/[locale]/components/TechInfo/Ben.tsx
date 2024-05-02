@@ -97,7 +97,7 @@ export default function Ben({
             alt={image}
             width={328}
             height={300}
-            priority
+            // priority
             className={`absolute top-0 right-0 w-full h-full md:hidden object-cover`}
           />
         )}

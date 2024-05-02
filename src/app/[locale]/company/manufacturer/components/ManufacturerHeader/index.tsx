@@ -1,9 +1,7 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 import { useContext } from "react";
 
@@ -40,7 +38,7 @@ export default function ManufacturerHeader() {
             min-[920px]:mt-0
             mt-[80px]
             min-[560px]:block
-            h-[250px]
+            h-[320px]
           `}
         />
         <div className="flex w-full justify-center absolute min-[560px]:bottom-[20%] bottom-[10%]">

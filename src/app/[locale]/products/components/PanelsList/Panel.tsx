@@ -7,7 +7,7 @@ import {
   PRODUCT_DESCRIPTIONS,
   PRODUCT_SLOGAN,
 } from "@/app/[locale]/products/constants";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useContext, useLayoutEffect, useState } from "react";
@@ -18,11 +18,11 @@ const PanelVideo = dynamic(() => import("./PanelVideo"), {
 export default function Panel({ panel }: PanelProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isIOSDevice, setIsIOSDevice] = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const { translation } = useContext(i18nProviderContext);
 
   useLayoutEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
   }, []);
 
   const onLoaded = () => {
@@ -64,7 +64,7 @@ export default function Panel({ panel }: PanelProps) {
           z-[12]
         "
       />
-      {imageLoaded && !isIOSDevice && (
+      {imageLoaded && !isMobileDevice && (
         <div
           className={`${
             videoLoaded

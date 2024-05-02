@@ -8,7 +8,7 @@ export const LOCALIZATION_COUNTRIES_LIST = [
   { flagIcon: "Deutsche.svg", abbr: "DE", country: "Deutsch" },
   // { flagIcon: "France.svg", abbr: "FR", country: "Français" },
   // { flagIcon: "China.svg", abbr: "ZN", country: "中文" },
-  // { flagIcon: "Russia.svg", abbr: "RU", country: "Русский" },
+  { flagIcon: "Russia.svg", abbr: "RU", country: "Русский" },
   { flagIcon: "Poland.svg", abbr: "PL", country: "Polski" },
   // { flagIcon: "Turkey.svg", abbr: "TR", country: "Türkçe" },
   // { flagIcon: "Portugal.svg", abbr: "PT", country: "Português" },

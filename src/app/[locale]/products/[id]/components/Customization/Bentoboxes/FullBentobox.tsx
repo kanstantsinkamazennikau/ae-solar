@@ -55,7 +55,7 @@ export default function FullBentobox({
           </div>
           <div>
             {longDescription.description && (
-              <div className="[font-size:_clamp(14px,1.5vw,20px)] font-normal font-walsheim leading-[150%] text-dark-gray-900">
+              <div className="[font-size:_clamp(14px,1.5vw,20px)] font-normal font-walsheim leading-[150%] text-[#d7d7d7]">
                 {longDescription.description}
               </div>
             )}

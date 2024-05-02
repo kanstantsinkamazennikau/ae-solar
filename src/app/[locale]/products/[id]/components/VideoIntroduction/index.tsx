@@ -3,7 +3,7 @@
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { IntroductionProps } from "@/app/[locale]/products/[id]/components/VideoIntroduction/types";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import Image from "next/image";
 import { useContext, useLayoutEffect, useState } from "react";
 
@@ -12,11 +12,11 @@ export default function Introduction({ id }: IntroductionProps) {
   const modelStats = translation.stats as unknown as {
     [key: string]: string;
   };
-  const [isIOSDevice, setIsIOSDevice] = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const { videoRef } = useVideoIntersection();
 
   useLayoutEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
   }, []);
 
   if (!modelStats) return;
@@ -118,7 +118,7 @@ export default function Introduction({ id }: IntroductionProps) {
             >
               {translation.introductionTitle}
             </p>
-            {isIOSDevice ? (
+            {isMobileDevice ? (
               <Image
                 alt={id}
                 src={`/videos/slider/${id}Static.png`}
