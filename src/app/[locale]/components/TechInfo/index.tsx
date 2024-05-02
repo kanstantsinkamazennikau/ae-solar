@@ -21,9 +21,8 @@ export default function TechDescription() {
         <div
           className="
             w-full
-            xl:h-[880px]
-            lg:h-[520px]
-            h-[400px]
+            lg:h-[880px]
+            h-[800px]
             border-2
             border-x-[#151515]
             border-y-0
@@ -33,8 +32,7 @@ export default function TechDescription() {
         <div
           className="
             w-full
-            xl:h-[250px]
-            lg:h-[450px]
+            lg:h-[600px]
             h-[330px]
             md:h-[250px]
             max-[500px]:h-[100px]
