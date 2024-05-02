@@ -36,7 +36,39 @@ export default async function Home() {
       }}
     >
       <main className="flex flex-col items-center w-full">
-        <HeroSection />
+        <HeroSection
+          test1={
+            <Image
+              src={`/videos/headerOpeningPoster.webp`}
+              alt="headerOpeningPoster"
+              priority
+              width={1920}
+              height={1080}
+              className={`w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-screen`}
+            />
+          }
+          test2={
+            <Image
+              src={`/images/heroSectionBackground.webp`}
+              alt="heroSectionBackground"
+              priority
+              quality={100}
+              width={1376}
+              height={768}
+              className={`w-full object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full md:hidden`}
+            />
+          }
+          test3={
+            <Image
+              src={`/images/heroSectionBackground.jpeg`}
+              alt="heroSectionBackground"
+              priority
+              width={1920}
+              height={1080}
+              className={`object-cover h-full w-full md:block hidden`}
+            />
+          }
+        />
         <div className="w-full relative">
           <div className="absolute w-full h-[40%] flex">
             <div className="fade-strip-top !h-[100px]" />
