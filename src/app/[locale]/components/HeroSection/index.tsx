@@ -13,15 +13,7 @@ const HeroSectionVideo = dynamic(() => import("./HeroSectionVideo"), {
   ssr: false,
 });
 
-export default function HeroSection({
-  test1,
-  test2,
-  test3,
-}: {
-  test1: React.JSX.Element;
-  test2: React.JSX.Element;
-  test3: React.JSX.Element;
-}) {
+export default function HeroSection() {
   const {
     isStartAnimation,
     setIsStartAnimation,
@@ -63,15 +55,14 @@ export default function HeroSection({
       <div className="h-full w-full">
         {!isLongVideoLoadingTime && !isPlaying && !isIOSDevice && (
           <>
-            {/* <Image
+            <Image
               src={`/videos/headerOpeningPoster.webp`}
               alt="headerOpeningPoster"
               priority
               width={1920}
               height={1080}
               className={`w-screen object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-screen`}
-            /> */}
-            {test1}
+            />
             <div
               className={`z-20 absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 `}
             >
@@ -81,7 +72,7 @@ export default function HeroSection({
         )}
         {(isLongVideoLoadingTime || isIOSDevice) && (
           <>
-            {/* <Image
+            <Image
               src={`/images/heroSectionBackground.webp`}
               alt="heroSectionBackground"
               priority
@@ -89,8 +80,7 @@ export default function HeroSection({
               width={1376}
               height={768}
               className={`w-full object-cover absolute -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 h-full md:hidden`}
-            /> */}
-            {test2}
+            />
             <Image
               src={`/images/heroSectionBackground.jpeg`}
               alt="heroSectionBackground"
@@ -102,7 +92,6 @@ export default function HeroSection({
                 startFadeIn ? "animate-[fadeIn_0.7s_ease-in-out]" : "opacity-0"
               }`}
             />
-            {/* {test3} */}
           </>
         )}
         {!isLongVideoLoadingTime && <HeroSectionVideo />}
@@ -117,14 +106,16 @@ export default function HeroSection({
           gap-4
           font-medium
           max-w-[670px]
-          px-5
+          break
           items-center
           z-10
+          p-1
           transition-all
           ${!isLongVideoLoadingTime && "delay-[4.5s]"}
           duration-[1.5s]
           ease-out
           ease-[cubic-bezier(0.87, 0, 0.13, 1)]
+          hyphens-auto
           ${
             !isStartAnimation
               ? "opacity-0 top-[50%]"

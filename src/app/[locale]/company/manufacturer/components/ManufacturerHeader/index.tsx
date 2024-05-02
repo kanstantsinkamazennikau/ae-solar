@@ -40,7 +40,7 @@ export default function ManufacturerHeader() {
             min-[920px]:mt-0
             mt-[80px]
             min-[560px]:block
-            h-[250px]
+            h-[320px]
           `}
         />
         <div className="flex w-full justify-center absolute min-[560px]:bottom-[20%] bottom-[10%]">
