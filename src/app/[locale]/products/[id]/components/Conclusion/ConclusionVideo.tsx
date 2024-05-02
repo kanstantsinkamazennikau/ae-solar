@@ -4,7 +4,7 @@ import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { ConclusionProps } from "@/app/[locale]/products/[id]/components/Conclusion/types";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useLayoutEffect, useState } from "react";
@@ -12,17 +12,17 @@ import { Trans } from "react-i18next";
 
 export default function ConclusionVideo({ id }: ConclusionProps) {
   const { videoRef } = useVideoIntersection();
-  const [isIOSDevice, setIsIOSDevice] = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const { translation } = useContext(i18nProviderContext);
 
   useLayoutEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
   }, []);
 
   return (
     <div className="relative flex justify-center items-center flex-col">
       <div className="relative">
-        {isIOSDevice ? (
+        {isMobileDevice ? (
           <Image
             src={`/videos/packshot/Packshot${id}Static.jpg`}
             alt="glow"

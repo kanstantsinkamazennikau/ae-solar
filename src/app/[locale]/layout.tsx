@@ -13,6 +13,7 @@ import { LocaleTypes, locales } from "@/app/[locale]/i18n/settings";
 import { fetchAPI } from "@/app/[locale]/utils/fetch-api";
 import getLocale from "@/app/[locale]/utils/getLocale";
 import { getOpengraphMetadata } from "@/app/[locale]/utils/getOpengraphMetadata";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { Toaster } from "sonner";
@@ -204,6 +205,7 @@ export default async function RootLayout({
           </ModelProvider>
         </>
       </body>
+      <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_TAG!} />
     </html>
   );
 }

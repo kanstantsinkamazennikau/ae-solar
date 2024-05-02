@@ -3,7 +3,7 @@
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useLayoutEffect, useState } from "react";
@@ -11,18 +11,18 @@ import { Trans } from "react-i18next";
 
 export default function PortfolioBackground() {
   const { videoRef } = useVideoIntersection();
-  const [isIOSDevice, setIsIOSDevice] = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const { translation } = useContext(i18nProviderContext);
 
   useLayoutEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
   }, []);
 
   return (
     <div className="xl:mb-[180px] lg:mb-[140px] md:mb-[100px] mb-[60px] md:flex-row flex-col flex justify-center items-start max-w-[1360px] mx-auto">
       <div className="relative flex md:flex-row flex-col items-center md:justify-end justify-center overflow-hidden">
         <div className="fade-strip-left max-lg:!w-[100px] md:block hidden" />
-        {isIOSDevice ? (
+        {isMobileDevice ? (
           <Image
             src={`/videos/products/PortfolioBackground.png`}
             alt="glow"

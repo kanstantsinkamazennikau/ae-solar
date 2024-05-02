@@ -3,7 +3,7 @@
 import Button from "@/app/[locale]/components/common/Button";
 import { useVideoIntersection } from "@/app/[locale]/hooks/useVideoIntersection";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useLayoutEffect, useState } from "react";
@@ -11,15 +11,15 @@ import { Trans } from "react-i18next";
 
 const Video = ({ videoLink }: { videoLink: string }) => {
   const { videoRef } = useVideoIntersection();
-  const [isIOSDevice, setIsIOSDevice] = useState(true);
+  const [isMobileDevice, setIsMobileDevice] = useState(true);
 
   useLayoutEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
   }, []);
 
   return (
     <>
-      {!isIOSDevice ? (
+      {!isMobileDevice ? (
         <video
           muted
           ref={videoRef}

@@ -3,7 +3,7 @@
 import Loader from "@/app/[locale]/components/common/Loader";
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
@@ -23,17 +23,19 @@ export default function HeroSection() {
   } = useContext(MainPageVideoContext);
   const [startFadeIn, setStartFadeIn] = useState(false);
   const { translation } = useContext(i18nProviderContext);
-  const [isIOSDevice, setIsIOSDevice] = useState<boolean | undefined>(true);
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean | undefined>(
+    true
+  );
 
   useEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
 
     const timerId = setTimeout(
       () => {
         setIsLongVideoLoadingTime(true);
         setIsStartAnimation(true);
       },
-      isIOS() ? 300 : 5000
+      isMobile() ? 300 : 5000
     );
 
     if (isStartAnimation) {
@@ -47,13 +49,13 @@ export default function HeroSection() {
     isStartAnimation,
     setIsLongVideoLoadingTime,
     setIsStartAnimation,
-    isIOSDevice,
+    isMobileDevice,
   ]);
 
   return (
     <div className="w-full flex justify-center items-center relative -top-[64px] md:h-screen h-[70vh] overflow-x-hidden overflow-hidden">
       <div className="h-full w-full">
-        {!isLongVideoLoadingTime && !isPlaying && !isIOSDevice && (
+        {!isLongVideoLoadingTime && !isPlaying && !isMobileDevice && (
           <>
             <Image
               src={`/videos/headerOpeningPoster.webp`}
@@ -70,7 +72,7 @@ export default function HeroSection() {
             </div>
           </>
         )}
-        {(isLongVideoLoadingTime || isIOSDevice) && (
+        {(isLongVideoLoadingTime || isMobileDevice) && (
           <>
             <Image
               src={`/images/heroSectionBackground.webp`}
@@ -109,13 +111,13 @@ export default function HeroSection() {
           break
           items-center
           z-10
-          p-1
+          px-2
           transition-all
           ${!isLongVideoLoadingTime && "delay-[4.5s]"}
           duration-[1.5s]
           ease-out
           ease-[cubic-bezier(0.87, 0, 0.13, 1)]
-          hyphens-auto
+          max-md:hyphens-auto
           ${
             !isStartAnimation
               ? "opacity-0 top-[50%]"

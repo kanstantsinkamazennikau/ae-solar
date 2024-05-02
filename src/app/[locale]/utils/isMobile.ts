@@ -1,4 +1,4 @@
-export const isIOS = () => {
+export const isMobile = () => {
   return (
     [
       "iPad Simulator",

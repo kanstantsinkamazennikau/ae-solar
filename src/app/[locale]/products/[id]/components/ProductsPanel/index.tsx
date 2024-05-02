@@ -6,7 +6,7 @@ import { useContext, useLayoutEffect, useState } from "react";
 
 import Loader from "@/app/[locale]/components/common/Loader";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import dynamic from "next/dynamic";
 const VideoPlayer = dynamic(() => import("./Video"), {
   ssr: false,
@@ -16,13 +16,13 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoEnded, setVideoEnded] = useState(false);
   const [startTextTransition, setStartTextTransition] = useState(false);
-  const [isIOSDevice, setIsIOSDevice] = useState(true);
+  const [isMobileDevice, setIsMobileDevice] = useState(true);
   const [startFadeIn, setStartFadeIn] = useState(false);
 
   const { translation } = useContext(i18nProviderContext);
 
   useLayoutEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
   }, []);
 
   const onLoaded = () => {
@@ -51,7 +51,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
         max-h-[1000px]
       "
     >
-      {!videoLoaded && !isIOSDevice && (
+      {!videoLoaded && !isMobileDevice && (
         <div className="absolute z-50 -mt-[136px]">
           <Loader />
         </div>
@@ -67,7 +67,7 @@ export default function ProductsPanel({ id }: ProductsPanelProps) {
           h-[630px]
         "
       >
-        {!isIOSDevice ? (
+        {!isMobileDevice ? (
           <VideoPlayer onLoaded={onLoaded} onEnded={onEnded} id={id} />
         ) : (
           <Image

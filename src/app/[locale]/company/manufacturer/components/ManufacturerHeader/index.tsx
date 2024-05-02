@@ -1,9 +1,7 @@
 "use client";
 
 import BasicWidthContainer from "@/app/[locale]/components/common/BasicWidthContainer";
-import { useServerTranslation } from "@/app/[locale]/i18n/server";
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
-import getLocale from "@/app/[locale]/utils/getLocale";
 import Image from "next/image";
 import { useContext } from "react";
 

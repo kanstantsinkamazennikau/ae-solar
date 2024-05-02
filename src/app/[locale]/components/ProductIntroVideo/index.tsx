@@ -13,7 +13,7 @@ import {
   PRODUCT_INTRO_PANELS,
   PRODUCT_INTRO_PANELS_IMAGES,
 } from "@/app/[locale]/utils/constants";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 //@ts-ignore
 import { i18nProviderContext } from "@/app/[locale]/i18nProvider";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
@@ -33,7 +33,7 @@ import { Trans } from "react-i18next";
 export default function ProductIntroVideo() {
   const { model, setModel } = useContext(ModelContext);
   const { sticky, setSticky } = useContext(StickyNavigationContext);
-  const [isIOSDevice, setIsIOSDevice] = useState(true);
+  const [isMobileDevice, setIsMobileDevice] = useState(true);
   const modelInfo = PRODUCT_INTRO_PANELS[model].info;
   const ref = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
@@ -43,7 +43,7 @@ export default function ProductIntroVideo() {
   const { translation } = useContext(i18nProviderContext);
 
   useLayoutEffect(() => {
-    setIsIOSDevice(isIOS());
+    setIsMobileDevice(isMobile());
   }, []);
 
   const options = {
@@ -253,7 +253,7 @@ export default function ProductIntroVideo() {
             <SplideTrack>
               {PRODUCT_INTRO_PANELS_IMAGES.map((video) => (
                 <SplideSlide key={video} className="flex justify-center">
-                  {isIOSDevice ? (
+                  {isMobileDevice ? (
                     <Image
                       alt={model}
                       src={`/videos/slider/${video}Static.png`}

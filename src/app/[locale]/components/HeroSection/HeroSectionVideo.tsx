@@ -1,7 +1,7 @@
 "use client";
 
 import { MainPageVideoContext } from "@/app/[locale]/context/mainPageVideoContext";
-import { isIOS } from "@/app/[locale]/utils/isIOS";
+import { isMobile } from "@/app/[locale]/utils/isMobile";
 import { useContext, useEffect, useRef } from "react";
 
 export default function HeroSectionVideo() {
@@ -9,7 +9,7 @@ export default function HeroSectionVideo() {
     useContext(MainPageVideoContext);
   const ref = useRef(null);
 
-  const isIOSDevice = isIOS();
+  const isMobileDevice = isMobile();
 
   const onPlay = () => {
     setIsPlaying(true);
@@ -24,7 +24,7 @@ export default function HeroSectionVideo() {
 
   return (
     <>
-      {!isLongVideoLoadingTime && !isIOSDevice && (
+      {!isLongVideoLoadingTime && !isMobileDevice && (
         <video
           onPlay={onPlay}
           muted
