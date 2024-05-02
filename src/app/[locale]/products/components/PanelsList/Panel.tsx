@@ -46,8 +46,6 @@ export default function Panel({ panel }: PanelProps) {
         duration-300
         hover:border-[#F60109]
         hover:shadow-product
-        active:border-[#F60109]
-        active:shadow-product
         border-[#191919]
         rounded-xl
         overflow-hidden
