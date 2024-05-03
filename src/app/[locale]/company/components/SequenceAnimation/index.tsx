@@ -35,6 +35,7 @@ export default function SequenceAnimation() {
         md:mb-[60px]
         mb-[20px]
         px-5
+        w-full
       "
     >
       <BasicWidthContainer styles="max-md:!px-0">
@@ -53,7 +54,7 @@ export default function SequenceAnimation() {
             externalStyle="z-10"
             reverseColor
           />
-          <div className="flex flex-col items-center ">
+          <div className="flex flex-col items-center">
             <div className="flex items-center lg:-mt-[56px] w-full justify-between relative overflow-hidden">
               <div className="fade-strip-right !z-10 max-md:!w-24" />
               <div className="flex gap-5 max-w-1/3 xl:min-h-[490px] md:min-h-[440px] min-h-[390px] ml-[3px]">
