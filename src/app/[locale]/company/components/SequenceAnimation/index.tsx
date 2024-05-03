@@ -9,13 +9,14 @@ import { useContext, useState } from "react";
 import { Trans } from "react-i18next";
 
 const imagesArray = [
-  "/images/sequence/home/1.webp",
-  "/images/sequence/home/2.webp",
-  "/images/sequence/home/3.webp",
-  "/images/sequence/home/4.webp",
-  "/images/sequence/home/5.webp",
-  "/images/sequence/home/6.webp",
+  "/images/sequence/home/1.png",
+  "/images/sequence/home/2.png",
+  "/images/sequence/home/3.png",
+  "/images/sequence/home/4.png",
+  "/images/sequence/home/5.png",
+  "/images/sequence/home/6.png",
 ];
+1;
 
 export default function SequenceAnimation() {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
@@ -122,15 +123,16 @@ export default function SequenceAnimation() {
                   )}
                 </div>
               </div>
-              <div className="w-2/3 absolute -right-[20%] max-[920px]:-right-1/2 max-[920px]:scale-[2] scale-110">
+              <div className="w-2/3 absolute -right-[20%] max-[920px]:-right-[55%] max-[640px]:scale-[2.25] max-[640px]:-right-[80%] max-[920px]:scale-[1.8] scale-110">
                 {imagesArray.map((img, index) => (
                   <Image
                     key={img}
                     src={img}
                     alt={img}
                     // priority
-                    width={800}
+                    width={880}
                     height={600}
+                    quality={95}
                     style={{ zIndex: `${10 - index}` }}
                     className={`
                       object-cover
@@ -139,7 +141,7 @@ export default function SequenceAnimation() {
                       duration-300
                       ${
                         activeStepIndex === index
-                          ? "[transform:translateX(-22%)_translateY(-52%)_scaleY(0.85)_rotateZ(1.5deg)_rotateX(21deg)_rotateY(3deg)]"
+                          ? "[transform:translateX(-22%)_translateY(-53%)]"
                           : "[transform:translateX(-10%)_translateY(-50%)]"
                       }`}
                   />
